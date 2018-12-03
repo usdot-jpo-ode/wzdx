@@ -32,3 +32,17 @@ Updated 9/15/2018
        3. Example 3: Caltrans
 4. XML Schema and Examples of XML and JSON files
 5. WZ Location Method Description and Practices
+
+## TABLES AND FIGURES
+- Table 1. Common Core Data
+- Table 2. WZDx Header Element Information
+- Table 3. StartDateTime Data Frame Table
+- Table 4. EndDateTime Data Frame Table
+- Table 5. BeginLocation Data Frame Table
+- Table 6. EndLocation Data Frame Table
+- Table 7. Enumerated Types Table
+- Table 8. Work Zone Status Definition Table
+- Table 9. Spatial and Time Verification Definitions
+- Table 10. RoadRestriction Definitions
+- Table 11. Metadata
+- Figure 1: Work Xone Activity Organization
