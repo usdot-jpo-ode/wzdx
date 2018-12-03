@@ -169,6 +169,49 @@ Data | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance<br>measured against a milepost<br>marker along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
+#### EndLocation
+Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
+
+#### Table 6. EndLocation Data Frame Table
+Data Name | Data Description | Conformance | Notes
+--------- | ---------------- | ----------- | -----
+**latitude-est** | The latitude along a roadway<br>where the work zone area ends<br>and the traffic returns to normal | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> |  |
+**latitude-ver** | A verified latitude along<br>the roadway where the work zone<br>area ends | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> | Descibe verification method in metadata file
+**longitude-est** | The longitude along a roadway<br>where the work zone area ends<br>and the traffic returns to normal | Required |  |
+**longitude-ver** | A verified longitude along the<br>roadway where the work zone<br>area ends | Conditional<ul><li>longitude-est or</li><li>longitude-ver</li></ul> | Describe verification<br>method in metadata file
+**milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
+**milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
+**crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
+
+### 2.4 Enumerated Types
+#### Table 7. Enumerated Types Table
+Data Element | Used by | Allowed Values | Notes | Source
+------------ | ------- | -------------- | ----- | ------
+**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) |  | Source
+**roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link<br>
+**roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads<br>-prohibited (this applies<br>to annual oversize load<br>permits)</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-road</li><li>gross-weight-limit</li></ul> | Include one<br>or more flags as needed | See<br>definitions<br>below
+    
+#### Table 7. Enumerated Types Table
+Data Element | Used by | Allowed Values | Notes | Source
+------------ | ------- | -------------- | ----- | ------
+**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
+**roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link-<br>alignment 
+**laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</ul> |  | Adapted from<br>TMDD<br>LaneRoadway
+**fff**
+
+
+
+
+
+
+
+
+
+**roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads<br>-prohibited (this applies<br>to annual oversize load<br>permits)</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-road</li><li>gross-weight-limit</li></ul> | Include one<br>or more flags as needed | See<br>definitions<br>below
+    
+    
+  
+
     
     
         
