@@ -250,7 +250,16 @@ Note: LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
 --------------------------- | ------------------------------------- | -----------
-**all-roadways (8192)** | 
+**all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
+**through-lanes (8193)** |  | Not used
+**left-lane (8194)** | left-lane | The left most lane (inside lane)
+**right-lane (8195)** | right-lane | The right most lane (outside lane)
+|  | left-2-lanes | the two most left lanes
+|   | left-3-lanes | The three most left lanes
+|   | right-2-lanes | The two most right lanes
+|   | right-3-lanes | The three most right lanes
+   
+
 
 
   
