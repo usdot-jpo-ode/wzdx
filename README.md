@@ -96,7 +96,7 @@ The remainder of this document is organized into the following sections:
 **Section 4. XML Schema and Examples of XML and JSON files**
 - This section includes the validated XML scheme and examples of XML and JSON files.
 
-## DATA TABLES
+## 2. DATA TABLES
 ### 2.1 Common Core Data Dictionary
 The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
 - *Data Name* - name of the data concept (either a data element or data frame) 
@@ -351,7 +351,7 @@ This section describes the contents of a static file with information about the 
 
 The static file shall be encoded as a comma delimited text file.
 
-**Finalname:** WZ-Metadata.txt
+**Filename:** WZ-Metadata.txt
 
 #### Table 11. Metadata
 Data Name | Description | Example
@@ -365,6 +365,10 @@ Data Name | Description | Example
 '**Timestamp-Metadata-Update** | The time and date when this file was last<br>updated | 2016-04-12T00:01:00
 **Contact-name** | The name of a contact responsible for the<br>data feed | Jo Help
 **Contact-email** | The contact’s email address | jhelp@anyplacePW.com
+
+## 3. CREATING THE SPECIFICATION
+The WZDx-v1 data feed will be specified as an XML file. The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the common core data dictionary elements (Table 1) and depicted in Figure 1.
+
 
   
 
