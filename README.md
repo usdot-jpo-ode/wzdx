@@ -2,14 +2,6 @@
 
 # WZDx v1.1 – Common Core Data Specification Reference Document
 
-##Title
-
-###Place 1
-
-Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
-
-
-
 Updated 9/15/2018
 
 ## TABLE OF CONTNETS
@@ -180,7 +172,7 @@ Data | Data Description | Conformance | Notes
 **endDateTime-cancelled** | Cancellation of a planned end <br>time and date assocaited<br>with a work zone | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
-#### BeginLocation
+#### 2.3.3. BeginLocation
 Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
 
 #### Table 5. BeginLocation Data Frame Table
@@ -197,7 +189,7 @@ Data | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance<br>measured against a milepost<br>marker along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
-#### EndLocation
+#### 2.3.4. EndLocation
 Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
 
 #### Table 6. EndLocation Data Frame Table
@@ -217,7 +209,7 @@ Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
 **wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
 **roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link-<br>alignment
-**Road Restriction** | RoadRest | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included one<br>or more<br>flags as needed | See<br>definitions<br>below
+**roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included one<br>or more<br>flags as needed | See<br>definitions<br>below
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 
@@ -287,7 +279,7 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 |   | right-2-lanes | The two most right lanes
 |   | right-3-lanes | The three most right lanes
 **center-lane (8196)** |  | Not used
-**middle-lanes (8197)** | middle lane | The center most lane where are a total of<br>an odd number of lanes
+**middle-lanes (8197)** | middle-lane | The center most lane where are a total of<br>an odd number of lanes
 **middle-two-lanes (8198)** | middle-two-lanes | The center most lanes where are a total<br>of an even number of lanes
 **right-turning-lanes (8199)** | right-turning-lane | A right lane where right turns are permissible
 **left-turning-lanes (8200)** | left-turning-lane | A left lane where left turns are permissible
@@ -524,13 +516,7 @@ Location of first and last work zone-related signs. This may be different from t
 
 ![Fig. 4](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%204.png)
 
-### 5.3 junction-method
+### 5.3. junction-method
 Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
 
 ![Fig. 5](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%205.png)
-
-
-
-
-
-###Place 2
