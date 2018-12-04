@@ -504,7 +504,7 @@ Location of first and last channeling device (e.g., cone or barrier) that is par
 #### Simple Scenario
 ![Fig. 2](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%202.png)
  
- #### Complex Scenario
+#### Complex Scenario
 This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends. 
 
 Note: with the data element “subidentifier”, the “owner” can link the three work activities together.
@@ -519,4 +519,8 @@ Location of first and last work zone-related signs. This may be different from t
 ### 5.3. junction-method
 Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
 
+#### Aterial Scenario
 ![Fig. 5](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%205.png)
+
+#### Highway Scenario
+![Fig. 6](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%206.png)
