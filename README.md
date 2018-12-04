@@ -2,6 +2,14 @@
 
 # WZDx v1.1 – Common Core Data Specification Reference Document
 
+##Title
+
+###Place 1
+
+Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
+
+
+
 Updated 9/15/2018
 
 ## TABLE OF CONTNETS
@@ -520,13 +528,6 @@ Location of first and last work zone-related signs. This may be different from t
 Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
 
 ![Fig. 5](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%205.png)
-
-##Title
-
-###Place 1
-
-Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
-
 
 
 
