@@ -247,6 +247,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 
 #### 2.6.1 openLanes and closedLanes
 Note: LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+
 LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
 --------------------------- | ------------------------------------- | -----------
 **all-roadways (8192)** | 
