@@ -193,19 +193,65 @@ Data Element | Used by | Allowed Values | Notes | Source
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 
+### 2.5 Enumerated Type Definitions
+#### Table 8. Work Zone Status Definition Table
+Term | WZ-Status Description
+---- | ---------------------
+**Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
+**Pending** | Pending is used to alert stakeholders that work is scheduled for the near future (e.g., 2-<br>3 weeks). The certainty of starting at this time is greater than 90% (barring weather<br>and other unforeseen circumstances).<ul><li>Time horizon: approximate begin / end dates</li><li>Location: coverage area and main road name; path (polyline or geoface)<br>around zone area</li></ul>
+**Active** | Used to alert stakeholder that work zone is in place and active.   
+**Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
+**Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
+
+#### Table 9. Spatial and Time Verification Definitions
+Term | WZ-Status Description
+---- | ---------------------
+**DateTime<br>Estimated(-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
+**DateTime Verified<br>(-ver)** | Actual reported times/dates when work occurs.
+**Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
+**Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
+
+#### Table 10. RoadRestrictions Definitions
+RoadRestrictions | Descriptions
+---------------- | ------------
+**no-trucks** | Trucks are prohibited from traveling in work zone area
+**travel-peak-hours-only** | Travel restricted to travel peak hours only
+**hov-3** | Travel restricted to high occupancy vehicles of three or more
+**hov-2** | Travel restricted to high occupancy vehicles of two or more
+**no-parking** | No parking in work zone area
+**bike-lane** | Bike lane closed in work zone area
+**ramp** | Ramp closed in work zone area
+**reduced-width** | Lane width reduced in work zone area
+**reduced height** | Height restrictions reduced in work zone area
+**reduced-length** | Vehicle length restrictions reduced in work zone area
+**reduced- weight** | Vehicle weight restrictions reduced in work zone area
+**axle-load-limit** | Vehicle axle-load-limit restrictions reduced in work zone area
+**gross-weight-limit** | Vehicle gross-weight-limit restrictions reduced in work zone area
+**towing-prohibited** | Towing prohibited in work zone area
+**permitted-oversize-loads-<br>prohibited** | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
+
+### 2.6 Enumerated Value Definitions Derived from ITS Standards
+The following tables show the translation from TMDD to the WZDx Enumerated Types (Table 7).
+
+Example of data frame in the TMDD (specified in ASN.1 format)
+```xml
+DATA-TYPE "EventLane ::= SEQUENCE {
+    lanes-type ITIS.LaneRoadway OPTIONAL,
+    link-direction Link-direction OPTIONAL,
+    lanes-total-original Link-lanes-count OPTIONAL,
+    lanes-total-affected Link-lanes-count OPTIONAL,
+    event-lanes-affected SEQUENCE (SIZE(1..64)) OF Link-lane-number OPTIONAL,
+    lanes-status ITIS.Closures OPTIONAL,
+    ...  }"
+```
+
+#### 2.6.1 openLanes and closedLanes
+Note: LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
+--------------------------- | ------------------------------------- | -----------
+**all-roadways (8192)** | 
 
 
-
-
-
-
-
-
-
-
-**roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads<br>-prohibited (this applies<br>to annual oversize load<br>permits)</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-road</li><li>gross-weight-limit</li></ul> | Include one<br>or more flags as needed | See<br>definitions<br>below
-    
-    
   
 
     
