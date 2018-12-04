@@ -57,7 +57,7 @@ In support of AV integration into our nation’s transportation system, the Fede
 Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users. These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). This approach is intended to be repeatable leading to the accelerated harmonization of local data.
 The following data producers and users (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
 
-Data Produces | Data Users
+Data Producers | Data Users
 ------------- | ----------
 •	Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition) | •	HERE
 •	Michigan Department of Transportation | •	Waze
