@@ -48,7 +48,7 @@ Updated 9/15/2018
 - Table 9. Spatial and Time Verification Definitions
 - Table 10. RoadRestriction Definitions
 - Table 11. Metadata
-- Figure 1: Work Xone Activity Organization
+- Figure 1: Work Zone Activity Organization
 
 ## 1. Introduction
 ### i. Background
