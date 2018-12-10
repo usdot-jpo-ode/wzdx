@@ -5,7 +5,7 @@
 Updated 9/15/2018
 
 ## TABLE OF CONTNETS
-1. Introduction
+1. [Introduction](#introduction)
     1. Background
     2. Purpose
     3. Scope
