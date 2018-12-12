@@ -26,4 +26,3 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 |     Kentucky Department of Transportation     |     Uber      |
 |     iCone     |     Embark      |
 
-
