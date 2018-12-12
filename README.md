@@ -14,9 +14,10 @@ The department's implementation plan is two-fold:
 2.  These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). 
 This approach is intended to be repeatable leading to the accelerated harmonization of local data.
 
-The following data producers and users (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
+The following **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
 
-|     Data Producers      |     Data Users      |
+
+|     Data Producers      |     Data Users &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      |
 |     :------------:      |     :------------:      |
 |     Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition)     |     HERE      |
 |     Michigan Department of Transportation     |     Waze      |
@@ -25,12 +26,4 @@ The following data producers and users (i.e., the WZDx Working Group) voluntaril
 |     Kentucky Department of Transportation     |     Uber      |
 |     iCone     |     Embark      |
 
-| Data Producers      | Data Users      |
-| :----:              | -------         |
-| Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition) | •	HERE |
-•	Michigan Department of Transportation | •	Waze |
-•	Iowa Department of Transportation | •	Panasonic |
-•	Colorado Department of Transportation | •	Toyota  | 
-•	Kentucky Department of Transportation | •	Uber  |
-•	iCone | •	Embark  |
 
