@@ -16,9 +16,18 @@ This approach is intended to be repeatable leading to the accelerated harmonizat
 
 The following data producers and users (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
 
-Data Producers | Data Users  |
-------------- | ------------- |
-•	Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition) | •	HERE |
+|     Data Producers      |     Data Users      |
+|     :------------:      |     :--------:      |
+|     Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition)     |     HERE      |
+|     Michigan Department of Transportation     |     Waze      |
+|     Iowa Department of Transportation     |     Panasonic     |
+|     Colorado Department of Transportation     |     Toyota      |
+|     Kentucky Department of Transportation     |     Uber      |
+|     iCone     |     Embark      |
+
+| Data Producers      | Data Users      |
+| :----:              | -------         |
+| Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition) | •	HERE |
 •	Michigan Department of Transportation | •	Waze |
 •	Iowa Department of Transportation | •	Panasonic |
 •	Colorado Department of Transportation | •	Toyota  | 
