@@ -11,8 +11,7 @@ In support of AV integration into our nation’s transportation system, the Fede
 
 The department's implementation plan is two-fold:
 1. **Support IOOs to stand up feeds using the common core:** Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users.
-2.  **Support original equipmemt manufacturers (OEMs) & navigation application parties incorporate data:** These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). 
-This approach is intended to be repeatably leading to the accelerated harmonization of local data.
+2.  **Support original equipmemt manufacturers (OEMs) & navigation application parties incorporate data:** These users will then use the harmonized data in a meaningful way. 
 
 The following **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
 
@@ -37,3 +36,9 @@ The first phase of this project is focused on specification implementation and t
 6. Publish your feed.
 
 ## WZDx 1.1 Purpose & Scope
+
+This document was developed through collaboration with the WZDx Working Group to describe a set of “common core” data concepts, their meaning, and their enumeration (as applicable) in order to standardize a data feed specification to be used to publish work zone information.
+
+For purposes of this effort, “common core” is defined as data elements needed for most (if not all) work zone data use cases that could possibly be defined. The data specification includes data elements that data producers (i.e., State transportation agencies and other IOOs) are already producing (“required”) as well as those that may not currently be produced (“optional”). This common core is also considered extensible, meaning both required and optional data elements can be added to support specific use cases now and in the future.
+
+The WZDx data feed will be incrementally enhanced to evolve into a data feed that supports advanced warnings to automated vehicles in and around work zones. The current version, (WZDx v1.1) which is included in this document, will serve as a first step in this effort. It highlights common core elements which serve as a foundation for required data. This version of the data feed addresses data currently supported by existing data feeds published by public and private sector organizations.
