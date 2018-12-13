@@ -28,7 +28,7 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 ## How do can I participate?
 The first phase of this project is focused on specification implementation and therefore steps to collaborate are geared more towards IOOs. Support for other data producers and the third party data users will continue to develop in the subsequent phases of this effort. 
 
-1. Continue reading about the [WZDx v1.1. purpose and scope](#wzdx-v1.1-purpose-&-scope]
+1. Continue reading about the [WZDx v1.1 Purpose & Scope](#wzdx-v1.1-purpose-&-scope]
 2. Learn about using GitHub as a tool for collaboration and support.
 3. Use the Data Tables to understand the data components of the spec.
 4. Take a look at the example feeds and learn about the supported data files.
