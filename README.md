@@ -1,5 +1,5 @@
 ### Work Zone Data Exchange (WZDx)
-[Revision History](#revision-history)
+
 # What is WZDx Specification?
 The Work Zone Data Exchange (WZDx) Specification seeks to define a universal langauge to enable a critical mass of infrastructure owners and operators (IOOs) to collaboratively and voluntarily make harmonized work zone data available for third party use. This project is part of a larger [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort by USDOT to develop a common framework to facilitate mutually beneficial voluntary data exhanges to support and accelerate the safe, efficient, and accessible integration of Autonomous Vehicles (AVs) into the transportation system.
 
@@ -28,7 +28,7 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 ## How do can I participate?
 The first phase of this project is focused on specification implementation and therefore steps to collaborate are geared more towards IOOs. Support for other data producers and the third party data users will continue to develop in the subsequent phases of this effort. 
 
-1. Continue reading about the [Purpose and Scope](#purpose-and-scope]
+1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
 2. Learn about using GitHub as a tool for collaboration and support.
 3. Use the Data Tables to understand the data components of the spec.
 4. Take a look at the example feeds and learn about the supported data files.
@@ -43,4 +43,3 @@ For purposes of this effort, “common core” is defined as data elements neede
 
 The WZDx data feed will be incrementally enhanced to evolve into a data feed that supports advanced warnings to automated vehicles in and around work zones. The [full and current version, (WZDx v1.1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) which is included in this repository, will serve as a first step in this effort. It highlights common core elements which serve as a foundation for required data. This version of the data feed addresses data currently supported by existing data feeds published by public and private sector organizations.
 
-## Revision History
