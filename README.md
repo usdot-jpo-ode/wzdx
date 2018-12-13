@@ -12,7 +12,7 @@ In support of AV integration into our nation’s transportation system, the Fede
 The department's implementation plan is two-fold:
 1. **Support IOOs to stand up feeds using the common core:** Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users.
 2.  **Support original equipmemt manufacturers (OEMs) & navigation application parties incorporate data:** These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). 
-This approach is intended to be repeatable leading to the accelerated harmonization of local data.
+This approach is intended to be repeatably leading to the accelerated harmonization of local data.
 
 The following **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
 
@@ -26,3 +26,14 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 |     Kentucky Department of Transportation     |     Uber      |
 |     iCone     |     Embark      |
 
+## How do can I participate?
+The first phase of this project is focused on specification implementation and therefore steps to collaborate are geared more towards IOOs. Support for other data producers and the third party data users will continue to develop in the subsequent phases of this effort. 
+
+1. Continue reading about WZDx v1.1.
+2. Learn about using GitHub as a tool for collaboration and support.
+3. Use the Data Tables to understand the data components of the spec.
+4. Take a look at the example feeds and learn about the supported data files.
+5. Test your feed with validation tools.
+6. Publish your feed.
+
+## WZDx 1.1 Purpose & Scope
