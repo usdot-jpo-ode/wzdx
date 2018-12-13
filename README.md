@@ -1,5 +1,5 @@
 ### Work Zone Data Exchange (WZDx)
-
+[Revision History](#revision-history)
 # What is WZDx Specification?
 The Work Zone Data Exchange (WZDx) Specification seeks to define a universal langauge to enable a critical mass of infrastructure owners and operators (IOOs) to collaboratively and voluntarily make harmonized work zone data available for third party use. This project is part of a larger [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort by USDOT to develop a common framework to facilitate mutually beneficial voluntary data exhanges to support and accelerate the safe, efficient, and accessible integration of Autonomous Vehicles (AVs) into the transportation system.
 
@@ -42,3 +42,5 @@ This document was developed through collaboration with the WZDx Working Group to
 For purposes of this effort, “common core” is defined as data elements needed for most (if not all) work zone data use cases that could possibly be defined. The data specification includes data elements that data producers (i.e., State transportation agencies and other IOOs) are already producing (“required”) as well as those that may not currently be produced (“optional”). This common core is also considered extensible, meaning both required and optional data elements can be added to support specific use cases now and in the future.
 
 The WZDx data feed will be incrementally enhanced to evolve into a data feed that supports advanced warnings to automated vehicles in and around work zones. The [full and current version, (WZDx v1.1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) which is included in this repository, will serve as a first step in this effort. It highlights common core elements which serve as a foundation for required data. This version of the data feed addresses data currently supported by existing data feeds published by public and private sector organizations.
+
+## Revision History
