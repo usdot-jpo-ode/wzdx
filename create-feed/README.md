@@ -6,7 +6,14 @@
 4. [Code Examples](#code-examples)
 
 ### Collaborate via GitHub
-GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects allowing you to track changes. The GitHub workflow is comprised of . If you are a data producer and would like to request your own repository please contact @acosta-dani-bah.
+GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects allowing you to track changes. The GitHub workflow is comprised of . 
+
+
+To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an issue under the **help wanted** label on the Work Zone GitHub site.
+
+![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+
+If you are a data producer and would like to request your own sub-repository please contact @acosta-dani-bah.
 
 ### Data File Types
 The WZDx-v1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because:
