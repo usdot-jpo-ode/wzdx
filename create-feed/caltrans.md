@@ -1,7 +1,7 @@
 # Example 3: Caltrans
 - [Template](#template)
 - [XML Implementation(#xml-implementation)
-- [JSON Implementation(#json-implementation)
+- [JSON Implementation](#json-implementation)
 
 ### Template
 Tag | Value
@@ -26,25 +26,25 @@ timeStampUpdate | 2016-04-19T14:41:04
 ### XML Implementation
 ```xml
 <Header>
-	      <timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
+	<timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
 </Header>
 <WorkZoneActivity>
         <identifier>137097</identifier>
 	      <startDateTime>
-		            <startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
+		      <startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
 	      </startDateTime>
 	      <endDateTime>
-		            <endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
+		      <endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
 	      </endDateTime>
 	      <beginLocation>
-		            <roadName>I-91</roadName>
-		            <roadDirection>southbound</roadDirection>
-		            <latitude-est>42.33865</latitude-est>
-		            <longitude-est>-72.63399</longitude-est>
+		      <roadName>I-91</roadName>
+		      <roadDirection>southbound</roadDirection>
+		      <latitude-est>42.33865</latitude-est>
+		      <longitude-est>-72.63399</longitude-est>
 	      </beginLocation>
 	      <endLocation>
-	            	<latitude-est>42.33307</latitude-est>
-		            <longitude-est>-72.6214</longitude-est>
+		      <latitude-est>42.33307</latitude-est>
+		      <longitude-est>-72.6214</longitude-est>
 	      </endLocation>
 	      <wz_status>active</wz_status>
 	      <totalLanes>3</totalLanes>
