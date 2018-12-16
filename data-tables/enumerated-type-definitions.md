@@ -1,4 +1,6 @@
-### 2.5. Enumerated Type Definitions
+### Enumerated Type Definitions
+This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
+
 #### Table 8. Work Zone Status Definition Table
 Term | WZ-Status Description
 ---- | ---------------------
