@@ -6,7 +6,7 @@ This section expands on the description of the data frames listed in the [Common
 - [EndLocation](#endlocation)
 
 ## **StartDateTime**
-Definition: The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
+**Definition:** The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
 
 #### Table 3. StartDateTime Data Frame Table
 Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nbsp;&nbsp;&nbsp;
@@ -17,7 +17,7 @@ Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nb
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
 ## EndDateTime
-Definition: The time and date when a work zone ends. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times to* represent date and time data elements.
+**Definition:** The time and date when a work zone ends. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times to* represent date and time data elements.
 
 #### Table 4. EndDateTime Data Frame Table
 Data | Data Description | Conformance | Notes
@@ -28,7 +28,7 @@ Data | Data Description | Conformance | Notes
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
 ## BeginLocation
-Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
+**Definition:** The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
 
 #### Table 5. BeginLocation Data Frame Table
 Data | Data Description | Conformance | Notes
@@ -45,7 +45,7 @@ Data | Data Description | Conformance | Notes
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
 ## EndLocation
-Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
+**Definition:** The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
 
 #### Table 6. EndLocation Data Frame Table
 Data Name | Data Description | Conformance | Notes
