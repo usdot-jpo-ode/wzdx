@@ -12,9 +12,14 @@ This document explains the types of files and the data elements, data frames and
 - *Notes* - comments, guidance, or notes for future consideration
 
 ### Table of Contents
-1. **Common Core Data Dictionary** 
-2. **WZDx Header Data**
-3. **Data Frames**   
-4. **Enumerated Types** 
-5. **Enumerated Type Definitions** 
-6. **Metadata** 
+- **Common Core Data Dictionary** 
+- **WZDx Header Data**
+- **Data Frames**
+    - StartDateTime
+    - EndDateTime
+    - BeginLocation
+    - EndLocation
+- **Enumerated Types** 
+- **Enumerated Type Definitions** 
+- **Enumerated Type Definitions Derived from ITS Standards** 
+- **Metadata** 
