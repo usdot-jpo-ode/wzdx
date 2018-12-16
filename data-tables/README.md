@@ -4,11 +4,7 @@
 This document explains the types of files and the data elements, data frames and enumerated types that make up a Work Zone data feed. 
 
 ### Table of Contents
-1. **Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
-    - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
-    - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. 
-
-        The data described are intended to have clear and unambiguous meanings.
+1. **Common Core Data Dictionary** 
 
 2. **WZDx Header Data** - This section includes a table of header information. Specifically, this includes supplemental data placed at the beginning of the Work Zone Activity records.
 3. **Data Frames** -  This section expands on the description of the data frames listed in the data dictionary (Section 2.1) and identifies values for data elements that contain standardized enumerations.  Tables are included for the following data frames:
