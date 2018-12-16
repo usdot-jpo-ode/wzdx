@@ -1,6 +1,6 @@
 # Example 3: Caltrans
 - [Template](#template)
-- [XML Implementation(#xml-implementation)
+- [XML Implementation](#xml-implementation)
 - [JSON Implementation](#json-implementation)
 
 ### Template
