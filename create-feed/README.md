@@ -20,6 +20,7 @@ Three examples of WorkZoneActivity records are shown below. They were derived fr
 * [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md)
 * [Example 2 – iCone Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/icone.md)
 * [Example 3 – Caltrans Lane Closure Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/caltrans.md#json-implementation)
+
 These examples use the following sample work zone activity template:
 
 #### Sample Work Zone Activity Template
