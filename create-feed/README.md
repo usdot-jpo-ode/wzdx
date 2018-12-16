@@ -39,24 +39,7 @@ Three examples of WorkZoneActivity records are shown below. They were derived fr
 * iCone Event Feed – Example 2
 * Caltrans Lane Closure Feed – Example 3 
 
-#### Example 1: MassDOT 
-Tag | Value
---- | -----
-Identifier | 137097
-StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03T19:37:00
-EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214
-wz-Status | active
-totalLanes | 3
-openLanes | right2
-closedLanes | left1
-closedShoulders | inside
-workersPresent | n/a
-RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
-description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
-issuingOrganization | MassDOT
-timeStampEventUpdate | 2017-11-02T18:57:02
+
 
 #### Example 2: iCone
 Tag | Value
