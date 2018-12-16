@@ -12,17 +12,17 @@ This document explains the types of files and the data elements, data frames and
 - *Notes* - comments, guidance, or notes for future consideration
 
 ### Table of Contents
-- **Common Core Data Dictionary** 
-- **WZDx Header Data**
-- **Data Frames**
+- [**Common Core Data Dictionary**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md) 
+- [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
+- [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
     - StartDateTime
     - EndDateTime
     - BeginLocation
     - EndLocation
-- **Enumerated Types** 
-- **Enumerated Type Definitions** 
-- **Enumerated Type Definitions Derived from ITS Standards** 
+- [**Enumerated Types**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) 
+- [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
+- [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
     - openLanes and closedLanes
     - closedShoulders
     - roadDirection
-- **Metadata** 
+- [**Metadata**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/metadata.md) 
