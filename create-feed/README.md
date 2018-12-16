@@ -41,24 +41,7 @@ Three examples of WorkZoneActivity records are shown below. They were derived fr
 
 
 
-#### Example 2: iCone
-Tag | Value
---- | -----
-Identifier | 320
-StartDateTime<ul><li>startDateTime-ver</li></ul> | 2015-01-07T16:50:56Z
-EndDateTime<ul><li>endDateTime</li></ul> | n/a
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-35<br>roadDirection: Northbound<br>latitude-ver: 31.0855180<br>longitude-ver: -97.4030700
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-ver: 31.0855180<br>longitude-ver: -97.4030700
-wz-Status | active
-totalLanes | 3
-openLanes | all
-closedLanes | none
-closedShoulders | outside
-workersPresent | true
-RoadRestrictions*<ul><li>roadRestrictions</li></ul> |
-description | Long-term deployment near Temple
-issuingOrganization | iCone
-timeStampUpdate | 2018-01-17T22:32:00Z
+
 
 #### Example 3: Caltrans
 Tag | Value
