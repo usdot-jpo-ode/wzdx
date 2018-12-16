@@ -36,30 +36,5 @@ The WZDx Activity frame code examples presented below were extracted from existi
 
 Three examples of WorkZoneActivity records are shown below. They were derived from on-line data feeds including:
 * [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md)
-* iCone Event Feed – Example 2
+* [Example 2 – iCone Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/icone.md)
 * Caltrans Lane Closure Feed – Example 3 
-
-
-
-
-
-#### Example 3: Caltrans
-Tag | Value
---- | -----
-Identifier | C299CA-0004-2016-04-12-00:01:00
-StartDateTime<ul><li>startDateTime</li></ul> | startDateTime-ver: 2016-04-12T15:58:00
-EndDateTime<ul><li>endDateTime</li></ul> | endDateTime-est: 2016-04-30T
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: CA-299<br>roadDirection: East<br>latitude-est: 40.635122<br>longitude-est: -122.733841<br>milepost-est: 114.190T23:59:00
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 40.67201<br>longitude-est: -122.654384<br>milepost-est: 121.633
-wz-Status | Active
-totalLanes | 2
-openLanes | right
-closedLanes | left
-closedShoulders | Inside
-workersPresent | True
-RoadRestrictions*<ul><li>roadRestriction</li></ul> |
-description | One lane closed on Route 299 East near Lewiston to French Gulch<br>(0.6 mi west of Crystal Creek Rd) for approximately 30 days.
-issuingOrganization | Caltrans
-timeStampCreation | 2016-04-12T00:01:00
-timeStampUpdate | 2016-04-19T14:41:04
-
