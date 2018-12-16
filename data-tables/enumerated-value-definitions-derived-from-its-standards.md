@@ -1,5 +1,8 @@
 # Enumerated Value Definitions Derived from ITS Standards
-The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md).
+The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) for:
+- [openLanes and closedLanes](#openlanes-and-closedlanes)
+- [closedShoulders](#closedshoulders)
+- [roadDirection](#roaddirection)
 
 Example of data frame in the TMDD (specified in ASN.1 format)
 ```xml
