@@ -1,7 +1,7 @@
 # Enumerated Type Definitions
 This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
 
-#### Table 8. Work Zone Status Definition Table
+#### Table 8. Work Zone Status Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
