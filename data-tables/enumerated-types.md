@@ -1,5 +1,5 @@
 ### Enumerated Types
-This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. A enumerated type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefine for it. 
+This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. An enumerated type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefine for it. 
 
 #### Table 7. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
