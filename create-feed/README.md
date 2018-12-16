@@ -96,3 +96,4 @@ description | One lane closed on Route 299 East near Lewiston to French Gulch<br
 issuingOrganization | Caltrans
 timeStampCreation | 2016-04-12T00:01:00
 timeStampUpdate | 2016-04-19T14:41:04
+
