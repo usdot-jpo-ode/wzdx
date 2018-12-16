@@ -6,12 +6,14 @@
 4. [Code Examples](#code-examples)
 
 ### Collaborate via GitHub
-GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of:
-- **Creating a Branch**
-- Adding Commits
-- Opening a Pull Request
-- Discussing and Reviewing Commits
-- Merging to Master Branch
+GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
+- **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you maintain your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
+- **Adding Commits** - A commit is any change made to your project that you can track allowing you to create a record of your work that others can use a reference.  
+- **Opening a Pull Request** - Pull requests allows you to alert others on your team to let them reveiw and discuss your changes. 
+- **Discussing and Reviewing Commits** - This part of the process allows reviewers on your team or the DAVI Data Team check that the spec is properly implemented (i.e., that data types are correctly specified in an .xsd file).
+- **Merging to Master Branch** - Once your commits have been reviewed and approved you can push your changes to merge with the master branch. 
+
+A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
 
 To start collaborating via GitHub:
 - [Join GitHub](#https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
