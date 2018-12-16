@@ -6,7 +6,10 @@
 4. [Code Examples](#code-examples)
 
 ### Data File Types
-The WZDx-v1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because of their lighweight data exchange format, are easy for humans to read and write, and are easy for machines to parse and generate. 
+The WZDx-v1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because:
+- Of their lighweight data exchange format.
+- Are easy for humans to read and write.
+- Are easy for machines to parse and generate. 
 
 The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the [Common Core Data Dictionary elements (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md#table1.-common-core-data) and depicted in Figure 1.
 
