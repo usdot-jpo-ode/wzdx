@@ -35,7 +35,7 @@ The WZDx Activity frame code examples presented below were extracted from existi
 | timeStampEventUpdate                                                                    |                                                                                           |
 
 Three examples of WorkZoneActivity records are shown below. They were derived from on-line data feeds including:
-* [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md#xml-implementation)
+* [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md)
 * iCone Event Feed – Example 2
 * Caltrans Lane Closure Feed – Example 3 
 
