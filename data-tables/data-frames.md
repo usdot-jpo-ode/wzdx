@@ -9,7 +9,7 @@ This section expands on the description of the data frames listed in the [Common
 Definition: The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
 
 #### Table 3. StartDateTime Data Frame Table
-Data | Data Description | Conformance | Notes
+Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nbsp;&nbsp;&nbsp;
 ---- | ---------------- | ----------- | -----
 **startDateTime-est** | The planned time and date<br>when a work zone starts | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
 **startDateTime-ver** | A verified time and date<br>when the work zone was<br>actually installed | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
