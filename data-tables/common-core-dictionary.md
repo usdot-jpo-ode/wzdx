@@ -1,13 +1,7 @@
-### 2.1 Common Core Data Dictionary
-The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
-- *Data Name* - name of the data concept (either a data element or data frame) 
-- *Data Type* - identification of the data concept as a data element or data frame and whether it is an enumerated type
-- *Data Description* - description of the data concept
-- *Conformance* - description of the requirement for including data in the data feed file. There are three categories of conformance:
-    - Required - must be included
-    - Optional - may be included
-    - Conditional - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
-- *Notes* - comments, guidance, or notes for future consideration
+### Common Core Data Dictionary
+This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
+    - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
+    - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. The data described are intended to have clear and unambiguous meanings.
 
 #### Table 1. Common Core Data
 Data Name | Data Type | Data Description | Conformance | Notes
