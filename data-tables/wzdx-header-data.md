@@ -1,6 +1,6 @@
 ### WZDx Header Data
 
-This section includes a table of header information. Specifically, this includes placed at the beginning of the Work Zone Activity records and defines the content of the file and lists specific file attributes. It is considered supplemental data and is placed at the beginning of the block of data (i.e., the “body”) being stored and transmitted.
+This section includes a table of header information. Specifically, this includes data on the Work Zone Activity records and defines the content of the file and lists specific file attributes. It is considered supplemental data and is placed at the beginning of the block of data (i.e., the “body”) being stored and transmitted.
 
 For the WZDx v1, the body of the data feed comes from the Common Core Data Dictionary.  The header data includes the data feed name, body name, and file header information.
 
