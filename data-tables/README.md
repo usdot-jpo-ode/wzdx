@@ -22,4 +22,7 @@ This document explains the types of files and the data elements, data frames and
 - **Enumerated Types** 
 - **Enumerated Type Definitions** 
 - **Enumerated Type Definitions Derived from ITS Standards** 
+    - openLanes and closedLanes
+    - closedShoulders
+    - roadDirection
 - **Metadata** 
