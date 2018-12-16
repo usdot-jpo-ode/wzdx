@@ -29,7 +29,7 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 The first phase of this project is focused on specification implementation and therefore steps to collaborate are geared more towards IOOs. Support for other data producers and the third party data users will continue to develop in the subsequent phases of this effort. 
 
 1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
-2. Learn about using GitHub as a tool for collaboration and support.
+2. Learn about using GitHub as a [tool for collaboration and support](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/README.md#collaborate-via-github).
 3. Use the [Data Tables](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/README.md) to understand the data components of the spec.
 4. [Create your own feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/README.md) using the example feeds and learn about the supported data files.
 5. Test your feed with validation tools.
