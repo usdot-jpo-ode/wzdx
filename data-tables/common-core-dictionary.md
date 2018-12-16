@@ -1,7 +1,8 @@
 ### Common Core Data Dictionary
 This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
-    - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
-    - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. The data described are intended to have clear and unambiguous meanings.
+
+- *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
+- *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. The data described are intended to have clear and unambiguous meanings.
 
 #### Table 1. Common Core Data
 Data Name | Data Type | Data Description | Conformance | Notes
