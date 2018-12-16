@@ -3,7 +3,7 @@
 ### Supported Data File Types
 The WZDx-v1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because of their lighweight data exchange format, are easy for humans to read and write, and are easy for machines to parse and generate. 
 
-The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the common core data dictionary elements (Table 1) and depicted in Figure 1.
+The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the [Common Core Data Dictionary elements (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md#table1.-common-core-data) and depicted in Figure 1.
 
 #### Figure 1: Work Zone Activity Organization
 *Note*: not all optional data elements are included in secondary levels of the hierarchy
@@ -37,4 +37,4 @@ The WZDx Activity frame code examples presented below were extracted from existi
 Three examples of WorkZoneActivity records are shown below. They were derived from on-line data feeds including:
 * [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md)
 * [Example 2 – iCone Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/icone.md)
-* Caltrans Lane Closure Feed – Example 3 
+* [Example 3 – Caltrans Lane Closure Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/caltrans.md#json-implementation)
