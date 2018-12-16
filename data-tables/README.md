@@ -17,6 +17,6 @@ This document explains the types of files and the data elements, data frames and
 2. **WZDx Header Data**
 3. **Data Frames**   
 4. **Enumerated Types** 
-5. **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
+5. **Enumerated Type Definitions** 
 6. **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
 
