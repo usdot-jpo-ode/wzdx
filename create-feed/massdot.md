@@ -24,6 +24,40 @@ issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
 
 ### XML Implementation
+```xml
+	<Header>
+		<timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
+	</Header>
+	<WorkZoneActivity>
+		<identifier>137097</identifier>
+		<startDateTime>
+			<startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
+		</startDateTime>
+		<endDateTime>
+			<endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
+		</endDateTime>
+		<beginLocation>
+			<roadName>I-91</roadName>
+			<roadDirection>southbound</roadDirection>
+			<latitude-est>42.33865</latitude-est>
+			<longitude-est>-72.63399</longitude-est>
+		</beginLocation>
+		<endLocation>
+			<latitude-est>42.33307</latitude-est>
+			<longitude-est>-72.6214</longitude-est>
+		</endLocation>
+		<wz_status>active</wz_status>
+		<totalLanes>3</totalLanes>
+		<openLanes>right2</openLanes>
+		<closedLanes>left1</closedLanes>
+		<closedShoulders>inside</closedShoulders>
+		<workersPresent>n/a</workersPresent>
+		<roadRestrictions>n/a</roadRestrictions>
+		<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
+		<issuingOrganization>MassDOT</issuingOrganization>
+		<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
+	</WorkZoneActivity>
+```
 
 ### JSON Implementation
 ```json
