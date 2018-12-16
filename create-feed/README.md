@@ -13,9 +13,12 @@ GitHub is an open-source repository hosting service that allows for the storage 
 - Discussing and Reviewing Commits
 - Merging to Master Branch
 
-If you are a data producer and would like to request your own-subrepository to host your project please contact [Nate Deshmukh-towery](nate.deshmukh-towery@dot.gov)
+To start collaborating via GitHub:
+- [Join GitHub](#https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
+- If you are a data producer contact [Nate Deshmukh-towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
 
-To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an issue under the **help wanted** label on the Work Zone GitHub site.
+#### How Do I Get Help?
+To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
 ![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
 
