@@ -2,8 +2,8 @@
 
 1. [Collaborate via GitHub](#collaborate-via-GitHub)
 2. [Data File Types](#data-file-types)
-3. [Convert Flat Files](#convert-flat-files)
-4. [Code Examples](#code-examples)
+3. [Code Examples](#code-examples)
+4. [Convert Flat Files](#convert-flat-files)
 
 ### Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
@@ -65,3 +65,4 @@ These examples use the following sample work zone activity template:
 | issuingOrganization                                                                     |                                                                                           |
 | timeStampEventCreation                                                                  |                                                                                           |
 | timeStampEventUpdate                                                                    |                                                                                           |
+### Convert Flat Files
