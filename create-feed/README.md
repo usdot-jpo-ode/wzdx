@@ -16,7 +16,7 @@ GitHub is an open-source repository hosting service that allows for the storage 
 A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
 
 To start collaborating via GitHub:
-- [Join GitHub](#https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
+- [Join GitHub](https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
 - If you are a data producer contact [Nate Deshmukh-towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
 
 #### How Do I Get Help?
