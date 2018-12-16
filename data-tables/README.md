@@ -18,5 +18,4 @@ This document explains the types of files and the data elements, data frames and
 3. **Data Frames**   
 4. **Enumerated Types** 
 5. **Enumerated Type Definitions** 
-6. **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
-
+6. **Metadata** 
