@@ -13,7 +13,6 @@ This document explains the types of files and the data elements, data frames and
 
 ### Table of Contents
 1. **Common Core Data Dictionary** 
-
 2. **WZDx Header Data**
 3. **Data Frames**   
 4. **Enumerated Types** 
