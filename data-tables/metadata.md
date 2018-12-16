@@ -1,4 +1,4 @@
-### 2.7. Metadata
+# Metadata
 This section describes the contents of a static file with information about the quality and context of data in the data feed. The files should be made available to data consumers through a link included in the [WZDx header data elements](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md).
 
 The static file shall be encoded as a comma delimited text file.
