@@ -17,7 +17,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 ```
 
 #### openLanes and closedLanes
-Note: LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+*Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
 --------------------------- | ------------------------------------- | -----------
@@ -95,7 +95,7 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 |  | right-shift-lanes | All open lanes shift to the right
 
 #### closedShoulders
-Note:  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+*Note:*  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 --------------------------- | --------------------------- | -----------
@@ -106,7 +106,7 @@ LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
 #### roadDirection
-Note:  Link-alignment is imported from TMDD
+*Note:*  Link-alignment is imported from TMDD
 
 Link-alignment<br>enumerations | Used for<br>roadDirections | Description
 ------------------------------ | -------------------------- | -----------
