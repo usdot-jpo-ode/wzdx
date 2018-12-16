@@ -30,8 +30,8 @@ Data Element Name | Required | Description
 
 ```xml
 <Header>
-		<timeStampUpdate>2001-12-17T09:30:47Z</timeStampUpdate>
-		<metadataURL>String</metadataURL>
-		<versionNo>String</versionNo>
-	</Header>
+	<timeStampUpdate>2001-12-17T09:30:47Z</timeStampUpdate>
+	<metadataURL>String</metadataURL>
+	<versionNo>String</versionNo>
+</Header>
 ```
