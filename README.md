@@ -1,20 +1,19 @@
 ### Work Zone Data Exchange (WZDx)
 
-# What is WZDx Specification?
-The Work Zone Data Exchange (WZDx) Specification seeks to define a universal langauge to enable a critical mass of infrastructure owners and operators (IOOs) to collaboratively and voluntarily make harmonized work zone data available for third party use. This project is part of a larger [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort by USDOT to develop a common framework to facilitate mutually beneficial voluntary data exhanges to support and accelerate the safe, efficient, and accessible integration of Autonomous Vehicles (AVs) into the transportation system.
+# What is the WZDx Specification?
+The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make public roads safer and more efficient through ubiqutious access to data on work zone activity. Specifically, the project aims to get data on work zones into vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
 
+# Why is WZDx being developed?
+Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort. 
 
-## WZDx Implementation Road Map
-Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help AVs navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
+Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help ADS and humans navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
 
-In support of AV integration into our nation’s transportation system, [the Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [USDOT’s Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) are co-leading the WZDx project. The effort seeks to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. WZDx will enable collaborative maintenance and expansion of the specification as operational and technological enhancements become available.
+Thus, inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT launched WZDx to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. Longer term, the goal is to enable collaborative maintenance and expansion of the specification to meet the emerging needs of ADS.
 
-The department's implementation plan is two-fold:
-1. **Support IOOs to stand up feeds using the common core:** Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users.
-2.  **Support original equipmemt manufacturers (OEMs) & navigation application parties incorporate data:** These users will then use the harmonized data in a meaningful way. 
+## Who is involved in developing WZDx?
+The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) are co-leading the early stages of the WZDx project. 
 
-The following **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
-
+Several **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily developed v1.1 of the specification in collaboration with USDOT. Below are the members of the WZDx Working Group:
 
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Producers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Users &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 |     :------------:      |     :------------:      |
@@ -25,8 +24,10 @@ The following **data producers** and **data users** (i.e., the WZDx Working Grou
 |     Kentucky Department of Transportation     |     Uber      |
 |     iCone     |     Embark      |
 
-## How do can I participate?
-The first phase of this project is focused on specification implementation and therefore steps to collaborate are geared more towards IOOs. Support for other data producers and the third party data users will continue to develop in the subsequent phases of this effort. 
+## How can I participate?
+USDOT welcomes feedback and comments on the v1.1 specification. Comments can be made by making an Github Issue, while suggested changes can be made using a pull request. 
+
+[v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
 
 1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
 2. Learn about using GitHub as a [tool for collaboration and support](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/README.md#collaborate-via-github).
@@ -35,9 +36,11 @@ The first phase of this project is focused on specification implementation and t
 5. Test your feed with validation tools.
 6. Publish your feed.
 
+This project will be updated with resources to help with implementation; in the meantime, please make a GitHub issue if you need help implementing the specification.
+
 ## Purpose and Scope
 
-This document was developed through collaboration with the WZDx Working Group to describe a set of “common core” data concepts, their meaning, and their enumeration (as applicable) in order to standardize a data feed specification to be used to publish work zone information.
+This specification was developed through collaboration with the WZDx Working Group to describe a set of “common core” data concepts, their meaning, and their enumeration (as applicable) in order to standardize a data feed specification to be used to publish work zone information.
 
 For purposes of this effort, “common core” is defined as data elements needed for most (if not all) work zone data use cases that could possibly be defined. The data specification includes data elements that data producers (i.e., State transportation agencies and other IOOs) are already producing (“required”) as well as those that may not currently be produced (“optional”). This common core is also considered extensible, meaning both required and optional data elements can be added to support specific use cases now and in the future.
 
