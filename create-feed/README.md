@@ -25,8 +25,8 @@ To interact directly with the DAVI Data Team and to get help implementing the sp
 ![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
 
 ### Data File Types
-The WZDx-v1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because:
-- Of their lighweight data exchange format.
+The WZDx v1.1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been choosen as the file types of choice because they:
+- Are a lighweight data exchange format.
 - Are easy for humans to read and write.
 - Are easy for machines to parse and generate. 
 
