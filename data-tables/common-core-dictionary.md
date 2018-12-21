@@ -7,10 +7,10 @@ This section includes a table of WZDx common core data concepts. Data concepts m
 #### Table 1. Common Core Data
 Data Name | Data Type | Data Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
-**identifier** | Data element | A unique identifier issued by the<br>data feed provider to identify<br>the work zone project or activity | Required | Request that this be a standardized identifier for a future version
-**subidentifier** | Data element | A unique identifier issued by data feed provider<br>that provides additional references to project or activity | Optional | This identifier may be used in more<br>than one feed as a reference to an<br>agency project number or permit ID
-**StartDateTime** | Data Frame | The time and date when a work zone<br>starts | Required |
-**EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required | 
+**identifier** | Data element | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Request that this be a standardized identifier for a future version
+**subidentifier** | Data element | A unique identifier issued by data feed provider that provides additional references to project or activity | Optional | This identifier may be used in more than one feed as a reference to an<br>agency project number or permit ID
+**StartDateTime** | Data Frame | The time and date when a work zone starts | Required |
+**EndDateTime** | Data Frame | The time and date when a work zone ends | Required | 
 **BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
