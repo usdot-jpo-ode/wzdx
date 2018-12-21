@@ -11,7 +11,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **subidentifier** | Data element | A unique identifier issued by data feed provider that provides additional references to project or activity | Optional | This identifier may be used in more than one feed as a reference to an<br>agency project number or permit ID
 **StartDateTime** | Data Frame | The time and date when a work zone starts | Required |
 **EndDateTime** | Data Frame | The time and date when a work zone ends | Required | 
-**BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
+**BeginLocation** | Data Frame | The LOCATION when work zone impact begins along a single road in<br>a single direction (see BeginLocation).The impact typically begins where the first channeling device (e.g., cone or barrel) is located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
@@ -20,8 +20,8 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
-**RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
+**RoadRestrictions** | Enum | One or more roadRestriction flags indicating restrictions apply to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
-**timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
-**timestampEventUpdate** | Data element | The time and date when the activity<br>or event was updated | Optional |
+**timestampEventCreation** | Data element | The time and date when the activity or event was created | Optional |
+**timestampEventUpdate** | Data element | The time and date when the activity or event was updated | Optional |
