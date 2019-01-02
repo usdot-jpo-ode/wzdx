@@ -33,8 +33,8 @@ USDOT welcomes feedback and comments on the v1.1 specification. Comments can be 
 2. Learn about using GitHub as a [tool for collaboration and support](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/README.md#collaborate-via-github).
 3. Use the [Data Tables](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/README.md) to understand the data components of the spec.
 4. [Create your own feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/README.md) using the example feeds and learn about the supported data files.
-5. Test your feed with validation tools.
-6. Publish your feed.
+5. Test your feed with validation tools. **(TBA)**
+6. Publish your feed. **(TBA)**
 
 This project will be updated with resources to help with implementation; in the meantime, please make a GitHub issue if you need help implementing the specification.
 
