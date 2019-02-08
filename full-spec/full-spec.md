@@ -45,6 +45,7 @@ Updated 9/15/2018
 - Table 6. EndLocation Data Frame Table
 - Table 7. Enumerated Types Table
 - Table 8. Work Zone Status Definition Table
+- Table 8A. Work Zone Type 
 - Table 9. Spatial and Time Verification Definitions
 - Table 10. RoadRestriction Definitions
 - Table 11. Metadata
