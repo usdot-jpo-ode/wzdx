@@ -6,15 +6,15 @@ Updated 9/15/2018
 
 ## TABLE OF CONTNETS
 - [Introduction](#introduction)
-    1. Background
-    2. Purpose
-    3. Scope
-    4. Document Organization
-- Data Tables
-    1. Common Core Data Dictionary
-    2. WZDx Header Data
-    3. Data Frames
-       1. StartDate Time
+    - [Background](#background)
+    - [Purpose](#purpose)
+    - [Scope](#scope)
+    - [Document Organization](#documentorganization)
+- [Data Tables](#datatables)
+    - [Common Core Data Dictionary](#commoncoredatadictionary)
+    - [WZDx Header Data](#wzdxheaderdata)
+    - [Data Frames](#dataframes)
+       - [StartDate Time](#startdatetime)
        2. EndDate Time
        3. BeginLocation
        4. EndLocation
