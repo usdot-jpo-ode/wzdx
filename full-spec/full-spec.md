@@ -9,7 +9,7 @@ Updated 9/15/2018
     - [Background](#background)
     - [Purpose](#purpose)
     - [Scope](#scope)
-    - [Document Organization](#documentorganization)
+    - [Document Organization](#document-organization)
 - [Data Tables](#datatables)
     - [Common Core Data Dictionary](#commoncoredatadictionary)
     - [WZDx Header Data](#wzdxheaderdata)
