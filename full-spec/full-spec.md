@@ -101,7 +101,7 @@ The remainder of this document is organized into the following sections:
 - This section includes the validated XML scheme and examples of XML and JSON files.
 
 ## DATA TABLES
-### 2.1 Common Core Data Dictionary
+### Common Core Data Dictionary
 The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
 - *Data Name* - name of the data concept (either a data element or data frame) 
 - *Data Type* - identification of the data concept as a data element or data frame and whether it is an enumerated type
@@ -149,8 +149,8 @@ Data Element Name | Required | Description
 **metadataURL** | no | A link to the metadata file (WZ-metadata.txt).<br>See Section 2.6 for a description of the file.
 **versionNo** | no | The WZDx version number that was used to create the file
 
-### 2.3. Data Frames
-#### **2.3.1. StartDateTime**
+### Data Frames
+#### **StartDateTime**
 Definition: The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
 
 #### Table 3. StartDateTime Data Frame Table
@@ -161,7 +161,7 @@ Data | Data Description | Conformance | Notes
 **startDateTime-cancelled** | Cancellation of a planned start<br>time and date assocaited<br>with a work zone | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
-#### 2.3.2 EndDateTime
+#### EndDateTime
 Definition: The time and date when a work zone ends. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times to* represent date and time data elements.
 
 #### Table 4. EndDateTime Data Frame Table
@@ -172,7 +172,7 @@ Data | Data Description | Conformance | Notes
 **endDateTime-cancelled** | Cancellation of a planned end <br>time and date assocaited<br>with a work zone | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
-#### 2.3.3. BeginLocation
+#### BeginLocation
 Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
 
 #### Table 5. BeginLocation Data Frame Table
@@ -189,7 +189,7 @@ Data | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance<br>measured against a milepost<br>marker along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
-#### 2.3.4. EndLocation
+#### EndLocation
 Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
 
 #### Table 6. EndLocation Data Frame Table
@@ -203,7 +203,7 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
-### 2.4. Enumerated Types
+### Enumerated Types
 #### Table 7. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
@@ -213,7 +213,7 @@ Data Element | Used by | Allowed Values | Notes | Source
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 
-### 2.5. Enumerated Type Definitions
+### Enumerated Type Definitions
 #### Table 8. Work Zone Status Definition Table
 Term | WZ-Status Description
 ---- | ---------------------
@@ -250,7 +250,7 @@ RoadRestrictions | Descriptions
 **towing-prohibited** | Towing prohibited in work zone area
 **permitted-oversize-loads-<br>prohibited** | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
 
-### 2.6. Enumerated Value Definitions Derived from ITS Standards
+### Enumerated Value Definitions Derived from ITS Standards
 The following tables show the translation from TMDD to the WZDx Enumerated Types (Table 7).
 
 Example of data frame in the TMDD (specified in ASN.1 format)
@@ -265,7 +265,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### 2.6.1. openLanes and closedLanes
+#### openLanes and closedLanes
 Note: LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
@@ -343,7 +343,7 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 |  | left-shift-lanes | All open lanes shift to the left
 |  | right-shift-lanes | All open lanes shift to the right
 
-#### 2.6.2. closedShoulders
+#### closedShoulders
 Note:  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
@@ -354,7 +354,7 @@ LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### 2.6.3. roadDirection
+#### roadDirection
 Note:  Link-alignment is imported from TMDD
 
 Link-alignment<br>enumerations | Used for<br>roadDirections | Description
@@ -366,7 +366,7 @@ Link-alignment<br>enumerations | Used for<br>roadDirections | Description
 **inner-loop (5)** |  | Not used
 **outer-loop (6)** |  | Not used
 
-### 2.7. Metadata
+### Metadata
 This section describes the contents of a static file with information about the quality and context of data in the data feed. The files should be made available to data consumers through a link included in the WZDx header data elements (see Section 2.2).
 
 The static file shall be encoded as a comma delimited text file.
@@ -386,14 +386,14 @@ Data Name | Description | Example
 **Contact-name** | The name of a contact responsible for the<br>data feed | Jo Help
 **Contact-email** | The contact’s email address | jhelp@anyplacePW.com
 
-## 3. CREATING THE SPECIFICATION
+## CREATING THE SPECIFICATION
 The WZDx-v1 data feed will be specified as an XML file. The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the common core data dictionary elements (Table 1) and depicted in Figure 1.
 
 ![Fig. 1](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%201.png)
 #### Figure 1: Work Zone Activity Organization
 Note: not all optional data elements are included in secondary levels of the hierarchy
 
-### 3.1. Code Examples
+### Code Examples
 The WZDx Activity frame code examples presented below were extracted from existing data feeds generated by several open data sites. These examples use the following sample work zone activity template:
 
 #### Sample Work Zone Activity Template
@@ -422,7 +422,7 @@ Three examples of WorkZoneActivity records are shown below. They were derived fr
 * iCone Event Feed – Example 2
 * Caltrans Lane Closure Feed – Example 3 
 
-#### 3.1.1. Example 1: MassDOT 
+#### Example 1: MassDOT 
 Tag | Value
 --- | -----
 Identifier | 137097
@@ -441,7 +441,7 @@ description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
 
-#### 3.1.2. Example 2: iCone
+#### Example 2: iCone
 Tag | Value
 --- | -----
 Identifier | 320
@@ -460,7 +460,7 @@ description | Long-term deployment near Temple
 issuingOrganization | iCone
 timeStampUpdate | 2018-01-17T22:32:00Z
 
-#### 3.1.3. Example 3: Caltrans
+#### Example 3: Caltrans
 Tag | Value
 --- | -----
 Identifier | C299CA-0004-2016-04-12-00:01:00
@@ -480,14 +480,14 @@ issuingOrganization | Caltrans
 timeStampCreation | 2016-04-12T00:01:00
 timeStampUpdate | 2016-04-19T14:41:04
 
-## 4. XML Schema and Examples of XML and JSON files
+## XML Schema and Examples of XML and JSON files
 See files in separate attachment:
 * [WXDX_XMLSample.xml](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDX_XMLSample.xml)
 * [wxdx_JSONsample.json](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/wxdx_JSONsample.json)
 * [WZDx_draft01.xsd](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDx_final01.xsd)
 
 
-## 5. WZ Location Method Description and Practices 
+## WZ Location Method Description and Practices 
 The metadata file will include one of five enumerated type values for WZ-location-method field.  
 
 For this data element (WZ-location-method), select the value below that most closely represents how begin and end locations are assigned in the WZDX file.
@@ -498,7 +498,7 @@ For this data element (WZ-location-method), select the value below that most clo
 * **unknown** – when method for locating the begin and end locations of the work zone is not known
 * **other** – when the method for locating the begin and end locations do not closely match any of the alternatives. An explanation should be included in the metadata when this value is assigned.
 
-### 5.1. channel-device-method (Preferred Method)
+### channel-device-method (Preferred Method)
 Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. For complex work zones with multiple activities, begin and end locations are the first channeling device for first activity up to the last channeling device of the last activity.
 
 #### Simple Scenario
@@ -511,12 +511,12 @@ Note: with the data element “subidentifier”, the “owner” can link the th
 
 ![Fig. 3](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%203.png)
 
-### 5.2. sign-method
+### sign-method
 Location of first and last work zone-related signs. This may be different from the channelization location. For complex work zones, begin would be the first sign before the first activity and end would be the last sign following the last activity.
 
 ![Fig. 4](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%204.png)
 
-### 5.3. junction-method
+### junction-method
 Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
 
 #### Aterial Scenario
