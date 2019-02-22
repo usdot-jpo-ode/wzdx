@@ -18,7 +18,7 @@ Updated 9/15/2018
        - [EndDate Time](#enddatetime)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
-    4. Enumerated Types
+    4. Enumerated Typess
     5. Enumerated Type Definitions
     6. Enumerated Value Definitions Derived from ITS Standards
        1. openLanes and closedLanes
