@@ -15,9 +15,9 @@ Updated 9/15/2018
     - [WZDx Header Data](#wzdxheaderdata)
     - [Data Frames](#dataframes)
        - [StartDate Time](#startdatetime)
-       2. EndDate Time
-       3. BeginLocation
-       4. EndLocation
+       - [EndDate Time](#enddatetime)
+       - [BeginLocation](#beginlocation)
+       - [EndLocation](#endlocation)
     4. Enumerated Types
     5. Enumerated Type Definitions
     6. Enumerated Value Definitions Derived from ITS Standards
@@ -66,33 +66,33 @@ Data Producers | Data Users
 •	Kentucky Department of Transportation | •	Uber
 •	iCone | •	Embark
 
-### ii. Purpose
+### Purpose
 This document was developed through collaboration with the WZDx Working Group to describe a set of “common core” data concepts, their meaning, and their enumeration (as applicable) in order to standardize a data feed specification to be used to publish work zone information.  
 For purposes of this effort, “common core” is defined as data elements needed for most (if not all) work zone data use cases that could possibly be defined. The data specification includes data elements that data producers (i.e., State transportation agencies and other IOOs) are already producing (“required”) as well as those that may not currently be produced (“optional”). This common core is also considered extensible, meaning both required and optional data elements can be added to support specific use cases now and in the future.  
 
-### ii. Scope
+### Scope
 The WZDx data feed will be incrementally enhanced to evolve into a data feed that supports advanced warnings to automated vehicles in and around work zones. The current version, (WZDx v1.1) which is included in this document, will serve as a first step in this effort. It highlights common core elements which serve as a foundation for required data. This version of the data feed addresses data currently supported by existing data feeds published by public and private sector organizations.
 
-### iv. Document Organization
+### Document Organization
 The remainder of this document is organized into the following sections:
 
 **Section 2 Data Tables**
-- **2.1 Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
+- **Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
     - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
     - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. 
 
 
     The data described are intended to have clear and unambiguous meanings.
 
-- **2.2. WZDx Header Data** - This section includes a table of header information. Specifically, this includes supplemental data placed at the beginning of the Work Zone Activity records.
-- **2.3 Data Frames** -  This section expands on the description of the data frames listed in the data dictionary (Section 2.1) and identifies values for data elements that contain standardized enumerations.  Tables are included for the following data frames:
+- **WZDx Header Data** - This section includes a table of header information. Specifically, this includes supplemental data placed at the beginning of the Work Zone Activity records.
+- **Data Frames** -  This section expands on the description of the data frames listed in the data dictionary (Section 2.1) and identifies values for data elements that contain standardized enumerations.  Tables are included for the following data frames:
     - StartDateTime
     - EndDateTime
     - BeginLocation
     - EndLocation
-- **2.4 Enumerated Types** - This section includes a table of enumerated data elements.
-- **2.5 Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
-- **2.7 Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
+- **Enumerated Types** - This section includes a table of enumerated data elements.
+- **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
+- **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
 
 **Section 3. Creating the Specification**
 - This section provides a sample of how agencies will complete a Work Zone Activity record.
@@ -100,7 +100,7 @@ The remainder of this document is organized into the following sections:
 **Section 4. XML Schema and Examples of XML and JSON files**
 - This section includes the validated XML scheme and examples of XML and JSON files.
 
-## 2. DATA TABLES
+## DATA TABLES
 ### 2.1 Common Core Data Dictionary
 The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
 - *Data Name* - name of the data concept (either a data element or data frame) 
