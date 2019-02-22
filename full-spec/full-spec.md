@@ -10,45 +10,45 @@ Updated 9/15/2018
     - [Purpose](#purpose)
     - [Scope](#scope)
     - [Document Organization](#document-organization)
-- [Data Tables](#datatables)
-    - [Common Core Data Dictionary](#commoncoredatadictionary)
-    - [WZDx Header Data](#wzdxheaderdata)
-    - [Data Frames](#dataframes)
-       - [StartDate Time](#startdatetime)
-       - [EndDate Time](#enddatetime)
+- [Data Tables](#data-tables)
+    - [Common Core Data Dictionary](#common-core-data-dictionary)
+    - [WZDx Header Data](#wzdx-header-data)
+    - [Data Frames](#data-frames)
+       - [StartDate Time](#start-date-time)
+       - [EndDate Time](#enddate-time)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
-    - [Enumerated Types](#enumeratedtypes)
-    5. Enumerated Type Definitions
-    6. Enumerated Value Definitions Derived from ITS Standards
-       1. openLanes and closedLanes
-       2. closedShoulders
-       3. roadDirection
-    3. Metadata
-- Creating the Specification
-    1. Code Examples
-       1. Example 1: MassDOT  
-       2. Example 2: iCone
-       3. Example 3: Caltrans
-- XML Schema and Examples of XML and JSON files
-- WZ Location Method Description and Practices
-    1. channel-device-method (Preferred Method)
-    2. sign-method
-    3. junction-method
+    - [Enumerated Types](#enumerated-types)
+    - [Enumerated Type Definitions](#enumerated-type-definitions)
+    - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
+       - [openLanes and closedLanes](#openlane-and-closedlanes)
+       - [closedShoulders](#closedshoulders)
+       - [roadDirection](#roaddirection)
+    - [Metadata](#metadata)
+- [Creating the Specification](#creating-the-specification)
+    - [Code Examples](#code-examples)
+       - [Example 1: MassDOT](#example-1:-massdot)  
+       - [Example 2: iCone](#example-2:-icone)
+       - [Example 3: Caltrans](#example-3:caltrans)
+- [XML Schema and Examples of XML and JSON files](#xml-schema-and-examples-of-xml-and-json-files)
+- [WZ Location Method Description and Practices](#wz-location-method-description-and-practices)
+    - [channel-device-method (Preferred Method)](#channel-device-method-(preferred-method))
+    - [sign-method](#sign-method)
+    - [junction-method](#junction-method)
 
 ## TABLES AND FIGURES
-- Table 1. Common Core Data
-- Table 2. WZDx Header Element Information
-- Table 3. StartDateTime Data Frame Table
-- Table 4. EndDateTime Data Frame Table
-- Table 5. BeginLocation Data Frame Table
-- Table 6. EndLocation Data Frame Table
-- Table 7. Enumerated Types Table
-- Table 8. Work Zone Status Definition Table
-- Table 9. Spatial and Time Verification Definitions
-- Table 10. RoadRestriction Definitions
-- Table 11. Metadata
-- Figure 1: Work Zone Activity Organization
+- [Table 1. Common Core Data](#table-1.-common-core-data)
+- [Table 2. WZDx Header Element Information](#table-2.-wzdx-header-element-information)
+- [Table 3. StartDateTime Data Frame Table](#table-3.-startdatetime-data-frame-table)
+- [Table 4. EndDateTime Data Frame Table](#table-4.-enddatettime-data-frame-table)
+- [Table 5. BeginLocation Data Frame Table](#table-5.-beginlocation-data-frame-table)
+- [Table 6. EndLocation Data Frame Table](#table-6.-endlocation-data-frame-table)
+- [Table 7. Enumerated Types Table](#table-7.-enumerated-types-table)
+- [Table 8. Work Zone Status Definition Table](#table-8.-work-zone-status-definition-table)
+- [Table 9. Spatial and Time Verification Definitions](#table-9.-spatial-and-time-verification-definitions)
+- [Table 10. RoadRestriction Definitions](#table-10.-roadrestriction-definitions)
+- [Table 11. Metadata](#table-11.-metadata)
+- [Figure 1: Work Zone Activity Organization](#figure-1:-work-zone-activity-organization)
 
 ## Introduction
 ### Background
