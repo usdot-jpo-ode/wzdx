@@ -4,7 +4,7 @@
 
 Updated 9/15/2018
 
-## TABLE OF CONTNETS
+## TABLE OF CONTENTS
 - [Introduction](#introduction)
     - [Background](#background)
     - [Purpose](#purpose)
