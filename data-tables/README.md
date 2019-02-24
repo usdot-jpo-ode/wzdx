@@ -22,8 +22,8 @@ This document explains the types of files and the data elements, data frames and
 - [**Enumerated Types**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) 
 - [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
 - [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
-    - openLanes and closedLanes
-    - closedShoulders
-    - roadDirection
+    - [openLanes and closedLanes](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#openlanes-and-closedlanes)
+    - [closedShoulders](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#closedshoulders)
+    - [roadDirection](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#roaddirection)
 - [**Metadata**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/metadata.md) 
 
