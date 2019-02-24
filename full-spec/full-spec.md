@@ -150,7 +150,7 @@ Data Element Name | Required | Description
 **versionNo** | no | The WZDx version number that was used to create the file
 
 ### Data Frames
-#### **StartDateTime**
+#### **StartDate Time**
 Definition: The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
 
 #### Table 3. StartDateTime Data Frame Table
@@ -161,7 +161,7 @@ Data | Data Description | Conformance | Notes
 **startDateTime-cancelled** | Cancellation of a planned start<br>time and date assocaited<br>with a work zone | Conditional<ul><li>startDateTime-est or</li><li>startDateTime-ver or</li><li>startDateTime-cancelled</li></ul> | |
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
-#### EndDateTime
+#### EndDate Time
 Definition: The time and date when a work zone ends. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times to* represent date and time data elements.
 
 #### Table 4. EndDateTime Data Frame Table
