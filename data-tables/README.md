@@ -16,9 +16,9 @@ This document explains the types of files and the data elements, data frames and
 - [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
 - [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
     - [StartDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#startdatetime)
-    - EndDateTime
-    - BeginLocation
-    - EndLocation
+    - [EndDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#enddatetime)
+    - [BeginLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#beginlocation)
+    - [EndLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#endlocation)
 - [**Enumerated Types**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) 
 - [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
 - [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
