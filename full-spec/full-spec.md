@@ -37,7 +37,7 @@ Updated 9/15/2018
     - [junction-method](#junction-method)
 
 ## TABLES AND FIGURES
-- [Table 1. Common Core Data](#table-1.-common-core-data)
+- [Table 1 Common Core Data](#table-1-common-core-data)
 - [Table 2. WZDx Header Element Information](#table-2.-wzdx-header-element-information)
 - [Table 3. StartDateTime Data Frame Table](#table-3.-startdatetime-data-frame-table)
 - [Table 4. EndDateTime Data Frame Table](#table-4.-enddatettime-data-frame-table)
@@ -112,7 +112,7 @@ The Common Core Data Table (Table 1), and subsequent tables in this document, in
     - Conditional - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
 - *Notes* - comments, guidance, or notes for future consideration
 
-#### Table 1. Common Core Data
+#### Table 1 Common Core Data
 Data Name | Data Type | Data Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **identifier** | Data element | A unique identifier issued by the<br>data feed provider to identify<br>the work zone project or activity | Required | Request that this be a standardized identifier for a future version
