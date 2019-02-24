@@ -15,7 +15,7 @@ This document explains the types of files and the data elements, data frames and
 - [**Common Core Data Dictionary**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md) 
 - [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
 - [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
-    - StartDateTime
+    - [StartDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#startdatetime)
     - EndDateTime
     - BeginLocation
     - EndLocation
