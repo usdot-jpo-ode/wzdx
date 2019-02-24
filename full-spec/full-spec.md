@@ -134,7 +134,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
 **timestampEventUpdate** | Data element | The time and date when the activity<br>or event was updated | Optional |
 
-### 2.2. WZDx Header Data
+### WZDx Header Data
 The WZDx header defines the content of the file and lists specific file attributes.  It is considered supplemental data and is placed at the beginning of the block of data (i.e., the “body”) being stored and transmitted.
 
 For the WZDx v1, the body of the data feed comes from the Common Core Data Dictionary.  The header data includes the data feed name, body name, and file header information.
