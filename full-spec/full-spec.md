@@ -14,7 +14,7 @@ Updated 9/15/2018
     - [Common Core Data Dictionary](#common-core-data-dictionary)
     - [WZDx Header Data](#wzdx-header-data)
     - [Data Frames](#data-frames)
-       - [StartDate Time](#start-date-time)
+       - [StartDate Time](#startdate-time)
        - [EndDate Time](#enddate-time)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
