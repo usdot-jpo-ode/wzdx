@@ -21,7 +21,7 @@ Updated 9/15/2018
     - [Enumerated Types](#enumerated-types)
     - [Enumerated Type Definitions](#enumerated-type-definitions)
     - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
-       - [openLanes and closedLanes](#openlane-and-closedlanes)
+       - [openLanes and closedLanes](#openlanes-and-closedlanes)
        - [closedShoulders](#closedshoulders)
        - [roadDirection](#roaddirection)
     - [Metadata](#metadata)
