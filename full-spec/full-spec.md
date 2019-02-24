@@ -46,7 +46,7 @@ Updated 9/15/2018
 - [Table 7 Enumerated Types Table](#table-7-enumerated-types-table)
 - [Table 8 Work Zone Status Definition Table](#table-8-work-zone-status-definition-table)
 - [Table 9 Spatial and Time Verification Definitions](#table-9-spatial-and-time-verification-definitions)
-- [Table 10 RoadRestriction Definitions](#table-10-roadrestriction-definitions)
+- [Table 10 RoadRestrictions Definitions](#table-10-roadrestrictions-definitions)
 - [Table 11 Metadata](#table-11-metadata)
 - [Figure 1 Work Zone Activity Organization](#figure-1-work-zone-activity-organization)
 
