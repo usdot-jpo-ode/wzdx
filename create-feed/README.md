@@ -34,6 +34,7 @@ The file will contain one or more work zone activity entries. A work zone activi
 
 #### Figure 1: Work Zone Activity Organization
 *Note*: not all optional data elements are included in secondary levels of the hierarchy
+
 ![Fig. 1](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%201.png)
 
 ### Code Examples
