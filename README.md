@@ -1,7 +1,8 @@
 ### Work Zone Data Exchange (WZDx)
 
 # What is the WZDx Specification?
-The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones into vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
+The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones in
+to vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
 
 # Why is WZDx being developed?
 Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort. 
@@ -25,7 +26,7 @@ Several **data producers** and **data users** (i.e., the WZDx Working Group) vol
 |     iCone     |     Embark      |
 
 ## How can I participate?
-USDOT welcomes feedback and comments on the v1.1 specification. Comments can be made by making an Github Issue, while suggested changes can be made using a pull request. 
+USDOT welcomes feedback and comments on the v1.1 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. 
 
 [v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
 
