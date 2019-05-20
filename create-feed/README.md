@@ -33,7 +33,7 @@ The WZDx v1.1 data feed will be specified as an XML file or a JSON file. Both JS
 The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the [Common Core Data Dictionary elements (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md#table1.-common-core-data) and depicted in Figure 1.
 
 #### Figure 1: Work Zone Activity Organization
-*Note*: not all optional data elements are included in secondary levels of the hierarchy
+*Note*: not all optional data elements are included in secondary levels of the hierarchy.
 
 ![Fig. 1](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%201.png)
 
