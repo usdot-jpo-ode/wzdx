@@ -18,7 +18,7 @@ Several **data producers** and **data users** (i.e., the WZDx Working Group) vol
 
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Producers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Users &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 |     :------------:      |     :------------:      |
-|     Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition)     |     HERE      |
+|     Pennsylvania Turnpike Commission<br>(also representing the Smart Belt Coalition)     |     HERE      |
 |     Michigan Department of Transportation     |     Waze      |
 |     Iowa Department of Transportation     |     Panasonic     |
 |     Colorado Department of Transportation     |     Toyota      |
