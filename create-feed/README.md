@@ -67,4 +67,4 @@ These examples use the following sample work zone activity template:
 | timeStampEventCreation                                                                  |                                                                                           |
 | timeStampEventUpdate                                                                    |                                                                                           |
 ### Data Validation Tools
-#### (TBA)
+A validation service that checks workzone activities against the WZDx v1.1 JASON Schema Specification [is available here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki)
