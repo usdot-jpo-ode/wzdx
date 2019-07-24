@@ -14,16 +14,7 @@ Thus, inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/),
 ## Who is involved in developing WZDx?
 The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) are co-leading the early stages of the WZDx project. 
 
-Several **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily developed v1.1 of the specification in collaboration with USDOT. Below are the members of the WZDx Working Group:
-
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Producers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Users &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|     :------------:      |     :------------:      |
-|     Pennsylvania Turnpike Commission<br>(also representing the Smart Belt Coalition)     |     HERE      |
-|     Michigan Department of Transportation     |     Waze      |
-|     Iowa Department of Transportation     |     Panasonic     |
-|     Colorado Department of Transportation     |     Toyota      |
-|     Kentucky Department of Transportation     |     Uber      |
-|     iCone     |     Embark      |
+Several **data producers** and **data users** (i.e., the WZDx Working Group) voluntarily developed v1.1 of the specification in collaboration with USDOT. 
 
 ## How can I participate?
 USDOT welcomes feedback and comments on the v1.1 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. 
