@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>
-			WZDx Spec
+			WZDx Data Feed
 			Updated: August 13, 2019
 	   	</xs:documentation>
 		<!-- Adopted from
