@@ -13,6 +13,7 @@
 	<xs:import namespace="http://www.LRMS-Adopted-02-00-00" schemaLocation="LRMS-Adopted-02-00-00.xsd"/>
  -->
 	</xs:annotation>
+
 	<xs:element name="WZDx">
 		<xs:complexType>
 			<xs:sequence>
@@ -29,10 +30,10 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
 	<!-- **************************************************************************************** -->
 	<!-- Data Frame Definitions -->
 	<!-- **************************************************************************************** -->
-
 	<xs:complexType name="WZ-Activity">
 		<xs:sequence>
 			<xs:element name="identifier" type="xs:string" minOccurs="1"/>
@@ -68,6 +69,7 @@
 			<xs:element name="timeConfidenceLevel" type="RestrictedPercentage"/>
 		</xs:sequence>
 	</xs:complexType>
+
 	<xs:complexType name="EndDateTime">
 		<xs:sequence>
 			<xs:choice minOccurs="1" maxOccurs="1">
@@ -78,6 +80,7 @@
 			<xs:element name="timeConfidenceLevel" type="RestrictedPercentage"/>
 		</xs:sequence>
 	</xs:complexType>
+
 	<xs:complexType name="BeginLocation">
 		<xs:sequence>
 			<xs:element name="roadName" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -98,6 +101,7 @@
 			<xs:element name="crossStreet" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
+
 	<xs:complexType name="EndLocation">
 		<xs:sequence>
 			<xs:choice minOccurs="1" maxOccurs="1">
@@ -115,6 +119,7 @@
 			<xs:element name="crossStreet" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
+
 	<!-- **************************************************************************************** -->
 	<!-- Enumerated Type Definitions -->
 	<!-- **************************************************************************************** -->
@@ -127,6 +132,7 @@
 			<xs:enumeration value="completed"/>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<!-- from TMDD Link-alignment -->
 	<xs:simpleType name="roadDirection-enum">
 		<xs:restriction base="xs:string">
@@ -136,6 +142,7 @@
 			<xs:enumeration value="westbound"/>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<xs:simpleType name="roadRestriction-enum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="no-trucks"/>
@@ -153,6 +160,7 @@
 			<xs:enumeration value="permitted-oversize-loads-prohibited"/>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<!-- from ITIS.LaneRoadways -->
 	<xs:simpleType name="laneType-enum">
 		<xs:restriction base="xs:string">
@@ -188,6 +196,7 @@
 			<xs:enumeration value="shift-right"/>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<xs:simpleType name="closedShoulder-enum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="outside"/>
@@ -197,6 +206,7 @@
 			<xs:enumeration value="unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<!-- **************************************************************************************** -->
 	<!-- Simple Type Definitions -->
 	<!-- **************************************************************************************** -->
@@ -206,7 +216,4 @@
 			<xs:maxInclusive value="1"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- **************************************************************************************** -->
-	<!-- End Schema WZDx Version 1 -->
-	<!-- **************************************************************************************** -->
 </xs:schema>
