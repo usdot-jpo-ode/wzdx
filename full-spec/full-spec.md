@@ -173,7 +173,7 @@ Data | Data Description | Conformance | Notes
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
 #### BeginLocation
-Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
+Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7). All coordinates shall be expressed using the EPSG:4326/WGS84 datum.
 
 #### Table 5. BeginLocation Data Frame Table
 Data | Data Description | Conformance | Notes
@@ -190,7 +190,7 @@ Data | Data Description | Conformance | Notes
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
 #### EndLocation
-Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
+Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7). All coordinates shall be expressed using the EPSG:4326/WGS84 datum.
 
 #### Table 6. EndLocation Data Frame Table
 Data Name | Data Description | Conformance | Notes
