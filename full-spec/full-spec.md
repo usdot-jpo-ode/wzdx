@@ -441,7 +441,7 @@ closedShoulders | inside
 workersPresent | n/a
 RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
 description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
-workType | bridge_repair
+workType | Bridge Repair
 detourInformation | Take Exit 21 to I-91SB
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
