@@ -2,8 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>
-			WZDx Version 1.0 -- Final 01
-			Last Updated: September 20, 2018 - Polly Okunieff and Irja Gardner, ICF
+			WZDx Spec
+			Updated: August 13, 2019
 	   	</xs:documentation>
 		<!-- Adopted from
 <xs:schema xmlns="http://www.tmdd.org/304/messages" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ntcip="http://www.ntcip.org/c2f-object-references" xmlns:c2c="http://www.ntcip.org/c2c-message-administration" xmlns:itis="http://www.ITIS-Adopted-03-00-02" xmlns:lrms="http://www.LRMS-Adopted-02-00-00" targetNamespace="http://www.tmdd.org/304/messages" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="DRAFT">
@@ -50,9 +50,11 @@
 			<xs:element name="reducedSpdPosted" type="xs:integer"/>
 			<xs:element name="roadRestrictions" type="roadRestriction-enum" maxOccurs="unbounded"/>
 			<xs:element name="description" type="xs:string"/>
+			<xs:element name="workType" type="xs:string"/>
+			<xs:element name="detourInformation" type="xs:string"/>
 			<xs:element name="issuingOrganization" type="xs:string"/>
 			<xs:element name="timestampEventCreation" type="xs:dateTime"/>
-			<xs:element name="timestampEventUpdate" type="xs:dateTime"/>							
+			<xs:element name="timestampEventUpdate" type="xs:dateTime"/>
 		</xs:sequence>
 	</xs:complexType>
 

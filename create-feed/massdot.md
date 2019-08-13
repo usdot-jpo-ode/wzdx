@@ -1,4 +1,4 @@
-# Example 1: MassDOT 
+# Example 1: MassDOT
 
 - [Template](#template)
 - [XML Implementation](#xml-implementation)
@@ -20,8 +20,11 @@ closedShoulders | inside
 workersPresent | n/a
 RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
 description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
+workType | bridge_repair
+detourInformation | Take Exit 21 to I-91SB
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
+
 
 ### XML Implementation
 ```xml
@@ -54,6 +57,8 @@ timeStampEventUpdate | 2017-11-02T18:57:02
 	<workersPresent>n/a</workersPresent>
 	<roadRestrictions>n/a</roadRestrictions>
 	<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
+	<workType>bridge_repair</workType>
+	<detourInformation>Take Exit 21 to I-91SB</detourInformation>
 	<issuingOrganization>MassDOT</issuingOrganization>
 	<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
 </WorkZoneActivity>
@@ -92,6 +97,8 @@ timeStampEventUpdate | 2017-11-02T18:57:02
          "workersPresent": "n/a",
          "roadRestrictions": "n/a",
          "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
+				 "workType": "bridge_repair",
+				 "detourInformation": "Take Exit 21 to I-91SB",
          "issuingOrganization": "MassDOT",
          "timestampEventUpdate": "2017-11-02T18:57:02"
       },
