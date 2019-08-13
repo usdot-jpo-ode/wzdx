@@ -130,8 +130,8 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
-**workType** | Data element | the type of work being performed as part of the specific work zone activity | Optional | This has potential to be an enumerated type.<br>For example, MassDOT currently uses `repaving`, `bridge repair`, `bridge deck replacement`, `guardrail repair`, `maintenance`,
-and `other`.
+**workType** | Data element | the type of work being performed as part of the specific work zone activity | Optional | This has potential to be an enumerated type.<br>For example, MassDOT currently uses `Repaving`, `Bridge Repair`, `Bridge Deck Replacement`, `Guardrail Repair`, `Maintenance`,
+and `Other`.
 **detourInformation** | Data element | Designated detour specifics for the work zone activity | Optional |
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
@@ -191,6 +191,7 @@ Data | Data Description | Conformance | Notes
 **milepost-est** | The estimated linear distance<br>measured against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | A milepost or mile marker is<br>a surveyed distance posted<br>along a roadway measuring<br>the length (in miles or tenth<br>of a mile) from the south<br>west to the north east. <br>These markers are typically<br>notated on State and local<br>government digital road<br>networks. Provide link to<br>description of milepost<br>method in metadata file<br>(see Section 2.7).
 **milepost-ver** | An accurately linear distance<br>measured against a milepost<br>marker along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
+**town** | The town or city where the the work zone beings | Optional | Examples: Boston, Charlotte
 
 #### EndLocation
 Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
@@ -205,6 +206,7 @@ Data Name | Data Description | Conformance | Notes
 **milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
+**town** | The town or city where the the work zone end | Optional | Examples: Boston, Charlotte
 
 ### Enumerated Types
 #### Table 7. Enumerated Types Table
@@ -406,7 +408,7 @@ Identifier |
 subidentifier |
 StartDateTime<ul><li>startDateTime-est</li><li>startDateTime-ver</li></ul> |
 EndDateTime<ul><li>endDateTime-est</li><li>endDateTime-ver</li></ul> |
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
+BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li><li>town</li></ul> |
 EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
 wz-Status |
 totalLanes |
@@ -431,8 +433,8 @@ Tag | Value
 Identifier | 137097
 StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03T19:37:00
 EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214
+BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399<br>town: Northampton
+EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214<br>town: Northampton
 wz-Status | active
 totalLanes | 3
 openLanes | right2

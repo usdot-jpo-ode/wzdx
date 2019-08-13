@@ -99,6 +99,7 @@
 				<xs:element name="milepost-ver" type="xs:decimal"/>
 			</xs:choice>
 			<xs:element name="crossStreet" type="xs:string"/>
+			<xs:element name="town" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -117,6 +118,7 @@
 				<xs:element name="milepost-ver" type="xs:decimal"/>
 			</xs:choice>
 			<xs:element name="crossStreet" type="xs:string"/>
+			<xs:element name="town" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
 
