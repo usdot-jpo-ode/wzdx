@@ -10,6 +10,7 @@ Updated 9/15/2018
     - [Purpose](#purpose)
     - [Scope](#scope)
     - [Document Organization](#document-organization)
+- GeoJSON File Structure
 - [Data Tables](#data-tables)
     - [Common Core Data Dictionary](#common-core-data-dictionary)
     - [WZDx Header Data](#wzdx-header-data)
@@ -76,6 +77,10 @@ The WZDx data feed will be incrementally enhanced to evolve into a data feed tha
 ### Document Organization
 The remainder of this document is organized into the following sections:
 
+**Section 1 GeoJSON File Structure**
+
+- This section explains the GeoJSON file structure of the output data
+
 **Section 2 Data Tables**
 - **Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
     - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
@@ -100,6 +105,58 @@ The remainder of this document is organized into the following sections:
 **Section 4. XML Schema and Examples of XML and JSON files**
 - This section includes the validated XML scheme and examples of XML and JSON files.
 
+## GeoJSON File Structure
+
+GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON). [You can read the full spec here](https://tools.ietf.org/html/rfc7946). All GeoJSON files have the extension "`.geojson`"
+
+GeoJSON files take this general shape:
+```json
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",            
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [100.0, 0.0],
+                    [101.0, 1.0]
+                ]
+            },
+            "properties": {
+            }
+        }
+    ]
+}
+```
+
+For WZDx:
+- at the top level there will be a `metadata` object that contains the fields in **File Header Information**
+- each item in the `features` array will be a `LineString` representing the location of the work zone
+- each `properties` value will be a `WorkZoneActivity` object—an object with properties defined in the **Common Core Data Dictionary**
+```json
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",            
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [100.0, 0.0],
+                    [101.0, 1.0],
+                    [102.0, 2.0]
+                ]
+            },
+            "properties": {
+
+            }
+        }
+    ],
+    "metadata": {}
+}
+```
+
 ## DATA TABLES
 ### Common Core Data Dictionary
 The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
@@ -119,16 +176,16 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **subidentifier** | Data element | A unique identifier issued by data feed provider<br>that provides additional references to project or activity | Optional | This identifier may be used in more<br>than one feed as a reference to an<br>agency project number or permit ID
 **StartDateTime** | Data Frame | The time and date when a work zone<br>starts | Required |
 **EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required | 
-**BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
-**EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
+**BeginLocation** | Data Frame | Data about the Beginning Location (the first coordinate in the corresponding `LineString`) of the work zone. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
+**EndLocation** | Data Frame | Data about the Ending Location (the last coordinate in the corresponding `LineString`) of the work zone. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
-**openLanes** | Enum | The laneType that is opened on the road segment<br>designated by<br>the work zone BeginLocation | Optional |
-**closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane<br>impacts / status will be<br>described in Version 2<br>of the specification
+**openLanes** | Enum | The laneType that is opened on the road segment<br>designated by the corresponding `LineString` | Optional |
+**closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the corresponding `LineString` | Required | More detailed lane<br>impacts / status will be<br>described in Version 2<br>of the specification
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no<br>shoulders are closed,<br>use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
-**RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
+**RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the corresponding `LineString` | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
@@ -173,7 +230,7 @@ Data | Data Description | Conformance | Notes
 **timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
 #### BeginLocation
-Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
+Definition: Data about the Beginning Location (the first coordinate in the corresponding `LineString`) of the work zone. Provide method for describing “impact” in metadata file (see Section 2.7).
 
 #### Table 5. BeginLocation Data Frame Table
 Data | Data Description | Conformance | Notes
@@ -181,24 +238,16 @@ Data | Data Description | Conformance | Notes
 **roadName** | The name of the road on which<br>the work zone applies which is<br>known by the public | Required | Add a business rule that<br>pulls data from a specified<br>list or formal naming<br>conventions, for example,<br>(1) arterials comply with the<br>USPS Street Suffix Abbreviations (USPS Pub<br>28); (2) all Interstates will<br>be abbreviated as I-#, state<br>route with the<br>state abbreviation and then the number, etc. |
 **roadNum** | The road number designated<br>by a jurisdiction such as a<br>county, state or interstate | Optional | Examples I-5, VT 133 |
 **roadDirection** | The designated direction of the<br>roadName that is impacted by<br>the work zone activity | Required | Example North (for I-5 North) |
-**latitude-est** | The estimated latitude along<br>the roadway where the work<br>zone area begins | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> |  |
-**latitude-ver** | A verified latitude<br>along the roadway where the work zone<br>area begins | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> | Describe verification<br>method in metadata file
-**longitude-est** | The estimated longitude along<br>the roadway where the<br>work zone area begins | Conditional<ul><li>longitude-est or</li><li>longitude-ver</li></ul> |  |
-**longitude-ver** | A verified longitude along the<br>roadway where the work zone<br>area begins | Conditional<ul><li>longitude-est or</li><li>longitude-ver</li></ul> | Describe verification<br>method in metadata file
 **milepost-est** | The estimated linear distance<br>measured against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | A milepost or mile marker is<br>a surveyed distance posted<br>along a roadway measuring<br>the length (in miles or tenth<br>of a mile) from the south<br>west to the north east. <br>These markers are typically<br>notated on State and local<br>government digital road<br>networks. Provide link to<br>description of milepost<br>method in metadata file<br>(see Section 2.7).
 **milepost-ver** | An accurately linear distance<br>measured against a milepost<br>marker along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along the<br>roadway where the work zone<br>area begins | Conditional | Required when Road<br>Classification is arterial
 
 #### EndLocation
-Definition: The LOCATION along a single road in a single direction when work zone impact ends and the traffic returns to normal. Provide method for describing “impact” in metadata file (see Section 2.7)
+Definition: Data about the Ending Location (the last coordinate in the corresponding `LineString`) of the work zone. Provide method for describing “impact” in metadata file (see Section 2.7)
 
 #### Table 6. EndLocation Data Frame Table
 Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
-**latitude-est** | The latitude along a roadway<br>where the work zone area ends<br>and the traffic returns to normal | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> |  |
-**latitude-ver** | A verified latitude along<br>the roadway where the work zone<br>area ends | Conditional<ul><li>latitude-est or</li><li>latitude-ver</li></ul> | Descibe verification method in metadata file
-**longitude-est** | The longitude along a roadway<br>where the work zone area ends<br>and the traffic returns to normal | Required |  |
-**longitude-ver** | A verified longitude along the<br>roadway where the work zone<br>area ends | Conditional<ul><li>longitude-est or</li><li>longitude-ver</li></ul> | Describe verification<br>method in metadata file
 **milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
@@ -378,7 +427,7 @@ Data Name | Description | Example
 --------- | ----------- | -------
 **issuingOrganization** | The name of the issuing organization.<br>This name should match the name in the<br>WorkZoneActivity record. | “Anyplace public works”
 **Location-verify-method** | The method used to verify the accuracy<br>of the location information | “Survey accurate GPS equipment accurate to 0.1 cm”
-**WZ-location-method** | The typical method used to locate the<br>begin and end of a work zone impact area.<br>Select the method that most closely<br>represents how begin and end locations<br>are assigned in the WZDX file.<ul><li>channel-device-method</li><li>sign-method</li><li>junction-method</li><li>unknown - when method for<br>locating the begin and end<br>locations of the work zone is not known</li><li>other- when the method for<br>locating the begin and end<br>locations do not closely match any of the alternatives. An explanation<br>should be included in the<br>metadata when this value is assigned</li></ul>See description in Section 5. | “channel-device-method”
+**WZ-location-method** | The typical method used to locate the<br>begin and end of a work zone impact area.<br>Select the method that most closely<br>represents how the locations <br>are assigned in the WZDX file.<ul><li>channel-device-method</li><li>sign-method</li><li>junction-method</li><li>unknown - when method for<br>locating the locations of the work zone is not known</li><li>other- when the method for<br>locating the work zones do not closely match any of the alternatives. An explanation<br>should be included in the<br>metadata when this value is assigned</li></ul>See description in Section 5. | “channel-device-method”
 **LRS-Type** | Describes the type of linear referencing<br>system used for the milepost<br>measurements | “Use of milemarkers posted the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap.” 
 **LRS-URL** | A URL where additional information on the<br>LRS information and transformation<br>information is stored | https://aaa.bbb.com/lrs
 **Datafeed-frequency-update** | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h-hours</li></ul> | "30s"<br>"15m"<br>24h
@@ -482,6 +531,7 @@ timeStampUpdate | 2016-04-19T14:41:04
 
 ## XML Schema and Examples of XML and JSON files
 See files in separate attachment:
+* [wzdx-geojson.ts]() — TypeScript file containing necessary classes for WZDx spec.
 * [WXDX_XMLSample.xml](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDX_XMLSample.xml)
 * [wxdx_JSONsample.json](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/wxdx_JSONsample.json)
 * [WZDx_draft01.xsd](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDx_final01.xsd)
