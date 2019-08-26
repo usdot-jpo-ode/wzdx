@@ -10,7 +10,7 @@ Updated 9/15/2018
     - [Purpose](#purpose)
     - [Scope](#scope)
     - [Document Organization](#document-organization)
-- GeoJSON File Structure
+- [GeoJSON File Structure](#geojson-file-structure)
 - [Data Tables](#data-tables)
     - [Common Core Data Dictionary](#common-core-data-dictionary)
     - [WZDx Header Data](#wzdx-header-data)
@@ -531,7 +531,7 @@ timeStampUpdate | 2016-04-19T14:41:04
 
 ## XML Schema and Examples of XML and JSON files
 See files in separate attachment:
-* [wzdx-geojson.ts]() — TypeScript file containing necessary classes for WZDx spec.
+* [wzdx-geojson.ts](../sample-files/wzdx-geojson.ts) — TypeScript file containing necessary classes for WZDx spec.
 * [WXDX_XMLSample.xml](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDX_XMLSample.xml)
 * [wxdx_JSONsample.json](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/wxdx_JSONsample.json)
 * [WZDx_draft01.xsd](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDx_final01.xsd)
