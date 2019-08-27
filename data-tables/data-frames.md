@@ -68,4 +68,4 @@ Data Name | Data Description | Conformance | Notes
 **delay** | The delay in seconds through the work zone activity | Optional |
 **travelTime** | The travel time in seconds through the work zone activity | Optional |
 **speed** | The average speed in miles per hour through the work zone activity | Optional
-**queueLength** | The queue length
+**queueLength** | Length of the work zone queue in miles, if any | Optional 
