@@ -4,6 +4,7 @@ This section expands on the description of the data frames listed in the [Common
 - [EndDateTime](#enddatetime)    
 - [BeginLocation](#beginlocation)
 - [EndLocation](#endlocation)
+- [TrafficInformation](#trafficinformation)
 
 ## **StartDateTime**
 **Definition:** The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
@@ -57,3 +58,14 @@ Data Name | Data Description | Conformance | Notes
 **milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
+
+## TrafficInformation
+**Definition:** Current traffic information for the work zone, if available.
+
+#### Table 7. TrafficInformation Data Frame Table
+Data Name | Data Description | Conformance | Notes
+--------- | ---------------- | ----------- | -----
+**delay** | The delay in seconds through the work zone activity | Optional |
+**travelTime** | The travel time in seconds through the work zone activity | Optional |
+**speed** | The average speed in miles per hour through the work zone activity | Optional
+**queueLength** | The queue length
