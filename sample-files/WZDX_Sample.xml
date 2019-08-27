@@ -32,6 +32,12 @@
 			<milepost-est>0</milepost-est>
 			<crossStreet>String</crossStreet>
 		</endLocation>
+		<trafficInformation>
+			<delay>0</delay>
+			<travelTime>0</travelTime>
+			<speed>0</speed>
+			<queueLength>0</queueLength>
+		</trafficInformation>
 		<wz_status>cancelled</wz_status>
 		<totalLanes>String</totalLanes>
 		<openLanes>right-2-lanes</openLanes>

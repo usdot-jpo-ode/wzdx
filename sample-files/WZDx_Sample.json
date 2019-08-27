@@ -10,34 +10,40 @@
          "subidentifier": "String",
          "startDateTime": {
             "startDateTime-est": "2001-12-17T09:30:47Z",
-            "timeConfidenceLevel": "0"
+            "timeConfidenceLevel": 0
          },
          "endDateTime": {
             "endDateTime-est": "2001-12-17T09:30:47Z",
-            "timeConfidenceLevel": "0"
+            "timeConfidenceLevel": 0
          },
          "beginLocation": {
             "roadName": "String",
             "roadNum": "String",
             "roadDirection": "westbound",
-            "latitude-est": "0",
-            "longitude-est": "0",
-            "milepost-est": "0",
+            "latitude-est": 0,
+            "longitude-est": 0,
+            "milepost-est": 0,
             "crossStreet": "String"
          },
          "endLocation": {
-            "latitude-est": "0",
-            "longitude-est": "0",
-            "milepost-est": "0",
+            "latitude-est": 0,
+            "longitude-est": 0,
+            "milepost-est": 0,
             "crossStreet": "String"
+         },
+         "trafficInformation": {
+           "delay": 0,
+           "travelTime": 0,
+           "speed": 0,
+           "queueLength": 0
          },
          "wz_status": "planned",
          "totalLanes": "String",
          "openLanes": "right-lane",
          "closedLanes": "right-turning-lane",
          "closedShoulders": "inside",
-         "workersPresent": "true",
-         "reducedSpdPosted": "0",
+         "workersPresent": true,
+         "reducedSpdPosted": 0,
          "roadRestrictions": "reduced-length",
          "description": "String",
          "issuingOrganization": "String",

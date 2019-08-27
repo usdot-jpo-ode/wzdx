@@ -42,6 +42,7 @@
 			<xs:element name="endDateTime" type="EndDateTime" minOccurs="1"/>
 			<xs:element name="beginLocation" type="BeginLocation" minOccurs="1"/>
 			<xs:element name="endLocation" type="EndLocation" minOccurs="1"/>
+      <xs:element name="trafficInformation" type="TrafficInformation" minOccurs="0"/>
 			<xs:element name="wz_status" type="wz-Status-enum"/>
 			<xs:element name="totalLanes" type="xs:string"/>
 			<xs:element name="openLanes" type="laneType-enum"/>
@@ -117,6 +118,15 @@
 			<xs:element name="crossStreet" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
+
+  <xs:complexType name="TrafficInformation">
+    <xs:sequence>
+      <xs:element name="delay" type="xs:integer" minOccurs="0"/>
+      <xs:element name="travelTime" type="xs:integer" minOccurs="0"/>
+      <xs:element name="speed" type="xs:integer" minOccurs="0"/>
+      <xs:element name="queueLength" type="xs:decimal" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
 
 	<!-- **************************************************************************************** -->
 	<!-- Enumerated Type Definitions -->
