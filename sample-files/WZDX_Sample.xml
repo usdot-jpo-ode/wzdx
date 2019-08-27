@@ -35,7 +35,7 @@
 		<trafficInformation>
 			<delay>0</delay>
 			<travelTime>0</travelTime>
-			<speed>0</speed>
+			<averageSpeed>0</averageSpeed>
 			<queueLength>0</queueLength>
 		</trafficInformation>
 		<wz_status>cancelled</wz_status>

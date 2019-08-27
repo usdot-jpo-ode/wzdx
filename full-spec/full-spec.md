@@ -121,6 +121,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required |
 **BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
+**trafficInformation** | Data Frame | Current traffic data for the work zone, if available | Optional | Currently includes `Average Speed`, `Travel Time`, `Queue Length`, and `Delay`, but is open for expansion
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
 **openLanes** | Enum | The laneType that is opened on the road segment<br>designated by<br>the work zone BeginLocation | Optional |
@@ -213,7 +214,7 @@ Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
 **delay** | The delay in seconds through the work zone activity | Optional |
 **travelTime** | The travel time in seconds through the work zone activity | Optional |
-**speed** | The average speed in miles per hour through the work zone activity | Optional
+**averageSpeed** | The average speed in miles per hour through the work zone activity | Optional
 **queueLength** | Length of the work zone queue in miles | Optional
 
 ### Enumerated Types

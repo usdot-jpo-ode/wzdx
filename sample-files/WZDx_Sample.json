@@ -34,7 +34,7 @@
          "trafficInformation": {
            "delay": 0,
            "travelTime": 0,
-           "speed": 0,
+           "averageSpeed": 0,
            "queueLength": 0
          },
          "wz_status": "planned",

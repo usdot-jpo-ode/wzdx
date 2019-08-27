@@ -125,7 +125,7 @@
     <xs:sequence>
       <xs:element name="delay" type="xs:integer" minOccurs="0"/>
       <xs:element name="travelTime" type="xs:integer" minOccurs="0"/>
-      <xs:element name="speed" type="xs:integer" minOccurs="0"/>
+      <xs:element name="averageSpeed" type="xs:integer" minOccurs="0"/>
       <xs:element name="queueLength" type="xs:decimal" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
