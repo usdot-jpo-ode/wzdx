@@ -49,6 +49,8 @@
 			<xs:element name="closedLanes" type="laneType-enum" minOccurs="1"/>
 			<xs:element name="closedShoulders" type="closedShoulder-enum"/>
 			<xs:element name="workersPresent" type="xs:boolean"/>
+      <xs:element name="freeFlowSpeed" type="xs:integer"/>
+      <xs:element name="freeFlowTravelTime" type="xs:integer"/>
 			<xs:element name="reducedSpdPosted" type="xs:integer"/>
 			<xs:element name="roadRestrictions" type="roadRestriction-enum" maxOccurs="unbounded"/>
 			<xs:element name="description" type="xs:string"/>

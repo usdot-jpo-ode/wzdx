@@ -44,6 +44,8 @@
 		<closedLanes>sidewalk</closedLanes>
 		<closedShoulders>none</closedShoulders>
 		<workersPresent>true</workersPresent>
+		<freeFlowTravelTime>0</freeFlowTravelTime>
+		<freeFlowSpeed>0</freeFlowSpeed>
 		<reducedSpdPosted>0</reducedSpdPosted>
 		<roadRestrictions>bike-lane</roadRestrictions>
 		<description>String</description>

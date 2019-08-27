@@ -43,6 +43,8 @@
          "closedLanes": "right-turning-lane",
          "closedShoulders": "inside",
          "workersPresent": true,
+         "freeFlowTravelTime": 0,
+         "freeFlowSpeed": 0,
          "reducedSpdPosted": 0,
          "roadRestrictions": "reduced-length",
          "description": "String",
