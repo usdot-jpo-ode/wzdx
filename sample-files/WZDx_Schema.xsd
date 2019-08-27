@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>
+			WZDx Evolving Schema
+			Last Updated: August 27, 2019
+   	</xs:documentation>
+		<!-- Adopted from
+    <xs:schema xmlns="http://www.tmdd.org/304/messages" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ntcip="http://www.ntcip.org/c2f-object-references" xmlns:c2c="http://www.ntcip.org/c2c-message-administration" xmlns:itis="http://www.ITIS-Adopted-03-00-02" xmlns:lrms="http://www.LRMS-Adopted-02-00-00" targetNamespace="http://www.tmdd.org/304/messages" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="DRAFT">
+    	<xs:import namespace="http://www.ntcip.org/c2c-message-administration" schemaLocation="C2C.xsd"/>
+    	<xs:import namespace="http://www.ntcip.org/c2f-object-references" schemaLocation="NTCIP-References.xsd"/>
+    	<xs:import namespace="http://www.ITIS-Adopted-03-00-02" schemaLocation="ITIS-Adopted-03-00-02.xsd"/>
+    	<xs:import namespace="http://www.LRMS-Adopted-02-00-00" schemaLocation="LRMS-Adopted-02-00-00.xsd"/>
+    -->
+	</xs:annotation>
+
+	<xs:element name="WZDx">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="timeStampUpdate" type="xs:dateTime" minOccurs="1"/>
+							<xs:element name="metadataURL" type="xs:string"/>
+							<xs:element name="versionNo" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" name="WorkZoneActivity" type="WZ-Activity"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- **************************************************************************************** -->
+	<!-- Data Frame Definitions -->
+	<!-- **************************************************************************************** -->
+	<xs:complexType name="WZ-Activity">
+		<xs:sequence>
+			<xs:element name="identifier" type="xs:string" minOccurs="1"/>
+			<xs:element name="subidentifier" type="xs:string"/>
+			<xs:element name="startDateTime" type="StartDateTime" minOccurs="1"/>
+			<xs:element name="endDateTime" type="EndDateTime" minOccurs="1"/>
+			<xs:element name="beginLocation" type="BeginLocation" minOccurs="1"/>
+			<xs:element name="endLocation" type="EndLocation" minOccurs="1"/>
+			<xs:element name="wz_status" type="wz-Status-enum"/>
+			<xs:element name="totalLanes" type="xs:string"/>
+			<xs:element name="openLanes" type="laneType-enum"/>
+			<xs:element name="closedLanes" type="laneType-enum" minOccurs="1"/>
+			<xs:element name="closedShoulders" type="closedShoulder-enum"/>
+			<xs:element name="workersPresent" type="xs:boolean"/>
+			<xs:element name="reducedSpdPosted" type="xs:integer"/>
+			<xs:element name="roadRestrictions" type="roadRestriction-enum" maxOccurs="unbounded"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="issuingOrganization" type="xs:string"/>
+			<xs:element name="timestampEventCreation" type="xs:dateTime"/>
+			<xs:element name="timestampEventUpdate" type="xs:dateTime"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="StartDateTime">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="startDateTime-est" type="xs:dateTime"/>
+				<xs:element name="startDateTime-ver" type="xs:dateTime"/>
+				<xs:element name="startDateTime-cancelled" type="xs:dateTime"/>
+			</xs:choice>
+			<xs:element name="timeConfidenceLevel" type="RestrictedPercentage"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EndDateTime">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="endDateTime-est" type="xs:dateTime"/>
+				<xs:element name="endDateTime-ver" type="xs:dateTime"/>
+				<xs:element name="endDateTime-cancelled" type="xs:dateTime"/>
+			</xs:choice>
+			<xs:element name="timeConfidenceLevel" type="RestrictedPercentage"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BeginLocation">
+		<xs:sequence>
+			<xs:element name="roadName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="roadNum" type="xs:string"/>
+			<xs:element name="roadDirection" type="roadDirection-enum" minOccurs="1" maxOccurs="1"/>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="latitude-est" type="xs:decimal"/>
+				<xs:element name="latitude-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="longitude-est" type="xs:decimal"/>
+				<xs:element name="longitude-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:element name="milepost-est" type="xs:decimal"/>
+				<xs:element name="milepost-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:element name="crossStreet" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EndLocation">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="latitude-est" type="xs:decimal"/>
+				<xs:element name="latitude-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="longitude-est" type="xs:decimal"/>
+				<xs:element name="longitude-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:element name="milepost-est" type="xs:decimal"/>
+				<xs:element name="milepost-ver" type="xs:decimal"/>
+			</xs:choice>
+			<xs:element name="crossStreet" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- **************************************************************************************** -->
+	<!-- Enumerated Type Definitions -->
+	<!-- **************************************************************************************** -->
+	<xs:simpleType name="wz-Status-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="planned"/>
+			<xs:enumeration value="pending"/>
+			<xs:enumeration value="active"/>
+			<xs:enumeration value="cancelled"/>
+			<xs:enumeration value="completed"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- from TMDD Link-alignment -->
+	<xs:simpleType name="roadDirection-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="northbound"/>
+			<xs:enumeration value="southbound"/>
+			<xs:enumeration value="eastbound"/>
+			<xs:enumeration value="westbound"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="roadRestriction-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="no-trucks"/>
+			<xs:enumeration value="travel-peak-hours-only"/>
+			<xs:enumeration value="hov-3"/>
+			<xs:enumeration value="hov-2"/>
+			<xs:enumeration value="no-parking"/>
+			<xs:enumeration value="bike-lane"/>
+			<xs:enumeration value="reduced-width"/>
+			<xs:enumeration value="reduced-height"/>
+			<xs:enumeration value="reduced-length"/>
+			<xs:enumeration value="axle-load-limit"/>
+			<xs:enumeration value="gross-weight-limit"/>
+			<xs:enumeration value="towing-prohibited"/>
+			<xs:enumeration value="permitted-oversize-loads-prohibited"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- from ITIS.LaneRoadways -->
+	<xs:simpleType name="laneType-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="all"/>
+			<xs:enumeration value="left-lane"/>
+			<xs:enumeration value="right-lane"/>
+			<xs:enumeration value="left-2-lanes"/>
+			<xs:enumeration value="left-3-lanes"/>
+			<xs:enumeration value="right-2-lanes"/>
+			<xs:enumeration value="right-3-lanes"/>
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="middle-lane"/>
+			<xs:enumeration value="right-turning-lane"/>
+			<xs:enumeration value="left-turning-lane"/>
+			<xs:enumeration value="right-exit-lane"/>
+			<xs:enumeration value="left-exit-lane"/>
+			<xs:enumeration value="right-merging-lane"/>
+			<xs:enumeration value="left-merging-lane"/>
+			<xs:enumeration value="right-exit-ramp"/>
+			<xs:enumeration value="right-second-exit-ramp"/>
+			<xs:enumeration value="right-entrance-ramp"/>
+			<xs:enumeration value="right-second-entrance-ramp"/>
+			<xs:enumeration value="left-exit-ramp"/>
+			<xs:enumeration value="left-second-exit-ramp"/>
+			<xs:enumeration value="left-entrance-ramp"/>
+			<xs:enumeration value="left-second-entrance-ramp"/>
+			<xs:enumeration value="sidewalk"/>
+			<xs:enumeration value="bike-lane"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="alternating-flow-lane"/>
+			<xs:enumeration value="shift-left"/>
+			<xs:enumeration value="shift-right"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="closedShoulder-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="outside"/>
+			<xs:enumeration value="inside"/>
+			<xs:enumeration value="both"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+  <!-- **************************************************************************************** -->
+	<!-- Simple Type Definitions -->
+	<!-- **************************************************************************************** -->
+	<xs:simpleType name="RestrictedPercentage">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
