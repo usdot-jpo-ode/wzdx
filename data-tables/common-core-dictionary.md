@@ -20,6 +20,8 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane impacts / status will be described in Version 2 of the specification
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional |
+**freeFlowTravelTime** | Data element | The free flow travel time in seconds through the work zone activity | Optional | Useful for comparison with `trafficInformation`, if available
+**freeFlowSpeed** | Data element| The free flow speed in miles per hour through the work zone activity, prior to any reduced speeds | Optional | Useful for comparison with `reducedSpdPosted` and `trafficInformation`, if available
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags indicating restrictions apply to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
