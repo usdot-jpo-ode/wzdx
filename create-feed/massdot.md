@@ -55,7 +55,7 @@ timeStampEventUpdate | 2017-11-02T18:57:02
 	<closedShoulders>inside</closedShoulders>
 	<workersPresent>n/a</workersPresent>
 	<roadRestrictions>n/a</roadRestrictions>
-	<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
+	<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northampton Hadley to Exit (19) Rt-9</description>
 	<issuingOrganization>MassDOT</issuingOrganization>
 	<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
 </WorkZoneActivity>
@@ -95,7 +95,7 @@ timeStampEventUpdate | 2017-11-02T18:57:02
          "closedShoulders": "inside",
          "workersPresent": "n/a",
          "roadRestrictions": "n/a",
-         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
+         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northampton Hadley to Exit (19) Rt-9",
          "issuingOrganization": "MassDOT",
          "timestampEventUpdate": "2017-11-02T18:57:02"
       },
