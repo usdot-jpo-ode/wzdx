@@ -451,6 +451,8 @@ openLanes | right2
 closedLanes | left1
 closedShoulders | inside
 workersPresent | n/a
+freeFlowTravelTime | 380
+freeFlowSpeed | 65
 RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
 description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
 issuingOrganization | MassDOT
