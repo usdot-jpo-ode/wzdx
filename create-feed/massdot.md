@@ -12,7 +12,7 @@ StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03
 EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
 BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399
 EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214
-TrafficInformation<ul><li>delay</li><li>travelTime</li><li>speed</li><li>queueLength</li></ul> | delay: 120<br/>travelTime: 500<br/>speed: 30<br/>queueLength: 0.1
+TrafficInformation<ul><li>delay</li><li>travelTime</li><li>averageSpeed</li><li>queueLength</li></ul> | delay: 120<br/>travelTime: 500<br/>averageSpeed: 30<br/>queueLength: 0.1
 wz-Status | active
 totalLanes | 3
 openLanes | right2
@@ -52,7 +52,7 @@ timeStampEventUpdate | 2017-11-02T18:57:02
 	<trafficInformation>
 		<delay>120</delay>
 		<travelTime>500</travelTime>
-		<speed>30</speed>
+		<averageSpeed>30</averageSpeed>
 		<queueLength>0.1</queueLength>
 	</trafficInformation>
 	<wz_status>active</wz_status>
@@ -98,7 +98,7 @@ timeStampEventUpdate | 2017-11-02T18:57:02
 				 "trafficInformation": {
 					 "delay": 120,
 					 "travelTime": 500,
-					 "speed": 30,
+					 "averageSpeed": 30,
 					 "queueLength": 0.1
 				 },
          "wz_status": "active",

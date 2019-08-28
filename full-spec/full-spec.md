@@ -213,7 +213,7 @@ Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
 **delay** | The delay in seconds through the work zone activity | Optional |
 **travelTime** | The travel time in seconds through the work zone activity | Optional |
-**speed** | The average speed in miles per hour through the work zone activity | Optional
+**averageSpeed** | The average speed in miles per hour through the work zone activity | Optional
 **queueLength** | Length of the work zone queue in miles | Optional
 
 ### Enumerated Types
@@ -418,7 +418,7 @@ StartDateTime<ul><li>startDateTime-est</li><li>startDateTime-ver</li></ul> |
 EndDateTime<ul><li>endDateTime-est</li><li>endDateTime-ver</li></ul> |
 BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
 EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
-TrafficInformation <ul><li>delay</li><li>travelTime</li><li>speed</li><li>queueLength</li></ul> |
+TrafficInformation <ul><li>delay</li><li>travelTime</li><li>averageSpeed</li><li>queueLength</li></ul> |
 wz-Status |
 totalLanes |
 openLanes |
@@ -446,7 +446,7 @@ StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03
 EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
 BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399
 EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214
-TrafficInformation <ul><li>delay</li><li>travelTime</li><li>speed</li><li>queueLength</li></ul> | delay: 120<br/>travelTime: 500<br/>speed: 30<br/>queueLength: 0.1
+TrafficInformation <ul><li>delay</li><li>travelTime</li><li>averageSpeed</li><li>queueLength</li></ul> | delay: 120<br/>travelTime: 500<br/>averageSpeed: 30<br/>queueLength: 0.1
 wz-Status | active
 totalLanes | 3
 openLanes | right2
