@@ -425,6 +425,8 @@ openLanes |
 closedLanes |
 closedShoulders |
 workersPresent |
+freeFlowTravelTime |
+freeFlowSpeed |
 RoadRestrictions*<ul><li>roadRestrictions</li></ul> |
 description |
 issuingOrganization |
