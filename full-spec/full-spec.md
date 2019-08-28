@@ -418,6 +418,7 @@ StartDateTime<ul><li>startDateTime-est</li><li>startDateTime-ver</li></ul> |
 EndDateTime<ul><li>endDateTime-est</li><li>endDateTime-ver</li></ul> |
 BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
 EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> |
+TrafficInformation <ul><li>delay</li><li>travelTime</li><li>speed</li><li>queueLength</li></ul> |
 wz-Status |
 totalLanes |
 openLanes |
