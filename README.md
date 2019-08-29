@@ -17,7 +17,7 @@ The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Inte
 Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki ), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. Currently, the WZDWG’s priority is to update WZDx v1.1, developing version 2.0 of the specification based on lessons learned from v1.1 and new insights from the user community. 
 
 ## How can I participate?
-The WZDWG welcomes feedback and comments on the v1.1 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Altrnatively, issues or suggested changes can be emailed to avdx@dot.gov. 
+The WZDWG welcomes feedback and comments on the v1.1 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Alternatively, issues or suggested changes can be emailed to avdx@dot.gov. 
 
 [v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
 
@@ -32,9 +32,11 @@ The WZDWG welcomes feedback and comments on the v1.1 specification. Comments can
 
 This project will be updated with resources to help with implementation; in the meantime, please make a GitHub issue if you need help implementing the specification or have any questions.
 
-To view a framework that can assist transportation agencies and the work zone stakeholder community in establishing a standard and consistent approach for collecting, organizing, and communicating Work Zone Activity Data to contractors, neighbor agencies, third-party data consumers, and other key stakeholders, see the [Work Zone Data Initiative’s (WZDI) Framework for Work Zone Activity Data Collection and Management](https://collaboration.fhwa.dot.gov/wzmp/Deliverables/WZDI%20Task%203%20Report%20-%20Framework%20v20190111.pdf). 
+The Federal Highway Administration is leading efforts, via the [Work Zone Data Initiative](https://collaboration.fhwa.dot.gov/wzmp/wzdi/Forms/AllItems.aspx), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents have been developed and made publicly available:
 
-For more information on work zone-related data concepts driven by industry needs, please see [WZDI’s Work Zone Data Dictionary](https://collaboration.fhwa.dot.gov/wzmp/Data%20DictionaryDocuments/WZAD%20Data%20Dictionary_DRAFT.pdf) report. The document details terminology developed for Intelligent Transportation Systems (ITS) standards including data concepts, elements, frames, and schema.
+- [Framework](https://collaboration.fhwa.dot.gov/wzmp/Products/WZDI%20Task%203%20Report%20-%20Framework%20v20190111.pdf) provides a conceptual architecture for work zone data systems for collecting, storing, disseminating, managing, maintaining and archiving work zone activity data.
+- [Data Dictionary](https://collaboration.fhwa.dot.gov/wzmp/Data%20DictionaryDocuments/WZAD%20Data%20Dictionary_VERSION%202.pdf) Provides digital descriptions of work zone activities that enable and support transportation agencies and third party providers to describe and communicate work zone-related information to agency, private sector, and public users timely and seamlessly across multiple jurisdictions and regions.
+
 
 ## Purpose and Scope
 
