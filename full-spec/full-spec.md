@@ -180,8 +180,8 @@ Data | Data Description | Conformance | Notes
 ---- | ---------------- | ----------- | -----
 **endDateTime-est** | The planned time and date<br>when a work zone ends | Conditional<ul><li>endDateTime-est or</li><li>endDateTime-ver or</li><li>endDateTime-cancelled</li></ul> | |
 **endDateTime-ver** | A verified time and date<br>when the work zone was<br>actually ended | Conditional<ul><li>endDateTime-est or</li><li>endDateTime-ver or</li><li>endDateTime-cancelled</li></ul> | |
-**endDateTime-cancelled** | Cancellation of a planned end <br>time and date assocaited<br>with a work zone | Conditional<ul><li>endDateTime-est or</li><li>endDateTime-ver or</li><li>endDateTime-cancelled</li></ul> | |
-**timeConfidenceLevel** | A confidence leve (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
+**endDateTime-cancelled** | Cancellation of a planned end <br>time and date associated<br>with a work zone | Conditional<ul><li>endDateTime-est or</li><li>endDateTime-ver or</li><li>endDateTime-cancelled</li></ul> | |
+**timeConfidenceLevel** | A confidence level (in<br>percentage) of when the<br>work zone activities will<br>actually start | Optional | For future use
 
 #### BeginLocation
 Definition: The LOCATION when work zone impact begins along a single road in a single direction. Provide method for describing “impact” in metadata file (see Section 2.7).
@@ -231,8 +231,8 @@ Term | WZ-Status Description
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
 **Pending** | Pending is used to alert stakeholders that work is scheduled for the near future (e.g., 2-<br>3 weeks). The certainty of starting at this time is greater than 90% (barring weather<br>and other unforeseen circumstances).<ul><li>Time horizon: approximate begin / end dates</li><li>Location: coverage area and main road name; path (polyline or geoface)<br>around zone area</li></ul>
 **Active** | Used to alert stakeholder that work zone is in place and active.   
-**Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
-**Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
+**Cancelled** | Reported cancellation of a proposed or active work zone; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
+**Completed** | Work zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
 
 #### Table 9. Spatial and Time Verification Definitions
 Term | WZ-Status Description
@@ -392,7 +392,7 @@ Data Name | Description | Example
 **WZ-location-method** | The typical method used to locate the<br>begin and end of a work zone impact area.<br>Select the method that most closely<br>represents how begin and end locations<br>are assigned in the WZDX file.<ul><li>channel-device-method</li><li>sign-method</li><li>junction-method</li><li>unknown - when method for<br>locating the begin and end<br>locations of the work zone is not known</li><li>other- when the method for<br>locating the begin and end<br>locations do not closely match any of the alternatives. An explanation<br>should be included in the<br>metadata when this value is assigned</li></ul>See description in Section 5. | “channel-device-method”
 **LRS-Type** | Describes the type of linear referencing<br>system used for the milepost<br>measurements | “Use of milemarkers posted the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap.” 
 **LRS-URL** | A URL where additional information on the<br>LRS information and transformation<br>information is stored | https://aaa.bbb.com/lrs
-**Datafeed-frequency-update** | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h-hours</li></ul> | "30s"<br>"15m"<br>24h
+**Datafeed-frequency-update** | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h = hours</li></ul> | "30s"<br>"15m"<br>"24h"
 '**Timestamp-Metadata-Update** | The time and date when this file was last<br>updated | 2016-04-12T00:01:00
 **Contact-name** | The name of a contact responsible for the<br>data feed | Jo Help
 **Contact-email** | The contact’s email address | jhelp@anyplacePW.com
