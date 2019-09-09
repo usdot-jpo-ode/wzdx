@@ -92,6 +92,7 @@ The remainder of this document is organized into the following sections:
     - EndDateTime
     - BeginLocation
     - EndLocation
+    - Location Geometry
 - **Enumerated Types** - This section includes a table of enumerated data elements.
 - **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
 - **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
@@ -123,6 +124,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required | 
 **BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
+**Location Geometry** | Data Frame | The LOCATION GEOMETRY along a single road<br>in a single direction from where it starts through where it ends, and all points in between (See LocationGeometry) | Required | 
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
 **openLanes** | Enum | The laneType that is opened on the road segment<br>designated by<br>the work zone BeginLocation | Optional |
