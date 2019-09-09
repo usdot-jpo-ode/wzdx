@@ -18,6 +18,7 @@ Updated 9/15/2018
        - [EndDateTime](#enddatetime)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
+       - [Location Geometry](#locationgeometry)
     - [Enumerated Types](#enumerated-types)
     - [Enumerated Type Definitions](#enumerated-type-definitions)
     - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
@@ -43,11 +44,12 @@ Updated 9/15/2018
 - [Table 4 EndDateTime Data Frame Table](#table-4-enddatetime-data-frame-table)
 - [Table 5 BeginLocation Data Frame Table](#table-5-beginlocation-data-frame-table)
 - [Table 6 EndLocation Data Frame Table](#table-6-endlocation-data-frame-table)
-- [Table 7 Enumerated Types Table](#table-7-enumerated-types-table)
-- [Table 8 Work Zone Status Definition Table](#table-8-work-zone-status-definition-table)
-- [Table 9 Spatial and Time Verification Definitions](#table-9-spatial-and-time-verification-definitions)
-- [Table 10 RoadRestrictions Definitions](#table-10-roadrestrictions-definitions)
-- [Table 11 Metadata](#table-11-metadata)
+- [Table 7 Location Geometry Data Frame Table](#table-7-location-geometry-data-frame-table)
+- [Table 8 Enumerated Types Table](#table-8-enumerated-types-table)
+- [Table 9 Work Zone Status Definition Table](#table-9-work-zone-status-definition-table)
+- [Table 10 Spatial and Time Verification Definitions](#table-10-spatial-and-time-verification-definitions)
+- [Table 11 RoadRestrictions Definitions](#table-11-roadrestrictions-definitions)
+- [Table 12 Metadata](#table-12-metadata)
 - [Figure 1 Work Zone Activity Organization](#figure-1-work-zone-activity-organization)
 
 ## Introduction
@@ -203,8 +205,17 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
+#### Location Geometry
+This represents the location geometry of the full work zone.
+
+#### Table 7. Location Geometry Data Frame Table
+Data Name | Data Description | Conformance | Notes
+--------- | ---------------- | ----------- | -----
+**linestring-est** | The LineString representing the full length of the estimated work zone area, with 6 digits after the decimal point for accuracy. <br /> | Conditional<ul><li>linestring-est or</li><li>linestring-ver</li></ul> | A series of space-delimited lat long pairs, ex: "51.510090 -0.006902 51.509142 -0.006564" |
+**linestring-ver** | The LineString representing the full length of the estimated work zone area, with 6 digits after the decimal point for accuracy. <br /> | Conditional<ul><li>linestring-est or</li><li>linestring-ver</li></ul> | A series of space-delimited lat long pairs, ex: "51.510090 -0.006902 51.509142 -0.006564" |
+
 ### Enumerated Types
-#### Table 7. Enumerated Types Table
+#### Table 8. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
 **wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
@@ -214,7 +225,7 @@ Data Element | Used by | Allowed Values | Notes | Source
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 
 ### Enumerated Type Definitions
-#### Table 8. Work Zone Status Definition Table
+#### Table 9. Work Zone Status Definition Table
 Term | WZ-Status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
@@ -223,7 +234,7 @@ Term | WZ-Status Description
 **Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
 **Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
 
-#### Table 9. Spatial and Time Verification Definitions
+#### Table 10. Spatial and Time Verification Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **DateTime<br>Estimated(-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
@@ -231,7 +242,7 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 10. RoadRestrictions Definitions
+#### Table 11. RoadRestrictions Definitions
 RoadRestrictions | Descriptions
 ---------------- | ------------
 **no-trucks** | Trucks are prohibited from traveling in work zone area
