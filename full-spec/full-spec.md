@@ -18,7 +18,7 @@ Updated 9/15/2018
        - [EndDateTime](#enddatetime)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
-       - [Location Geometry](#locationgeometry)
+       - [LocationGeometry](#locationgeometry)
     - [Enumerated Types](#enumerated-types)
     - [Enumerated Type Definitions](#enumerated-type-definitions)
     - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
@@ -44,7 +44,7 @@ Updated 9/15/2018
 - [Table 4 EndDateTime Data Frame Table](#table-4-enddatetime-data-frame-table)
 - [Table 5 BeginLocation Data Frame Table](#table-5-beginlocation-data-frame-table)
 - [Table 6 EndLocation Data Frame Table](#table-6-endlocation-data-frame-table)
-- [Table 7 Location Geometry Data Frame Table](#table-7-location-geometry-data-frame-table)
+- [Table 7 LocationGeometry Data Frame Table](#table-7-locationgeometry-data-frame-table)
 - [Table 8 Enumerated Types Table](#table-8-enumerated-types-table)
 - [Table 9 Work Zone Status Definition Table](#table-9-work-zone-status-definition-table)
 - [Table 10 Spatial and Time Verification Definitions](#table-10-spatial-and-time-verification-definitions)
@@ -92,7 +92,7 @@ The remainder of this document is organized into the following sections:
     - EndDateTime
     - BeginLocation
     - EndLocation
-    - Location Geometry
+    - LocationGeometry
 - **Enumerated Types** - This section includes a table of enumerated data elements.
 - **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
 - **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
@@ -124,7 +124,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required | 
 **BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
-**Location Geometry** | Data Frame | The LOCATION GEOMETRY along a single road<br>in a single direction from where it starts through where it ends, and all points in between (See LocationGeometry) | Required | 
+**LocationGeometry** | Data Frame | The LOCATION GEOMETRY along a single road<br>in a single direction from where it starts through where it ends, and all points in between (See LocationGeometry) | Required | 
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
 **openLanes** | Enum | The laneType that is opened on the road segment<br>designated by<br>the work zone BeginLocation | Optional |
@@ -207,10 +207,10 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
-#### Location Geometry
+#### LocationGeometry
 This represents the location geometry of the full work zone.
 
-#### Table 7. Location Geometry Data Frame Table
+#### Table 7. LocationGeometry Data Frame Table
 Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
 **linestring-est** | The LineString representing the full length of the estimated work zone area, with 6 digits after the decimal point for accuracy. <br /> | Conditional<ul><li>linestring-est or</li><li>linestring-ver</li></ul> | A series of space-delimited lat long pairs, ex: "51.510090 -0.006902 51.509142 -0.006564" |

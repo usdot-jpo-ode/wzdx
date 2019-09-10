@@ -58,10 +58,10 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
-#### Location Geometry
+#### LocationGeometry
 This represents the location geometry of the full work zone.
 
-#### Table 7. Location Geometry Data Frame Table
+#### Table 7. LocationGeometry Data Frame Table
 Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
 **linestring-est** | The LineString representing the full length of the estimated work zone area, with 6 digits after the decimal point for accuracy. <br /> | Conditional<ul><li>linestring-est or</li><li>linestring-ver</li></ul> | A series of space-delimited lat long pairs, ex: "51.510090 -0.006902 51.509142 -0.006564" |
