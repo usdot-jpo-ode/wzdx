@@ -242,6 +242,7 @@ Data Element | Used by | Allowed Values | Notes | Source
 **restrictionUnits** | restrictionUnits | <ul><li>feet</li><li>inches</li><li>pounds</li><li>tons</li></ul> | This is an intial list and not intended to be complete. More will be added as needed. | 
 **laneType** | laneType<br>in LaneImpact<br>data fram | <ul><li>all</li><li>lane-1</li><li>lane-2</li><li>lane-3</li><li>lane-4</li><li>lane-5</li><li>lane-6</li><li>lane-7</li><li>lane-8</li><li>lane-9</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>right-shoulder</li><li>left-shoulder</li><li>both-shoulders</li><li>parking-lane</li><li>transit_lane</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **impactType** | impactType | <ul><li>open</li><li>closed</li><li>shift-left</li><li>shift-right</li></ul> |  |
+**vehicleImpact** | vehicleImapct | <ul><li>all-lanes-closed</li><li>some-lanes-closed</li><li>all-lanes-open</li></ul>
 
 ### Enumerated Type Definitions
 #### Table 9. Work Zone Status Definition Table
