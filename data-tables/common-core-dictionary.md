@@ -15,8 +15,8 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
 **totalLanes** | Data element | The total number of lanes associated<br>with the road segment designated by<br>the BeginLocation and EndLocation | Optional | A segment is a part of a<br>roadway in a single<br>direction designated by<br>a start (BeginLocation)<br>and end (EndLocation)
-**openLanes** | Enum | The laneType that is opened on the road segment designated by<br>the work zone BeginLocation | Optional |
-**closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane impacts / status will be described in Version 2 of the specification
+**openLanes** | Enum | The laneType that is opened on the road segment designated by<br>the work zone BeginLocation | Optional | Multiple enumerations are allowed and should be delimited using a semicolon (";")
+**closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | Multiple enumerations are allowed and should be delimited using a semicolon (";"). More detailed lane impacts / status will be described in Version 2 of the specification
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
