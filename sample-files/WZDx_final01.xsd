@@ -48,7 +48,7 @@
 			<xs:element name="closedShoulders" type="closedShoulder-enum"/>
 			<xs:element name="workersPresent" type="xs:boolean"/>
 			<xs:element name="reducedSpdPosted" type="xs:integer"/>
-			<xs:element name="roadRestrictions" type="roadRestriction-enum" maxOccurs="unbounded"/>
+			<xs:element name="roadRestrictionType" type="roadRestrictionType-enum" maxOccurs="unbounded"/>
 			<xs:element name="description" type="xs:string"/>
 			<xs:element name="issuingOrganization" type="xs:string"/>
 			<xs:element name="timestampEventCreation" type="xs:dateTime"/>
@@ -134,7 +134,7 @@
 			<xs:enumeration value="westbound"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="roadRestriction-enum">
+	<xs:simpleType name="roadRestrictionType-enum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="no-trucks"/>
 			<xs:enumeration value="travel-peak-hours-only"/>
