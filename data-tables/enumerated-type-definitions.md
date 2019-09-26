@@ -18,8 +18,8 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 10. RoadRestrictions Definitions
-RoadRestrictions | Descriptions
+#### Table 10. roadRestrictionType Definitions
+roadRestrictionType | Descriptions
 ---------------- | ------------
 **no-trucks** | Trucks are prohibited from traveling in work zone area
 **travel-peak-hours-only** | Travel restricted to travel peak hours only
