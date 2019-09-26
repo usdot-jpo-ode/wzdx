@@ -59,10 +59,10 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
-## **StartDateTime**
+## roadRestrictions
 **Definition:** One or more roadRestriction data frames indicating restrictions applied to the work zone road segment associated with the work zone bounded by the begin / end locations
 
-#### Table 3. roadRestrictions Data Frame Table
+#### Table 7. roadRestrictions Data Frame Table
 Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nbsp;&nbsp;&nbsp;
 ---- | ---------------- | ----------- | -----
 **roadRestriction** | The data frame which contains the roadRestrictionType and roadRestrictionValue.  An array of roadRestriction data frames may be used if multiple restrictions exist within the work zone extents | Conditional | |
