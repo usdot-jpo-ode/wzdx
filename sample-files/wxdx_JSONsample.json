@@ -38,7 +38,11 @@
          "closedShoulders": "inside",
          "workersPresent": "true",
          "reducedSpdPosted": "0",
-         "roadRestrictions": "reduced-length",
+         "roadRestrictions": {
+            "roadRestriction":{
+               "roadRestrictionType": "reduced-length"
+            }
+         },
          "description": "String",
          "issuingOrganization": "String",
          "timestampEventCreation": "2001-12-17T09:30:47Z",
