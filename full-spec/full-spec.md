@@ -18,6 +18,7 @@ Updated 9/15/2018
        - [EndDateTime](#enddatetime)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
+       - [RoadRestrictions](#roadrestrictions)
     - [Enumerated Types](#enumerated-types)
     - [Enumerated Type Definitions](#enumerated-type-definitions)
     - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
@@ -43,11 +44,12 @@ Updated 9/15/2018
 - [Table 4 EndDateTime Data Frame Table](#table-4-enddatetime-data-frame-table)
 - [Table 5 BeginLocation Data Frame Table](#table-5-beginlocation-data-frame-table)
 - [Table 6 EndLocation Data Frame Table](#table-6-endlocation-data-frame-table)
-- [Table 7 Enumerated Types Table](#table-7-enumerated-types-table)
-- [Table 8 Work Zone Status Definition Table](#table-8-work-zone-status-definition-table)
-- [Table 9 Spatial and Time Verification Definitions](#table-9-spatial-and-time-verification-definitions)
-- [Table 10 RoadRestrictions Definitions](#table-10-roadrestrictions-definitions)
-- [Table 11 Metadata](#table-11-metadata)
+- [Table 7 roadRestrictions Data Frame Table](#table-7-roadRestrictions-data-frame-table)
+- [Table 8 Enumerated Types Table](#table-7-enumerated-types-table)
+- [Table 9 Work Zone Status Definition Table](#table-8-work-zone-status-definition-table)
+- [Table 10 Spatial and Time Verification Definitions](#table-9-spatial-and-time-verification-definitions)
+- [Table 11 RoadRestrictions Definitions](#table-10-roadrestrictions-definitions)
+- [Table 12 Metadata](#table-11-metadata)
 - [Figure 1 Work Zone Activity Organization](#figure-1-work-zone-activity-organization)
 
 ## Introduction
@@ -101,6 +103,7 @@ The remainder of this document is organized into the following sections:
     - EndDateTime
     - BeginLocation
     - EndLocation
+    - RoadRestrictions
 - **Enumerated Types** - This section includes a table of enumerated data elements.
 - **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
 - **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
@@ -139,7 +142,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no<br>shoulders are closed,<br>use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
-**RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
+**RoadRestrictions** | Data Frame | One or more roadRestriction data frames indicating restrictions applied to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | This data frame provides an array of roadRestrictions.
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
@@ -214,18 +217,28 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
+## roadRestrictions
+**Definition:** One or more roadRestriction data frames indicating restrictions applied to the work zone road segment associated with the work zone bounded by the begin / end locations
+
+#### Table 7. roadRestrictions Data Frame Table
+Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nbsp;&nbsp;&nbsp;
+---- | ---------------- | ----------- | -----
+**roadRestriction** | The data frame which contains the roadRestrictionType and roadRestrictionValue.  An array of roadRestriction data frames may be used if multiple restrictions exist within the work zone extents | Conditional | |
+**roadRestrictionType** | The type of road restriction as defined in the roadRestrictionType enumerations | Conditional | |
+**roadRestrictionValue** | Provide the actual length (measured in centimeters), weight (measured in kilograms), or axle (measured by number of axles) restriction. | Conditional | |
+
 ### Enumerated Types
-#### Table 7. Enumerated Types Table
+#### Table 8. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
-**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
+**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 9) 
 **roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link-<br>alignment
-**roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included one<br>or more<br>flags as needed | See<br>definitions<br>below
+**roadRestrictionType** | roadRestriction | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included a single restriction per roadRestriction data frame.  Multiple roadRestriction data frames can be used for each work zone. | See<br>definitions<br>below
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 
 ### Enumerated Type Definitions
-#### Table 8. Work Zone Status Definition Table
+#### Table 9. Work Zone Status Definition Table
 Term | WZ-Status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
@@ -234,7 +247,7 @@ Term | WZ-Status Description
 **Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
 **Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
 
-#### Table 9. Spatial and Time Verification Definitions
+#### Table 10. Spatial and Time Verification Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **DateTime<br>Estimated(-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
@@ -242,8 +255,8 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 10. RoadRestrictions Definitions
-RoadRestrictions | Descriptions
+#### Table 11. roadRestrictionType Definitions
+roadRestrictionType | Descriptions
 ---------------- | ------------
 **no-trucks** | Trucks are prohibited from traveling in work zone area
 **travel-peak-hours-only** | Travel restricted to travel peak hours only
@@ -384,7 +397,7 @@ The static file shall be encoded as a comma delimited text file.
 
 **Filename:** WZ-Metadata.txt
 
-#### Table 11. Metadata
+#### Table 12. Metadata
 Data Name | Description | Example
 --------- | ----------- | -------
 **issuingOrganization** | The name of the issuing organization.<br>This name should match the name in the<br>WorkZoneActivity record. | “Anyplace public works”
@@ -422,7 +435,7 @@ openLanes |
 closedLanes |
 closedShoulders |
 workersPresent |
-RoadRestrictions*<ul><li>roadRestrictions</li></ul> |
+RoadRestrictions*<ul><li>roadRestriction</li><li>roadRestrictionType</li><li>roadRestrictionValue</li></ul>  
 description |
 issuingOrganization |
 timeStampEventCreation |
