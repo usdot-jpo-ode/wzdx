@@ -61,7 +61,7 @@ These examples use the following sample work zone activity template:
 | closedLanes                                                                             |                                                                                           |
 | closedShoulders                                                                         |                                                                                           |
 | workersPresent                                                                          |                                                                                           |
-| RoadRestrictions*<ul><li>roadRestrictions</li></ul>                                     |                                                                                           |
+| RoadRestrictions*<ul><li>roadRestriction</li><li>roadRestrictionType</li><li>roadRestrictionValue</li></ul>                                     |                                                                                           |
 | description                                                                             |                                                                                           |
 | issuingOrganization                                                                     |                                                                                           |
 | timeStampEventCreation                                                                  |                                                                                           |
