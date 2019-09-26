@@ -4,6 +4,7 @@ This section expands on the description of the data frames listed in the [Common
 - [EndDateTime](#enddatetime)    
 - [BeginLocation](#beginlocation)
 - [EndLocation](#endlocation)
+- [RoadRestrictions](#roadrestrictions)
 
 ## **StartDateTime**
 **Definition:** The time and date when a work zone starts. All date/time formats shall use *ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times* to represent date and time data elements.
@@ -57,3 +58,13 @@ Data Name | Data Description | Conformance | Notes
 **milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
+
+## **StartDateTime**
+**Definition:** One or more roadRestriction data frames indicating restrictions applied to the work zone road segment associated with the work zone bounded by the begin / end locations
+
+#### Table 3. roadRestrictions Data Frame Table
+Data | Data Description | Conformance | &nbsp;&nbsp;&nbsp;&nbsp; Notes &nbsp;&nbsp;&nbsp;&nbsp;
+---- | ---------------- | ----------- | -----
+**roadRestriction** | The data frame which contains the roadRestrictionType and roadRestrictionValue.  An array of roadRestriction data frames may be used if multiple restrictions exist within the work zone extents | Conditional | |
+**roadRestrictionType** | The type of road restriction as defined in the roadRestrictionType enumerations | Conditional | |
+**roadRestrictionValue** | Provide the actual length (measured in centimeters), weight (measured in kilograms), or axle (measured by number of axles) restriction. | Conditional | |
