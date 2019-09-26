@@ -39,7 +39,11 @@
 		<closedShoulders>none</closedShoulders>
 		<workersPresent>true</workersPresent>
 		<reducedSpdPosted>0</reducedSpdPosted>
-		<roadRestrictions>bike-lane</roadRestrictions>
+		<roadRestrictions>
+			<roadRestriction>
+				<roadRestrictionType>bike-lane<roadRestrictionType>
+			</roadRestriction>
+		</roadRestrictions>
 		<description>String</description>
 		<issuingOrganization>String</issuingOrganization>
 		<timestampEventCreation>2001-12-17T09:30:47Z</timestampEventCreation>
