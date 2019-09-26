@@ -20,7 +20,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
 **workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
-**RoadRestrictions** | Enum | One or more roadRestriction flags indicating restrictions apply to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
+**RoadRestrictions** | Data Frame | One or more roadRestriction data frames indicating restrictions applied to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | This data frame provides an array of roadRestrictions.
 **description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity or event was created | Optional |
