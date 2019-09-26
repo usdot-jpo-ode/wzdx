@@ -1,7 +1,7 @@
 # Enumerated Type Definitions
 This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
 
-#### Table 8. Work Zone Status Definitions
+#### Table 9. Work Zone Status Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
@@ -10,7 +10,7 @@ Term | WZ-Status Description
 **Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
 **Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
 
-#### Table 9. Spatial and Time Verification Definitions
+#### Table 10. Spatial and Time Verification Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **DateTime<br>Estimated(-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
@@ -18,7 +18,7 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 10. roadRestrictionType Definitions
+#### Table 11. roadRestrictionType Definitions
 roadRestrictionType | Descriptions
 ---------------- | ------------
 **no-trucks** | Trucks are prohibited from traveling in work zone area
