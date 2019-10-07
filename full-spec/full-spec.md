@@ -133,7 +133,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
-**activityTypes** | Data element | A list of `ActivityType` data frames. These frames indicate the type(s) of work occurring in the activity as well as if each type of work will result in an architectural change to the roadway | Optional |
+**activityTypes** | Data element | A list of [ActivityType](#activitytype) data frames. These frames indicate the type(s) of work occurring in the activity as well as if each type of work will result in an architectural change to the roadway | Optional | See the [ActivityType](#activitytype) data frame.
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
 **timestampEventUpdate** | Data element | The time and date when the activity<br>or event was updated | Optional |
