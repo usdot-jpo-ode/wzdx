@@ -61,7 +61,7 @@ Data Name | Data Description | Conformance | Notes
 ## ActivityType
 **Definition:** The type of work occurring in a work zone activity as well as a flag indicating if the work will result in an architectural change to the roadway.
 
-#### Table 7. ActivityType
+#### Table 7. ActivityType Data Frame Table
 Data Name | Data Type | Data Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |

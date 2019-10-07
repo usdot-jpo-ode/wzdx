@@ -43,11 +43,13 @@ Updated 9/15/2018
 - [Table 4 EndDateTime Data Frame Table](#table-4-enddatetime-data-frame-table)
 - [Table 5 BeginLocation Data Frame Table](#table-5-beginlocation-data-frame-table)
 - [Table 6 EndLocation Data Frame Table](#table-6-endlocation-data-frame-table)
-- [Table 7 Enumerated Types Table](#table-7-enumerated-types-table)
-- [Table 8 Work Zone Status Definition Table](#table-8-work-zone-status-definition-table)
-- [Table 9 Spatial and Time Verification Definitions](#table-9-spatial-and-time-verification-definitions)
-- [Table 10 RoadRestrictions Definitions](#table-10-roadrestrictions-definitions)
-- [Table 11 Metadata](#table-11-metadata)
+- [Table 7 ActivityType Data Frame Table](#table-7-activitytype-data-frame-table)
+- [Table 8 Enumerated Types Table](#table-8-enumerated-types-table)
+- [Table 9 Work Zone Status Definition Table](#table-9-work-zone-status-definition-table)
+- [Table 10 Spatial and Time Verification Definitions](#table-10-spatial-and-time-verification-definitions)
+- [Table 11 RoadRestrictions Definitions](#table-11-roadrestrictions-definitions)
+- [Table 12 ActivityType typeName Definitions](#table-12-activitytype-typename-definitions)
+- [Table 13 Metadata](#table-13-metadata)
 - [Figure 1 Work Zone Activity Organization](#figure-1-work-zone-activity-organization)
 
 ## Introduction
@@ -204,10 +206,10 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
-## ActivityType
+#### ActivityType
 **Definition:** The type of work occurring in a work zone activity as well as a flag indicating if the work will result in an architectural change to the roadway.
 
-#### Table 7. ActivityType
+#### Table 7. ActivityType Data Frame Table
 Data Name | Data Type | Data Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |
