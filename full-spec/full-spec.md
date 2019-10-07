@@ -18,6 +18,7 @@ Updated 9/15/2018
        - [EndDateTime](#enddatetime)
        - [BeginLocation](#beginlocation)
        - [EndLocation](#endlocation)
+       - [ActivityType](#activitytype)
     - [Enumerated Types](#enumerated-types)
     - [Enumerated Type Definitions](#enumerated-type-definitions)
     - [Enumerated Value Definitions Derived from ITS Standards](#enumerated-value-definitions-derived-from-its-standards)
