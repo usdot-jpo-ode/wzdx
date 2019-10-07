@@ -275,7 +275,7 @@ Type Name | Description
 **Overhead Work** | Work that occurs above the road, such as repair/replacement of overpasses, overhead VMS, wires, overhead signs, signals, etc. This type of work requires a bucket truck or similar setup rather than being isolated to the side of the road. This type includes creation or change (in location or function) of overhead signs and signals; in this case `isArchitecturalChange` will be `true`.
 **Below-Road Work** | Work occurring below the road such as boring or bridge repair.
 **Barrier Work** | Repair, replacement, addition, or change of barriers, guardrails, retaining walls, K-barriers, or similar. If creation or change, `isArchitecturalChange` will be `true`.
-**Surface Work** | New resurfacing, such as adding new lanes, moving lanes, or adding or changing connectivity (turn lanes), as well as creation or repair of non-drivable surfaces such as the shoulder or median. For new surfaces/resurfacing, `isArchitecturalChange` will be `true`.
+**Surface Work** | New resurfacing, such as repaving, adding new lanes, moving lanes, or adding or changing connectivity (turn lanes), as well as creation or repair of non-drivable surfaces such as the shoulder or median. For new surfaces/resurfacing, `isArchitecturalChange` will be `true`.
 **Painting** | Repainting, re-striping, adding new lanes, moving lanes, adding stop bars/lines, etc. `isArchitecturalChange` will be `true` when new paint is expected to be changed by over 1 meter from the old paint.
 **Roadway Relocation** | Physically relocating the road, such as adding a bridge or removing a sharp curve.
 **Roadway Creation** | Adding a new road.
