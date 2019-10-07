@@ -52,7 +52,7 @@ Updated 9/15/2018
 
 ## Introduction
 ### Background
-Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help Automated Vehicles (AVs) navigate safely and efficiently. Many infrastructure owners and operators (IOOs) maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
+Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help Automated Vehicles (AVs) navigate safely and efficiently. Many infrastructure owners and operators (IOOs) maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions.
 In support of AV integration into our nation’s transportation system, the Federal Highway Administration (FHWA) and USDOT’s Intelligent Transportation Systems Joint Program Office (ITS JPO) are co-leading the Work Zone Data Exchange (WZDx) project. The effort seeks to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. WZDx will enable collaborative maintenance and expansion of the specification as operational and technological enhancements become available.
 Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users. These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). This approach is intended to be repeatable leading to the accelerated harmonization of local data.
 The following data producers and users (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the development of the standardized data specification:
@@ -77,9 +77,9 @@ The WZDx data feed will be incrementally enhanced to evolve into a data feed tha
 The remainder of this document is organized into the following sections:
 
 **Section 2 Data Tables**
-- **Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame): 
-    - *Data Element* – Discrete data concept that cannot be broken down into smaller units. 
-    - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames. 
+- **Common Core Data Dictionary** - This section includes a table of WZDx common core data concepts. Data concepts may reference a single, discrete data element or may refer to a grouping of several data elements (i.e., a data frame):
+    - *Data Element* – Discrete data concept that cannot be broken down into smaller units.
+    - *Data Frame* - Data concept that describes a portion of a message or data feed that may contain other data elements or data frames.
 
 
     The data described are intended to have clear and unambiguous meanings.
@@ -91,8 +91,8 @@ The remainder of this document is organized into the following sections:
     - BeginLocation
     - EndLocation
 - **Enumerated Types** - This section includes a table of enumerated data elements.
-- **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
-- **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
+- **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
+- **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed.
 
 **Section 3. Creating the Specification**
 - This section provides a sample of how agencies will complete a Work Zone Activity record.
@@ -103,7 +103,7 @@ The remainder of this document is organized into the following sections:
 ## DATA TABLES
 ### Common Core Data Dictionary
 The Common Core Data Table (Table 1), and subsequent tables in this document, include the following columns:
-- *Data Name* - name of the data concept (either a data element or data frame) 
+- *Data Name* - name of the data concept (either a data element or data frame)
 - *Data Type* - identification of the data concept as a data element or data frame and whether it is an enumerated type
 - *Data Description* - description of the data concept
 - *Conformance* - description of the requirement for including data in the data feed file. There are three categories of conformance:
@@ -118,7 +118,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **identifier** | Data element | A unique identifier issued by the<br>data feed provider to identify<br>the work zone project or activity | Required | Request that this be a standardized identifier for a future version
 **subidentifier** | Data element | A unique identifier issued by data feed provider<br>that provides additional references to project or activity | Optional | This identifier may be used in more<br>than one feed as a reference to an<br>agency project number or permit ID
 **StartDateTime** | Data Frame | The time and date when a work zone<br>starts | Required |
-**EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required | 
+**EndDateTime** | Data Frame | The time and date when a work zone<br>ends | Required |
 **BeginLocation** | Data Frame | The LOCATION when work zone<br>impact begins along a single road in<br>a single direction (see<br>BeginLocation).The impact typically<br>begins where the first channeling<br>device (e.g., cone or barrel) is<br>located. | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see<br>Section 2.7)
 **EndLocation** | Data Frame | The LOCATION along a single road<br>in a single direction when work zone<br>impact ends and the traffic returns to<br>normal (See EndLocation) | Required | The method used for<br>designating impact<br>should be included in a<br>static Metadata file (see Section 2.7)
 **wz-Status** | Enum | The status of the work zone | Optional | See Enumerated Type Definitions
@@ -126,7 +126,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **openLanes** | Enum | The laneType that is opened on the road segment<br>designated by<br>the work zone BeginLocation | Optional |
 **closedLanes** | Enum | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane<br>impacts / status will be<br>described in Version 2<br>of the specification
 **closedShoulders** | Enum | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no<br>shoulders are closed,<br>use none
-**workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional | 
+**workersPresent** | Data element | A flag indicating that there are<br>workers present in the work zone | Optional |
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
@@ -219,7 +219,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 #### Table 8. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
-**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
+**wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8)
 **roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link-<br>alignment
 **roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included one<br>or more<br>flags as needed | See<br>definitions<br>below
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
@@ -320,11 +320,11 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 **right-exit-ramp (8208)** | right-exit-ramp | The (first) exit ramp with an egress on the<br>right in the direction of flow at an<br>interchange
 **right-second-exit-ramp (8209)** | right-second-exit-ramp | The second exit ramp with an egress on<br>the right in the direction of flow at an<br>interchange
 **right-entrance-ramp (8210)** | right-entrance-ramp | The (first) entrance ramp with an ingress<br>on the right in the direction of flow at an<br>interchange
-**right-second-entrance-ramp (8211)** | right-second-entrance-ramp | The second entrance ramp with an<br>ingress on the right in the direction of flow<br>at an interchange 
+**right-second-entrance-ramp (8211)** | right-second-entrance-ramp | The second entrance ramp with an<br>ingress on the right in the direction of flow<br>at an interchange
 **left-exit_ramp (8212)** | left-exit-ramp | The (first) exit ramp with an egress on the<br>left in the direction of flow at an<br>interchange
 **left-second-exit-ramp (8213)** | left-second-exit-ramp | The second exit ramp with an egress on<br>the left in the direction of flow at an<br>interchange
 **left-entrance-ramp (8214)** | left-entrance-ramp | The (first) entrance ramp with an ingress<br>on the left in the direction of flow at an<br>interchange
-**left-second-entrance-ramp (8215)** | left-second-entrance-ramp | The second entrance ramp with an<br>ingress on the left in the direction of flow<br>at an interchange 
+**left-second-entrance-ramp (8215)** | left-second-entrance-ramp | The second entrance ramp with an<br>ingress on the left in the direction of flow<br>at an interchange
 **escape-ramp (8216)** |  | Not used
 **hard-shoulder (8217)** |  | Not used
 **soft-shoulder (8218)** |  | Not used
@@ -406,7 +406,7 @@ Data Name | Description | Example
 **issuingOrganization** | The name of the issuing organization.<br>This name should match the name in the<br>WorkZoneActivity record. | “Anyplace public works”
 **Location-verify-method** | The method used to verify the accuracy<br>of the location information | “Survey accurate GPS equipment accurate to 0.1 cm”
 **WZ-location-method** | The typical method used to locate the<br>begin and end of a work zone impact area.<br>Select the method that most closely<br>represents how begin and end locations<br>are assigned in the WZDX file.<ul><li>channel-device-method</li><li>sign-method</li><li>junction-method</li><li>unknown - when method for<br>locating the begin and end<br>locations of the work zone is not known</li><li>other- when the method for<br>locating the begin and end<br>locations do not closely match any of the alternatives. An explanation<br>should be included in the<br>metadata when this value is assigned</li></ul>See description in Section 5. | “channel-device-method”
-**LRS-Type** | Describes the type of linear referencing<br>system used for the milepost<br>measurements | “Use of milemarkers posted the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap.” 
+**LRS-Type** | Describes the type of linear referencing<br>system used for the milepost<br>measurements | “Use of milemarkers posted the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap.”
 **LRS-URL** | A URL where additional information on the<br>LRS information and transformation<br>information is stored | https://aaa.bbb.com/lrs
 **Datafeed-frequency-update** | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h-hours</li></ul> | "30s"<br>"15m"<br>24h
 '**Timestamp-Metadata-Update** | The time and date when this file was last<br>updated | 2016-04-12T00:01:00
@@ -447,9 +447,9 @@ timeStampEventUpdate |
 Three examples of WorkZoneActivity records are shown below. They were derived from on-line data feeds including:
 * MassDOT Event Feed – Example 1
 * iCone Event Feed – Example 2
-* Caltrans Lane Closure Feed – Example 3 
+* Caltrans Lane Closure Feed – Example 3
 
-#### Example 1: MassDOT 
+#### Example 1: MassDOT
 Tag | Value
 --- | -----
 Identifier | 137097
@@ -465,6 +465,7 @@ closedShoulders | inside
 workersPresent | n/a
 RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
 description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
+workType | Bridge Repair
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
 
@@ -514,7 +515,7 @@ See files in separate attachment:
 * [WZDx_draft01.xsd](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/sample-files/WZDx_final01.xsd)
 
 
-## WZ Location Method Description and Practices 
+## WZ Location Method Description and Practices
 The metadata file will include one of five enumerated type values for WZ-location-method field.  
 
 For this data element (WZ-location-method), select the value below that most closely represents how begin and end locations are assigned in the WZDX file.
@@ -530,9 +531,9 @@ Location of first and last channeling device (e.g., cone or barrier) that is par
 
 #### Simple Scenario
 ![Fig. 2](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%202.png)
- 
+
 #### Complex Scenario
-This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends. 
+This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends.
 
 Note: with the data element “subidentifier”, the “owner” can link the three work activities together.
 

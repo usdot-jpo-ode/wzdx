@@ -67,4 +67,4 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |
 **isArchitecturalChange** | Data element | A boolean (true/false) value indiciating if the type of work is associated with an architectural change | Optional | 
 
-The `ActivityType` data frame occurrs in an `ActivityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
+**Note:** The `ActivityType` data frame occurrs in an `ActivityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
