@@ -213,7 +213,7 @@ Data Name | Data Description | Conformance | Notes
 #### Table 7. ActivityType Data Frame Table
 Data Name | Data Type | Data Description | Conformance | Notes
 --- | --- | --- | --- | ---
-**typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required | See the list of enums [here](#table-12-activitytype-typename-definitions)
+**typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required | See the list of enumerations [here](#table-12-activitytype-typename-definitions)
 **isArchitecturalChange** | Data element | A boolean (true/false) value indiciating if the type of work is associated with an architectural change | Optional | 
 
 **Note:** The `ActivityType` data frame occurrs in an `activityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
