@@ -130,7 +130,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
-**ActivityTypes** | Data element | A list of `ActivityType` data frames. These frames indicate the type(s) of work occurring in the activity as well as if each type of work will result in an architectural change to the roadway | Optional |
+**activityTypes** | Data element | A list of `ActivityType` data frames. These frames indicate the type(s) of work occurring in the activity as well as if each type of work will result in an architectural change to the roadway | Optional |
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
 **timestampEventUpdate** | Data element | The time and date when the activity<br>or event was updated | Optional |
@@ -213,7 +213,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |
 **isArchitecturalChange** | Data element | A boolean (true/false) value indiciating if the type of work is associated with an architectural change | Optional | 
 
-**Note:** The `ActivityType` data frame occurrs in an `ActivityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
+**Note:** The `ActivityType` data frame occurrs in an `activityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
 
 ### Enumerated Types
 #### Table 8. Enumerated Types Table
@@ -463,9 +463,9 @@ openLanes | right2
 closedLanes | left1
 closedShoulders | inside
 workersPresent | n/a
-RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
-description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
-workType | Bridge Repair
+RoadRestriction<ul><li>roadRestriction</li></ul> | n/a
+description | I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
+activityTypes <ul><li>typeName</li><li>isArchitecturalChange</li></ul> | typeName: Below-Road Work<br/>isArchitecturalChange: `false`
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
 

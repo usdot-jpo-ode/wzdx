@@ -18,86 +18,96 @@ openLanes | right2
 closedLanes | left1
 closedShoulders | inside
 workersPresent | n/a
-RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
-description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
-workType | Bridge Repair
+RoadRestriction<ul><li>roadRestriction</li></ul> | n/a
+description | I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
+activityTypes <ul><li>typeName</li><li>isArchitecturalChange</li></ul> | typeName: Below-Road Work<br/>isArchitecturalChange: `false`
 issuingOrganization | MassDOT
 timeStampEventUpdate | 2017-11-02T18:57:02
 
 ### XML Implementation
 ```xml
 <Header>
-	<timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
+  <timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
 </Header>
 <WorkZoneActivity>
-	<identifier>137097</identifier>
-	<startDateTime>
-		<startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
-	</startDateTime>
-	<endDateTime>
-		<endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
-	</endDateTime>
-	<beginLocation>
-		<roadName>I-91</roadName>
-		<roadDirection>southbound</roadDirection>
-		<latitude-est>42.33865</latitude-est>
-		<longitude-est>-72.63399</longitude-est>
-	</beginLocation>
-	<endLocation>
-		<latitude-est>42.33307</latitude-est>
-		<longitude-est>-72.6214</longitude-est>
-	</endLocation>
-	<wz_status>active</wz_status>
-	<totalLanes>3</totalLanes>
-	<openLanes>right2</openLanes>
-	<closedLanes>left1</closedLanes>
-	<closedShoulders>inside</closedShoulders>
-	<workersPresent>n/a</workersPresent>
-	<roadRestrictions>n/a</roadRestrictions>
-	<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
-	<workType>Bridge Repair</workType>
-	<issuingOrganization>MassDOT</issuingOrganization>
-	<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
+  <identifier>137097</identifier>
+  <startDateTime>
+  <startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
+  </startDateTime>
+  <endDateTime>
+    <endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
+  </endDateTime>
+  <beginLocation>
+    <roadName>I-91</roadName>
+    <roadDirection>southbound</roadDirection>
+    <latitude-est>42.33865</latitude-est>
+    <longitude-est>-72.63399</longitude-est>
+  </beginLocation>
+  <endLocation>
+    <latitude-est>42.33307</latitude-est>
+    <longitude-est>-72.6214</longitude-est>
+  </endLocation>
+  <wz_status>active</wz_status>
+  <totalLanes>3</totalLanes>
+  <openLanes>right2</openLanes>
+  <closedLanes>left1</closedLanes>
+  <closedShoulders>inside</closedShoulders>
+  <workersPresent>n/a</workersPresent>
+  <roadRestrictions>n/a</roadRestrictions>
+  <description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
+  <activityTypes>
+    <ActivityType>
+      <typeName>Below-Road Work</typeName>
+      <isArchitecturalChange>false</isArchitecturalChange>
+    </ActivityType>
+  </activityTypes>
+  <issuingOrganization>MassDOT</issuingOrganization>
+<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
 </WorkZoneActivity>
 ```
 
 ### JSON Implementation
 ```json
 {
-   "WZDx": {
-      "Header": {
-         "timeStampUpdate": "2017-11-02T18:57:02",
+  "WZDx": {
+    "Header": {
+      "timeStampUpdate": "2017-11-02T18:57:02",
+    },
+    "WorkZoneActivity": {
+      "identifier": "137097",
+      "startDateTime": {
+        "startDateTime-ver": "2016-11-03T19:37:00",
       },
-      "WorkZoneActivity": {
-         "identifier": "137097",
-         "startDateTime": {
-            "startDateTime-ver": "2016-11-03T19:37:00",
-         },
-         "endDateTime": {
-            "endDateTime-est": "2016-11-04-T05:30:00",
-         },
-         "beginLocation": {
-            "roadName": "I-91",
-            "roadDirection": "southtbound",
-            "latitude-est": 42.33865,
-            "longitude-est": -72.63399,
-         },
-         "endLocation": {
-            "latitude-est": 42.33307,
-            "longitude-est": -72.6214,
-         },
-         "wz_status": "active",
-         "totalLanes": "3",
-         "openLanes": "right2",
-         "closedLanes": "left1",
-         "closedShoulders": "inside",
-         "workersPresent": "n/a",
-         "roadRestrictions": "n/a",
-         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
-				 "workType": "Bridge Repair",
-         "issuingOrganization": "MassDOT",
-         "timestampEventUpdate": "2017-11-02T18:57:02"
+      "endDateTime": {
+        "endDateTime-est": "2016-11-04-T05:30:00",
       },
-   }
+      "beginLocation": {
+        "roadName": "I-91",
+        "roadDirection": "southtbound",
+        "latitude-est": 42.33865,
+        "longitude-est": -72.63399,
+      },
+      "endLocation": {
+        "latitude-est": 42.33307,
+        "longitude-est": -72.6214,
+      },
+      "wz_status": "active",
+      "totalLanes": "3",
+      "openLanes": "right2",
+      "closedLanes": "left1",
+      "closedShoulders": "inside",
+      "workersPresent": "n/a",
+      "roadRestrictions": "n/a",
+      "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
+      "activityTypes": [
+        {
+          "typeName": "Below-Road Work",
+          "isArchitecturalChange": false
+        }
+      ],
+      "issuingOrganization": "MassDOT",
+      "timestampEventUpdate": "2017-11-02T18:57:02"
+    }
+  }
 }
 ```
