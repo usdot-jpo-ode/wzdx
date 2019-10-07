@@ -5,7 +5,7 @@ The static file shall be encoded as a comma delimited text file.
 
 **Filename:** WZ-Metadata.txt
 
-#### Table 11. Metadata
+#### Table 13. Metadata
 Data Name | Description | Example
 --------- | ----------- | -------
 **issuingOrganization** | The name of the issuing organization.<br>This name should match the name in the<br>WorkZoneActivity record. | “Anyplace public works”

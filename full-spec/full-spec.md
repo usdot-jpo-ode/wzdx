@@ -130,6 +130,7 @@ Data Name | Data Type | Data Description | Conformance | Notes
 **reducedSpdPosted** | Data element | The reduced speed limit posted in<br>the work zone | Optional |
 **RoadRestrictions** | Enum | One or more roadRestriction flags<br>indicating restrictions apply to the<br>work zone road segment associated<br>with the work zone bounded by the<br>begin / end locations | Optional | More details may be<br>added to future WZDx<br>versions; these are<br>included as flags rather<br>than detailed restrictions
 **description** | Data element | Short free text description of work zone | Optional | This will be populated<br>with formal phrases in a<br>later WZDx version
+**ActivityTypes** | Data element | A list of `ActivityType` data frames. These frames indicate the type(s) of work occurring in the activity as well as if each type of work will result in an architectural change to the roadway | Optional |
 **issuingOrganization** | Data element | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **timestampEventCreation** | Data element | The time and date when the activity<br>or event was created | Optional |
 **timestampEventUpdate** | Data element | The time and date when the activity<br>or event was updated | Optional |
@@ -203,8 +204,19 @@ Data Name | Data Description | Conformance | Notes
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
 
+## ActivityType
+**Definition:** The type of work occurring in a work zone activity as well as a flag indicating if the work will result in an architectural change to the roadway.
+
+#### Table 7. ActivityType
+Data Name | Data Type | Data Description | Conformance | Notes
+--- | --- | --- | --- | ---
+**typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |
+**isArchitecturalChange** | Data element | A boolean (true/false) value indiciating if the type of work is associated with an architectural change | Optional | 
+
+**Note:** The `ActivityType` data frame occurrs in an `ActivityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
+
 ### Enumerated Types
-#### Table 7. Enumerated Types Table
+#### Table 8. Enumerated Types Table
 Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
 **wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
@@ -212,9 +224,10 @@ Data Element | Used by | Allowed Values | Notes | Source
 **roadRestriction** | RoadRestrictions | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>bike-lane</li><li>ramp</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li></ul></ul> | Included one<br>or more<br>flags as needed | See<br>definitions<br>below
 **laneType** | openLanes,<br>closedLanes | <ul><li>all</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>shift-left</li><li>shift-right</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
 **closedShoulders** | WorkZoneActivity | <ul><li>outside</li><li>inside</li><li>both</li><li>none</li><li>unknown</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
+**typeName** | ActivityType | <ul><li>Maintenance</li><li>Minor Road Defect Repair</li><li>Roadside Work</li><li>Overhead Work</li><li>Below-Road Work</li><li>Barrier Work</li><li>Surface Work</li><li>Painting</li><li>Roadway Relocation</li><li>Roadway Creation</li></ul> | See PR #33 for background on this enumeration | 
 
 ### Enumerated Type Definitions
-#### Table 8. Work Zone Status Definition Table
+#### Table 9. Work Zone Status Definition Table
 Term | WZ-Status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
@@ -223,7 +236,7 @@ Term | WZ-Status Description
 **Cancelled** | Reported cancellation of a proposed or active WZ; the coverage applies to the work zone activity record.<ul><li>When date/time is estimated, the cancellation may be one or more days<br>associated within the reported scheduled datetimes</li></ul>
 **Completed** | Work Zone is closed and completed; all work zone impacts are mitigated. This status<br>may be used when a work zone activity is completed earlier than expected.
 
-#### Table 9. Spatial and Time Verification Definitions
+#### Table 10. Spatial and Time Verification Definitions
 Term | WZ-Status Description
 ---- | ---------------------
 **DateTime<br>Estimated(-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
@@ -231,7 +244,7 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 10. RoadRestrictions Definitions
+#### Table 11. RoadRestrictions Definitions
 RoadRestrictions | Descriptions
 ---------------- | ------------
 **no-trucks** | Trucks are prohibited from traveling in work zone area
@@ -249,6 +262,20 @@ RoadRestrictions | Descriptions
 **gross-weight-limit** | Vehicle gross-weight-limit restrictions reduced in work zone area
 **towing-prohibited** | Towing prohibited in work zone area
 **permitted-oversize-loads-<br>prohibited** | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
+
+#### Table 12. ActivityType typeName Definitions
+Type Name | Description
+---------------- | ------------
+**Maintenance** | Work with no impact on the roadway. This includes events such as trash pickup, mowing, landscaping.
+**Minor Road Defect Repair** | Pothole repair, road crack repair and sealing, and other small road defect repairs.
+**Roadside Work** | Work that is isolated to the side of the road and not in the main travel way, such as repair, replacement, or addition of streetlights, VMS, signs (guide, warning, regulatory, and information signs) in the ground. This type includes creation and change (in location or function) of signs and signals; in this case the companion field `isArchitecturalChange` will be `true`.
+**Overhead Work** | Work that occurs above the road, such as repair/replacement of overpasses, overhead VMS, wires, overhead signs, signals, etc. This type of work requires a bucket truck or similar setup rather than being isolated to the side of the road. This type includes creation or change (in location or function) of overhead signs and signals; in this case `isArchitecturalChange` will be `true`.
+**Below-Road Work** | Work occurring below the road such as boring or bridge repair.
+**Barrier Work** | Repair, replacement, addition, or change of barriers, guardrails, retaining walls, K-barriers, or similar. If creation or change, `isArchitecturalChange` will be `true`.
+**Surface Work** | New resurfacing, such as adding new lanes, moving lanes, or adding or changing connectivity (turn lanes), as well as creation or repair of non-drivable surfaces such as the shoulder or median. For new surfaces/resurfacing, `isArchitecturalChange` will be `true`.
+**Painting** | Repainting, re-striping, adding new lanes, moving lanes, adding stop bars/lines, etc. `isArchitecturalChange` will be `true` when new paint is expected to be changed by over 1 meter from the old paint.
+**Roadway Relocation** | Physically relocating the road, such as adding a bridge or removing a sharp curve.
+**Roadway Creation** | Adding a new road.
 
 ### Enumerated Value Definitions Derived from ITS Standards
 The following tables show the translation from TMDD to the WZDx Enumerated Types (Table 7).
@@ -373,7 +400,7 @@ The static file shall be encoded as a comma delimited text file.
 
 **Filename:** WZ-Metadata.txt
 
-#### Table 11. Metadata
+#### Table 13. Metadata
 Data Name | Description | Example
 --------- | ----------- | -------
 **issuingOrganization** | The name of the issuing organization.<br>This name should match the name in the<br>WorkZoneActivity record. | “Anyplace public works”

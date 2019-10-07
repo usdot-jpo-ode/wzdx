@@ -57,3 +57,14 @@ Data Name | Data Description | Conformance | Notes
 **milepost-est** | The measured linear distance<br>along a roadway where the<br>work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) | Provide link to description<br>of milepost method in<br>metadata file (see Section 2.7)
 **milepost-ver** | An accurately linear distance measured<br>against a milepost<br>marker along a roadway where<br>the work zone begins | Optional<br><br>If included only<br>one milepost<br>value (-est or -ver<br>is needed) |  |
 **crossStreet** | The cross street along a<br>roadway where the work zone<br>area ends and the traffic returns<br>to normal | Conditional | Required when Road Classification is arterial
+
+## ActivityType
+**Definition:** The type of work occurring in a work zone activity as well as a flag indicating if the work will result in an architectural change to the roadway.
+
+#### Table 7. ActivityType
+Data Name | Data Type | Data Description | Conformance | Notes
+--- | --- | --- | --- | ---
+**typeName** | Enum | A string representing the type of work occurring in the work zone activity | Required |
+**isArchitecturalChange** | Data element | A boolean (true/false) value indiciating if the type of work is associated with an architectural change | Optional | 
+
+The `ActivityType` data frame occurrs in an `ActivityTypes` list in the work zone activity common core data. The `ActivityTypes` field itself is optional, though the `typeName` field is required for each frame that is included in this list.
