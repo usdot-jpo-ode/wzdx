@@ -219,18 +219,18 @@ Definition: The specific lane along a single road in a single direction and its 
 Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
 **laneType** | Type of lane defined by allowed use and relative location | Required | laneType values are required to define a LaneImpacts record
-**impactType** | The impact to mobility for this lane | Required | Allowed values are defined in the impactType enumerated table below.
-**RoadRestrictions** | List of RoadRestriction objects from the RoadRestrictions data frame for this lane | Optional | multiple values allowed
+**laneStatus** | The impact to mobility for this lane | Required | Allowed values are defined in the laneStatus enumerated table below.
+**LaneRestrictions** | List of LaneRestriction elements (objects) from the LaneRestrictions data frame for this lane | Optional | multiple values allowed for this lane | Optional | multiple values allowed
 
-#### RoadRestriction
+#### LaneRestrictions
 Definition: A specific restriction with its associated measure if a measure is specified. One or more Restriction records (or objects) may be used to denote the specific restriction for a specfic lane.
 
-#### Table 7.1 RoadRestriction data frame table
+#### Table 7.1 LaneRestrictions data frame table
 Data Name | Data Description | Conformance | Notes
 --------- | ---------------- | ----------- | -----
-**roadRestrictionType** | the type of restriction from the roadRestirctions enumerated list of allowed values | Required | Only one value is allowed. Required for objects in the RoadRestrictions data frame.
-**roadRestrictionValue** | the measure of the restriction type | Conditional | must be used in conjunition with roadRestrictionUnits
-**roadRestrictionUnits** | the units of measure of the restrictionValue | Conditional | must be specified if a roadRestrictionValue is used
+**laneRestrictionType** | the type of restriction from the roadRestirctions enumerated list of allowed values | Required | Only one value is allowed. Required for objects in the LaneRestrictions data frame.
+**restrictionValue** | the measure of the restriction type | Conditional | must be used in conjunition with restrictionUnits
+**restrictionUnits** | the units of measure of the restrictionValue | Conditional | must be specified if a restrictionValue is used
 
 ### Enumerated Types
 #### Table 8. Enumerated Types Table
@@ -238,10 +238,10 @@ Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
 **wz-Status** | WorkZoneActivity | See Enumerated Type<br>Definitions (Table 8) 
 **roadDirection** | BeginLocation | <ul><li>northbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul> |  | Adapted from<br>TMDD link-<br>alignment
-**roadRestrictionType** | roadRestrictionTypes and roadRestrictionValue | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li><li>flagged</li></ul></ul> | Included one or more flags as needed for the RoadRestrictionTypes flag in the Core Data data frame. Include only one value when used in the roadRestrictionType element of the Restriction data frame  | See<br>definitions<br>below
-**restrictionUnits** | restrictionUnits | <ul><li>feet</li><li>inches</li><li>pounds</li><li>tons</li></ul> | This is an intial list and not intended to be complete. More will be added as needed. | 
+**restrictionType** | roadRestrictionTypes and laneRestrictionType | <ul><li>no-trucks</li><li>travel-peak-hours-only</li><li>hov-3</li><li>hov-2</li><li>no-parking</li><li>towing-prohibited</li><li>permitted-oversize-loads-<br>prohibited (this applies to<br>annual oversize load<br>permits</li><li>reduced-width</li><li>reduced-height</li><li>reduced-length</li><li>reduced-weight</li><ul><li>axle-load-limit</li><li>gross-weight-limit</li><li>flagged</li></ul></ul> | Included one or more flags as needed for the roadRestrictionTypes flag in the Core Data data frame. Include only one value when used in the restrictionType element of the LaneRestriction data frame  | See<br>definitions<br>below
+**restrictionUnits** | restrictionUnits | <ul><li>feet</li><li>inches</li><li>pounds</li><li>tons</li><li>centimeters</li><li>meters</li><li>kilograms</li><li>number-of-axels</li></ul> | This is an intial list and not intended to be complete. More will be added as needed. | 
 **laneType** | laneType<br>in LaneImpact<br>data fram | <ul><li>all</li><li>lane-1</li><li>lane-2</li><li>lane-3</li><li>lane-4</li><li>lane-5</li><li>lane-6</li><li>lane-7</li><li>lane-8</li><li>lane-9</li><li>left-lane</li><li>right-lane</li><li>left-2-lanes</li><li>left-3-lanes</li>right-2-lanes</li><li>right-3-lanes</li><li>center</li><li>middle-lane</li><li>right-turning-lane</li><li>left-turning-lane</li><li>right-exit-lane</li><li>left-exit-lane</li><li>right-merging-lane</li><li>left-merging-lane</li><li>right-exit-ramp</li><li>right-second-exit-ramp</li><li>right-entrance-ramp</li><li>right-second-entrance-ramp</li><li>left-exit-ramp</li><li>left-second-exit-ramp</li><li>left-entrance-ramp</li><li>left-second-entrance-ramp</li><li>sidewalk</li><li>bike-lane</li><li>none</li><li>unknown</li><li>alternate-flow-lane</li><li>right-shoulder</li><li>left-shoulder</li><li>both-shoulders</li><li>parking-lane</li><li>transit_lane</li></ul> |  | Adapted from<br>TMDD<br>LaneRoadway
-**impactType** | impactType | <ul><li>open</li><li>closed</li><li>shift-left</li><li>shift-right</li></ul> |  |
+**laneStatus** | impactType | <ul><li>open</li><li>closed</li><li>shift-left</li><li>shift-right</li></ul> |  |
 **vehicleImpact** | vehicleImapct | <ul><li>all-lanes-closed</li><li>some-lanes-closed</li><li>all-lanes-open</li></ul>
 
 ### Enumerated Type Definitions
@@ -262,8 +262,8 @@ Term | WZ-Status Description
 **Location<br>Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
 **Location Verified<br>(-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
-#### Table 11. roadRestrictionType Definitions
-roadRestrictionType | Descriptions
+#### Table 11. restrictionType Definitions
+restrictionType | Descriptions
 ---------------- | ------------
 **flagged** | Travel is controlled by a flagger or traffic signal
 **no-trucks** | Trucks are prohibited from traveling in work zone area
