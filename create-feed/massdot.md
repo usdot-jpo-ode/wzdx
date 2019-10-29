@@ -10,8 +10,8 @@ Tag | Value
 Identifier | 137097
 StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03T19:37:00
 EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li><li>town</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399<br>town: Northampton
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li><li>town</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214<br>town: Northampton
+BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li><li>jurisdiction</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399<br>jurisdiction: Northampton
+EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li><li>jurisdiction</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214<br>jurisdiction: Northampton
 wz-Status | active
 totalLanes | 3
 openLanes | right2
@@ -41,12 +41,12 @@ timeStampEventUpdate | 2017-11-02T18:57:02
 		<roadDirection>southbound</roadDirection>
 		<latitude-est>42.33865</latitude-est>
 		<longitude-est>-72.63399</longitude-est>
-		<town>Northampton</town>
+		<jurisdiction>Northampton</jurisdiction>
 	</beginLocation>
 	<endLocation>
 		<latitude-est>42.33307</latitude-est>
 		<longitude-est>-72.6214</longitude-est>
-		<town>Northampton</town>
+		<jurisdiction>Northampton</jurisdiction>
 	</endLocation>
 	<wz_status>active</wz_status>
 	<totalLanes>3</totalLanes>
@@ -81,12 +81,12 @@ timeStampEventUpdate | 2017-11-02T18:57:02
             "roadDirection": "southtbound",
             "latitude-est": 42.33865,
             "longitude-est": -72.63399,
-            "town": "Northampton"
+            "jurisdiction": "Northampton"
          },
          "endLocation": {
             "latitude-est": 42.33307,
             "longitude-est": -72.6214,
-            "town": "Northampton"
+            "jurisdiction": "Northampton"
          },
          "wz_status": "active",
          "totalLanes": "3",
