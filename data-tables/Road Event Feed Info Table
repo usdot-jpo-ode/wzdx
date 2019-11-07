@@ -3,7 +3,7 @@ Required
 
 This table contains information about road event datasets.  For each record in the road_event_feed_info table there must exist one or more related records in the road_event table.  The road_event_feed_info_id field acts as the foreign key in the road_event table.
 
-Data Name	Data Type	Description	Conformance	Notes
+Data Name|Data Type|Description|Conformance|Notes
 feed_info_id	ID	Identifies the feed	Required	Primary Key
 feed_update_date	DateTime	Designates the date and time
 the data feed was last updated.	Required	
