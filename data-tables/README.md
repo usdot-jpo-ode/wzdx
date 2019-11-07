@@ -12,9 +12,9 @@ This document defines the content of the Work Zone Data Specification by means o
 - **Notes** - comments, guidance, or notes for future consideration
 
 ### Table of Contents
-- [**Entity Relationship Diagram**](https://github.com/DeraldDudley/jpo-wzdx/blob/master/data-tables/road_event_erd.png)
-- [**Table Definitions**]()
-    - [**Road Event Feed Info Table**]()
+- [**Entity Relationship Diagram**](/data-tables/road_event_erd.png)
+- [**Table Definitions**]
+    - [**Road Event Feed Info Table**](data-tables/Road_Event_Feed_Info_Table.md)
     - [**Road Event Table**]()
     - [**Lanes Table**]()
     - [**Lane Restrictions Table**]()
