@@ -1,10 +1,10 @@
 # **Data Tables**
-**Revised September 15, 2018**.
+**Revised November 8, 2019**.
 
-This document explains the types of files and the data elements, data frames and enumerated types that make up a Work Zone data feed. The [Common Core Data Table (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md), and subsequent tables in this document, include the following columns:
-- **Data Name** - name of the data concept (either a data element or data frame) 
-- **Data Type** - identification of the data concept as a data element or data frame and whether it is an enumerated type
-- **Data Description** - description of the data concept
+This document defines the content of the Work Zone Data Specification by means of an Entity Relationship Diagram (ERD). The ERD organizes data into distinct entities (also known as tables or objects), defines the content (also known as fields or properties) of each entity, and documents how those entities, tables or objects are related (Relationships).  Also included, when applicable, are enumeration tables which define the values to which field content is restricted.
+- **Data Name** - name of the field or column 
+- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
+- **Data Description** - description of the data content
 - **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
     - *Required* - must be included
     - *Optional* - may be included
@@ -12,6 +12,15 @@ This document explains the types of files and the data elements, data frames and
 - **Notes** - comments, guidance, or notes for future consideration
 
 ### Table of Contents
+- [**Entity Relationship Diagram**]()
+- [**Table Definitions**]()
+    - [**Road Event Feed Info Table**]()
+    - [**Road Event Table**]()
+    - [**Lanes Table**]()
+    - [**Lane Restrictions Table**]()
+- [**Enumerated Fields**]()
+- [**Enumerations**]()
+
 - [**Common Core Data Dictionary**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md) 
 - [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
 - [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
