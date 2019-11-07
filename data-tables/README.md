@@ -21,13 +21,6 @@ This document defines the content of the Work Zone Data Specification by means o
 - [**Enumerated Fields**]()
 - [**Enumerations**]()
 
-- [**Common Core Data Dictionary**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md) 
-- [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
-- [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
-    - [StartDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#startdatetime)
-    - [EndDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#enddatetime)
-    - [BeginLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#beginlocation)
-    - [EndLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#endlocation)
 - [**Enumerated Types**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) 
 - [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
 - [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
