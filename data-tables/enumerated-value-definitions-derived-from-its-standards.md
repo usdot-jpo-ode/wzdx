@@ -16,10 +16,10 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### openLanes and closedLanes
-*Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+#### Lane Types
+*Note:* Lane types are derived from LaneRoadway of SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
+LaneRoadway<br>enumerations | Lane Types | Description
 --------------------------- | ------------------------------------- | -----------
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
