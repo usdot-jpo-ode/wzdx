@@ -1,5 +1,5 @@
 # Enumerated Fields
-This section includes a table of enumerated data elements. An enumerated type is a special data type that enables for a variable to be a set of predefined constants otherwise known as factor data. The variable must be equal to one of the values that have been predefine for it. 
+This section includes a table of enumerated fields.
 
 #### Table 7. Enumerated Types
 Data Element | Used by | Allowed Values | Notes | Source
