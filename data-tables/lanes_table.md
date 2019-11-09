@@ -3,7 +3,7 @@
 
 This table identifies and describes individual lanes within a road event.  
 
-This table is related to the road_event table by the foreign key road_event_id.  For every record in the road_event table there may exist one or more lane_info records.
+This table is related to the [road_events](/data-tables/road_event_table.md) table by the foreign key road_event_id.  For every record in the road_event table there may exist one or more record(s) in the lanes table.
 
 Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-|
