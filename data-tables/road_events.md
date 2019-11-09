@@ -5,7 +5,7 @@ This table contains information about road events.  The information describes wh
 
 This table is related to the [road_event_feed_info](/data-tables/road_event_feed_info.md) table by the foreign key feed_info_id.  For every record in the road_event_feed_info table there must exist one or more road_event records.
 
-This table is related to the [lanes](/data-tables/lanes_table.md) table;  For each record in the  road_events table there may exists a one or more records in the lanes table.  The road_event_id field acts  as the foreign key in the lanes table.
+This table is related to the [lanes](/data-tables/lanes.md) table;  For each record in the  road_events table there may exists a one or more records in the lanes table.  The road_event_id field acts  as the foreign key in the lanes table.
 
 Field Name | Data Type | Description | Conformance | Notes
 ---------- | --------- | ---------------- | ----------- | -----
