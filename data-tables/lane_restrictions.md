@@ -3,7 +3,7 @@
 
 This table describes individual lane restrictions.
 
-This table is related to the [lanes](/data-tables/lanes_table.md) table by the foreign key lane_id. For every record in the lanes table there may exist one or more record(s) in the lane_restrictions table.
+This table is related to the [lanes](/data-tables/lanes.md) table by the foreign key lane_id. For every record in the lanes table there may exist one or more record(s) in the lane_restrictions table.
 
 Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-
