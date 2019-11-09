@@ -4,12 +4,14 @@ Required
 This table contains information about road events.  The information describes where, when, and what is activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
 This table is related to the road_event_feed_info table by the foreign key road_event_feed_info_id.  For every record in the road_event_info table there must exist one or more road_event records.
-Data Name	Data Type	Description	Conformance	Notes
-road_event_id	ID	A unique identifier issued by the data feed provider to identify the road event.	Required	Primary Key
-feed_info_id	ID	Identifies the feed to which a road event is related.	Required	Foreign Key to road_event_feed_info
-geometry_type	Enumeration:
+
+Field Name | Data Type | Description | Conformance | Notes
+---------- | --------- | ---------------- | ----------- | -----
+road_event_id|ID|A unique identifier issued by the data feed provider to identify the road event.|Required|Primary Key
+feed_info_id|ID|Identifies the feed to which a road event is related.|Required|Foreign Key to road_event_feed_info
+geometry_type|Enumeration: 
 Multipoint or 
-LineString	May be represented as a linestring or a multipoint as defined in the geoJson specification.	Required	
+LineString|May be represented as a linestring or a multipoint as defined in the geoJson specification.|Required|
 geometry	Coordinate(s);
 Float	A coordinate pair or an array of coordinates.  In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event	Required	Coordinate pairs and coordinate arrays are formatted according to the geoJson spec
 road_name	Text	Publicly known name of the road on which the event occurs.	Required	
