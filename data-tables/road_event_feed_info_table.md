@@ -1,5 +1,5 @@
 # road_event_feed_info (Formerly WZDx Header Data)
-Required
+**Required**
 
 This table contains information about road event datasets.  For each record in the road_event_feed_info table there must exist one or more related records in the road_event table.  The road_event_feed_info_id field acts as the foreign key in the road_event table.
 
