@@ -19,7 +19,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 #### Lane Types
 *Note:* Lane types are derived from LaneRoadway of SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | Lane Types | Description
+LaneRoadway<br>enumerations | Lane Types<br>enumerations | Description
 --------------------------- | ------------------------------------- | -----------
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
@@ -105,10 +105,10 @@ LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### roadDirection
+#### Event Direction
 *Note:*  Link-alignment is imported from TMDD
 
-Link-alignment<br>enumerations | Used for<br>roadDirections | Description
+Link-alignment<br>enumerations | Event Direction<br>enumerations | Description
 ------------------------------ | -------------------------- | -----------
 **northbound (1)** | northbound | Road flow is in the northbound direction
 **eastbound (2)** | eastbound | Road flow is in the eastbound direction
