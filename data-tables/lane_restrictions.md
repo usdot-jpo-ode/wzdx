@@ -1,5 +1,5 @@
 # lane_restrictions (New)
-**Optional*
+**Optional**
 
 This table describes individual lane restrictions.
 
