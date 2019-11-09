@@ -1,5 +1,5 @@
-road_events (Formerly Common Core Data Dictionary)
-Required
+# road_events (Formerly Common Core Data Dictionary)
+**Required**
 
 This table contains information about road events.  The information describes where, when, and what is activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
