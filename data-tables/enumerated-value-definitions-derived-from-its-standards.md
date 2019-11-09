@@ -1,8 +1,8 @@
 # Enumerated Value Definitions Derived from ITS Standards
 The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) for:
-- [openLanes and closedLanes](#openlanes-and-closedlanes)
+- [Lane Type](#lane_types)
 - [closedShoulders](#closedshoulders)
-- [roadDirection](#roaddirection)
+- [roadDirection](#event_direction)
 
 Example of data frame in the TMDD (specified in ASN.1 format)
 ```xml
@@ -16,7 +16,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### Lane Types
+#### lane_yypes
 *Note:* Lane types are derived from LaneRoadway of SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>enumerations | Lane Types<br>enumerations | Description
@@ -105,7 +105,7 @@ LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### Event Direction
+#### event_direction
 *Note:*  Link-alignment is imported from TMDD
 
 Link-alignment<br>enumerations | Event Direction<br>enumerations | Description
