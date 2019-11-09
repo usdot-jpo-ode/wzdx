@@ -19,7 +19,7 @@ This document defines the content of the Work Zone Data Specification by means o
     - [**Lanes Table**](/data-tables/lanes_table.md)
     - [**Lane Restrictions Table**](/data-tables/lane_restrictions.md)
 - [**Enumerated Fields**](/data-tables/enumerated-fields.md) 
-- [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
+- [**Enumerated Field Definitions**](/data-tables/enumerated_field_definitions.md) 
 - [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
     - [openLanes and closedLanes](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#openlanes-and-closedlanes)
     - [closedShoulders](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#closedshoulders)
