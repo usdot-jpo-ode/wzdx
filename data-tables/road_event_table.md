@@ -1,7 +1,7 @@
 # road_events (Formerly Common Core Data Dictionary)
 **Required**
 
-This table contains information about road events.  The information describes where, when, and what is activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
+This table contains information about road events.  The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
 This table is related to the road_event_feed_info table by the foreign key road_event_feed_info_id.  For every record in the road_event_info table there must exist one or more road_event records.
 
