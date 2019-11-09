@@ -16,7 +16,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### lane_yypes
+#### lane_types
 *Note:* Lane types are derived from LaneRoadway of SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>enumerations | Lane Types<br>enumerations | Description
