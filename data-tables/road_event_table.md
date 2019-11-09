@@ -30,11 +30,10 @@ event_creation_date|DateTime|The time and date when the activity or event was cr
 event_beginning_cross_street|Text|Name or number of the nearest cross street along the roadway where the event begins|Optional|Required when Road Classification is arterial.
 event_ending_cross_street|Text|Name or number of the nearest cross street along the roadway where the event ends|Optional|Required when Road Classification is arterial.
 event_beginning_milepost|Float|The linear distance measured against a milepost marker along a roadway where the event begins|Optional|	A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. Provide link to description of milepost method in metadata file (see Section 2.7).
-event_ending_milepost|Float|The linear distance measured against a milepost marker along a roadway where the event ends|Optional|A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road
-networks. Provide link to description of milepost method in metadata file (see Section 2.7).
+event_ending_milepost|Float|The linear distance measured against a milepost marker along a roadway where the event ends|Optional|A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. Provide link to description of milepost method in metadata file (see Section 2.7).
 event_start_date_accuracy|Enum: Estimated or Verified|A measure of how accurate the start Date Time is.|Optional|
 event_end_date_accuracy|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Optional|
-event_beginning_demarcation|Enum: Estimated or Verified	Indicates how the beginning coordinate was defined.|Optional|
+event_beginning_demarcation|Enum: Estimated or Verified|Indicates how the beginning coordinate was defined.|Optional|
 event_ending_demarcation|Enum: Estimated or Verified|Indicates how the ending coordinate was defined.|Optional|
 event_begin_mp_demarcation|Enum: Estimated or Verified|A measure of the accuracy of the milepost value|Optional|
 event_end_mp_demarcation|Enum: Estimated or Verified|A measure of the accuracy of the milepost value|Optional|
