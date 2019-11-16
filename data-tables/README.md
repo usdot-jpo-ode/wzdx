@@ -16,6 +16,7 @@ This document defines the content of the Work Zone Data Specification by means o
 - **Table Definitions**
     - [**Road Event Feed Info Table**](/data-tables/road_event_feed_info.md)
     - [**Road Event Table**](/data-tables/road_events.md)
+    - [**Activities**](/data-tables/activities.md)
     - [**Lanes Table**](/data-tables/lanes.md)
     - [**Lane Restrictions Table**](/data-tables/lane_restrictions.md)
 - [**Enumerated Fields**](/data-tables/enumerated-fields.md) 
