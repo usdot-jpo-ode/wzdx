@@ -7,6 +7,8 @@ This table is related to the [road_event_feed_info](/data-tables/road_event_feed
 
 This table is related to the [lanes](/data-tables/lanes.md) table;  For each record in the  road_events table there may exists a one or more records in the lanes table.  The road_event_id field acts  as the foreign key in the lanes table.
 
+This table is related to the [activities](/data-tables/activities.md) table;  For each record in the  road_events table there may exists a one or more records in the activites table.  The road_event_id field acts  as the foreign key in the activities table.
+
 Field Name | Data Type | Description | Conformance | Notes
 ---------- | --------- | ---------------- | ----------- | -----
 road_event_id|ID|A unique identifier issued by the data feed provider to identify the road event.|Required|Primary Key
@@ -21,7 +23,6 @@ event_direction|Text|The digitization direction of the road that is impacted by 
 event_type|Enumeration; Text|Describes the event affecting road traffic.|Required|Enumeration need defined.|Right now it includes Work Zone.
 event_status|Enumeration; Text|The status of the event|Optional|See Enumerated Type Definitions
 event_workers_present|Boolean|A flag indicating that there are workers present in the event space|Optional
-event_activity_type|Enumeration; Text|Describes the activity affecting road traffic.|Optional|
 event_description|Text|Short free text description of the event.|Optional|This will be populated with formal phrases in a later version
 event_total_lanes|Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
 event_vehicle_impact|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required|Values = all-lanes-closed, some-lanes-closed, all-lanes-open
