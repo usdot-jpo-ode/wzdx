@@ -25,7 +25,7 @@ event_status|Enumeration; Text|The status of the event|Optional|See Enumerated T
 event_workers_present|Boolean|A flag indicating that there are workers present in the event space|Optional
 event_description|Text|Short free text description of the event.|Optional|This will be populated with formal phrases in a later version
 event_total_lanes|Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
-event_restriction|Enumeration; Text|One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons|Optional|These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes in the lane_restrictions table.
+event_restrictions|Enumeration; Text|One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons|Optional|These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes in the lane_restrictions table.
 event_vehicle_impact|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required|Values = all-lanes-closed, some-lanes-closed, all-lanes-open
 event_reduced_speed_limit|Integer|The reduced speed limit posted within the event space|Optional|
 event_subidentifier|ID|A unique identifier issued by data feed provider that provides additional references to project or activity|Optional|This identifier may be used in more than one feed as a reference to an agency project number or permit ID
