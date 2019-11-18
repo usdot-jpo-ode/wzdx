@@ -1,8 +1,8 @@
 # Enumerated Value Definitions Derived from ITS Standards
-The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) for:
-- [openLanes and closedLanes](#openlanes-and-closedlanes)
-- [closedShoulders](#closedshoulders)
-- [roadDirection](#roaddirection)
+The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-fields.md) for:
+- [event_open_lanes and event_closed_lanes](#openlanes-and-closedlanes)
+- [event_closed_shoulders](#closedshoulders)
+- [event_direction](#roaddirection)
 
 Example of data frame in the TMDD (specified in ASN.1 format)
 ```xml
@@ -16,10 +16,10 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### openLanes and closedLanes
+#### event_open_lanes and event_closed_lanes
 *Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
+LaneRoadway<br>enumerations | Used for event_open_lanes and<br> event_closed_lanes | Description
 --------------------------- | ------------------------------------- | -----------
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
@@ -94,7 +94,7 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 |  | left-shift-lanes | All open lanes shift to the left
 |  | right-shift-lanes | All open lanes shift to the right
 
-#### closedShoulders
+#### event_closed_shoulders
 *Note:*  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
 LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
@@ -105,7 +105,7 @@ LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### roadDirection
+#### event_direction
 *Note:*  Link-alignment is imported from TMDD
 
 Link-alignment<br>enumerations | Used for<br>roadDirections | Description
