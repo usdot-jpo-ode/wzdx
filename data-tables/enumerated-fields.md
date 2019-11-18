@@ -6,7 +6,7 @@ Data Element | Used by | Allowed Values | Notes | Source
 -|-|-|-|-
 **geometry_type**|road_events|||[geoJson Specification](https://tools.ietf.org/html/rfc7946)
 **event_direction**|road_events|<ul><li>northbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul>||Adapted from<br>TMDD link-<br>alignment
-**event_type**|road_events
+**event_type**|road_events|<ul><li>Work Zone</li></ul>
 **event_status** | road_events | See Enumerated Type<br>Definitions (Table 8)
 **event_vehicle_impact**|road_events|-|-|-
 **event_start_date_accuracy**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|-
