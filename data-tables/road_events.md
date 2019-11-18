@@ -20,7 +20,7 @@ road_number|Text|The road number designated by a jurisdiction such as a county, 
 event_start_date|DateTime|The time and date when the event begins.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
 event_end_date|DateTime|The time and date when the event ends.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
 event_direction|Text|The digitization direction of the road that is impacted by the event.|Required|Example North (for I-5 North)
-event_type|Enumeration; Text|Describes the event affecting road traffic.|Required|Enumeration need defined.|Right now it includes Work Zone.
+event_type|Enumeration; Text|Describes the event affecting road traffic.|Required|Allowed Values: Work Zone<br><br>May be expanded to include other road events like Detours or Closures
 event_status|Enumeration; Text|The status of the event|Optional|See Enumerated Type Definitions
 event_workers_present|Boolean|A flag indicating that there are workers present in the event space|Optional
 event_description|Text|Short free text description of the event.|Optional|This will be populated with formal phrases in a later version
