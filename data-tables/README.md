@@ -1,10 +1,10 @@
 # **Data Tables**
-**Revised September 15, 2018**.
+**Revised November 18, 2019**.
 
-This document explains the types of files and the data elements, data frames and enumerated types that make up a Work Zone data feed. The [Common Core Data Table (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md), and subsequent tables in this document, include the following columns:
-- **Data Name** - name of the data concept (either a data element or data frame) 
-- **Data Type** - identification of the data concept as a data element or data frame and whether it is an enumerated type
-- **Data Description** - description of the data concept
+This document defines the content of the Work Zone Data Specification by means of an Entity Relationship Diagram (ERD). The ERD organizes data into distinct entities (also known as tables or objects), defines the content (also known as fields or properties) of each entity, and documents how those entities, tables or objects are related (Relationships).  Also included, when applicable, are enumeration tables which define the values to which field content is restricted.
+- **Data Name** - name of the field or column 
+- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
+- **Data Description** - description of the data content
 - **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
     - *Required* - must be included
     - *Optional* - may be included
@@ -12,18 +12,12 @@ This document explains the types of files and the data elements, data frames and
 - **Notes** - comments, guidance, or notes for future consideration
 
 ### Table of Contents
-- [**Common Core Data Dictionary**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md) 
-- [**WZDx Header Data**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md)
-- [**Data Frames**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md)
-    - [StartDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#startdatetime)
-    - [EndDateTime](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#enddatetime)
-    - [BeginLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#beginlocation)
-    - [EndLocation](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/data-frames.md#endlocation)
-- [**Enumerated Types**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) 
-- [**Enumerated Type Definitions**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-type-definitions.md) 
-- [**Enumerated Type Definitions Derived from ITS Standards**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md)
-    - [openLanes and closedLanes](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#openlanes-and-closedlanes)
-    - [closedShoulders](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#closedshoulders)
-    - [roadDirection](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-value-definitions-derived-from-its-standards.md#roaddirection)
+[**Entity Relationship Diagram**](/data-tables/road_event_erd.png)
+- **Table Definitions**
+    - [**Road Event Feed Info Table**](/data-tables/road_event_feed_info.md)
+    - [**Road Event Table**](/data-tables/road_events.md)
+- [**Enumerated Fields**](/data-tables/enumerated-fields.md) 
+- [**Enumerated Field Definitions**](/data-tables/enumerated-field-definitions.md) 
+- [**Enumerated Field Definitions Derived from ITS Standards**](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
 - [**Metadata**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/metadata.md) 
 
