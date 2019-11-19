@@ -1,6 +1,6 @@
 # Example 1: MassDOT 
 
-- [Template](#road_event_feed_info template)
+- [Template](#road_event_feed_info-template)
 - [XML Implementation](#xml-implementation)
 - [JSON Implementation](#json-implementation)
 
