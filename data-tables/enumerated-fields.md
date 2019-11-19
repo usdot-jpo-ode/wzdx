@@ -6,8 +6,8 @@ Data Element | Used by | Allowed Values | Notes | Source
 ------------ | ------- | -------------- | ----- | ------
 **geometry_type**|road_events|<ul><li>MultiPoint</li><li>LineString</li></ul>||[geoJson Specification](https://tools.ietf.org/html/rfc7946)
 **event_direction**|road_events|<ul><li>northbound</li><li>eastbound</li><li>southbound</li><li>westbound</li></ul>||[Adapted from<br>TMDD link-<br>alignment](/data-tables/enumerated-field-definitions-derived-from-its-standards.md#event_direction)
-**event_beginning_demarcation**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Spatial Verification Definition](/data-tables/enumerated-field-definitions.md#spatial-verification-definitions-table)
-**event_ending_demarcation**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Spatial Verification Definition](/data-tables/enumerated-field-definitions.md#spatial-verification-definitions-table)
+**event_beginning_accuracy**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Spatial Verification Definition](/data-tables/enumerated-field-definitions.md#spatial-verification-definitions-table)
+**event_ending_accuracy**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Spatial Verification Definition](/data-tables/enumerated-field-definitions.md#spatial-verification-definitions-table)
 **event_start_date_accuracy**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Time Verification Definition](/data-tables/enumerated-field-definitions.md#time-verification-definitions--table)
 **event_end_date_accuracy**|road_events|<ul><li>estimated</li><li>verified</li></ul>|-|[See Time Verification Definition](/data-tables/enumerated-field-definitions.md#time-verification-definitions--table)
 **event_status** | road_events | <ul><li>planned</li><li>pending</li><li>active</li><li>cancelled</li><li>completed</li></ul>|| [See Event Status Definition.](/data-tables/enumerated-field-definitions.md#work-zone-event-status-definitions-table)
