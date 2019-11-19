@@ -19,8 +19,8 @@ Field Name | Data Type | Description | Conformance | Notes
 **event_ending_cross_street**|Text|Name or number of the nearest cross street along the roadway where the event ends|Optional|Required when Road Classification is arterial.
 **event_beginning_milepost**|Float|The linear distance measured against a milepost marker along a roadway where the event begins|Optional|	A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. Provide link to description of milepost method in metadata file (see Section 2.7).
 **event_ending_milepost**|Float|The linear distance measured against a milepost marker along a roadway where the event ends|Optional|A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. Provide link to description of milepost method in metadata file (see Section 2.7).
-**event_beginning_demarcation**|Enum: Estimated or Verified|Indicates how the beginning coordinate was defined.|Required|
-**event_ending_demarcation**|Enum: Estimated or Verified|Indicates how the ending coordinate was defined.|Required|
+**event_beginning_accuracy**|Enum: Estimated or Verified|Indicates how the beginning coordinate was defined.|Required|
+**event_ending_accuracy**|Enum: Estimated or Verified|Indicates how the ending coordinate was defined.|Required|
 **event_start_date**|DateTime|The time and date when the event begins.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
 **event_end_date**|DateTime|The time and date when the event ends.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
 **event_start_date_accuracy**|Enum: Estimated or Verified|A measure of how accurate the start Date Time is.|Required|
