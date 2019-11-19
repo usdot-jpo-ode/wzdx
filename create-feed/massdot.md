@@ -29,8 +29,8 @@ event_start_date_accuracy | estimated
 event_end_date_accuracy | estimated
 event_status | active
 event_total_lanes | 3
-event_open_lanes | right2
-event_closed_lanes | left1
+event_open_lanes | right-2-lanes
+event_closed_lanes | left-lane
 event_closed_shoulders | inside
 event_workers_present | n/a
 event_restrictions | n/a
@@ -65,8 +65,8 @@ event_update_date | 2017-11-02T18:57:02
 	<event_end_date_accuracy>estimated</event_end_date_accuracy>
 	<event_status>active</event_status>
 	<event_total_lanes>3</event_total_lanes>
-	<event_open_lanes>right2</event_open_lanes>
-	<event_closed_lanes>left1</event_closed_lanes>
+	<event_open_lanes>right-2-lanes</event_open_lanes>
+	<event_closed_lanes>left-lane</event_closed_lanes>
 	<event_closed_houlders>inside</event_closed_shoulders>
 	<event_workers_present>n/a</event_workers_present>
 	<event_restrictions>n/a</event_restrictions>
@@ -106,8 +106,8 @@ event_update_date | 2017-11-02T18:57:02
 	"event_end_date_accuracy":"estimated",
 	"event_status": "active",
         "event_total_lanes": "3",
-        "event_open_lanes": "right2",
-        "event_closed_lanes": "left1",
+        "event_open_lanes": "right-2-lanes",
+        "event_closed_lanes": "left-lane",
         "event_closed_shoulders": "inside",
         "event_workers_present": "n/a",
         "event_restrictions": "n/a",
