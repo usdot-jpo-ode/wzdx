@@ -1,99 +1,119 @@
 # Example 1: MassDOT 
 
-- [Template](#template)
+- [Template](#road_event_feed_info template)
 - [XML Implementation](#xml-implementation)
 - [JSON Implementation](#json-implementation)
 
-### Template
+### road_event_feed_info template
 Tag | Value
 --- | -----
-Identifier | 137097
-StartDateTime<ul><li>startDateTime-ver</li></ul> | startDateTime-ver: 2016-11-03T19:37:00
-EndDateTime<ul><li>endDateTime-est</li></ul> | endDateTime-est: 2016-11-04T05:30:00
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-91<br>roadDirection: southbound<br>latitude-est: 42.33865<br>longitude-est: -72.63399
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 42.33307<br>longitude-est: -72.6214
-wz-Status | active
-totalLanes | 3
-openLanes | right2
-closedLanes | left1
-closedShoulders | inside
-workersPresent | n/a
-RoadRestriction*<ul><li>roadRestriction</li></ul> | n/a
-description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
-issuingOrganization | MassDOT
-timeStampEventUpdate | 2017-11-02T18:57:02
+feed_info_id | 137097
+feed_update_date | 2017-11-02T18:57:02Z
+feed_publisher | MassDOT
+feed_metadata | MassDOT-Metadata.txt
+feed_version | 2.0
+
+Tag | Value
+--- | -----
+road_event_id | 1243532
+feed_info_id | 137097
+geometry_type | MultiPoint
+geometry | [[42.33865,-72.63399][42.33307,-72.6214]]
+road_name | I-91
+event_direction | southbound
+event_beginning_accuracy | estimated
+event_ending_accuracy | estimated
+event_start_date | 2016-11-03T19:37:00
+event_end_date | 2016-11-04T05:30:00
+event_start_date_accuracy | estimated
+event_end_date_accuracy | estimated
+event_status | active
+event_total_lanes | 3
+event_open_lanes | right2
+event_closed_lanes | left1
+event_closed_shoulders | inside
+event_workers_present | n/a
+event_restrictions | n/a
+event_description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
+event_issuingOrganization | MassDOT
+event_update_date | 2017-11-02T18:57:02
 
 ### XML Implementation
 ```xml
-<Header>
-	<timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
-</Header>
-<WorkZoneActivity>
-	<identifier>137097</identifier>
-	<startDateTime>
-		<startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
-	</startDateTime>
-	<endDateTime>
-		<endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
-	</endDateTime>
-	<beginLocation>
-		<roadName>I-91</roadName>
-		<roadDirection>southbound</roadDirection>
-		<latitude-est>42.33865</latitude-est>
-		<longitude-est>-72.63399</longitude-est>
-	</beginLocation>
-	<endLocation>
-		<latitude-est>42.33307</latitude-est>
-		<longitude-est>-72.6214</longitude-est>
-	</endLocation>
-	<wz_status>active</wz_status>
-	<totalLanes>3</totalLanes>
-	<openLanes>right2</openLanes>
-	<closedLanes>left1</closedLanes>
-	<closedShoulders>inside</closedShoulders>
-	<workersPresent>n/a</workersPresent>
-	<roadRestrictions>n/a</roadRestrictions>
-	<description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
-	<issuingOrganization>MassDOT</issuingOrganization>
-	<timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
-</WorkZoneActivity>
+<road_event_feed_info>
+	<feed_info_id>137097</feed_info_id>
+	<feed_update_date>2017-11-02T18:57:02</feed_update_date>
+	<feed_publisher>MassDOT</feed_publisher>
+	<feed_metadata>MassDOT-Metadata.txt</feed_metadata>
+	<feed_version>2.0</feed_version>
+</road_event_feed_info>
+```
+
+```xml
+<road_events>
+	<road_event_id>1243532</road_event_id>
+	<feed_info_id>137097</feed_info_id>
+	<geometry_type>MultiPoint</geometry_type>
+	<geometry>[[42.33865,-72.63399][42.33307,-72.6214]]</geometry>
+	<road_name>I-91</road_name>
+	<event_direction>southbound</event_direction>
+	<event_beginning_accuracy>estimated</event_beginning_accuracy>
+	<event_ending_accuracy>estimated</event_ending_accuracy>
+	<event_start_date>2016-11-03T19:37:00</event_start_date>
+	<event_end_date>2016-11-04T05:30:00</event_end_date>
+	<event_start_date_accuracy>estimated</event_start_date_accuracy>
+	<event_end_date_accuracy>estimated</event_end_date_accuracy>
+	<event_status>active</event_status>
+	<event_total_lanes>3</event_total_lanes>
+	<event_open_lanes>right2</event_open_lanes>
+	<event_closed_lanes>left1</event_closed_lanes>
+	<event_closed_houlders>inside</event_closed_shoulders>
+	<event_workers_present>n/a</event_workers_present>
+	<event_restrictions>n/a</event_restrictions>
+	<event_description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</event_description>
+	<event_issuingOrganization>MassDOT</event_issuingOrganization>
+	<event_update_date>2017-11-02T18:57:02</event_update_date>
+</road_events>
 ```
 
 ### JSON Implementation
 ```json
 {
-   "WZDx": {
-      "Header": {
-         "timeStampUpdate": "2017-11-02T18:57:02",
+   "road_event_feed_info": {
+        "feed_info_id":"137097",
+	"feed_update_date":"2017-11-02T18:57:02",
+	"feed_publisher":"MassDOT",
+	"feed_metadata":"MassDOT-Metadata.txt",
+	"feed_version":"2.0"
       },
-      "WorkZoneActivity": {
-         "identifier": "137097",
-         "startDateTime": {
-            "startDateTime-ver": "2016-11-03T19:37:00",
-         },
-         "endDateTime": {
-            "endDateTime-est": "2016-11-04-T05:30:00",
-         },
-         "beginLocation": {
-            "roadName": "I-91",
-            "roadDirection": "southtbound",
-            "latitude-est": 42.33865,
-            "longitude-est": -72.63399,
-         },
-         "endLocation": {
-            "latitude-est": 42.33307,
-            "longitude-est": -72.6214,
-         },
-         "wz_status": "active",
-         "totalLanes": "3",
-         "openLanes": "right2",
-         "closedLanes": "left1",
-         "closedShoulders": "inside",
-         "workersPresent": "n/a",
-         "roadRestrictions": "n/a",
-         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
-         "issuingOrganization": "MassDOT",
-         "timestampEventUpdate": "2017-11-02T18:57:02"
+}
+```
+
+```json
+{
+   "road_events": {
+        "road_event_id":"1243532",
+	"feed_info_id":"137097",
+	"geometry_type":"MultiPoint",
+	"geometry":"[[42.33865,-72.63399][42.33307,-72.6214]]",
+	"road_name":"I-91",
+	"event_direction":"southbound",
+	"event_beginning_accuracy":"estimated",
+	"event_ending_accuracy":"estimated",
+	"event_start_date":"2016-11-03T19:37:00",
+	"event_end_date":"2016-11-04T05:30:00",
+	"event_start_date_accuracy":"estimated",
+	"event_end_date_accuracy":"estimated",
+	"event_status": "active",
+        "event_total_lanes": "3",
+        "event_open_lanes": "right2",
+        "event_closed_lanes": "left1",
+        "event_closed_shoulders": "inside",
+        "event_workers_present": "n/a",
+        "event_restrictions": "n/a",
+        "event_description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
+        "event_issuingOrganization": "MassDOT",
+        "event_update_date": "2017-11-02T18:57:02"
       },
    }
 }
