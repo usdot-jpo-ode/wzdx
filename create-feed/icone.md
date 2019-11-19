@@ -27,7 +27,12 @@ event_end_date | n/a
 event_start_date_accuracy | estimated
 event_end_date_accuracy | estimated
 event_status | active
-event_closed_lanes | some-lanes-closed
+event_total_lanes | 3
+event_open_lanes | all
+event_closed_lanes | none
+event_closed_shoulders | outside
+event_workers_present | True
+event_restrictions | 
 event_update_date | 2015-01-07T16:50:56Z
 
 ### XML Implementation
@@ -56,7 +61,12 @@ event_update_date | 2015-01-07T16:50:56Z
 	<event_start_date_accuracy>estimated</event_start_date_accuracy>
 	<event_end_date_accuracy>estimated</event_end_date_accuracy>
 	<event_status>active</event_status>
-	<event_closed_lanes>some-lanes-closed</event_closed_lanes>
+	<event_total_lanes>3</event_total_lanes>
+	<event_open_lanes>all</event_open_lanes>
+	<event_closed_lanes>none</event_closed_lanes>
+	<event_closed_shoulders>outside</event_closed_shoulders>
+	<event_workers_present>True</event_workers_present>
+	<event_update_date>2018-01-17T22:32:00Z</event_update_date>
 </road_events>
 ```
 
@@ -89,7 +99,11 @@ event_update_date | 2015-01-07T16:50:56Z
 	"event_start_date_accuracy":"estimated",
 	"event_end_date_accuracy":"estimated",
 	"event_status": "active",
-        "event_closed_lanes": "some-lanes-closed",
+	"event_total_lanes":"3",
+	"event_open_lanes":"all",
+	"event_closed_lanes":"none",
+	"event_closed_shoulders":"outside",
+	"event_workers_present":"True",
         "event_update_date": "2015-01-07T16:50:56Z"
       },
    }
