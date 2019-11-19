@@ -1,98 +1,127 @@
 # Example 3: Caltrans
-- [Template](#template)
+- [Template](#road_event_feed_info-template)
 - [XML Implementation](#xml-implementation)
 - [JSON Implementation](#json-implementation)
 
-### Template
+### road_event_feed_info template
 Tag | Value
 --- | -----
-Identifier | C299CA-0004-2016-04-12-00:01:00
-StartDateTime<ul><li>startDateTime</li></ul> | startDateTime-ver: 2016-04-12T15:58:00
-EndDateTime<ul><li>endDateTime</li></ul> | endDateTime-est: 2016-04-30T
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: CA-299<br>roadDirection: East<br>latitude-est: 40.635122<br>longitude-est: -122.733841<br>milepost-est: 114.190T23:59:00
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-est: 40.67201<br>longitude-est: -122.654384<br>milepost-est: 121.633
-wz-Status | Active
-totalLanes | 2
-openLanes | right
-closedLanes | left
-closedShoulders | Inside
-workersPresent | True
-RoadRestrictions*<ul><li>roadRestriction</li></ul> |
-description | One lane closed on Route 299 East near Lewiston to French Gulch<br>(0.6 mi west of Crystal Creek Rd) for approximately 30 days.
-issuingOrganization | Caltrans
-timeStampCreation | 2016-04-12T00:01:00
-timeStampUpdate | 2016-04-19T14:41:04
+feed_info_id | C299CA-0004-2016-04-12-00:01:00
+feed_update_date | 2016-04-19T14:41:04
+feed_publisher | Caltrans
+feed_metadata | Caltrans-Metadata.txt
+feed_version | 2.0
+
+Tag | Value
+--- | -----
+road_event_id | 23543
+feed_info_id | C299CA-0004-2016-04-12-00:01:00
+geometry_type | MultiPoint
+geometry | [[40.635122,-122.733841][40.67201,-122.654384]]
+road_name | CA-299
+event_direction | eastbound
+event_beginning_milepost | 114.19
+event_ending_milepost | 121.633
+event_beginning_accuracy | estimated
+event_ending_accuracy | estimated
+event_start_date | 2016-04-12T15:58:00
+event_end_date | 2016-04-30T
+event_start_date_accuracy | estimated
+event_end_date_accuracy | estimated
+event_status | active
+event_total_lanes | 2
+event_open_lanes | right
+event_closed_lanes | left
+event_closed_shoulders | inside
+event_workers_present | True
+event_restrictions | n/a
+event_description |One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.
+event_issuingOrganization | Caltrans
+event_creation_date | 2016-04-12T00:01:00
+event_update_date | 2016-04-19T14:41:04
 
 ### XML Implementation
 ```xml
-<Header>
-	<timeStampUpdate>2017-11-02T18:57:02</timeStampUpdate>
-</Header>
-<WorkZoneActivity>
-        <identifier>137097</identifier>
-	      <startDateTime>
-		      <startDateTime-est>2016-11-03T19:37:00</startDateTime-est>
-	      </startDateTime>
-	      <endDateTime>
-		      <endDateTime-est>2016-11-04T05:30:00</endDateTime-est>
-	      </endDateTime>
-	      <beginLocation>
-		      <roadName>I-91</roadName>
-		      <roadDirection>southbound</roadDirection>
-		      <latitude-est>42.33865</latitude-est>
-		      <longitude-est>-72.63399</longitude-est>
-	      </beginLocation>
-	      <endLocation>
-		      <latitude-est>42.33307</latitude-est>
-		      <longitude-est>-72.6214</longitude-est>
-	      </endLocation>
-	      <wz_status>active</wz_status>
-	      <totalLanes>3</totalLanes>
-	      <openLanes>right2</openLanes>
-	      <closedLanes>left1</closedLanes>
-	      <closedShoulders>inside</closedShoulders>
-	      <workersPresent>n/a</workersPresent>
-	      <roadRestrictions>n/a</roadRestrictions>
-	      <description>I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9</description>
-	      <issuingOrganization>MassDOT</issuingOrganization>
-	      <timestampEventUpdate>2017-11-02T18:57:02</timestampEventUpdate>
-</WorkZoneActivity>
+<road_event_feed_info>
+	<feed_info_id>C299CA-0004-2016-04-12-00:01:00</feed_info_id>
+	<feed_update_date>2016-04-19T14:41:04</feed_update_date>
+	<feed_publisher>Caltrans</feed_publisher>
+	<feed_metadata>Caltrans-Metadata.txt</feed_metadata>
+	<feed_version>2.0</feed_version>
+</road_event_feed_info>
 ```
+
+```xml
+<road_events>
+	<road_event_id>23543</road_event_id>
+	<feed_info_id>C299CA-0004-2016-04-12-00:01:00</feed_info_id>
+	<geometry_type>MultiPoint</geometry_type>
+	<geometry>[[40.635122,-122.733841][40.67201,-122.654384]]</geometry>
+	<road_name>CA-299</road_name>
+	<event_direction>eastbound</event_direction>
+	<event_beginning_milpost>114.19</event_beginning_milpost>
+	<event_ending_milepost>121.633<event_ending_milepost>
+	<event_beginning_accuracy>estimated</event_beginning_accuracy>
+	<event_ending_accuracy>estimated</event_ending_accuracy>
+	<event_start_date>2016-04-12T15:58:00</event_start_date>
+	<event_end_date>2016-04-30T</event_end_date>
+	<event_start_date_accuracy>estimated</event_start_date_accuracy>
+	<event_end_date_accuracy>estimated</event_end_date_accuracy>
+	<event_status>active</event_status>
+	<event_total_lanes>2</event_total_lanes>
+	<event_open_lanes>right</event_open_lanes>
+	<event_closed_lanes>left</event_closed_lanes>
+	<event_closed_houlders>inside</event_closed_shoulders>
+	<event_workers_present>True</event_workers_present>
+	<event_restrictions>n/a</event_restrictions>
+	<event_description>One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.</event_description>
+	<event_issuingOrganization>Caltrans</event_issuingOrganization>
+	<event_creation_date>2016-04-12T00:01:00</event_creation_date>
+	<event_update_date>2016-04-19T14:41:04</event_update_date>
+</road_events>
+```
+
 ### JSON Implementation
 ```json
 {
-   "WZDx": {
-      "Header": {
-         "timeStampUpdate": "2017-11-02T18:57:02",
+   "road_event_feed_info": {
+        "feed_info_id":"C299CA-0004-2016-04-12-00:01:00",
+	"feed_update_date":"2016-04-19T14:41:04",
+	"feed_publisher":"Caltrans",
+	"feed_metadata":"Caltrans-Metadata.txt",
+	"feed_version":"2.0"
       },
-      "WorkZoneActivity": {
-         "identifier": "137097",
-         "startDateTime": {
-            "startDateTime-ver": "2016-11-03T19:37:00",
-         },
-         "endDateTime": {
-            "endDateTime-est": "2016-11-04-T05:30:00",
-         },
-         "beginLocation": {
-            "roadName": "I-91",
-            "roadDirection": "southtbound",
-            "latitude-est": 42.33865,
-            "longitude-est": -72.63399,
-         },
-         "endLocation": {
-            "latitude-est": 42.33307,
-            "longitude-est": -72.6214,
-         },
-         "wz_status": "active",
-         "totalLanes": "3",
-         "openLanes": "right2",
-         "closedLanes": "left1",
-         "closedShoulders": "inside",
-         "workersPresent": "n/a",
-         "roadRestrictions": "n/a",
-         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
-         "issuingOrganization": "MassDOT",
-         "timestampEventUpdate": "2017-11-02T18:57:02"
+}
+```
+
+```json
+{
+   "road_events": {
+        "road_event_id":"23543",
+	"feed_info_id":"C299CA-0004-2016-04-12-00:01:00",
+	"geometry_type":"MultiPoint",
+	"geometry":"[[40.635122,-122.733841][40.67201,-122.654384]]",
+	"road_name":"CA-299",
+	"event_direction":"eastbound",
+	"event_begin_milepost":"114.19",
+	"event_end_milepost":"121.633",
+	"event_beginning_accuracy":"estimated",
+	"event_ending_accuracy":"estimated",
+	"event_start_date":"2016-04-12T15:58:00",
+	"event_end_date":"2016-04-30T",
+	"event_start_date_accuracy":"estimated",
+	"event_end_date_accuracy":"estimated",
+	"event_status": "active",
+        "event_total_lanes": "2",
+        "event_open_lanes": "right",
+        "event_closed_lanes": "left",
+        "event_closed_shoulders": "inside",
+        "event_workers_present": "True",
+        "event_restrictions": "n/a",
+        "event_description": "One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.",
+        "event_issuingOrganization": "Caltrans",
+	"event_creation_date":"2016-04-12T00:01:00",
+        "event_update_date": "2016-04-19T14:41:04"
       },
    }
 }
