@@ -26,7 +26,7 @@ Field Name | Data Type | Description | Conformance | Notes
 **start_date_accuracy**|Enum: Estimated or Verified|A measure of how accurate the start Date Time is.|Required|
 **end_date_accuracy**|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Required|
 **event_status** |Enumeration; Text|The status of the event|Optional|See Enumerated Type Definitions
-**total_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
+**total_num_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
 **open_lanes** | Enumeration; Text | The laneType that is opened on the road segment designated by<br>the work zone BeginLocation | Optional |
 **closed_lanes** | Enumeration; Text | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane impacts / status will be described in Version 2 of the specification
 **closed_shoulders** | Enumueration; Text | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
