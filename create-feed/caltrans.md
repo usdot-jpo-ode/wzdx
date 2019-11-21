@@ -25,7 +25,7 @@ ending_milepost | 121.633
 beginning_accuracy | estimated
 ending_accuracy | estimated
 start_date | 2016-04-12T15:58:00
-end_date | 2016-04-30T
+end_date | 2016-04-30T00:00:00
 start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
@@ -64,7 +64,7 @@ update_date | 2016-04-19T14:41:04
 	<beginning_accuracy>estimated</beginning_accuracy>
 	<ending_accuracy>estimated</ending_accuracy>
 	<start_date>2016-04-12T15:58:00</start_date>
-	<end_date>2016-04-30T</end_date>
+	<end_date>2016-04-30T00:00:00</end_date>
 	<start_date_accuracy>estimated</start_date_accuracy>
 	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
@@ -108,7 +108,7 @@ update_date | 2016-04-19T14:41:04
 		"beginning_accuracy": "estimated",
 		"ending_accuracy": "estimated",
 		"start_date": "2016-04-12T15:58:00",
-		"end_date": "2016-04-30T",
+		"end_date": "2016-04-30T00:00:00",
 		"start_date_accuracy": "estimated",
 		"end_date_accuracy": "estimated",
 		"event_status": "active",
