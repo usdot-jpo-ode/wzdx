@@ -8,10 +8,10 @@
 Tag | Value
 --- | -----
 feed_info_id | 137097
-feed_update_date | 2017-11-02T18:57:02Z
-feed_publisher | MassDOT
-feed_metadata | MassDOT-Metadata.txt
-feed_version | 2.0
+update_date | 2017-11-02T18:57:02Z
+publisher | MassDOT
+metadata | MassDOT-Metadata.txt
+version | 2.0
 
 Tag | Value
 --- | -----
@@ -28,7 +28,7 @@ end_date | 2016-11-04T05:30:00
 start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
-total_lanes | 3
+total_num_lanes | 3
 open_lanes | right-2-lanes
 closed_lanes | left-lane
 closed_shoulders | inside
@@ -42,10 +42,10 @@ update_date | 2017-11-02T18:57:02
 ```xml
 <road_event_feed_info>
 	<feed_info_id>137097</feed_info_id>
-	<feed_update_date>2017-11-02T18:57:02</feed_update_date>
-	<feed_publisher>MassDOT</feed_publisher>
-	<feed_metadata>MassDOT-Metadata.txt</feed_metadata>
-	<feed_version>2.0</feed_version>
+	<update_date>2017-11-02T18:57:02</update_date>
+	<publisher>MassDOT</publisher>
+	<metadata>MassDOT-Metadata.txt</metadata>
+	<version>2.0</version>
 </road_event_feed_info>
 ```
 
@@ -64,7 +64,7 @@ update_date | 2017-11-02T18:57:02
 	<start_date_accuracy>estimated</start_date_accuracy>
 	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
-	<total_lanes>3</total_lanes>
+	<total_num_lanes>3</total_num_lanes>
 	<open_lanes>right-2-lanes</open_lanes>
 	<closed_lanes>left-lane</closed_lanes>
 	<closed_houlders>inside</closed_shoulders>
@@ -81,10 +81,10 @@ update_date | 2017-11-02T18:57:02
 {
    "road_event_feed_info": {
         "feed_info_id":"137097",
-	"feed_update_date":"2017-11-02T18:57:02",
-	"feed_publisher":"MassDOT",
-	"feed_metadata":"MassDOT-Metadata.txt",
-	"feed_version":"2.0"
+	"update_date":"2017-11-02T18:57:02",
+	"publisher":"MassDOT",
+	"metadata":"MassDOT-Metadata.txt",
+	"version":"2.0"
       },
 }
 ```
@@ -105,7 +105,7 @@ update_date | 2017-11-02T18:57:02
 	"start_date_accuracy":"estimated",
 	"end_date_accuracy":"estimated",
 	"event_status": "active",
-        "total_lanes": "3",
+        "total_num_lanes": "3",
         "open_lanes": "right-2-lanes",
         "closed_lanes": "left-lane",
         "closed_shoulders": "inside",
