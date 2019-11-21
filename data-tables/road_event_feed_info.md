@@ -6,7 +6,7 @@ This table contains information about road event datasets.  For each record in t
 Field Name | Data Type | Description | Conformance | Notes
 ---------- | --------- | ---------------- | ----------- | -----
 feed_info_id |	ID |	Identifies the feed	Required. Recommendations on the format of this unique identifier will be made in the future. | Primary Key |
-feed_update_date |	DateTime |	Designates the date and time the data feed was last updated. |	Required |	
-feed_publisher |	Text |	The organization issuing the data feed. |	Optional	|
-feed_metadata |	URL |	A link to the metadata file (WZ-metadata.txt). See Section 2.6 for a description of the file. |	Optional	 |
-feed_version |	Float |	The specification version used to create the dataset |	Optional	 |
+update_date |	DateTime |	Designates the date and time the data feed was last updated. |	Required |	
+publisher |	Text |	The organization issuing the data feed. |	Optional	|
+metadata |	URL |	A link to the metadata file (WZ-metadata.txt). See Section 2.6 for a description of the file. |	Optional	 |
+version |	Float |	The specification version used to create the dataset |	Optional	 |
