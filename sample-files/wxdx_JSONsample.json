@@ -2,10 +2,10 @@
   "WZDx": {
     "road_event_feed_info": {
       "feed_info_id": "ID",
-      "feed_update_date": "2016-04-12T00:01:00",
-      "feed_publisher": "Text",
-      "feed_metadata": "URL",
-      "feed_version": 1.0
+      "update_date": "2016-04-12T00:01:00",
+      "publisher": "Text",
+      "metadata": "URL",
+      "version": 1.0
     },
     "road_events": [
       {
