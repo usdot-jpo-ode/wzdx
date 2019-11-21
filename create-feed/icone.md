@@ -7,10 +7,10 @@
 Tag | Value
 --- | -----
 feed_info_id | 320
-feed_update_date | 2015-01-07T16:50:56Z
-feed_publisher | iCone
-feed_metadata | iCone-Metadata.txt
-feed_version | 2.0
+update_date | 2015-01-07T16:50:56Z
+publisher | iCone
+metadata | iCone-Metadata.txt
+version | 2.0
 
 Tag | Value
 --- | -----
@@ -27,7 +27,7 @@ end_date | n/a
 start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
-total_lanes | 3
+total_num_lanes | 3
 open_lanes | all
 closed_lanes | none
 closed_shoulders | outside
@@ -39,10 +39,10 @@ update_date | 2015-01-07T16:50:56Z
 ```xml
 <road_event_feed_info>
 	<feed_info_id>320</feed_info_id>
-	<feed_update_date>2015-01-07T16:50:56Z</feed_update_date>
-	<feed_publisher>iCone</feed_publisher>
-	<feed_metadata>iCone-Metadata.txt</feed_metadata>
-	<feed_version>2.0</feed_version>
+	<update_date>2015-01-07T16:50:56Z</update_date>
+	<publisher>iCone</publisher>
+	<metadata>iCone-Metadata.txt</metadata>
+	<version>2.0</version>
 </road_event_feed_info>
 ```
 
@@ -61,7 +61,7 @@ update_date | 2015-01-07T16:50:56Z
 	<start_date_accuracy>estimated</start_date_accuracy>
 	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
-	<total_lanes>3</total_lanes>
+	<total_num_lanes>3</total_num_lanes>
 	<open_lanes>all</open_lanes>
 	<closed_lanes>none</closed_lanes>
 	<closed_shoulders>outside</closed_shoulders>
@@ -75,10 +75,10 @@ update_date | 2015-01-07T16:50:56Z
 {
    "road_event_feed_info": {
         "feed_info_id":"320",
-	"feed_update_date":"2015-01-07T16:50:56Z",
-	"feed_publisher":"iCone",
-	"feed_metadata":"iCone-Metadata.txt",
-	"feed_version":"2.0"
+	"update_date":"2015-01-07T16:50:56Z",
+	"publisher":"iCone",
+	"metadata":"iCone-Metadata.txt",
+	"version":"2.0"
       },
 }
 ```
@@ -99,7 +99,7 @@ update_date | 2015-01-07T16:50:56Z
 	"start_date_accuracy":"estimated",
 	"end_date_accuracy":"estimated",
 	"event_status": "active",
-	"total_lanes":"3",
+	"total_num_lanes":"3",
 	"open_lanes":"all",
 	"closed_lanes":"none",
 	"closed_shoulders":"outside",
