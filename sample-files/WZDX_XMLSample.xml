@@ -28,7 +28,7 @@
 		<start_date_accuracy>estimated</start_date_accuracy>
 		<end_date_accuracy>estimated</end_date_accuracy>
 		<event_status>planned</event_status>
-		<total_lanes>2</total_lanes>
+		<total_num_lanes>2</total_num_lanes>
 		<open_lanes>right-lane</open_lanes>
 		<closed_lanes>left-lane</closed_lanes>
 		<closed_shoulders>inside</closed_shoulders>
