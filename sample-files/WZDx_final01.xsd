@@ -20,10 +20,10 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="feed_info_id" type="xs:integer"/>
-							<xs:element name="feed_update_date" type="xs:dateTime" minOccurs="1"/>
-							<xs:element name="feed_publisher" type="xs:string"/>
-							<xs:element name="feed_metadata" type="xs:string"/>
-							<xs:element name="feed_version" type="xs:decimal"/>
+							<xs:element name="update_date" type="xs:dateTime" minOccurs="1"/>
+							<xs:element name="publisher" type="xs:string"/>
+							<xs:element name="metadata" type="xs:string"/>
+							<xs:element name="version" type="xs:decimal"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -56,7 +56,7 @@
 			<xs:element name="start_date_accuracy" type="accuracy-enum"/>
 			<xs:element name="end_date_accuracy" type="EndDateTime" minOccurs="1"/>
 			<xs:element name="event_status" type="wz-Status-enum"/>
-			<xs:element name="total_anes" type="xs:string"/>
+			<xs:element name="total_num_lanes" type="xs:string"/>
 			<xs:element name="open_lanes" type="laneType-enum"/>
 			<xs:element name="closed_lanes" type="laneType-enum"/>
 			<xs:element name="closed_shoulders" type="closedShoulder-enum"/>
