@@ -34,7 +34,6 @@ open_lanes | right-lane
 closed_lanes | left-lane
 closed_shoulders | inside
 workers_present | True
-restrictions | n/a
 description |One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.
 issuing_organization | Caltrans
 creation_date | 2016-04-12T00:01:00
@@ -73,7 +72,6 @@ update_date | 2016-04-19T14:41:04
 	<closed_lanes>left-lane</closed_lanes>
 	<closed_shoulders>inside</closed_shoulders>
 	<workers_present>True</workers_present>
-	<restrictions>n/a</restrictions>
 	<description>One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.</description>
 	<issuing_organization>Caltrans</issuing_organization>
 	<creation_date>2016-04-12T00:01:00</creation_date>
@@ -117,7 +115,6 @@ update_date | 2016-04-19T14:41:04
     "closed_lanes": "left-lane",
     "closed_shoulders": "inside",
     "workers_present": true,
-    "restrictions": "n/a",
     "description": "One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.",
     "issuing_organization": "Caltrans",
 		"creation_date": "2016-04-12T00:01:00",
