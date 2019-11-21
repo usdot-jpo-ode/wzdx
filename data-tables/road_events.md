@@ -34,6 +34,6 @@ Field Name | Data Type | Description | Conformance | Notes
 **event_reduced_speed_limit**|Integer|The reduced speed limit posted within the event space|Optional|
 **event_restrictions** | Enumumeration; Text | One or more roadRestriction flags indicating restrictions apply to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
 **event_description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
-**event_issuingOrganization** |Text | The organization issuing the data feed | Optional | Will create a list in a<br>future version
+**event_issuing_organization** |Text | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **event_creation_date** | DateTime | The time and date when the activity or event was created | Optional |
 **event_update_date** | DateTime | The time and date when the activity or event was updated | Optional |
