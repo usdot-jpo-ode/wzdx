@@ -60,7 +60,7 @@ These examples use the following sample work zone activity template:
 | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | road_event_id                                                                              |                                                                                           |
 | feed_info_id                                                                             |                                                                                           |
-| event_subidentifier                                                                           |                                                                                           |
+| subidentifier                                                                           |                                                                                           |
 | geometry_type                                                                              |                                                                                           |
 | geometry                                                                              |                                                                                           |
 | road_name                                                                            |                                                                                           |
