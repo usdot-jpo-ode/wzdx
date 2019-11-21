@@ -7,10 +7,10 @@
 Tag | Value
 --- | -----
 feed_info_id | C299CA-0004-2016-04-12-00:01:00
-feed_update_date | 2016-04-19T14:41:04
-feed_publisher | Caltrans
-feed_metadata | Caltrans-Metadata.txt
-feed_version | 2.0
+update_date | 2016-04-19T14:41:04
+publisher | Caltrans
+metadata | Caltrans-Metadata.txt
+version | 2.0
 
 Tag | Value
 --- | -----
@@ -29,7 +29,7 @@ end_date | 2016-04-30T
 start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
-total_lanes | 2
+total_num_lanes | 2
 open_lanes | right-lane
 closed_lanes | left-lane
 closed_shoulders | inside
@@ -44,10 +44,10 @@ update_date | 2016-04-19T14:41:04
 ```xml
 <road_event_feed_info>
 	<feed_info_id>C299CA-0004-2016-04-12-00:01:00</feed_info_id>
-	<feed_update_date>2016-04-19T14:41:04</feed_update_date>
-	<feed_publisher>Caltrans</feed_publisher>
-	<feed_metadata>Caltrans-Metadata.txt</feed_metadata>
-	<feed_version>2.0</feed_version>
+	<update_date>2016-04-19T14:41:04</update_date>
+	<publisher>Caltrans</publisher>
+	<metadata>Caltrans-Metadata.txt</metadata>
+	<version>2.0</version>
 </road_event_feed_info>
 ```
 
@@ -68,7 +68,7 @@ update_date | 2016-04-19T14:41:04
 	<start_date_accuracy>estimated</start_date_accuracy>
 	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
-	<total_lanes>2</total_lanes>
+	<total_num_lanes>2</total_num_lanes>
 	<open_lanes>right-lane</open_lanes>
 	<closed_lanes>left-lane</closed_lanes>
 	<closed_houlders>inside</closed_shoulders>
@@ -86,10 +86,10 @@ update_date | 2016-04-19T14:41:04
 {
    "road_event_feed_info": {
         "feed_info_id":"C299CA-0004-2016-04-12-00:01:00",
-	"feed_update_date":"2016-04-19T14:41:04",
-	"feed_publisher":"Caltrans",
-	"feed_metadata":"Caltrans-Metadata.txt",
-	"feed_version":"2.0"
+	"update_date":"2016-04-19T14:41:04",
+	"publisher":"Caltrans",
+	"metadata":"Caltrans-Metadata.txt",
+	"version":"2.0"
       },
 }
 ```
@@ -112,7 +112,7 @@ update_date | 2016-04-19T14:41:04
 	"start_date_accuracy":"estimated",
 	"end_date_accuracy":"estimated",
 	"event_status": "active",
-        "total_lanes": "2",
+        "total_num_lanes": "2",
         "open_lanes": "right-lane",
         "closed_lanes": "left-lane",
         "closed_shoulders": "inside",
