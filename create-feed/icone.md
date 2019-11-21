@@ -23,7 +23,7 @@ direction | northbound
 beginning_accuracy | estimated
 ending_accuracy | estimated
 start_date | 2015-01-07T16:50:56Z
-end_date | n/a
+end_date | 2016-02-07T00:50:00Z
 start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
@@ -57,7 +57,7 @@ update_date | 2015-01-07T16:50:56Z
 	<beginning_accuracy>estimated</beginning_accuracy>
 	<ending_accuracy>estimated</ending_accuracy>
 	<start_date>2015-01-07T16:50:56Z</start_date>
-	<end_date>n/a</end_date>
+	<end_date>2016-02-07T00:50:00Z</end_date>
 	<start_date_accuracy>estimated</start_date_accuracy>
 	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
@@ -73,39 +73,38 @@ update_date | 2015-01-07T16:50:56Z
 ### JSON Implementation
 ```json
 {
-   "road_event_feed_info": {
-        "feed_info_id":"320",
-	"update_date":"2015-01-07T16:50:56Z",
-	"publisher":"iCone",
-	"metadata":"iCone-Metadata.txt",
-	"version":"2.0"
-      },
+	"road_event_feed_info": {
+		"feed_info_id": "320",
+		"update_date": "2015-01-07T16:50:56Z",
+		"publisher": "iCone",
+		"metadata": "iCone-Metadata.txt",
+		"version": 2.0
+	}
 }
 ```
 
 ```json
 {
-   "road_events": {
-        "road_event_id":"1243532",
-	"feed_info_id":"320",
-	"geometry_type":"MultiPoint",
-	"geometry":"[[31.0855180,-97.4030700][31.0855180,-97.4030700]]",
-	"road_name":"I-35",
-	"direction":"northbound",
-	"beginning_accuracy":"estimated",
-	"ending_accuracy":"estimated",
-	"start_date":"2015-01-07T16:50:56Z",
-	"end_date":"n/a",
-	"start_date_accuracy":"estimated",
-	"end_date_accuracy":"estimated",
-	"event_status": "active",
-	"total_num_lanes":"3",
-	"open_lanes":"all",
-	"closed_lanes":"none",
-	"closed_shoulders":"outside",
-	"workers_present":"True",
-        "update_date": "2015-01-07T16:50:56Z"
-      },
-   }
+	"road_events": {
+		"road_event_id": "1243532",
+		"feed_info_id": "320",
+		"geometry_type": "MultiPoint",
+		"geometry": "[[31.0855180,-97.4030700][31.0855180,-97.4030700]]",
+		"road_name": "I-35",
+		"direction": "northbound",
+		"beginning_accuracy": "estimated",
+		"ending_accuracy": "estimated",
+		"start_date": "2015-01-07T16:50:56Z",
+		"end_date": "2016-02-07T00:50:00Z",
+		"start_date_accuracy":"estimated",
+		"end_date_accuracy":"estimated",
+		"event_status": "active",
+		"total_num_lanes": 3,
+		"open_lanes": "all",
+		"closed_lanes": "none",
+		"closed_shoulders": "outside",
+		"workers_present": true,
+		"update_date": "2015-01-07T16:50:56Z"
+	}
 }
 ```
