@@ -56,7 +56,7 @@
 			<xs:element name="start_date_accuracy" type="accuracy-enum"/>
 			<xs:element name="end_date_accuracy" type="EndDateTime" minOccurs="1"/>
 			<xs:element name="event_status" type="wz-Status-enum"/>
-			<xs:element name="total_num_lanes" type="xs:string"/>
+			<xs:element name="total_num_lanes" type="xs:int"/>
 			<xs:element name="open_lanes" type="laneType-enum"/>
 			<xs:element name="closed_lanes" type="laneType-enum"/>
 			<xs:element name="closed_shoulders" type="closedShoulder-enum"/>
