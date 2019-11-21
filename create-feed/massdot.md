@@ -93,7 +93,7 @@ update_date | 2017-11-02T18:57:02
 		"road_event_id": "1243532",
 		"feed_info_id": "137097",
 		"geometry_type": "MultiPoint",
-		"geometry": "[[42.33865,-72.63399][42.33307,-72.6214]]",
+		"geometry": [[42.33865, -72.63399], [42.33307, -72.6214]],
 		"road_name": "I-91",
 		"direction": "southbound",
 		"beginning_accuracy": "estimated",

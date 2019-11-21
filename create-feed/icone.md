@@ -89,7 +89,7 @@ update_date | 2015-01-07T16:50:56Z
 		"road_event_id": "1243532",
 		"feed_info_id": "320",
 		"geometry_type": "MultiPoint",
-		"geometry": "[[31.0855180,-97.4030700][31.0855180,-97.4030700]]",
+		"geometry": [[31.0855180, -97.4030700], [31.0855180, -97.4030700]],
 		"road_name": "I-35",
 		"direction": "northbound",
 		"beginning_accuracy": "estimated",

@@ -100,7 +100,7 @@ update_date | 2016-04-19T14:41:04
 		"road_event_id": "23543",
 		"feed_info_id": "C299CA-0004-2016-04-12-00:01:00",
 		"geometry_type": "MultiPoint",
-		"geometry": "[[40.635122,-122.733841][40.67201,-122.654384]]",
+		"geometry": [[40.635122, -122.733841], [40.67201, -122.654384]],
 		"road_name": "CA-299",
 		"direction": "eastbound",
 		"begin_milepost": 114.19,
