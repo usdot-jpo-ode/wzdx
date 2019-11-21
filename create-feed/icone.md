@@ -19,21 +19,21 @@ feed_info_id | 320
 geometry_type | MultiPoint
 geometry | [[31.0855180,-97.4030700][31.0855180,-97.4030700]]
 road_name | I-35
-event_direction | northbound
-event_beginning_accuracy | estimated
-event_ending_accuracy | estimated
-event_start_date | 2015-01-07T16:50:56Z
-event_end_date | n/a
-event_start_date_accuracy | estimated
-event_end_date_accuracy | estimated
+direction | northbound
+beginning_accuracy | estimated
+ending_accuracy | estimated
+start_date | 2015-01-07T16:50:56Z
+end_date | n/a
+start_date_accuracy | estimated
+end_date_accuracy | estimated
 event_status | active
-event_total_lanes | 3
-event_open_lanes | all
-event_closed_lanes | none
-event_closed_shoulders | outside
-event_workers_present | True
-event_restrictions | 
-event_update_date | 2015-01-07T16:50:56Z
+total_lanes | 3
+open_lanes | all
+closed_lanes | none
+closed_shoulders | outside
+workers_present | True
+restrictions | 
+update_date | 2015-01-07T16:50:56Z
 
 ### XML Implementation
 ```xml
@@ -53,20 +53,20 @@ event_update_date | 2015-01-07T16:50:56Z
 	<geometry_type>MultiPoint</geometry_type>
 	<geometry>[[31.0855180,-97.4030700][31.0855180,-97.4030700]]</geometry>
 	<road_name>I-35</road_name>
-	<event_direction>northbound</event_direction>
-	<event_beginning_accuracy>estimated</event_beginning_accuracy>
-	<event_ending_accuracy>estimated</event_ending_accuracy>
-	<event_start_date>2015-01-07T16:50:56Z</event_start_date>
-	<event_end_date>n/a</event_end_date>
-	<event_start_date_accuracy>estimated</event_start_date_accuracy>
-	<event_end_date_accuracy>estimated</event_end_date_accuracy>
+	<direction>northbound</direction>
+	<beginning_accuracy>estimated</beginning_accuracy>
+	<ending_accuracy>estimated</ending_accuracy>
+	<start_date>2015-01-07T16:50:56Z</start_date>
+	<end_date>n/a</end_date>
+	<start_date_accuracy>estimated</start_date_accuracy>
+	<end_date_accuracy>estimated</end_date_accuracy>
 	<event_status>active</event_status>
-	<event_total_lanes>3</event_total_lanes>
-	<event_open_lanes>all</event_open_lanes>
-	<event_closed_lanes>none</event_closed_lanes>
-	<event_closed_shoulders>outside</event_closed_shoulders>
-	<event_workers_present>True</event_workers_present>
-	<event_update_date>2018-01-17T22:32:00Z</event_update_date>
+	<total_lanes>3</total_lanes>
+	<open_lanes>all</open_lanes>
+	<closed_lanes>none</closed_lanes>
+	<closed_shoulders>outside</closed_shoulders>
+	<workers_present>True</workers_present>
+	<update_date>2018-01-17T22:32:00Z</update_date>
 </road_events>
 ```
 
@@ -91,20 +91,20 @@ event_update_date | 2015-01-07T16:50:56Z
 	"geometry_type":"MultiPoint",
 	"geometry":"[[31.0855180,-97.4030700][31.0855180,-97.4030700]]",
 	"road_name":"I-35",
-	"event_direction":"northbound",
-	"event_beginning_accuracy":"estimated",
-	"event_ending_accuracy":"estimated",
-	"event_start_date":"2015-01-07T16:50:56Z",
-	"event_end_date":"n/a",
-	"event_start_date_accuracy":"estimated",
-	"event_end_date_accuracy":"estimated",
+	"direction":"northbound",
+	"beginning_accuracy":"estimated",
+	"ending_accuracy":"estimated",
+	"start_date":"2015-01-07T16:50:56Z",
+	"end_date":"n/a",
+	"start_date_accuracy":"estimated",
+	"end_date_accuracy":"estimated",
 	"event_status": "active",
-	"event_total_lanes":"3",
-	"event_open_lanes":"all",
-	"event_closed_lanes":"none",
-	"event_closed_shoulders":"outside",
-	"event_workers_present":"True",
-        "event_update_date": "2015-01-07T16:50:56Z"
+	"total_lanes":"3",
+	"open_lanes":"all",
+	"closed_lanes":"none",
+	"closed_shoulders":"outside",
+	"workers_present":"True",
+        "update_date": "2015-01-07T16:50:56Z"
       },
    }
 }
