@@ -50,10 +50,10 @@ These examples use the following sample work zone activity template:
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | feed_info_id                                                                              |                                                                                           |
-| feed_update_date                                                                             |                                                                                           |
-| feed_publisher                                                                         |                                                                                           |
-| feed_metadata                                                                             |                                                                                           |
-| feed_version                                                                              |                                                                                           |
+| update_date                                                                             |                                                                                           |
+| publisher                                                                         |                                                                                           |
+| metadata                                                                             |                                                                                           |
+| version                                                                              |                                                                                           |
 
 #### Sample road_event table
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
@@ -77,7 +77,7 @@ These examples use the following sample work zone activity template:
 | start_date_accuracy              |                                                                                           |
 | end_date_accuracy                    |                                                                                           |
 | event_status                                                                               |                                                                                           |
-| total_lanes                                                                              |                                                                                           |
+| total_num_lanes                                                                              |                                                                                           |
 | open_lanes                                                                               |                                                                                           |
 | closed_lanes                                                                             |                                                                                           |
 | closed_shoulders                                                                         |                                                                                           |
