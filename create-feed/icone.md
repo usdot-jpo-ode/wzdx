@@ -75,7 +75,7 @@ update_date | 2015-01-07T16:50:56Z
 			"feed_info_id": "320",
 			"feed_update_date": "2015-01-07T16:50:56Z",
 			"metadata": "iCone-Metadata.txt",
-			"version": 2.0
+			"version": "2.0"
 		},
 		"road_events": [
 			{

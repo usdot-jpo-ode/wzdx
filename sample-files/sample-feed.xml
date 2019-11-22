@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <wzdx_road_events_feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xml-schema.xsd">
 	<road_event_feed_info>
 		<feed_info_id>ID</feed_info_id>

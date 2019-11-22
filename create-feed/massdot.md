@@ -79,7 +79,7 @@ update_date | 2017-11-02T18:57:02
 			"feed_info_id": "137097",
 			"feed_update_date": "2017-11-02T18:57:02",
 			"metadata": "MassDOT-Metadata.txt",
-			"version": 2.0
+			"version": "2.0"
 		},
 		"road_events": [	
 			{

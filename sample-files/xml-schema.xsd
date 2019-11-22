@@ -24,7 +24,7 @@
       <xs:element name="feed_info_id" type="xs:string"/>
       <xs:element name="feed_update_date" type="xs:dateTime"/>
       <xs:element name="metadata" type="xs:string" minOccurs="0"/>
-      <xs:element name="version" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="version" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   
