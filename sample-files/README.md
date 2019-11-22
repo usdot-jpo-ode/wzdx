@@ -1,9 +1,20 @@
-## XML Schema and Examples of XML and JSON files
-See files in separate attachment:
-* [WXDX_XMLSample.xml](/sample-files/WZDX_XMLSample.xml)
-* [wxdx_JSONsample.json](/sample-files/wxdx_JSONsample.json)
-* [WZDx_draft01.xsd](/sample-files/WZDx_final01.xsd)
+# Sample Files
+This directory contains sample XML and JSON feeds as well as an XML Schema. 
 
+## Evolving XML schema and XML and JSON examples 
+The following un-versioned files are intended to be updated with any relevant changes to the specification and represent the most current version, whether in progress or released.
+* [xml-schema.xsd](/sample-files/xml-schema.xsd)
+* [sample-feed.xml](/sample-files/sample-feed.xml)
+* [sample-feed.json](/sample-files/sample-feed.json)
+
+## XML Schema and Examples of XML and JSON files
+Sample feeds and schema can also be specific to a release of the specification. These files should be located in a sub-directory named with the specific version number.
+
+### Version 1.0 Examples and Schema
+In the `v1.0` directory, find the following sample files:
+* [WXDX_XMLSample.xml](/sample-files/v1.0/WZDX_XMLSample.xml)
+* [wxdx_JSONsample.json](/sample-files/v1.0/wxdx_JSONsample.json)
+* [WZDx_draft01.xsd](/sample-files/v1.0/WZDx_final01.xsd)
 
 ## WZ Location Method Description and Practices 
 The metadata file will include one of five enumerated type values for WZ-location-method field.  
@@ -37,7 +48,7 @@ Location of first and last work zone-related signs. This may be different from t
 ### junction-method
 Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
 
-#### Aterial Scenario
+#### Arterial Scenario
 ![Fig. 5](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%205.png)
 
 #### Highway Scenario
