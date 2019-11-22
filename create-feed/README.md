@@ -50,8 +50,7 @@ These examples use the following sample work zone activity template:
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | feed_info_id                                                                              |                                                                                           |
-| update_date                                                                             |                                                                                           |
-| publisher                                                                         |                                                                                           |
+| feed_update_date                                                                             |                                                                                           |
 | metadata                                                                             |                                                                                           |
 | version                                                                              |                                                                                           |
 
