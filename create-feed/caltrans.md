@@ -7,8 +7,7 @@
 Tag | Value
 --- | -----
 feed_info_id | C299CA-0004-2016-04-12-00:01:00
-update_date | 2016-04-19T14:41:04
-publisher | Caltrans
+feed_update_date | 2016-04-19T14:41:04
 metadata | Caltrans-Metadata.txt
 version | 2.0
 
@@ -44,8 +43,7 @@ update_date | 2016-04-19T14:41:04
 <WZDx>
 	<road_event_feed_info>
 		<feed_info_id>C299CA-0004-2016-04-12-00:01:00</feed_info_id>
-		<update_date>2016-04-19T14:41:04</update_date>
-		<publisher>Caltrans</publisher>
+		<feed_update_date>2016-04-19T14:41:04</feed_update_date>
 		<metadata>Caltrans-Metadata.txt</metadata>
 		<version>2.0</version>
 	</road_event_feed_info>
@@ -84,8 +82,7 @@ update_date | 2016-04-19T14:41:04
 {
 	"road_event_feed_info": {
 		"feed_info_id": "C299CA-0004-2016-04-12-00:01:00",
-		"update_date": "2016-04-19T14:41:04",
-		"publisher": "Caltrans",
+		"feed_update_date": "2016-04-19T14:41:04",
 		"metadata": "Caltrans-Metadata.txt",
 		"version": 2.0
   },

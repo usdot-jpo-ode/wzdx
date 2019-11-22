@@ -8,8 +8,7 @@
 Tag | Value
 --- | -----
 feed_info_id | 137097
-update_date | 2017-11-02T18:57:02Z
-publisher | MassDOT
+feed_update_date | 2017-11-02T18:57:02Z
 metadata | MassDOT-Metadata.txt
 version | 2.0
 
@@ -41,8 +40,7 @@ update_date | 2017-11-02T18:57:02
 <WZDx>
 	<road_event_feed_info>
 		<feed_info_id>137097</feed_info_id>
-		<update_date>2017-11-02T18:57:02</update_date>
-		<publisher>MassDOT</publisher>
+		<feed_update_date>2017-11-02T18:57:02</feed_update_date>
 		<metadata>MassDOT-Metadata.txt</metadata>
 		<version>2.0</version>
 	</road_event_feed_info>
@@ -78,8 +76,7 @@ update_date | 2017-11-02T18:57:02
 {
 	"road_event_feed_info": {
 		"feed_info_id": "137097",
-		"update_date": "2017-11-02T18:57:02",
-		"publisher": "MassDOT",
+		"feed_update_date": "2017-11-02T18:57:02",
 		"metadata": "MassDOT-Metadata.txt",
 		"version": 2.0
 	},

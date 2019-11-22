@@ -7,8 +7,7 @@
 Tag | Value
 --- | -----
 feed_info_id | 320
-update_date | 2015-01-07T16:50:56Z
-publisher | iCone
+feed_update_date | 2015-01-07T16:50:56Z
 metadata | iCone-Metadata.txt
 version | 2.0
 
@@ -39,8 +38,7 @@ update_date | 2015-01-07T16:50:56Z
 <WZDx>
 	<road_event_feed_info>
 		<feed_info_id>320</feed_info_id>
-		<update_date>2015-01-07T16:50:56Z</update_date>
-		<publisher>iCone</publisher>
+		<feed_update_date>2015-01-07T16:50:56Z</feed_update_date>
 		<metadata>iCone-Metadata.txt</metadata>
 		<version>2.0</version>
 	</road_event_feed_info>
@@ -74,8 +72,7 @@ update_date | 2015-01-07T16:50:56Z
 {
 	"road_event_feed_info": {
 		"feed_info_id": "320",
-		"update_date": "2015-01-07T16:50:56Z",
-		"publisher": "iCone",
+		"feed_update_date": "2015-01-07T16:50:56Z",
 		"metadata": "iCone-Metadata.txt",
 		"version": 2.0
 	},
