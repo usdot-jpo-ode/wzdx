@@ -54,6 +54,8 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
     - Table Definitions
         - [Road Event Feed Info Table](/data-tables/road_event_feed_info.md)
         - [Road Event Table](/data-tables/road_events.md)
+        - [Lanes Table](/data-tables/lanes.md)
+        - [Lane Restrictions Table](/data-tables/lane_restriction.md)
     - [Enumerated Fields](/data-tables/enumerated-fields.md) 
         - [Enumerated Field Definitions](/data-tables/enumerated-field-definitions.md) 
         - [Enumerated Field Definitions Derived from ITS Standards](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
@@ -96,6 +98,8 @@ The remainder of this specification is organized into the following sections:
 **Data Tables**
 - **road_events** - This table contains information about work zone events. The information describes where, when, and what activity is taking place along a road segment. This table is related to the road_event_feed_info table by the foreign key feed_info_id. For every record in the road_event_feed_info table there must exist one or more road_event records.
 - **road_events_feed_info** - This table contains information about road event datasets. For each record in the road_event_feed_info table there must exist one or more related records in the road_events table. The feed_info_id field acts as the foreign key in the road_event table.
+- **lane** - This is an optional table that identifies and describes individual lanes within the road events. This table is related to the road_events table by the foreign key road_event_id.  For every record in the road_event table there may exist one or more record(s) in the lanes table.
+- **lane_restrictions** - This is an optional table that describes individual lane restrictions. This table is related to the lanes table by the foreign key lane_id. For every record in the lanes table there may exist one or more record(s) in the lane_restrictions table.
 - **Enumerated Types** - This section includes a table of enumerated data elements.
 - **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
 - **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
