@@ -5,6 +5,8 @@ This table contains information about work zone events.  The information describ
 
 This table is related to the [road_event_feed_info](/data-tables/road_event_feed_info.md) table by the foreign key feed_info_id.  For every record in the road_event_feed_info table there must exist one or more road_event records.
 
+This table is related to the [lanes](/data-tables/lanes.md) table; For each record in the road_events table there may exists a one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
+
 Field Name | Data Type | Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **road_event_id** | ID | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Primary Key
@@ -27,12 +29,10 @@ Field Name | Data Type | Description | Conformance | Notes
 **end_date_accuracy**|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Required|
 **event_status** |Enumeration; Text|The status of the event|Optional|See Enumerated Type Definitions
 **total_num_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
-**open_lanes** | Enumeration; Text | The laneType that is opened on the road segment designated by<br>the work zone BeginLocation | Optional |
-**closed_lanes** | Enumeration; Text | The laneType that is closed due<br>to the work zone on the road segment<br>designated by the Begin Location<br>and EndLocation | Required | More detailed lane impacts / status will be described in Version 2 of the specification
-**closed_shoulders** | Enumueration; Text | An enumerated type identifying the<br>shoulder lanes that are closed | Optional | To explicitly state that no shoulders are closed, use none
+**vehicle_impact**|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required|Values = all-lanes-closed, some-lanes-closed, all-lanes-open, alternating-one-way, unknown
 **workers_present**|Boolean|A flag indicating that there are workers present in the event space|Optional
 **reduced_speed_limit**|Integer|The reduced speed limit posted within the event space|Optional|
-**restrictions** | Enumumeration; Text | One or more roadRestriction flags indicating restrictions apply to the work zone road segment associated with the work zone bounded by the begin / end locations | Optional | More details may be added to future WZDx versions; these are included as flags rather than detailed restrictions
+**restrictions** | Enumumeration; Text | One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons  | Optional | These are included as flags rather than detailed restrictions.  Detailed restrictions are coded to specific lanes in the lane_restrictions table.
 **description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
 **issuing_organization** |Text | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **creation_date** | DateTime | The time and date when the activity or event was created | Optional |
