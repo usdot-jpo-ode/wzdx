@@ -39,6 +39,25 @@
         "creation_date": "2016-04-12T00:01:00",
         "update_date": "2016-04-12T00:01:00"
       }
+    ],
+	"lanes": [
+      {
+        "lane_id": "ID",
+        "road_event_id": "ID",
+        "lane_edge_reference": "left",
+        "lane_number": "1",
+        "lane_status": "closed",
+        "lane_type": "left-lane"
+      }
+    ],
+    "lane_restrictions": [
+      {
+        "lane_restriction_id": "ID",
+        "lane_id": "ID",
+        "restriction_type": "reduced-height",
+        "restriciton_value": "15",
+        "restriction_units": "feet"
+      }
     ]
   }
 }
