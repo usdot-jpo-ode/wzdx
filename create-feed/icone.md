@@ -1,97 +1,104 @@
 # Example 2: iCone
-- [Template](#template)
+- [Template](#road_event_feed_info-template)
 - [XML Implementation](#xml-implementation)
 - [JSON Implementation](#json-implementation)
 
-### Template
+### road_event_feed_info template
 Tag | Value
 --- | -----
-Identifier | 320
-StartDateTime<ul><li>startDateTime-ver</li></ul> | 2015-01-07T16:50:56Z
-EndDateTime<ul><li>endDateTime</li></ul> | n/a
-BeginLocation<ul><li>roadName</li><li>roadNum</li><li>roadDirection</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> | roadName: I-35<br>roadDirection: Northbound<br>latitude-ver: 31.0855180<br>longitude-ver: -97.4030700
-EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul> | latitude-ver: 31.0855180<br>longitude-ver: -97.4030700
-wz-Status | active
-totalLanes | 3
-openLanes | all
-closedLanes | none
-closedShoulders | outside
-workersPresent | true
-RoadRestrictions*<ul><li>roadRestrictions</li></ul> |
-description | Long-term deployment near Temple
-issuingOrganization | iCone
-timeStampUpdate | 2018-01-17T22:32:00Z
+feed_info_id | 320
+feed_update_date | 2015-01-07T16:50:56Z
+metadata | iCone-Metadata.txt
+version | 2.0
+
+Tag | Value
+--- | -----
+road_event_id | 1243532
+feed_info_id | 320
+geometry_type | MultiPoint
+geometry | [[31.0855180,-97.4030700][31.0855180,-97.4030700]]
+road_name | I-35
+direction | northbound
+beginning_accuracy | estimated
+ending_accuracy | estimated
+start_date | 2015-01-07T16:50:56Z
+end_date | 2016-02-07T00:50:00Z
+start_date_accuracy | estimated
+end_date_accuracy | estimated
+event_status | active
+total_num_lanes | 3
+open_lanes | all
+closed_lanes | none
+closed_shoulders | outside
+workers_present | True
+update_date | 2015-01-07T16:50:56Z
 
 ### XML Implementation
 ```xml
-<Header>
-         <timeStampUpdate>2018-01-17T22:32:00Z2</timeStampUpdate>
-</Header>
-<WorkZoneActivity>
-	       <identifier>320</identifier>
-	       <startDateTime>
-		             <startDateTime-est>2015-01-07T16:50:56Z</startDateTime-est>
-	       </startDateTime>
-	       <endDateTime>
-		             <endDateTime-est>n/a</endDateTime-est>
-	       </endDateTime>
-	       <beginLocation>
-		            <roadName>I-35</roadName>
-		            <roadDirection>northbound</roadDirection>
-		            <latitude-est>31.0855180</latitude-est>
-		            <longitude-est>-97.4030700</longitude-est>
-	       </beginLocation>
-         <endLocation>
-		            <latitude-est>31.0855180</latitude-est>
-		            <longitude-est>-97.4030700</longitude-est>
-	       </endLocation>
-	       <wz_status>active</wz_status>
-	       <totalLanes>3</totalLanes>
-	       <openLanes>all</openLanes>
-	       <closedLanes>none</closedLanes>
-	       <closedShoulders>outside</closedShoulders>
-	       <workersPresent>true</workersPresent>
-	       <description>Long-term deployment near Temple</description>
-	       <issuingOrganization>iCone</issuingOrganization>
-	       <timestampEventUpdate>2018-01-17T22:32:00Z2</timestampEventUpdate>
-</WorkZoneActivity>
+<wzdx_road_events_feed>
+	<road_event_feed_info>
+		<feed_info_id>320</feed_info_id>
+		<feed_update_date>2015-01-07T16:50:56Z</feed_update_date>
+		<metadata>iCone-Metadata.txt</metadata>
+		<version>2.0</version>
+	</road_event_feed_info>
+	<road_events>
+		<road_event>
+			<road_event_id>1243532</road_event_id>
+			<geometry_type>MultiPoint</geometry_type>
+			<geometry>[[31.0855180,-97.4030700][31.0855180,-97.4030700]]</geometry>
+			<road_name>I-35</road_name>
+			<direction>northbound</direction>
+			<beginning_accuracy>estimated</beginning_accuracy>
+			<ending_accuracy>estimated</ending_accuracy>
+			<start_date>2015-01-07T16:50:56Z</start_date>
+			<end_date>2016-02-07T00:50:00Z</end_date>
+			<start_date_accuracy>estimated</start_date_accuracy>
+			<end_date_accuracy>estimated</end_date_accuracy>
+			<event_status>active</event_status>
+			<total_num_lanes>3</total_num_lanes>
+			<open_lanes>all</open_lanes>
+			<closed_lanes>none</closed_lanes>
+			<closed_shoulders>outside</closed_shoulders>
+			<workers_present>True</workers_present>
+			<update_date>2018-01-17T22:32:00Z</update_date>
+		<road_event>
+	</road_events>
+</wzdx_road_events_feed>
 ```
+
 ### JSON Implementation
 ```json
 {
-   "WZDx": {
-      "Header": {
-         "timeStampUpdate": "2017-11-02T18:57:02",
-      },
-      "WorkZoneActivity": {
-         "identifier": "137097",
-         "startDateTime": {
-            "startDateTime-ver": "2016-11-03T19:37:00",
-         },
-         "endDateTime": {
-            "endDateTime-est": "2016-11-04-T05:30:00",
-         },
-         "beginLocation": {
-            "roadName": "I-91",
-            "roadDirection": "southtbound",
-            "latitude-est": 42.33865,
-            "longitude-est": -72.63399,
-         },
-         "endLocation": {
-            "latitude-est": 42.33307,
-            "longitude-est": -72.6214,
-         },
-         "wz_status": "active",
-         "totalLanes": "3",
-         "openLanes": "right2",
-         "closedLanes": "left1",
-         "closedShoulders": "inside",
-         "workersPresent": "n/a",
-         "roadRestrictions": "n/a",
-         "description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northhampton Hadley to Exit (19) Rt-9",
-         "issuingOrganization": "MassDOT",
-         "timestampEventUpdate": "2017-11-02T18:57:02"
-      },
-   }
+	"wzdx_road_events_feed": {
+		"road_event_feed_info": {
+			"feed_info_id": "320",
+			"feed_update_date": "2015-01-07T16:50:56Z",
+			"metadata": "iCone-Metadata.txt",
+			"version": "2.0"
+		},
+		"road_events": [
+			{
+				"road_event_id": "1243532",
+				"geometry_type": "MultiPoint",
+				"geometry": [[31.0855180, -97.4030700], [31.0855180, -97.4030700]],
+				"road_name": "I-35",
+				"direction": "northbound",
+				"beginning_accuracy": "estimated",
+				"ending_accuracy": "estimated",
+				"start_date": "2015-01-07T16:50:56Z",
+				"end_date": "2016-02-07T00:50:00Z",
+				"start_date_accuracy":"estimated",
+				"end_date_accuracy":"estimated",
+				"event_status": "active",
+				"total_num_lanes": 3,
+				"open_lanes": "all",
+				"closed_lanes": "none",
+				"closed_shoulders": "outside",
+				"workers_present": true,
+				"update_date": "2015-01-07T16:50:56Z"
+			}
+		]
+	}
 }
 ```
