@@ -4,11 +4,11 @@ This section includes definitions for enumerated types including work zone statu
 #### Geometry Type Definitions Table
 Term | Geometry Type Description
 ---- | ---------------------
-MultiPoint|An array of positions. Positions are defined by a coordinate comprised of a longitude and a latitude.
-LineString|An array of two or more positions. Positions are defined by a coordinate comprised of a longitude and a latitude.
+**MultiPoint**|An array of positions. Positions are defined by a coordinate comprised of a longitude and a latitude.
+**LineString**|An array of two or more positions. Positions are defined by a coordinate comprised of a longitude and a latitude.
 
 #### Work Zone Event Status Definitions Table
-Term | WZ-Status Description
+Term | event_status Description
 ---- | ---------------------
 **Planned** | Planned status is associated with overall project or phase timing and locations.<br>Typically, this information is estimated during planning or early design phases. The<br>WZDx will not generally include planned activities.
 **Pending** | Pending is used to alert stakeholders that work is scheduled for the near future (e.g., 2-<br>3 weeks). The certainty of starting at this time is greater than 90% (barring weather<br>and other unforeseen circumstances).<ul><li>Time horizon: approximate begin / end dates</li><li>Location: coverage area and main road name; path (polyline or geoface)<br>around zone area</li></ul>
@@ -36,8 +36,6 @@ RoadRestrictions | Descriptions
 **hov-3** | Travel restricted to high occupancy vehicles of three or more
 **hov-2** | Travel restricted to high occupancy vehicles of two or more
 **no-parking** | No parking in work zone area
-**bike-lane** | Bike lane closed in work zone area
-**ramp** | Ramp closed in work zone area
 **reduced-width** | Lane width reduced in work zone area
 **reduced height** | Height restrictions reduced in work zone area
 **reduced-length** | Vehicle length restrictions reduced in work zone area

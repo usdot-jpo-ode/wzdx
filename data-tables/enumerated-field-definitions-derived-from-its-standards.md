@@ -1,8 +1,7 @@
 # Enumerated Value Definitions Derived from ITS Standards
 The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-fields.md) for:
-- [open_lanes and closed_lanes](#openlanes-and-closedlanes)
-- [closed_shoulders](#closedshoulders)
-- [direction](#roaddirection)
+- [lane_type](#lane_types)
+- [direction](#direction)
 
 Example of data frame in the TMDD (specified in ASN.1 format)
 ```xml
@@ -16,10 +15,10 @@ DATA-TYPE "EventLane ::= SEQUENCE {
     ...  }"
 ```
 
-#### open_lanes and closed_lanes
+#### lane_types
 *Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | Used for open_lanes and<br> closed_lanes | Description
+LaneRoadway<br>enumerations | lane_types<br>enumerations | Description
 --------------------------- | ------------------------------------- | -----------
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
@@ -91,14 +90,6 @@ LaneRoadway<br>enumerations | Used for open_lanes and<br> closed_lanes | Descrip
 |  | none | No lanes (open or closed)
 |  | unknown | Unknown which lane is referenced
 |  | alternating-flow-lane | Signal or flagger controls lanes flow
-|  | left-shift-lanes | All open lanes shift to the left
-|  | right-shift-lanes | All open lanes shift to the right
-
-#### closed_shoulders
-*Note:*  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
-
-LaneRoadway<br>Enumerations | Used for<br>closed_shoulders | Description
---------------------------- | --------------------------- | -----------
 **right-shoulder (8219)** | outside | The outer lane or the right most lane
 **left-shoulder (8220)** | inside | The inner lane or the left most lane
 |  | both | Both inside and outside shoulders

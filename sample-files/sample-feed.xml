@@ -28,18 +28,35 @@
   		<end_date_accuracy>estimated</end_date_accuracy>
   		<event_status>planned</event_status>
   		<total_num_lanes>2</total_num_lanes>
-  		<open_lanes>right-lane</open_lanes>
+  		<vehicle_impact>some-lanes-closed</open_lanes>
   		<closed_lanes>left-lane</closed_lanes>
   		<closed_shoulders>inside</closed_shoulders>
   		<workers_present>true</workers_present>
   		<reduced_speed_limit>20</reduced_speed_limit>
-  		<restrictions>
-        <restriction>no-trucks</restriction>
-      </restrictions>
+  		<restrictions>[no-trucks]</restrictions>
   		<description>Text</description>
   		<issuing_organization>Text</issuing_organization>
   		<creation_date>2016-04-12T00:01:00</creation_date>
   		<update_date>2016-04-12T00:01:00</update_date>
   	</road_event>
   </road_events>
+  <lanes>
+	<lane>
+		<lane_id>ID</lane_id>
+		<road_event_id>ID</road_event_id>
+		<lane_edge_reference>left</lane_edge_reference>
+		<lane_number>1</lane_number>
+		<lane_status>closed</lane_status>
+		<lane_type>left-lane</lane_type>
+	</lane>
+  </lanes>
+  <lane_restrictions>
+	<lane_restriction>
+		<lane_restriction_id>ID</lane_restriction_id>
+		<lane_id>ID</lane_id>
+		<restriction_type>reduced-height</restriction_type>
+		<restriction_value>15</restriction_value>
+		<restriction_units>feet</restriction_units>
+	</lane_restriction>
+  </lane_restrictions>
 </WZDx>

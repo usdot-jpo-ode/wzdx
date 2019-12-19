@@ -28,12 +28,43 @@ start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
 total_num_lanes | 3
-open_lanes | right-2-lanes
-closed_lanes | left-lane
-closed_shoulders | inside
+vehicle_impact | some-lanes-closed
 description | I-91 Southbound   Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit<br>(19) Rt-9
 issuing_organization | MassDOT
 update_date | 2017-11-02T18:57:02
+
+### lanes template
+Tag | Value
+--- | -----
+lane_id | 234324
+road_event_id | 1243532
+lane_edge_reference | 
+lane_number | 
+lane_status | open
+lane_type | right-2-lanes
+--- | -----
+lane_id | 123145
+road_event_id | 1243532
+lane_edge_reference | 
+lane_number | 
+lane_status | closed
+lane_type | left-lane
+--- | -----
+lane_id | 213123
+road_event_id | 1243532
+lane_edge_reference | 
+lane_number | 
+lane_status | closed
+lane_type | left-shoulder
+
+### lane_restrictions template
+Tag | Value
+--- | -----
+lane_restriction_id | 
+lane_id | 
+restriction_type | 
+restriction_value | 
+restriction_units | 
 
 ### XML Implementation
 ```xml
@@ -68,6 +99,28 @@ update_date | 2017-11-02T18:57:02
 			<update_date>2017-11-02T18:57:02</update_date>
 		</road_event>
 	</road_events>
+	<lanes>
+		<lane>
+			<lane_id>234324</lane_id>
+			<road_event_id>1243532</road_event_id>
+			<lane_status>open</lane_status>
+			<lane_type>right-2-lanes</lane_type>
+		</lane>
+		<lane>
+			<lane_id>123145</lane_id>
+			<road_event_id>1243532</road_event_id>
+			<lane_status>closed</lane_status>
+			<lane_type>left-lane</lane_type>
+		</lane>
+		<lane>
+			<lane_id>213123</lane_id>
+			<road_event_id>1243532</road_event_id>
+			<lane_status>closed</lane_status>
+			<lane_type>left-shoulder</lane_type>
+		</lane>
+	</lanes>
+	<lane_restrictions>
+	</lane_restrictions>
 </wzdx_road_events_feed>
 ```
 
@@ -96,13 +149,33 @@ update_date | 2017-11-02T18:57:02
 				"end_date_accuracy": "estimated",
 				"event_status": "active",
 				"total_num_lanes": 3,
-				"open_lanes": "right-2-lanes",
-				"closed_lanes": "left-lane",
-				"closed_shoulders": "inside",
+				"vehicle_impact": "some-lanes-closed",
 				"description": "I-91 Southbound Exit (20) Rt-5/Rt-10 Northampton Hadley to Exit (19) Rt-9",
 				"issuing_organization": "MassDOT",
 				"update_date": "2017-11-02T18:57:02"
 			}
+		],
+		"lanes": [
+			{
+				"lane_id":"234324",
+				"road_event_id":"1243532",
+				"lane_status":"open",
+				"lane_type":"right-2-lanes"
+			},
+			{
+				"lane_id":"123145",
+				"road_event_id":"1243532",
+				"lane_status":"closed",
+				"lane_type":"left-lane"
+			},
+			{
+				"lane_id":"213123",
+				"road_event_id":"1243532",
+				"lane_status":"closed",
+				"lane_type":"left-shoulder"
+			}
+		]
+		"lane_restrictions": [
 		]
 	}
 }

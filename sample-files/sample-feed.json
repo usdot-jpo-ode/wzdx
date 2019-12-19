@@ -28,9 +28,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "planned",
         "total_num_lanes": 2,
-        "open_lanes": "right-lane",
-        "closed_lanes": "left-lane",
-        "closed_shoulders": "inside",
+        "vehicle_impact": "some-lanes-closed",
         "workers_present": true,
         "reduced_speed_limit": 20,
         "restrictions": ["no-trucks"],
@@ -38,6 +36,25 @@
         "issuing_organization": "Text",
         "creation_date": "2016-04-12T00:01:00",
         "update_date": "2016-04-12T00:01:00"
+      }
+    ],
+	"lanes": [
+      {
+        "lane_id": "ID",
+        "road_event_id": "ID",
+        "lane_edge_reference": "left",
+        "lane_number": "1",
+        "lane_status": "closed",
+        "lane_type": "left-lane"
+      }
+    ],
+    "lane_restrictions": [
+      {
+        "lane_restriction_id": "ID",
+        "lane_id": "ID",
+        "restriction_type": "reduced-height",
+        "restriciton_value": "15",
+        "restriction_units": "feet"
       }
     ]
   }

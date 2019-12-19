@@ -29,14 +29,52 @@ start_date_accuracy | estimated
 end_date_accuracy | estimated
 event_status | active
 total_num_lanes | 2
-open_lanes | right-lane
-closed_lanes | left-lane
-closed_shoulders | inside
+vehicle_impact | some-lanes-closed
 workers_present | True
 description | One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.
 issuing_organization | Caltrans
 creation_date | 2016-04-12T00:01:00
 update_date | 2016-04-19T14:41:04
+
+### lanes template
+Tag | Value
+--- | -----
+lane_id | 459043
+road_event_id | 23543
+lane_edge_reference | left
+lane_number | 1
+lane_status | closed
+lane_type | left-lane
+--- | -----
+lane_id | 459044
+road_event_id | 23543
+lane_edge_reference | left
+lane_number | 2
+lane_status | open
+lane_type | right-lane
+--- | -----
+lane_id | 459045
+road_event_id | 23543
+lane_edge_reference | 
+lane_number | 
+lane_status | closed
+lane_type | left-shoulder
+
+### lane_restrictions template
+Tag | Value
+--- | -----
+lane_restriction_id | 1
+lane_id | 459044
+restriction_type | reduced-height
+restriction_value | 15
+restriction_units | feet
+--- | -----
+lane_restriction_id | 2
+lane_id | 459044
+restriction_type | reduced-width
+restriction_value | 10
+restriction_units | feet
+
 
 ### XML Implementation
 ```xml
@@ -73,7 +111,47 @@ update_date | 2016-04-19T14:41:04
 			<creation_date>2016-04-12T00:01:00</creation_date>
 			<update_date>2016-04-19T14:41:04</update_date>
 		</road_event>
-	<road_events>
+	</road_events>
+	<lanes>
+		<lane>
+			<lane_id>459043</lane_id>
+			<road_event_id>23543</road_event_id>
+			<lane_edge_reference>left</lane_edge_reference>
+			<lane_number>1</lane_number>
+			<lane_status>closed</lane_status>
+			<lane_type>left-lane</lane_type>
+		</lane>
+		<lane>
+			<lane_id>459044</lane_id>
+			<road_event_id>23543</road_event_id>
+			<lane_edge_reference>left</lane_edge_reference>
+			<lane_number>2</lane_number>
+			<lane_status>open</lane_status>
+			<lane_type>right-lane</lane_type>
+		</lane>
+		<lane>
+			<lane_id>459045</lane_id>
+			<road_event_id>23543</road_event_id>
+			<lane_status>closed</lane_status>
+			<lane_type>left-shoulder</lane_type>
+		</lane>
+	</lanes>
+	<lane_restrictions>
+		<lane_restriction>
+			<lane_restriction_id>1</lane_restriction_id>
+			<lane_id>459044</lane_id>
+			<restriction_type>reduced-height</restriction_type>
+			<restriction_value>15</restriction_value>
+			<restriction_units>feet</restriction_units>
+		</lane_restriction>
+		<lane_restriction>
+			<lane_restriction_id>2</lane_restriction_id>
+			<lane_id>459044</lane_id>
+			<restriction_type>reduced-width</restriction_type>
+			<restriction_value>10</restriction_value>
+			<restriction_units>feet</restriction_units>
+		</lane_restriction>
+	</lane_restrictions>
 </wzdx_road_events_feed>
 ```
 
@@ -105,14 +183,52 @@ update_date | 2016-04-19T14:41:04
 				"end_date_accuracy": "estimated",
 				"event_status": "active",
 				"total_num_lanes": 2,
-				"open_lanes": "right-lane",
-				"closed_lanes": "left-lane",
-				"closed_shoulders": "inside",
+        			"vehicle_impact": "some-lanes-closed",
 				"workers_present": true,
 				"description": "One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.",
 				"issuing_organization": "Caltrans",
 				"creation_date": "2016-04-12T00:01:00",
 				"update_date": "2016-04-19T14:41:04"
+			}
+		],
+		"lanes":  [ 
+			{
+				"lane_id":"459043",
+				"road_event_id":"23543",
+				"lane_edge_reference":"left",
+				"lane_number":"1",
+				"lane_status":"closed",
+				"lane_type":"left-lane"
+			},
+			{
+				"lane_id":"459044",
+				"road_event_id":"23543",
+				"lane_edge_reference":"left",
+				"lane_number":"2",
+				"lane_status":"open",
+				"lane_type":"right-lane"
+			},
+			{
+				"lane_id":"459045",
+				"road_event_id":"23543",
+				"lane_status":"closed",
+				"lane_type":"left-shoulder"
+			}
+		],
+		"lane_restrictions":  [
+			{
+				"lane_restriction_id":"1",
+				"lane_id":"459044",
+				"restriction_type":"reduced-height",
+				"restriction_value":"15",
+				"restriction_units":"feet"
+			},
+			{
+				"lane_restriction_id":"2",
+				"lane_id":"459044",
+				"restriction_type":"reduced-width",
+				"restriction_value":"10",
+				"restriction_units":"feet"
 			}
 		]
 	}
