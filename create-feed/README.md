@@ -43,7 +43,7 @@ WZD feeds contain one or more entries which describe a Work Zone's characteristi
 
 Figure 1 models the tables and their relationships.
 
-#### Figure 1: Work Zone Activity Organization
+#### Figure 1: Work Zone Data Entity Relationship Diagram
 *Note*: Required data elements are in bold.
 
 ![Fig. 1](https://github.com/DeraldDudley/jpo-wzdx/blob/require_geo_json/data-tables/road_event_erd.png)
@@ -58,24 +58,7 @@ Three examples of Work Zone event records are shown below. They were derived fro
 These examples use the following sample work zone event template:
 
 #### Sample Work Zone Activity Template
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Identifier                                                                              |                                                                                           |
-| subidentifier                                                                           |                                                                                           |
-| StartDateTime<ul><li>startDateTime-est</li><li>startDateTime-ver</li></ul>              |                                                                                           |
-| EndDateTime<ul><li>endDateTime-est</li><li>endDateTime-ver</li></ul>                    |                                                                                           |
-| BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> |                                                                       |
-| EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul>                |                                                                                           |
-| wz-Status                                                                               |                                                                                           |
-| totalLanes                                                                              |                                                                                           |
-| openLanes                                                                               |                                                                                           |
-| closedLanes                                                                             |                                                                                           |
-| closedShoulders                                                                         |                                                                                           |
-| workersPresent                                                                          |                                                                                           |
-| RoadRestrictions*<ul><li>roadRestrictions</li></ul>                                     |                                                                                           |
-| description                                                                             |                                                                                           |
-| issuingOrganization                                                                     |                                                                                           |
-| timeStampEventCreation                                                                  |                                                                                           |
-| timeStampEventUpdate                                                                    |                                                                                           |
+- [MultiPoint GeoJSON Template](https://raw.githubusercontent.com/DeraldDudley/jpo-wzdx/require_geo_json/create-feed/templates/multipoint_template.geojson)
+- [LineString GeoJSON Template](https://raw.githubusercontent.com/DeraldDudley/jpo-wzdx/require_geo_json/create-feed/templates/linestring_template.geojson)
 ### Data Validation Tools
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JASON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
