@@ -47,7 +47,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 {
 "road_event_feed_info": {
 	"feed_info_id": "1",
-	"feed_update_date": "2017-11-02T18:57:02",
+	"feed_update_date": "2017-11-02T18:57:02"
 },
 "type": "FeatureCollection",
 "features": [
@@ -69,7 +69,10 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 		"vehicle_impact": "some-lanes-closed",
 		"description": "I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9",
 		"issuing_organization": "MassDOT",
-		"update_date": "2017-11-02T18:57:02"
+		"update_date":"2017-11-02T18:57:02",
+		"lane 0":"Lane 1 from the left is closed",
+		"lane 1":"Lane 2 from the left is open",
+		"lane 2":"Lane 3 from the left is open"
       },
 	"geometry": {
         "type": "MultiPoint",
