@@ -1,45 +1,44 @@
 {
-	"road_event_feed_info": {
-		"feed_info_id": "",
-		"feed_update_date": "",
-		"metadata": "",
-		"version": ""
+"road_event_feed_info": {
+	"feed_info_id": "",
+	"feed_update_date": "",
+	"metadata": "",
+	"version": ""
 },
-	"type": "FeatureCollection",
-	"features": [
-	 {
-		"type": "Feature",
-			"properties": {
-				"road_event_id": "",
-				"feed_info_id": "",
-				"subidentifier": "",
-				"road_name": "",
-				"road_number": "",
-				"direction": "",
-				"beginning_cross_street": "",
-				"ending_cross_sreet": "",
-				"begin_cross_street": "",
-				"begining_milepost": "",
-				"ending_milepost": "",
-				"begining_accuracy": "",
-				"ending_accuracy": "",
-				"start_date": "",
-				"end_date": "",
-				"start_date_accuracy": "",
-				"end_date_accuracy": "",
-				"event_status": "",
-				"total_num_lanes": "",
-				"vehicle_impact": "",
-				"workers_present": "",
-				"reduced_speed_limit": "",
-				"restrictions": "",	
-				"description": "",
-				"issuing_organization": "",
-				"creation_date": "",
-				"update_date": ""
-      },
-      "geometry": {
-        "type": "LineString",
+"type": "FeatureCollection",
+"features": [
+{
+"type": "Feature",
+"properties": {
+		"road_event_id": "",
+		"feed_info_id": "",
+		"subidentifier": "",
+		"road_name": "",
+		"road_number": "",
+		"direction": "",
+		"beginning_cross_street": "",
+		"ending_cross_sreet": "",
+		"begining_milepost": "",
+		"ending_milepost": "",
+		"begining_accuracy": "",
+		"ending_accuracy": "",
+		"start_date": "",
+		"end_date": "",
+		"start_date_accuracy": "",
+		"end_date_accuracy": "",
+		"event_status": "",
+		"total_num_lanes": "",
+		"vehicle_impact": "",
+		"workers_present": "",
+		"reduced_speed_limit": "",
+		"restrictions": "",	
+		"description": "",
+		"issuing_organization": "",
+		"creation_date": "",
+		"update_date": ""
+},
+"geometry": {
+"type": "LineString",
         "coordinates": [
           [
             -112.25971430540085,
