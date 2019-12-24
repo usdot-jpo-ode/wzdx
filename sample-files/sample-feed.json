@@ -27,6 +27,12 @@
         "start_date_accuracy": "estimated",
         "end_date_accuracy": "estimated",
         "event_status": "planned",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
         "total_num_lanes": 2,
         "vehicle_impact": "some-lanes-closed",
         "workers_present": true,

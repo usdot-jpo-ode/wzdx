@@ -45,26 +45,40 @@
 			<xs:element name="road_name" type="xs:string"/>
 			<xs:element name="road_number" type="xs:string" maxOccurs="0"/>
 			<xs:element name="direction" type="Direction"/>
-			<xs:element name="beginning_cross_street" type="xs:string" maxOccurs="0"/>
-			<xs:element name="ending_cross_street" type="xs:string" maxOccurs="0"/>
-			<xs:element name="beginning_milepost" type="xs:string" maxOccurs="0"/>
-			<xs:element name="ending_milepost" type="xs:string" maxOccurs="0"/>
+			<xs:element name="beginning_cross_street" type="xs:string" minOccurs="0"/>
+			<xs:element name="ending_cross_street" type="xs:string" minOccurs="0"/>
+			<xs:element name="beginning_milepost" type="xs:string" minOccurs="0"/>
+			<xs:element name="ending_milepost" type="xs:string" minOccurs="0"/>
 			<xs:element name="beginning_accuracy" type="Accuracy"/>
 			<xs:element name="ending_accuracy" type="Accuracy"/>
 			<xs:element name="start_date" type="xs:dateTime"/>
 			<xs:element name="end_date" type="xs:dateTime"/>
 			<xs:element name="start_date_accuracy" type="Accuracy"/>
 			<xs:element name="end_date_accuracy" type="Accuracy"/>
-			<xs:element name="event_status" type="EventStatus" maxOccurs="0"/>
+			<xs:element name="event_status" type="EventStatus" minOccurs="0"/>
+			<xs:element name="types_of_work" type="TypesOfWork" minOccurs="0">
 			<xs:element name="total_num_lanes" type="xs:integer" minOccurs="0"/>
 			<xs:element name="vehicle_impact" type="VehicleImpact" minOccurs="0"/>
 			<xs:element name="workers_present" type="xs:boolean" minOccurs="0"/>
 			<xs:element name="reduced_speed_limit" type="xs:integer" minOccurs="0"/>
 			<xs:element name="restrictions" type="string" maxOccurs="unbounded"/>
-        		<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
 			<xs:element name="issuing_organization" type="xs:string" minOccurs="0"/>
 			<xs:element name="creation_date" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="update_date" type="xs:dateTime" minOccurs="0"/>							
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TypesOfWork">
+		<xs:sequence>
+			<xs:element name="type_of_work" type="TypeOfWork" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TypeOfWork">
+		<xs:sequence>
+			<xs:element name="type_name" type="TypeOfWorkTypeName"/>
+			<xs:element name="is_architectural_change" type="xs:boolean" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -110,6 +124,21 @@
       <xs:enumeration value="LineString"/>
     </xs:restriction>
   </xs:simpleType>
+
+	<xs:simpleType name="TypeOfWorkTypeName">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="maintenance"/>
+			<xs:enumeration value="minor-road-defect-repair"/>
+			<xs:enumeration value="roadside-work"/>
+			<xs:enumeration value="overhead-work"/>
+			<xs:enumeration value="below-road-work"/>
+			<xs:enumeration value="barrier-work"/>
+			<xs:enumeration value="surface-work"/>
+			<xs:enumeration value="painting"/>
+			<xs:enumeration value="roadway-relocation"/>
+			<xs:enumeration value="roadway-creation"/>
+		</xs:restriction>
+	</xs:simpleType>
 	
   <xs:simpleType name="VehicleImpact">
     <xs:restriction base="xs:string">
