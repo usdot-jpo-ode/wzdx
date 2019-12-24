@@ -4,7 +4,6 @@
 - [GeoJSON Implementation](#geojson)
 
 ### Template
-```template
 
 #### Feed Information (1 Entry per feed)
 road_event_feed_info Table
