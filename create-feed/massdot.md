@@ -1,9 +1,10 @@
 # Example 1: MassDOT 
 
 - [Template](#template)
-- [GeoJSON Implementation](#geojson-implementation)
+- [GeoJSON Implementation](#geojson)
 
-### Templates
+### Template
+```template
 
 #### Feed Information (1 Entry per feed)
 road_event_feed_info Table
@@ -43,10 +44,10 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 ||||
 
 ### GeoJSON Implementation
+```geojson
 
 [MassDOT Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
 
-```geojson
 {
 "road_event_feed_info": {
 	"feed_info_id": "1",
