@@ -12,22 +12,35 @@ feed_info_id | feed_update_date | metadata | version
 --- | --- | --- | ---
 1 | 2017-11-02T18:57:02 |  |
 
-#### Event Information (1 Entry per event)
+#### Event Information (1 or more entries per feed)
 road_events Table
 
 road_event_id | feed_info_id | subidentifier | geometry_type | geometry | road_name | road_number | direction | beginning_cross_street | ending_cross_street | beginnin_milepost |ending_milepost | beginning_accuracy | ending_accuracy | start_date | end_date | start_date_accuracy | end_date_accuracy | event_status | total_num_lanes | vehicle_impact | workers_present | reduced_speed_limit | restrictions | description | issuing_organization | creation_date | update_date
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
 137097 | 1 | | MultiPoint | [[-72.63399, 42.33865],[-72.6214, 42.33307]] | I-91 | | southbound | | | | | estimated | estimated | 2016-11-03T19:37:00 | 2016-11-04T05:30:00 | verified | estimated | active | 3 | some-lanes-closed | | | | I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9 | MassDOT | | 2017-11-02T18:57:02
 
-#### Lane Information (1 Entry per Lane)
+#### Type of Work (0 or more entries per road event)
+type_of_work Table
+
+type_of_work_id | road_event_id | type_name | is_architectural_change
+--|--|--|--
+ |  |  | 
+
+#### Lane Information (0 or more entries per road event)
 lanes Table
 
-lanes_id | road_event_id | lane_edge_reference | lane_number | lane_status | lane_type
+lane_id | road_event_id | lane_edge_reference | lane_number | lane_status | lane_type
 --|--|--|--|--|--
 0 | 137097 | left | 1 | closed | left-lane
 1 | 137097 | left | 2 | open | center-lane
 2 | 137097 | left | 3 | open | right-lane
 
+#### Lane Restriction Information (0 or more entries per lane)
+lanes_restictions Table
+
+lane_restriction_id| lane_id | restriction_type | restriction_value | restriction_units
+--|--|--|--|--
+||||
 
 ### GeoJSON Implementation
 ```geojson
