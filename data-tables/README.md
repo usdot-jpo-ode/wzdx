@@ -1,5 +1,5 @@
 # **Data Tables**
-**Revised November 8, 2019**.
+**Revised November 18, 2019**.
 
 This document defines the content of the Work Zone Data Specification by means of an Entity Relationship Diagram (ERD). The ERD organizes data into distinct entities (also known as tables or objects), defines the content (also known as fields or properties) of each entity, and documents how those entities, tables or objects are related (Relationships).  Also included, when applicable, are enumeration tables which define the values to which field content is restricted.
 - **Data Name** - name of the field or column 
@@ -16,10 +16,12 @@ This document defines the content of the Work Zone Data Specification by means o
 - **Table Definitions**
     - [**Road Event Feed Info Table**](/data-tables/road_event_feed_info.md)
     - [**Road Event Table**](/data-tables/road_events.md)
+    - [**Types of Work Table**](/data-table/types_of_work.md)
     - [**Lanes Table**](/data-tables/lanes.md)
     - [**Lane Restrictions Table**](/data-tables/lane_restrictions.md)
 - [**Enumerated Fields**](/data-tables/enumerated-fields.md) 
-- [**Enumerated Field Definitions**](/data-tables/enumerated_field_definitions.md) 
-- [**Enumerated Field Definitions Derived from ITS Standards**](/data-tables/enumerated_field_definitions_derived_from_its_standards.md)
+- [**Enumerated Field Definitions**](/data-tables/enumerated-field-definitions.md) 
+- [**Enumerated Field Definitions Derived from ITS Standards**](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
 - [**Metadata**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/metadata.md) 
+
 
