@@ -24,14 +24,15 @@ type_of_work Table
 
 type_of_work_id | road_event_id | type_name | is_architectural_change
 --|--|--|--
- |  |  | 
+0 | 137097 | maintenance | 0
+1 | 137097 | overhead-work | 0
 
 #### Lane Information (0 or more entries per road event)
 lanes Table
 
 lane_id | road_event_id | lane_edge_reference | lane_number | lane_status | lane_type
 --|--|--|--|--|--
-0 | 137097 | left | 1 | closed | left-lane
+0 | 137097 | left | 1 | merge-right | left-lane
 1 | 137097 | left | 2 | open | center-lane
 2 | 137097 | left | 3 | open | right-lane
 
@@ -40,7 +41,8 @@ lanes_restictions Table
 
 lane_restriction_id| lane_id | restriction_type | restriction_value | restriction_units
 --|--|--|--|--
-||||
+0|0|reduced-width|18|feet
+1|0|reduced-height|15|feet
 
 ### GeoJSON Implementation
 
@@ -78,15 +80,14 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 			{"type_of_work_id":"1", "type_name":"overhead-work", "is_architectual_change":"0"}
 		]],
 		"lanes": [[
-			{"lane_id":"0", "lane_edge_reference":"left", "lane_number":"1", "lane_status":"merge-right", "lane_type":"left-lane",
-			"lane_restrictions":[[
-				{"lane_restriction_id":"0", "restriction_type":"reduced-width", "restriction_value":"18", "restriction_units":"feet"},
-				{"lane_restriction_id":"1", "restriction_type":"reduced-height", "restriction_value":"15", "restriction_units":"feet"}
-			]]
-			},
-			{"lane_id":"1", "lane_edge_reference":"left", "lane_number":"2", "lane_status":"open", "lane_type":"center-lane"},
-			{"lane_id":"2", "lane_edge_reference":"left", "lane_number":"3", "lane_status":"open", "lane_type":"right-lane"}
-			]]
+		{"lane_id":"0", "lane_edge_reference":"left", "lane_number":"1", "lane_status":"merge-right", "lane_type":"left-lane",
+		"lane_restrictions":[[
+			{"lane_restriction_id":"0", "restriction_type":"reduced-width", "restriction_value":"18", "restriction_units":"feet"},
+			{"lane_restriction_id":"1", "restriction_type":"reduced-height", "restriction_value":"15", "restriction_units":"feet"}
+		]]},
+		{"lane_id":"1", "lane_edge_reference":"left", "lane_number":"2", "lane_status":"open", "lane_type":"center-lane"},
+		{"lane_id":"2", "lane_edge_reference":"left", "lane_number":"3", "lane_status":"open", "lane_type":"right-lane"}
+		]]
       },
 	"geometry": {
         "type": "MultiPoint",
