@@ -92,7 +92,6 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 	"geometry": {
         "type": "MultiPoint",
         	"coordinates": [[-97.4030700, 31.0855180],[-97.4030700, 31.0855180]]
-        ]
       }
     }
   ]
