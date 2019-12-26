@@ -37,9 +37,9 @@ The WZDx v2.0 data feed is formatted according to the [geoJSON](https://geojson.
 WZD feeds contain one or more entries which describe a Work Zone's characteristics, along a single road segment, in a single direction.  Each entry is a collection of data describing specific aspects of the feed or the event.  The tables below detail the specificaton's content.
 - The [Road Event Feed Information](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2/data-tables/road_event_feed_info.md) table describes the dataset.
 - The [Road Events](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2/data-tables/road_events.md) table describes a work zone event.
+- The [Types of Work]() table describes the work work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
 - The [Lanes](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2/data-tables/lanes.md) table identifies and describes individual lanes within an event.
 - The [Lane Restrictions](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2/data-tables/lane_restriction.md) table describes restrictions for identified lanes.
-- The [Types of Work]() table describes the work work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
 
 Figure 1 models the tables and their relationships.
 
@@ -53,7 +53,7 @@ The WZDx feed examples presented below were extracted from existing data feeds g
 Three examples of Work Zone event records are shown below. They were derived from on-line data feeds including:
 * [Example 1 – MassDOT Event Feed](/create-feed/massdot.md)
 * [Example 2 – iCone Event Feed](/create-feed/icone.md)
-* [Example 3 – Caltrans Lane Closure Feed](/caltrans.md)
+* [Example 3 – Caltrans Lane Closure Feed](/create-feed/caltrans.md)
 
 These examples use the following sample work zone event template:
 
