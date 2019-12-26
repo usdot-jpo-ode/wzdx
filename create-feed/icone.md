@@ -24,35 +24,33 @@ type_of_work Table
 
 type_of_work_id | road_event_id | type_name | is_architectural_change
 --|--|--|--
-0 | 137097 | maintenance | 0
-1 | 137097 | overhead-work | 0
+0 | 320 | roadway-relocation | 1
+1 | 320 | overhead-work | 1
 
 #### Lane Information (0 or more entries per road event)
 lanes Table
 
 lane_id | road_event_id | lane_edge_reference | lane_number | lane_status | lane_type
 --|--|--|--|--|--
-0 | 137097 | left | 1 | merge-right | left-lane
-1 | 137097 | left | 2 | open | center-lane
-2 | 137097 | left | 3 | open | right-lane
+ |  |  |  |  | 
 
 #### Lane Restriction Information (0 or more entries per lane)
 lanes_restictions Table
 
 lane_restriction_id| lane_id | restriction_type | restriction_value | restriction_units
 --|--|--|--|--
-0|0|reduced-width|18|feet
-1|0|reduced-height|15|feet
+||||
+||||
 
 ### GeoJSON Implementation
 
-[MassDOT Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
+[iCone Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
 
 ```geojson
 {
 "road_event_feed_info": {
 	"feed_info_id": "1",
-	"feed_update_date": "2017-11-02T18:57:02"
+	"feed_update_date": "2015-01-07T16:50:56Z"
 },
 "type": "FeatureCollection",
 "features": [
