@@ -40,7 +40,6 @@ lanes_restictions Table
 lane_restriction_id| lane_id | restriction_type | restriction_value | restriction_units
 --|--|--|--|--
 ||||
-||||
 
 ### GeoJSON Implementation
 
