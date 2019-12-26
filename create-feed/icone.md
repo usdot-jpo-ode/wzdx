@@ -44,7 +44,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ### GeoJSON Implementation
 
-[iCone Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
+[iCone Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01#file-icone_multipoint_example-geojson)
 
 ```geojson
 {
@@ -57,34 +57,24 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
  {
 "type": "Feature",
 	"properties": {
-		"road_event_id": "",
-		"feed_info_id": "",
-		"road_name": "",
-		"direction": "",
-		"begining_accuracy": "",
-		"ending_accuracy": "",
-		"start_date": "",
-		"end_date": "",
-		"start_date_accuracy": "",
-		"end_date_accuracy": "",
-		"event_status": "",
-		"total_num_lanes": "",
-		"vehicle_impact": "",
-		"description": "",
-		"issuing_organization": "",
-		"update_date":"",
+		"road_event_id": "320",
+		"feed_info_id": "1",
+		"road_name": "I-35",
+		"road_number": "I-35",
+		"direction": "northbound",
+		"begining_accuracy": "verified",
+		"ending_accuracy": "verified",
+		"start_date": "2015-01-07T16:50:56Z",
+		"start_date_accuracy": "verified",
+		"event_status": "active",
+		"total_num_lanes": "3",
+		"vehicle_impact": "all-lanes-open",
+		"description": "Long-term deployment near Temple",
+		"issuing_organization": "iCone",
+		"update_date":"2018-01-17T22:32:00Z",
 		"type_of_work":[[
-			{"type_of_work_id":"0", "type_name":"maintenance", "is_architectual_change":"0"},
-			{"type_of_work_id":"1", "type_name":"overhead-work", "is_architectual_change":"0"}
-		]],
-		"lanes": [[
-		{"lane_id":"0", "lane_edge_reference":"left", "lane_number":"1", "lane_status":"merge-right", "lane_type":"left-lane",
-		"lane_restrictions":[[
-		{"lane_restriction_id":"0", "restriction_type":"reduced-width", "restriction_value":"18", "restriction_units":"feet"},
-		{"lane_restriction_id":"1", "restriction_type":"reduced-height", "restriction_value":"15", "restriction_units":"feet"}
-		]]},
-		{"lane_id":"1", "lane_edge_reference":"left", "lane_number":"2", "lane_status":"open", "lane_type":"center-lane"},
-		{"lane_id":"2", "lane_edge_reference":"left", "lane_number":"3", "lane_status":"open", "lane_type":"right-lane"}
+			{"type_of_work_id":"0", "type_name":"roadway-relocation", "is_architectual_change":"1"},
+			{"type_of_work_id":"1", "type_name":"overhead-work", "is_architectual_change":"1"}
 		]]
       },
 	"geometry": {
