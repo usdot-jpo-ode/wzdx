@@ -46,7 +46,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ### GeoJSON Implementation
 
-[MassDOT Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
+[MassDOT Example Mapped](/create-feed/examples/massdot.geojson)
 
 ```geojson
 {
