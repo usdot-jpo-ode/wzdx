@@ -46,7 +46,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ### GeoJSON Implementation
 
-[CalTrans Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01#file-caltrans_multipoint_example-geojson)
+[CalTrans Example Mapped](/create-feed/examples/caltrans.geojson)
 
 ```geojson
 {
