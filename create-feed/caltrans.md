@@ -10,7 +10,7 @@ road_event_feed_info Table
 
 feed_info_id | feed_update_date | metadata | version
 --- | --- | --- | ---
-1 | 2016-04-19T14:41:04 |  |
+1 | 2016-04-19T14:41:04 |  | 2.0
 
 #### Event Information (1 or more entries per feed)
 road_events Table
@@ -46,7 +46,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ### GeoJSON Implementation
 
-[CalTrans Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01)
+[CalTrans Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01#file-caltrans_multipoint_example-geojson)
 
 ```geojson
 {
