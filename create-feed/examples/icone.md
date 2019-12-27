@@ -43,7 +43,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ### GeoJSON Implementation
 
-[iCone Example Mapped](https://gist.github.com/DeraldDudley/be7a31d028dfeac5586cf0a29fab9c01#file-icone_multipoint_example-geojson)
+[iCone Example Mapped](/create-feed/examples/icone.geojson)
 
 ```geojson
 {
