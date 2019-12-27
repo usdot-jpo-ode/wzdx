@@ -63,7 +63,7 @@ These examples use the following sample work zone event template:
 
 ### Data Validation Tools
 #### Version 2.0
-Version 2 validation tools are benig built.  Documentation will be posted here when it is availabel.
+Version 2 validation tools are being built.  Documentation will be posted here when it is available.
 
 #### Version 1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JASON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
