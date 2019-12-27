@@ -17,7 +17,7 @@ road_events Table
 
 road_event_id | feed_info_id | subidentifier | geometry_type | geometry | road_name | road_number | direction | beginning_cross_street | ending_cross_street | beginning_milepost |ending_milepost | beginning_accuracy | ending_accuracy | start_date | end_date | start_date_accuracy | end_date_accuracy | event_status | total_num_lanes | vehicle_impact | workers_present | reduced_speed_limit | restrictions | description | issuing_organization | creation_date | update_date
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
-320 | 1 | | MultiPoint | [[-97.4030700, 31.0855180],[-97.4030700, 31.0855180]] | I-35 | I-35 | northbound | | | | | verified | verified | 2015-01-07T16:50:56Z |  | verified | | active | 3 | all-lanes-open | true |  | | Long-term deployment near Temple | iCone | | 2018-01-17T22:32:00Z
+320 | 1 | | LineString | [[-97.4030700, 31.0855180],[-97.4030700, 31.0855180]] | I-35 | I-35 | northbound | | | | | verified | verified | 2015-01-07T16:50:56Z |  | verified | | active | 3 | all-lanes-open | true |  | | Long-term deployment near Temple | iCone | | 2018-01-17T22:32:00Z
 
 #### Type of Work (0 or more entries per road event)
 type_of_work Table
