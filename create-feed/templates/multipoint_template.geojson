@@ -1,16 +1,16 @@
 {
-	"road_event_feed_info": {
-		"feed_info_id": "",
-		"feed_update_date": "",
-		"metadata": "",
-		"version": ""
+"road_event_feed_info": {
+	"feed_info_id": "",
+	"feed_update_date": "",
+    "metadata": "",
+	"version":""
 },
-	"type": "FeatureCollection",
-	"features": [
-	 {
-		"type": "Feature",
-			"properties": {
-				"road_event_id": "",
+"type": "FeatureCollection",
+"features": [
+ {
+"type": "Feature",
+	"properties": {
+		"road_event_id": "",
 				"feed_info_id": "",
 				"subidentifier": "",
 				"road_name": "",
@@ -18,9 +18,9 @@
 				"direction": "",
 				"beginning_cross_street": "",
 				"ending_cross_street": "",
-				"begining_milepost": "",
+				"beginning_milepost": "",
 				"ending_milepost": "",
-				"begining_accuracy": "",
+				"beginning_accuracy": "",
 				"ending_accuracy": "",
 				"start_date": "",
 				"end_date": "",
@@ -35,19 +35,32 @@
 				"description": "",
 				"issuing_organization": "",
 				"creation_date": "",
-				"update_date": ""
+				"update_date": "",
+		"type_of_work":[[
+			{"type_of_work_id":"", "type_name":"", "is_architectual_change":""},
+			{"type_of_work_id":"", "type_name":"", "is_architectual_change":""}
+		]],
+		"lanes": [[
+		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":"",
+		"lane_restrictions":[[
+			{"lane_restriction_id":"", "restriction_type":"", "restriction_value":"", "restriction_units":""},
+			{"lane_restriction_id":"", "restriction_type":"", "restriction_value":"", "restriction_units":""}
+		]]},
+		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":""},
+		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":""}
+		]]
       },
-      "geometry": {
+	"geometry": {
         "type": "MultiPoint",
-        "coordinates": [
-          [
-            -112.25971430540085,
-            33.43575915170122
-          ],
-          [
-            -112.22450494766235,
-            33.4371155596992
-          ]
+        	"coordinates": [
+          	[
+	        -72.63399,
+        	42.33865
+		],
+          	[
+            	-72.6214,
+            	42.33307
+          	]
         ]
       }
     }
