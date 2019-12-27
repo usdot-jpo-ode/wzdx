@@ -61,7 +61,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 		"road_name": "I-35",
 		"road_number": "I-35",
 		"direction": "northbound",
-		"begining_accuracy": "verified",
+		"beginning_accuracy": "verified",
 		"ending_accuracy": "verified",
 		"start_date": "2015-01-07T16:50:56Z",
 		"start_date_accuracy": "verified",
