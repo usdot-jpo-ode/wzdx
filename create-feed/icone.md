@@ -50,6 +50,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 "road_event_feed_info": {
 	"feed_info_id": "1",
 	"feed_update_date": "2015-01-07T16:50:56Z",
+	"metadata":"http://ftp.dot.state.tx.us/pub/txdot/my35/news/semiannual-update.pdf",
 	"version":"2.0"
 },
 "type": "FeatureCollection",
