@@ -10,7 +10,7 @@ road_event_feed_info Table
 
 feed_info_id | feed_update_date | metadata | version
 --- | --- | --- | ---
-1 | 2015-01-07T16:50:56Z |  |
+1 | 2015-01-07T16:50:56Z | http://ftp.dot.state.tx.us/pub/txdot/my35/news/semiannual-update.pdf  | 2.0
 
 #### Event Information (1 or more entries per feed)
 road_events Table
