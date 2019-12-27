@@ -49,7 +49,8 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 {
 "road_event_feed_info": {
 	"feed_info_id": "1",
-	"feed_update_date": "2015-01-07T16:50:56Z"
+	"feed_update_date": "2015-01-07T16:50:56Z",
+	"version":"2.0"
 },
 "type": "FeatureCollection",
 "features": [
