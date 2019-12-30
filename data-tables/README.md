@@ -19,8 +19,8 @@ This document defines the content of the Work Zone Data Specification by means o
     - [**Lanes Table**](/data-tables/lanes.md)
     - [**Lane Restrictions Table**](/data-tables/lane_restrictions.md)
 - [**Enumerated Fields**](/data-tables/enumerated-fields.md) 
-- [**Enumerated Field Definitions**](/data-tables/enumerated-field-definitions.md) 
-- [**Enumerated Field Definitions Derived from ITS Standards**](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
+    - [**Enumerated Field Definitions**](/data-tables/enumerated-field-definitions.md) 
+    - [**Enumerated Field Definitions Derived from ITS Standards**](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
 - [**Metadata**](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/metadata.md) 
 
 
