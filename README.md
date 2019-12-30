@@ -54,7 +54,7 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
     - Table Definitions
         - [Road Event Feed Info Table](/data-tables/road_event_feed_info.md)
         - [Road Event Table](/data-tables/road_events.md)
-        - [Types of Work Table](/data-table/types_of_work.md)
+        - [Types of Work Table](/data-tables/types_of_work.md)
         - [Lanes Table](/data-tables/lanes.md)
         - [Lane Restrictions Table](/data-tables/lane_restriction.md)
     - [Enumerated Fields](/data-tables/enumerated-fields.md) 
