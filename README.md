@@ -17,15 +17,15 @@ The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Inte
 Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki ), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. Currently, the WZDWG’s priority is to update WZDx v1.1, developing version 2.0 of the specification based on lessons learned from v1.1 and new insights from the user community. 
 
 ## How can I participate?
-The WZDWG welcomes feedback and comments on the v1.1 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Alternatively, issues or suggested changes can be emailed to [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.).
+The WZDWG welcomes feedback and comments on the v2 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Alternatively, issues or suggested changes can be emailed to [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.).
 
-[v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/full-spec/full-spec.md) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
+The WZDx v2 specification is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
 
 1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use the [Data Tables](/data-tables/README.md) to understand the data components of the spec.
 4. [Create your own feed](/create-feed/README.md) using the example feeds and learn about the supported data files.
-5. Test your feed with [prototype WZDx v1.1 JSON Schema Spec Validation Tool](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
+5. Test your feed (coming soon).
 6. Publish your feed, and tell us about via avdx@dot.gov. 
 
 ## How can I get help with implementation? 
@@ -73,25 +73,7 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
 Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help Automated Vehicles (AVs) navigate safely and efficiently. Many infrastructure owners and operators (IOOs) maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
 In support of AV integration into our nation’s transportation system, the Federal Highway Administration (FHWA) and USDOT’s Intelligent Transportation Systems Joint Program Office (ITS JPO) are co-leading the Work Zone Data Exchange (WZDx) project. The effort seeks to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. WZDx will enable collaborative maintenance and expansion of the specification as operational and technological enhancements become available.
 Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users. These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). This approach is intended to be repeatable leading to the accelerated harmonization of local data.
-The following data producers and users (i.e., the WZDx Working Group) voluntarily committed to participating and have been actively involved in the initial development of the standardized data specification:
-
-Data Producers | Data Users
-------------- | ----------
-•	Pennsylvania Turnpike Authority<br>(also representing the Smart Belt Coalition) | •	HERE
-•	Michigan Department of Transportation | •	Waze
-•	Iowa Department of Transportation | •	Panasonic
-•	Colorado Department of Transportation | •	Toyota
-•	Kentucky Department of Transportation | •	Uber
-•	iCone | •	Embark
-
-Recordings are available from the working group meetings that led to development of the v1.1 specification.
-- [Meeting 1 – June 13, 2018](https://bowen-icfi.adobeconnect.com/p0gtiy4pjtcx/)
-- [Meeting 2 – June 19, 2018](https://bowen-icfi.adobeconnect.com/phlz779vkncs/)
-- [Meeting 3 – July 18, 2018](https://bowen-icfi.adobeconnect.com/psxjciau5oho/)
-- [Meeting 4 – July 25, 2018](https://bowen-icfi.adobeconnect.com/pw5nwgumunm5/)
-- [Meeting 5 - August 7, 2018](https://bowen-icfi.adobeconnect.com/pttje4yb5w27/)
-- [Meeting 6 - August 14, 2018](https://bowen-icfi.adobeconnect.com/p7ct4tmuvf4w/)
-- [Meeting 7 – September 5, 2018](https://bowen-icfi.adobeconnect.com/pz3q93pojlxv/?proto=true)
+Many data producers and users (i.e., the [WZDx Working Group](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)) voluntarily committed to participating and have been actively involved in the development of the v2 specification. 
 
 ### Document Organization
 The remainder of this specification is organized into the following sections:
