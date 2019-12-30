@@ -1,5 +1,4 @@
 # **Data Tables**
-**Revised November 18, 2019**.
 
 This document defines the content of the Work Zone Data Specification by means of an Entity Relationship Diagram (ERD). The ERD organizes data into distinct entities (also known as tables or objects), defines the content (also known as fields or properties) of each entity, and documents how those entities, tables or objects are related (Relationships).  Also included, when applicable, are enumeration tables which define the values to which field content is restricted.
 - **Data Name** - name of the field or column 
