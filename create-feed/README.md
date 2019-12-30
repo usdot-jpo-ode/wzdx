@@ -1,9 +1,9 @@
 # CREATING THE FEED
 
-1. [Collaborate via GitHub](#collaborate-via-GitHub)
-2. [Data File Types](#data-file-types)
-3. [Code Examples](#code-examples)
-4. [Data Validation Tools](#data-validation-tools)
+- [Collaborate via GitHub](#collaborate-via-GitHub)
+- [Data File Types](#data-file-types)
+- [Code Examples](#code-examples)
+- [Data Validation Tools](#data-validation-tools)
 
 ### Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
