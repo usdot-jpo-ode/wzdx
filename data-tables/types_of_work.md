@@ -5,6 +5,7 @@ This table indicates the type of work being done in a road event, if applicable 
 
 This table is related to the [road_events](/data-tables/road_events.md) table by the foreign key road_event_id.  For every record in the road_event table there exists zero or more records in the types_of_work table.
 
+#### Types of Work Table
 Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-|
 type_of_work_id|ID|Identifies the types_of_work record|Required|Primary key
