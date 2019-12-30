@@ -29,9 +29,9 @@ The metadata file will include one of five enumerated type values for WZ-locatio
 
 For this data element (WZ-location-method), select the value below that most closely represents how begin and end locations are assigned in the WZDX file.
 
-* **channel-device-method** (see section 5.1) – *this is the preferred method*
-* **sign-method** (see section 5.2)
-* **junction-method** (see section 5.3)
+* **channel-device-method**  – *this is the preferred method*
+* **sign-method** 
+* **junction-method** 
 * **unknown** – when method for locating the begin and end locations of the work zone is not known
 * **other** – when the method for locating the begin and end locations do not closely match any of the alternatives. An explanation should be included in the metadata when this value is assigned.
 
