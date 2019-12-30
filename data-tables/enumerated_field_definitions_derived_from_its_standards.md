@@ -1,5 +1,5 @@
 # Enumerated Value Definitions Derived from ITS Standards
-The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) for:
+The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [Enumerated Types](/data-tables/enumerated-fields.md) for:
 - [lane_type](#lane_types)
 - [closedShoulders](#closedshoulders)
 - [event_direction](#event_direction)
