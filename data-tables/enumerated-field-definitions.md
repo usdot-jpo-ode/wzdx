@@ -1,5 +1,5 @@
 # Enumerated Field Definitions
-This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
+This section includes definitions for enumerated types including geometry types, work zone status, status of Time and Location, Road Restrictions, and types of Work Type.
 
 #### Geometry Type Definitions Table
 Term | Geometry Type Description
@@ -47,7 +47,7 @@ RoadRestrictions | Descriptions
 
 #### Types of Work Type Names Table
 Type Name | Description
-- | -
+---------------- | ------------
 **maintenance** | Work with no impact on the roadway. This includes events such as trash pickup, mowing, landscaping.
 **minor-road-defect-repair** | Pothole repair, road crack repair and sealing, and other small road defect repairs.
 **roadside-work** | Work that is isolated to the side of the road and not in the main travel way, such as repair, replacement, or addition of streetlights, VMS, signs (guide, warning, regulatory, and information signs) in the ground.
