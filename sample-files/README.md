@@ -16,7 +16,7 @@ In the `v1.0` directory, find the following sample files:
 * [CaltTrans Example.xml](/create-feed/examples/caltrans.geojson)
 * [iCone Example.json](/create-feed/examples/icone.geojson)
 * [MassDot Example.json](/create-feed/examples/massdot.geojson)
-* [WZDx_draft01.xsd](/sample-files/v1.0/WZDx_final01.xsd)
+* [WZDx_draft01.xsd](/sample-files/xml-schema.xsd)
 
 ### Version 1.0 Examples and Schema
 In the `v1.0` directory, find the following sample files:
