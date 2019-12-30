@@ -62,9 +62,9 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
         - [Enumerated Field Definitions Derived from ITS Standards](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
 - [Creating the Specification](/create-feed)
     - [Code Examples](/create-feed/README.md#code-examples)
-       - [Example 1 MassDOT](/create-feed/massdot.md)  
-       - [Example 2 iCone](/create-feed/icone.md)
-       - [Example 3 Caltrans](/create-feed/caltrans.md)
+       - [Example 1 MassDOT](/create-feed/examples/massdot.md)  
+       - [Example 2 iCone](/create-feed/examples/icone.md)
+       - [Example 3 Caltrans](/create-feed/examples/caltrans.md)
 - [XML Schema and Examples of XML and JSON files](sample-files/README.md#xml-schema-and-examples-of-xml-and-json-files)
 - [WZ Location Method Description and Practices](/sample-files/README.md#wz-location-method-description-and-practices)
 
