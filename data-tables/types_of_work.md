@@ -9,5 +9,5 @@ Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-|
 type_of_work_id|ID|Identifies the types_of_work record|Required|Primary key
 [road_event_id](/data-tables/road_events.md)|ID|Identifies the road event to the type_of_work is related.|Required|Foreign key
-[type_name](/data-table/enumerated-field-definitions.md#Types-of-Work-Type-Names-Table)|Enumeration; Text|A high-level text description of the type of work being done.|Required|
+type_name|Enumeration; Text|A high-level text description of the type of work being done.|Required|See [type of work names](/data-tables/enumerated-field-definitions.md#Types-of-Work-Type-Names-Table)
 is_architectural_change|Boolean|A flag indicating whether the type of work will result in an architectural change to the roadway.|Optional|
