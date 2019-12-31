@@ -1,66 +1,102 @@
 {
-"road_event_feed_info": {
-	"feed_info_id": "",
-	"feed_update_date": "",
+  "road_event_feed_info": {
+    "feed_info_id": "",
+    "feed_update_date": "2010-01-01T01:01:01",
     "metadata": "",
-	"version":""
-},
-"type": "FeatureCollection",
-"features": [
- {
-"type": "Feature",
-	"properties": {
-		"road_event_id": "",
-				"feed_info_id": "",
-				"subidentifier": "",
-				"road_name": "",
-				"road_number": "",
-				"direction": "",
-				"beginning_cross_street": "",
-				"ending_cross_street": "",
-				"beginning_milepost": "",
-				"ending_milepost": "",
-				"beginning_accuracy": "",
-				"ending_accuracy": "",
-				"start_date": "",
-				"end_date": "",
-				"start_date_accuracy": "",
-				"end_date_accuracy": "",
-				"event_status": "",
-				"total_num_lanes": "",
-				"vehicle_impact": "",
-				"workers_present": "",
-				"reduced_speed_limit": "",
-				"restrictions": "",	
-				"description": "",
-				"issuing_organization": "",
-				"creation_date": "",
-				"update_date": "",
-		"type_of_work":[[
-			{"type_of_work_id":"", "type_name":"", "is_architectual_change":""},
-			{"type_of_work_id":"", "type_name":"", "is_architectual_change":""}
-		]],
-		"lanes": [[
-		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":"",
-		"lane_restrictions":[[
-			{"lane_restriction_id":"", "restriction_type":"", "restriction_value":"", "restriction_units":""},
-			{"lane_restriction_id":"", "restriction_type":"", "restriction_value":"", "restriction_units":""}
-		]]},
-		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":""},
-		{"lane_id":"", "lane_edge_reference":"", "lane_number":"", "lane_status":"", "lane_type":""}
-		]]
+    "version": ""
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "",
+        "feed_info_id": "",
+        "subidentifier": "",
+        "road_name": "",
+        "road_number": "",
+        "direction": "",
+        "beginning_cross_street": "",
+        "ending_cross_street": "",
+        "beginning_milepost": "",
+        "ending_milepost": "",
+        "beginning_accuracy": "",
+        "ending_accuracy": "",
+        "start_date": "2010-01-01T01:01:01",
+        "end_date": "2010-01-02T01:01:01",
+        "start_date_accuracy": "",
+        "end_date_accuracy": "",
+        "event_status": "",
+        "total_num_lanes": "",
+        "vehicle_impact": "",
+        "workers_present": "",
+        "reduced_speed_limit": "",
+        "restrictions": "",
+        "description": "",
+        "issuing_organization": "",
+        "creation_date": "2010-01-01T01:01:01",
+        "update_date": "2010-01-01T01:01:01",
+        "type_of_work": [
+          {
+            "type_of_work_id": "",
+            "type_name": "",
+            "is_architectual_change": ""
+          },
+          {
+            "type_of_work_id": "",
+            "type_name": "",
+            "is_architectual_change": ""
+          }
+        ],
+        "lanes": [
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": "",
+            "lane_status": "",
+            "lane_type": "",
+            "lane_restrictions": [
+              {
+                "lane_restriction_id": "",
+                "restriction_type": "",
+                "restriction_value": "",
+                "restriction_units": ""
+              },
+              {
+                "lane_restriction_id": "",
+                "restriction_type": "",
+                "restriction_value": "",
+                "restriction_units": ""
+              }
+            ]
+          },
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": "",
+            "lane_status": "",
+            "lane_type": ""
+          },
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": "",
+            "lane_status": "",
+            "lane_type": ""
+          }
+        ]
       },
-	"geometry": {
+      "geometry": {
         "type": "MultiPoint",
-        	"coordinates": [
-          	[
-	        -72.63399,
-        	42.33865
-		],
-          	[
-            	-72.6214,
-            	42.33307
-          	]
+        "coordinates": [
+          [
+            -72.63399,
+            42.33865
+          ],
+          [
+            -72.6214,
+            42.33307
+          ]
         ]
       }
     }
