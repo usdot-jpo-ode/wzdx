@@ -1,4 +1,4 @@
-# Example 3: CalTrans 
+# Example 3: CalTrans
 
 - [Template](#template)
 - [GeoJSON Implementation](#geojson-implementation)
@@ -17,15 +17,15 @@ road_events Table
 
 road_event_id | feed_info_id | subidentifier | geometry_type | geometry | road_name | road_number | direction | beginning_cross_street | ending_cross_street | beginning_milepost |ending_milepost | beginning_accuracy | ending_accuracy | start_date | end_date | start_date_accuracy | end_date_accuracy | event_status | total_num_lanes | vehicle_impact | workers_present | reduced_speed_limit | restrictions | description | issuing_organization | creation_date | update_date
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
-C299CA-0004-2016-04-12-00:01:00 | 1 | | MultiPoint | [[-122.733841, 40.635122],[-122.654384, 40.67201]] | CA-299 | | eastbound | | | 114.190 | 121.633 | estimated | estimated | 2016-11-03T19:37:00 | 2016-11-04T05:30:00 | verified | estimated | active | 2 | some-lanes-closed | true | | | One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days. | Caltrans | 2016-04-12T00:01:00 | 2016-04-19T14:41:04
+C299CA-0004-2016-04-12-00:01:00 | 1 | | LineString | [[-122.73389875888823,40.63513265927444],[-122.73365736007689,40.635380984157706],[-122.73337841033934,40.635633378994235],[-122.73313164710997,40.63595090662687],...,[-122.65500962734221,40.67192351821025],[-122.65469312667845,40.671968273490336],[-122.65438735485077,40.671968273490336]] | CA-299 | CA-299 | eastbound | | | 114.190 | 121.633 | estimated | estimated | 2016-11-03T19:37:00 | 2016-11-04T05:30:00 | verified | estimated | active | 2 | some-lanes-closed | true | | | One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days. | Caltrans | 2016-04-12T00:01:00 | 2016-04-19T14:41:04
 
 #### Type of Work (0 or more entries per road event)
-type_of_work Table
+types_of_work Table
 
 type_of_work_id | road_event_id | type_name | is_architectural_change
 --|--|--|--
-0 | C299CA-0004-2016-04-12-00:01:00 | maintenance | 0
-1 | C299CA-0004-2016-04-12-00:01:00 | overhead-work | 0
+0 | C299CA-0004-2016-04-12-00:01:00 | maintenance | false
+1 | C299CA-0004-2016-04-12-00:01:00 | overhead-work | false
 
 #### Lane Information (0 or more entries per road event)
 lanes Table
@@ -50,12 +50,12 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 
 ```geojson
 {
-"road_event_feed_info": {
-	"feed_info_id": "1",
-	"feed_update_date": "2016-04-19T14:41:04",
-	"version":"2.0"
-},
-"type": "FeatureCollection",
+  "road_event_feed_info": {
+    "feed_info_id": "1",
+    "feed_update_date": "2016-04-19T14:41:04",
+    "version": "2.0"
+  },
+  "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
@@ -63,59 +63,66 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "road_event_id": "C299CA-0004-2016-04-12-00:01:00",
         "feed_info_id": "1",
         "road_name": "CA-299",
-        "road_num": "CA-299",
+        "road_number": "CA-299",
         "direction": "eastbound",
         "beginning_milepost": "114.190",
         "ending_milepost": "121.633",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
-        "start_date": "2016-04-12T15:58:00",
-        "end_date": "2016-04-30T",
+        "start_date": "2016-11-03T19:37:00",
+        "end_date": "2016-11-04T05:30:00",
         "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "total_num_lanes": "2",
         "vehicle_impact": "some-lanes-closed",
-        "worker_present": "true",
+        "workers_present": "true",
         "description": "One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.",
         "issuing_organization": "CalTrans",
-        "update_date": "2017-11-02T18:57:02",
-        "type_of_work": {
-          "type_of_work_id": "0",
-          "type_name": "maintenance",
-          "is_architectual_change": "0"
-        },
-        "lanes": [[
-            {
-              "lane_id": "0",
-              "lane_edge_reference": "left",
-              "lane_number": "1",
-              "lane_status": "closed",
-              "lane_type": "left-shoulder"
-            },
-            {
-              "lane_id": "1",
-              "lane_edge_reference": "left",
-              "lane_number": "2",
-              "lane_status": "closed",
-              "lane_type": "left-lane"
-            },
-            {
-              "lane_id": "2",
-              "lane_edge_reference": "left",
-              "lane_number": "3",
-              "lane_status": "open",
-              "lane_type": "right-lane"
-            },
-            {
-              "lane_id": "3",
-              "lane_edge_reference": "left",
-              "lane_number": "4",
-              "lane_status": "open",
-              "lane_type": "right-shoulder"
-            }
-          ]]
-        
+        "creation_date": "2016-04-12T00:01:00",
+        "update_date": "2016-04-19T14:41:04",
+        "types_of_work": [
+          {
+            "type_of_work_id": "0",
+            "type_name": "maintenance",
+            "is_architectual_change": "false"
+          },
+          {
+            "type_of_work_id": "1",
+            "type_name": "overhead-work",
+            "is_architectual_change": "false"
+          }
+        ],
+        "lanes": [
+          {
+            "lane_id": "0",
+            "lane_edge_reference": "left",
+            "lane_number": "1",
+            "lane_status": "closed",
+            "lane_type": "left-shoulder"
+          },
+          {
+            "lane_id": "1",
+            "lane_edge_reference": "left",
+            "lane_number": "2",
+            "lane_status": "closed",
+            "lane_type": "left-lane"
+          },
+          {
+            "lane_id": "2",
+            "lane_edge_reference": "left",
+            "lane_number": "3",
+            "lane_status": "open",
+            "lane_type": "right-lane"
+          },
+          {
+            "lane_id": "3",
+            "lane_edge_reference": "left",
+            "lane_number": "4",
+            "lane_status": "open",
+            "lane_type": "right-shoulder"
+          }
+        ]
       },
       "geometry": {
         "type": "LineString",
@@ -2065,3 +2072,4 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
     }
   ]
 }
+```
