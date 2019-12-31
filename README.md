@@ -1,5 +1,5 @@
 ### Work Zone Data Exchange (WZDx)
-Updated 12/31/2019
+Last updated 12/31/2019 - WZDx specification v2.0 
 
 # What is the WZDx Specification?
 The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones in
