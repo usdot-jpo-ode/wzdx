@@ -14,6 +14,6 @@ Field Name | Data Type | Description | Conformance | Notes
 **lrs_type** | Text |Describes the type of linear referencing<br>system used for the milepost<br>measurements | Required | Example Use of milemarkers posted by the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap. 
 **lrs_url** | URL |A URL where additional information on the<br>LRS information and transformation<br>information is stored | Optional | Example https://aaa.bbb.com/lrs
 **datafeed_frequency_update** | Text | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h-hours</li></ul> | Optional | Example 30s<br>15m<br>24h
-'**timestamp_metadata_update** | DateTime | The time and date when this file was last<br>updated | Required | Example 2016-04-12T00:01:00
+**timestamp_metadata_update** | DateTime | The time and date when this file was last<br>updated | Required | Example 2016-04-12T00:01:00
 **contact_name** | Text |The name of a contact responsible for the<br>data feed | Required |Example Jo Help
 **contact_email** | Text | The contact’s email address | Required | Example jhelp@anyplacePW.com
