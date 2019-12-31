@@ -7,7 +7,7 @@ This table is related to the [road_event_feed_info](/data-tables/road_event_feed
 
 This table is related to the [types_of_work](/data-tables/types_of_work.md) table; For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
 
-This table is related to the [lanes](/data-tables/lanes.md) table; For each record in the road_events table there may exists one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
+This table is related to the [lanes](/data-tables/lanes.md) table; For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
 
 #### road_events table
 
