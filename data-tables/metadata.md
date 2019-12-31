@@ -1,5 +1,5 @@
 # Metadata
-This section describes the contents of a static file with information about the quality and context of data in the data feed. The files should be made available to data consumers through a link included in the [WZDx header data elements](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/wzdx-header-data.md).
+This section describes the contents of a static file with information about the quality and context of data in the data feed. The files should be made available to data consumers through a link included in the [road_event_feed_info table](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/road_event_feed_info.md).
 
 The static file shall be encoded as a comma delimited text file.
 
