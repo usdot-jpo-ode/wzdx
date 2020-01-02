@@ -1,5 +1,5 @@
 # Enumerated Field Definitions
-This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions.
+This section includes definitions for enumerated types including geometry types, work zone status, status of Time and Location, Road Restrictions, and types of Work Type.
 
 #### Geometry Type Definitions Table
 Term | Geometry Type Description
@@ -19,14 +19,14 @@ Term | event_status Description
 #### Time Verification Definitions  Table
 Term |  Time Verification Definitions Description
 ---- | ---------------------
-**Estimated** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
-**Verified** | Actual reported times/dates when work occurs.
+**Estimated (-est)** | Specific times/dates when work will or is occurring; includes advanced notice of<br>activities or unverified work zone activities. This date/time may be reported in<br>advance, but is not actively verified on day of event.
+**Verified (-ver)** | Actual reported times/dates when work occurs.
 
 #### Spatial Verification Definitions Table
 Term | Spatial Verification Definitions
 ---- | ---------------------
-**Estimated** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
-**Verified** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
+**Estimated (-est)** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
+**Verified (-ver)** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
 #### Restriction Type Definitions Table
 RoadRestrictions | Descriptions
@@ -47,7 +47,7 @@ RoadRestrictions | Descriptions
 
 #### Types of Work Type Names Table
 Type Name | Description
-- | -
+---------------- | ------------
 **maintenance** | Work with no impact on the roadway. This includes events such as trash pickup, mowing, landscaping.
 **minor-road-defect-repair** | Pothole repair, road crack repair and sealing, and other small road defect repairs.
 **roadside-work** | Work that is isolated to the side of the road and not in the main travel way, such as repair, replacement, or addition of streetlights, VMS, signs (guide, warning, regulatory, and information signs) in the ground.

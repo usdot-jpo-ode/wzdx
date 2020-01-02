@@ -5,12 +5,11 @@
 - [Data Validation Tools](#data-validation-tools)
 - [Collaborate via GitHub](#collaborate-via-GitHub)
 
-
 ### Data File Types
 The WZDx v2.0 data feed is formatted according to the [geoJSON](https://geojson.org/) specification.  GeoJSON is the file format of choice because:
 - It is a lightweight data exchange format.
 - It is easy for humans to read and write.
-- It is Easy for machines to parse and generate.
+- It is easy for machines to parse and generate.
 - The format is designed to exchange spatial data, which is a primary goal of the Work Zone Data Working Group.
 - It is an open specification and does not carry licensing burdens.
 - GeoJSON formatted-data is published as text files, there is a low technological burden of entry.
@@ -68,4 +67,4 @@ To interact directly with the DAVI Data Team and to get help implementing the sp
 Version 2 validation tools are being built.  Documentation will be posted here when it is available.
 
 #### Version 1.0
-To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JASON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
+To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
