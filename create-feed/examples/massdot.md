@@ -10,14 +10,14 @@ road_event_feed_info Table
 
 feed_info_id | feed_update_date | metadata | version
 --- | --- | --- | ---
-1 | 2017-11-02T18:57:02 |  | 2.0
+1 | 2017-11-02T18:57:02Z |  | 2.0
 
 #### Event Information (1 or more entries per feed)
 road_events Table
 
 road_event_id | feed_info_id | subidentifier | geometry_type | geometry | road_name | road_number | direction | beginning_cross_street | ending_cross_street | beginning_milepost |ending_milepost | beginning_accuracy | ending_accuracy | start_date | end_date | start_date_accuracy | end_date_accuracy | event_status | total_num_lanes | vehicle_impact | workers_present | reduced_speed_limit | restrictions | description | issuing_organization | creation_date | update_date
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
-137097 | 1 | | MultiPoint | [[-72.63399, 42.33865],[-72.6214, 42.33307]] | I-91 | | southbound | | | | | estimated | estimated | 2016-11-03T19:37:00 | 2016-11-04T05:30:00 | verified | estimated | active | 3 | some-lanes-closed | | | | I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9 | MassDOT | | 2017-11-02T18:57:02
+137097 | 1 | | MultiPoint | [[-72.63399, 42.33865],[-72.6214, 42.33307]] | I-91 | | southbound | | | | | estimated | estimated | 2016-11-03T19:37:00Z | 2016-11-04T05:30:00Z | verified | estimated | active | 3 | some-lanes-closed | | | | I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9 | MassDOT | | 2017-11-02T18:57:02Z
 
 #### Type of Work (0 or more entries per road event)
 types_of_work Table
@@ -52,7 +52,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
 {
   "road_event_feed_info": {
     "feed_info_id": "1",
-    "feed_update_date": "2017-11-02T18:57:02",
+    "feed_update_date": "2017-11-02T18:57:02Z",
     "version": "2.0"
   },
   "type": "FeatureCollection",
@@ -66,8 +66,8 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "direction": "southbound",
         "begining_accuracy": "estimated",
         "ending_accuracy": "estimated",
-        "start_date": "2016-11-03T19:37:00",
-        "end_date": "2016-11-04T05:30:00",
+        "start_date": "2016-11-03T19:37:00Z",
+        "end_date": "2016-11-04T05:30:00Z",
         "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
@@ -75,7 +75,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "vehicle_impact": "some-lanes-closed",
         "description": "I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9",
         "issuing_organization": "MassDOT",
-        "update_date": "2017-11-02T18:57:02",
+        "update_date": "2017-11-02T18:57:02Z",
         "types_of_work": [
           {
             "type_of_work_id": "0",

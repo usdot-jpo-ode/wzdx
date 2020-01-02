@@ -1,7 +1,7 @@
 {
   "road_event_feed_info": {
     "feed_info_id": "",
-    "feed_update_date": "2010-01-01T01:01:01",
+    "feed_update_date": "2010-01-01T01:01:01Z",
     "metadata": "",
     "version": "2.0"
   },
@@ -22,8 +22,8 @@
         "ending_milepost": 105.20,
         "beginning_accuracy": "",
         "ending_accuracy": "",
-        "start_date": "2010-01-01T01:01:01",
-        "end_date": "2010-01-02T01:01:01",
+        "start_date": "2010-01-01T01:01:01Z",
+        "end_date": "2010-01-02T01:01:01Z",
         "start_date_accuracy": "",
         "end_date_accuracy": "",
         "event_status": "",
@@ -34,8 +34,8 @@
         "restrictions": "",
         "description": "",
         "issuing_organization": "",
-        "creation_date": "2010-01-01T01:01:01",
-        "update_date": "2010-01-01T01:01:01",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:01:01Z",
         "types_of_work": [
           {
             "type_of_work_id": "",
