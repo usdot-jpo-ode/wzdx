@@ -71,7 +71,7 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
-        "total_num_lanes": "3",
+        "total_num_lanes": 3,
         "vehicle_impact": "some-lanes-closed",
         "description": "I-91 Southbound Exit (20) Rt-5/ Rt-10 Northampton Hadley to Exit (19) Rt-9",
         "issuing_organization": "MassDOT",
@@ -80,32 +80,32 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
           {
             "type_of_work_id": "0",
             "type_name": "maintenance",
-            "is_architectual_change": "false"
+            "is_architectual_change": false
           },
           {
             "type_of_work_id": "1",
             "type_name": "overhead-work",
-            "is_architectual_change": "false"
+            "is_architectual_change": false
           }
         ],
         "lanes": [
           {
             "lane_id": "0",
             "lane_edge_reference": "left",
-            "lane_number": "1",
+            "lane_number": 1,
             "lane_status": "merge-right",
             "lane_type": "left-lane",
             "lane_restrictions": [
               {
                 "lane_restriction_id": "0",
                 "restriction_type": "reduced-width",
-                "restriction_value": "18",
+                "restriction_value": 18,
                 "restriction_units": "feet"
               },
               {
                 "lane_restriction_id": "1",
                 "restriction_type": "reduced-height",
-                "restriction_value": "15",
+                "restriction_value": 15,
                 "restriction_units": "feet"
               }
             ]
@@ -113,14 +113,14 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
           {
             "lane_id": "1",
             "lane_edge_reference": "left",
-            "lane_number": "2",
+            "lane_number": 2,
             "lane_status": "open",
             "lane_type": "center-lane"
           },
           {
             "lane_id": "2",
             "lane_edge_reference": "left",
-            "lane_number": "3",
+            "lane_number": 3,
             "lane_status": "open",
             "lane_type": "right-lane"
           }

@@ -65,8 +65,8 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "road_name": "CA-299",
         "road_number": "CA-299",
         "direction": "eastbound",
-        "beginning_milepost": "114.190",
-        "ending_milepost": "121.633",
+        "beginning_milepost": 114.19,
+        "ending_milepost": 121.633,
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2016-11-03T19:37:00",
@@ -74,9 +74,9 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
-        "total_num_lanes": "2",
+        "total_num_lanes": 2,
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": "true",
+        "workers_present": true,
         "description": "One lane closed on Route 299 East near Lewiston to French Gulch (0.6 mi west of Crystal Creek Rd) for approximately 30 days.",
         "issuing_organization": "CalTrans",
         "creation_date": "2016-04-12T00:01:00",
@@ -85,40 +85,40 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
           {
             "type_of_work_id": "0",
             "type_name": "maintenance",
-            "is_architectual_change": "false"
+            "is_architectual_change": false
           },
           {
             "type_of_work_id": "1",
             "type_name": "overhead-work",
-            "is_architectual_change": "false"
+            "is_architectual_change": false
           }
         ],
         "lanes": [
           {
             "lane_id": "0",
             "lane_edge_reference": "left",
-            "lane_number": "1",
+            "lane_number": 1,
             "lane_status": "closed",
             "lane_type": "left-shoulder"
           },
           {
             "lane_id": "1",
             "lane_edge_reference": "left",
-            "lane_number": "2",
+            "lane_number": 2,
             "lane_status": "closed",
             "lane_type": "left-lane"
           },
           {
             "lane_id": "2",
             "lane_edge_reference": "left",
-            "lane_number": "3",
+            "lane_number": 3,
             "lane_status": "open",
             "lane_type": "right-lane"
           },
           {
             "lane_id": "3",
             "lane_edge_reference": "left",
-            "lane_number": "4",
+            "lane_number": 4,
             "lane_status": "open",
             "lane_type": "right-shoulder"
           }

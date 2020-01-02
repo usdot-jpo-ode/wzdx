@@ -68,25 +68,23 @@ lane_restriction_id| lane_id | restriction_type | restriction_value | restrictio
         "start_date": "2015-01-07T16:50:56Z",
         "start_date_accuracy": "verified",
         "event_status": "active",
-        "total_num_lanes": "3",
+        "total_num_lanes": 3,
         "vehicle_impact": "all-lanes-open",
-        "workers_present": "true",
+        "workers_present": true,
         "description": "Long-term deployment near Temple",
         "issuing_organization": "iCone",
         "update_date": "2018-01-17T22:32:00Z",
         "types_of_work": [
-          [
-            {
-              "type_of_work_id": "0",
-              "type_name": "roadway-relocation",
-              "is_architectual_change": "true"
-            },
-            {
-              "type_of_work_id": "1",
-              "type_name": "overhead-work",
-              "is_architectual_change": "true"
-            }
-          ]
+          {
+            "type_of_work_id": "0",
+            "type_name": "roadway-relocation",
+            "is_architectual_change": true
+          },
+          {
+            "type_of_work_id": "1",
+            "type_name": "overhead-work",
+            "is_architectual_change": true
+          }
         ]
       },
       "geometry": {
