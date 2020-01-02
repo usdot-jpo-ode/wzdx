@@ -1,4 +1,10 @@
 {
+  "road_event_feed_info": {
+    "feed_info_id": "",
+    "feed_update_date": "2010-01-01T01:01:01Z",
+    "metadata": "",
+    "version": "2.0"
+  },
   "type": "FeatureCollection",
   "features": [
     {
@@ -12,78 +18,72 @@
         "direction": "",
         "beginning_cross_street": "",
         "ending_cross_street": "",
-        "beginning_milepost": "",
-        "ending_milepost": "",
+        "beginning_milepost": 100.05,
+        "ending_milepost": 105.20,
         "beginning_accuracy": "",
         "ending_accuracy": "",
-        "start_date": "",
-        "end_date": "",
+        "start_date": "2010-01-01T01:01:01Z",
+        "end_date": "2010-01-02T01:01:01Z",
         "start_date_accuracy": "",
         "end_date_accuracy": "",
         "event_status": "",
-        "total_num_lanes": "",
+        "total_num_lanes": 3,
         "vehicle_impact": "",
-        "workers_present": "",
-        "reduced_speed_limit": "",
+        "workers_present": false,
+        "reduced_speed_limit": 30,
         "restrictions": "",
         "description": "",
         "issuing_organization": "",
-        "creation_date": "",
-        "update_date": "",
-        "type_of_work": [
-          [
-            {
-              "type_of_work_id": "",
-              "type_name": "",
-              "is_architectual_change": ""
-            },
-            {
-              "type_of_work_id": "",
-              "type_name": "",
-              "is_architectual_change": ""
-            }
-          ]
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:01:01Z",
+        "types_of_work": [
+          {
+            "type_of_work_id": "",
+            "type_name": "",
+            "is_architectual_change": false
+          },
+          {
+            "type_of_work_id": "",
+            "type_name": "",
+            "is_architectual_change": false
+          }
         ],
         "lanes": [
-          [
-            {
-              "lane_id": "",
-              "lane_edge_reference": "",
-              "lane_number": "",
-              "lane_status": "",
-              "lane_type": "",
-              "lane_restrictions": [
-                [
-                  {
-                    "lane_restriction_id": "",
-                    "restriction_type": "",
-                    "restriction_value": "",
-                    "restriction_units": ""
-                  },
-                  {
-                    "lane_restriction_id": "",
-                    "restriction_type": "",
-                    "restriction_value": "",
-                    "restriction_units": ""
-                  }
-                ]
-              ]
-            },
-            {
-              "lane_id": "",
-              "lane_edge_reference": "",
-              "lane_number": "",
-              "lane_status": "",
-              "lane_type": ""
-            },
-            {
-              "lane_id": "",
-              "lane_edge_reference": "",
-              "lane_number": "",
-              "lane_status": "",
-              "lane_type": ""
-            }
-          ]
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": 1,
+            "lane_status": "",
+            "lane_type": "",
+            "lane_restrictions": [
+              {
+                "lane_restriction_id": "",
+                "restriction_type": "",
+                "restriction_value": 5.0,
+                "restriction_units": ""
+              },
+              {
+                "lane_restriction_id": "",
+                "restriction_type": "",
+                "restriction_value": 10.0,
+                "restriction_units": ""
+              }
+            ]
+          },
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": 2,
+            "lane_status": "",
+            "lane_type": ""
+          },
+          {
+            "lane_id": "",
+            "lane_edge_reference": "",
+            "lane_number": 3,
+            "lane_status": "",
+            "lane_type": ""
+          }
         ]
       },
       "geometry": {

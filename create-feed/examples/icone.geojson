@@ -1,38 +1,47 @@
 {
-"road_event_feed_info": {
-	"feed_info_id": "1",
-	"feed_update_date": "2015-01-07T16:50:56Z",
-	"metadata":"http://www.my35.org/",	
-	"version":"2.0"
-},
-"type": "FeatureCollection",
-"features": [
- {
-"type": "Feature",
-	"properties": {
-		"road_event_id": "320",
-		"feed_info_id": "1",
-		"road_name": "I-35",
-		"road_number": "I-35",
-		"direction": "northbound",
-		"begining_accuracy": "verified",
-		"ending_accuracy": "verified",
-		"start_date": "2015-01-07T16:50:56Z",
-		"start_date_accuracy": "verified",
-		"event_status": "active",
-		"total_num_lanes": "3",
-		"vehicle_impact": "all-lanes-open",
-		"description": "Long-term deployment near Temple",
-		"issuing_organization": "iCone",
-		"update_date":"2018-01-17T22:32:00Z",
-		"type_of_work":[[
-			{"type_of_work_id":"0", "type_name":"roadway-relocation", "is_architectual_change":"1"},
-			{"type_of_work_id":"1", "type_name":"overhead-work", "is_architectual_change":"1"}
-		]]
+  "road_event_feed_info": {
+    "feed_info_id": "1",
+    "feed_update_date": "2015-01-07T16:50:56Z",
+    "metadata": "http://www.my35.org/",
+    "version": "2.0"
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "320",
+        "feed_info_id": "1",
+        "road_name": "I-35",
+        "road_number": "I-35",
+        "direction": "northbound",
+        "begining_accuracy": "verified",
+        "ending_accuracy": "verified",
+        "start_date": "2015-01-07T16:50:56Z",
+        "start_date_accuracy": "verified",
+        "event_status": "active",
+        "total_num_lanes": 3,
+        "vehicle_impact": "all-lanes-open",
+        "workers_present": true,
+        "description": "Long-term deployment near Temple",
+        "issuing_organization": "iCone",
+        "update_date": "2018-01-17T22:32:00Z",
+        "types_of_work": [
+          {
+            "type_of_work_id": "0",
+            "type_name": "roadway-relocation",
+            "is_architectual_change": true
+          },
+          {
+            "type_of_work_id": "1",
+            "type_name": "overhead-work",
+            "is_architectual_change": true
+          }
+        ]
       },
-	"geometry": {
+      "geometry": {
         "type": "LineString",
-        	"coordinates": [
+        "coordinates": [
           [
             -97.40439623594284,
             31.08519686435773

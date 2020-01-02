@@ -1,4 +1,4 @@
-# road_events 
+# road_events
 **Required**
 
 (Formerly Common Core Data Dictionary). This table contains information about work zone events.  The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
@@ -27,8 +27,8 @@ Field Name | Data Type | Description | Conformance | Notes
 **ending_milepost**|Float|The linear distance measured against a milepost marker along a roadway where the event ends|Optional|A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. Provide link to description of milepost method in metadata file.
 **beginning_accuracy**|Enum: Estimated or Verified|Indicates how the beginning coordinate was defined.|Required|see [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
 **ending_accuracy**|Enum: Estimated or Verified|Indicates how the ending coordinate was defined.|Required|See [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
-**start_date**|DateTime|The time and date when the event begins.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
-**end_date**|DateTime|The time and date when the event ends.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange
+**start_date**|DateTime|The UTC time and date when the event begins.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
+**end_date**|DateTime|The UTC time and date when the event ends.|Required|All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
 **start_date_accuracy**|Enum: Estimated or Verified|A measure of how accurate the start Date Time is.|Required|See [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
 **end_date_accuracy**|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Required|see [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
 **event_status** |Enumeration; Text|The status of the event|Optional|See [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
@@ -39,5 +39,5 @@ Field Name | Data Type | Description | Conformance | Notes
 **restrictions** | Enumumeration; Text | One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons  | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes in the lane_restrictions table. See restrictions in [enumerated-fields](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2editorial/data-tables/enumerated-fields.md)
 **description** | Data element | Short free text description of work zone | Optional | This will be populated with formal phrases in a later WZDx version
 **issuing_organization** |Text | The organization issuing the data feed | Optional | Will create a list in a<br>future version
-**creation_date** | DateTime | The time and date when the activity or event was created | Optional |
-**update_date** | DateTime | The time and date when the activity or event was updated | Optional |
+**creation_date** | DateTime | The UTC time and date when the activity or event was created | Optional | All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
+**update_date** | DateTime | The UTC time and date when the activity or event was updated | Optional | All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
