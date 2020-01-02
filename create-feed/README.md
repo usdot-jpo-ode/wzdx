@@ -1,28 +1,9 @@
 # CREATING THE FEED
 
-1. [Collaborate via GitHub](#collaborate-via-GitHub)
-2. [Data File Types](#data-file-types)
-3. [Code Examples](#code-examples)
-4. [Data Validation Tools](#data-validation-tools)
-
-### Collaborate via GitHub
-GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
-- **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you maintain your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
-- **Adding Commits** - A commit is any change made to your project that you can track allowing you to create a record of your work that others can use a reference.  
-- **Opening a Pull Request** - Pull requests allows you to alert others on your team to let them review and discuss your changes. 
-- **Discussing and Reviewing Commits** - This part of the process allows reviewers on your team or the DAVI Data Team check that the spec is properly implemented (i.e., that data types are correctly specified in an .xsd file).
-- **Merging to Master Branch** - Once your commits have been reviewed and approved you can push your changes to merge with the master branch. 
-
-A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
-
-To start collaborating via GitHub:
-- [Join GitHub](https://github.com/join?source=header-home) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
-- If you are a data producer contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
-
-#### How Do I Get Help?
-To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an **issue** under the **help wanted** label on the Work Zone GitHub site.
-
-![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+- [Data File Types](#data-file-types)
+- [Code Examples](#code-examples)
+- [Data Validation Tools](#data-validation-tools)
+- [Collaborate via GitHub](#collaborate-via-GitHub)
 
 ### Data File Types
 The WZDx v2.0 data feed is formatted according to the [geoJSON](https://geojson.org/) specification.  GeoJSON is the file format of choice because:
@@ -43,7 +24,7 @@ WZD feeds contain one or more entries which describe a Work Zone's characteristi
 
 Figure 1 models the tables and their relationships.
 
-#### Figure 1: Work Zone Data Entity Relationship Diagram
+#### Work Zone Data Entity Relationship Diagram
 *Note*: Required data elements are in bold.
 
 ![Fig. 1](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v2/data-tables/road_event_erd.png)
@@ -60,6 +41,26 @@ These examples use the following sample work zone event template:
 #### Sample Work Zone Activity Template
 - [MultiPoint GeoJSON Template](/create-feed/templates/multipoint_template.geojson)
 - [LineString GeoJSON Template](/create-feed/templates/linestring_template.geojson)
+
+### Collaborate via GitHub
+GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
+- **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you maintain your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
+- **Adding Commits** - A commit is any change made to your project that you can track allowing you to create a record of your work that others can use a reference.  
+- **Opening a Pull Request** - Pull requests allows you to alert others on your team to let them review and discuss your changes. 
+- **Discussing and Reviewing Commits** - This part of the process allows reviewers on your team or the DAVI Data Team check that the spec is properly implemented (i.e., that data types are correctly specified in an .xsd file).
+- **Merging to Master Branch** - Once your commits have been reviewed and approved you can push your changes to merge with the master branch. 
+
+A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
+
+To start collaborating via GitHub:
+- [Join GitHub](https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
+- If you are a data producer contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
+
+#### How Do I Get Help?
+To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an **issue** under the **help wanted** label on the Work Zone GitHub site.
+
+![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+
 
 ### Data Validation Tools
 #### Version 2.0
