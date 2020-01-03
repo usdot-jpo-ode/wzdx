@@ -51,7 +51,7 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
     - [Background](#background)
     - [Document Organization](#document-organization)
 - [Data Tables](/data-tables)
-    - [Entity Relationship Diagram](/data-tables/road_event_erd.png)
+    - [Entity Relationship Diagram](/images/road_event_erd.png)
     - Table Definitions
         - [Road Event Feed Info Table](/data-tables/road_event_feed_info.md)
         - [Road Event Table](/data-tables/road_events.md)
