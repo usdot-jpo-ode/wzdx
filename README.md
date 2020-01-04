@@ -51,23 +51,18 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
     - [Background](#background)
     - [Document Organization](#document-organization)
 - [Data Tables](/data-tables)
-    - [Entity Relationship Diagram](/images/road_event_erd.png)
     - Table Definitions
         - [Road Event Feed Info Table](/data-tables/road_event_feed_info.md)
         - [Road Event Table](/data-tables/road_events.md)
         - [Types of Work Table](/data-tables/types_of_work.md)
         - [Lanes Table](/data-tables/lanes.md)
         - [Lane Restrictions Table](/data-tables/lane_restriction.md)
+        - [Metadata Table](/data-tables/metadata.md)
     - [Enumerated Fields](/data-tables/enumerated-fields.md) 
         - [Enumerated Field Definitions](/data-tables/enumerated-field-definitions.md) 
         - [Enumerated Field Definitions Derived from ITS Standards](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
 - [Creating the Specification](/create-feed)
-    - [Code Examples](/create-feed/README.md#code-examples)
-       - [Example 1 MassDOT](/create-feed/examples/massdot.md)  
-       - [Example 2 iCone](/create-feed/examples/icone.md)
-       - [Example 3 Caltrans](/create-feed/examples/caltrans.md)
-- [XML Schema and Examples of XML and JSON files](sample-files/README.md#xml-schema-and-examples-of-xml-and-json-files)
-- [WZ Location Method Description and Practices](/sample-files/README.md#wz-location-method-description-and-practices)
+    - [Example Feed GeoJSON Files](/create-feed/examples)
 
 ## Introduction
 ### Background
@@ -91,6 +86,3 @@ The remainder of this specification is organized into the following sections:
 
 **Creating the Specification**
 - This section provides a sample of how agencies will complete a Work Zone Activity record.
-
-**XML Schema and Samples of XML and JSON files**
-- This section includes the validated XML scheme and examples of XML and JSON files.
