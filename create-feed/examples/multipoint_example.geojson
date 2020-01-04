@@ -36,7 +36,7 @@
         "issuing_organization": "",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:01:01Z",
-        "type_of_work": [
+        "types_of_work": [
           {
             "type_of_work_id": "",
             "type_name": "",
