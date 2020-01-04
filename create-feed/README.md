@@ -15,11 +15,11 @@ A WZDx feed contains a single entry describing aspects of the feed itself (such 
 
 The tables below detail the specificaton's content and describe the data used to build the feed.
 
-### WZDx Feed Information
+## WZDx Feed Information
 
 - The [Road Event Feed Information](/feed-content/data-tables/road_event_feed_info.md) table describes the data feed.
 
-### WZDx Work Zone (Road Event) Information
+## WZDx Work Zone (Road Event) Information
 
 - The [Road Events](/feed-content/data-tables/road_events.md) table describes a work zone event.
 - The [Types of Work](/feed-content/data-tables/types_of_work.md) table describes the work work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
@@ -28,7 +28,7 @@ The tables below detail the specificaton's content and describe the data used to
 
 The figure below models the tables and their relationships.
 
-### Work Zone Data Entity Relationship Diagram
+## Work Zone Data Entity Relationship Diagram
 *Note*: Required data elements are in bold.
 
 ![road_event ERD](/images/road_event_erd.png)
@@ -40,10 +40,10 @@ The following WZDx feed examples include all optional fields. An example file is
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
 
 ## Data Validation Tools
-#### Version 2.0
+### Version 2.0
 Version 2 validation tools are being built. Documentation will be posted here when it is available.
 
-#### Version 1.0
+### Version 1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
 
 ## Collaborate via GitHub
