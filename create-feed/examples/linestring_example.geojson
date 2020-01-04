@@ -1,6 +1,5 @@
 {
   "road_event_feed_info": {
-    "feed_info_id": "567",
     "feed_update_date": "2010-01-01T01:01:01Z",
     "metadata": "https://fake-site.tld/dummy-metadata.txt",
     "version": "2.0"
