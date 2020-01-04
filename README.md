@@ -49,7 +49,6 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
 ## Table of Contents (V2.0)
 - [Introduction](#introduction)
     - [Background](#background)
-    - [Document Organization](#document-organization)
 - [Creating the Specification](/create-feed)
     - [Example Feed GeoJSON Files](/create-feed/examples)
 - [Feed Content](/feed-content)
