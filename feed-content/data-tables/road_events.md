@@ -33,7 +33,7 @@ Field Name | Data Type | Description | Conformance | Notes
 **end_date_accuracy**|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Required|see [Time Verification Enumerated Type](/feed-content/enumerated-types/time_verification.md)
 **event_status** |Enumeration; Text|The status of the event|Optional|See [Event Status Enumerated Type](/feed-content/enumerated-types/event_status.md)
 **total_num_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
-**vehicle_impact**|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required|Values = all-lanes-closed, some-lanes-closed, all-lanes-open, alternating-one-way, unknown
+**vehicle_impact**|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required| See [Vehicle Impact Enumerated Type](/feed-content/enumerated-types/vehicle_impact.md)
 **workers_present**|Boolean|A flag indicating that there are workers present in the event space|Optional
 **reduced_speed_limit**|Integer|The reduced speed limit posted within the event space|Optional|
 **restrictions** | Enumumeration; Text | One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons  | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes in the lane_restrictions table. See [Road Restriction Enumerated Type](/feed-content/enumerated-types/road_restriction)
