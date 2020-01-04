@@ -22,14 +22,14 @@ The tables below detail the specificaton's content and describe the data used to
 
 ### WZDx Feed Information
 
-- The [Road Event Feed Information](/data-tables/road_event_feed_info.md) table describes the data feed.
+- The [Road Event Feed Information](/feed-content/data-tables/road_event_feed_info.md) table describes the data feed.
 
 ### WZDx Work Zone (Road Event) Information
 
-- The [Road Events](/data-tables/road_events.md) table describes a work zone event.
-- The [Types of Work](/data-tables/types_of_work.md) table describes the work work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
-- The [Lanes](/data-tables/lanes.md) table identifies and describes individual lanes within an event.
-- The [Lane Restrictions](/lane_restriction.md) table describes restrictions for identified lanes.
+- The [Road Events](/feed-content/data-tables/road_events.md) table describes a work zone event.
+- The [Types of Work](/feed-content/data-tables/types_of_work.md) table describes the work work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Lanes](/feed-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
+- The [Lane Restrictions](/feed-content/lane_restrictions.md) table describes restrictions for identified lanes.
 
 The figure below models the tables and their relationships.
 

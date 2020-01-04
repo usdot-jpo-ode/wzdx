@@ -1,25 +1,9 @@
-# Enumerated Value Definitions Derived from ITS Standards
-The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [Enumerated Types](/data-tables/enumerated-fields.md) for:
-- [lane_type](#lane_types)
-- [direction](#direction)
-
-Example of data frame in the TMDD (specified in ASN.1 format)
-```xml
-DATA-TYPE "EventLane ::= SEQUENCE {
-    lanes-type ITIS.LaneRoadway OPTIONAL,
-    link-direction Link-direction OPTIONAL,
-    lanes-total-original Link-lanes-count OPTIONAL,
-    lanes-total-affected Link-lanes-count OPTIONAL,
-    event-lanes-affected SEQUENCE (SIZE(1..64)) OF Link-lane-number OPTIONAL,
-    lanes-status ITIS.Closures OPTIONAL,
-    ...  }"
-```
-
-#### lane_types
+# Lane Type 
 *Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | lane_types<br>enumerations | Description
---------------------------- | ------------------------------------- | -----------
+## Enumeration
+TMDD LaneRoadway Enumeration | Lane Type Enumeration | Description
+--- | --- | ---
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
 **left-lane (8194)** | left-lane | The left most lane (inside lane)
@@ -96,14 +80,9 @@ LaneRoadway<br>enumerations | lane_types<br>enumerations | Description
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### direction
-*Note:*  Link-alignment is imported from TMDD
+## Used By
+The **Lane Type** enumeration is used by the following fields
 
-Link-alignment<br>enumerations | Used for<br>direction | Description
------------------------------- | -------------------------- | -----------
-**northbound (1)** | northbound | Road flow is in the northbound direction
-**eastbound (2)** | eastbound | Road flow is in the eastbound direction
-**southbound (3)** | southbound | Road flow is in the southbound direction
-**westbound (4)** | westbound | Road flow is in the westbound direction
-**inner-loop (5)** |  | Not used
-**outer-loop (6)** |  | Not used
+Field Name | Data Table
+--- | ---
+lane_type | [lanes](/feed-content/data-tables/lanes.md)

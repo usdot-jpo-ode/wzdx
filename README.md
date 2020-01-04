@@ -1,11 +1,11 @@
-### Work Zone Data Exchange (WZDx)
+# Work Zone Data Exchange (WZDx)
 Last updated 12/31/2019 - WZDx specification v2.0 
 
-# What is the WZDx Specification?
+## What is the WZDx Specification?
 The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones in
 to vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
 
-# Why is WZDx being developed?
+## Why is WZDx being developed?
 Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort. 
 
 Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help ADS and humans navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
@@ -15,7 +15,7 @@ Thus, inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/),
 ## Who is involved in developing WZDx?
 The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have started to set up data feeds based on it. The Maricopa County Department of Transportation data feed can be found [here](https://api.mcdot-its.com/WZDx/Activity/Get), and the Iowa Department of Transportation data feed is located [here](https://data.iowadot.gov/datasets/iowa-work-zone-data-exchange-wzdx).
 
-Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki ), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. 
+Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. 
 
 ## How can I participate?
 The WZDWG welcomes feedback and comments on the v2 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Alternatively, issues or suggested changes can be emailed to [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.).
@@ -24,8 +24,8 @@ The WZDx v2 specification is now available for IOOs to stand up data feeds. Once
 
 1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
-3. Use the [Data Tables](/data-tables/README.md) to understand the data components of the spec.
-4. [Create your own feed](/create-feed/README.md) using the example feeds and learn about the supported data files.
+3. Use [Feed Content](/feed-content) to understand the data components of the spec.
+4. [Create your own feed](/create-feed) using the example feeds and learn about the supported data files.
 5. Test your feed (coming soon).
 6. Publish your feed, and tell us about via avdx@dot.gov. 
 
@@ -46,21 +46,20 @@ For purposes of this effort, “road_events” is defined as data elements neede
 
 The WZDx data specification will be incrementally enhanced to evolve into a data standard that supports advanced warnings to automated vehicles in and around work zones. 
 
-## TABLE OF CONTENTS (V2.0)
+## Table of Contents (V2.0)
 - [Introduction](#introduction)
     - [Background](#background)
     - [Document Organization](#document-organization)
-- [Data Tables](/data-tables)
-    - Table Definitions
-        - [Road Event Feed Info Table](/data-tables/road_event_feed_info.md)
-        - [Road Event Table](/data-tables/road_events.md)
-        - [Types of Work Table](/data-tables/types_of_work.md)
-        - [Lanes Table](/data-tables/lanes.md)
-        - [Lane Restrictions Table](/data-tables/lane_restriction.md)
-        - [Metadata Table](/data-tables/metadata.md)
-    - [Enumerated Fields](/data-tables/enumerated-fields.md) 
-        - [Enumerated Field Definitions](/data-tables/enumerated-field-definitions.md) 
-        - [Enumerated Field Definitions Derived from ITS Standards](/data-tables/enumerated-field-definitions-derived-from-its-standards.md)
+- [Feed Content](/feed-content)
+    - [Data Tables](/feed-content/data-tables)
+        - [Road Event Feed Info Table](/feed-content/data-tables/road_event_feed_info.md)
+        - [Road Event Table](/feed-content/data-tables/road_events.md)
+        - [Types of Work Table](/feed-content/data-tables/types_of_work.md)
+        - [Lanes Table](/feed-content/data-tables/lanes.md)
+        - [Lane Restrictions Table](/feed-content/data-tables/lane_restrictions.md)
+        - [Metadata Table](/feed-content/data-tables/metadata.md)
+    - [Enumerated Types](/feed-content/enumerated-types)
+        - [Enumerated Types Derived from ITS Standards](/feed-content/enumerated-types/derived-from-its-standards)
 - [Creating the Specification](/create-feed)
     - [Example Feed GeoJSON Files](/create-feed/examples)
 
@@ -69,20 +68,4 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
 Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help Automated Vehicles (AVs) navigate safely and efficiently. Many infrastructure owners and operators (IOOs) maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
 In support of AV integration into our nation’s transportation system, the Federal Highway Administration (FHWA) and USDOT’s Intelligent Transportation Systems Joint Program Office (ITS JPO) are co-leading the Work Zone Data Exchange (WZDx) project. The effort seeks to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. WZDx will enable collaborative maintenance and expansion of the specification as operational and technological enhancements become available.
 Upon finalization of the first iteration of work zone data specification, data producers will utilize the specification to make their respective active work zone data feeds available for use by non-government users. These users will then use the harmonized data in a meaningful way. These two outcomes will result in the establishment of the voluntary date exchange of work zone data (i.e., a minimum viable product (MVP) of harmonized work zone data). This approach is intended to be repeatable leading to the accelerated harmonization of local data.
-Many data producers and users (i.e., the [WZDx Working Group](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)) voluntarily committed to participating and have been actively involved in the development of the v2 specification. 
-
-### Document Organization
-The remainder of this specification is organized into the following sections:
-
-**Data Tables**
-- **road_events** - This table contains information about work zone events. The information describes where, when, and what activity is taking place along a road segment. This table is related to the road_event_feed_info table by the foreign key feed_info_id. For every record in the road_event_feed_info table there must exist one or more road_event records.
-- **road_events_feed_info** - This table contains information about road event datasets. For each record in the road_event_feed_info table there must exist one or more related records in the road_events table. The feed_info_id field acts as the foreign key in the road_event table.
-- **types_of_work** - This is an optional table that provides a string description of the type(s) of work being done in the road event (if applicable), as well as an indiciation of if the work type will result in an architectural change to the roadway.
-- **lanes** - This is an optional table that identifies and describes individual lanes within the road events. This table is related to the road_events table by the foreign key road_event_id.  For every record in the road_event table there may exist one or more record(s) in the lanes table.
-- **lane_restrictions** - This is an optional table that describes individual lane restrictions. This table is related to the lanes table by the foreign key lane_id. For every record in the lanes table there may exist one or more record(s) in the lane_restrictions table.
-- **Enumerated Types** - This section includes a table of enumerated data elements.
-- **Enumerated Type Definitions** - This section includes definitions for enumerated types including work zone status, status of Time and Location, and Road Restrictions. 
-- **Metadata** - This section describes the contents of a static file with information about the quality and context of data in the data feed. 
-
-**Creating the Specification**
-- This section provides a sample of how agencies will complete a Work Zone Activity record.
+Many data producers and users (i.e., the [WZDx Working Group](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)) voluntarily committed to participating and have been actively involved in the development of the v2 specification.
