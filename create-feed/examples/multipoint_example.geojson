@@ -1,6 +1,5 @@
 {
   "road_event_feed_info": {
-    "feed_info_id": "",
     "feed_update_date": "2010-01-01T01:01:01Z",
     "metadata": "",
     "version": "2.0"
@@ -11,7 +10,6 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "",
-        "feed_info_id": "",
         "subidentifier": "",
         "road_name": "",
         "road_number": "",
@@ -38,32 +36,27 @@
         "update_date": "2010-01-01T01:01:01Z",
         "types_of_work": [
           {
-            "type_of_work_id": "",
             "type_name": "",
             "is_architectual_change": false
           },
           {
-            "type_of_work_id": "",
             "type_name": "",
             "is_architectual_change": false
           }
         ],
         "lanes": [
           {
-            "lane_id": "",
             "lane_edge_reference": "",
             "lane_number": 1,
             "lane_status": "",
             "lane_type": "",
             "lane_restrictions": [
               {
-                "lane_restriction_id": "",
                 "restriction_type": "",
                 "restriction_value": 5.0,
                 "restriction_units": ""
               },
               {
-                "lane_restriction_id": "",
                 "restriction_type": "",
                 "restriction_value": 10.0,
                 "restriction_units": ""
@@ -71,14 +64,12 @@
             ]
           },
           {
-            "lane_id": "",
             "lane_edge_reference": "",
             "lane_number": 2,
             "lane_status": "",
             "lane_type": ""
           },
           {
-            "lane_id": "",
             "lane_edge_reference": "",
             "lane_number": 3,
             "lane_status": "",
