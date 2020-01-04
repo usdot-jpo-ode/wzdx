@@ -1,9 +1,4 @@
-# CREATING THE FEED
-
-- [Data File Types](#data-file-types)
-- [Code Examples](#code-examples)
-- [Data Validation Tools](#data-validation-tools)
-- [Collaborate via GitHub](#collaborate-via-GitHub)
+# Creating the Feed
 
 ## Feed Format and File Type
 
