@@ -49,8 +49,6 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
 ## Table of Contents (V2.0)
 - [Introduction](#introduction)
     - [Background](#background)
-- [Creating the Specification](/create-feed)
-    - [Example Feed GeoJSON Files](/create-feed/examples)
 - [Feed Content](/feed-content)
     - [Data Tables](/feed-content/data-tables)
         - [Road Event Feed Info Table](/feed-content/data-tables/road_event_feed_info.md)
@@ -61,6 +59,8 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
         - [Metadata Table](/feed-content/data-tables/metadata.md)
     - [Enumerated Types](/feed-content/enumerated-types)
         - [Enumerated Types Derived from ITS Standards](/feed-content/enumerated-types/derived-from-its-standards)
+- [Creating the Specification](/create-feed)
+   - [Example Feed GeoJSON Files](/create-feed/examples)   
 - [Images use throughout the specification](/images)
 
 ## Introduction
