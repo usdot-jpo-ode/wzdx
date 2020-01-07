@@ -1,0 +1,87 @@
+{
+  "road_event_feed_info": {
+    "feed_info_id": "567",
+    "feed_update_date": "2010-01-01T01:01:01Z",
+    "metadata": "https://fake-site.tld/dummy-metadata.txt",
+    "version": "2.0"
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "12345",
+        "subidentifier": "State_Project_001",
+        "road_name": "Main Street",
+        "road_number": "I-100",
+        "direction": "northbound",
+        "beginning_cross_street": "Westford St",
+        "ending_cross_street": "South St",
+        "beginning_milepost": 100.05,
+        "ending_milepost": 105.20,
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:01:01Z",
+        "end_date": "2010-01-02T01:01:01Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "verified",
+        "event_status": "completed",
+        "total_num_lanes": 3,
+        "vehicle_impact": "some-lanes-closed",
+        "workers_present": false,
+        "reduced_speed_limit": 30,
+        "restrictions": [],
+        "description": "Dummy work zone",
+        "issuing_organization": "Testco",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:01:01Z",
+        "types_of_work": [
+          {
+            "type_name": "painting",
+            "is_architectual_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "lane_edge_reference": "left",
+            "lane_number": 1,
+            "lane_status": "open",
+            "lane_type": "left-lane",
+            "lane_restrictions": [
+              {
+                "restriction_type": "reduced-width",
+                "restriction_value": 10,
+                "restriction_units": "feet"
+              }
+            ]
+          },
+          {
+            "lane_edge_reference": "left",
+            "lane_number": 2,
+            "lane_status": "closed",
+            "lane_type": "middle-lane"
+          },
+          {
+            "lane_edge_reference": "left",
+            "lane_number": 3,
+            "lane_status": "closed",
+            "lane_type": "right-lane"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -72.63399,
+            42.33865
+          ],
+          [
+            -72.6214,
+            42.33307
+          ]
+        ]
+      }
+    }
+  ]
+}
