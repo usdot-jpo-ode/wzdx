@@ -5,7 +5,7 @@ This table (formerly the Common Core Data Dictionary) contains information about
 
 This table is related to the [road_event_feed_info](/feed-content/data-tables/road_event_feed_info.md) table by the foreign key feed_info_id.  For every record in the road_event_feed_info table there must exist one or more road_event records.
 
-This table is related to the [types_of_work](feed-content/data-tables/types_of_work.md) table; For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
+This table is related to the [types_of_work](/feed-content/data-tables/types_of_work.md) table; For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
 
 This table is related to the [lanes](/feed-content/data-tables/lanes.md) table; For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
 
