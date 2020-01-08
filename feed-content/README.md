@@ -2,7 +2,7 @@
 
 The Work Zone Data Exchange Specification is defined by distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [data-tables](/feed-content/data-tables) directory. 
 
-Some fields within a data table are restricted to a defined enumeration of values. Thes enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
+Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
 
 ## Table of Contents
 - **Data Table Definitions**
