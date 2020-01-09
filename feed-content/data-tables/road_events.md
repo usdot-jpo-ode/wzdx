@@ -1,5 +1,4 @@
 # road_events
-**Required**
 
 This table (formerly the Common Core Data Dictionary) contains information about work zone events.  The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
@@ -8,6 +7,20 @@ This table is related to the [road_event_feed_info](/feed-content/data-tables/ro
 This table is related to the [types_of_work](/feed-content/data-tables/types_of_work.md) table; For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
 
 This table is related to the [lanes](/feed-content/data-tables/lanes.md) table; For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
+
+## Data Table Structure
+Each data table defines a list of data fields which are described by the following characterstics:
+
+- **Field Name** - name of the field or column 
+- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
+- **Description** - description of the data content
+- **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
+    - *Required* - must be included
+    - *Optional* - may be included
+    - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
+- **Notes** - comments, guidance, or notes for future consideration
+
+
 
 ## Road Events Table Structure
 
