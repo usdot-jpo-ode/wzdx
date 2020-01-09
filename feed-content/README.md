@@ -4,8 +4,7 @@ The Work Zone Data Exchange Specification is defined by distinct entities (calle
 
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
 
-## Table of Contents
-- **Data Table Definitions**
+- **Data Tables**
     - [**Road Event Feed Info Table**](/feed-content/data-tables/road_event_feed_info.md)
     - [**Road Event Table**](/feed-content/data-tables/road_events.md)
     - [**Types of Work Table**](/feed-content/data-tables/types_of_work.md)
