@@ -20,17 +20,6 @@ The Entity Relationship Diagram (ERD) below indicates the relationship between t
 
 ![Entity Relationship Diagram](/images/road_event_erd.png)
 
-## Data Table Structure
-Each data table defines a list of data fields which are described by the following characterstics:
-
-- **Data Name** - name of the field or column 
-- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
-- **Data Description** - description of the data content
-- **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
-    - *Required* - must be included
-    - *Optional* - may be included
-    - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
-- **Notes** - comments, guidance, or notes for future consideration
 
 ## Enumerated Fields Overview
 The table below provides an overview of all enumerated fields in the WZDx specification as well as the table they are used in.
