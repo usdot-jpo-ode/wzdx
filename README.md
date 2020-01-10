@@ -2,8 +2,7 @@
 Last updated 1/7/2020 - WZDx specification v2.0 
 
 ## What is the WZDx Specification?
-The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones in
-to vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
+The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones to vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
 
 ## Why is WZDx being developed?
 Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort. 
@@ -30,7 +29,6 @@ The WZDWG welcomes feedback and comments on the v2 specification. Comments can b
 6. Publish your feed, and tell us about via avdx@dot.gov. 
 
 ## How can I get help with implementation? 
-
 This project will be updated with resources to help with implementation; in the meantime, please make a GitHub issue if you need help implementing the specification or have any questions.
 
 The Federal Highway Administration is leading efforts, via the [Work Zone Data Initiative](https://collaboration.fhwa.dot.gov/wzmp/wzdi/Forms/AllItems.aspx), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents have been developed and made publicly available:
@@ -38,11 +36,39 @@ The Federal Highway Administration is leading efforts, via the [Work Zone Data I
 - [Framework](https://collaboration.fhwa.dot.gov/wzmp/Framework/Forms/AllItems.aspx) provides a conceptual architecture for work zone data systems for collecting, storing, disseminating, managing, maintaining and archiving work zone activity data.
 - [Data Dictionary](https://collaboration.fhwa.dot.gov/wzmp/Data%20DictionaryDocuments/Forms/AllItems.aspx) provides digital descriptions of work zone activities that enable and support transportation agencies and third party providers to describe and communicate work zone-related information to agency, private sector, and public users timely and seamlessly across multiple jurisdictions and regions.
 
-## Purpose and Scope
+## Navigating the Repository
+The WZDx specification repository contains two main subdirectories, each containing their own README file with additional information about their purpose and the files within:
 
-This specification describes data concepts, their meaning, and their enumeration (as applicable) in order to standardize a data feed specification to be used to publish work zone information. This document defines the content of the Work Zone Data Specification by means of an Entity Relationship Diagram (ERD). The ERD organizes data into distinct entities (also known as tables or objects), defines the content (also known as fields or properties) of each entity, and documents how those entities, tables or objects are related (relationships). Also included, when applicable, are enumeration tables which define the values to which field content is restricted.
+1. [`create-feed`](/create-feed), which contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
+2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
 
-For purposes of this effort, “road_events” is defined as data elements needed for most (if not all) possible work zone data use cases. The data specification includes data elements that data producers (i.e., state transportation agencies and other IOOs) are already producing (“required”) as well as those that may not currently be produced (“optional”). The "road_events" table is designed to be extensible, meaning both required and optional data elements can be added to support specific use cases now and in the future.
+A third directory, [`images`](/images) contains images that are referenced throughout the repository.
 
-The WZDx data specification will be incrementally enhanced to evolve into a data standard that supports advanced warnings to automated vehicles in and around work zones. 
-
+### Contents
+- [**Creating the WZDx Feed**](/create-feed)
+    - [**Example Feed GeoJSON Files**](/create-feed/examples)   
+        - [LineString Example](/create-feed/examples/linestring_example.geojson)
+        - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
+- [**Feed Content**](/feed-content)
+    - [**Data Tables**](/feed-content/data-tables)
+        - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
+        - [Road Events](/feed-content/data-tables/road_events.md)
+        - [Types of Work](/feed-content/data-tables/types_of_work.md)
+        - [Lanes](/feed-content/data-tables/lanes.md)
+        - [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md)
+        - [Metadata](/feed-content/data-tables/metadata.md)
+    - [**Enumerated Types**](/feed-content/enumerated-types)
+        - [Event Status](/feed-content/enumerated-types/event_status.md)
+        - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
+        - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
+        - [Lane Status](/feed-content/enumerated-types/lane_status.md)
+        - [Road Restriction](/feed-content/enumerated-types/road_restriction.md)
+        - [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md)
+        - [Time Verification](/feed-content/enumerated-types/time_verification.md)
+        - [Vehicle Impact](/feed-content/enumerated-types/vehicle_impact.md)
+        - [Work Type Name](/feed-content/enumerated-types/work_type_name.md)
+        - [**Enumerated Types Derived from ITS Standards**](/feed-content/enumerated-types/derived-from-its-standards)
+            - [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction)
+            - [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type)
+- [**Images used throughout the specification**](/images)
+  - [Entity Relationship Diagram](/images/entity_relationship_diagram.png)
