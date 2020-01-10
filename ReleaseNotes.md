@@ -1,4 +1,4 @@
-## WZDx Specification v2.0
+# WZDx Specification v2.0
 
 > Released 1/10/2020
 
@@ -12,7 +12,7 @@ This release includes the first set of major changes to the specification.
 
 
 
-## [WZDx Specification v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v1.1)
+# [WZDx Specification v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v1.1)
 
 > Released 9/15/2018
 
