@@ -2,36 +2,32 @@
 
 The Work Zone Data Exchange Specification is defined by distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [data-tables](/feed-content/data-tables) directory. 
 
-Some fields within a data table are restricted to a defined enumeration of values. Thes enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
+Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
 
-## Table of Contents
-- **Data Table Definitions**
-    - [**Road Event Feed Info Table**](/feed-content/data-tables/road_event_feed_info.md)
-    - [**Road Event Table**](/feed-content/data-tables/road_events.md)
-    - [**Types of Work Table**](/feed-content/data-tables/types_of_work.md)
-    - [**Lanes Table**](/feed-content/data-tables/lanes.md)
-    - [**Lane Restrictions Table**](/feed-content/data-tables/lane_restrictions.md)
-    - [**Metadata Table**](/feed-content/data-tables/metadata.md)
-- **Enumerated Fields**
-    - [**Enumerated Field Definitions**](/feed-content/enumerated-types) 
-    - [**Enumerated Field Definitions Derived from ITS Standards**](/feed-content/enumerated-types/derived-from-its-standards)
+## Table of Contents (V2.0)
+- [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+- [Feed Content](/feed-content)
+    - [Data Tables](/feed-content/data-tables)
+        - [Road Event Feed Info Table](/feed-content/data-tables/road_event_feed_info.md)
+        - [Road Events Table](/feed-content/data-tables/road_events.md)
+        - [Types of Work Table](/feed-content/data-tables/types_of_work.md)
+        - [Lanes Table](/feed-content/data-tables/lanes.md)
+        - [Lane Restrictions Table](/feed-content/data-tables/lane_restrictions.md)
+        - [Metadata Table](/feed-content/data-tables/metadata.md)
+    - [Enumerated Field Overview](#Enumerated-Fields-Overview)
+        - [Enumerated Field Definitions](/feed-content/enumerated-types)
+        - [Enumerated Types Derived from ITS Standards](/feed-content/enumerated-types/derived-from-its-standards)
+- [Creating the Specification](/create-feed)
+   - [Example Feed GeoJSON Files](/create-feed/examples)   
+- [Images use throughout the specification](/images)
+
+
 
 ## Entity Relationship Diagram
 The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. *Required* fields are represented in bold.
 
 ![Entity Relationship Diagram](/images/road_event_erd.png)
 
-## Data Table Structure
-Each data table defines a list of data fields which are described by the following characterstics:
-
-- **Data Name** - name of the field or column 
-- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
-- **Data Description** - description of the data content
-- **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
-    - *Required* - must be included
-    - *Optional* - may be included
-    - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
-- **Notes** - comments, guidance, or notes for future consideration
 
 ## Enumerated Fields Overview
 The table below provides an overview of all enumerated fields in the WZDx specification as well as the table they are used in.
