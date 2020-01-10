@@ -46,20 +46,3 @@ For purposes of this effort, “road_events” is defined as data elements neede
 
 The WZDx data specification will be incrementally enhanced to evolve into a data standard that supports advanced warnings to automated vehicles in and around work zones. 
 
-## Table of Contents (V2.0)
-- [Introduction](#introduction)
-    - [Background](#background)
-- [Feed Content](/feed-content)
-    - [Data Tables](/feed-content/data-tables)
-        - [Road Event Feed Info Table](/feed-content/data-tables/road_event_feed_info.md)
-        - [Road Event Table](/feed-content/data-tables/road_events.md)
-        - [Types of Work Table](/feed-content/data-tables/types_of_work.md)
-        - [Lanes Table](/feed-content/data-tables/lanes.md)
-        - [Lane Restrictions Table](/feed-content/data-tables/lane_restrictions.md)
-        - [Metadata Table](/feed-content/data-tables/metadata.md)
-    - [Enumerated Types](/feed-content/enumerated-types)
-        - [Enumerated Types Derived from ITS Standards](/feed-content/enumerated-types/derived-from-its-standards)
-- [Creating the Specification](/create-feed)
-   - [Example Feed GeoJSON Files](/create-feed/examples)   
-- [Images use throughout the specification](/images)
-
