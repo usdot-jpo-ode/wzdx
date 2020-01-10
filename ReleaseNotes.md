@@ -1,6 +1,6 @@
 # WZDx Specification v2.0
 
-> Released 1/10/2020
+> Released 1/14/2020
 
 This release includes the first set of major changes to the specification. 
 
