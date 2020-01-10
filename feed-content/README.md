@@ -4,16 +4,24 @@ The Work Zone Data Exchange Specification is defined by distinct entities (calle
 
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/feed-content/enumerated-types) directory.
 
-- **Data Tables**
-    - [**Road Event Feed Info Table**](/feed-content/data-tables/road_event_feed_info.md)
-    - [**Road Event Table**](/feed-content/data-tables/road_events.md)
-    - [**Types of Work Table**](/feed-content/data-tables/types_of_work.md)
-    - [**Lanes Table**](/feed-content/data-tables/lanes.md)
-    - [**Lane Restrictions Table**](/feed-content/data-tables/lane_restrictions.md)
-    - [**Metadata Table**](/feed-content/data-tables/metadata.md)
-- **Enumerated Fields**
-    - [**Enumerated Field Definitions**](/feed-content/enumerated-types) 
-    - [**Enumerated Field Definitions Derived from ITS Standards**](/feed-content/enumerated-types/derived-from-its-standards)
+## Table of Contents (V2.0)
+- [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+- [Feed Content](/feed-content)
+    - [Data Tables](/feed-content/data-tables)
+        - [Road Event Feed Info Table](/feed-content/data-tables/road_event_feed_info.md)
+        - [Road Events Table](/feed-content/data-tables/road_events.md)
+        - [Types of Work Table](/feed-content/data-tables/types_of_work.md)
+        - [Lanes Table](/feed-content/data-tables/lanes.md)
+        - [Lane Restrictions Table](/feed-content/data-tables/lane_restrictions.md)
+        - [Metadata Table](/feed-content/data-tables/metadata.md)
+    - [Enumerated Field Overview](#Enumerated-Fields-Overview)
+        - [Enumerated Field Definitions](/feed-content/enumerated-types)
+        - [Enumerated Types Derived from ITS Standards](/feed-content/enumerated-types/derived-from-its-standards)
+- [Creating the Specification](/create-feed)
+   - [Example Feed GeoJSON Files](/create-feed/examples)   
+- [Images use throughout the specification](/images)
+
+
 
 ## Entity Relationship Diagram
 The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. *Required* fields are represented in bold.
