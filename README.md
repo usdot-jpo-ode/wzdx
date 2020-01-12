@@ -27,7 +27,7 @@ The WZDWG welcomes feedback and comments on the v2 specification. Comments can b
 3. Use [Feed Content](/feed-content) to understand the data components of the spec.
 4. [Create your own feed](/create-feed) using the example feeds and learn about the supported data files.
 5. Test your feed (coming soon).
-6. Publish your feed, and tell us about via avdx@dot.gov. 
+6. Publish your feed, and tell us about it via avdx@dot.gov. 
 
 ## How can I get help with implementation? 
 
