@@ -12,7 +12,7 @@ This table is related to the [lanes](/feed-content/data-tables/lanes.md) table. 
 Each data table defines a list of data fields which are described by the following characterstics:
 
 - **Field Name** - name of the field or column 
-- **Data Type** - identifies of the kind of data being stored and an indicates if the field’s content is restricted to an enumeration
+- **Data Type** - identifies the kind of data being stored and indicates if the field’s content is restricted to an enumeration
 - **Description** - description of the data content
 - **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
     - *Required* - must be included
