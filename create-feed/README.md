@@ -1,4 +1,5 @@
 # Creating the Feed
+This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
 
 ## Feed Format and File Type
 
