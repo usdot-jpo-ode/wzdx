@@ -1,26 +1,9 @@
-# Enumerated Value Definitions Derived from ITS Standards
-The following tables show the translation from [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx) to the [WZDx Enumerated Types (Table 7)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/enumerated-types.md) for:
-- [openLanes and closedLanes](#openlanes-and-closedlanes)
-- [closedShoulders](#closedshoulders)
-- [roadDirection](#roaddirection)
-
-Example of data frame in the TMDD (specified in ASN.1 format)
-```xml
-DATA-TYPE "EventLane ::= SEQUENCE {
-    lanes-type ITIS.LaneRoadway OPTIONAL,
-    link-direction Link-direction OPTIONAL,
-    lanes-total-original Link-lanes-count OPTIONAL,
-    lanes-total-affected Link-lanes-count OPTIONAL,
-    event-lanes-affected SEQUENCE (SIZE(1..64)) OF Link-lane-number OPTIONAL,
-    lanes-status ITIS.Closures OPTIONAL,
-    ...  }"
-```
-
-#### openLanes and closedLanes
+# Lane Type 
 *Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
 
-LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Description
---------------------------- | ------------------------------------- | -----------
+## Enumeration
+TMDD LaneRoadway Enumeration | Lane Type Enumeration | Description
+--- | --- | ---
 **all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
 **through-lanes (8193)** |  | Not used
 **left-lane (8194)** | left-lane | The left most lane (inside lane)
@@ -91,28 +74,15 @@ LaneRoadway<br>enumerations | Used for openLanes and<br>closedLanes | Descriptio
 |  | none | No lanes (open or closed)
 |  | unknown | Unknown which lane is referenced
 |  | alternating-flow-lane | Signal or flagger controls lanes flow
-|  | left-shift-lanes | All open lanes shift to the left
-|  | right-shift-lanes | All open lanes shift to the right
-
-#### closedShoulders
-*Note:*  LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
-
-LaneRoadway<br>Enumerations | Used for<br>closedShoulders | Description
---------------------------- | --------------------------- | -----------
 **right-shoulder (8219)** | outside | The outer lane or the right most lane
 **left-shoulder (8220)** | inside | The inner lane or the left most lane
 |  | both | Both inside and outside shoulders
 |  | none | Not needed if field is optional; this is the default<br>value
 |  | unknown | Unknown if shoulder is open, closed or not existing
 
-#### roadDirection
-*Note:*  Link-alignment is imported from TMDD
+## Used By
+The **Lane Type** enumeration is used by the following fields
 
-Link-alignment<br>enumerations | Used for<br>roadDirections | Description
------------------------------- | -------------------------- | -----------
-**northbound (1)** | northbound | Road flow is in the northbound direction
-**eastbound (2)** | eastbound | Road flow is in the eastbound direction
-**southbound (3)** | southbound | Road flow is in the southbound direction
-**westbound (4)** | westbound | Road flow is in the westbound direction
-**inner-loop (5)** |  | Not used
-**outer-loop (6)** |  | Not used
+Field Name | Data Table
+--- | ---
+lane_type | [lanes](/feed-content/data-tables/lanes.md)

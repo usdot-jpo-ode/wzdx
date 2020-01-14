@@ -1,11 +1,53 @@
-# CREATING THE FEED
+# Creating the Feed
+This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
 
-1. [Collaborate via GitHub](#collaborate-via-GitHub)
-2. [Data File Types](#data-file-types)
-3. [Code Examples](#code-examples)
-4. [Data Validation Tools](#data-validation-tools)
+## Feed Format and File Type
 
-### Collaborate via GitHub
+The WZDx v2.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
+- It is a lightweight data exchange format.
+- It is easy for humans to read and write.
+- It is easy for machines to parse and generate.
+- The format is designed to exchange spatial data, which is a primary goal of the Work Zone Data Working Group.
+- It is an open specification and does not carry licensing burdens.
+- GeoJSON formatted-data is published as text files, there is a low technological burden of entry.
+- GeoJSON validation, mapping, and visualization tools already exists and will ease adoption by producers and consumers.
+
+A WZDx feed contains a single entry describing aspects of the feed itself (such as version) as well as one or more entries which describe a work zone's (generically: road event) characteristics along a single road segment in a single direction. 
+
+The tables below detail the specificaton's content and describe the data used to build the feed.
+
+## WZDx Feed Information
+
+- The [Road Event Feed Information](/feed-content/data-tables/road_event_feed_info.md) table describes the data feed.
+
+## WZDx Work Zone (Road Event) Information
+
+- The [Road Events](/feed-content/data-tables/road_events.md) table describes a work zone event.
+- The [Types of Work](/feed-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Lanes](/feed-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
+- The [Lane Restrictions](/feed-content/lane_restrictions.md) table describes restrictions for identified lanes.
+
+The figure below models the tables and their relationships.
+
+## Work Zone Data Entity Relationship Diagram
+*Note*: Required data elements are in bold.
+
+![road_event ERD](/images/road_event_erd.png)
+
+## Feed Examples
+The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
+
+* [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
+* [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
+
+## Data Validation Tools
+### Version 2.0
+Version 2 validation tools are being built. Documentation will be posted here when it is available.
+
+### Version 1.0
+To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
+
+## Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
 - **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you maintain your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
 - **Adding Commits** - A commit is any change made to your project that you can track allowing you to create a record of your work that others can use a reference.  
@@ -19,52 +61,7 @@ To start collaborating via GitHub:
 - [Join GitHub](https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
 - If you are a data producer contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
 
-#### How Do I Get Help?
+### How Do I Get Help?
 To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
 ![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
-
-### Data File Types
-The WZDx v1.1 data feed will be specified as an XML file or a JSON file. Both JSON and XML have been chosen as the file types of choice because they are:
-- A lightweight data exchange format.
-- Easy for humans to read and write.
-- Easy for machines to parse and generate. 
-
-The file will contain one or more work zone activity entries. A work zone activity entry is defined as a description of work zone characteristics for a road segment along a single roadway in a single direction. The WorkZoneActivity data frame is composed of the [Common Core Data Dictionary elements (Table 1)](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/data-tables/common-core-dictionary.md#table1.-common-core-data) and depicted in Figure 1.
-
-#### Figure 1: Work Zone Activity Organization
-*Note*: not all optional data elements are included in secondary levels of the hierarchy.
-
-![Fig. 1](https://github.com/acosta-dani-bah/ITS-JPO-wzdx/blob/master/images/Figure%201.png)
-
-### Code Examples
-The WZDx Activity frame code examples presented below were extracted from existing data feeds generated by several open data sites. 
-Three examples of Work Zone Activity records are shown below. They were derived from on-line data feeds including:
-* [Example 1 – MassDOT Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/massdot.md)
-* [Example 2 – iCone Event Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/icone.md)
-* [Example 3 – Caltrans Lane Closure Feed](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/caltrans.md#json-implementation)
-
-These examples use the following sample work zone activity template:
-
-#### Sample Work Zone Activity Template
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tag &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Identifier                                                                              |                                                                                           |
-| subidentifier                                                                           |                                                                                           |
-| StartDateTime<ul><li>startDateTime-est</li><li>startDateTime-ver</li></ul>              |                                                                                           |
-| EndDateTime<ul><li>endDateTime-est</li><li>endDateTime-ver</li></ul>                    |                                                                                           |
-| BeginLocation<ul><li>roadName</li><li>roadNum</li><li>latitude</li><li>longitude</li><li>milepost</li></ul> |                                                                       |
-| EndLocation<ul><li>latitude</li><li>longitude</li><li>milepost</li></ul>                |                                                                                           |
-| wz-Status                                                                               |                                                                                           |
-| totalLanes                                                                              |                                                                                           |
-| openLanes                                                                               |                                                                                           |
-| closedLanes                                                                             |                                                                                           |
-| closedShoulders                                                                         |                                                                                           |
-| workersPresent                                                                          |                                                                                           |
-| RoadRestrictions*<ul><li>roadRestrictions</li></ul>                                     |                                                                                           |
-| description                                                                             |                                                                                           |
-| issuingOrganization                                                                     |                                                                                           |
-| timeStampEventCreation                                                                  |                                                                                           |
-| timeStampEventUpdate                                                                    |                                                                                           |
-### Data Validation Tools
-To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JASON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
