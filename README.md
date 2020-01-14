@@ -1,4 +1,4 @@
-# Work Zone Data Exchange (WZDx)
+# Work Zone Data Exchange (WZDx) - v2.0
 Last updated 1/14/2020 - WZDx specification v2.0 
 
 ## What is the WZDx Specification?
