@@ -66,7 +66,7 @@ This section provides a list of all enumerated types uses in the WZDx specificat
 For ease of reference, the table below describes all fields in the WZDx specification whose value is restricted an enumerated type, as well as the data table the field is from.
 
 Field Name | Table | Enumerated Type | Notes
---- | --- | --- | --- | ---
+--------- | --------- | ----------- | -----
 `geometry_type` | [road_events](/feed-content/data-tables/road_events.md) | [Geometry Type](/feed-content/enumerated-types/geometry-type.md) | Enumeration from [GeoJSON Specification](https://tools.ietf.org/html/rfc7946)
 `direction` | [road_events](/feed-content/data-tables/road_events.md) | [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction.md) | Enumeration adapted from TMDD link-alignment
 `beginning_accuracy` | [road_events](/feed-content/data-tables/road_events.md) | [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md) | Enumeration created in WZDx v2.0
