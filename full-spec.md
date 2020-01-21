@@ -9,7 +9,7 @@ Updated 1/21/2020
     - [Purpose and Scope](#purpose-and-scope)
     - [Document Organization](#document-organization)
 - [**Feed Content**](#feed-content)
-
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
 
 
 ## Introduction
@@ -41,3 +41,11 @@ The remainder of this document is organized into the following sections:
 
 
 ## Feed Content 
+The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the data tables below. 
+
+Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the enumerated types table.
+
+### Entity Relationship Diagram
+The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. *Required* fields are represented in bold.
+
+![Entity Relationship Diagram](/images/road_event_erd.png)
