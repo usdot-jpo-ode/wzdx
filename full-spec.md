@@ -8,8 +8,9 @@ Updated 1/21/2020
     - [Background](#background)
     - [Purpose and Scope](#purpose-and-scope)
     - [Document Organization](#document-organization)
-- [**Feed Content**](#feed-content)
+- [**Feed Content**](#feed-content-overview)
     - [Entity Relationship Diagram](#entity-relationship-diagram)
+    - [List of Data Tables](#list-of-data-tables)
 
 
 ## Introduction
@@ -40,7 +41,7 @@ The remainder of this document is organized into the following sections:
 - **Create Feed** - contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
 
 
-## Feed Content 
+## Feed Content Overview
 The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the data tables below. 
 
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the enumerated types table.
