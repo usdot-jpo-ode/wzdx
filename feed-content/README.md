@@ -53,6 +53,7 @@ This section provides a list of all enumerated types uses in the WZDx specificat
 - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
 - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
 - [Lane Status](/feed-content/enumerated-types/lane_status.md)
+- [Lane Restriction Unit](/feed-content/enumerated-types/lane_restriction_unit.md)
 - [Road Restriction](/feed-content/enumerated-types/road_restriction.md)
 - [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md)
 - [Time Verification](/feed-content/enumerated-types/time_verification.md)
