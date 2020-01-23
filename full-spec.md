@@ -19,19 +19,23 @@ Updated 1/21/2020
     - [Lane Restrictions](#lane-restrictions)
     - [Metadata](#metadata)
       - [WZ Location Method Description and Practices](#wz-location-method-description-and-practices)
+    - [Enumerated Types Overview](#enumerated-types-overview)
+      - [Data Fields Using Enumerated Types](#data-fields-using-enumerated-types)
+      - [List of Enumerated Types](#list-of-enumerated-types)
+    - [Event Status](#event-status)
+    - [Geometry Type](#geometry-type)
+    - [Lane Edge Reference](#lane-edge-reference)
+    - [Lane Status](#lane-status)
+    - [Lane Restriction Unit](#lane-restriction-unit)
+    - [Road Restriction](#road-restriction)
+    - [Spatial Verification](#spatial-verification)
+    - [Time Verification](#time-verification)
+    - [Vehicle Impact](#vehicle-impact)
+    - [Work Type Name](#work-type-name)
+    - [Enumerated Types Derived from ITS Standards](#enumerated-types-derived-from-its-standards)
+      
+    
 
-
-(#event_status)
-(#lane_edge_reference)
-(#lane_status)
-(#lane_restriction_unit)
-(#road_restriction)
-(#spatial_verification)
-(#time_verification)
-(#vehicle_impact)
-(#work_type_name)
-(#enumerated-types-derived-from-its-standards)
-(#lane_type)
 
 ## Introduction
 ### Background 
@@ -219,8 +223,6 @@ For this data element (WZ-location-method), select the value below that most clo
 
 
 
-
-
 * **channel-device-method** – *this is the preferred method*
 Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. For complex work zones with multiple activities, begin and end locations are the first channeling device for first activity up to the last channeling device of the last activity.
 
@@ -253,3 +255,53 @@ Location of a Junction (e.g., a cross street or exit/entrance ramp) before and a
 
 * **unknown** – when method for locating the begin and end locations of the work zone is not known
 * **other** – when the method for locating the begin and end locations do not closely match any of the alternatives. An explanation should be included in the metadata when this value is assigned.
+
+### Enumerated Types Overview
+Some fields within a data table are restricted to a distinct enumeration of values, defined by an enumerated type. The enumerations for each enumerated type as well as what data fields it is used in is described below. Some enumerated types are specifically derived from the TMDD; these are found in the [Enumerated Types Derived From ITS Standards](#enumerated-types-derived-from-its-standards).
+
+#### Data Fields Using Enumerated Types
+For ease of reference, the table below describes all fields in the WZDx specification whose value is restricted an enumerated type, as well as the data table the field is from.
+
+Field Name | Table | Enumerated Type | Notes
+--------- | --------- | ----------- | -----
+`geometry_type` | [road_events](#road-events) | [Geometry Type](#geometry-type) | Enumeration from [GeoJSON Specification](https://tools.ietf.org/html/rfc7946)
+`direction` | [road_events](/feed-content/data-tables/road_events.md) | [Direction](#enumerated-types-derived-from-its-standards) | Enumeration adapted from TMDD link-alignment
+`beginning_accuracy` | [road_events](#road-events) | [Spatial Verification](#spatial-verification) | Enumeration created in WZDx v2.0
+`ending_accuracy` | [road_events](#road-events) | [Spatial Verification](#spatial-verification) | Enumeration created in WZDx v2.0
+`start_date_accuracy` | [road_events](#road-events) | [Time Verification](#time-verification) | Enumeration created in WZDx v2.0
+`end_date_accuracy` | [road_events](#road-events) | [Time Verification](#time-verification) | Enumeration created in WZDx v2.0
+`event_status` | [road_events](#road-events) | [Event Status](#event-status) | Enumeration created in WZDx v1.0
+`vehicle_impact` | [road_events](#road-events) | [Vehicle Impact](#vehicle-impact) | Enumeration created in WZDx v2.0
+`restrictions` | [road_events](#road-events) | [Road Restriction](#road-restriction) | Enumeration created in WZDx v1.0
+`type_name` | [types_of_work](#types-of-work) | [Work Type Name](#work-type-name) | Enumeration created in WZDx v2.0
+`lane_edge_reference` | [lanes](#lanes) | [Lane Edge Reference](#lane-edge-reference) | Enumeration created in WZDx v2.0
+`lane_status` | [lanes](#lanes) | [Lane Status](#lane-status) | Enumeration created in WZDx v2.0
+`lane_type` | [lanes](#lanes) | [Lane Type](#enumerated-types-derived-from-its-standards) | Enumeration adapted from TMDD LaneRoadway
+`restriction_type` | [lane_restrictions](#lane-restrictions) | [Road Restriction](#road-restriction) | Individual lane restrictions | Enumeration created in WZDx v1.0
+`restriction_units` | [lane_restrictions](#lane-restrictions) | [Lane Restriction Unit](#lane-restriction-unit) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
+
+#### List of Enumerated Types
+A list of all enumerated types used in the WZDx specification: 
+  - [Event Status](#event-status)
+  - [Geometry Type](#geometry-type)
+  - [Lane Edge Reference](#lane-edge-reference)
+  - [Lane Status](#lane-status)
+  - [Lane Restriction Unit](#lane-restriction-unit)
+  - [Road Restriction](#road-restriction)
+  - [Spatial Verification](#spatial-verification)
+  - [Time Verification](#time-verification)
+  - [Vehicle Impact](#vehicle-impact)
+  - [Work Type Name](#work-type-name)
+  - [Enumerated Types Derived from ITS Standards](#enumerated-types-derived-from-its-standards)
+
+### Event Status
+### Geometry Type
+### Lane Edge Reference
+### Lane Status
+### Lane Restriction Unit
+### Road Restriction
+### Spatial Verification
+### Time Verification
+### Vehicle Impact
+### Work Type Name
+### Enumerated Types Derived from ITS Standards
