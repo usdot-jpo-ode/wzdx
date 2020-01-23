@@ -18,15 +18,20 @@ Updated 1/21/2020
     - [Lanes](#lanes)
     - [Lane Restrictions](#lane-restrictions)
     - [Metadata](#metadata)
+      - [WZ Location Method Description and Practices](#wz-location-method-description-and-practices)
 
 
 (#event_status)
+(#lane_edge_reference)
+(#lane_status)
+(#lane_restriction_unit)
 (#road_restriction)
 (#spatial_verification)
 (#time_verification)
 (#vehicle_impact)
+(#work_type_name)
 (#enumerated-types-derived-from-its-standards)
-
+(#lane_type)
 
 ## Introduction
 ### Background 
@@ -80,7 +85,7 @@ A list of all data tables used in the WZDx specification:
 
 ### Road Event Feed Info
 
-This table contains information about road event datasets. For each record in the road_event_feed_info table, there must exist one or more related records in the [road_events](#road-events) table. The feed_info_id field acts as the foreign key in the road_event table. This table was formerly called WZDx Header Data. 
+This table contains information about road event datasets. For each record in the road_event_feed_info table, there must exist one or more related records in the [road_events](#road-events) table. The feed_info_id field acts as the foreign key in the road_event table. This table was formerly called WZDx Header Data. This table is required.
 #### Road Event Feed Info Table 
 Field Name | Data Type | Description | Conformance | Notes
 ---------- | --------- | ---------------- | ----------- | -----
@@ -91,7 +96,7 @@ version |	Text |	The specification version used to create the dataset |	Optional
 
 
 ### Road Events
-This table contains information about work zone events. The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones. This design accommodates multiple road event types. This table was formerly called Common Core Data Dictionary. 
+This table contains information about work zone events. The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones. This design accommodates multiple road event types. This table was formerly called Common Core Data Dictionary. This table is required.
 
 This table is related to the [Road Event Feed Info table](#road-event-feed-info) by the foreign key feed_info_id. For every record in the road_event_feed_info table there must exist one or more road_event records.
 
@@ -146,8 +151,105 @@ Field Name | Data Type | Description | Conformance | Notes
 
 ### Types of Work
 
+This table indicates the type of work being done in a road event, if applicable (e.g. typical work zones), as well as noting if the type of work will result in an architectural change to the roadway.
+
+This table is related to the [Road Events table](#road-events) by the foreign key road_event_id. For every record in the road_event table there exists zero or more records in the types_of_work table. This table is optional. 
+
+#### Types of Work Table
+Data Name|Data Type|Description|Conformance|Notes
+-|-|-|-|-|
+type_of_work_id|ID|Identifies the types_of_work record|Required|Primary key
+[road_event_id](#road-events)|ID|Identifies the road event to the type_of_work is related.|Required|Foreign key
+type_name|Enumeration; Text|A high-level text description of the type of work being done.|Required|See [Work Type Name Enumerated Type](#work_type_name)
+is_architectural_change|Boolean|A flag indicating whether the type of work will result in an architectural change to the roadway.|Optional|
+
+
 ### Lanes
+This table identifies and describes individual lanes within a road event. This table is related to the [Road Events table](#road-events) by the foreign key road_event_id. For every record in the road_event table there may exist one or more record(s) in the lanes table. 
+
+This table is related to the [Lane Restrictions table](#lane-restrictions). For each record in the lanes table there may exist one or more records in the lane_restrictions table. The lane_id field acts as the foreign key in the lanes table. This table is optional. 
+
+#### Lanes Table
+Data Name|Data Type|Description|Conformance|Notes
+-|-|-|-|-|
+lane_id|ID|Identifies the lane_info record|Required|Primary key
+[road_event_id](#road-events)|ID|Identifies the road event to which a lane information is related.|Required|Foreign key
+lane_edge_reference|Enumeration; Text|The roadside edge from which lane are assigned numbers.|Conditional: required if  lane_number is not null|Counting begins from the edge of the improved surface. See [Lane Edge Reference Enumerated Type](#lane_edge_reference)
+lane_number|Non-negative Integer|The number assigned to a lane.|Optional|Assigned by counting from right or left edge of the improved surface. Counting begins from the edge indicated in the lane_edge_reference field. Useful for text to voice translation. Numbering should not include shoulders.
+lane_status|Enumeration; Text|Status of the lane for the traveling public|Required|Allowed values: open, closed, shift-left, shift-right, merge-right, merge-left, alternating-one-way. See [Lane Status Enumerated Type](#lane_status)
+lane_type|Enumeration; Text|A lane descriptor|Required|See [Lane Status Enumerated Type](#lane_type)
+
 
 ### Lane Restrictions
 
+This table describes individual lane restrictions. This table is related to the lanes table by the foreign key lane_id. For every record in the [Lanes table](#lanes) there may exist one or more record(s) in the lane_restrictions table. This table is optional.
+
+#### Lane Restrictions Table
+Data Name|Data Type|Description|Conformance|Notes
+-|-|-|-|-
+lane_restriction_id|ID|Identifies the lane_info record|Required|Primary key
+[lane_id](#lanes)|ID|Identifies the lane to which a restriction info record is related.|Required|Foreign key
+restriction_type|Enumeration; Text|The type of restriction being enforced.|Optional|See [Road Restriction Enumerated Type](#road_restriction)
+restriction_value|Float|The measure of the restriction type|Optional|
+restriction_units|Enumeration; Text|Units of measure for the restriction value|Conditional: required if  restriction_value is not null|See [Lane Restriction Unit Enumerated Type](#lane_restriction_unit)
+
+
 ### Metadata
+This table describes the contents of a static file with information about the quality and context of data in the data feed. The files should be made available to data consumers through a link included in the [road_event_feed_info table](#road_event_feed_info). The static file shall be encoded as a comma delimited text file. This table is required. 
+
+**Filename:** WZ-Metadata.txt
+
+##### Metadata Table 
+Data Name | Data Type | Description | Conformance | Notes
+--------- | ----------- | ------- | ---------| --------
+**issuing_organization** | Text | The name of the issuing organization.<br>This name should match the name in the<br>[road_events table](#road_eventsd). | Required | Example Anyplace public works
+**location_verify_method** | Text | The method used to verify the accuracy<br>of the location information | Required | Example Survey accurate GPS equipment accurate to 0.1 cm
+**wz_location_method** | Enumeration; Text | The typical method used to locate the<br>begin and end of a work zone impact area.<br>Select the method that most closely<br>represents how begin and end locations<br>are assigned in the WZDX file.<ul><li>channel-device-method</li><li>sign-method</li><li>junction-method</li><li>unknown - when method for<br>locating the begin and end<br>locations of the work zone is not known.</li><li>other- when the method for<br>locating the begin and end<br>locations does not closely match any of the alternatives. An explanation<br>should be included in the<br>metadata when this value is assigned.</li></ul> | Required | Example channel-device-method
+**lrs_type** | Text |Describes the type of linear referencing<br>system used for the milepost<br>measurements | Required | Example Use of milemarkers posted by the<br>roadways. These are registered<br>to a dynamic segmentation of<br>statewide LRS basemap.
+**lrs_url** | URL |A URL where additional information on the<br>LRS information and transformation<br>information is stored | Optional | Example https://aaa.bbb.com/lrs
+**datafeed_frequency_update** | Text | The frequency at which the data feed is<br>updated and made available through the<br>data feed. Format shall include value+<br>units such as<br>30s, 15m, or 24h where:<ul><li>s = seconds</li><li>m = minutes</li><li>h-hours</li></ul> | Optional | Example 30s<br>15m<br>24h
+**timestamp_metadata_update** | DateTime | The UTC date and time when this file was last<br>updated | Required | Example 2016-04-12T00:01:00Z
+**contact_name** | Text |The name of a contact responsible for the<br>data feed | Required |Example Jo Help
+**contact_email** | Text | The contact’s email address | Required | Example jhelp@anyplacePW.com
+
+#### WZ Location Method Description and Practices
+The metadata file will include one of five enumerated type values for WZ-location-method field.  
+
+For this data element (WZ-location-method), select the value below that most closely represents how begin and end locations are assigned in the WZDX file.
+
+
+
+
+
+* **channel-device-method** – *this is the preferred method*
+Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. For complex work zones with multiple activities, begin and end locations are the first channeling device for first activity up to the last channeling device of the last activity.
+
+**Simple Scenario**
+
+![Simple channel-device method diagram](/images/channel_device_method_simple.png)
+
+**Complex Scenario**
+This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends.
+
+Note: with the data element “subidentifier”, the “owner” can link the three work activities together.
+
+![Complex channel-device method diagram](/images/channel_device_method_complex.png)
+
+* **sign-method**
+Location of first and last work zone-related signs. This may be different from the channelization location. For complex work zones, begin would be the first sign before the first activity and end would be the last sign following the last activity.
+
+![sign-method diagram](/images/sign_method.png)
+
+* **junction-method**
+Location of a Junction (e.g., a cross street or exit/entrance ramp) before and after a work zone. Note that this is similar to the approach used by Waze to designate a road closure event.
+
+**Arterial Scenario**
+
+![Arterial junction-method diagram](/images/junction_method_arterial.png)
+
+**Highway Scenario**
+
+![Highway junction-method diagram](/images/junction_method_highway.png)
+
+* **unknown** – when method for locating the begin and end locations of the work zone is not known
+* **other** – when the method for locating the begin and end locations do not closely match any of the alternatives. An explanation should be included in the metadata when this value is assigned.
