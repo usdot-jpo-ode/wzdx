@@ -72,7 +72,7 @@ The remainder of this document is organized into the following sections:
 ## Feed Content
 The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [Data Tables](#list-of-data-tables) below. 
 
-Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the enumerated types table XXXXXXXX.
+Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [Enumerated Types table](#enumerated-types-overview).
 
 ### Data Tables Overview 
 The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the data-tables directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how a the feed output should be built from tables.
@@ -269,7 +269,7 @@ For ease of reference, the table below describes all fields in the WZDx specific
 Field Name | Table | Enumerated Type | Notes
 --------- | --------- | ----------- | -----
 `geometry_type` | [road_events](#road-events) | [Geometry Type](#geometry-type) | Enumeration from [GeoJSON Specification](https://tools.ietf.org/html/rfc7946)
-`direction` | [road_events](/feed-content/data-tables/road_events.md) | [Direction](#enumerated-types-derived-from-its-standards) | Enumeration adapted from TMDD link-alignment
+`direction` | [road_events](#road-events) | [Direction](#direction) | Enumeration adapted from TMDD link-alignment
 `beginning_accuracy` | [road_events](#road-events) | [Spatial Verification](#spatial-verification) | Enumeration created in WZDx v2.0
 `ending_accuracy` | [road_events](#road-events) | [Spatial Verification](#spatial-verification) | Enumeration created in WZDx v2.0
 `start_date_accuracy` | [road_events](#road-events) | [Time Verification](#time-verification) | Enumeration created in WZDx v2.0
@@ -280,7 +280,7 @@ Field Name | Table | Enumerated Type | Notes
 `type_name` | [types_of_work](#types-of-work) | [Work Type Name](#work-type-name) | Enumeration created in WZDx v2.0
 `lane_edge_reference` | [lanes](#lanes) | [Lane Edge Reference](#lane-edge-reference) | Enumeration created in WZDx v2.0
 `lane_status` | [lanes](#lanes) | [Lane Status](#lane-status) | Enumeration created in WZDx v2.0
-`lane_type` | [lanes](#lanes) | [Lane Type](#enumerated-types-derived-from-its-standards) | Enumeration adapted from TMDD LaneRoadway
+`lane_type` | [lanes](#lanes) | [Lane Type](#lane-type) | Enumeration adapted from TMDD LaneRoadway
 `restriction_type` | [lane_restrictions](#lane-restrictions) | [Road Restriction](#road-restriction) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [lane_restrictions](#lane-restrictions) | [Lane Restriction Unit](#lane-restriction-unit) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
 
