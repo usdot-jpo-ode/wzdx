@@ -1,6 +1,6 @@
 # Work Zone Data Exchange (WZDx) v2.0 - Specification Reference Document 
 
-Updated 1/21/2020
+Updated 1/23/2020
 
 
 ## TABLE OF CONTENTS 
@@ -225,8 +225,6 @@ The metadata file will include one of five enumerated type values for WZ-locatio
 
 For this data element (WZ-location-method), select the value below that most closely represents how begin and end locations are assigned in the WZDX file.
 
-
-
 * **channel-device-method** – *this is the preferred method*
 Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. For complex work zones with multiple activities, begin and end locations are the first channeling device for first activity up to the last channeling device of the last activity.
 
@@ -274,9 +272,9 @@ Field Name | Table | Enumerated Type | Notes
 `ending_accuracy` | [road_events](#road-events) | [Spatial Verification](#spatial-verification) | Enumeration created in WZDx v2.0
 `start_date_accuracy` | [road_events](#road-events) | [Time Verification](#time-verification) | Enumeration created in WZDx v2.0
 `end_date_accuracy` | [road_events](#road-events) | [Time Verification](#time-verification) | Enumeration created in WZDx v2.0
-`event_status` | [road_events](#road-events) | [Event Status](#event-status) | Enumeration created in WZDx v1.0
+`event_status` | [road_events](#road-events) | [Event Status](#event-status) | Enumeration created in WZDx v2.0
 `vehicle_impact` | [road_events](#road-events) | [Vehicle Impact](#vehicle-impact) | Enumeration created in WZDx v2.0
-`restrictions` | [road_events](#road-events) | [Road Restriction](#road-restriction) | Enumeration created in WZDx v1.0
+`restrictions` | [road_events](#road-events) | [Road Restriction](#road-restriction) | Enumeration created in WZDx v2.0
 `type_name` | [types_of_work](#types-of-work) | [Work Type Name](#work-type-name) | Enumeration created in WZDx v2.0
 `lane_edge_reference` | [lanes](#lanes) | [Lane Edge Reference](#lane-edge-reference) | Enumeration created in WZDx v2.0
 `lane_status` | [lanes](#lanes) | [Lane Status](#lane-status) | Enumeration created in WZDx v2.0
