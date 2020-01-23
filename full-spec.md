@@ -8,9 +8,16 @@ Updated 1/21/2020
     - [Background](#background)
     - [Purpose and Scope](#purpose-and-scope)
     - [Document Organization](#document-organization)
-- [**Feed Content**](#feed-content-overview)
-    - [Entity Relationship Diagram](#entity-relationship-diagram)
-    - [List of Data Tables](#list-of-data-tables)
+- [**Feed Content**](#feed-content)
+    - [Data Tables Overview](#data-tables-overview)
+      - [Entity Relationship Diagram](#entity-relationship-diagram)
+      - [List of Data Tables](#list-of-data-tables)
+    - [Road Event Feed Info](#road-event-feed-info)
+    - [Road Events](#road-events)
+    - [Types of Work](#types-of-work)
+    - [Lanes](#lanes)
+    - [Lane Restrictions](#lane-restrictions)
+    - [Metadata](#metadata)
 
 
 ## Introduction
@@ -41,12 +48,46 @@ The remainder of this document is organized into the following sections:
 - **Create Feed** - contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
 
 
-## Feed Content Overview
-The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the data tables below. 
+## Feed Content
+The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [Data Tables](#list-of-data-tables) below. 
 
-Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the enumerated types table.
+Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the enumerated types table XXXXXXXX.
 
-### Entity Relationship Diagram
+### Data Tables Overview 
+The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the data-tables directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how a the feed output should be built from tables.
+
+#### Entity Relationship Diagram
 The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. *Required* fields are represented in bold.
 
 ![Entity Relationship Diagram](/images/road_event_erd.png)
+
+#### List of Data Tables
+A list of all data tables used in the WZDx specification: 
+- [Road Event Feed Info](#road-event-feed-info)
+- [Road Events](#road-events)
+- [Types of Work](#types-of-work)
+- [Lanes](#lanes)
+- [Lane Restrictions](#lane-restrictions)
+- [Metadata](#metadata)
+
+### Road Event Feed Info
+
+This table contains information about road event datasets. For each record in the road_event_feed_info table, there must exist one or more related records in the [road_events]((#road-events)) table. The feed_info_id field acts as the foreign key in the road_event table. This table was formerly called WZDx Header Data. 
+#### Road Event Feed Info Table 
+Field Name | Data Type | Description | Conformance | Notes
+---------- | --------- | ---------------- | ----------- | -----
+feed_info_id |	ID |	Unique identifier for the data feed. |Required | Primary Key Recommendations on the format of this unique identifier will be made in the future. |
+feed_update_date |	DateTime |	The UTC date and time when the data feed was last updated. |	Required | All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
+metadata |	URL |	A link to the metadata file (WZ-metadata.txt). See [Metadata table](#metadata) for a description of the file. |	Optional |
+version |	Text |	The specification version used to create the dataset |	Optional	 |
+
+
+### Road Events
+
+### Types of Work
+
+### Lanes
+
+### Lane Restrictions
+
+### Metadata
