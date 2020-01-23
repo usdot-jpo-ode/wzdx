@@ -36,6 +36,8 @@ Updated 1/21/2020
       - [lane_type](#lane-type)
       - [direction](#direction)
 - [**Creating the Feed**](#creating-the-feed)
+    - [Feed Format and File Type](#feed-format-and-file-type) 
+    - [Feed Examples](#feed-examples)
     
 
 
@@ -588,3 +590,32 @@ The **Direction** enumeration is used by the following fields:
 Field Name | Data Table
 --- | ---
 direction | [road_events](#road-events)
+
+## Creating The Feed 
+This section provides information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
+
+### Feed Format and File Type
+
+The WZDx v2.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
+- It is a lightweight data exchange format.
+- It is easy for humans to read and write.
+- It is easy for machines to parse and generate.
+- The format is designed to exchange spatial data, which is a primary goal of the Work Zone Data Working Group.
+- It is an open specification and does not carry licensing burdens.
+- GeoJSON formatted-data is published as text files, there is a low technological burden of entry.
+- GeoJSON validation, mapping, and visualization tools already exists and will ease adoption by producers and consumers.
+
+A WZDx feed contains a single entry describing aspects of the feed itself (such as version) as well as one or more entries which describe a work zone's (generically: road event) characteristics along a single road segment in a single direction. 
+
+The tables described in the [Feed Content](#feed-content) and summarized below, detail the specificaton's content and describe the data used to build the feed.
+- The [Road Event Feed Information](#road-event-feed-info) table describes the data feed.
+- The [Road Events](/#road-events) table describes a work zone event.
+- The [Types of Work](#work-type-name) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Lanes](#lanes) table identifies and describes individual lanes within an event.
+- The [Lane Restrictions](#lane-restrictions) table describes restrictions for identified lanes.
+
+### Feed Examples
+The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
+
+* [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
+* [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
