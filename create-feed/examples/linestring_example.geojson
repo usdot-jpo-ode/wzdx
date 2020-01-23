@@ -233,6 +233,102 @@
           ]
         ]
       }
-    }
+    },
+	{
+     "type": "Feature",
+     "properties": {
+       "road_event_id": "67890",
+       "subidentifier": "State_Project_002",
+       "road_name": "Barrett Street",
+       "road_number": "I-200",
+       "direction": "west bound",
+       "beginning_cross_street": "King St",
+       "ending_cross_street": "Hampton Garden Dr",
+       "beginning_milepost": 120.10,
+       "ending_milepost": 121.50,
+       "beginning_accuracy": "estimated",
+       "ending_accuracy": "estimated",
+       "start_date": "2010-01-01T01:03:01Z",
+       "end_date": "2010-01-02T01:07:01Z",
+       "start_date_accuracy": "verified",
+       "end_date_accuracy": "verified",
+       "event_status": "completed",
+       "total_num_lanes": 2,
+       "vehicle_impact": "all-lanes-open",
+       "workers_present": true,
+       "reduced_speed_limit": 30,
+       "restrictions": [],
+       "description": "Dummy work zone",
+       "issuing_organization": "Testco",
+       "creation_date": "2010-01-01T01:01:01Z",
+       "update_date": "2010-01-01T01:01:01Z",
+       "types_of_work": [
+         {
+           "type_name": "roadside-work",
+           "is_architectual_change": false
+         }
+       ],
+       "lanes": [
+         {
+           "lane_edge_reference": "left",
+           "lane_number": 1,
+           "lane_status": "open",
+           "lane_type": "left-lane",
+           "lane_restrictions": [
+             {
+               "restriction_type": "no-trucks"
+             }
+           ]
+         },
+         {
+           "lane_edge_reference": "left",
+           "lane_number": 2,
+           "lane_status": "open",
+           "lane_type": "right-lane"
+         }
+       ]
+     },
+     "geometry": {
+       "type": "LineString",
+       "coordinates": [
+          [
+            -72.63547003269196,
+            42.333474551052404
+          ],
+          [
+            -72.63563096523285,
+            42.333450757565444
+          ],
+          [
+            -72.63599574565887,
+            42.333446791983405
+          ],
+          [
+            -72.63645708560944,
+            42.33349041337203
+          ],
+          [
+            -72.63735830783844,
+            42.33354593145921
+          ],
+          [
+            -72.63793766498564,
+            42.33359748392484
+          ],
+          [
+            -72.63901591300964,
+            42.33368472646276
+          ],
+          [
+            -72.63960599899292,
+            42.33373627881463
+          ],
+          [
+            -72.64037847518921,
+            42.3337997278051
+          ]
+        ]
+     }
+   }
   ]
 }
