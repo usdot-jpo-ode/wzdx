@@ -1,16 +1,16 @@
 {
   "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/1dbcd48757a4f83b3704bd0ea3623ee3743c1497/create-feed/schema/wzdx_v2.0_feed.json",
-  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx v2.0 Feed",
   "description": "The GeoJSON output of a WZDx v2.0 data feed",
   "type": "object",
   "properties": {
     "road_event_feed_info": {
-      "$ref": "#/$defs/road_event_feed_info"
+      "$ref": "#/definitions/road_event_feed_info"
     },
     "type": {
       "description": "The GeoJSON type",
-      "const": "FeatureCollection"
+      "enum": ["FeatureCollection"]
     },
     "features": {
       "description": "The list of road events (GeoJSON Features)",
@@ -21,10 +21,10 @@
         "properties": {
           "type": {
             "description": "The GeoJSON Feature type",
-            "const": "Feature"
+            "enum": ["Feature"]
           },
           "properties": {
-            "$ref": "#/$defs/road_event"
+            "$ref": "#/definitions/road_event"
           },
           "geometry": {
             "oneOf": [
@@ -42,18 +42,20 @@
     }
   },
   "required": ["road_event_feed_info", "type", "features"],
-  "$defs": {
+  "definitions": {
     "road_event_feed_info": {
       "title": "Road Event Feed Information",
       "type": "object",
       "properties": {
         "feed_update_date": {
           "description": "The UTC date and time when the data feed was last updated",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "metadata": {
           "description": "The URL for an associated metadata file",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "version": {
           "description": "The WZDx specification version used to create the data feed",
@@ -83,7 +85,7 @@
           "type": "string"
         },
         "direction": {
-          "$ref": "#/$defs/direction"
+          "$ref": "#/definitions/direction"
         },
         "beginning_cross_street": {
           "description": "Name or number of the nearest cross street along the roadway where the event begins",
@@ -104,27 +106,29 @@
           "minimum": 0
         },
         "beginning_accuracy": {
-          "$ref": "#/$defs/spatial_verification"
+          "$ref": "#/definitions/spatial_verification"
         },
         "ending_accuracy": {
-          "$ref": "#/$defs/spatial_verification"
+          "$ref": "#/definitions/spatial_verification"
         },
         "start_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "end_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "start_date_accuracy": {
-          "$ref": "#/$defs/time_verification"
+          "$ref": "#/definitions/time_verification"
         },
         "end_date_accuracy": {
-          "$ref": "#/$defs/time_verification"
+          "$ref": "#/definitions/time_verification"
         },
         "event_status": {
-          "$ref": "#/$defs/event_status"
+          "$ref": "#/definitions/event_status"
         },
         "total_num_lanes": {
           "description": "The total number of lanes associated with the road event",
@@ -132,7 +136,7 @@
           "exclusiveMinimum": 0
         },
         "vehicle_impact": {
-          "$ref": "#/$defs/vehicle_impact" 
+          "$ref": "#/definitions/vehicle_impact" 
         },
         "workers_present": {
           "description": "A flag indicating that there are workers present in the road event",
@@ -147,9 +151,7 @@
           "description": "One or more road restrictions applying to the road event",
           "type": "array",
           "items": {
-            "type": {
-              "$ref": "#/$defs/road_restriction"
-            }
+            "$ref": "#/definitions/road_restriction"
           },
           "uniqueItems": true
         },
@@ -163,28 +165,26 @@
         },
         "creation_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event was created (e.g. 2020-11-03T19:37:00Z)", 
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "update_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)", 
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "types_of_work": {
           "description": "A list of the types of work being done in a road event",
           "type": "array",
           "items": {
-            "type": {
-              "$ref": "#/$defs/type_of_work"
-            }      
+            "$ref": "#/definitions/type_of_work"
           }
         },
         "lanes": {
           "description": "A list of individual lanes within a road event (roadway segment)",
           "type": "array",
           "items": {
-            "type": {
-              "$ref": "#/$defs/lane"
-            }
+            "$ref": "#/definitions/lane"
           }
         }
       },
@@ -207,7 +207,7 @@
       "type": "object",
       "properties": {
         "type_name": {
-          "$ref": "#/$defs/work_type_name"
+          "$ref": "#/definitions/work_type_name"
         },
         "is_architectural_change": {
           "description": "A flag indicating whether the type of work will result in an architectural change to the roadway",
@@ -222,10 +222,10 @@
       "type": "object",
       "properties": {
         "lane_status": {
-          "$ref": "#/$defs/lane_status"
+          "$ref": "#/definitions/lane_status"
         },
         "lane_type": {
-          "$ref": "#/$defs/lane_type"
+          "$ref": "#/definitions/lane_type"
         },
         "lane_number": {
           "description": "The number (index) assigned to the lane (not including shoulders)",
@@ -233,18 +233,18 @@
           "minimum": 0
         },
         "lane_edge_reference": {
-          "$ref": "#/$defs/lane_edge_reference"
+          "$ref": "#/definitions/lane_edge_reference"
         },
         "lane_restrictions": {
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/lane_restriction"
+            "$ref": "#/definitions/lane_restriction"
           }
         }
       },
       "required": ["lane_status", "lane_type"],
-      "dependentRequired": {
+      "dependencies": {
         "lane_number": ["lane_edge_reference"]
       }
     },
@@ -254,16 +254,16 @@
       "type": "object",
       "properties": {
         "restriction_type": {
-          "$ref": "#/$defs/road_restriction"
+          "$ref": "#/definitions/road_restriction"
         },
         "restriction_value": {
           "type": "number"
         },
         "restriction_units": {
-          "$ref": "#/$defs/restriction_units"
+          "$ref": "#/definitions/restriction_units"
         }
       },
-      "dependentRequired": {
+      "dependencies": {
         "restriction_value": ["restriction_units"]
       }
     },
