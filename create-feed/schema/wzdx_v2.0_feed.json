@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/usdot-jpo-ode/jpo-wzdx/tree/master/create-feed/schema/wzdx_v2.0_feed.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/1dbcd48757a4f83b3704bd0ea3623ee3743c1497/create-feed/schema/wzdx_v2.0_feed.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "WZDx v2.0 Feed",
   "description": "The GeoJSON output of a WZDx v2.0 data feed",
