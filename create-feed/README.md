@@ -1,5 +1,5 @@
 # Creating the Feed
-This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
+This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
 
 ## Feed Format and File Type
 
@@ -39,6 +39,11 @@ The following WZDx feed examples include all optional fields. An example file is
 
 * [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
+
+## JSON Schemas
+The [schemas] directory includes a JSON Schema for the following WZDx feed versions: 
+
+* [WZDx v2.0 Feed](/create-feed/schema/wzdx_v2.0_feed.json)
 
 ## Data Validation Tools
 ### Version 2.0
