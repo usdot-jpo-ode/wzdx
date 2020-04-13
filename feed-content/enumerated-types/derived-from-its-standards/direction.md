@@ -1,6 +1,8 @@
 # Direction 
 *Note:*  Link-alignment is imported from TMDD
 
+The direction for a roadway is based on the standard naming for US roadways and indicates the direction the traffic flow regardless of the real heading angle of the roadway.
+
 ## Enumeration
 Link-alignment Enumeration | Direction Enumeration | Description
 ------------------------------ | -------------------------- | -----------
