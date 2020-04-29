@@ -54,8 +54,7 @@
         },
         "metadata": {
           "description": "The URL for an associated metadata file",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "version": {
           "description": "The WZDx specification version used to create the data feed",
