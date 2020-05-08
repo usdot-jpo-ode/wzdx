@@ -1,7 +1,7 @@
 # Work Type Name
 
 ## Enumeration
-Type Name | Description
+Type | Description
 ---| ---
 **maintenance** | Work with no impact on the roadway. This includes events such as trash pickup, mowing, landscaping.
 **minor-road-defect-repair** | Pothole repair, road crack repair and sealing, and other small road defect repairs.
