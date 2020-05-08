@@ -1,4 +1,4 @@
-# Lane Edge Reference
+# Lane Number Start Side
 
 ## Enumeration
 Type | Description
@@ -7,8 +7,8 @@ Type | Description
 **right** | Lane are assigned numbers from the right side of the road.
 
 ## Used By
-The **Lane Edge Reference** enumeration is used by the following fields
+The **Lane Number Start Side** enumerated type is used by the following fields
 
 Field Name | Data Table
 --- | ---
-lane_edge_reference | [lanes](/feed-content/data-tables/lanes.md)
+lane_number_start_side | [road_events](/feed-content/data-tables/road_events.md)
