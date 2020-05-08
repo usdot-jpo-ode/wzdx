@@ -32,7 +32,7 @@
                 "$ref": "https://geojson.org/schema/LineString.json"
               },
               {
-                "$ref": "https://geojson.org/schema/MutliPoint.json"
+                "$ref": "https://geojson.org/schema/MultiPoint.json"
               }
             ]
           }
