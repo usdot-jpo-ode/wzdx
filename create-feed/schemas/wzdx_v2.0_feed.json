@@ -259,7 +259,7 @@
           "type": "number"
         },
         "restriction_units": {
-          "$ref": "#/definitions/restriction_units"
+          "$ref": "#/definitions/lane_restriction_unit"
         }
       },
       "dependencies": {
