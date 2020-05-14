@@ -147,7 +147,7 @@
           "minimum": 0
         },
         "restrictions": {
-          "description": "One or more road restrictions applying to the road event",
+          "description": "Zero or more road restrictions applying to the road event",
           "type": "array",
           "items": {
             "$ref": "#/definitions/road_restriction"
