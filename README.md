@@ -39,7 +39,7 @@ The Federal Highway Administration is leading efforts, via the [Work Zone Data I
 ## Navigating the Repository
 The WZDx specification repository contains two main subdirectories, each containing their own README file with additional information about their purpose and the files within:
 
-1. [`create-feed`](/create-feed), which contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
+1. [`create-feed`](/create-feed), which contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
 2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
 
 A third directory, [`images`](/images) contains images that are referenced throughout the repository.
@@ -49,6 +49,8 @@ A third directory, [`images`](/images) contains images that are referenced throu
     - [**Example Feed GeoJSON Files**](/create-feed/examples)   
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
+    - [**JSON Schemas**](/create-feed/schemas)
+        - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 - [**Feed Content**](/feed-content)
     - [**Data Tables**](/feed-content/data-tables)
         - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
