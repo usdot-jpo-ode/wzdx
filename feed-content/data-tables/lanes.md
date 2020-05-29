@@ -13,6 +13,6 @@ Data Name|Data Type|Description|Conformance|Notes
 lane_id|ID|Identifies the lane_info record|Required|Primary key
 [road_event_id](/data-tables/road_events.md)|ID|Identifies the road event to which a lane information is related.|Required|Foreign key
 lane_edge_reference|Enumeration; Text|The roadside edge from which lanes are assigned numbers.|Conditional: required if  lane_number is not null|Counting begins from the edge of the improved surface. See [Lane Edge Reference Enumerated Type](/feed-content/enumerated-types/lane_edge_reference.md)
-lane_number|Non-negative Integer|The number assigned to a lane (not including shoulders)|Optional|Assigned by counting from right or left edge of the improved surface. Counting begins from the edge indicated in the lane_edge_reference field. Useful for text to voice translation.
+lane_number|Non-negative Integer|The number assigned to a lane |Optional|Assigned by counting from right or left edge of the improved surface. Counting begins from the edge indicated in the lane_edge_reference field. Useful for text to voice translation.
 lane_status|Enumeration; Text|Status of the lane for the traveling public|Required|Allowed values: open, closed, shift-left, shift-right, merge-right, merge-left, alternating-one-way. See [Lane Status Enumerated Type](/feed-content/enumerated-types/lane_status.md)
 lane_type|Enumeration; Text|An indication of the type of lane or shoulder|Required|See [Lane Type Enumerated Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type.md)
