@@ -340,13 +340,8 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "all",
         "left-lane",
         "right-lane",
-        "left-2-lanes",
-        "right-2-lanes",
-        "left-3-lanes",
-        "right-3-lanes",
         "middle-lane",
         "middle-two-lanes",
         "right-turning-lane",
@@ -365,12 +360,9 @@
         "left-second-entrance-ramp",
         "sidewalk",
         "bike-lane",
-        "none",
-        "unknown",
         "alternating-flow-lane",
-        "outside",
-        "inside",
-        "both"
+        "right-shoulder",
+        "left-shoulder"
       ]
     },
     "lane_restriction_unit": {
