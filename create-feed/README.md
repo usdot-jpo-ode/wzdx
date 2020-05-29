@@ -41,9 +41,9 @@ The following WZDx feed examples include all optional fields. An example file is
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
 
 ## JSON Schemas
-The [schemas] directory includes a JSON Schema for the following WZDx feed versions: 
+The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions: 
 
-* [WZDx v2.0 Feed](/create-feed/schema/wzdx_v2.0_feed.json)
+* [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 
 ## Data Validation Tools
 ### Version 2.0
