@@ -242,10 +242,7 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type"],
-      "dependencies": {
-        "lane_number": ["lane_edge_reference"]
-      }
+      "required": ["lane_status", "lane_type", "lane_number", "lane_edge_reference"]
     },
     "lane_restriction": {
       "title": "Lane Restriction",
