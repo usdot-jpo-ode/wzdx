@@ -1,7 +1,7 @@
 # lanes
 **Optional**
 
-This table identifies and describes individual lanes within a road event.  
+This table identifies and describes individual lanes within a road event. Each entry in this table represents a single lane.
 
 This table is related to the [road_events](/feed-content/data-tables/road_events.md) table by the foreign key road_event_id.  For every record in the road_event table there may exist one or more record(s) in the lanes table.
 
