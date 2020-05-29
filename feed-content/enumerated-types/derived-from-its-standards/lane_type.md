@@ -1,84 +1,79 @@
 # Lane Type 
-*Note:* LaneRoadway is imported into TMDD from SAE 2540 (ITIS Standard)
+*Note:* The LaneRoadway enumeration is imported into TMDD from SAE 2540 (ITIS Standard)
 
 ## Enumeration
-TMDD LaneRoadway Enumeration | Lane Type Enumeration | Description
+WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 --- | --- | ---
-**all-roadways (8192)** | all | Indicates that road all lanes are open or<br>closed; if all lanes are closed then road is<br>effectively closed
-**through-lanes (8193)** |  | Not used
-**left-lane (8194)** | left-lane | The left most lane (inside lane)
-**right-lane (8195)** | right-lane | The right most lane (outside lane)
-|  | left-2-lanes | the two most left lanes
-|   | left-3-lanes | The three most left lanes
-|   | right-2-lanes | The two most right lanes
-|   | right-3-lanes | The three most right lanes
-**center-lane (8196)** |  | Not used
-**middle-lanes (8197)** | middle-lane | The center most lane where are a total of<br>an odd number of lanes
-**middle-two-lanes (8198)** | middle-two-lanes | The center most lanes where are a total<br>of an even number of lanes
-**right-turning-lanes (8199)** | right-turning-lane | A right lane where right turns are permissible
-**left-turning-lanes (8200)** | left-turning-lane | A left lane where left turns are permissible
-**upper-deck-lanes (8201)** |  | Note used
-**lower-deck-lanes (8202)** |  | Note used
-**reversible-lanes (8203)** |  | Note used
-**right-exit-lanes (8204)** | right-exit-lane | The right lane where the lane provides an<br>egress with a ramp
-**left-exit-lanes (8205)** | left-exit-lane | The left lane where the lanes where the<br>lane provides an egress with a ramp
-**right-merging-lanes (8206)** | right-merging-lane | The right lane where the lane ends with a<br>gradual merge with the second most lane
-**left-merging-lanes (8207)** | left-merging-lane | The left lane where the lanes ends by a<br>gradual merge with the second most left<br>lane
-**right-exit-ramp (8208)** | right-exit-ramp | The (first) exit ramp with an egress on the<br>right in the direction of flow at an<br>interchange
-**right-second-exit-ramp (8209)** | right-second-exit-ramp | The second exit ramp with an egress on<br>the right in the direction of flow at an<br>interchange
-**right-entrance-ramp (8210)** | right-entrance-ramp | The (first) entrance ramp with an ingress<br>on the right in the direction of flow at an<br>interchange
-**right-second-entrance-ramp (8211)** | right-second-entrance-ramp | The second entrance ramp with an<br>ingress on the right in the direction of flow<br>at an interchange 
-**left-exit_ramp (8212)** | left-exit-ramp | The (first) exit ramp with an egress on the<br>left in the direction of flow at an<br>interchange
-**left-second-exit-ramp (8213)** | left-second-exit-ramp | The second exit ramp with an egress on<br>the left in the direction of flow at an<br>interchange
-**left-entrance-ramp (8214)** | left-entrance-ramp | The (first) entrance ramp with an ingress<br>on the left in the direction of flow at an<br>interchange
-**left-second-entrance-ramp (8215)** | left-second-entrance-ramp | The second entrance ramp with an<br>ingress on the left in the direction of flow<br>at an interchange 
-**escape-ramp (8216)** |  | Not used
-**hard-shoulder (8217)** |  | Not used
-**soft-shoulder (8218)** |  | Not used
-**right-shoulder (8219)** |  | Not used
-**left-shoulder (8220)** |  | Not used
-**median (8221)** |  | Not used
-**sidewalk (8222)** | sidewalk | The sidewalk or pedestrian way
-**highways (8223)** |  | Not used
-**right-hand-parallel-lanes (8224)** |  | Not used
-**left-hand-parallel-lanes (8225)** |  | Not used
-**connecting-lanes (8226)** |  | Not used
-**express-lanes (8227)** |  | Not used
-**local-lanes (8228)** |  | Not used
-**toll-lanes (8229)** |  | Not used
-**electronic-toll-lanes (8230)** |  | Note used
-**toll-plaza (8231)** |  | Not used
-**inspection-lane (8232)** |  | Not used
-**hov-lanes (8233)** |  | Not used
-**bus-lanes (8234)** |  | Not used
-**carpool-lanes (8235)** |  | Not used
-**truck-lanes (8236)** |  | Not used
-**emergency-lanes (8237)** |  | Not used
-**passing-lanes (8238)** |  | Not used
-**climbing-lanes (8239)** |  | Not used
-**slow-lane (8240)** |  | Not used
-**service-road (8240)** |  | Not used
-**service-road (8241)** |  | Not used
-**cycle-lane (8242)** |  | Not used
-**tracks (8243)** |  | Not used
-**bridge (8244)** |  | Not used
-**overpass (8245)** |  | Not used
-**elevated-lanes (8246)** |  | Not used
-**underpass (8247)** |  | Not used
-**tunnel (8248)** |  | Not used
-**all-exit-lanes (8249)** |  | Not used
-**all-entry-lanes (8250)** |  | Not used
-**either-shoulder (8251)** |  | Not used
-**shoulder-work (8252)** |  | Not used
-|  | bike-lane | Bike lane
-|  | none | No lanes (open or closed)
-|  | unknown | Unknown which lane is referenced
-|  | alternating-flow-lane | Signal or flagger controls lanes flow
-**right-shoulder (8219)** | outside | The outer lane or the right most lane
-**left-shoulder (8220)** | inside | The inner lane or the left most lane
-|  | both | Both inside and outside shoulders
-|  | none | Not needed if field is optional; this is the default<br>value
-|  | unknown | Unknown if shoulder is open, closed or not existing
+**left-lane** | left-lane (8194) | The left most lane
+**right-lane** | right-lane (8195) | right-lane | The right most lane
+**middle-lane** | middle-lanes (8197) | The center most lane where the total number of lanes is odd
+**middle-two-lanes** | middle-two-lanes (8198) | One of the center most lanes where the total number of lanes is even
+**right-turning-lane** | right-turning-lanes (8199) | A right lane where right turns are permissible
+**left-turning-lane** | left-turning-lanes (8200) | A left lane where left turns are permissible
+**right-exit-lane** | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
+**left-exit-lane** | left-exit-lanes (8205) | The left lane where the lanes where the lane provides an egress with a ramp
+**right-merging-lane** | right-merging-lanes (8206) | The right lane where the lane ends with a gradual merge with the second most lane
+**left-merging-lane** | left-merging-lanes (8207) | The left lane where the lanes ends by a gradual merge with the second most left lane
+**right-exit-ramp** | right-exit-ramp (8208) | The (first) exit ramp with an egress on the right in the direction of flow at an interchange
+**right-second-exit-ramp** | right-second-exit-ramp (8209) | The second exit ramp with an egress on the right in the direction of flow at an interchange
+**right-entrance-ramp** | right-entrance-ramp (8210) | The (first) entrance ramp with an ingress on the right in the direction of flow at an interchange
+**right-second-entrance-ramp** | right-second-entrance-ramp (8211) | The second entrance ramp with an ingress on the right in the direction of flow at an interchange 
+**left-exit-ramp** | left-exit_ramp (8212) | The (first) exit ramp with an egress on the left in the direction of flow at an interchange
+**left-second-exit-ramp** | left-second-exit-ramp (8213) | The second exit ramp with an egress on the left in the direction of flow at an interchange
+**left-entrance-ramp** | left-entrance-ramp (8214) | The (first) entrance ramp with an ingress on the left in the direction of flow at an interchange
+**left-second-entrance-ramp** | left-second-entrance-ramp (8215) | The second entrance ramp with an ingress on the left in the direction of flow at an interchange 
+**sidewalk** | sidewalk (8222) | The sidewalk or pedestrian way
+**bike-lane** | cycle-lane (8242) | Bike lane
+**alternating-flow-lane** | | Signal or flagger controls lanes flow
+**right-shoulder** | right-shoulder (8219) | The outer shoulder or the right most shoulder
+**left-shoulder** | left-shoulder (8220) | The inner shoulder or the left most shoulder
+
+The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
+
+```
+all-roadways (8192)
+through-lanes (8193)
+center-lane (8196)
+upper-deck-lanes (8201)
+lower-deck-lanes (8202)
+reversible-lanes (8203)
+escape-ramp (8216)
+hard-shoulder (8217)
+soft-shoulder (8218)
+right-shoulder (8219)
+left-shoulder (8220)
+median (8221)
+highways (8223)
+right-hand-parallel-lanes (8224)
+left-hand-parallel-lanes (8225)
+connecting-lanes (8226)
+express-lanes (8227)
+local-lanes (8228)
+toll-lanes (8229)
+electronic-toll-lanes (8230)
+toll-plaza (8231)
+inspection-lane (8232)
+hov-lanes (8233)
+bus-lanes (8234)
+carpool-lanes (8235)
+truck-lanes (8236)
+emergency-lanes (8237)
+passing-lanes (8238)
+climbing-lanes (8239)
+slow-lane (8240)
+service-road (8240)
+service-road (8241)
+tracks (8243)
+bridge (8244)
+overpass (8245)
+elevated-lanes (8246)
+underpass (8247)
+tunnel (8248)
+all-exit-lanes (8249)
+all-entry-lanes (8250)
+either-shoulder (8251)
+shoulder-work (8252)
+```
 
 ## Used By
 The **Lane Type** enumeration is used by the following fields
