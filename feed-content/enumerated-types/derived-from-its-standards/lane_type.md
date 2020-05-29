@@ -6,8 +6,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 --- | --- | ---
 **left-lane** | left-lane (8194) | The left most lane
 **right-lane** | right-lane (8195) | right-lane | The right most lane
-**middle-lane** | middle-lanes (8197) | The center most lane where the total number of lanes is odd
-**middle-two-lanes** | middle-two-lanes (8198) | One of the center most lanes where the total number of lanes is even
+**middle-lane** | middle-lanes (8197) | A lane that is not in the direct center or on the inside or outside 
 **right-turning-lane** | right-turning-lanes (8199) | A right lane where right turns are permissible
 **left-turning-lane** | left-turning-lanes (8200) | A left lane where left turns are permissible
 **right-exit-lane** | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
@@ -24,9 +23,9 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **left-second-entrance-ramp** | left-second-entrance-ramp (8215) | The second entrance ramp with an ingress on the left in the direction of flow at an interchange 
 **sidewalk** | sidewalk (8222) | The sidewalk or pedestrian way
 **bike-lane** | cycle-lane (8242) | Bike lane
-**alternating-flow-lane** | | Signal or flagger controls lanes flow
 **right-shoulder** | right-shoulder (8219) | The outer shoulder or the right most shoulder
 **left-shoulder** | left-shoulder (8220) | The inner shoulder or the left most shoulder
+**alternating-flow-lane** | | Signal or flagger controls lanes flow
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
