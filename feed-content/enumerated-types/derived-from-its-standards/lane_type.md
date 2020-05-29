@@ -6,7 +6,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 --- | --- | ---
 **left-lane** | left-lane (8194) | The left most lane
 **right-lane** | right-lane (8195) | right-lane | The right most lane
-**middle-lane** | middle-lanes (8197) | A lane that is not in the direct center or on the inside or outside 
+**middle-lane** | middle-lanes (8197) | A lane that is not the rightmost or leftmost lane 
 **right-turning-lane** | right-turning-lanes (8199) | A right lane where right turns are permissible
 **left-turning-lane** | left-turning-lanes (8200) | A left lane where left turns are permissible
 **right-exit-lane** | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
