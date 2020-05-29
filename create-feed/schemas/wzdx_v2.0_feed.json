@@ -262,6 +262,7 @@
           "$ref": "#/definitions/lane_restriction_unit"
         }
       },
+      "required": ["restriction_type"],
       "dependencies": {
         "restriction_value": ["restriction_units"]
       }
