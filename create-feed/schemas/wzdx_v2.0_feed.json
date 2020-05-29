@@ -274,12 +274,12 @@
     "spatial_verification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "time_verification": {
       "title": "Time Verification Enumerated Type",
       "description": "A measure of how accurate the a datetime is",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "event_status": {
       "title": "Event Status Enumerated Type",
