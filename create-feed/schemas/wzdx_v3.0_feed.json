@@ -198,10 +198,7 @@
         "start_date_accuracy",
         "end_date_accuracy",
         "vehicle_impact"
-      ],
-      "dependencies": {
-        "lanes": ["lane_number_start_side"]
-      }
+      ]
     },
     "type_of_work": {
       "title": "Type of Work",
