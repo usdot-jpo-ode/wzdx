@@ -242,7 +242,10 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type", "lane_number", "lane_edge_reference"]
+      "required": ["lane_status", "lane_type"],
+      "dependencies": {
+        "lane_number": ["lane_edge_reference"]
+      }
     },
     "lane_restriction": {
       "title": "Lane Restriction",
@@ -337,9 +340,15 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
+        "all",
         "left-lane",
         "right-lane",
+        "left-2-lanes",
+        "right-2-lanes",
+        "left-3-lanes",
+        "right-3-lanes",
         "middle-lane",
+        "middle-two-lanes",
         "right-turning-lane",
         "left-turning-lane",
         "right-exit-lane",
@@ -356,9 +365,12 @@
         "left-second-entrance-ramp",
         "sidewalk",
         "bike-lane",
+        "none",
+        "unknown",
         "alternating-flow-lane",
-        "right-shoulder",
-        "left-shoulder"
+        "outside",
+        "inside",
+        "both"
       ]
     },
     "lane_restriction_unit": {
