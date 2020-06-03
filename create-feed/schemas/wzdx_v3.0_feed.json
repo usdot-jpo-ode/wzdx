@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/1dbcd48757a4f83b3704bd0ea3623ee3743c1497/create-feed/schema/wzdx_v2.0_feed.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "WZDx v2.0 Feed",
-  "description": "The GeoJSON output of a WZDx v2.0 data feed",
-=======
   "$id": "https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v3/create-feed/schemas/wzdx_v3.0_feed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx v3.0 Feed",
   "description": "The GeoJSON output of a WZDx v3.0 data feed",
->>>>>>> v3.0
   "type": "object",
   "properties": {
     "road_event_feed_info": {
@@ -240,7 +233,7 @@
           "$ref": "#/definitions/lane_type"
         },
         "lane_number": {
-          "description": "The number (index) assigned to the lane (not including shoulders)",
+          "description": "The number assigned to a lane to indiciate its position on the roadway. This value is assigned by counting away from the side (left or right) indicated by the `lane_number_start_side` field on the associated road event. The lane closest to the road edge indicated by `lane_number_start_side` must be given the value `1`. An increase of `lane_number` by 1 must represent moving one lane over away from the starting edge.",
           "type": "integer",
           "minimum": 1
         },
