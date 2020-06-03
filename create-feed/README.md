@@ -1,5 +1,5 @@
 # Creating the Feed
-This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
+This directory contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
 
 ## Feed Format and File Type
 
@@ -25,7 +25,7 @@ The tables below detail the specificaton's content and describe the data used to
 - The [Road Events](/feed-content/data-tables/road_events.md) table describes a work zone event.
 - The [Types of Work](/feed-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
 - The [Lanes](/feed-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
-- The [Lane Restrictions](/feed-content/lane_restrictions.md) table describes restrictions for identified lanes.
+- The [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md) table describes restrictions for identified lanes.
 
 The figure below models the tables and their relationships.
 
@@ -39,6 +39,11 @@ The following WZDx feed examples include all optional fields. An example file is
 
 * [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
+
+## JSON Schemas
+The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions: 
+
+* [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 
 ## Data Validation Tools
 ### Version 2.0
