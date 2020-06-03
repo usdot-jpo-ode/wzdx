@@ -3,8 +3,8 @@
 ## Enumeration
 Type | Description
 --- | ---
-**left** | Lane are assigned numbers from the left side of the road.
-**right** | Lane are assigned numbers from the right side of the road.
+**left** | Lane are assigned numbers starting from the **left** side of the road.
+**right** | Lane are assigned numbers starting from the **right** side of the road.
 
 ## Used By
 The **Lane Number Start Side** enumerated type is used by the following fields

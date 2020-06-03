@@ -50,6 +50,7 @@ Field Name | Data Type | Description | Conformance | Notes
 **workers_present**|Boolean|A flag indicating that there are workers present in the event space|Optional
 **reduced_speed_limit**|Integer|The reduced speed limit posted within the event space|Optional|
 **restrictions** | Enumumeration; Text | One or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons  | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes in the lane_restrictions table. See [Road Restriction Enumerated Type](/feed-content/enumerated-types/road_restriction.md)
+**lane_number_start_side** | Enumeration; Text | The starting side of the improved surface from which lanes are assigned numbers. | Conditional: required if there are any entries in the lanes table associated with the road event | See [Lane Number Start Side Enumerated Type](/feed-content/enumerated-types/lane_number_start_side.md)
 **description** | Text | Short free text description of road event | Optional | This will be populated with formal phrases in a later WZDx version
 **issuing_organization** |Text | The organization issuing the data feed | Optional | Will create a list in a<br>future version
 **creation_date** | DateTime | The UTC time and date when the activity or event was created | Optional | All date/time formats shall use ISO 8601 Data elements and interchange formats – Information interchange. Example: `2016-11-03T19:37:00Z`
