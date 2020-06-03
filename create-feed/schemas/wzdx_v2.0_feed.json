@@ -274,7 +274,7 @@
     "spatial_verification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
-      "enum": ["estimated", "verified"]
+      "enum": ["Estimated", "Verified"]
     },
     "time_verification": {
       "title": "Time Verification Enumerated Type",

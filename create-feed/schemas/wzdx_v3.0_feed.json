@@ -279,7 +279,7 @@
     "time_verification": {
       "title": "Time Verification Enumerated Type",
       "description": "A measure of how accurate the a datetime is",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "event_status": {
       "title": "Event Status Enumerated Type",
