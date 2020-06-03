@@ -44,8 +44,12 @@ The following WZDx feed examples include all optional fields. An example file is
 The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions: 
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
+* [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
 
 ## Data Validation Tools
+## Version 3.0
+Use the JSON schema linked above to validate a WZDx v3.0 feed.
+
 ### Version 2.0
 Version 2 validation tools are being built. Documentation will be posted here when it is available.
 
