@@ -26,6 +26,7 @@
         "end_date_accuracy": "verified",
         "event_status": "completed",
         "total_num_lanes": 3,
+        "lane_number_start_side": "left",
         "vehicle_impact": "some-lanes-closed",
         "workers_present": false,
         "reduced_speed_limit": 30,
@@ -42,7 +43,6 @@
         ],
         "lanes": [
           {
-            "lane_edge_reference": "left",
             "lane_number": 1,
             "lane_status": "open",
             "lane_type": "left-lane",
@@ -55,13 +55,11 @@
             ]
           },
           {
-            "lane_edge_reference": "left",
             "lane_number": 2,
             "lane_status": "closed",
             "lane_type": "middle-lane"
           },
           {
-            "lane_edge_reference": "left",
             "lane_number": 3,
             "lane_status": "closed",
             "lane_type": "right-lane"
@@ -102,6 +100,7 @@
        "end_date_accuracy": "verified",
        "event_status": "completed",
        "total_num_lanes": 2,
+       "lane_number_start_side": "left",
        "vehicle_impact": "all-lanes-open",
        "workers_present": true,
        "reduced_speed_limit": 30,
@@ -118,7 +117,6 @@
        ],
        "lanes": [
          {
-           "lane_edge_reference": "left",
            "lane_number": 1,
            "lane_status": "open",
            "lane_type": "left-lane",
@@ -129,7 +127,6 @@
            ]
          },
          {
-           "lane_edge_reference": "left",
            "lane_number": 2,
            "lane_status": "open",
            "lane_type": "right-lane"
