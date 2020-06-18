@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature Request/Bug Report
+    url: https://github.com/usdot-jpo-ode/jpo-wzdx/issues/new?assignees=&labels=&template=issue-template.md&title=
+    about: Submit a request for a new feature or report a problem with the specification.
+  - name: Start a Discussion
+    url: https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/new
+    about: Ask the WZDx community for input on a question or idea you have.
