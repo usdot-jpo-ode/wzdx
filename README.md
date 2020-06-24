@@ -4,7 +4,7 @@ This repository contains the Work Zone Data Exchange (WZDx) Specification.
 
 Last updated 1/14/2020 - WZDx specification v2.0 
 
-# README Outline:
+# README Outline
 * Project Description
 * Contact Information
 * Release Notes
