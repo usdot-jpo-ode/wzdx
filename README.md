@@ -2,20 +2,17 @@
 
 This repository contains the Work Zone Data Exchange (WZDx) Specification. 
 
-Last updated 1/14/2020 - WZDx specification v2.0 
+Last updated 6/26/2020 - WZDx specification v2.0 
 
 # README Outline
 * Project Description
 * Contact Information
 * Release Notes
 * Getting Started
-* Testing
-* Deployment 
+* Navigating the Repository
 * Contributions
 * Versioning
 * License
-* Acknowledgments
-* Additional Notes
 
 # Project Description
 
@@ -51,10 +48,10 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 #### Release v2.0 (Jan 14, 2020)
 
-- [WZDx v2.0 specification](/feed-content) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. This release includes the first set of major changes to the specification. 
+- [WZDx v2.0 specification](/feed-content) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are the steps for IOOs to get started. This release includes the first set of major changes to the specification. 
 
-  - [Required GeoJSON formatting](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/53) of a WZDx feed. GeoJSON is a data interchange format based on JavaScript Object Notation (JSON) designed to exchange geospatial data. Since feeds can be used with existing validation, mapping, and visualizations tools, requiring GeoJSON will improve accessibility of work zone data activity to producers and consumers.
-  - Converted the “common core” data dictionary into a [relational data model](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/54) with road event tables featuring new geometry-specific data elements. This conversion permits more efficient organization of the data elements for each work zone and supports a flexible, scalable data model.
+  - [Required GeoJSON formatting](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/53) of a WZDx feed. GeoJSON is a data interchange format based on JavaScript Object Notation (JSON) designed to exchange geospatial data. Since feeds can be used with existing validation, mapping, and visualizations tools, requiring GeoJSON will improve the accessibility of work zone data activity to producers and consumers.
+  - Converted the “common core” data dictionary into a [relational data model](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/54) with road event tables featuring new geometry-specific data elements. This conversion permits a more efficient organization of the data elements for each work zone and supports a flexible, scalable data model.
   - Added new data tables to accommodate [mobility impact and lane level impacts/restrictions](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/57) (i.e., closures and restrictions). The new lane-level information, as well as overall vehicle impact fields, allowing IOOs new flexibility in communicating impacts and mobility restrictions of a work zone.
   - Added a new [Types of Work table](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/59) to provide specific information on the types of work being performed at a work zone. This enumerated table categorizes the type of work and indicates if construction in a work zone will cause any architectural changes to the roadway. This information will support keeping the maps used by autonomous vehicles up to date.  
 
@@ -67,7 +64,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 The WZDWG welcomes feedback and comments on the v2.0 specification. Comments can be made by posting a GitHub Issues or Discussions, while suggested changes can be made using a Pull Request. 
 
-1. Read about WZDWG activities on project [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)
+1. Read about WZDWG activities on [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Feed Content](/feed-content) to understand the data components of the spec.
 4. [Create your own feed](/create-feed) using the example feeds and learn about the supported data files.
@@ -78,7 +75,7 @@ The WZDWG welcomes feedback and comments on the v2.0 specification. Comments can
 ## Navigating the Repository
 The WZDx specification repository contains two main subdirectories, each containing their own README file with additional information about their purpose and the files within:
 
-1. [`create-feed`](/create-feed), which contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
+1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
 2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
 
 A third directory, [`images`](/images) contains images that are referenced throughout the repository.
@@ -115,10 +112,25 @@ A third directory, [`images`](/images) contains images that are referenced throu
   - [Entity Relationship Diagram](/images/entity_relationship_diagram.png)
   
   
-## Testing
-## Deployment 
 ## Contributions
+
+**How to contribute to WZDx specification?**
+
+- Report bugs and request features via [Github Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues).
+- Ask the WZDx community for input on a question or idea you have via [Github Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions).
+- Create a [Github pull request](https://help.github.com/articles/creating-a-pull-request/) with new functionality or fixing a bug.
+- Review and provide feedback on update issues/discussions/pull requests created by other users.
+- Alternatively, [Email us](mailto://avdx@dot.gov.) with any questions.
+- Help us improve our best practices and formatting.
+
 ## Versioning
+
+We use [SemVer](https://semver.org/) for versioning. For the versions available, see the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) on this repository.
+
+
 ## License
-## Acknowledgments
-## Additional Notes
+
+This project is in the worldwide public domain (in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication).
+ 
+All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of the copyright interest.
+
