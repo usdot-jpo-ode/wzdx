@@ -26,6 +26,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **right-shoulder** | right-shoulder (8219) | The outer shoulder or the right most shoulder
 **left-shoulder** | left-shoulder (8220) | The inner shoulder or the left most shoulder
 **alternating-flow-lane** | | Signal or flagger controls lanes flow
+**bidirectional** | | Lane is able to be traveled on in either direction
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
