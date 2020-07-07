@@ -8,7 +8,7 @@ Updated 1/23/2020
     - [Background](#background)
     - [Purpose and Scope](#purpose-and-scope)
     - [Document Organization](#document-organization)
-- [**Feed Content**](#feed-content)
+- [**Specification Content**](#spec-content)
     - [Data Tables Overview](#data-tables-overview)
       - [Entity Relationship Diagram](#entity-relationship-diagram)
       - [List of Data Tables](#list-of-data-tables)
@@ -38,8 +38,6 @@ Updated 1/23/2020
 - [**Creating the Feed**](#creating-the-feed)
     - [Feed Format and File Type](#feed-format-and-file-type) 
     - [Feed Examples](#feed-examples)
-    
-
 
 ## Introduction
 ### Background 
@@ -65,11 +63,11 @@ The WZDx data specification will be incrementally enhanced to evolve into a data
 ### Document Organization
 The remainder of this document is organized into the following sections:
 
-- **Feed Content** &ndash; details the data content of the WZDx specification, including data tables, field names and types, enumerations.
+- **Specification Content** &ndash; details the data content of the WZDx specification, including data tables, field names and types, enumerations.
 - **Create Feed** &ndash; contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, and validation tools.
 
 
-## Feed Content
+## Specification Content
 The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) that contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [Data Tables](#list-of-data-tables) below. 
 
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [Enumerated Types table](#enumerated-types-overview).
@@ -605,7 +603,7 @@ The WZDx v2.0 data feed is formatted according to the [GeoJSON](https://geojson.
 
 A WZDx feed contains a single entry describing aspects of the feed itself (e.g., version) as well as one or more entries that describe a work zone's (generically: road event) characteristics along a single road segment in a single direction. 
 
-The tables described in the [Feed Content](#feed-content) and summarized below, detail the specification's content and describe the data used to build the feed.
+The tables described in the [Specification Content](#spec-content) and summarized below, detail the specification's content and describe the data used to build the feed.
 - The [Road Event Feed Information](#road-event-feed-info) table describes the data feed.
 - The [Road Events](/#road-events) table describes a work zone event.
 - The [Types of Work](#work-type-name) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
