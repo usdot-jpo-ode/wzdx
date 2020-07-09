@@ -25,6 +25,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **bike-lane** | cycle-lane (8242) | Bike lane
 **right-shoulder** | right-shoulder (8219) | The outer shoulder or the right most shoulder
 **left-shoulder** | left-shoulder (8220) | The inner shoulder or the left most shoulder
+**hov-lane** | hov-lanes (8233) | A high-occupancy vehicle lane
 **alternating-flow-lane** | | Signal or flagger controls lanes flow
 **center-left-turn-lane** | | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn
 **reversible-lane** | | A lane in which traffic may travel in either direction, depending on certain conditions such as time of day
@@ -54,7 +55,6 @@ toll-lanes (8229)
 electronic-toll-lanes (8230)
 toll-plaza (8231)
 inspection-lane (8232)
-hov-lanes (8233)
 bus-lanes (8234)
 carpool-lanes (8235)
 truck-lanes (8236)
