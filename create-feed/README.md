@@ -45,6 +45,18 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 
+## Business Rules
+The following business rules are procedures to assure a standardized and interpretable use of WZDx specification. The specification describes the data elements about a work zone that are required for a conformant data feed, whereas the business rules are requirements for implementing the specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
+1.	Each direction of travel receives a separate road event. For example, a work zone on a two lane road, with opposite travel directions ↑↓, are two separate road events.
+
+2.	Construction requiring alternating traffic flows in a lane should have a road event for both directions. Additionally, roadways that during normal operation alternate the flow of traffic based on time of day should have separate road events that have corresponding start and end times.
+
+3.	The preferred geometry type representation of a road_event is LineString. In the event that coordinates between the beginning and ending points is an unavailable, the road event will be specified by a MultiPoint geometry.  
+
+4.	A GeoJSON feed will be comprised of a single object of the road_event_feed_info type and feature properties will be of type FeatureCollection. 
+
+5.	The features array represents a list of one or more road events. Each object in this array has three properties: type, properties, and geometry. Type will always be feature. Properties will provide all details of the road event except for geometry and geometry type, which are specified by the geometry property.
+
 ## Data Validation Tools
 ### Version 2.0
 Version 2 validation tools are being built. Documentation will be posted here when it is available.
