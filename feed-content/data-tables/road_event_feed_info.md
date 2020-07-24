@@ -19,7 +19,7 @@ Member | Data Type | Description | Conformance | Notes
 **version** | Text | The specification version used to create the data feed | Required |
 **feed_sources** | Collection | An array of road_event_source_info objects | Required |
 
-## road_event_feed_info diagram ()
+## road_event_feed_info diagram
 ![Image metadata model](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v3-metadata-update/images/feed_source_event_relationship.jpg)
 
 ## Road Event Feed Info Example
