@@ -21,14 +21,13 @@ Each data table defines a list of data fields which are described by the followi
 - **Notes** - comments, guidance, or notes for future consideration
 
 
-
 ## Road Events Table Structure
 
 Field Name | Data Type | Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **road_event_id** | ID | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Primary Key
 **[feed_info_id](/feed-content/data-tables/road_event_feed_info.md)** | ID |Identifies the feed to which a road event is related.|Required|Foreign Key to road_event_feed_info
-**relationships** | Object | Derald Define | ? | ?
+**relationships** | Collection | An array of relationship objects   | Optional | ?
 **geometry_type** | Enumeration: Multipoint or LineString|May be represented as a linestring or a multipoint as defined in the GeoJson specification.|Required|
 **geometry**|Coordinate(s); Float|A coordinate pair or an array of coordinates. In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event|Required|Coordinate pairs and coordinate arrays are formatted according to the geoJson spec
 **road_name**|Text|Publicly known name of the road on which the event occurs.|Required|
