@@ -1,0 +1,14 @@
+# Road Event Type
+
+## Enumeration
+Type | Description
+-- | --
+**work-zone** | An area of a trafficway with highway   construction, maintenance, or utility-work activities. A work zone is   typically marked by signs, channeling devices, barriers, pavement markings,   and/or work vehicles. It extends from the first warning sign or flashing   lights on a vehicle to the "End of Road Work" sign or the last   traffic control device. A work zone may be for short or long durations and   may include stationary or moving activities. Inclusions: Long-term stationary   highway construction such as building a new bridge, adding travel lanes to   the roadway,1 and extending an existing trafficway.2 Mobile highway   maintenance such as striping the roadway, median, and roadside grass   mowing/landscaping, and pothole repair. Short-term stationary utility work   such as repairing electric, gas, or water lines within the trafficway.   Exclusions: Private construction, maintenance, or utility work outside the   trafficway. 1 The AASHTO term equivalent to roadway is traveled way. 2 The   AASHTO term equivalent to trafficway is highway, street, or road.            Source: https://www.fhwa.dot.gov/publications/publicroads/99mayjun/workzone.cfm
+**detour** | A temporary rerouting of road users onto an   existing trafficway to avoid a work zone or other impedance.            Source: https://mutcd.fhwa.dot.gov/htm/2009/part6/part6c.htm
+
+## Used By
+The Event type enumeration is used by the following fields
+
+Field Name | Data Table
+-- | --
+Type | road_events
