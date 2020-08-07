@@ -45,7 +45,7 @@ Field Name | Data Type | Description | Conformance | Notes
 **start_date_accuracy**|Enum: Estimated or Verified|A measure of how accurate the start Date Time is.|Required|see [Time Verification Enumerated Type](/feed-content/enumerated-types/time_verification.md)
 **end_date_accuracy**|Enumeration: Estimated or Verified|A measure of how accurate the end Date Time is.|Required|see [Time Verification Enumerated Type](/feed-content/enumerated-types/time_verification.md)
 **event_status** |Enumeration; Text|The status of the event|Optional|See [Event Status Enumerated Type](/feed-content/enumerated-types/event_status.md)
-**total_num_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Conditional: Required if there are lanes associated with the road event|A segment is a part of a roadway in a single direction designated the event geometry
+**total_num_lanes** |Integer|The total number of lanes associated with the road segment designated by the event geometry|Optional|A segment is a part of a roadway in a single direction designated the event geometry
 **vehicle_impact**|Enumeration; Text|The impact to vehicular lanes along a single road in a single direction|Required| See [Vehicle Impact Enumerated Type](/feed-content/enumerated-types/vehicle_impact.md)
 **workers_present**|Boolean|A flag indicating that there are workers present in the event space|Optional
 **reduced_speed_limit**|Integer|The reduced speed limit posted within the event space|Optional|
