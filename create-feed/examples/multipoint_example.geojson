@@ -42,11 +42,11 @@
         ],
         "lanes": [
           {
-            "lane_edge_reference": "left",
+            "order": 1,
             "lane_number": 1,
-            "lane_status": "open",
-            "lane_type": "left-lane",
-            "lane_restrictions": [
+            "status": "open",
+            "type": "left-lane",
+            "restrictions": [
               {
                 "restriction_type": "reduced-width",
                 "restriction_value": 10,
@@ -55,16 +55,16 @@
             ]
           },
           {
-            "lane_edge_reference": "left",
+            "order": 2,
             "lane_number": 2,
-            "lane_status": "closed",
-            "lane_type": "middle-lane"
+            "status": "closed",
+            "type": "middle-lane"
           },
           {
-            "lane_edge_reference": "left",
+            "order": 3,
             "lane_number": 3,
-            "lane_status": "closed",
-            "lane_type": "right-lane"
+            "status": "closed",
+            "type": "right-lane"
           }
         ]
       },
@@ -118,21 +118,21 @@
        ],
        "lanes": [
          {
-           "lane_edge_reference": "left",
+           "order": 1,
            "lane_number": 1,
-           "lane_status": "open",
-           "lane_type": "left-lane",
-           "lane_restrictions": [
+           "status": "open",
+           "type": "left-lane",
+           "restrictions": [
              {
                "restriction_type": "no-trucks"
              }
            ]
          },
          {
-           "lane_edge_reference": "left",
+           "order": 2,
            "lane_number": 2,
-           "lane_status": "open",
-           "lane_type": "right-lane"
+           "status": "open",
+           "type": "right-lane"
          }
        ]
      },
