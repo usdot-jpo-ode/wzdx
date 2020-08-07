@@ -134,9 +134,6 @@
           "type": "integer",
           "exclusiveMinimum": 0
         },
-        "lane_number_start_side": {
-          "$ref": "#/definitions/lane_number_start_side"
-        },
         "vehicle_impact": {
           "$ref": "#/definitions/vehicle_impact" 
         },
@@ -201,10 +198,7 @@
         "start_date_accuracy",
         "end_date_accuracy",
         "vehicle_impact"
-      ],
-      "dependencies": {
-        "lanes": ["lane_number_start_side"]
-      }
+      ]
     },
     "type_of_work": {
       "title": "Type of Work",
@@ -245,7 +239,7 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type", "lane_number"]
+      "required": ["lane_status", "lane_type"]
     },
     "lane_restriction": {
       "title": "Lane Restriction",
@@ -325,11 +319,6 @@
         "roadway-relocation",
         "roadway-creation"
       ]
-    },
-    "lane_number_start_side": {
-      "title": "Lane Number Start Side Enumerated Type",
-      "description": "The side of the roadway from which lane number counting begins",
-      "enum": ["left", "right"]
     },
     "lane_status": {
       "title": "Lane Status Enumerated Type",
