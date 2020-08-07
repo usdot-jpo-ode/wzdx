@@ -7,6 +7,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **left-lane** | left-lane (8194) | The left most lane
 **right-lane** | right-lane (8195) | right-lane | The right most lane
 **middle-lane** | middle-lanes (8197) | A lane that is not the rightmost or leftmost lane 
+**center-lane** | center-lane (8196) | The center-most lane when the total number of lanes is odd
 **lane** | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
 **right-turning-lane** | right-turning-lanes (8199) | A right lane where right turns are permissible
 **left-turning-lane** | left-turning-lanes (8200) | A left lane where left turns are permissible
@@ -36,7 +37,6 @@ The following values from the TMDD LaneRoadway Enumeration are not used in the W
 
 ```
 through-lanes (8193)
-center-lane (8196)
 upper-deck-lanes (8201)
 lower-deck-lanes (8202)
 reversible-lanes (8203)

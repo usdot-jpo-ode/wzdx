@@ -337,6 +337,7 @@
         "left-lane",
         "right-lane",
         "middle-lane",
+        "center-lane",
         "lane",
         "right-turning-lane",
         "left-turning-lane",
