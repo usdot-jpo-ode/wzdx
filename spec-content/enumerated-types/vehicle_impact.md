@@ -14,4 +14,4 @@ The **Vehicle Impact** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-vehicle_impact | [road_events](/feed-content/data-tables/road_events.md)
+vehicle_impact | [road_events](/spec-content/data-tables/road_events.md)

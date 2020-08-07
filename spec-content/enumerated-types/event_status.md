@@ -14,4 +14,4 @@ The **Event Status** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-event_status | [road_events](/feed-content/data-tables/road_events.md)
+event_status | [road_events](/spec-content/data-tables/road_events.md)

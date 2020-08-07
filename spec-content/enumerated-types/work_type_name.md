@@ -19,4 +19,4 @@ The **Work Type Name** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-type_name | [types_of_work](/feed-content/data-tables/types_of_work.md)
+type_name | [types_of_work](/spec-content/data-tables/types_of_work.md)
