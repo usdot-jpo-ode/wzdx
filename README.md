@@ -73,4 +73,4 @@ A third directory, [`images`](/images) contains images that are referenced throu
             - [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction)
             - [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type)
 - [**Images used throughout the specification**](/images)
-  - [Entity Relationship Diagram](/images/entity_relationship_diagram.png)
+  - [Entity Relationship Diagram](/images/road_event_erd.png)

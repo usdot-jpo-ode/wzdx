@@ -1,6 +1,6 @@
 ---
-name: Issue template
-about: Fill out as much information as possible when submitting an issue
+name: Feature Request/Bug Report
+about: Submit a request for a new feature or report a problem with the specification.
 title: ''
 labels: ''
 assignees: ''
