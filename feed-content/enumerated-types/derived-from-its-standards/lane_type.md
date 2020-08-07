@@ -7,6 +7,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **left-lane** | left-lane (8194) | The left most lane
 **right-lane** | right-lane (8195) | right-lane | The right most lane
 **middle-lane** | middle-lanes (8197) | A lane that is not the rightmost or leftmost lane 
+**lane** | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
 **right-turning-lane** | right-turning-lanes (8199) | A right lane where right turns are permissible
 **left-turning-lane** | left-turning-lanes (8200) | A left lane where left turns are permissible
 **right-exit-lane** | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
@@ -23,6 +24,7 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 **left-second-entrance-ramp** | left-second-entrance-ramp (8215) | The second entrance ramp with an ingress on the left in the direction of flow at an interchange 
 **sidewalk** | sidewalk (8222) | The sidewalk or pedestrian way
 **bike-lane** | cycle-lane (8242) | Bike lane
+**shoulder** | | Generic shoulder; useful when the shoulder is neither left nor right (e.g. between HOV Lane and main roadway). It can also be used in place of `left-shoulder` or `right-shoulder`. 
 **right-shoulder** | right-shoulder (8219) | The outer shoulder or the right most shoulder
 **left-shoulder** | left-shoulder (8220) | The inner shoulder or the left most shoulder
 **hov-lane** | hov-lanes (8233) | A high-occupancy vehicle lane
