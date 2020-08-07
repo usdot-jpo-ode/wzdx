@@ -35,7 +35,6 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
 ```
-all-roadways (8192)
 through-lanes (8193)
 center-lane (8196)
 upper-deck-lanes (8201)
@@ -44,10 +43,7 @@ reversible-lanes (8203)
 escape-ramp (8216)
 hard-shoulder (8217)
 soft-shoulder (8218)
-right-shoulder (8219)
-left-shoulder (8220)
 median (8221)
-highways (8223)
 right-hand-parallel-lanes (8224)
 left-hand-parallel-lanes (8225)
 connecting-lanes (8226)
@@ -64,7 +60,6 @@ emergency-lanes (8237)
 passing-lanes (8238)
 climbing-lanes (8239)
 slow-lane (8240)
-service-road (8240)
 service-road (8241)
 tracks (8243)
 bridge (8244)
@@ -72,10 +67,6 @@ overpass (8245)
 elevated-lanes (8246)
 underpass (8247)
 tunnel (8248)
-all-exit-lanes (8249)
-all-entry-lanes (8250)
-either-shoulder (8251)
-shoulder-work (8253)
 ```
 
 ## Used By
@@ -83,4 +74,4 @@ The **Lane Type** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-lane_type | [lanes](/feed-content/data-tables/lanes.md)
+type | [lanes](/feed-content/data-tables/lanes.md)

@@ -220,18 +220,23 @@
       "description": "An individual lane within a road event",
       "type": "object",
       "properties": {
-        "lane_status": {
-          "$ref": "#/definitions/lane_status"
-        },
-        "lane_type": {
-          "$ref": "#/definitions/lane_type"
-        },
-        "lane_number": {
-          "description": "The number (index) assigned to the lane (not including shoulders)",
+        "order": {
+          "description": "The position (index) of the lane in sequence on the roadway, where '1' represents the left-most lane",
           "type": "integer",
           "minimum": 1
         },
-        "lane_restrictions": {
+        "status": {
+          "$ref": "#/definitions/lane_status"
+        },
+        "type": {
+          "$ref": "#/definitions/lane_type"
+        },
+        "lane_number": {
+          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "type": "integer",
+          "minimum": 1
+        },
+        "restrictions": {
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
@@ -239,7 +244,7 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type"]
+      "required": ["status", "type", "order"]
     },
     "lane_restriction": {
       "title": "Lane Restriction",
