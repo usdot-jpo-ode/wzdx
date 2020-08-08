@@ -1,10 +1,10 @@
 {
   "road_event_feed_info": {
-    "feed_update_date": "2010-01-01T01:01:01Z",
-    "feed_publisher": "TestDOT",
-    "feed_contact_name": "Frederick Francis Feedmanager",
-    "feed_contact_email": "fred.feedmanager@testdot.gov",
-    "feed_update_frequency": "5m",
+    "update_date": "2010-01-01T01:01:01Z",
+    "publisher": "TestDOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": "5m",
     "version": "3.0",
     "data_sources": [
       {
