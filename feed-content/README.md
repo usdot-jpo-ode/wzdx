@@ -17,11 +17,11 @@ The Entity Relationship Diagram (ERD) below indicates the relationship between t
 This section provides a list of all data tables uses in the WZDx specification.
 
 - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
+- [Road Event Source Info](/feed-content/data-tables/road_event_source_info.md)
 - [Road Events](/feed-content/data-tables/road_events.md)
 - [Types of Work](/feed-content/data-tables/types_of_work.md)
 - [Lanes](/feed-content/data-tables/lanes.md)
 - [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md)
-- [Metadata](/feed-content/data-tables/metadata.md)
 
 ## Enumerated Types
 Some fields within a data table are restricted to a distinct enumeration of values, defined by an enumerated type. The enumerations for each enumerated type as well as what data fields it is used in is described in its own file in the [enumerated-types](/feed-content/enumerated-types) directory.
@@ -52,8 +52,9 @@ This section provides a list of all enumerated types uses in the WZDx specificat
 - [Event Status](/feed-content/enumerated-types/event_status.md)
 - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
 - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
-- [Lane Status](/feed-content/enumerated-types/lane_status.md)
 - [Lane Restriction Unit](/feed-content/enumerated-types/lane_restriction_unit.md)
+- [Lane Status](/feed-content/enumerated-types/lane_status.md)
+- [Location Method](/feed-content/enumerated-types/location_method.md)
 - [Road Restriction](/feed-content/enumerated-types/road_restriction.md)
 - [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md)
 - [Time Verification](/feed-content/enumerated-types/time_verification.md)
@@ -83,3 +84,4 @@ Field Name | Table | Enumerated Type | Notes
 `lane_type` | [lanes](/feed-content/data-tables/lanes.md) | [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type.md) | Enumeration adapted from TMDD LaneRoadway
 `restriction_type` | [lane_restrictions](/feed-content/data-tables/lane_restrictions.md) | [Road Restriction](/feed-content/enumerated-types/road_restriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [lane_restrictions](/feed-content/data-tables/lane_restrictions.md) | [Lane Restriction Unit](/feed-content/enumerated-types/lane_restriction_unit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
+`location_method` | [road_event_source_info](/feed-content/data-tables/road_event_source_info.md) | [Location Method](/feed-content/enumerated-types/location_method.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
