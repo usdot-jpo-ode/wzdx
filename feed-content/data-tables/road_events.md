@@ -3,7 +3,7 @@
 
 This table  contains information about work zone events.  The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
-This table is related to the road_event_source_info table by the foreign key source_info_id.  For every record in the road_event_source_info table there must exist one or more road_event records.
+This table is related to the [road_event_data_sources](/feed-content/data-tables/road_event_data_sources.md) table by the foreign key data_source_id. For every record in the road_event_data_sources table there must exist one or more road_event records.
 
 This table is related to the [types_of_work](/feed-content/data-tables/types_of_work.md) table. For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
 
@@ -26,8 +26,8 @@ Each data table defines a list of data fields which are described by the followi
 Field Name | Data Type | Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **road_event_id** | ID | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Primary Key
-**source_info_id** | ID |Identifies the source to which a road event is related.|Required|Foreign Key to road_event_source_info
-**subidentifier** | ID | A unique identifier issued by data feed provider that provides additional references to project or activity | Optional | This identifier may be used in more than one feed as a reference to an<br>agency project number or permit ID
+**data_source_id** | ID | Identifies the data source from which the road event data is sourced from | Required | Foreign Key to [road_event_data_sources](/feed-content/data-tables/road_event_data_sources.md) `data_source_id`
+**subidentifier** | ID | A unique identifier issued by data feed provider that provides additional references to project or activity | Optional | This identifier may be used in more than one feed as a reference to an agency project number or permit ID
 **geometry_type** | Enumeration: Multipoint or LineString|May be represented as a linestring or a multipoint as defined in the GeoJson specification.|Required|
 **geometry**|Coordinate(s); Float|A coordinate pair or an array of coordinates. In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event|Required|Coordinate pairs and coordinate arrays are formatted according to the geoJson spec
 **road_name**|Text|Publicly known name of the road on which the event occurs.|Required|

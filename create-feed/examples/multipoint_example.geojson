@@ -8,26 +8,26 @@
     "version": "3.0",
     "data_sources": [
       {
-        "source_info_id": "1",
-        "source_organization": "Test City 1",
-        "source_contact_name": "Solomn Soliel Sourcefeed",
-        "source_contact_email": "solomon.sourcefeed@testcity1.gov",
-        "source_update_frequency": "1m",
-        "source_update_date": "2020-06-18T14:27:01Z",
+        "data_source_id": "1",
+        "organization_name": "Test City 1",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": "1m",
+        "update_date": "2020-06-18T14:27:01Z",
         "location_verify_method": "GPS",
-        "wz_location_method": "channel_device_method",
+        "location_method": "channel_device_method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://www.azdot.com/lrs"
       },
       {
-        "source_info_id": "2",
-        "source_organization": "Test City 2",
-        "source_contact_name": "Samuel Sonny Sourcefeed",
-        "source_contact_email": "samuel.sourcefeed@testcity2.gov",
-        "source_update_frequency": "5m",
-        "source_update_date": "2020-06-18T14:39:01Z",
+        "data_source_id": "2",
+        "organization_name": "Test City 2",
+        "contact_name": "Samuel Sonny Sourcefeed",
+        "contact_email": "samuel.sourcefeed@testcity2.gov",
+        "update_frequency": "5m",
+        "update_date": "2020-06-18T14:39:01Z",
         "location_verify_method": "GPS",
-        "wz_location_method": "channel_device_method",
+        "location_method": "channel_device_method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://www.phoenix.gov/lrs"
       }
@@ -60,7 +60,6 @@
         "reduced_speed_limit": 30,
         "restrictions": [],
         "description": "Dummy work zone",
-        "issuing_organization": "Testco",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:01:01Z",
         "types_of_work": [

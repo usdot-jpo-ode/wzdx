@@ -17,7 +17,7 @@ The Entity Relationship Diagram (ERD) below indicates the relationship between t
 This section provides a list of all data tables uses in the WZDx specification.
 
 - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
-- [Road Event Source Info](/feed-content/data-tables/road_event_source_info.md)
+- [Road Event Data Sources](/feed-content/data-tables/road_event_data_sources.md)
 - [Road Events](/feed-content/data-tables/road_events.md)
 - [Types of Work](/feed-content/data-tables/types_of_work.md)
 - [Lanes](/feed-content/data-tables/lanes.md)
@@ -84,4 +84,4 @@ Field Name | Table | Enumerated Type | Notes
 `lane_type` | [lanes](/feed-content/data-tables/lanes.md) | [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type.md) | Enumeration adapted from TMDD LaneRoadway
 `restriction_type` | [lane_restrictions](/feed-content/data-tables/lane_restrictions.md) | [Road Restriction](/feed-content/enumerated-types/road_restriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [lane_restrictions](/feed-content/data-tables/lane_restrictions.md) | [Lane Restriction Unit](/feed-content/enumerated-types/lane_restriction_unit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
-`location_method` | [road_event_source_info](/feed-content/data-tables/road_event_source_info.md) | [Location Method](/feed-content/enumerated-types/location_method.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
+`location_method` | [road_event_data_sources](/feed-content/data-tables/road_event_data_sources.md) | [Location Method](/feed-content/enumerated-types/location_method.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
