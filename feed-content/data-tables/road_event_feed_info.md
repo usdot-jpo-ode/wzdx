@@ -1,4 +1,4 @@
-## road_event_feed_info object
+# road_event_feed_info
 **Required**
 
 The road_event_feed_info object stores metadata about road event datasets.

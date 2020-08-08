@@ -1,4 +1,4 @@
-## road_event_source_info object
+# road_event_data_source_info
 **Required**
 
 The road_event_source_info object stores metadata about the organizations and information within the work zone data feed.
