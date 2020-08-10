@@ -49,6 +49,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 ### List of Enumerated Types
 This section provides a list of all enumerated types uses in the WZDx specification.
 
+- [Event Type](/feed-content/enumerated-types/road_event_type.md)
 - [Event Status](/feed-content/enumerated-types/event_status.md)
 - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
 - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
@@ -68,6 +69,7 @@ For ease of reference, the table below describes all fields in the WZDx specific
 
 Field Name | Table | Enumerated Type | Notes
 --------- | --------- | ----------- | -----
+`type` | [road_events](/feed-content/data-tables/road_events.md) | [Event Type](/feed-content/enumerated-types/road_event_type.md) | Enumeration create in WZDx v3.0
 `geometry_type` | [road_events](/feed-content/data-tables/road_events.md) | [Geometry Type](/feed-content/enumerated-types/geometry-type.md) | Enumeration from [GeoJSON Specification](https://tools.ietf.org/html/rfc7946)
 `direction` | [road_events](/feed-content/data-tables/road_events.md) | [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction.md) | Enumeration adapted from TMDD link-alignment
 `beginning_accuracy` | [road_events](/feed-content/data-tables/road_events.md) | [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md) | Enumeration created in WZDx v2.0
