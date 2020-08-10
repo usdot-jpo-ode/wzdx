@@ -1,4 +1,4 @@
-# Road Event Type
+# Event Type
 
 ## Enumeration
 Type | Description
@@ -7,8 +7,8 @@ Type | Description
 **detour** | A temporary rerouting of road users onto an   existing trafficway to avoid a work zone or other impedance.            Source: https://mutcd.fhwa.dot.gov/htm/2009/part6/part6c.htm
 
 ## Used By
-The Event type enumeration is used by the following fields
+The Event Type enumeration is used by the following fields
 
 Field Name | Data Table
 -- | --
-Type | road_events
+type | road_events

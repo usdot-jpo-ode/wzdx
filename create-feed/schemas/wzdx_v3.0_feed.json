@@ -75,8 +75,8 @@
           "description": "A unique identifier issued by data feed provider that provides additional references to project or activity",
           "type": "string"
         },
-        "type": {
-          "$ref": "#/definitions/road_event_type"
+        "event_type": {
+          "$ref": "#/definitions/event_type"
         },
         "road_name": {
           "description": "Publicly known name of the road on which the event occurs",
@@ -269,7 +269,7 @@
         "restriction_value": ["restriction_units"]
       }
     },
-    "road_event_type": {
+    "event_type": {
       "title": "Road Event Type Enumerated Type",
       "description": "The type of WZDx road event",
       "enum": ["work-zone", "detour"]

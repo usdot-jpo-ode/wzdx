@@ -11,7 +11,7 @@
       "properties": {
         "road_event_id": "12345",
         "subidentifier": "State_Project_001",
-        "type": "work-zone",
+        "event_type": "work-zone",
         "road_name": "Main Street",
         "road_number": "I-100",
         "direction": "northbound",
@@ -88,7 +88,7 @@
      "properties": {
        "road_event_id": "67890",
        "subidentifier": "State_Project_002",
-       "type": "work-zone",
+       "event_type": "work-zone",
        "road_name": "Barrett Street",
        "road_number": "I-200",
        "direction": "westbound",
