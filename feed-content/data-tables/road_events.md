@@ -8,6 +8,8 @@ This table is related to the [types_of_work](/feed-content/data-tables/types_of_
 
 This table is related to the [lanes](/feed-content/data-tables/lanes.md) table. For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
 
+This table is related to the [relationships](/feed-content/data-tables/relationships.md) table. For each record in the road_events table there may exist one record in the relationships table. The road_event_id field acts as the foreign key in the relationships table.
+
 ## Data Table Structure
 Each data table defines a list of data fields which are described by the following characterstics:
 
@@ -20,14 +22,12 @@ Each data table defines a list of data fields which are described by the followi
     - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
 - **Notes** - comments, guidance, or notes for future consideration
 
-
 ## Road Events Table Structure
 
 Field Name | Data Type | Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **road_event_id** | ID | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Primary Key
 **[feed_info_id](/feed-content/data-tables/road_event_feed_info.md)** | ID |Identifies the feed to which a road event is related.|Required|Foreign Key to road_event_feed_info
-**relationships** | Collection | An array of [relationship](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v3-relationship-object/feed-content/data-tables/relationship.md) objects   | Optional |
 **geometry_type** | Enumeration: Multipoint or LineString|May be represented as a linestring or a multipoint as defined in the GeoJson specification.|Required|
 **geometry**|Coordinate(s); Float|A coordinate pair or an array of coordinates. In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event|Required|Coordinate pairs and coordinate arrays are formatted according to the geoJson spec
 **road_name**|Text|Publicly known name of the road on which the event occurs.|Required|
