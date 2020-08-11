@@ -10,12 +10,5 @@ Data Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **relationship_id** | ID | Identifies the relationship record | Required | Primary key
 [road_event_id](/data-tables/road_events.md) | ID | Identifies the road event to which a relationship applies. | Required | Foreign key to [road_events](/feed-content/data-tables/road_events.md) table
-**first** |	ID; Array |	Indicates the first (can be multiple) road event in a sequence of road events by `road_event_id` | Optional | Every value provided should be an ID which relates to a road event by `road_event_id`
-**next** | ID; Array | Indicates the next (can be multiple) road event in a sequence by `road_event_id` | Optional | Every value provided should be an ID which relates to a road event by `road_event_id`
-**parents** | Text; Array | Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase | Optional | Values can but do not have to correspond to a WZDx entity
-**children** | Text; Array | Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment | Optional | Values can but do not have to correspond to a WZDx entity
-
-## Notes
-- The format of `first`, `next`, `parents`, and `children` should be conducive to serializing into a JSON array for the feed ouput (e.g. "["parent1", "parent2"]")
-- The `first` and `next` fields are used to define sequential relationships
-- The `parents` and `children` fields define hierarchical relationships
+**relationship_type** |	Enumeration; Text<ul><li>first <li>next <li>parents <li>children</ul> |	Characterizes the type of relationship between the road event feature and linked object | Required | <ul><li>The `first` and `next` types define sequential relationships<li>The `parents` and `children` types define hierarchical relationships</ul>
+**related_id** | Text | Primary key of the linked feature or object | Required | May contain a singula ID or an array of IDs separated by commas.
