@@ -11,7 +11,7 @@ The relationships between tables is shown visually using an Entity Relationship 
 ### Entity Relationship Diagram
 The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. *Required* fields are represented in bold.
 
-![Entity Relationship Diagram](/images/road_event_erd.png)
+![Entity Relationship Diagram](/images/road_event_erd.jpg)
 
 ### List of Data Tables
 This section provides a list of all data tables uses in the WZDx specification.
