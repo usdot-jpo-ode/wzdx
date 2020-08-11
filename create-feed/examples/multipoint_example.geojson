@@ -4,7 +4,7 @@
     "publisher": "TestDOT",
     "contact_name": "Frederick Francis Feedmanager",
     "contact_email": "fred.feedmanager@testdot.gov",
-    "update_frequency": "5m",
+    "update_frequency": "120",
     "version": "3.0",
     "data_sources": [
       {
@@ -12,10 +12,10 @@
         "organization_name": "Test City 1",
         "contact_name": "Solomn Soliel Sourcefeed",
         "contact_email": "solomon.sourcefeed@testcity1.gov",
-        "update_frequency": "1m",
+        "update_frequency": "60",
         "update_date": "2020-06-18T14:27:01Z",
         "location_verify_method": "GPS",
-        "location_method": "channel_device_method",
+        "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://www.azdot.com/lrs"
       },
@@ -24,10 +24,10 @@
         "organization_name": "Test City 2",
         "contact_name": "Samuel Sonny Sourcefeed",
         "contact_email": "samuel.sourcefeed@testcity2.gov",
-        "update_frequency": "5m",
+        "update_frequency": "120",
         "update_date": "2020-06-18T14:39:01Z",
         "location_verify_method": "GPS",
-        "location_method": "channel_device_method",
+        "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://www.phoenix.gov/lrs"
       }
