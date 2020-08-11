@@ -133,7 +133,7 @@
           "format": "uri"
         }
       },
-      "required": ["data_source_id", "organization_name", "update_date", "location_method"]
+      "required": ["data_source_id", "organization_name", "location_method"]
     },
     "location_method": {
       "title": "Location Method Enumerated Type",
