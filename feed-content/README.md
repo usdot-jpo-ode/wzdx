@@ -20,6 +20,7 @@ This section provides a list of all data tables uses in the WZDx specification.
 - [Road Events](/feed-content/data-tables/road_events.md)
 - [Types of Work](/feed-content/data-tables/types_of_work.md)
 - [Lanes](/feed-content/data-tables/lanes.md)
+- [Relationships](/feed-content/data-tables/relationships.md)
 - [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md)
 - [Metadata](/feed-content/data-tables/metadata.md)
 
