@@ -78,6 +78,6 @@ Field Name | Table | Enumerated Type | Notes
 `restrictions` | [road_events](/spec-content/data-tables/road_events.md) | [Road Restriction](/spec-content/enumerated-types/road_restriction.md) | Enumeration created in WZDx v1.0
 `type_name` | [types_of_work](/spec-content/data-tables/types_of_work.md) | [Work Type Name](/spec-content/enumerated-types/work_type_name.md) | Enumeration created in WZDx v2.0
 `status` | [lanes](/spec-content/data-tables/lanes.md) | [Lane Status](/spec-content/enumerated-types/lane_status.md) | Enumeration created in WZDx v2.0
-`type` | [lanes](/spec-content/data-tables/lanes.md) | [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md) | Enumeration adapted from TMDD LaneRoadway
+`type` | [lanes](/spec-content/data-tables/lanes.md) | [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md) | Enumeration adapted from TMDD LaneRoadway, updated in WZDx v3.0
 `restriction_type` | [lane_restrictions](/spec-content/data-tables/lane_restrictions.md) | [Road Restriction](/spec-content/enumerated-types/road_restriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [lane_restrictions](/spec-content/data-tables/lane_restrictions.md) | [Lane Restriction Unit](/spec-content/enumerated-types/lane_restriction_unit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
