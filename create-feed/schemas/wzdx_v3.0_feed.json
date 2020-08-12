@@ -245,10 +245,6 @@
           "description": "Short free text description of the road event",
           "type": "string"
         },
-        "issuing_organization": {
-          "description": "The organization issuing the data feed",
-          "type": "string"
-        },
         "creation_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event was created (e.g. 2020-11-03T19:37:00Z)", 
           "type": "string",
