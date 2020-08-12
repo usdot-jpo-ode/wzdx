@@ -16,7 +16,7 @@ The **Location Method** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-location_method | [road_event_source_info](/feed-content/data-tables/road_event_source_info.md)
+location_method | [road_event_source_info](/spec-content/data-tables/road_event_source_info.md)
 
 ## Additional Information
 The following sections details the usage of each of the location method
