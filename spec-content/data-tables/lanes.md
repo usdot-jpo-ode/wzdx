@@ -9,7 +9,7 @@ This table is related to the [lane_restrictions](/spec-content/data-tables/lane_
 
 ## Lanes Table Structure
 Data Name | Data Type | Description | Conformance | Notes
-- | - | - | - | - | -
+--- | --- | --- | --- | ---
 lane_id | ID | Identifies the lane_info record | Required | Primary key
 [road_event_id](/spec-content/data-tables/road_events.md) | ID | Identifies the road event to which a lane information is related. | Required | Foreign key
 order | Integer | The position of a lane in sequence on the roadway. This value is used as an index to indicate the order of all WZDx lanes provided for a road event. | Required | A value of `1` must represent the **left-most** lane and an increase in 1 must represent moving a single lane over from the **left**.
