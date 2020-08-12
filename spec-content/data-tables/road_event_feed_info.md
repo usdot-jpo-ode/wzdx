@@ -17,3 +17,6 @@ Member | Data Type | Description | Conformance | Notes
 **update_frequency** | Integer | The frequency in seconds at which the data feed is updated | Optional | 
 **contact_name** | Text | The name of the individual responsible for the data feed | Optional | Example: Jo Help
 **contact_email** | Text  | The email address of the individual responsible for the data feed | Optional |
+
+## Feed Info and Data Source Relationship Diagram
+![Image metadata model](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v3-metadata-update/images/feed_source_event_relationship.jpg)
