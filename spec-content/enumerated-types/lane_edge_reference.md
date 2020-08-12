@@ -11,4 +11,4 @@ The **Lane Edge Reference** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-lane_edge_reference | [lanes](/feed-content/data-tables/lanes.md)
+lane_edge_reference | [lanes](/spec-content/data-tables/lanes.md)

@@ -39,7 +39,7 @@
         "types_of_work": [
           {
             "type_name": "painting",
-            "is_architectual_change": false
+            "is_architectural_change": false
           }
         ],
         "lanes": [
@@ -93,7 +93,7 @@
       },
        "road_name": "Barrett Street",
        "road_number": "I-200",
-       "direction": "west bound",
+       "direction": "westbound",
        "beginning_cross_street": "King St",
        "ending_cross_street": "Hampton Garden Drive",
        "beginning_milepost": 120.10,
@@ -117,7 +117,7 @@
        "types_of_work": [
          {
            "type_name": "roadside-work",
-           "is_architectual_change": false
+           "is_architectural_change": false
          }
        ],
        "lanes": [

@@ -11,5 +11,5 @@ The **Time Verification** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-start_date_accuracy | [road_events](/feed-content/data-tables/road_events.md)
-end_date_accuracy | [road_events](/feed-content/data-tables/road_events.md)
+start_date_accuracy | [road_events](/spec-content/data-tables/road_events.md)
+end_date_accuracy | [road_events](/spec-content/data-tables/road_events.md)
