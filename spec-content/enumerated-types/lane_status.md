@@ -17,4 +17,4 @@ The **Road Restriction** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-lane_status | [lanes](/feed-content/data-tables/lanes.md)
+lane_status | [lanes](/spec-content/data-tables/lanes.md)

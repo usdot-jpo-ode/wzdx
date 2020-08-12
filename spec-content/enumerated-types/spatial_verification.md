@@ -11,5 +11,5 @@ The **Spatial Verification** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-beginning_accuracy | [road_events](/feed-content/data-tables/road_events.md)
-ending_accuracy | [road_events](/feed-content/data-tables/road_events.md)
+beginning_accuracy | [road_events](/spec-content/data-tables/road_events.md)
+ending_accuracy | [road_events](/spec-content/data-tables/road_events.md)
