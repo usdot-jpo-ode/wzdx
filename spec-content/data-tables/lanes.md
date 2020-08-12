@@ -12,7 +12,7 @@ Data Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 lane_id | ID | Identifies the lane_info record | Required | Primary key
 [road_event_id](/spec-content/data-tables/road_events.md) | ID | Identifies the road event to which a lane information is related. | Required | Foreign key
-order | Integer | The position of a lane in sequence on the roadway. This value is used as an index to indicate the order of all WZDx lanes provided for a road event. | Required | A value of `1` must represent the **left-most** lane and an increase in 1 must represent moving a single lane over from the **left**.
+order | Positive Integer | The position of a lane in sequence on the roadway. This value is used as an index to indicate the order of all WZDx lanes provided for a road event. | Required | A value of `1` must represent the **left-most** lane and an increase in 1 must represent moving a single lane over from the **left**.
 type | Enumeration; Text | An indication of the type of lane or shoulder | Required | See [Lane Type Enumerated Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md)
 status | Enumeration; Text | Status of the lane for the traveling public | Required | See [Lane Status Enumerated Type](/spec-content/enumerated-types/lane_status.md)
-lane_number | Non-negative Integer | The number assigned to a lane | Optional | Assigned by counting from the **left** edge of the improved surface. Useful for text to voice translation.
+lane_number | Positive Integer | The number assigned to a lane. | Optional | Assigned by counting from the **left** edge of the improved surface. Useful for text to voice translation.
