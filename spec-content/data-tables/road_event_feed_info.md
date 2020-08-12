@@ -19,4 +19,4 @@ Member | Data Type | Description | Conformance | Notes
 **contact_email** | Text  | The email address of the individual responsible for the data feed | Optional |
 
 ## Feed Info and Data Source Relationship Diagram
-![Image metadata model](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/v3-metadata-update/images/feed_source_event_relationship.jpg)
+![Image metadata model](/images/feed_source_event_relationship.jpg)
