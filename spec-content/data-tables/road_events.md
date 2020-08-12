@@ -26,7 +26,7 @@ Each data table defines a list of data fields which are described by the followi
 Field Name | Data Type | Description | Conformance | Notes
 --------- | --------- | ---------------- | ----------- | -----
 **road_event_id** | ID | A unique identifier issued by the data feed provider to identify the work zone project or activity | Required | Primary Key
-**data_source_id** | ID | Identifies the data source from which the road event data is sourced from | Required | Foreign Key to [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md) `data_source_id`
+**data_source_id** | ID | Identifies the data source from which the road event originates | Required | Foreign Key to [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md) `data_source_id`
 **subidentifier** | ID | A unique identifier issued by data feed provider that provides additional references to project or activity | Optional | This identifier may be used in more than one feed as a reference to an agency project number or permit ID
 **geometry_type** | Enumeration: Multipoint or LineString|May be represented as a linestring or a multipoint as defined in the GeoJson specification.|Required|
 **geometry**|Coordinate(s); Float|A coordinate pair or an array of coordinates. In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event|Required|Coordinate pairs and coordinate arrays are formatted according to the geoJson spec
