@@ -19,11 +19,11 @@ Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usd
 ## How can I participate?
 The WZDWG welcomes feedback and comments on the v2 specification. Comments can be made by posting a GitHub Issue, while suggested changes can be made using a pull request. Alternatively, issues or suggested changes can be emailed to [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.).
 
-[WZDx v2.0 specification](/feed-content) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
+[WZDx v2.0 specification](/spec-content) is now available for IOOs to stand up data feeds. Once these data feeds are available, OEMs, navigation applications, and others can use the data. Below are steps for IOOs to get started. 
 
 1. Continue reading about the [Purpose and Scope](#purpose-and-scope)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
-3. Use [Feed Content](/feed-content) to understand the data components of the spec.
+3. Review the [specification content](/spec-content) to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using the example feeds and learn about the supported data files.
 5. Test your feed (coming soon).
 6. Publish your feed, and tell us about it via avdx@dot.gov. 
@@ -40,7 +40,7 @@ The Federal Highway Administration is leading efforts, via the [Work Zone Data I
 The WZDx specification repository contains two main subdirectories, each containing their own README file with additional information about their purpose and the files within:
 
 1. [`create-feed`](/create-feed), which contains information regarding creation of a WZDx feed, such as the feed format, example feed outputs, JSON schemas, and validation tools.
-2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
+2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
 
 A third directory, [`images`](/images) contains images that are referenced throughout the repository.
 
@@ -51,26 +51,25 @@ A third directory, [`images`](/images) contains images that are referenced throu
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
     - [**JSON Schemas**](/create-feed/schemas)
         - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
-- [**Feed Content**](/feed-content)
-    - [**Data Tables**](/feed-content/data-tables)
-        - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
-        - [Road Events](/feed-content/data-tables/road_events.md)
-        - [Types of Work](/feed-content/data-tables/types_of_work.md)
-        - [Lanes](/feed-content/data-tables/lanes.md)
-        - [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md)
-        - [Metadata](/feed-content/data-tables/metadata.md)
-    - [**Enumerated Types**](/feed-content/enumerated-types)
-        - [Event Status](/feed-content/enumerated-types/event_status.md)
-        - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
-        - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
-        - [Lane Status](/feed-content/enumerated-types/lane_status.md)
-        - [Road Restriction](/feed-content/enumerated-types/road_restriction.md)
-        - [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md)
-        - [Time Verification](/feed-content/enumerated-types/time_verification.md)
-        - [Vehicle Impact](/feed-content/enumerated-types/vehicle_impact.md)
-        - [Work Type Name](/feed-content/enumerated-types/work_type_name.md)
-        - [**Enumerated Types Derived from ITS Standards**](/feed-content/enumerated-types/derived-from-its-standards)
-            - [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction)
-            - [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type)
+- [**Specification Content**](/spec-content)
+    - [**Data Tables**](/spec-content/data-tables)
+        - [Road Event Feed Info](/spec-content/data-tables/road_event_feed_info.md)
+        - [Road Events](/spec-content/data-tables/road_events.md)
+        - [Types of Work](/spec-content/data-tables/types_of_work.md)
+        - [Lanes](/spec-content/data-tables/lanes.md)
+        - [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md)
+        - [Metadata](/spec-content/data-tables/metadata.md)
+    - [**Enumerated Types**](/spec-content/enumerated-types)
+        - [Event Status](/spec-content/enumerated-types/event_status.md)
+        - [Geometry Type](/spec-content/enumerated-types/geometry_type.md)
+        - [Lane Status](/spec-content/enumerated-types/lane_status.md)
+        - [Road Restriction](/spec-content/enumerated-types/road_restriction.md)
+        - [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md)
+        - [Time Verification](/spec-content/enumerated-types/time_verification.md)
+        - [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md)
+        - [Work Type Name](/spec-content/enumerated-types/work_type_name.md)
+        - [**Enumerated Types Derived from ITS Standards**](/spec-content/enumerated-types/derived-from-its-standards)
+            - [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction)
+            - [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type)
 - [**Images used throughout the specification**](/images)
   - [Entity Relationship Diagram](/images/road_event_erd.png)

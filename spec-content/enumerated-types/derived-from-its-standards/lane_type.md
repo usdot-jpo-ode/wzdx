@@ -74,4 +74,4 @@ The **Lane Type** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-type | [lanes](/feed-content/data-tables/lanes.md)
+type | [lanes](/spec-content/data-tables/lanes.md)

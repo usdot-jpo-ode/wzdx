@@ -11,4 +11,4 @@ The **Geometry Type** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-geometry_type | [road_events](/feed-content/data-tables/road_events.md)
+geometry_type | [road_events](/spec-content/data-tables/road_events.md)
