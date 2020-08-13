@@ -11,4 +11,4 @@ The Event Type enumeration is used by the following fields
 
 Field Name | Data Table
 -- | --
-type | road_events
+event_type | road_events
