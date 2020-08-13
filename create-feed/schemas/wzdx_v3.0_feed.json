@@ -234,7 +234,7 @@
         "lane_number": {
           "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
-          "minimum": 0
+          "minimum": 1
         },
         "restrictions": {
           "description": "A list of restrictions specific to the lane",
