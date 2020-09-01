@@ -61,6 +61,7 @@ A third directory, [`images`](/images) contains images that are referenced throu
         - [Lanes](/spec-content/data-tables/lanes.md)
         - [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md)
     - [**Enumerated Types**](/spec-content/enumerated-types)
+        - [Event Type](/spec-content/enumerated-types/event_type.md)
         - [Event Status](/spec-content/enumerated-types/event_status.md)
         - [Geometry Type](/spec-content/enumerated-types/geometry_type.md)
         - [Lane Status](/spec-content/enumerated-types/lane_status.md)

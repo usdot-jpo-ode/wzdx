@@ -39,6 +39,7 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "12345",
+        "event_type": "work-zone",
         "relationship": {
           "parents": ["State_Project_001"]
         },
@@ -264,64 +265,65 @@
         ]
       }
     },
-	{
-     "type": "Feature",
-     "properties": {
-       "road_event_id": "67890",
-       "relationship": {
-        "parents": ["State_Project_002"]
+    {
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "67890",
+        "event_type": "work-zone",
+        "relationship": {
+          "parents": ["State_Project_002"]
+        },
+        "road_name": "Barrett Street",
+        "road_number": "I-200",
+        "direction": "westbound",
+        "beginning_cross_street": "King St",
+        "ending_cross_street": "Hampton Garden Dr",
+        "beginning_milepost": 120.10,
+        "ending_milepost": 121.50,
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-02T01:07:01Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "verified",
+        "event_status": "completed",
+        "total_num_lanes": 2,
+        "vehicle_impact": "all-lanes-open",
+        "workers_present": true,
+        "reduced_speed_limit": 30,
+        "restrictions": [],
+        "description": "Dummy work zone",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:01:01Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "left-lane",
+            "restrictions": [
+              {
+                "restriction_type": "no-trucks"
+              }
+            ]
+          },
+          {
+            "order": 2,
+            "lane_number": 2,
+            "status": "open",
+            "type": "right-lane"
+          }
+        ]
       },
-       "road_name": "Barrett Street",
-       "road_number": "I-200",
-       "direction": "westbound",
-       "beginning_cross_street": "King St",
-       "ending_cross_street": "Hampton Garden Dr",
-       "beginning_milepost": 120.10,
-       "ending_milepost": 121.50,
-       "beginning_accuracy": "estimated",
-       "ending_accuracy": "estimated",
-       "start_date": "2010-01-01T01:03:01Z",
-       "end_date": "2010-01-02T01:07:01Z",
-       "start_date_accuracy": "verified",
-       "end_date_accuracy": "verified",
-       "event_status": "completed",
-       "total_num_lanes": 2,
-       "vehicle_impact": "all-lanes-open",
-       "workers_present": true,
-       "reduced_speed_limit": 30,
-       "restrictions": [],
-       "description": "Dummy work zone",
-       "creation_date": "2010-01-01T01:01:01Z",
-       "update_date": "2010-01-01T01:01:01Z",
-       "types_of_work": [
-         {
-           "type_name": "roadside-work",
-           "is_architectural_change": false
-         }
-       ],
-       "lanes": [
-         {
-           "order": 1,
-           "lane_number": 1,
-           "status": "open",
-           "type": "left-lane",
-           "restrictions": [
-             {
-               "restriction_type": "no-trucks"
-             }
-           ]
-         },
-         {
-           "order": 2,
-           "lane_number": 2,
-           "status": "open",
-           "type": "right-lane"
-         }
-       ]
-     },
-     "geometry": {
-       "type": "LineString",
-       "coordinates": [
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
           [
             -72.63547003269196,
             42.333474551052404
@@ -359,7 +361,7 @@
             42.3337997278051
           ]
         ]
-     }
-   }
+      }
+    }
   ]
 }

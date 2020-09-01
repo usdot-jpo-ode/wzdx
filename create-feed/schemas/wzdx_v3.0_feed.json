@@ -158,6 +158,9 @@
           "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
         },
+        "event_type": {
+          "$ref": "#/definitions/event_type"
+        },
         "relationship": {
           "$ref": "#/definitions/relationship"
         },
@@ -387,6 +390,11 @@
       "dependencies": {
         "restriction_value": ["restriction_units"]
       }
+    },
+    "event_type": {
+      "title": "Road Event Type Enumerated Type",
+      "description": "The type of WZDx road event",
+      "enum": ["work-zone", "detour"]
     },
     "direction": {
       "title": "Direction Enumerated Type",

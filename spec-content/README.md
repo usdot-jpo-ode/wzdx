@@ -50,6 +50,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 ### List of Enumerated Types
 This section provides a list of all enumerated types uses in the WZDx specification.
 
+- [Event Type](/spec-content/enumerated-types/event_type.md)
 - [Event Status](/spec-content/enumerated-types/event_status.md)
 - [Geometry Type](/spec-content/enumerated-types/geometry_type.md)
 - [Lane Status](/spec-content/enumerated-types/lane_status.md)
@@ -75,6 +76,7 @@ Field Name | Table | Enumerated Type | Notes
 `ending_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration updated in WZDx v3.0
 `start_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0
 `end_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0
+`event_type` | [road_events](/spec-content/data-tables/road_events.md) | [Event Type](/spec-content/enumerated-types/event_type.md) | Enumeration create in WZDx v3.0
 `event_status` | [road_events](/spec-content/data-tables/road_events.md) | [Event Status](/spec-content/enumerated-types/event_status.md) | Enumeration created in WZDx v1.0
 `vehicle_impact` | [road_events](/spec-content/data-tables/road_events.md) | [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md) | Enumeration created in WZDx v2.0
 `restrictions` | [road_events](/spec-content/data-tables/road_events.md) | [Road Restriction](/spec-content/enumerated-types/road_restriction.md) | Enumeration created in WZDx v1.0
