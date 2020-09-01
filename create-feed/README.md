@@ -32,7 +32,7 @@ The figure below models the tables and their relationships.
 ## Work Zone Data Entity Relationship Diagram
 *Note*: Required data elements are in bold.
 
-![road_event ERD](/images/road_event_erd.png)
+![road_event ERD](/images/road_event_erd.jpg)
 
 ## Feed Examples
 The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
