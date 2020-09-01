@@ -39,6 +39,7 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "12345",
+        "data_source_id": "1",
         "event_type": "work-zone",
         "relationship": {
           "parents": ["State_Project_001"]
@@ -269,6 +270,7 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "67890",
+        "data_source_id": "2",
         "event_type": "work-zone",
         "relationship": {
           "parents": ["State_Project_002"]
