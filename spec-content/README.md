@@ -70,10 +70,10 @@ Field Name | Table | Enumerated Type | Notes
 --------- | --------- | ----------- | -----
 `geometry_type` | [road_events](/spec-content/data-tables/road_events.md) | [Geometry Type](/spec-content/enumerated-types/geometry-type.md) | Enumeration from [GeoJSON Specification](https://tools.ietf.org/html/rfc7946)
 `direction` | [road_events](/spec-content/data-tables/road_events.md) | [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction.md) | Enumeration adapted from TMDD link-alignment
-`beginning_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration created in WZDx v2.0
-`ending_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration created in WZDx v2.0
-`start_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration created in WZDx v2.0
-`end_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration created in WZDx v2.0
+`beginning_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration updated in WZDx v3.0
+`ending_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration updated in WZDx v3.0
+`start_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0
+`end_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0
 `event_status` | [road_events](/spec-content/data-tables/road_events.md) | [Event Status](/spec-content/enumerated-types/event_status.md) | Enumeration created in WZDx v1.0
 `vehicle_impact` | [road_events](/spec-content/data-tables/road_events.md) | [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md) | Enumeration created in WZDx v2.0
 `restrictions` | [road_events](/spec-content/data-tables/road_events.md) | [Road Restriction](/spec-content/enumerated-types/road_restriction.md) | Enumeration created in WZDx v1.0
