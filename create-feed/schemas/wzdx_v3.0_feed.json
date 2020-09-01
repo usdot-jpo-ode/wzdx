@@ -71,9 +71,8 @@
           "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
           "type": "string"
         },
-        "subidentifier": {
-          "description": "A unique identifier issued by data feed provider that provides additional references to project or activity",
-          "type": "string"
+        "relationship": {
+          "$ref": "#/definitions/relationship"
         },
         "road_name": {
           "description": "Publicly known name of the road on which the event occurs",
@@ -199,6 +198,45 @@
         "end_date_accuracy",
         "vehicle_impact"
       ]
+    },
+    "relationship": {
+      "title": "Relationship",
+      "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "next": {
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "parents": {
+          "description": "Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "children": {
+          "description": "Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     },
     "type_of_work": {
       "title": "Type of Work",

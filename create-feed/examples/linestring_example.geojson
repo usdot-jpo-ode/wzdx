@@ -10,7 +10,9 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "12345",
-        "subidentifier": "State_Project_001",
+        "relationship": {
+          "parents": ["State_Project_001"]
+        },
         "road_name": "Main Street",
         "road_number": "I-100",
         "direction": "northbound",
@@ -238,7 +240,9 @@
      "type": "Feature",
      "properties": {
        "road_event_id": "67890",
-       "subidentifier": "State_Project_002",
+       "relationship": {
+        "parents": ["State_Project_002"]
+      },
        "road_name": "Barrett Street",
        "road_number": "I-200",
        "direction": "westbound",
