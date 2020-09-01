@@ -158,9 +158,8 @@
           "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
         },
-        "subidentifier": {
-          "description": "A unique identifier issued by data feed provider that provides additional references to project or activity",
-          "type": "string"
+        "relationship": {
+          "$ref": "#/definitions/relationship"
         },
         "road_name": {
           "description": "Publicly known name of the road on which the event occurs",
@@ -284,6 +283,45 @@
         "vehicle_impact"
       ]
     },
+    "relationship": {
+      "title": "Relationship",
+      "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "next": {
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "parents": {
+          "description": "Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "children": {
+          "description": "Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "type_of_work": {
       "title": "Type of Work",
       "description": "A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway",
@@ -304,21 +342,23 @@
       "description": "An individual lane within a road event",
       "type": "object",
       "properties": {
-        "lane_status": {
+        "order": {
+          "description": "The position (index) of the lane in sequence on the roadway, where '1' represents the left-most lane",
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
           "$ref": "#/definitions/lane_status"
         },
-        "lane_type": {
+        "type": {
           "$ref": "#/definitions/lane_type"
         },
         "lane_number": {
-          "description": "The number (index) assigned to the lane (not including shoulders)",
+          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
-          "minimum": 0
+          "minimum": 1
         },
-        "lane_edge_reference": {
-          "$ref": "#/definitions/lane_edge_reference"
-        },
-        "lane_restrictions": {
+        "restrictions": {
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
@@ -326,10 +366,7 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type"],
-      "dependencies": {
-        "lane_number": ["lane_edge_reference"]
-      }
+      "required": ["status", "type", "order"]
     },
     "lane_restriction": {
       "title": "Lane Restriction",
@@ -346,6 +383,7 @@
           "$ref": "#/definitions/lane_restriction_unit"
         }
       },
+      "required": ["restriction_type"],
       "dependencies": {
         "restriction_value": ["restriction_units"]
       }
@@ -358,12 +396,12 @@
     "spatial_verification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "time_verification": {
       "title": "Time Verification Enumerated Type",
       "description": "A measure of how accurate the a datetime is",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "event_status": {
       "title": "Event Status Enumerated Type",
@@ -410,11 +448,6 @@
         "roadway-creation"
       ]
     },
-    "lane_edge_reference": {
-      "title": "Lane Edge Reference Enumerated Type",
-      "description": "The roadside edge from which lane numbers are assigned",
-      "enum": ["left", "right"]
-    },
     "lane_status": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
@@ -424,15 +457,11 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "all",
         "left-lane",
         "right-lane",
-        "left-2-lanes",
-        "right-2-lanes",
-        "left-3-lanes",
-        "right-3-lanes",
         "middle-lane",
-        "middle-two-lanes",
+        "center-lane",
+        "lane",
         "right-turning-lane",
         "left-turning-lane",
         "right-exit-lane",
@@ -449,12 +478,13 @@
         "left-second-entrance-ramp",
         "sidewalk",
         "bike-lane",
-        "none",
-        "unknown",
         "alternating-flow-lane",
-        "outside",
-        "inside",
-        "both"
+        "right-shoulder",
+        "left-shoulder",
+        "shoulder",
+        "hov-lane",
+        "reversible-lane",
+        "center-left-turn-lane"
       ]
     },
     "lane_restriction_unit": {

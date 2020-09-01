@@ -39,7 +39,9 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "12345",
-        "subidentifier": "State_Project_001",
+        "relationship": {
+          "parents": ["State_Project_001"]
+        },
         "road_name": "Main Street",
         "road_number": "I-100",
         "direction": "northbound",
@@ -70,11 +72,11 @@
         ],
         "lanes": [
           {
-            "lane_edge_reference": "left",
+            "order": 1,
             "lane_number": 1,
-            "lane_status": "open",
-            "lane_type": "left-lane",
-            "lane_restrictions": [
+            "status": "open",
+            "type": "left-lane",
+            "restrictions": [
               {
                 "restriction_type": "reduced-width",
                 "restriction_value": 10,
@@ -83,16 +85,16 @@
             ]
           },
           {
-            "lane_edge_reference": "left",
+            "order": 2,
             "lane_number": 2,
-            "lane_status": "closed",
-            "lane_type": "middle-lane"
+            "status": "closed",
+            "type": "middle-lane"
           },
           {
-            "lane_edge_reference": "left",
+            "order": 3,
             "lane_number": 3,
-            "lane_status": "closed",
-            "lane_type": "right-lane"
+            "status": "closed",
+            "type": "right-lane"
           }
         ]
       },
@@ -114,7 +116,9 @@
      "type": "Feature",
      "properties": {
        "road_event_id": "67890",
-       "subidentifier": "State_Project_002",
+       "relationship": {
+        "parents": ["State_Project_002"]
+      },
        "road_name": "Barrett Street",
        "road_number": "I-200",
        "direction": "westbound",
@@ -146,21 +150,21 @@
        ],
        "lanes": [
          {
-           "lane_edge_reference": "left",
+           "order": 1,
            "lane_number": 1,
-           "lane_status": "open",
-           "lane_type": "left-lane",
-           "lane_restrictions": [
+           "status": "open",
+           "type": "left-lane",
+           "restrictions": [
              {
                "restriction_type": "no-trucks"
              }
            ]
          },
          {
-           "lane_edge_reference": "left",
+           "order": 2,
            "lane_number": 2,
-           "lane_status": "open",
-           "lane_type": "right-lane"
+           "status": "open",
+           "type": "right-lane"
          }
        ]
      },
