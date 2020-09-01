@@ -62,7 +62,6 @@ A third directory, [`images`](/images) contains images that are referenced throu
     - [**Enumerated Types**](/spec-content/enumerated-types)
         - [Event Status](/spec-content/enumerated-types/event_status.md)
         - [Geometry Type](/spec-content/enumerated-types/geometry_type.md)
-        - [Lane Edge Reference](/spec-content/enumerated-types/lane_edge_reference.md)
         - [Lane Status](/spec-content/enumerated-types/lane_status.md)
         - [Road Restriction](/spec-content/enumerated-types/road_restriction.md)
         - [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md)
