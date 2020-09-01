@@ -47,21 +47,104 @@
       "title": "Road Event Feed Information",
       "type": "object",
       "properties": {
-        "feed_update_date": {
+        "publisher": {
+          "description": "The organization responsible for publishing the feed",
+          "type": "string"
+        },
+        "contact_name": {
+          "description": "The name of a contact individual responsible for the data feed",
+          "type": "string"
+        },
+        "contact_email": {
+          "description": "The email address of the contact responsible for the data feed",
+          "type": "string",
+          "format": "email"
+        },
+        "update_frequency": {
+          "description": "The frequency in seconds at which the data feed is updated",
+          "type": "integer",
+          "minimum": 1
+        },
+        "update_date": {
           "description": "The UTC date and time when the data feed was last updated",
           "type": "string",
           "format": "date-time"
         },
-        "metadata": {
-          "description": "The URL for an associated metadata file",
-          "type": "string"
-        },
         "version": {
           "description": "The WZDx specification version used to create the data feed",
           "type": "string"
+        },
+        "data_sources": {
+          "description": "A list of specific data sources for the road event data in the feed",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/road_event_data_source"
+          },
+          "minItems": 1
         }
       },
-      "required": ["feed_update_date"]
+      "required": ["update_date", "version", "publisher", "data_sources"]
+    },
+    "road_event_data_source": {
+      "title": "Road Event Data Source",
+      "type": "object",
+      "properties": {
+        "data_source_id": {
+          "description": "Unique identifier for the organization providing work zone data",
+          "type": "string"
+        },
+        "organization_name": {
+          "description": "The name of the organization for the authoritative source of the work zone data",
+          "type": "string"
+        },
+        "contact_name": {
+          "description": "The name of a contact individual responsible for the data source",
+          "type": "string"
+        },
+        "contact_email": {
+          "description": "The email address of the contact responsible for the data source",
+          "type": "string",
+          "format": "email"
+        },
+        "update_frequency": {
+          "description": "The frequency in seconds at which the data source is updated",
+          "type": "integer",
+          "minimum": 1
+        },
+        "update_date": {
+          "description": "The UTC date and time when the data source was last updated",
+          "type": "string",
+          "format": "date-time"
+        },
+        "location_method": {
+          "$ref": "#/definitions/location_method"
+        },
+        "location_verify_method": {
+          "description": "The method used to verify the accuracy of the location information",
+          "type": "string"
+        },
+        "lrs_type": {
+          "description": "Describes the type of linear referencing system used for the milepost measurements",
+          "type": "string"
+        },
+        "lrs_url": {
+          "description": "A URL where additional information on the LRS information and transformation information is stored",
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["data_source_id", "organization_name", "location_method"]
+    },
+    "location_method": {
+      "title": "Location Method Enumerated Type",
+      "description": "The typical method used to locate the beginning and end of a work zone impact area",
+      "enum": [
+        "channel-device-method",
+        "sign-method",
+        "junction-method",
+        "other",
+        "unknown"
+      ]
     },
     "road_event": {
       "title": "Road Event",
@@ -71,12 +154,15 @@
           "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
           "type": "string"
         },
-        "subidentifier": {
-          "description": "A unique identifier issued by data feed provider that provides additional references to project or activity",
+        "data_source_id": {
+          "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
         },
         "event_type": {
           "$ref": "#/definitions/event_type"
+        },
+        "relationship": {
+          "$ref": "#/definitions/relationship"
         },
         "road_name": {
           "description": "Publicly known name of the road on which the event occurs",
@@ -161,10 +247,6 @@
           "description": "Short free text description of the road event",
           "type": "string"
         },
-        "issuing_organization": {
-          "description": "The organization issuing the data feed",
-          "type": "string"
-        },
         "creation_date": {
           "description": "The UTC date and time (in ISO 8601 format) when the road event was created (e.g. 2020-11-03T19:37:00Z)", 
           "type": "string",
@@ -192,6 +274,7 @@
       },
       "required": [
         "road_event_id",
+        "data_source_id",
         "road_name",
         "direction",
         "beginning_accuracy",
@@ -202,6 +285,45 @@
         "end_date_accuracy",
         "vehicle_impact"
       ]
+    },
+    "relationship": {
+      "title": "Relationship",
+      "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "next": {
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "parents": {
+          "description": "Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "children": {
+          "description": "Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     },
     "type_of_work": {
       "title": "Type of Work",
@@ -223,21 +345,23 @@
       "description": "An individual lane within a road event",
       "type": "object",
       "properties": {
-        "lane_status": {
+        "order": {
+          "description": "The position (index) of the lane in sequence on the roadway, where '1' represents the left-most lane",
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
           "$ref": "#/definitions/lane_status"
         },
-        "lane_type": {
+        "type": {
           "$ref": "#/definitions/lane_type"
         },
         "lane_number": {
-          "description": "The number (index) assigned to the lane (not including shoulders)",
+          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
-          "minimum": 0
+          "minimum": 1
         },
-        "lane_edge_reference": {
-          "$ref": "#/definitions/lane_edge_reference"
-        },
-        "lane_restrictions": {
+        "restrictions": {
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
@@ -245,10 +369,7 @@
           }
         }
       },
-      "required": ["lane_status", "lane_type"],
-      "dependencies": {
-        "lane_number": ["lane_edge_reference"]
-      }
+      "required": ["status", "type", "order"]
     },
     "lane_restriction": {
       "title": "Lane Restriction",
@@ -265,6 +386,7 @@
           "$ref": "#/definitions/lane_restriction_unit"
         }
       },
+      "required": ["restriction_type"],
       "dependencies": {
         "restriction_value": ["restriction_units"]
       }
@@ -282,12 +404,12 @@
     "spatial_verification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "time_verification": {
       "title": "Time Verification Enumerated Type",
       "description": "A measure of how accurate the a datetime is",
-      "enum": ["Estimated", "Verified"]
+      "enum": ["estimated", "verified"]
     },
     "event_status": {
       "title": "Event Status Enumerated Type",
@@ -334,11 +456,6 @@
         "roadway-creation"
       ]
     },
-    "lane_edge_reference": {
-      "title": "Lane Edge Reference Enumerated Type",
-      "description": "The roadside edge from which lane numbers are assigned",
-      "enum": ["left", "right"]
-    },
     "lane_status": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
@@ -348,15 +465,11 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "all",
         "left-lane",
         "right-lane",
-        "left-2-lanes",
-        "right-2-lanes",
-        "left-3-lanes",
-        "right-3-lanes",
         "middle-lane",
-        "middle-two-lanes",
+        "center-lane",
+        "lane",
         "right-turning-lane",
         "left-turning-lane",
         "right-exit-lane",
@@ -373,12 +486,13 @@
         "left-second-entrance-ramp",
         "sidewalk",
         "bike-lane",
-        "none",
-        "unknown",
         "alternating-flow-lane",
-        "outside",
-        "inside",
-        "both"
+        "right-shoulder",
+        "left-shoulder",
+        "shoulder",
+        "hov-lane",
+        "reversible-lane",
+        "center-left-turn-lane"
       ]
     },
     "lane_restriction_unit": {
