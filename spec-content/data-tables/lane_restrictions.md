@@ -10,6 +10,6 @@ Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-
 lane_restriction_id|ID|Identifies the lane_info record|Required|Primary key
 [lane_id](/spec-content/data-tables/lanes.md)|ID|Identifies the lane to which a restriction info record is related.|Required|Foreign key
-restriction_type|Enumeration; Text|The type of restriction being enforced.|Optional|See [Road Restriction Enumerated Type](/spec-content/enumerated-types/road_restriction.md)
+restriction_type|Enumeration; Text|The type of restriction being enforced.|Required|See [Road Restriction Enumerated Type](/spec-content/enumerated-types/road_restriction.md)
 restriction_value|Float|The measure of the restriction type|Optional|
 restriction_units|Enumeration; Text|Units of measure for the restriction value|Conditional: required if  restriction_value is not null|See [Lane Restriction Unit Enumerated Type](/spec-content/enumerated-types/lane_restriction_unit.md)
