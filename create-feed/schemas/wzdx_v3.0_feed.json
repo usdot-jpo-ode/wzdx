@@ -71,8 +71,9 @@
           "format": "date-time"
         },
         "version": {
-          "description": "The WZDx specification version used to create the data feed",
-          "type": "string"
+          "description": "The WZDx specification version used to create the data feed, in 'major.minor' format",
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
         },
         "data_sources": {
           "description": "A list of specific data sources for the road event data in the feed",
