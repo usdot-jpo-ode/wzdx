@@ -1,3 +1,20 @@
+# WZDx Specification Version 3.0
+> Released September 2020
+
+**Features**
+* Restrict `version` format to `major.minor` and enforce via v3.0 JSON schema
+* Add `order` property to lane entity to indicate a lane's position in sequence on the roadway
+* Remove `lane_edge_reference` and standardize on counting lanes from the left side of the roadway
+* Add `event_type` property to the road event entity and new **Event Type Enumerated Type** with the values `work-zone` and `detour`, to support adding detour information (and more in the future)
+* Add **relationship entity** (one per road event entity) to enable describing relationships (hierarchical and sequential) between road events and other non-WZDx entities (such as a work zone phase or project)
+* Add **road_event_data_source** entity to allow specifying multiple data sources within a single feed
+* Streamline **metadata** (previously given in an external file, by URL) and add relevant fields to the **road_event_feed_info** and **road_event_data_source** entities
+
+**Fixes**
+* Require `restriction_type` if providing a lane-level restriction
+* Change **Spatial Verification Enumerated Type** and **Time Verification Enumerated Type** values to be all lowercase
+* Remove all plural or nonsensical lane types from the **Lane Type Enumerated Type** and clarify that each WZDx lane should represent a *single* lane on the roadway
+
 # WZDx Specification v2.0
 
 > Released 1/14/2020
