@@ -136,8 +136,13 @@ The WZDWG welcomes feedback and comments on the WZDx v2.0 Specification. Comment
 
 ## Versioning
 
-We use [SemVer](https://semver.org/) for versioning. to view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository.
+The WZDx specification uses a major.minor versioning scheme, similar to [SemVer](https://semver.org/). The rules are as follows:
 
+1. The minor version number must be incremented if new, backwards compatible fields/entities/enumerations are introduced or if any existing fields/entities/enumerations are marked as deprecated.
+2. The major version number must be incremented if any backwards incompatible changes are introduced.
+3. Neither version number shall be incremented for documentation changes/clarifications that have no effect on either the specification schema or the content or structure of a GeoJSON feed file which conforms to the specification.
+
+To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository. 
 
 ## License
 
