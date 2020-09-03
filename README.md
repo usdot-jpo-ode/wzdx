@@ -1,6 +1,6 @@
 # Summary 
 
-This repository contains the Work Zone Data Exchange (WZDx) Specification. Last updated 6/26/2020 - WZDx Specification v2.0 
+This repository contains the Work Zone Data Exchange (WZDx) Specification. Last updated 9/3/2020 - WZDx Specification version 3.0
 
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
 
@@ -15,7 +15,7 @@ A third directory- [`images`](/images) - contains the images that are referenced
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
     - [**JSON Schemas**](/create-feed/schemas)
-        - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
+        - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
 - [**Feed Content**](/feed-content)
     - [**Data Tables**](/feed-content/data-tables)
         - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
@@ -64,8 +64,8 @@ Inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT
 
 **Who is involved in developing WZDx?**
 The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have started to set up data feeds based on it: 
-- The Texas Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Texas-DOT-TxDOT-Work-Zone-Data/h4kh-i7b7)
-- The Maricopa County Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Maricopa-County-Regional-Work-Zone-Data-Exchange-W/wd94-wugt)
+- The Texas Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui)
+- The Maricopa County Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui)
 - The Iowa Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://data.iowadot.gov/datasets/iowa-work-zone-data-exchange-wzdx).
 
 Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. 
@@ -85,7 +85,20 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-#### Release v2.0 (Jan 14, 2020)
+#### Release version 3.0 (Sep 2020)
+
+- Restrict version format to major.minor and enforce via v3.0 JSON schema
+- Add order property to lane entity to indicate a lane's position in sequence on the roadway
+- Remove lane_edge_reference and standardize on counting lanes from the left side of the roadway
+- Add event_type property to the road event entity and new Event Type Enumerated Type with the values work-zone and detour, to support adding detour information (and more in the future)
+- Add relationship entity (one per road event entity) to enable describing relationships (hierarchical and sequential) between road events and other non-WZDx entities (such as a work zone phase or project)
+- Add road_event_data_source entity to allow specifying multiple data sources within a single feed
+- Streamline metadata (previously given in an external file, by URL) and add relevant fields to the road_event_feed_info and road_event_data_source entities
+- Require restriction_type if providing a lane-level restriction
+- Change Spatial Verification Enumerated Type and Time Verification Enumerated Type values to be all lowercase
+- Remove all plural or nonsensical lane types from the Lane Type Enumerated Type and clarify that each WZDx lane should represent a single lane on the roadway
+
+#### Release version 2.0 (Jan 14, 2020)
 
 - [WZDx Specification v2.0](/feed-content) is now available for IOOs to stand up data feeds. Once data feeds are available from respective IOOs, OEMs, navigation applications, and others can use the data. This release includes the first set of major changes to the specification. 
 
@@ -94,7 +107,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
   - Added new data tables to accommodate [mobility impact and lane level impacts/restrictions](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/57) (i.e., closures and restrictions). The new lane-level information, as well as overall vehicle impact fields, allowing IOOs new flexibility in communicating impacts and mobility restrictions of a work zone.
   - Added a new [Types of Work table](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/59) to provide specific information on the types of work being performed at a work zone. This enumerated table categorizes the type of work and indicates if construction in a work zone will cause any architectural changes to the roadway. This information will support keeping the maps used by autonomous vehicles up to date.  
 
-#### Release v1.1 (Sep 15, 2018)
+#### Release version 1.1 (Sep 15, 2018)
 
 - [WZDx Specification v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v1.1) 
   - Initial release. This version served as a first step in providing a standard work zone data activity framework. This version of the specification focused on “common core” data concepts which are defined as data elements needed for most work zone data use cases. The specification included data elements that data producers were already producing as well as those that may not currently be produced.
