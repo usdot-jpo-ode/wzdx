@@ -18,21 +18,21 @@ The tables below detail the specificaton's content and describe the data used to
 
 ## WZDx Feed Information
 
-- The [Road Event Feed Information](/feed-content/data-tables/road_event_feed_info.md) table describes the data feed.
+- The [Road Event Feed Information](/spec-content/data-tables/road_event_feed_info.md) table describes the data feed.
 
 ## WZDx Work Zone (Road Event) Information
 
-- The [Road Events](/feed-content/data-tables/road_events.md) table describes a work zone event.
-- The [Types of Work](/feed-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
-- The [Lanes](/feed-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
-- The [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md) table describes restrictions for identified lanes.
+- The [Road Events](/spec-content/data-tables/road_events.md) table describes a work zone event.
+- The [Types of Work](/spec-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Lanes](/spec-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
+- The [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md) table describes restrictions for identified lanes.
 
 The figure below models the tables and their relationships.
 
 ## Work Zone Data Entity Relationship Diagram
 *Note*: Required data elements are in bold.
 
-![road_event ERD](/images/road_event_erd.png)
+![road_event ERD](/images/road_event_erd.jpg)
 
 ## Feed Examples
 The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
@@ -44,8 +44,12 @@ The following WZDx feed examples include all optional fields. An example file is
 The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions: 
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
+* [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
 
 ## Data Validation Tools
+## Version 3.0
+Use the JSON schema linked above to validate a WZDx v3.0 feed.
+
 ### Version 2.0
 Version 2 validation tools are being built. Documentation will be posted here when it is available.
 

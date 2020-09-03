@@ -1,8 +1,37 @@
 {
   "road_event_feed_info": {
-    "feed_update_date": "2010-01-01T01:01:01Z",
-    "metadata": "https://fake-site.tld/dummy-metadata.txt",
-    "version": "2.0"
+    "update_date": "2020-06-18T15:00:00Z",
+    "publisher": "TestDOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": 120,
+    "version": "3.0",
+    "data_sources": [
+      {
+        "data_source_id": "1",
+        "organization_name": "Test City 1",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": 60,
+        "update_date": "2020-06-18T14:27:01Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://www.azdot.com/lrs"
+      },
+      {
+        "data_source_id": "2",
+        "organization_name": "Test City 2",
+        "contact_name": "Samuel Sonny Sourcefeed",
+        "contact_email": "samuel.sourcefeed@testcity2.gov",
+        "update_frequency": 120,
+        "update_date": "2020-06-18T14:39:01Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://www.phoenix.gov/lrs"
+      }
+    ]
   },
   "type": "FeatureCollection",
   "features": [
@@ -10,7 +39,11 @@
       "type": "Feature",
       "properties": {
         "road_event_id": "12345",
-        "subidentifier": "State_Project_001",
+        "data_source_id": "1",
+        "event_type": "work-zone",
+        "relationship": {
+          "parents": ["State_Project_001"]
+        },
         "road_name": "Main Street",
         "road_number": "I-100",
         "direction": "northbound",
@@ -31,7 +64,6 @@
         "reduced_speed_limit": 30,
         "restrictions": [],
         "description": "Dummy work zone",
-        "issuing_organization": "Testco",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:01:01Z",
         "types_of_work": [
@@ -42,11 +74,11 @@
         ],
         "lanes": [
           {
-            "lane_edge_reference": "left",
+            "order": 1,
             "lane_number": 1,
-            "lane_status": "open",
-            "lane_type": "left-lane",
-            "lane_restrictions": [
+            "status": "open",
+            "type": "left-lane",
+            "restrictions": [
               {
                 "restriction_type": "reduced-width",
                 "restriction_value": 10,
@@ -55,16 +87,16 @@
             ]
           },
           {
-            "lane_edge_reference": "left",
+            "order": 2,
             "lane_number": 2,
-            "lane_status": "closed",
-            "lane_type": "middle-lane"
+            "status": "closed",
+            "type": "middle-lane"
           },
           {
-            "lane_edge_reference": "left",
+            "order": 3,
             "lane_number": 3,
-            "lane_status": "closed",
-            "lane_type": "right-lane"
+            "status": "closed",
+            "type": "right-lane"
           }
         ]
       },
@@ -82,73 +114,77 @@
         ]
       }
     },
-	{
-     "type": "Feature",
-     "properties": {
-       "road_event_id": "67890",
-       "subidentifier": "State_Project_002",
-       "road_name": "Barrett Street",
-       "road_number": "I-200",
-       "direction": "westbound",
-       "beginning_cross_street": "King St",
-       "ending_cross_street": "Hampton Garden Drive",
-       "beginning_milepost": 120.10,
-       "ending_milepost": 121.50,
-       "beginning_accuracy": "estimated",
-       "ending_accuracy": "estimated",
-       "start_date": "2010-01-01T01:03:01Z",
-       "end_date": "2010-01-02T01:07:01Z",
-       "start_date_accuracy": "verified",
-       "end_date_accuracy": "verified",
-       "event_status": "completed",
-       "total_num_lanes": 2,
-       "vehicle_impact": "all-lanes-open",
-       "workers_present": true,
-       "reduced_speed_limit": 30,
-       "restrictions": [],
-       "description": "Dummy work zone",
-       "issuing_organization": "Testco",
-       "creation_date": "2010-01-01T01:01:01Z",
-       "update_date": "2010-01-01T01:01:01Z",
-       "types_of_work": [
-         {
-           "type_name": "roadside-work",
-           "is_architectural_change": false
-         }
-       ],
-       "lanes": [
-         {
-           "lane_edge_reference": "left",
-           "lane_number": 1,
-           "lane_status": "open",
-           "lane_type": "left-lane",
-           "lane_restrictions": [
-             {
-               "restriction_type": "no-trucks"
-             }
-           ]
-         },
-         {
-           "lane_edge_reference": "left",
-           "lane_number": 2,
-           "lane_status": "open",
-           "lane_type": "right-lane"
-         }
-       ]
-     },
-     "geometry": {
-       "type": "MultiPoint",
-       "coordinates": [
-         [
-          -72.635507,
-          42.333470
-         ],
-         [
-          -72.640078,
-          42.333771
-         ]
-       ]
-     }
-   }
+	  {
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "67890",
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "relationship": {
+          "parents": ["State_Project_002"]
+        },
+        "road_name": "Barrett Street",
+        "road_number": "I-200",
+        "direction": "westbound",
+        "beginning_cross_street": "King St",
+        "ending_cross_street": "Hampton Garden Drive",
+        "beginning_milepost": 120.10,
+        "ending_milepost": 121.50,
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-02T01:07:01Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "verified",
+        "event_status": "completed",
+        "total_num_lanes": 2,
+        "vehicle_impact": "all-lanes-open",
+        "workers_present": true,
+        "reduced_speed_limit": 30,
+        "restrictions": [],
+        "description": "Dummy work zone",
+        "issuing_organization": "Testco",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:01:01Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "left-lane",
+            "restrictions": [
+              {
+                "restriction_type": "no-trucks"
+              }
+            ]
+          },
+          {
+            "order": 2,
+            "lane_number": 2,
+            "status": "open",
+            "type": "right-lane"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -72.635507,
+            42.333470
+          ],
+          [
+            -72.640078,
+            42.333771
+          ]
+        ]
+      }
+    }
   ]
 }

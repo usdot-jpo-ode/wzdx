@@ -15,4 +15,4 @@ The **Lane Restriction Unit** enumeration is used by the following fields
 
 Field Name | Data Table
 --- | ---
-restriction_units | [lane_restrictions](/feed-content/data-tables/lane_restrictions.md)
+restriction_units | [lane_restrictions](/spec-content/data-tables/lane_restrictions.md)

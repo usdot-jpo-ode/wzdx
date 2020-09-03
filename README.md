@@ -1,11 +1,14 @@
 # Summary 
 
+
 This repository contains the Work Zone Data Exchange (WZDx) Specification. Last updated 9/3/2020 - WZDx Specification version 3.0
 
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
 
+
 1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, e.g., feed format, example feed outputs, JSON schemas, and validation tools.
 2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
+
 
 A third directory- [`images`](/images) - contains the images that are referenced throughout the repository.
 
