@@ -103,19 +103,6 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 - Change Spatial Verification Enumerated Type and Time Verification Enumerated Type values to be all lowercase
 - Remove all plural or nonsensical lane types from the Lane Type Enumerated Type and clarify that each WZDx lane should represent a single lane on the roadway
 
-#### Release version 2.0 (Jan 14, 2020)
-
-- [WZDx Specification v2.0](/feed-content) is now available for IOOs to stand up data feeds. Once data feeds are available from respective IOOs, OEMs, navigation applications, and others can use the data. This release includes the first set of major changes to the specification. 
-
-  - [Required GeoJSON formatting](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/53) of a WZDx feed. GeoJSON is a data interchange format based on JavaScript Object Notation (JSON) designed to exchange geospatial data. Since feeds can be used with existing validation, mapping, and visualizations tools, requiring GeoJSON will improve the accessibility of work zone data activity to producers and consumers.
-  - Converted the “common core” data dictionary into a [relational data model](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/54) with road event tables featuring new geometry-specific data elements. This conversion permits a more efficient organization of the data elements for each work zone and supports a flexible, scalable data model.
-  - Added new data tables to accommodate [mobility impact and lane level impacts/restrictions](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/57) (i.e., closures and restrictions). The new lane-level information, as well as overall vehicle impact fields, allowing IOOs new flexibility in communicating impacts and mobility restrictions of a work zone.
-  - Added a new [Types of Work table](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/59) to provide specific information on the types of work being performed at a work zone. This enumerated table categorizes the type of work and indicates if construction in a work zone will cause any architectural changes to the roadway. This information will support keeping the maps used by autonomous vehicles up to date.  
-
-#### Release version 1.1 (Sep 15, 2018)
-
-- [WZDx Specification v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v1.1) 
-  - Initial release. This version served as a first step in providing a standard work zone data activity framework. This version of the specification focused on “common core” data concepts which are defined as data elements needed for most work zone data use cases. The specification included data elements that data producers were already producing as well as those that may not currently be produced.
 
 ## Getting Started
 
@@ -124,7 +111,7 @@ The WZDWG welcomes feedback and comments on the WZDx v2.0 Specification. Comment
 1. Read about WZDWG activities on the project [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Feed Content](/feed-content) to understand the data components of the specification.
-4. [Create your own feed](/create-feed) using example feeds and learn about supported data files.
+4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
 5. Validate your feed output using the [WZDx v2.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v2.0_feed.json) 
 6. Publish your feed and tell us about it via avdx@dot.gov. 
   
