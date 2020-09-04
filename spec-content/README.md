@@ -4,7 +4,7 @@ The WZDx specification uses a relational model to manage data structure. It defi
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/spec-content/enumerated-types) directory.
 
 ## Data Tables
-The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the [data-tables](/spec-content/data-tables) directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how a the feed output should be built from tables. 
+The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the [data-tables](/spec-content/data-tables) directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how the feed output should be built from tables. 
 
 The relationships between tables is shown visually using an Entity Relationship Diagram (ERD).
 
