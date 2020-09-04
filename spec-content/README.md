@@ -32,8 +32,9 @@ Some enumerated types are specifically derived from the TMDD; these are found in
 ### Enumerated Types Derived from ITS Standards
 The following enumerated types used in the WZDx spec are translated from enumerations from the [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx):
 
-- [lane_type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md)
 - [direction](/spec-content/enumerated-types/derived-from-its-standards/direction.md)
+- [lane_type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md)
+
 
 Example of data frame in the TMDD (specified in ASN.1 format)
 ```xml
@@ -62,8 +63,8 @@ This section provides a list of all enumerated types uses in the WZDx specificat
 - [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md)
 - [Work Type Name](/spec-content/enumerated-types/work_type_name.md)
 - [**Enumerated Types Derived from ITS Standards**](/spec-content/enumerated-types/derived-from-its-standards)
-    - [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction)
-    - [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type)
+    - [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction.md)
+    - [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md)
 
 ### Data Fields Using Enumerated Types
 For ease of reference, the table below describes all fields in the WZDx specification whose value is restricted an enumerated type, as well as the data table the field is from.
