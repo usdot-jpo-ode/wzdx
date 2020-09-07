@@ -3,7 +3,7 @@ This directory contains information regarding creation of a WZDx feed, such as t
 
 ## Feed Format and File Type
 
-The WZDx v2.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
+The WZDx v3.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
 - It is a lightweight data exchange format.
 - It is easy for humans to read and write.
 - It is easy for machines to parse and generate.
@@ -19,6 +19,7 @@ The tables below detail the specificaton's content and describe the data used to
 ## WZDx Feed Information
 
 - The [Road Event Feed Information](/spec-content/data-tables/road_event_feed_info.md) table describes the data feed.
+- The [Road Event Data Sources](/spec-content/data-tables/road_event_data_sources.md) table describes the data sources used to build the work zone data feed.
 
 ## WZDx Work Zone (Road Event) Information
 
@@ -26,6 +27,7 @@ The tables below detail the specificaton's content and describe the data used to
 - The [Types of Work](/spec-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
 - The [Lanes](/spec-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
 - The [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md) table describes restrictions for identified lanes.
+- The [Relationships](/spec-content/data-tables/relationships.md) table identifies sequential and hierarchical relationships between road events and other entities.
 
 The figure below models the tables and their relationships.
 
@@ -51,7 +53,7 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 Use the JSON schema linked above to validate a WZDx v3.0 feed.
 
 ### Version 2.0
-Version 2 validation tools are being built. Documentation will be posted here when it is available.
+Use the JSON schema linked above to validate a WZDx v2.0 feed.
 
 ### Version 1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
@@ -68,9 +70,9 @@ A more in-depth [tutorial is available here](https://guides.github.com/introduct
 
 To start collaborating via GitHub:
 - [Join GitHub](https://github.com/) by creating a free [organization account and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
-- If you are a data producer contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
+- If you are a data producer, contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
 
 ### How Do I Get Help?
-To interact directly with the DAVI Data Team and to get help implementing the spec for your data post an **issue** under the **help wanted** label on the Work Zone GitHub site.
+To interact directly with the DAVI Data Team and to get help implementing the spec for your data, post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
 ![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
