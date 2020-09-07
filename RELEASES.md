@@ -1,4 +1,4 @@
-# WZDx Specification Version 3.0
+# WZDx Specification v3.0
 > Released September 2020
 
 **Features**
