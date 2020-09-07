@@ -9,7 +9,7 @@ The WZDx Specification repository contains two main subdirectories, each contain
 
 
 1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, e.g., feed format, example feed outputs, JSON schemas, and validation tools.
-2. [`feed-content`](/feed-content), which details the data content of the WZDx specification, including data tables, field names and types, enumerations.
+2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including data tables, field names and types, and enumerations.
 
 
 A third directory- [`images`](/images) - contains the images that are referenced throughout the repository.
@@ -21,27 +21,30 @@ A third directory- [`images`](/images) - contains the images that are referenced
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
     - [**JSON Schemas**](/create-feed/schemas)
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-- [**Feed Content**](/feed-content)
-    - [**Data Tables**](/feed-content/data-tables)
-        - [Road Event Feed Info](/feed-content/data-tables/road_event_feed_info.md)
-        - [Road Events](/feed-content/data-tables/road_events.md)
-        - [Types of Work](/feed-content/data-tables/types_of_work.md)
-        - [Lanes](/feed-content/data-tables/lanes.md)
-        - [Lane Restrictions](/feed-content/data-tables/lane_restrictions.md)
-        - [Metadata](/feed-content/data-tables/metadata.md)
-    - [**Enumerated Types**](/feed-content/enumerated-types)
-        - [Event Status](/feed-content/enumerated-types/event_status.md)
-        - [Geometry Type](/feed-content/enumerated-types/geometry_type.md)
-        - [Lane Edge Reference](/feed-content/enumerated-types/lane_edge_reference.md)
-        - [Lane Status](/feed-content/enumerated-types/lane_status.md)
-        - [Road Restriction](/feed-content/enumerated-types/road_restriction.md)
-        - [Spatial Verification](/feed-content/enumerated-types/spatial_verification.md)
-        - [Time Verification](/feed-content/enumerated-types/time_verification.md)
-        - [Vehicle Impact](/feed-content/enumerated-types/vehicle_impact.md)
-        - [Work Type Name](/feed-content/enumerated-types/work_type_name.md)
-        - [**Enumerated Types Derived from ITS Standards**](/feed-content/enumerated-types/derived-from-its-standards)
-            - [Direction](/feed-content/enumerated-types/derived-from-its-standards/direction)
-            - [Lane Type](/feed-content/enumerated-types/derived-from-its-standards/lane_type)
+- [**Specification Content**](/spec-content)
+    - [**Data Tables**](/spec-content/data-tables)
+        - [Road Event Feed Info](/spec-content/data-tables/road_event_feed_info.md)
+        - [Road Event Data Sources](/spec-content/data-tables/road_event_data_sources.md)
+        - [Road Events](/spec-content/data-tables/road_events.md)
+        - [Types of Work](/spec-content/data-tables/types_of_work.md)
+        - [Lanes](/spec-content/data-tables/lanes.md)
+        - [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md)
+        - [Relationships](/spec-content/data-tables/relationships.md)
+    - [**Enumerated Types**](/spec-content/enumerated-types)
+        - [Event Status](/spec-content/enumerated-types/event_status.md)
+        - [Event Type](/spec-content/enumerated-types/event_type.md)
+        - [Geometry Type](/spec-content/enumerated-types/geometry_type.md)
+        - [Lane Restriction Unit](/spec-content/enumerated-types/lane_restriction_unit.md)
+        - [Lane Status](/spec-content/enumerated-types/lane_status.md)
+        - [Location Method](/spec-content/enumerated-types/location_method.md)
+        - [Road Restriction](/spec-content/enumerated-types/road_restriction.md)
+        - [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md)
+        - [Time Verification](/spec-content/enumerated-types/time_verification.md)
+        - [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md)
+        - [Work Type Name](/spec-content/enumerated-types/work_type_name.md)
+        - [**Enumerated Types Derived from ITS Standards**](/spec-content/enumerated-types/derived-from-its-standards)
+            - [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction)
+            - [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type)
 - [**Images Used throughout the Specification**](/images)
   - [Entity Relationship Diagram](/images/entity_relationship_diagram.png)
   
@@ -110,7 +113,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments
 
 1. Read about WZDWG activities on the project [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
-3. Use [Feed Content](/feed-content) to understand the data components of the specification.
+3. Use [Feed Content](/spec-content) to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
 5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v3.0_feed.json) 
 6. Publish your feed and tell us about it via avdx@dot.gov. 
