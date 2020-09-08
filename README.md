@@ -46,7 +46,8 @@ A third directory- [`images`](/images) - contains the images that are referenced
             - [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction)
             - [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type)
 - [**Images Used throughout the Specification**](/images)
-  - [Entity Relationship Diagram](/images/entity_relationship_diagram.png)
+  - [Entity Relationship Diagram](/images/road_event_erd.jpg)
+     - [Entity Relationshi Diagram editable draw.io file](/images/road_event_erd.drawio)
   
 
 # README Outline
