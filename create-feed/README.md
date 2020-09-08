@@ -52,6 +52,12 @@ Version 2 validation tools are being built. Documentation will be posted here wh
 ### Version 1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
 
+## Tips for Testing and Validating a New Feed
+
+During the process of developing a WZDx data feed you should validate your prototype feed against the WZDx specification JSON schema. You do this using a JSON schema validator, such as https://www.jsonschemavalidator.net. Copy/paste the WZDx JSON Schema into the left pane and your feed in the right pane. See [here](https://www.jsonschemavalidator.net/s/d2oYmEnj) for a version that already contains the WZDx v2.0 JSON schema.
+
+Additionally, since a WZDx feed is in GeoJSON format, you can easily plot the road event data to visually validate using a GeoJSON visualization tool like http://geojson.io.
+
 ## Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
 - **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you maintain your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
