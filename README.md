@@ -20,7 +20,9 @@ A third directory- [`images`](/images) - contains the images that are referenced
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
     - [**JSON Schemas**](/create-feed/schemas)
+        - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
+        
 - [**Specification Content**](/spec-content)
     - [**Data Tables**](/spec-content/data-tables)
         - [Road Event Feed Info](/spec-content/data-tables/road_event_feed_info.md)
@@ -143,5 +145,5 @@ To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode
 
 ## License
 
-The WZDx project is in the worldwide public domain (i.e., in the public domain within the United States - copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication). All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with the waiver of copyright interest.
+The WZDx project is in the worldwide public domain (i.e., in the public domain within the United States - copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication). All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with the waiver of copyright interest. see [License](LICENSE) for more details.
 
