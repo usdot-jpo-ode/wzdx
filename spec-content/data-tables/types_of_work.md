@@ -8,7 +8,7 @@ This table is related to the [road_events](/spec-content/data-tables/road_events
 #### Types of Work Table
 Data Name|Data Type|Description|Conformance|Notes
 -|-|-|-|-|
-type_of_work_id|ID|Identifies the types_of_work record|Required|Primary key
+type_of_work_id|ID|Identifies the types_of_work record.|Required|Primary key
 [road_event_id](/spec-content/data-tables/road_events.md)|ID|Identifies the road event to the type_of_work is related.|Required|Foreign key
 type_name|Enumeration; Text|A high-level text description of the type of work being done.|Required|See [Work Type Name Enumerated Type](/spec-content/enumerated-types/work_type_name.md)
 is_architectural_change|Boolean|A flag indicating whether the type of work will result in an architectural change to the roadway.|Optional|
