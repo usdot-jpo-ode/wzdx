@@ -28,7 +28,7 @@ This section provides a list of all data tables uses in the WZDx specification.
 ## Enumerated Types
 Some fields within a data table are restricted to a distinct enumeration of values, defined by an enumerated type. The enumerations for each enumerated type as well as what data fields it is used in is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
 
-Some enumerated types are specifically derived from the TMDD; these are found in the [enumerated-types/derived-from-its-standards](/spec-content/enumerated-types/derived-from-its-standards/) directory.
+Some enumerated types are specifically derived from the Traffic Management Data Dictionary (TMDD); these are found in the [enumerated-types/derived-from-its-standards](/spec-content/enumerated-types/derived-from-its-standards/) directory.
 
 ### Enumerated Types Derived from ITS Standards
 The following enumerated types used in the WZDx spec are translated from enumerations from the [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx):
@@ -50,7 +50,7 @@ DATA-TYPE "EventLane ::= SEQUENCE {
 ```
 
 ### List of Enumerated Types
-This section provides a list of all enumerated types uses in the WZDx specification.
+This section provides a list of all enumerated types used in the WZDx specification.
 
 - [Event Type](/spec-content/enumerated-types/event_type.md)
 - [Event Status](/spec-content/enumerated-types/event_status.md)
