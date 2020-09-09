@@ -9,7 +9,7 @@ This table is related to the [types_of_work](/spec-content/data-tables/types_of_
 
 This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
 
-This table is related to the [relationships](/feed-content/data-tables/relationships.md) table. For each record in the road_events table there may exist one record in the relationships table. The road_event_id field acts as the foreign key in the relationships table.
+This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the road_events table there may exist one record in the relationships table. The road_event_id field acts as the foreign key in the relationships table.
 
 ## Data Table Structure
 Each data table defines a list of data fields which are described by the following characteristics:
