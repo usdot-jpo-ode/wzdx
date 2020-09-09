@@ -57,6 +57,15 @@ The following business rules are procedures to assure a standardized and interpr
 
 5.	The features array represents a list of one or more road events. Each object in this array has three properties: type, properties, and geometry. Type will always be feature. Properties will provide all details of the road event except for geometry and geometry type, which are specified by the geometry property.
 
+6.	A mobile work zone should consider the update frequency of the WZDx data feed found in the metadata datafeed_frequency_update field. A mobile work zone should define the start and end of the work zone to be based on the approximate distance covered in the time between elapsed feed update cycles.
+
+7.	A cascading multilane closure should consider the speed of vehicles traveling through the work zone. If the distance between lane closure would not allow for a significant period of travel in a to be closed lane, then the lane should be considered closed to avoid traffic delays and potential crashes.
+
+8.	A detour should consist of a LineString containing the full detour route around the work zone’s other road events.
+
+9.	A WZDx data feed may contain user defined features in addition to optional and required features in the WZDx specification. They are still required to be in adherence with the GeoJSON specification to maintain compatibility for data consumers.
+
+
 ## Data Validation Tools
 ### Version 2.0
 Version 2 validation tools are being built. Documentation will be posted here when it is available.
