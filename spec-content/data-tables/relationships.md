@@ -3,7 +3,7 @@
 
 Identify both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common "parent", such as a project or phase, or identify a sequence of road events.
 
-Relationships show up on the feed as as a `relationship` property on the [road_events](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/feed-content/data-tables/road_events.md) feature properties.
+Relationships show up on the feed as as a `relationship` property on the [road_events](/spec-content/data-tables/road_events.md) feature properties.
 
 ## Relationships Table Structure
 Data Name | Data Type | Description | Conformance | Notes
