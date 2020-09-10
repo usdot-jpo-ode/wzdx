@@ -1,5 +1,5 @@
-# Summary 
-
+# Work Zone Data Exchange (WZDx) Specification
+## Summary 
 
 This repository contains the Work Zone Data Exchange (WZDx) Specification. 
 
@@ -8,13 +8,13 @@ This repository contains the Work Zone Data Exchange (WZDx) Specification.
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
 
 
-1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, e.g., feed format, example feed outputs, JSON schemas, and validation tools.
+1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
 2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including data tables, field names and types, and enumerations.
 
 
 A third directory- [`images`](/images) - contains the images that are referenced throughout the repository.
 
-### Contents
+## Contents
 - [**Creating the WZDx Feed**](/create-feed)
     - [**Example Feed GeoJSON Files**](/create-feed/examples)   
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
@@ -55,7 +55,7 @@ A third directory- [`images`](/images) - contains the images that are referenced
 # README Outline
 * [Project Description](#project-description)
 * [Contact Information](#contact-information)
-* [Release Notes](#released-notes)
+* [Release Notes](#release-notes)
 * [Getting Started](#getting-started)
 * [Contributions](#contributions)
 * [Versioning](#versioning)
@@ -89,13 +89,13 @@ The Federal Highway Administration is leading efforts, via the [Work Zone Data I
 - [WZDI Framework](https://collaboration.fhwa.dot.gov/wzmp/Framework/Forms/AllItems.aspx) provides a conceptual architecture for work zone data systems for collecting, storing, disseminating, managing, maintaining and archiving work zone activity data.
 - [WZDI Data Dictionary](https://collaboration.fhwa.dot.gov/wzmp/Data%20DictionaryDocuments/Forms/AllItems.aspx) provides digital descriptions of work zone activities that enable and support transportation agencies and third party providers to describe and communicate work zone-related information to agency, private sector, and public users timely and seamlessly across multiple jurisdictions and regions.
 
-## Contact Information
+# Contact Information
 
 Contact Name: ITS JPO
 
-Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.). 
+Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.)
 
-## Release Notes
+# Release Notes
 
 #### Release v3.0 (Sep 2020)
 
@@ -111,7 +111,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 - Remove all plural or nonsensical lane types from the Lane Type Enumerated Type and clarify that each WZDx lane should represent a single lane on the roadway
 
 
-## Getting Started
+# Getting Started
 
 The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls). 
 
@@ -122,7 +122,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments
 5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v3.0_feed.json) 
 6. Publish your feed and tell us about it via avdx@dot.gov. 
   
-## Contributions
+# Contributions
 
 **How do I contribute to the WZDx Specification?**
 
@@ -133,7 +133,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
 - Help us improve our best practices and formatting on GitHub.
 
-## Versioning
+# Versioning
 
 The WZDx specification uses a major.minor versioning scheme, similar to [SemVer](https://semver.org/). The rules are as follows:
 
@@ -143,7 +143,7 @@ The WZDx specification uses a major.minor versioning scheme, similar to [SemVer]
 
 To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository. 
 
-## License
+# License
 
 The WZDx project is in the worldwide public domain (i.e., in the public domain within the United States - copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication). All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with the waiver of copyright interest. see [License](LICENSE) for more details.
 
