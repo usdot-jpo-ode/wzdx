@@ -30,7 +30,7 @@ Location of first and last channeling device (e.g., cone or barrier) that is par
 #### Complex Scenario
 This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends.
 
-Note: with the data element “subidentifier”, the “owner” can link the three work activities together.
+Note: with the data element [“relationships”](/spec-content/data-tables/relationships.md), the “owner” can link the three work activities together.
 
 ![Complex channel-device method diagram](/images/channel_device_method_complex.png)
 
