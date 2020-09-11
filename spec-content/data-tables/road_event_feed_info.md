@@ -1,10 +1,10 @@
 # road_event_feed_info
 **Required**
 
-The road_event_feed_info table stores feed header information such as metadata, contact information, and data sources.
+The  `road_event_feed_info` table stores feed header information such as metadata, contact information, and data sources.
 
-- A WZDx feed must contain a single road_event_feed_info entry.
-- A WZDx feed must contain at least one road_event_data_source entry, linked to the road_event_feed_info via the `feed_info_id` foreign key on the `road_event_data_sources` table.
+- A WZDx feed must contain a single `road_event_feed_info` entry.
+- A WZDx feed must contain at least one `road_event_data_source` entry, linked to the `road_event_feed_info` via the `feed_info_id` foreign key on the `road_event_data_sources` table.
 - A WZDx feed must comply with a single WZDx version.
 
 ## Data Table Structure
