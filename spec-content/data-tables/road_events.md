@@ -3,13 +3,13 @@
 
 This table  contains information about work zone events.  The information describes where, when, and what activity is taking place along a road segment. This specification currently accommodates work zones; This design accommodates multiple road event types.
 
-This table is related to the [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md) table by the foreign key data_source_id. For every record in the road_event_data_sources table there must exist one or more road_event records.
+This table is related to the [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md) table by the foreign key `data_source_id`. For every record in the `road_event_data_sources` table there must exist one or more `road_event` records.
 
-This table is related to the [types_of_work](/spec-content/data-tables/types_of_work.md) table. For each record in the road_events table there may exist zero or more records in the types_of_work table. The road_event_id field acts as the foreign key in the types_of_work table.
+This table is related to the [types_of_work](/spec-content/data-tables/types_of_work.md) table. For each record in the `road_events` table there may exist zero or more records in the `types_of_work` table. The `road_event_id` field acts as the foreign key in the `types_of_work` table.
 
-This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. For each record in the road_events table there may exist one or more records in the lanes table. The road_event_id field acts as the foreign key in the lanes table.
+This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. For each record in the `road_events` table there may exist one or more records in the `lanes` table. The `road_event_id` field acts as the foreign key in the `lanes` table.
 
-This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the road_events table there may exist one record in the relationships table. The road_event_id field acts as the foreign key in the relationships table.
+This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the `road_events` table there may exist one record in the `relationships` table. The `road_event_id` field acts as the foreign key in the `relationships` table.
 
 ## Data Table Structure
 Each data table defines a list of data fields which are described by the following characteristics:
