@@ -18,4 +18,4 @@ Member | Data Type | Description | Conformance | Notes
 **contact_email** | Text | The email address of the contact responsible for the data source. | Optional |
 **location_verify_method** | Text | The method used to verify the accuracy of the location information. | Optional | Example: Survey accurate GPS equipment accurate to 0.1 cm
 **lrs_type** | Text | Describes the type of linear referencing system (LRS) used for the milepost measurements. | Optional | Example: Use of milemarkers posted by the roadways. These are registered to a dynamic segmentation of statewide LRS basemap.
-**lrs_url** | URL | An URL where additional information on the LRS information and transformation information is stored. | Optional | Example https://aaa.bbb.com/lrs
+**lrs_url** | URL | A URL where additional information on the LRS information and transformation information is stored. | Optional | Example https://aaa.bbb.com/lrs
