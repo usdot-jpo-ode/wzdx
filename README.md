@@ -76,7 +76,7 @@ Inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT
 **Who is involved in developing WZDx?**
 The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have started to set up data feeds based on it: 
 - The Texas Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui)
-- The Massachusetts Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://wzdx.massdot-swzm.com/WZDx-Feed_v2.json)
+- The Massachusetts Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://wzdx.massdot-swzm.com/massdot_wzdx_v2.0.geojson)
 - The Maricopa County Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui) and v2.0 can be found [here](https://api.mcdot-its.com/WZDx_v2.0/Activity/Get)
 - The Iowa Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://data.iowadot.gov/datasets/iowa-work-zone-data-exchange-wzdx).
 
