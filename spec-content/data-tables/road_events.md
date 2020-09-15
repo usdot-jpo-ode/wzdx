@@ -7,14 +7,14 @@ This table is related to the [road_event_data_sources](/spec-content/data-tables
 
 This table is related to the [types_of_work](/spec-content/data-tables/types_of_work.md) table. For each record in the `road_events` table there may exist zero or more records in the `types_of_work` table. The `road_event_id` field acts as the foreign key in the `types_of_work` table.
 
-This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. For each record in the `road_events` table there may exist one or more records in the `lanes` table. The `road_event_id` field acts as the foreign key in the `lanes` table.
+This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. For each record in the `road_events` table there may exist zero or more related record(s) in the `lanes` table. The `road_event_id` field acts as the foreign key in the `lanes` table. In the GeoJSON feed output, each lane record will map to one lane object on the `lanes` array in the road event properties.
 
 This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the `road_events` table there may exist one record in the `relationships` table. The `road_event_id` field acts as the foreign key in the `relationships` table.
 
 ## Data Table Structure
 Each data table defines a list of data fields which are described by the following characteristics:
 
-- **Field Name** - name of the field or column 
+- **Field Name** - name of the field or column
 - **Data Type** - identifies the kind of data being stored and indicates if the field’s content is restricted to an enumeration
 - **Description** - description of the data content
 - **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
