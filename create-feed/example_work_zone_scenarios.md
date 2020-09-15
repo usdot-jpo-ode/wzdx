@@ -1,5 +1,5 @@
 # Example Work Zone Scenarios
-The Following are example work zone scenarios that have been annotated by the Specification Update Subgroup and Technical Assistance Subgroup. Throught it also contain examples of how to encode the events in a GeoJSON file.
+The following are example work zone scenarios that have been annotated by the Specification Update Subgroup and Technical Assistance Subgroup. Throught it also contain examples of how to encode the events in a GeoJSON file.
 
 ## Scenario 1: Simple Workzone
 ![Scenario:Simple Work Zone](/images/simple_work_zone.png)
