@@ -4,20 +4,25 @@ The Following are example work zone scenarios that have been annotated by the Sp
 ## Scenario 1: Simple Workzone
 ![Scenario:Simple Work Zone](/images/scenario1.png)
 
-"lanes": [  
- {  
-	"lane_edge_reference": "left",  
-  "lane_number": 1,  
-	"lane_status": "open",  
-	"lane_type": "left-lane",  
-	},  
-	{  
-	"lane_edge_reference": "left",  
-  "lane_number": 2,  
-	"lane_status": "closed",  
-	"lane_type": "right-lane"  
-	}  
-]
+```
+{
+	...road event details
+	"lanes": [  
+ 		{  
+			"order": 1,
+			"lane_number": 1,  
+			"status": "open",  
+			"type": "left-lane",  
+		},  
+		{  
+			"order": "2",  
+			"lane_number": 2,  
+			"status": "closed",  
+			"type": "right-lane"
+		}  
+	]
+}
+```
 
 ## Scenario 2: Lane Shift (simple case)
 ![Scenario:Lane Shift (simple case)](/images/scenario2.png)
