@@ -1,15 +1,15 @@
 # WZDx Specification Content
-The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [data-tables](/spec-content/data-tables) directory. 
+The WZDx specification uses a relational model to manage data structure. It defines distinct entities (called tables or objects) which contain the data content (called fields or properties) of each entity. The relationship between these entities describes how the data within each is related and how the feed should be built. These entities are found in the [data-tables](/spec-content/data-tables) directory.
 
 Some fields within a data table are restricted to a defined enumeration of values. These enumerations are found in the [enumerated-types](/spec-content/enumerated-types) directory.
 
 ## Data Tables
-The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the [data-tables](/spec-content/data-tables) directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how the feed output should be built from tables. 
+The WZDx specification data content is organized into distinct entities which are represented by tables. Each table is described by its own file in the [data-tables](/spec-content/data-tables) directory and represents a distinct entity, such as a road event, a lane, or the information about a feed. All pieces of data that describe that entity are included within the table. Tables are related using a foreign key, which is an ID field that points to the primary ID field (primary key) of a different table. This relational structure indicates how to store data as well as how the feed output should be built from tables.
 
 The relationships between tables is shown visually using an Entity Relationship Diagram (ERD).
 
 ### Entity Relationship Diagram
-The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. **Required** fields are represented in bold.
+The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables.
 
 ![Entity Relationship Diagram](/images/road_event_erd.jpg)
 
@@ -88,7 +88,3 @@ Field Name | Table | Enumerated Type | Notes
 `type` | [lanes](/spec-content/data-tables/lanes.md) | [Lane Type](/spec-content/enumerated-types/derived-from-its-standards/lane_type.md) | Enumeration adapted from TMDD LaneRoadway, updated in WZDx v3.0
 `type_name` | [types_of_work](/spec-content/data-tables/types_of_work.md) | [Work Type Name](/spec-content/enumerated-types/work_type_name.md) | Enumeration created in WZDx v2.0
 `vehicle_impact` | [road_events](/spec-content/data-tables/road_events.md) | [Vehicle Impact](/spec-content/enumerated-types/vehicle_impact.md) | Enumeration created in WZDx v2.0
-
-
-
-
