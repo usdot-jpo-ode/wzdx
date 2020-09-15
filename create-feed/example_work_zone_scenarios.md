@@ -61,7 +61,7 @@ The Following are example work zone scenarios that have been annotated by the Sp
 ```  
   ### Event 2
 ```
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -202,10 +202,10 @@ The Following are example work zone scenarios that have been annotated by the Sp
 		"lane_type": "right-lane"  
 	},  
 	{  
-	"lane_edge_reference": "left",  
-	"lane_number": 5,  
-	"lane_status": “open",  
-	"lane_type": "right-shoulder"  
+		"lane_edge_reference": "left",  
+		"lane_number": 5,  
+		"lane_status": “open",  
+		"lane_type": "right-shoulder"  
 	}  
 ]
 ```
@@ -342,11 +342,11 @@ The Following are example work zone scenarios that have been annotated by the Sp
 		"lane_status": “open",  
 		"lane_type": “right-shoulder”  
 	}  
-  ]
+]
 ```  
   ### Event 3
 ```
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -471,18 +471,18 @@ The Following are example work zone scenarios that have been annotated by the Sp
 ```  
   ### Event 2
 ```
-  "lanes": [  
+"lanes": [  
 	{  
-	"lane_edge_reference": "left",  
-	"lane_number": 1,  
-	"lane_status": “open",  
-	"lane_type": “left-lane",  
+		"lane_edge_reference": "left",  
+		"lane_number": 1,  
+		"lane_status": “open",  
+		"lane_type": “left-lane",  
 	},  
 	{  
-	"lane_edge_reference": "left",  
-	"lane_number": 2,  
-	"lane_status": “closed",  
-	"lane_type": “right-lane”  
+		"lane_edge_reference": "left",  
+		"lane_number": 2,  
+		"lane_status": “closed",  
+		"lane_type": “right-lane”  
 	}  
 ]
 ```
@@ -504,11 +504,11 @@ The Following are example work zone scenarios that have been annotated by the Sp
 		"lane_status": “open",  
 		"lane_type": “right-lane"  
 	}  
-  ]
+]
 ```  
   ### Event 2
   ```
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -521,11 +521,11 @@ The Following are example work zone scenarios that have been annotated by the Sp
 		"lane_status": “closed",  
 		"lane_type": “right-lane”  
 	}  
-  ]
+]
 ```  
   ### Event 3
 ```  
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -548,7 +548,7 @@ The Following are example work zone scenarios that have been annotated by the Sp
 ```  
   ### Event 4
 ```  
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -585,7 +585,7 @@ The Following are example work zone scenarios that have been annotated by the Sp
 ```  
   ### Event 2
 ``` 
-  "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
@@ -631,7 +631,7 @@ The Following are example work zone scenarios that have been annotated by the Sp
  ``` 
   ### Event 4
 ``` 
- "lanes": [  
+"lanes": [  
 	{  
 		"lane_edge_reference": "left",  
 		"lane_number": 1,  
