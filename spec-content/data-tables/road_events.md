@@ -11,18 +11,6 @@ This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. 
 
 This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the `road_events` table there may exist one record in the `relationships` table. The `road_event_id` field acts as the foreign key in the `relationships` table.
 
-## Data Table Structure
-Each data table defines a list of data fields which are described by the following characteristics:
-
-- **Field Name** - name of the field or column
-- **Data Type** - identifies the kind of data being stored and indicates if the field’s content is restricted to an enumeration
-- **Description** - description of the data content
-- **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
-    - *Required* - must be included
-    - *Optional* - may be included
-    - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
-- **Notes** - comments, guidance, or notes for future consideration
-
 ## Road Events Table Structure
 
 Field Name | Data Type | Description | Conformance | Notes
