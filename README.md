@@ -12,7 +12,7 @@ The WZDx Specification repository contains two main subdirectories, each contain
 2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including data tables, field names and types, and enumerations.
 
 
-A third directory- [`images`](/images) - contains the images that are referenced throughout the repository.
+A third directory, [`images`](/images), contains the images that are referenced throughout the repository.
 
 ## Contents
 - [**Creating the WZDx Feed**](/create-feed)
