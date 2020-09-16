@@ -8,8 +8,8 @@ The  `road_event_feed_info` table stores feed header information such as metadat
 - A WZDx feed must comply with a single WZDx version.
 
 ## Data Table Structure
-Member | Data Type | Description | Conformance | Notes
----------- | --------- | ---------------- | ----------- | -----
+Data Name | Data Type | Description | Conformance | Notes
+--- | --- | --- | --- | ---
 **feed_info_id** |	ID |	Unique identifier for the data feed. | Required | Primary Key Recommendations on the format of this unique identifier will be made in the future. | 
 **publisher** | Text | The organization responsible for publishing the feed. | Required | Example: State DOT
 **version** | Text | The WZDx specification version used to create the data feed in `major.minor` format. | Required | Examples: `1.1`, `2.0`
