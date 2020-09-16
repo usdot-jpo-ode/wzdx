@@ -201,12 +201,12 @@
           "$ref": "#/definitions/spatial_verification"
         },
         "start_date": {
-          "description": "The UTC date and time (in ISO 8601 format) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },
         "end_date": {
-          "description": "The UTC date and time (in ISO 8601 format) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },
@@ -225,7 +225,7 @@
           "exclusiveMinimum": 0
         },
         "vehicle_impact": {
-          "$ref": "#/definitions/vehicle_impact" 
+          "$ref": "#/definitions/vehicle_impact"
         },
         "workers_present": {
           "description": "A flag indicating that there are workers present in the road event",
@@ -249,12 +249,12 @@
           "type": "string"
         },
         "creation_date": {
-          "description": "The UTC date and time (in ISO 8601 format) when the road event was created (e.g. 2020-11-03T19:37:00Z)", 
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },
         "update_date": {
-          "description": "The UTC date and time (in ISO 8601 format) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)", 
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },

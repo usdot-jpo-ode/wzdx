@@ -3,7 +3,7 @@
 
 This table identifies and describes individual lanes within a road event. Each entry in this table represents a single lane.
 
-This table is related to the [road_events](/spec-content/data-tables/road_events.md) table by the foreign key `road_event_id`.  For every record in the `road_event` table there may exist one or more record(s) in the `lanes` table.
+This table is related to the [road_events](/spec-content/data-tables/road_events.md) table by the foreign key `road_event_id`.  For every record in the `road_event` table there may exist zero or more related record(s) in the `lanes` table. In the GeoJSON feed output, each lane record will map to one lane object on the `lanes` array in the road event properties.
 
 This table is related to the [lane_restrictions](/spec-content/data-tables/lane_restrictions.md) table. For each record in the `lanes` table there may exist one or more records in the `lane_restrictions` table.  The `lane_id` field acts as the foreign key in the `lanes` table.
 

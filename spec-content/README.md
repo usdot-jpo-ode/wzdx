@@ -9,7 +9,7 @@ The WZDx specification data content is organized into distinct entities which ar
 The relationships between tables is shown visually using an Entity Relationship Diagram (ERD).
 
 ### Entity Relationship Diagram
-The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables. **Required** fields are represented in bold.
+The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables.
 
 ![Entity Relationship Diagram](/images/road_event_erd.jpg)
 

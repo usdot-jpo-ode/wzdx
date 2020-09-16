@@ -12,7 +12,7 @@ The WZDx v3.0 data feed is formatted according to the [GeoJSON](https://geojson.
 - GeoJSON formatted-data is published as text files, so there is a low technological burden of entry.
 - GeoJSON validation, mapping, and visualization tools already exist and will ease adoption by producers and consumers.
 
-A WZDx feed contains a single entry describing aspects of the feed itself (such as version) as well as one or more entries which describe a work zone's (generically: road event) characteristics along a single road segment in a single direction. 
+A WZDx feed contains a single entry describing aspects of the feed itself (such as version) as well as one or more entries which describe a work zone's (generically: road event) characteristics along a single road segment in a single direction.
 
 The tables below detail the specificaton's content and describe the data used to build the feed.
 
@@ -33,7 +33,6 @@ The tables below detail the specificaton's content and describe the data used to
 The figure below models the tables and their relationships.
 
 ## Work Zone Data Entity Relationship Diagram
-*Note*: Required data elements are in bold.
 
 ![road_event ERD](/images/road_event_erd.jpg)
 
@@ -44,7 +43,7 @@ The following WZDx feed examples include all optional fields. An example file is
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
 
 ## JSON Schemas
-The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions: 
+The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
@@ -60,9 +59,9 @@ To validate data feeds and measure compliance with the v1.1 specification, the G
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
 - **Creating a Branch** - Branching allows you to make a copy of your project (i.e., the master branch) so that you keep your master branch clean (i.e., free of changes). This copy lets you experiment with new features (e.g., new data fields).
 - **Adding Commits** - A commit is any change made to your project that you can track, allowing you to create a record of your work that others can use as reference.  
-- **Opening a Pull Request** - Pull requests allow you to alert others on your team to review and discuss your changes. 
+- **Opening a Pull Request** - Pull requests allow you to alert others on your team to review and discuss your changes.
 - **Discussing and Reviewing Commits** - This part of the process allows reviewers on your team or the DAVI Data Team check that the spec is properly implemented (e.g., that data types are correctly specified in the JSON schema).
-- **Merging to Master Branch** - Once your commits have been reviewed and approved, you can push your changes to merge with the master branch. 
+- **Merging to Master Branch** - Once your commits have been reviewed and approved, you can push your changes to merge with the master branch.
 
 A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
 
