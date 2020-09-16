@@ -13,6 +13,18 @@ The Entity Relationship Diagram (ERD) below indicates the relationship between t
 
 ![Entity Relationship Diagram](/images/road_event_erd.jpg)
 
+### Data Table Structure
+Each data table defines a list of data fields which are described by the following characteristics:
+
+- **Field Name** - name of the field or column
+- **Data Type** - identifies the kind of data being stored and indicates if the field’s content is restricted to an enumeration
+- **Description** - description of the data content
+- **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
+    - *Required* - must be included
+    - *Optional* - may be included
+    - *Conditional* - associated with two or more data concepts; requires that at least one of the concepts be included in the data feed file
+- **Notes** - comments, guidance, or notes for future consideration
+
 ### List of Data Tables
 This section provides a list of all data tables uses in the WZDx specification.
 
@@ -71,7 +83,7 @@ This section provides a list of all enumerated types used in the WZDx specificat
 For ease of reference, the table below describes all fields in the WZDx specification whose value is restricted an enumerated type, as well as the data table the field is from.
 
 Field Name | Table | Enumerated Type | Notes
---------- | --------- | ----------- | -----
+--- | --- | --- | ---
 `beginning_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration updated in WZDx v3.0
 `direction` | [road_events](/spec-content/data-tables/road_events.md) | [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction.md) | Enumeration adapted from TMDD link-alignment
 `end_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0

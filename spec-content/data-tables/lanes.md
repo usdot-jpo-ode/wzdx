@@ -8,7 +8,7 @@ This table is related to the [road_events](/spec-content/data-tables/road_events
 This table is related to the [lane_restrictions](/spec-content/data-tables/lane_restrictions.md) table. For each record in the `lanes` table there may exist one or more records in the `lane_restrictions` table.  The `lane_id` field acts as the foreign key in the `lanes` table.
 
 ## Lanes Table Structure
-Data Name | Data Type | Description | Conformance | Notes
+Field Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 lane_id | ID | Identifies the lane record. | Required | Primary key
 [road_event_id](/spec-content/data-tables/road_events.md) | ID | Identifies the road event to which a lane information is related. | Required | Foreign key

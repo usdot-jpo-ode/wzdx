@@ -7,9 +7,9 @@ The  `road_event_feed_info` table stores feed header information such as metadat
 - A WZDx feed must contain at least one `road_event_data_source` entry, linked to the `road_event_feed_info` via the `feed_info_id` foreign key on the `road_event_data_sources` table. In the GeoJSON feed output, each `road_event_data_source` entry is presented as an object in the `data_sources` array in the `road_event_feed_info` properties.
 - A WZDx feed must comply with a single WZDx version.
 
-## Data Table Structure
-Member | Data Type | Description | Conformance | Notes
----------- | --------- | ---------------- | ----------- | -----
+## Road Event Feed Info Table Structure
+Field Name | Data Type | Description | Conformance | Notes
+--- | --- | --- | --- | ---
 **feed_info_id** |	ID |	Unique identifier for the data feed. | Required | Primary Key Recommendations on the format of this unique identifier will be made in the future. |
 **publisher** | Text | The organization responsible for publishing the feed. | Required | Example: State DOT
 **version** | Text | The WZDx specification version used to create the data feed in `major.minor` format. | Required | Examples: `1.1`, `2.0`

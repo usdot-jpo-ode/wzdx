@@ -5,9 +5,9 @@ The `road_event_data_sources` table stores information about the data sources us
 - Feeds must contain at least one data source, via an object in the `data_sources` array on the `road_event_feed_info`.
 - `road_event` features are related to a `road_event_data_source` via the `road_event_data_source.data_source_id` member.
 
-## Data Table Structure
-Member | Data Type | Description | Conformance | Notes
----------- | --------- | ---------------- | ----------- | -----
+## Road Event Data Sources Table Structure
+Field Name | Data Type | Description | Conformance | Notes
+--- | --- | --- | --- | ---
 **data_source_id** | ID | Unique identifier for the organization providing work zone data. | Required | Primary key. Linked to [road_events](/spec-content/data-tables/road_events.md) table via `road_events.data_source_id`.
 **feed_info_id** | ID | Identifies the feed to which a data source is related. | Required | Foreign Key to `road_event_feed_info` for building a feed from the data tables.
 **organization_name** | Text | The name of the organization for the authoritative source of the work zone data. | Required | Example: County DOT

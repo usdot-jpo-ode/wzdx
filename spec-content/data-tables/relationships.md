@@ -6,7 +6,7 @@ Identify both sequential and hierarchical relationships between road events and 
 Relationships show up on the feed as as a `relationship` property on the [road_events](/spec-content/data-tables/road_events.md) feature properties.
 
 ## Relationships Table Structure
-Data Name | Data Type | Description | Conformance | Notes
+Field Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **relationship_id** | ID | Identifies the relationship record. | Required | Primary key
 [road_event_id](/spec-content/data-tables/road_events.md) | ID | Identifies the road event to which a relationship applies. | Required | Foreign key to [road_events](/spec-content/data-tables/road_events.md) table
