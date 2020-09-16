@@ -83,7 +83,7 @@ This section provides a list of all enumerated types used in the WZDx specificat
 For ease of reference, the table below describes all fields in the WZDx specification whose value is restricted an enumerated type, as well as the data table the field is from.
 
 Field Name | Table | Enumerated Type | Notes
---------- | --------- | ----------- | -----
+--- | --- | --- | ---
 `beginning_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Spatial Verification](/spec-content/enumerated-types/spatial_verification.md) | Enumeration updated in WZDx v3.0
 `direction` | [road_events](/spec-content/data-tables/road_events.md) | [Direction](/spec-content/enumerated-types/derived-from-its-standards/direction.md) | Enumeration adapted from TMDD link-alignment
 `end_date_accuracy` | [road_events](/spec-content/data-tables/road_events.md) | [Time Verification](/spec-content/enumerated-types/time_verification.md) | Enumeration updated in WZDx v3.0
