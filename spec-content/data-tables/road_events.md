@@ -14,7 +14,7 @@ This table is related to the [relationships](/spec-content/data-tables/relations
 ## Data Table Structure
 Each data table defines a list of data fields which are described by the following characteristics:
 
-- **Field Name** - name of the field or column 
+- **Field Name** - name of the field or column
 - **Data Type** - identifies the kind of data being stored and indicates if the field’s content is restricted to an enumeration
 - **Description** - description of the data content
 - **Conformance** - description of the requirement for including data in the data feed file. There are three categories of conformance:
@@ -26,7 +26,7 @@ Each data table defines a list of data fields which are described by the followi
 ## Road Events Table Structure
 
 Field Name | Data Type | Description | Conformance | Notes
---------- | --------- | ---------------- | ----------- | -----
+--- | --- | --- | --- | ---
 **road_event_id** | ID | An unique identifier issued by the data feed provider to identify the work zone project or activity. | Required | Primary Key
 **event_type** | Enumeration; Text | The type/classification of road event. | Required | see [Event Type Enumerated Type](/spec-content/enumerated-types/event_type.md)
 **data_source_id** | ID | Identifies the data source from which the road event originates. | Required | Foreign Key to [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md) `data_source_id`
