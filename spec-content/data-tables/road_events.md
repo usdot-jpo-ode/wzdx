@@ -12,7 +12,6 @@ This table is related to the [lanes](/spec-content/data-tables/lanes.md) table. 
 This table is related to the [relationships](/spec-content/data-tables/relationships.md) table. For each record in the `road_events` table there may exist one record in the `relationships` table. The `road_event_id` field acts as the foreign key in the `relationships` table.
 
 ## Road Events Table Structure
-
 Field Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **road_event_id** | ID | An unique identifier issued by the data feed provider to identify the work zone project or activity. | Required | Primary Key

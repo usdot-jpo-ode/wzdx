@@ -7,7 +7,7 @@ The  `road_event_feed_info` table stores feed header information such as metadat
 - A WZDx feed must contain at least one `road_event_data_source` entry, linked to the `road_event_feed_info` via the `feed_info_id` foreign key on the `road_event_data_sources` table.
 - A WZDx feed must comply with a single WZDx version.
 
-## Data Table Structure
+## Road Event Feed Info Table Structure
 Field Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 **feed_info_id** |	ID |	Unique identifier for the data feed. | Required | Primary Key Recommendations on the format of this unique identifier will be made in the future. |
