@@ -111,12 +111,12 @@
           "$ref": "#/definitions/spatial_verification"
         },
         "start_date": {
-          "description": "The UTC date and time (formatted according to [RFC 3339, Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },
         "end_date": {
-          "description": "The UTC date and time (formatted according to [RFC 3339, Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
           "type": "string",
           "format": "date-time"
         },
