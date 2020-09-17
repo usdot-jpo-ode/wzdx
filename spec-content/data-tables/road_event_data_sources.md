@@ -14,8 +14,8 @@ Field Name | Data Type | Description | Conformance | Notes
 **location_method** | Enumeration; Text | The typical method used to locate the beginning and end of a work zone impact area. | Required | See [Location Method Enumerated Type](/spec-content/enumerated-types/location_method.md)
 **update_date** | DateTime | The UTC date and time when the data source was last updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`
 **update_frequency** | Integer | The frequency in seconds at which the data source is updated. | Optional |
-**contact_name** | Text | The name of a contact responsible for the work zone data source. | Optional | Example: Jo Help
-**contact_email** | Text | The email address of the contact responsible for the data source. | Optional |
+**contact_name** | Text | The name of the individual or group responsible for the work zone data source. | Optional | Example: Jo Help
+**contact_email** | Text | The email address of the individual or group responsible for the data source. | Optional |
 **location_verify_method** | Text | The method used to verify the accuracy of the location information. | Optional | Example: Survey accurate GPS equipment accurate to 0.1 cm
 **lrs_type** | Text | Describes the type of linear referencing system (LRS) used for the milepost measurements. | Optional | Example: Use of milemarkers posted by the roadways. These are registered to a dynamic segmentation of statewide LRS basemap.
 **lrs_url** | URL | A URL where additional information on the LRS information and transformation information is stored. | Optional | Example https://aaa.bbb.com/lrs
