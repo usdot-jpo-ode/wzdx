@@ -52,11 +52,11 @@
           "type": "string"
         },
         "contact_name": {
-          "description": "The name of a contact individual responsible for the data feed",
+          "description": "The name of the individual or group responsible for the data feed",
           "type": "string"
         },
         "contact_email": {
-          "description": "The email address of the contact responsible for the data feed",
+          "description": "The email address of the individual or group responsible for the data feed",
           "type": "string",
           "format": "email"
         },
@@ -99,11 +99,11 @@
           "type": "string"
         },
         "contact_name": {
-          "description": "The name of a contact individual responsible for the data source",
+          "description": "The name of the individual or group responsible for the data source",
           "type": "string"
         },
         "contact_email": {
-          "description": "The email address of the contact responsible for the data source",
+          "description": "The email address of the individual or group responsible for the data source",
           "type": "string",
           "format": "email"
         },
