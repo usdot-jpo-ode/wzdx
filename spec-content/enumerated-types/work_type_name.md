@@ -2,7 +2,7 @@
 
 ## Enumeration
 Type | Description
----| ---
+--- | ---
 **maintenance** | Work with no impact on the roadway. This includes events such as trash pickup, mowing, landscaping.
 **minor-road-defect-repair** | Pothole repair, road crack repair and sealing, and other small road defect repairs.
 **roadside-work** | Work that is isolated to the side of the road and not in the main travel way, such as repair, replacement, or addition of streetlights, VMS, signs (guide, warning, regulatory, and information signs) in the ground.
