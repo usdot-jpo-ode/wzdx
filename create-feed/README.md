@@ -71,9 +71,7 @@ GitHub is an open-source repository hosting service that allows for the storage 
 
 A more in-depth [tutorial is available here](https://guides.github.com/introduction/flow/).
 
-To start collaborating via GitHub:
-- [Join GitHub](https://github.com/) by creating free [organization and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
-- If you are a data producer, contact [Nate Deshmukh-Towery](nate.deshmukh-towery@dot.gov) to request your own sub-repository to host your project.
+To start collaborating, [join GitHub](https://github.com/) by creating free [organization and user accounts](https://help.github.com/articles/differences-between-user-and-organization-accounts/) for your team.
 
 ### How Do I Get Help?
 To interact directly with the DAVI Data Team and to get help implementing the spec for your data, post an **issue** under the **help wanted** label on the Work Zone GitHub site.
