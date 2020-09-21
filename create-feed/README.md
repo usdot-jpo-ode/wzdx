@@ -37,7 +37,7 @@ The figure below models the tables and their relationships.
 ![road_event ERD](/images/road_event_erd.jpg)
 
 ## Feed Examples
-There are example WZDx GeoJSON feed files in the `examples` directory. The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
+The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
 
 * [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
 * [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
@@ -47,21 +47,6 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-
-## Business Rules
-The following business rules are procedures to assure a standardized and interpretable use of WZDx specification. The specification describes the data elements about a work zone that are required for a conformant data feed, whereas the business rules are requirements for implementing the specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
-
-1. Each direction of travel receives a separate road event. For example, a work zone on a two lane road, with opposite travel directions ↑↓, are two separate road events.
-2. Construction requiring alternating traffic flows in a lane should have a road event for both directions. Additionally, roadways that during normal operation alternate the flow of traffic based on time of day should have separate road events that have corresponding start and end times.
-3. The preferred geometry type representation of a road_event is LineString. In the event that coordinates between the beginning and ending points is an unavailable, the road event will be specified by a MultiPoint geometry.  
-4. A mobile work zone should consider the update frequency of the WZDx data feed. A mobile work zone should define the start and end of the work zone to be based on the approximate distance covered in the time between elapsed feed update cycles.
-5. A cascading multilane closure should consider the speed of vehicles traveling through the work zone. If the distance between lane closure would not allow for a significant period of travel in a to be closed lane, then the lane should be considered closed to avoid traffic delays and potential crashes.
-6. A detour should consist of a LineString containing the full detour route around the work zone’s other road events.
-7. A WZDx data feed may contain user defined features in addition to optional and required features in the WZDx specification. They are still required to be in adherence with the GeoJSON specification to maintain compatibility for data consumers.
-
-## Example Work Zone Scenarios
-
-See [example_work_zone_scenarios.md](/create-feed/example_work_zone_scenarios.md) for annotated examples of work zone scenarios and how they would be described in WZDx.
 
 ## Data Validation Tools
 ### WZDx v2.0 and v3.0
