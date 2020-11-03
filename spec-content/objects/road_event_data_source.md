@@ -21,4 +21,4 @@ Object Name | Property
 [Road Event Feed Info](/spec-content/objects/road_event_feed_info.md) | `data_sources`
 
 ## Additional Notes
-The value of a `Road Event Data Source`'s `data_source_id` should must match the value of the `data_source_id` property of at least one `Road Event` that is included within the same WZDx GeoJSON document.
+The value of a `Road Event Data Source`'s `data_source_id` should match the value of the `data_source_id` property of at least one `Road Event` that is included within the same WZDx GeoJSON document.
