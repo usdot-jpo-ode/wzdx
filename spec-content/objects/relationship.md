@@ -1,8 +1,8 @@
-# Relationship
+# Relationship Object
 The `Relationship` object is used to identify both sequential and hierarchical relationships between a road events and other entities. For example, a relationship can be used to link multiple road events to a common "parent", such as a project or phase, or identify a sequence of road events that make up a larger work zone.
 
 ## Properties
-Property Name | Data Type | Description | Conformance | Notes
+Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `first` | Array; \[String\] | Indicates the first (can be multiple) road event in a sequence of road events. All values in this array should be a road event ID—they should match the `road_event_id` property on a `Road Event` within the same WZDx GeoJSON document. | Optional |
 `next` | Array; \[String\] | Indicates the next (can be multiple) road event in a sequence of road events. All values in this array should be a road event ID—they should match the `road_event_id` property on a `Road Event` within the same WZDx GeoJSON document. | Optional |
@@ -10,9 +10,9 @@ Property Name | Data Type | Description | Conformance | Notes
 `children` | Array; \[String\] | Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity. | Optional | 
 
 ## Appears On
-Object Name | Property
+Object | Property
 --- | ---
-[Road Event](/spec-content/objects/road_event.md) | `relationship`
+[RoadEvent](/spec-content/objects/RoadEvent.md) | `relationship`
 
 ## Important Notes
-The value of all elements in the `Relationship`'s `first` or `next` properties must match the value of the `road_event_id` property of a [Road Event](/spec-content/objects/road_event.md) that is included in the same WZDx GeoJSON document.
+The value of all elements in the `Relationship`'s `first` or `next` properties must match the value of the `road_event_id` property of a [RoadEvent](/spec-content/objects/RoadEvent.md) that is included in the same WZDx GeoJSON document.

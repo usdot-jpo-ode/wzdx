@@ -1,4 +1,4 @@
-# TypeOfWork
+# TypeOfWork Object
 The `TypeOfWork` object indicates the type of work being done in a road event, if applicable (e.g. typical work zones), as well as optionally noting if the type of work will result in an architectural change to the roadway.
 
 ## Properties
@@ -8,6 +8,6 @@ Property Name | Data Type | Description | Conformance | Notes
 `is_architectural_change` | Boolean | A flag indicating whether the type of work will result in an architectural change to the roadway. | Optional |
 
 ## Appears On
-Object Name | Property
+Object | Property
 --- | ---
-[Road Event](/spec-content/objects/road_event.md) | `types_of_work`
+[RoadEvent](/spec-content/objects/RoadEvent.md) | `types_of_work`
