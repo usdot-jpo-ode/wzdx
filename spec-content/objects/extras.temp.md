@@ -1,0 +1,2 @@
+`geometry_type` | Enumeration: Multipoint or LineString | May be represented as a linestring or a multipoint as defined in the GeoJSON specification. | Required |
+`geometry`|Coordinate(s); Float | A coordinate pair or an array of coordinates. In either case, the first coordinate is the beginning point and the last coordinate is the ending point of the road event. | Required | Coordinate pairs and coordinate arrays are formatted according to the GeoJSON spec
