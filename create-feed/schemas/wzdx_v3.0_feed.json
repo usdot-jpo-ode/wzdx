@@ -99,7 +99,7 @@
           "format": "date-time"
         },
         "location_method": {
-          "$ref": "#/definitions/location_method"
+          "$ref": "#/definitions/LocationMethod"
         },
         "location_verify_method": {
           "description": "The method used to verify the accuracy of the location information",
@@ -117,7 +117,7 @@
       },
       "required": ["data_source_id", "organization_name", "location_method"]
     },
-    "location_method": {
+    "LocationMethod": {
       "title": "Location Method Enumerated Type",
       "description": "The typical method used to locate the beginning and end of a work zone impact area",
       "enum": [
@@ -167,7 +167,7 @@
           "type": "string"
         },
         "event_type": {
-          "$ref": "#/definitions/event_type"
+          "$ref": "#/definitions/EventType"
         },
         "relationship": {
           "$ref": "#/definitions/Relationship"
@@ -181,7 +181,7 @@
           "type": "string"
         },
         "direction": {
-          "$ref": "#/definitions/direction"
+          "$ref": "#/definitions/Direction"
         },
         "beginning_cross_street": {
           "description": "Name or number of the nearest cross street along the roadway where the event begins",
@@ -202,10 +202,10 @@
           "minimum": 0
         },
         "beginning_accuracy": {
-          "$ref": "#/definitions/spatial_verification"
+          "$ref": "#/definitions/SpatialVerification"
         },
         "ending_accuracy": {
-          "$ref": "#/definitions/spatial_verification"
+          "$ref": "#/definitions/SpatialVerification"
         },
         "start_date": {
           "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
@@ -218,13 +218,13 @@
           "format": "date-time"
         },
         "start_date_accuracy": {
-          "$ref": "#/definitions/time_verification"
+          "$ref": "#/definitions/TimeVerification"
         },
         "end_date_accuracy": {
-          "$ref": "#/definitions/time_verification"
+          "$ref": "#/definitions/TimeVerification"
         },
         "event_status": {
-          "$ref": "#/definitions/event_status"
+          "$ref": "#/definitions/EventStatus"
         },
         "total_num_lanes": {
           "description": "The total number of lanes associated with the road event",
@@ -232,7 +232,7 @@
           "exclusiveMinimum": 0
         },
         "vehicle_impact": {
-          "$ref": "#/definitions/vehicle_impact"
+          "$ref": "#/definitions/VehicleImpact"
         },
         "workers_present": {
           "description": "A flag indicating that there are workers present in the road event",
@@ -247,7 +247,7 @@
           "description": "Zero or more road restrictions applying to the road event",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/road_restriction"
+            "$ref": "#/definitions/RoadRestriction"
           },
           "uniqueItems": true
         },
@@ -339,7 +339,7 @@
       "type": "object",
       "properties": {
         "type_name": {
-          "$ref": "#/definitions/work_type_name"
+          "$ref": "#/definitions/WorkTypeName"
         },
         "is_architectural_change": {
           "description": "A flag indicating whether the type of work will result in an architectural change to the roadway",
@@ -359,10 +359,10 @@
           "minimum": 1
         },
         "status": {
-          "$ref": "#/definitions/lane_status"
+          "$ref": "#/definitions/LaneStatus"
         },
         "type": {
-          "$ref": "#/definitions/lane_type"
+          "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
           "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
@@ -385,13 +385,13 @@
       "type": "object",
       "properties": {
         "restriction_type": {
-          "$ref": "#/definitions/road_restriction"
+          "$ref": "#/definitions/RoadRestriction"
         },
         "restriction_value": {
           "type": "number"
         },
         "restriction_units": {
-          "$ref": "#/definitions/lane_restriction_unit"
+          "$ref": "#/definitions/LaneRestrictionUnit"
         }
       },
       "required": ["restriction_type"],
@@ -399,37 +399,37 @@
         "restriction_value": ["restriction_units"]
       }
     },
-    "event_type": {
+    "EventType": {
       "title": "Road Event Type Enumerated Type",
       "description": "The type of WZDx road event",
       "enum": ["work-zone", "detour"]
     },
-    "direction": {
+    "Direction": {
       "title": "Direction Enumerated Type",
       "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
       "enum": ["northbound", "eastbound", "southbound", "westbound"]
     },
-    "spatial_verification": {
+    "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
       "enum": ["estimated", "verified"]
     },
-    "time_verification": {
+    "TimeVerification": {
       "title": "Time Verification Enumerated Type",
       "description": "A measure of how accurate the a datetime is",
       "enum": ["estimated", "verified"]
     },
-    "event_status": {
+    "EventStatus": {
       "title": "Event Status Enumerated Type",
       "description": "The status of the road event",
       "enum": ["planned", "pending", "active", "completed", "cancelled"]
     },
-    "vehicle_impact": {
+    "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
       "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "unknown"]
     },
-    "road_restriction": {
+    "RoadRestriction": {
       "title": "Road Restriction Enumerated Type",
       "description": "The type of vehicle restriction on a roadway",
       "enum": [
@@ -448,7 +448,7 @@
         "permitted-oversize-loads-prohibited"
       ]
     },
-    "work_type_name": {
+    "WorkTypeName": {
       "title": "Work Type Name Enumerated Type",
       "description": "A high-level text description of the type of work being done in a road event",
       "enum": [
@@ -464,12 +464,12 @@
         "roadway-creation"
       ]
     },
-    "lane_status": {
+    "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
       "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way"]
     },
-    "lane_type": {
+    "LaneType": {
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
@@ -503,7 +503,7 @@
         "center-left-turn-lane"
       ]
     },
-    "lane_restriction_unit": {
+    "LaneRestrictionUnit": {
       "title": "Lane Restriction Unit Enumerated Type",
       "description": "Units of measure used for the lane restriction value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
