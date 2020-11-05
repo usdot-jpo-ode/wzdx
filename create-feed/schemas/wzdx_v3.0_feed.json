@@ -6,45 +6,25 @@
   "type": "object",
   "properties": {
     "road_event_feed_info": {
-      "$ref": "#/definitions/road_event_feed_info"
+      "$ref": "#/definitions/RoadEventFeedInfo"
     },
     "type": {
       "description": "The GeoJSON type",
       "enum": ["FeatureCollection"]
     },
     "features": {
-      "description": "The list of road events (GeoJSON Features)",
+      "description": "An array of GeoJSON Feature objects which represent WZDx road events",
       "type": "array",
       "items": {
-        "title": "Road Event (GeoJSON Feature)",
-        "type": "object",
-        "properties": {
-          "type": {
-            "description": "The GeoJSON Feature type",
-            "enum": ["Feature"]
-          },
-          "properties": {
-            "$ref": "#/definitions/road_event"
-          },
-          "geometry": {
-            "oneOf": [
-              {
-                "$ref": "https://geojson.org/schema/LineString.json"
-              },
-              {
-                "$ref": "https://geojson.org/schema/MultiPoint.json"
-              }
-            ]
-          }
-        },
-        "required": ["type","properties","geometry"]
+        "$ref": "#/definitions/RoadEventFeature"
       }
     }
   },
   "required": ["road_event_feed_info", "type", "features"],
   "definitions": {
-    "road_event_feed_info": {
+    "RoadEventFeedInfo": {
       "title": "Road Event Feed Information",
+      "description": "Describes WZDx feed header information such as metadata, contact information, and data sources",
       "type": "object",
       "properties": {
         "publisher": {
@@ -79,15 +59,16 @@
           "description": "A list of specific data sources for the road event data in the feed",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/road_event_data_source"
+            "$ref": "#/definitions/RoadEventDataSource"
           },
           "minItems": 1
         }
       },
       "required": ["update_date", "version", "publisher", "data_sources"]
     },
-    "road_event_data_source": {
+    "RoadEventDataSource": {
       "title": "Road Event Data Source",
+      "description": "Describes information about a specific data source used to build the work zone data feed",
       "type": "object",
       "properties": {
         "data_source_id": {
@@ -147,8 +128,34 @@
         "unknown"
       ]
     },
-    "road_event": {
+    "RoadEventFeature": {
+      "title": "Road Event Feature (GeoJSON Feature)",
+      "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The GeoJSON object type—must be 'Feature'",
+          "enum": ["Feature"]
+        },
+        "properties": {
+          "$ref": "#/definitions/RoadEvent"
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "https://geojson.org/schema/LineString.json"
+            },
+            {
+              "$ref": "https://geojson.org/schema/MultiPoint.json"
+            }
+          ]
+        }
+      },
+      "required": ["type","properties","geometry"]
+    },
+    "RoadEvent": {
       "title": "Road Event",
+      "description": "Describes an activity taking place along a road segment",
       "type": "object",
       "properties": {
         "road_event_id": {
@@ -163,7 +170,7 @@
           "$ref": "#/definitions/event_type"
         },
         "relationship": {
-          "$ref": "#/definitions/relationship"
+          "$ref": "#/definitions/Relationship"
         },
         "road_name": {
           "description": "Publicly known name of the road on which the event occurs",
@@ -262,14 +269,14 @@
           "description": "A list of the types of work being done in a road event",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/type_of_work"
+            "$ref": "#/definitions/TypeOfWork"
           }
         },
         "lanes": {
           "description": "A list of individual lanes within a road event (roadway segment)",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/lane"
+            "$ref": "#/definitions/Lane"
           }
         }
       },
@@ -287,7 +294,7 @@
         "vehicle_impact"
       ]
     },
-    "relationship": {
+    "Relationship": {
       "title": "Relationship",
       "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
       "type": "object",
@@ -326,7 +333,7 @@
         }
       }
     },
-    "type_of_work": {
+    "TypeOfWork": {
       "title": "Type of Work",
       "description": "A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway",
       "type": "object",
@@ -341,7 +348,7 @@
       },
       "required": ["type_name"]
     },
-    "lane": {
+    "Lane": {
       "title": "Lane",
       "description": "An individual lane within a road event",
       "type": "object",
@@ -366,13 +373,13 @@
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/lane_restriction"
+            "$ref": "#/definitions/LaneRestriction"
           }
         }
       },
       "required": ["status", "type", "order"]
     },
-    "lane_restriction": {
+    "LaneRestriction": {
       "title": "Lane Restriction",
       "description": "A lane-level restriction, including type and value",
       "type": "object",
