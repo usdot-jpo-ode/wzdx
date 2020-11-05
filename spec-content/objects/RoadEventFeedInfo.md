@@ -1,5 +1,5 @@
 # RoadEventFeedInfo Object
-The `RoadEventFeedInfo` object stores WZDx feed header information such as metadata, contact information, and data sources. There is one `RoadEventFeedInfo` per WZDx GeoJSON document.
+The `RoadEventFeedInfo` object describes WZDx feed header information such as metadata, contact information, and data sources. There is one `RoadEventFeedInfo` per WZDx GeoJSON document.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
