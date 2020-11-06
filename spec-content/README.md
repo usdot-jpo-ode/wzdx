@@ -19,7 +19,7 @@ Each object is described by a table of properties, which are each defined by the
 - **Notes** - Additional comments, guidance, notes for future consideration, or examples.
 
 ### List of Objects
-This section provides a tabular list of all data tables uses in the WZDx specification.
+This section provides a tabular list of all objects used in the WZDx specification.
 
 Object | Description
 --- | ---

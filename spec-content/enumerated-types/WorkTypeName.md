@@ -18,4 +18,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`type_name` | [types_of_work](/spec-content/data-tables/types_of_work.md)
+`type_name` | [TypeOfWork](/spec-content/objects/TypeOfWork.md)
