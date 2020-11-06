@@ -1,4 +1,5 @@
 # Lane Restriction Unit
+Units of measure used for a lane restriction value.
 
 ## Enumeration
 Type | Description

@@ -1,4 +1,5 @@
 # Event Type
+The type of a WZDx road event.
 
 ## Enumeration
 Type | Description

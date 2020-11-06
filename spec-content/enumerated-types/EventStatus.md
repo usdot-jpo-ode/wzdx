@@ -1,4 +1,5 @@
 # Work Zone Event Status
+The status of a road event.
 
 ## Enumeration
 Type | Description

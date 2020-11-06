@@ -1,4 +1,5 @@
 # Time Verification
+A measure of how accurate a date-time is.
 
 ## Enumeration
 Type | Description

@@ -1,4 +1,5 @@
 # Spatial Verification
+An indication of how a geographical coordinate was defined.
 
 ## Enumeration
 Type | Description

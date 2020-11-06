@@ -1,5 +1,5 @@
 # Lane Status
-The status of the lane for the traveling public.
+The status of a lane for the traveling public.
 
 ## Enumeration
 Type | Description

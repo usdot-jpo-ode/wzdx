@@ -1,4 +1,5 @@
 # Work Type Name
+A high-level text description of the type of work being done in a road event.
 
 ## Enumeration
 Type | Description

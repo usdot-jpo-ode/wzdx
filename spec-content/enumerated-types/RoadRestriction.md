@@ -1,4 +1,5 @@
 # Road Restriction
+The type of vehicle restriction on a roadway.
 
 ## Enumeration
 Type | Description

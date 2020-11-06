@@ -1,4 +1,5 @@
 # Vehicle Impact
+The impact to vehicular lanes along a single road in a single direction.
 
 ## Enumeration
 Type | Description

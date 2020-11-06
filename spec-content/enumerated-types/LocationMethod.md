@@ -1,5 +1,4 @@
 # Location Method
-
 The typical method used to locate the begin and end of a work zone impact area.
 
 ## Enumeration
