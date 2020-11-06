@@ -8,5 +8,5 @@ Name | Type | Description | Conformance | Notes
 `type` | String; `"FeatureCollection"` | The GeoJSON object type. For WZDx, this must be the string `FeatureCollection`. | Required | This is a GeoJSON property.
 `features` | Array; \[[RoadEventFeature](/spec-content/objects/RoadEventFeature.md)\] | An array of GeoJSON [Feature](https://tools.ietf.org/html/rfc7946#section-3.2) objects which represent WZDx road events. | Required | 
 
-## Appears On
-WZDx GeoJSON document root object (one per file).
+## Used By
+WZDx GeoJSON document (one `WZDxFeed` object per file).

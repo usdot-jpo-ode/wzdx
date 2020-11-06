@@ -7,7 +7,7 @@ Property Name | Data Type | Description | Conformance | Notes
 `type_name` | [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done. | Required | 
 `is_architectural_change` | Boolean | A flag indicating whether the type of work will result in an architectural change to the roadway. | Optional |
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | ---
-[RoadEvent](/spec-content/objects/RoadEvent.md) | `types_of_work`
+`types_of_work` | [RoadEvent](/spec-content/objects/RoadEvent.md)

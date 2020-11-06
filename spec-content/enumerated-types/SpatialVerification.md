@@ -1,16 +1,14 @@
 # Spatial Verification
 An indication of how a geographical coordinate was defined.
 
-## Enumeration
-Type | Description
+## Values
+Value | Description
 --- | ---
-**estimated** | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
-**verified** | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
+`estimated` | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
+`verified` | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
 
 ## Used By
-The **Spatial Verification** enumeration is used by the following fields
-
-Field Name | Data Table
+Property | Object
 --- | ---
-beginning_accuracy | [road_events](/spec-content/data-tables/road_events.md)
-ending_accuracy | [road_events](/spec-content/data-tables/road_events.md)
+`beginning_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`ending_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)

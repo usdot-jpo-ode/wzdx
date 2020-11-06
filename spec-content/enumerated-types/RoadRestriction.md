@@ -1,27 +1,25 @@
 # Road Restriction
 The type of vehicle restriction on a roadway.
 
-## Enumeration
-Type | Description
+## Values
+Value | Description
 --- | ---
-**no-trucks** | Trucks are prohibited from traveling in work zone area
-**travel-peak-hours-only** | Travel restricted to travel peak hours only
-**hov-3** | Travel restricted to high occupancy vehicles of three or more
-**hov-2** | Travel restricted to high occupancy vehicles of two or more
-**no-parking** | No parking in work zone area
-**reduced-width** | Lane width reduced in work zone area
-**reduced-height** | Height restrictions reduced in work zone area
-**reduced-length** | Vehicle length restrictions reduced in work zone area
-**reduced-weight** | Vehicle weight restrictions reduced in work zone area
-**axle-load-limit** | Vehicle axle-load-limit restrictions reduced in work zone area
-**gross-weight-limit** | Vehicle gross-weight-limit restrictions reduced in work zone area
-**towing-prohibited** | Towing prohibited in work zone area
-**permitted-oversize-loads-<br>prohibited** | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
+`no-trucks` | Trucks are prohibited from traveling in work zone area
+`travel-peak-hours-only` | Travel restricted to travel peak hours only
+`hov-3` | Travel restricted to high occupancy vehicles of three or more
+`hov-2` | Travel restricted to high occupancy vehicles of two or more
+`no-parking` | No parking in work zone area
+`reduced-width` | Lane width reduced in work zone area
+`reduced-height` | Height restrictions reduced in work zone area
+`reduced-length` | Vehicle length restrictions reduced in work zone area
+`reduced-weight` | Vehicle weight restrictions reduced in work zone area
+`axle-load-limit` | Vehicle axle-load-limit restrictions reduced in work zone area
+`gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced in work zone area
+`towing-prohibited` | Towing prohibited in work zone area
+`permitted-oversize-loads-<br>prohibited` | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
 
 ## Used By
-The **Road Restriction** enumeration is used by the following fields
-
-Field Name | Data Table
+Property | Object
 --- | ---
-restrictions | [road_events](/spec-content/data-tables/road_events.md)
-restriction_type | [lane_restrictions](/spec-content/data-tables/lane_restrictions.md)
+`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`restriction_type` | [LaneRestriction](/spec-content/objects/LaneRestriction.md)

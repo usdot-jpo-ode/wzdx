@@ -12,7 +12,7 @@ Name | Type | Description | Conformance | Notes
 `contact_name` | String | The name of the individual or group responsible for the data feed. | Optional | Example: `Jo Help`
 `contact_email` | String; [email](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.2) | The email address of the individual or group responsible for the data feed. | Optional | Example: `abc@testcity1.gov`
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | --- 
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | `road_event_feed_info`
+`road_event_feed_info` | [WZDxFeed](/spec-content/objects/WZDxFeed.md)

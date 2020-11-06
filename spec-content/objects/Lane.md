@@ -10,7 +10,7 @@ Name | Type | Description | Conformance | Notes
 `lane_number` | Positive Integer | The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes. | Optional | Assigned by counting from the **left** edge of the improved surface. Useful for text to voice translation.
 `restrictions` | Array; \[[LaneRestriction](/spec-content/objects/LaneRestriction.md)\] | A list of specific restrictions that apply to the lane. | Optional | 
 
-## Appears On
-Object| Property
+## Used By
+Property | Object
 --- | ---
-[RoadEvent](/spec-content/objects/RoadEvent.md) | `lanes`
+`lanes` | [RoadEvent](/spec-content/objects/RoadEvent.md)

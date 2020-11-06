@@ -1,21 +1,19 @@
 # Location Method
 The typical method used to locate the begin and end of a work zone impact area.
 
-## Enumeration
-Type | Description
+## Values
+Value | Description
 --- | ---
-**channel-device-method** | Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. *This is the preferred location method*
-**sign-method** | Location of first and last work zone-related signs
-**junction-method** | Location of a junction (e.g., a cross street or exit/entrance ramp) before and after a work zone
-**other** | Location method does not match any of the other options
-**unknown** | Location method is not known
+`channel-device-method` | Location of first and last channeling device (e.g., cone or barrier) that is part of a “travel impact effect” (taper) or designation of a work zone transition area. *This is the preferred location method*
+`sign-method` | Location of first and last work zone-related signs
+`junction-method` | Location of a junction (e.g., a cross street or exit/entrance ramp) before and after a work zone
+`other` | Location method does not match any of the other options
+`unknown` | Location method is not known
 
 ## Used By
-The **Location Method** enumeration is used by the following fields
-
-Field Name | Data Table
+Property | Object
 --- | ---
-location_method | [road_event_data_sources](/spec-content/data-tables/road_event_data_sources.md)
+`location_method` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md)
 
 ## Additional Information
 The following sections details the usage of each of the location method
@@ -29,7 +27,7 @@ Location of first and last channeling device (e.g., cone or barrier) that is par
 #### Complex Scenario
 This example shows three work zone activity areas that are part of a work zone project. Each activity area is treated as an independent work zone activity record, with its own begin and end location where each lane taper begins and ends.
 
-Note: with the data element [“relationships”](/spec-content/data-tables/relationships.md), the “owner” can link the three work activities together.
+Note: using the [Relationship](/spec-content/objects/Relationship.md), the “owner” can link the three work activities together.
 
 ![Complex channel-device method diagram](/images/channel_device_method_complex.png)
 

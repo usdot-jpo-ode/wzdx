@@ -8,7 +8,7 @@ Name | Type | Description | Conformance | Notes
 `properties` | [RoadEvent](/spec-content/objects/RoadEvent.md) | The specific details of road event. | Required | This is a GeoJSON property.
 `geometry` | GeoJSON [Geometry](https://tools.ietf.org/html/rfc7946#section-3.1) object with `type` of [LineString](https://tools.ietf.org/html/rfc7946#section-3.1.4) or [MultiPoint](https://tools.ietf.org/html/rfc7946#section-3.1.3) | The geometry of the road event. The Geometry object's `type` property MUST be [LineString](https://tools.ietf.org/html/rfc7946#section-3.1.4) or [MultiPoint](https://tools.ietf.org/html/rfc7946#section-3.1.3). `LineString` allows specifying the entire road event path and should be preferred. `MultiPoint` should be used when only the start and end coordinates are known. | Required | This is a GeoJSON property.
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | ---
-[WZDx Feed](/spec-content/objects/wzdx_feed.md) | `features`
+`features` | [WZDx Feed](/spec-content/objects/wzdx_feed.md)

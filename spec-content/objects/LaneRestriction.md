@@ -8,7 +8,7 @@ Name | Type | Description | Conformance | Notes
 `restriction_value` | Number | The measure of the restriction type. | Optional |
 `restriction_units` | [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure for the restriction value. | Conditional: required if `restriction_value` is not null |
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | ---
-[Lane](/spec-content/objects/Lane.md) | `restrictions`
+`restrictions` | [Lane](/spec-content/objects/Lane.md)

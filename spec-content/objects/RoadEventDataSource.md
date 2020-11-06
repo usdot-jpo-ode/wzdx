@@ -15,10 +15,10 @@ Name | Type | Description | Conformance | Notes
 `lrs_type` | String | Describes the type of linear referencing system (LRS) used for the milepost measurements. | Optional | Example: `Use of milemarkers posted by the roadways. These are registered to a dynamic segmentation of statewide LRS basemap.`
 `lrs_url` | String; [uri](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.5) | A URL where additional information on the LRS information and transformation information is stored. | Optional | Example `https://aaa.bbb.com/lrs`
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | --- 
-[RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | `data_sources`
+`data_sources` | [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md)
 
 ## Additional Notes
 The value of a `RoadEventDataSource`'s `data_source_id` property should match the value of the `data_source_id` property of at least one [RoadEvent](/spec-content/objects/RoadEvent.md) that is included within the same WZDx GeoJSON document.

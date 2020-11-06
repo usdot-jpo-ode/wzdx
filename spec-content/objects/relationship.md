@@ -9,10 +9,10 @@ Name | Type | Description | Conformance | Notes
 `parents` | Array; \[String\] | Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase. Values can but do not have to correspond to a WZDx entity. | Optional | 
 `children` | Array; \[String\] | Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity. | Optional | 
 
-## Appears On
-Object | Property
+## Used By
+Property | Object
 --- | ---
-[RoadEvent](/spec-content/objects/RoadEvent.md) | `relationship`
+`relationship` | [RoadEvent](/spec-content/objects/RoadEvent.md)
 
 ## Important Notes
 The value of all elements in the `Relationship`'s `first` or `next` properties must match the value of the `road_event_id` property of a [RoadEvent](/spec-content/objects/RoadEvent.md) that is included in the same WZDx GeoJSON document.

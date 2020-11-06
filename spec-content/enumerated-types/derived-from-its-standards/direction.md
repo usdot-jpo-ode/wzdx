@@ -3,7 +3,7 @@
 
 The direction for a roadway is based on the standard naming for US roadways and indicates the direction the traffic flow regardless of the real heading angle of the roadway.
 
-## Enumeration
+## Values
 WZDx Direction | TMDD Link-alignment Enumeration Value | Description
 --- | --- | --
 `northbound`| northbound (1) | Road flow is in the northbound direction
@@ -18,8 +18,6 @@ outer-loop (6)
 ```
 
 ## Used By
-The **Direction** enumeration is used by the following fields
-
-Field Name | Data Table
+Property | Object
 --- | ---
-direction | [road_events](/spec-content/data-tables/road_events.md)
+`direction` | [RoadEvent](/spec-content/objects/RoadEvent.md)
