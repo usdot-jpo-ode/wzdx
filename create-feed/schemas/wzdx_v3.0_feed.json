@@ -416,7 +416,7 @@
     },
     "TimeVerification": {
       "title": "Time Verification Enumerated Type",
-      "description": "A measure of how accurate the a datetime is",
+      "description": "A measure of how accurate a date-time is",
       "enum": ["estimated", "verified"]
     },
     "EventStatus": {
