@@ -9,7 +9,7 @@ The WZDx Specification repository contains two main subdirectories, each contain
 
 
 1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
-2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including data tables, field names and types, and enumerations.
+2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
 
 
 A third directory, [`images`](/images), contains the images that are referenced throughout the repository.
@@ -24,7 +24,7 @@ A third directory, [`images`](/images), contains the images that are referenced 
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
         
 - [**Specification Content**](/spec-content)
-    - [**Objects**](/spec-content/data-tables)
+    - [**Objects**](/spec-content/objects)
         - [WZDXFeed](/spec-content/objects/WZDxFeed.md)
         - [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md)
         - [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md)
