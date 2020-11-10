@@ -1,5 +1,5 @@
 # RoadEvent Object
-The `RoadEvent` object contains information that describes where, when, and what activity is taking place along a road segment. This specification currently accommodates `work-zone` and `detour` type road events, specified by the road event's `event_type` property (see [/spec-content/enumerated-types/event_type.md](/spec-content/enumerated-types/event_type.md)).
+The `RoadEvent` object contains information that describes where, when, and what activity is taking place along a road segment. This specification currently accommodates `work-zone` and `detour` type road events, specified by the road event's `event_type` property (see [/spec-content/enumerated-types/EventType.md](/spec-content/enumerated-types/event_type.md)).
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -16,7 +16,7 @@ Name | Type | Description | Conformance | Notes
 `road_name` | String | Publicly known name of the road on which the event occurs. | Required |
 `direction` | [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md) | The digitization direction of the road that is impacted by the event. This value is based on the standard naming for US roadways and indicates the direction of the traffic flow regardless of the real heading angle. | Required | Example `northbound` (for I-5 North)
 `vehicle_impact` | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction. | Required |
-`relationship` | [Relationship](/spec-content/objects/Relationship.md) | Identifies both sequential and hierarchical relationships between the roa events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events | Optional | 
+`relationship` | [Relationship](/spec-content/objects/Relationship.md) | Identifies both sequential and hierarchical relationships between the road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events | Optional | 
 `lanes` | Array; \[[Lane](/spec-content/objects/Lane.md)\] | A list of individual lanes within a road event (roadway segment) | Optional |
 `road_number` | String | The road number designated by a jurisdiction such as a county, state, or interstate. | Optional | Examples I-5, VT 133.
 `beginning_cross_street` | String | Name or number of the nearest cross street along the roadway where the event begins. | Optional |
@@ -28,7 +28,7 @@ Name | Type | Description | Conformance | Notes
 `types_of_work` | Array; \[[TypeOfWork](/spec-content/objects/TypeOfWork.md)\] | A list of the types of work being done in a road event and an indiciation of if each type results in an architectural change to the roadway. | Optional | 
 `workers_present` | Boolean | A flag indicating that there are workers present in the event space. | Optional |
 `reduced_speed_limit` | Integer | The reduced speed limit posted within the event space. | Optional |
-`restrictions` | Array; \[[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md)\] | Zero or more road restrictions applying to the work zone road segment associated with the work zone delimited by semicolons. | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes.
+`restrictions` | Array; \[[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md)\] | Zero or more road restrictions applying to the work zone road segment associated with the work zone. | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes.
 `description` | String | Short free text description of work zone. | Optional | This will be populated with formal phrases in a later WZDx version
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.

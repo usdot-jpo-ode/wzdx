@@ -11,4 +11,4 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`features` | [WZDx Feed](/spec-content/objects/wzdx_feed.md)
+`features` | [WZDx Feed](/spec-content/objects/WZDxFeed.md)
