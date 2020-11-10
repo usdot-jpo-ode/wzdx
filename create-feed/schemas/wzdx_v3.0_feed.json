@@ -134,7 +134,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "description": "The GeoJSON object type—must be 'Feature'",
+          "description": "The GeoJSON object type; must be 'Feature'",
           "enum": ["Feature"]
         },
         "properties": {
