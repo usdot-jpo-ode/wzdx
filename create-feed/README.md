@@ -32,9 +32,9 @@ The tables below detail the specificaton's content and describe the data used to
 
 The figure below models the tables and their relationships.
 
-## Work Zone Data Entity Relationship Diagram
+## Work Zone Data Object Diagram
 
-![road_event ERD](/images/road_event_erd.jpg)
+![WZDx Object Diagram](/images/wzdx_object_diagram.jpg)
 
 ## Feed Examples
 The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.

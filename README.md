@@ -1,7 +1,7 @@
 # Work Zone Data Exchange (WZDx) Specification
-## Summary 
+## Summary
 
-This repository contains the Work Zone Data Exchange (WZDx) Specification. 
+This repository contains the Work Zone Data Exchange (WZDx) Specification.
 
 >Last updated 9/3/2020 - WZDx Specification v3.0
 
@@ -22,7 +22,7 @@ A third directory, [`images`](/images), contains the images that are referenced 
     - [**JSON Schemas**](/create-feed/schemas)
         - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-        
+
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDXFeed](/spec-content/objects/WZDxFeed.md)
@@ -49,9 +49,9 @@ A third directory, [`images`](/images), contains the images that are referenced 
             - [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md)
             - [LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md)
 - [**Images Used throughout the Specification**](/images)
-  - [Entity Relationship Diagram](/images/road_event_erd.jpg)
-     - [Entity Relationshi Diagram editable draw.io file](/images/road_event_erd.drawio)
-  
+  - [Object Diagram](/images/wzdx_object_diagram.jpg)
+     - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
+
 
 # README Outline
 - [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
@@ -70,23 +70,23 @@ A third directory, [`images`](/images), contains the images that are referenced 
 # Project Description
 
 **What is the WZDx Specification?**
-The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third-party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones to vehicles to help automated driving systems (ADS) and human drivers navigate more safely. 
+The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third-party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones to vehicles to help automated driving systems (ADS) and human drivers navigate more safely.
 
 **Why is WZDx being developed?**
-Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort. 
+Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort.
 
-Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help ADS and humans navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions. 
+Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help ADS and humans navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions.
 
 Inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT launched WZDx to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. Longer-term, the goal is to enable collaborative maintenance and expansion of the specification to meet the emerging needs of ADS.
 
 **Who is involved in developing WZDx?**
-The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have started to set up data feeds based on it: 
+The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have started to set up data feeds based on it:
 - The Texas Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui)
 - The Massachusetts Department of Transportation data feed based on WZDx Specification v2.0 can be found [here](https://wzdx.massdot-swzm.com/massdot_wzdx_v2.0.geojson)
 - The Maricopa County Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui), v2.0 can be found [here](https://api.mcdot-its.com/WZDx_v2.0/Activity/Get), and v3.0 can be found [here](https://api.mcdot-its.com/WZDx_v3.0/Activity/Get)
 - The Iowa Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://data.iowadot.gov/datasets/iowa-work-zone-data-exchange-wzdx).
 
-Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data. 
+Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
 
 **How can I get help with implementation?**
 This project repository will be continually updated with resources to help with implementation - in the meantime, please make a GitHub issue or discussion entry if you need help implementing the WZDx Specification or have questions.
@@ -120,15 +120,15 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 # Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls). 
+The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls).
 
 1. Read about WZDWG activities on the project [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
-5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v3.0_feed.json) 
-6. Publish your feed and tell us about it via avdx@dot.gov. 
-  
+5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v3.0_feed.json)
+6. Publish your feed and tell us about it via avdx@dot.gov.
+
 # Contributions
 
 **How do I contribute to the WZDx Specification?**
@@ -148,9 +148,8 @@ The WZDx specification uses a major.minor versioning scheme, similar to [SemVer]
 2. The major version number must be incremented if any backwards incompatible changes are introduced.
 3. Neither version number shall be incremented for documentation changes/clarifications that have no effect on either the specification schema or the content or structure of a GeoJSON feed file which conforms to the specification.
 
-To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository. 
+To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository.
 
 # License
 
 The WZDx project is in the worldwide public domain (i.e., in the public domain within the United States - copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication). All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with the waiver of copyright interest. see [License](LICENSE) for more details.
-
