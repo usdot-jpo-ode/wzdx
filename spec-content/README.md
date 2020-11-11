@@ -33,13 +33,13 @@ Object | Description
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
-### Entity Relationship Diagram
-The Entity Relationship Diagram (ERD) below indicates the relationship between the data tables.
+### Object Diagram
+The object diagram below indicates the relationship between the data objects.
 
-![Entity Relationship Diagram](/images/road_event_erd.jpg)
+![Object Diagram](/images/wzdx_object_diagram.jpg)
 
-#### Updating the ERD
-When making changes to the specification, the ERD needs to be updated as well. To modify the ERD, open `/images/road_event_erd.drawio` at https://app.diagrams.net (or any drawio editor). There will be two diagrams shown as tabs in the bottom of the screen: `road_event_erd` for the full diagram and `feed_source_event_relationship` for the section on data sources/feeds only. Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace `/images/road_event_erd.drawio` with the new file. Additionally **export** each of the two diagrams individually as a JPEG, using the diagram name as the file name, and replace `/images/road_event_erd.jpg` and `/images/feed_source_event_relationship.jpg` with the new image files.
+#### Updating the object diagram
+When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open `/images/wzdx_object_diagram.drawio` at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace `/images/wzdx_object_diagram.drawio` with the new file. Additionally **export** the diagram as a JPEG, using the diagram name as the file name, and replace `/images/wzdx_object_diagram.jpg` with the new image file.
 
 ## Enumerated Types
 Many object properties are restricted to a finite set of values, defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
