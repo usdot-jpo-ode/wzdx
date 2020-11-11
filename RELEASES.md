@@ -3,12 +3,12 @@
 
 **Features**
 * Restrict `version` format to `major.minor` and enforce via v3.0 JSON schema
-* Add `order` property to lane entity to indicate a lane's position in sequence on the roadway
+* Add `order` property to Lane object to indicate a lane's position in sequence on the roadway
 * Remove `lane_edge_reference` and standardize on counting lanes from the left side of the roadway
-* Add `event_type` property to the road event entity and new **Event Type Enumerated Type** with the values `work-zone` and `detour`, to support adding detour information (and more in the future)
-* Add **relationship entity** (one per road event entity) to enable describing relationships (hierarchical and sequential) between road events and other non-WZDx entities (such as a work zone phase or project)
-* Add **road_event_data_source** entity to allow specifying multiple data sources within a single feed
-* Streamline **metadata** (previously given in an external file, by URL) and add relevant fields to the **road_event_feed_info** and **road_event_data_source** entities
+* Add `event_type` property to the RoadEvent object and new **EventType** enumerated type with the values `work-zone` and `detour`, to support adding detour information (and more in the future)
+* Add **Relationship** object (one per RoadEvent) to enable describing relationships (hierarchical and sequential) between road events and other non-WZDx entities (such as a work zone phase or project)
+* Add **RoadEventDataSource** object to allow specifying multiple data sources within a single feed
+* Streamline **metadata** (previously given in an external file, by URL) and add relevant fields to the **RoadEventFeedInfo** and **RoadEventDataSource** objects
 
 **Fixes**
 * Require `restriction_type` if providing a lane-level restriction
