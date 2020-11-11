@@ -16,25 +16,25 @@ A WZDx feed contains a single entry describing aspects of the feed itself (such 
 
 The tables below detail the specificaton's content and describe the data used to build the feed.
 
-## Data Tables
+## Objects
 ### WZDx Feed Information
 
-- The [Road Event Feed Information](/spec-content/data-tables/road_event_feed_info.md) table describes the data feed.
-- The [Road Event Data Sources](/spec-content/data-tables/road_event_data_sources.md) table describes the data sources used to build the work zone data feed.
+- The [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) object describes the data feed.
+- The [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) object describes the data sources used to build the work zone data feed.
 
 ### WZDx Work Zone (Road Event) Information
 
-- The [Road Events](/spec-content/data-tables/road_events.md) table describes a work zone event.
-- The [Types of Work](/spec-content/data-tables/types_of_work.md) table describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
-- The [Lanes](/spec-content/data-tables/lanes.md) table identifies and describes individual lanes within an event.
-- The [Lane Restrictions](/spec-content/data-tables/lane_restrictions.md) table describes restrictions for identified lanes.
-- The [Relationships](/spec-content/data-tables/relationships.md) table identifies sequential and hierarchical relationships between road events and other entities.
+- The [RoadEvent](/spec-content/objects/RoadEvent.md) object describes a work zone event.
+- The [TypeOfWork](/spec-content/objects/TypeOfWork.md) object describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Lane](/spec-content/objects/Lane.md) object identifies and describes individual lanes within an event.
+- The [LaneRestriction](/spec-content/objects/LaneRestriction.md) object describes restrictions for identified lanes.
+- The [Relationship](/spec-content/objects/Relationship.md) object identifies sequential and hierarchical relationships between road events and other entities.
 
 The figure below models the tables and their relationships.
 
-## Work Zone Data Entity Relationship Diagram
+## Work Zone Data Object Diagram
 
-![road_event ERD](/images/road_event_erd.jpg)
+![WZDx Object Diagram](/images/wzdx_object_diagram.jpg)
 
 ## Feed Examples
 The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
@@ -53,9 +53,9 @@ The following business rules help assure a standardized and interpretable use of
 
 1. Each direction of travel must be represented by a separate road event. For example, if there is a work zone on a roadway with two lanes, each in an opposite travel direction (↑↓), each direction must be a separate road event.
 2. Construction which requires alternating traffic flows within a lane must be represented with at least one road event in each direction. Similarly, roadways that during normal operation have an alternating flow of traffic direction based on time of day must be represented by at least one road event in each direction.
-3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) (`geometry_type` in the [road_events](/spec-content/data-tables/road_events.md) table) for a road_event is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are unavailable, the `MultiPoint` `geometry_type` can be used.  
+3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are unavailable, the `MultiPoint` can be used.  
 4. A cascading multi-lane closure should consider the speed of vehicles traveling through the work zone. If the distance between lane closures is short enough that time in a to-be-closed lane is not significant, which is common, the to-be-closed lane should be represented as closed to avoid traffic delays and potential crashes.
-5. A detour must be represented with a road event of type (i.e.. with `event_type` of) `detour` and should have a `geometry_type` of `LineString` to represent the full detour route. The detour road event should be connected to the road event using the `relationship` property on the detour road event.
+5. A detour must be represented with a [RoadEvent](/spec-content/objects/RoadEvent.md) of type (i.e. with `event_type` of) `detour` and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have a `geometry` of `type` `LineString` to represent the full detour route. The detour road event should be connected to the work zone road event using the `relationship` property on the detour road event.
 
 ## Data Validation Tools
 ### WZDx v2.0 and v3.0
