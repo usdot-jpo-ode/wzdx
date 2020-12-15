@@ -159,10 +159,6 @@
       "description": "Describes an activity taking place along a road segment",
       "type": "object",
       "properties": {
-        "road_event_id": {
-          "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
-          "type": "string"
-        },
         "data_source_id": {
           "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
@@ -279,10 +275,13 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
+        },
+        "road_event_id": {
+          "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
+          "type": "string"
         }
       },
       "required": [
-        "road_event_id",
         "data_source_id",
         "road_name",
         "direction",
