@@ -134,6 +134,10 @@
       "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
       "type": "object",
       "properties": {
+        "id": {
+          "description": "A unique identifier issued by the data feed provider to identify the WZDx road event",
+          "type": "string"
+        },
         "type": {
           "description": "The GeoJSON object type; must be 'Feature'",
           "enum": ["Feature"]
@@ -152,7 +156,20 @@
           ]
         }
       },
-      "required": ["type","properties","geometry"]
+      "if": {
+        "properties": {
+          "road_event_id": {
+            "type": "string"
+          }
+        },
+        "required": ["road_event_id"]
+      },
+      "then": {
+        "required": ["type","properties","geometry"]
+      },
+      "else": {
+        "required": ["id", "type","properties","geometry"]
+      }
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -277,7 +294,7 @@
           }
         },
         "road_event_id": {
-          "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
+          "description": "***DEPRECATED*** A unique identifier issued by the data feed provider to identify the work zone project or activity",
           "type": "string"
         }
       },
@@ -300,7 +317,7 @@
       "type": "object",
       "properties": {
         "first": {
-          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -308,7 +325,7 @@
           }
         },
         "next": {
-          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
           "type": "array",
           "minItems": 1,
           "items": {
