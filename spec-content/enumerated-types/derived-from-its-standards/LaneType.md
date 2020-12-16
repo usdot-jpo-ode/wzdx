@@ -6,10 +6,6 @@ A description of the type of a lane on the roadway.
 ## Values
 WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 --- | --- | ---
-`left-lane` | left-lane (8194) | The leftmost lane
-`right-lane` | right-lane (8195) | The rightmost lane
-`middle-lane` | middle-lanes (8197) | A lane that is not the rightmost or leftmost lane 
-`center-lane` | center-lane (8196) | The center-most lane when the total number of lanes is odd
 `lane` | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
 `right-turning-lane` | right-turning-lanes (8199) | A right lane where right turns are permissible
 `left-turning-lane` | left-turning-lanes (8200) | A left lane where left turns are permissible
@@ -34,6 +30,10 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 `alternating-flow-lane` | | A lane where signal or flagger controls lane flow
 `center-left-turn-lane` | | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn
 `reversible-lane` | | A lane in which traffic may travel in either direction, depending on certain conditions such as time of day
+`left-lane` (DEPRECATED) | left-lane (8194) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The leftmost lane
+`right-lane` (DEPRECATED) | right-lane (8195) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The rightmost lane
+`middle-lane` (DEPRECATED) | middle-lanes (8197) | *This value is deprecated and will be removed in a future version; use `lane` instead* - A lane that is not the rightmost or leftmost lane 
+`center-lane` (DEPRECATED) | center-lane (8196) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The center-most lane when the total number of lanes is odd
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 

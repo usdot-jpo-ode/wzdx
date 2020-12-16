@@ -474,10 +474,6 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "left-lane",
-        "right-lane",
-        "middle-lane",
-        "center-lane",
         "lane",
         "right-turning-lane",
         "left-turning-lane",
@@ -501,7 +497,11 @@
         "shoulder",
         "hov-lane",
         "reversible-lane",
-        "center-left-turn-lane"
+        "center-left-turn-lane",
+        "left-lane",
+        "right-lane",
+        "middle-lane",
+        "center-lane"
       ]
     },
     "LaneRestrictionUnit": {
