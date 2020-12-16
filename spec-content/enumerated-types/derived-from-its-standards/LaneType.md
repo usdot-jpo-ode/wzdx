@@ -9,16 +9,12 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 `lane` | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
 `right-turning-lane` | right-turning-lanes (8199) | A lane where right turns are permissible
 `left-turning-lane` | left-turning-lanes (8200) | A lane where left turns are permissible
-`right-exit-lane` | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
-`left-exit-lane` | left-exit-lanes (8205) | The left lane where the lane provides an egress with a ramp
+`right-exit-lane` | right-exit-lanes (8204) | A lane or ramp that provides a right egress
+`left-exit-lane` | left-exit-lanes (8205) | A lane or ramp that provides a left egress
 `right-merging-lane` | right-merging-lanes (8206) | The right lane where the lane ends with a gradual merge with the second most lane
 `left-merging-lane` | left-merging-lanes (8207) | The left lane where the lanes ends by a gradual merge with the second most left lane
-`right-exit-ramp` | right-exit-ramp (8208) | The (first) exit ramp with an egress on the right in the direction of flow at an interchange
-`right-second-exit-ramp` | right-second-exit-ramp (8209) | The second exit ramp with an egress on the right in the direction of flow at an interchange
 `right-entrance-ramp` | right-entrance-ramp (8210) | The (first) entrance ramp with an ingress on the right in the direction of flow at an interchange
 `right-second-entrance-ramp` | right-second-entrance-ramp (8211) | The second entrance ramp with an ingress on the right in the direction of flow at an interchange 
-`left-exit-ramp` | left-exit_ramp (8212) | The (first) exit ramp with an egress on the left in the direction of flow at an interchange
-`left-second-exit-ramp` | left-second-exit-ramp (8213) | The second exit ramp with an egress on the left in the direction of flow at an interchange
 `left-entrance-ramp` | left-entrance-ramp (8214) | The (first) entrance ramp with an ingress on the left in the direction of flow at an interchange
 `left-second-entrance-ramp` | left-second-entrance-ramp (8215) | The second entrance ramp with an ingress on the left in the direction of flow at an interchange 
 `sidewalk` | sidewalk (8222) | The sidewalk or pedestrian way
@@ -32,8 +28,12 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 `right-lane` (DEPRECATED) | right-lane (8195) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The rightmost lane
 `middle-lane` (DEPRECATED) | middle-lanes (8197) | *This value is deprecated and will be removed in a future version; use `lane` instead* - A lane that is not the rightmost or leftmost lane 
 `center-lane` (DEPRECATED) | center-lane (8196) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The center-most lane when the total number of lanes is odd
-`right-shoulder` (DEPRECATED) | right-shoulder (8219) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* The outer shoulder or the rightmost shoulder
-`left-shoulder` (DEPRECATED) | left-shoulder (8220) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* The inner shoulder or the leftmost shoulder
+`right-shoulder` (DEPRECATED) | right-shoulder (8219) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The outer shoulder or the rightmost shoulder
+`left-shoulder` (DEPRECATED) | left-shoulder (8220) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The inner shoulder or the leftmost shoulder
+`right-exit-ramp` (DEPRECATED) | right-exit-ramp (8208) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The (first) exit ramp with an egress on the right in the direction of flow at an interchange
+`right-second-exit-ramp` (DEPRECATED) | right-second-exit-ramp (8209) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The second exit ramp with an egress on the right in the direction of flow at an interchange
+`left-exit-ramp` (DEPRECATED) | left-exit_ramp (8212) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The (first) exit ramp with an egress on the left in the direction of flow at an interchange
+`left-second-exit-ramp` (DEPRECATED) | left-second-exit-ramp (8213) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The second exit ramp with an egress on the left in the direction of flow at an interchange
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
