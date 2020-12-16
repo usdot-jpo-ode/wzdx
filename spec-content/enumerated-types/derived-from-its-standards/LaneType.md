@@ -7,8 +7,8 @@ A description of the type of a lane on the roadway.
 WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 --- | --- | ---
 `lane` | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
-`right-turning-lane` | right-turning-lanes (8199) | A right lane where right turns are permissible
-`left-turning-lane` | left-turning-lanes (8200) | A left lane where left turns are permissible
+`right-turning-lane` | right-turning-lanes (8199) | A lane where right turns are permissible
+`left-turning-lane` | left-turning-lanes (8200) | A lane where left turns are permissible
 `right-exit-lane` | right-exit-lanes (8204) | The right lane where the lane provides an egress with a ramp
 `left-exit-lane` | left-exit-lanes (8205) | The left lane where the lane provides an egress with a ramp
 `right-merging-lane` | right-merging-lanes (8206) | The right lane where the lane ends with a gradual merge with the second most lane
