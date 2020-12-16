@@ -174,11 +174,14 @@
           "$ref": "#/definitions/Relationship"
         },
         "road_name": {
-          "description": "Publicly known name of the road on which the event occurs",
-          "type": "string"
+          "description": "Name or list of publicly known names of the road on which the event occurs. This should include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": ["string", "array"],
+          "items": {
+            "type": "string"
+          }
         },
         "road_number": {
-          "description": "The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
           "type": "string"
         },
         "direction": {

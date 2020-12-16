@@ -13,12 +13,11 @@ Name | Type | Description | Conformance | Notes
 `end_date_accuracy` | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate the end Date Time is. | Required | 
 `beginning_accuracy` | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Indicates how the beginning coordinate was defined. | Required |
 `ending_accuracy` | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Indicates how the ending coordinate was defined. | Required |
-`road_name` | String | Publicly known name of the road on which the event occurs. | Required |
+`road_name` | String OR Array; String | Name or list of publicly known names of the road on which the event occurs. This should include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133). | Required | This property captures the functionality of the deprecated `road_number` property
 `direction` | [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md) | The digitization direction of the road that is impacted by the event. This value is based on the standard naming for US roadways and indicates the direction of the traffic flow regardless of the real heading angle. | Required | Example `northbound` (for I-5 North)
 `vehicle_impact` | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction. | Required |
 `relationship` | [Relationship](/spec-content/objects/Relationship.md) | Identifies both sequential and hierarchical relationships between the road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events | Optional | 
 `lanes` | Array; \[[Lane](/spec-content/objects/Lane.md)\] | A list of individual lanes within a road event (roadway segment) | Optional |
-`road_number` | String | The road number designated by a jurisdiction such as a county, state, or interstate. | Optional | Examples I-5, VT 133.
 `beginning_cross_street` | String | Name or number of the nearest cross street along the roadway where the event begins. | Optional |
 `ending_cross_street` | String | Name or number of the nearest cross street along the roadway where the event ends. | Optional |
 `beginning_milepost` | Number | The linear distance measured against a milepost marker along a roadway where the event begins. | Optional | A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. See also the `lrs_type` property on the [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) object.
@@ -32,6 +31,7 @@ Name | Type | Description | Conformance | Notes
 `description` | String | Short free text description of work zone. | Optional | This will be populated with formal phrases in a later WZDx version
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
+`road_number` (DEPRECATED) | String | *This property is deprecated and will be removed in a future version; include road numbers within the `road_name` array* — The road number designated by a jurisdiction such as a county, state, or interstate. | Optional | Examples I-5, VT 133.
 
 ## Used By
 Property | Object
