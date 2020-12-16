@@ -4,38 +4,38 @@
 A description of the type of a lane on the roadway.
 
 ## Values
-WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
+WZDx Lane Type | Description | TMDD LaneRoadway Enumeration Value
 --- | --- | ---
-`lane` | | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway)
-`right-turning-lane` | right-turning-lanes (8199) | A lane where right turns are permissible
-`left-turning-lane` | left-turning-lanes (8200) | A lane where left turns are permissible
-`right-exit-lane` | | A lane or ramp with an egress on the right
-`left-exit-lane` | | A lane or ramp with an egress on the left
-`right-entrance-lane` | | A lane or ramp with an ingress on the right
-`left-entrance-lane` | | A lane or ramp with an ingress on the left
-`sidewalk` | sidewalk (8222) | The sidewalk or pedestrian way
-`bike-lane` | cycle-lane (8242) | Bike lane
-`shoulder` | | Generic shoulder; useful when the shoulder is neither left nor right (e.g. between HOV Lane and main roadway). It can also be used in place of `left-shoulder` or `right-shoulder`. 
-`hov-lane` | hov-lanes (8233) | A high-occupancy vehicle lane
-`alternating-flow-lane` | | A lane where signal or flagger controls lane flow
-`center-left-turn-lane` | | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn
-`reversible-lane` | | A lane in which traffic may travel in either direction, depending on certain conditions such as time of day
-`left-lane` (DEPRECATED) | left-lane (8194) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The leftmost lane
-`right-lane` (DEPRECATED) | right-lane (8195) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The rightmost lane
-`middle-lane` (DEPRECATED) | middle-lanes (8197) | *This value is deprecated and will be removed in a future version; use `lane` instead* - A lane that is not the rightmost or leftmost lane 
-`center-lane` (DEPRECATED) | center-lane (8196) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The center-most lane when the total number of lanes is odd
-`right-shoulder` (DEPRECATED) | right-shoulder (8219) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The outer shoulder or the rightmost shoulder
-`left-shoulder` (DEPRECATED) | left-shoulder (8220) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The inner shoulder or the leftmost shoulder
-`right-exit-ramp` (DEPRECATED) | right-exit-ramp (8208) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The (first) exit ramp with an egress on the right in the direction of flow at an interchange
-`right-second-exit-ramp` (DEPRECATED) | right-second-exit-ramp (8209) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The second exit ramp with an egress on the right in the direction of flow at an interchange
-`left-exit-ramp` (DEPRECATED) | left-exit_ramp (8212) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The (first) exit ramp with an egress on the left in the direction of flow at an interchange
-`left-second-exit-ramp` (DEPRECATED) | left-second-exit-ramp (8213) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The second exit ramp with an egress on the left in the direction of flow at an interchange
-`right-entrance-ramp` (DEPRECATED) | right-entrance-ramp (8210) | *This value is deprecated and will be removed in a future version; use `right-entrance-lane` instead* — The (first) entrance ramp with an ingress on the right in the direction of flow at an interchange
-`right-second-entrance-ramp` (DEPRECATED) | right-second-entrance-ramp (8211) | *This value is deprecated and will be removed in a future version; use `right-entrance-lane` instead* — The second entrance ramp with an ingress on the right in the direction of flow at an interchange 
-`left-entrance-ramp` (DEPRECATED) | left-entrance-ramp (8214) |  *This value is deprecated and will be removed in a future version; use `left-entrance-lane` instead* — The (first) entrance ramp with an ingress on the left in the direction of flow at an interchange
-`left-second-entrance-ramp` (DEPRECATED) | left-second-entrance-ramp (8215) |  *This value is deprecated and will be removed in a future version; use `left-entrance-lane` instead* — The second entrance ramp with an ingress on the left in the direction of flow at an interchange
-`right-merging-lane` (DEPRECATED) | right-merging-lanes (8206) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The right lane where the lane ends with a gradual merge with the second most lane
-`left-merging-lane` (DEPRECATED) | left-merging-lanes (8207) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The left lane where the lanes ends by a gradual merge with the second most left lane 
+`lane` | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway) |
+`right-turning-lane` | A lane where right turns are permissible | right-turning-lanes (8199)
+`left-turning-lane`| A lane where left turns are permissible | left-turning-lanes (8200)
+`right-exit-lane` | A lane or ramp with an egress on the right |
+`left-exit-lane` | A lane or ramp with an egress on the left |
+`right-entrance-lane` | A lane or ramp with an ingress on the right |
+`left-entrance-lane` | A lane or ramp with an ingress on the left |
+`sidewalk` | A sidewalk or pedestrian way | sidewalk (8222)
+`bike-lane` | A lane on the roadway for cyclists only | cycle-lane (8242)
+`shoulder` | A Generic shoulder; useful when the shoulder is neither left nor right (e.g. between HOV Lane and main roadway). It can also be used in place of `left-shoulder` or `right-shoulder` |
+`hov-lane` | A high-occupancy vehicle lane | hov-lanes (8233)
+`alternating-flow-lane` | A lane where signal or flagger controls lane flow |
+`center-left-turn-lane` | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn |
+`reversible-lane` | A lane in which traffic may travel in either direction, depending on certain conditions such as time of day |
+`left-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The leftmost lane | left-lane (8194)
+`right-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The rightmost lane | right-lane (8195)
+`middle-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `lane` instead* - A lane that is not the rightmost or leftmost lane | middle-lanes (8197)
+`center-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The center-most lane when the total number of lanes is odd | center-lane (8196)
+`right-shoulder` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The outer shoulder or the rightmost shoulder | right-shoulder (8219)
+`left-shoulder` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* — The inner shoulder or the leftmost shoulder | left-shoulder (8220)
+`right-exit-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The (first) exit ramp with an egress on the right in the direction of flow at an interchange | right-exit-ramp (8208)
+`right-second-exit-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `right-exit-lane` instead* — The second exit ramp with an egress on the right in the direction of flow at an interchange | right-second-exit-ramp (8209)
+`left-exit-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The (first) exit ramp with an egress on the left in the direction of flow at an interchange | left-exit_ramp (8212)
+`left-second-exit-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `left-exit-lane` instead* — The second exit ramp with an egress on the left in the direction of flow at an interchange | left-second-exit-ramp (8213)
+`right-entrance-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `right-entrance-lane` instead* — The (first) entrance ramp with an ingress on the right in the direction of flow at an interchange | right-entrance-ramp (8210)
+`right-second-entrance-ramp` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `right-entrance-lane` instead* — The second entrance ramp with an ingress on the right in the direction of flow at an interchange  | right-second-entrance-ramp (8211)
+`left-entrance-ramp` (DEPRECATED) |  *This value is deprecated and will be removed in a future version; use `left-entrance-lane` instead* — The (first) entrance ramp with an ingress on the left in the direction of flow at an interchange | left-entrance-ramp (8214)
+`left-second-entrance-ramp` (DEPRECATED) |  *This value is deprecated and will be removed in a future version; use `left-entrance-lane` instead* — The second entrance ramp with an ingress on the left in the direction of flow at an interchange | left-second-entrance-ramp (8215)
+`right-merging-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The right lane where the lane ends with a gradual merge with the second most lane | right-merging-lanes (8206)
+`left-merging-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The left lane where the lanes ends by a gradual merge with the second most left lane | left-merging-lanes (8207)
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
