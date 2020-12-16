@@ -492,8 +492,6 @@
         "sidewalk",
         "bike-lane",
         "alternating-flow-lane",
-        "right-shoulder",
-        "left-shoulder",
         "shoulder",
         "hov-lane",
         "reversible-lane",
@@ -501,7 +499,9 @@
         "left-lane",
         "right-lane",
         "middle-lane",
-        "center-lane"
+        "center-lane",
+        "right-shoulder",
+        "left-shoulder"
       ]
     },
     "LaneRestrictionUnit": {

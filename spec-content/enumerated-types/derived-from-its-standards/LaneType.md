@@ -24,8 +24,6 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 `sidewalk` | sidewalk (8222) | The sidewalk or pedestrian way
 `bike-lane` | cycle-lane (8242) | Bike lane
 `shoulder` | | Generic shoulder; useful when the shoulder is neither left nor right (e.g. between HOV Lane and main roadway). It can also be used in place of `left-shoulder` or `right-shoulder`. 
-`right-shoulder` | right-shoulder (8219) | The outer shoulder or the rightmost shoulder
-`left-shoulder` | left-shoulder (8220) | The inner shoulder or the leftmost shoulder
 `hov-lane` | hov-lanes (8233) | A high-occupancy vehicle lane
 `alternating-flow-lane` | | A lane where signal or flagger controls lane flow
 `center-left-turn-lane` | | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn
@@ -34,6 +32,8 @@ WZDx Lane Type | TMDD LaneRoadway Enumeration Value | Description
 `right-lane` (DEPRECATED) | right-lane (8195) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The rightmost lane
 `middle-lane` (DEPRECATED) | middle-lanes (8197) | *This value is deprecated and will be removed in a future version; use `lane` instead* - A lane that is not the rightmost or leftmost lane 
 `center-lane` (DEPRECATED) | center-lane (8196) | *This value is deprecated and will be removed in a future version; use `lane` instead* - The center-most lane when the total number of lanes is odd
+`right-shoulder` (DEPRECATED) | right-shoulder (8219) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* The outer shoulder or the rightmost shoulder
+`left-shoulder` (DEPRECATED) | left-shoulder (8220) | *This value is deprecated and will be removed in a future version; use `shoulder` instead* The inner shoulder or the leftmost shoulder
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
