@@ -4,6 +4,7 @@ The type of vehicle restriction on a roadway.
 ## Values
 Value | Description
 --- | ---
+'local-access-only' | Travel allowed only for vehicles accessing addresses in the work zone area; this includes emergency services, deliveries, and direct property access
 `no-trucks` | Trucks are prohibited from traveling in work zone area
 `travel-peak-hours-only` | Travel restricted to travel peak hours only
 `hov-3` | Travel restricted to high occupancy vehicles of three or more
