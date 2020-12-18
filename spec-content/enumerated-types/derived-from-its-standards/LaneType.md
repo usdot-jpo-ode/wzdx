@@ -6,7 +6,7 @@ A description of the type of a lane on the roadway.
 ## Values
 WZDx Lane Type | Description | TMDD LaneRoadway Enumeration Value
 --- | --- | ---
-`lane` | Generic lane type, intended to be used for regular, driveable lanes where `left-lane`, `right-lane`, and `middle-lane` are unsuitable (e.g. single-lane roadway) |
+`lane` | Generic lane type, intended to be used for regular, driveable lanes |
 `right-turning-lane` | A lane where right turns are permissible | right-turning-lanes (8199)
 `left-turning-lane`| A lane where left turns are permissible | left-turning-lanes (8200)
 `right-exit-lane` | A lane or ramp with an egress on the right |
@@ -15,7 +15,7 @@ WZDx Lane Type | Description | TMDD LaneRoadway Enumeration Value
 `left-entrance-lane` | A lane or ramp with an ingress on the left |
 `sidewalk` | A sidewalk or pedestrian way | sidewalk (8222)
 `bike-lane` | A lane on the roadway for cyclists only | cycle-lane (8242)
-`shoulder` | A Generic shoulder; useful when the shoulder is neither left nor right (e.g. between HOV Lane and main roadway). It can also be used in place of `left-shoulder` or `right-shoulder` |
+`shoulder` | A Generic shoulder |
 `hov-lane` | A high-occupancy vehicle lane | hov-lanes (8233)
 `alternating-flow-lane` | A lane where signal or flagger controls lane flow |
 `center-left-turn-lane` | A lane in the center of a bidirectional roadway in which traffic from both directions pulls to make a left turn |
