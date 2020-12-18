@@ -28,7 +28,7 @@
   "definitions": {
     "BoundingBox": {
       "title": "GeoJSON Bounding Box",
-      "description": "Information on the coordinate range a Geometry, Feature (RoadEventFeature), or FeatureCollection (WZDxFeed)",
+      "description": "Information on the coordinate range for a Geometry, Feature (RoadEventFeature), or FeatureCollection (WZDxFeed)",
       "type": "array",
       "minItems": 4,
       "items": {
