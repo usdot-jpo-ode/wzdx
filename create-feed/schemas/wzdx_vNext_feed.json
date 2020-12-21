@@ -493,7 +493,17 @@
         "middle-lane",
         "center-lane",
         "right-shoulder",
-        "left-shoulder"
+        "left-shoulder",
+        "right-merging-lane",
+        "left-merging-lane",
+        "right-exit-ramp",
+        "right-second-exit-ramp",
+        "left-exit-ramp",
+        "left-second-exit-ramp",
+        "right-entrance-ramp",
+        "right-second-entrance-ramp",
+        "left-entrance-ramp",
+        "left-second-entrance-ramp"
       ]
     },
     "LaneRestrictionUnit": {
