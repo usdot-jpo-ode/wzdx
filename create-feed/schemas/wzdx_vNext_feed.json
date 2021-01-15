@@ -177,7 +177,8 @@
           "description": "Name or list of publicly known names of the road on which the event occurs. This should include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "minItems": 1
           }
         },
         "direction": {
