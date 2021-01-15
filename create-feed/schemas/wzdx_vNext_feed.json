@@ -468,7 +468,7 @@
     "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
-      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way"]
+      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way", "reversible"]
     },
     "LaneType": {
       "title": "Lane Type Enumerated Type",
