@@ -173,16 +173,12 @@
         "relationship": {
           "$ref": "#/definitions/Relationship"
         },
-        "road_name": {
+        "road_names": {
           "description": "Name or list of publicly known names of the road on which the event occurs. This should include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": ["string", "array"],
+          "type": "array",
           "items": {
             "type": "string"
           }
-        },
-        "road_number": {
-          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
         },
         "direction": {
           "$ref": "#/definitions/Direction"
@@ -282,12 +278,23 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
+        },
+        "road_number": {
+          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "string"
+        },
+        "road_name": {
+          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
+          "type": "string"
         }
       },
+      "anyOf": [
+        { "required": ["road_name"] },
+        { "required": ["road_names"] }
+      ],
       "required": [
         "road_event_id",
         "data_source_id",
-        "road_name",
         "direction",
         "beginning_accuracy",
         "ending_accuracy",
