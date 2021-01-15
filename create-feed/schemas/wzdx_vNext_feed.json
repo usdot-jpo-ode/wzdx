@@ -428,7 +428,7 @@
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
-      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "local-access-only", "unknown"]
+      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "unknown"]
     },
     "RoadRestriction": {
       "title": "Road Restriction Enumerated Type",
