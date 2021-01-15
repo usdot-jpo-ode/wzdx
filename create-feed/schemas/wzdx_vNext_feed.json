@@ -156,20 +156,19 @@
           ]
         }
       },
-      "if": {
-        "properties": {
-          "road_event_id": {
-            "type": "string"
+      "oneOf": [
+        { 
+          "properties": {
+            "properties": {
+              "required": ["road_event_id"]
+            }
           }
         },
-        "required": ["road_event_id"]
-      },
-      "then": {
-        "required": ["type","properties","geometry"]
-      },
-      "else": {
-        "required": ["id", "type","properties","geometry"]
-      }
+        {
+          "required": ["id"]
+        }
+      ],
+      "required": ["type","properties","geometry"]
     },
     "RoadEvent": {
       "title": "Road Event",
