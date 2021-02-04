@@ -32,8 +32,8 @@ WZDx Lane Type | Description | TMDD LaneRoadway Enumeration Value
 `right-merging-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The right lane where the lane ends with a gradual merge with the second most lane | right-merging-lanes (8206)
 `left-merging-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify merging lanes via the lane's `status` property* — The left lane where the lanes ends by a gradual merge with the second most left lane | left-merging-lanes (8207)
 `hov-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify hovs via the lane's `restrictions` property* — A high-occupancy vehicle lane | hov-lanes (8233)
-`alternating-flow-lane` (DEPRECATED) |  *This value is deprecated and will be removed in a future version; specify alternating flow (alternating one way) via the lane's `status` property* — A lane where signal or flagger controls lane flow |
-`reversible-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify reversible status via the lane's `status` property* — A lane in which traffic may travel in either direction, depending on certain conditions such as time of day |
+`alternating-flow-lane` (DEPRECATED) |  *This value is deprecated and will be removed in a future version; specify alternating flow via the lane's `status` property (value of `alternating-flow`)* — A lane where signal or flagger controls lane flow |
+`reversible-lane` (DEPRECATED) | *This value is deprecated and will be removed in a future version; specify reversible status via the lane's `status` property (value of `alternating-flow`)* — A lane in which traffic may travel in either direction, depending on certain conditions such as time of day |
 
 The following values from the TMDD LaneRoadway Enumeration are not used in the WZDx specification:
 
