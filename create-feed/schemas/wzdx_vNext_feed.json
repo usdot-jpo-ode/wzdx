@@ -231,11 +231,6 @@
         "event_status": {
           "$ref": "#/definitions/EventStatus"
         },
-        "total_num_lanes": {
-          "description": "The total number of lanes associated with the road event",
-          "type": "integer",
-          "exclusiveMinimum": 0
-        },
         "vehicle_impact": {
           "$ref": "#/definitions/VehicleImpact"
         },
@@ -283,6 +278,11 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
+        },
+        "total_num_lanes": {
+          "description": "***DEPRECATED*** The total number of lanes associated with the road event",
+          "type": "integer",
+          "exclusiveMinimum": 0
         }
       },
       "required": [

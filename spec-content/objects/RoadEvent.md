@@ -24,7 +24,6 @@ Name | Type | Description | Conformance | Notes
 `beginning_milepost` | Number | The linear distance measured against a milepost marker along a roadway where the event begins. | Optional | A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. See also the `lrs_type` property on the [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) object.
 `ending_milepost` | Number | The linear distance measured against a milepost marker along a roadway where the event ends. | Optional | A milepost or mile marker is a surveyed distance posted along a roadway measuring the length (in miles or tenth of a mile) from the south west to the north east. These markers are typically notated on State and local government digital road networks. See also the `lrs_type` property on the [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) object.
 `event_status` | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of the event. | Optional |
-`total_num_lanes` | Integer | The total number of lanes associated with the road segment designated by the event geometry. | Optional | A segment is a part of a roadway in a single direction designated the event geometry.
 `types_of_work` | Array; \[[TypeOfWork](/spec-content/objects/TypeOfWork.md)\] | A list of the types of work being done in a road event and an indiciation of if each type results in an architectural change to the roadway. | Optional | 
 `workers_present` | Boolean | A flag indicating that there are workers present in the event space. | Optional |
 `reduced_speed_limit` | Integer | The reduced speed limit posted within the event space. | Optional |
@@ -32,6 +31,7 @@ Name | Type | Description | Conformance | Notes
 `description` | String | Short free text description of work zone. | Optional | This will be populated with formal phrases in a later WZDx version
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
+`total_num_lanes` (DEPRECATED) | Integer | *This property is deprecated and will be removed in a future version* — The total number of lanes associated with the road segment designated by the event geometry. | Optional | A segment is a part of a roadway in a single direction designated the event geometry.
 
 ## Used By
 Property | Object
