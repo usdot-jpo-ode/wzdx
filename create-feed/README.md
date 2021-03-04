@@ -58,18 +58,15 @@ The following business rules help assure a standardized and interpretable use of
 5. A detour must be represented with a [RoadEvent](/spec-content/objects/RoadEvent.md) of type (i.e. with `event_type` of) `detour` and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have a `geometry` of `type` `LineString` to represent the full detour route. The detour road event should be connected to the work zone road event using the `relationship` property on the detour road event.
 6. If the `lanes` property on the [RoadEvent](/spec-content/objects/RoadEvent.md) object is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
-## Data Validation Tools
+## Data Validation
 ### WZDx v2.0 and v3.0
 Use the corresponding JSON schema linked above to validate WZDx v2.0 and v3.0 feeds.
 
 ### WZDx v1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
 
-## Tips for Testing and Validating a New Feed
-
-During the process of developing a WZDx data feed you should validate your prototype feed against the WZDx specification JSON schema. You do this using a JSON schema validator, such as https://www.jsonschemavalidator.net. Copy/paste the WZDx JSON Schema into the left pane and your feed in the right pane. See [here](https://www.jsonschemavalidator.net/s/d2oYmEnj) for a version that already contains the WZDx v2.0 JSON schema.
-
-Additionally, since a WZDx feed is in GeoJSON format, you can easily plot the road event data to visually validate using a GeoJSON visualization tool like http://geojson.io.
+### Self-Validation Checklist
+For a list of steps to take to make sure your data feed is ready to publish, follow the [Self-Validation Checklist](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/create_feed_updates/documents/WZDx%20data%20feed%20self%20validation%20checklist.docx) 
 
 ## Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
