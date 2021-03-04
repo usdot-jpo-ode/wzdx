@@ -450,7 +450,8 @@
         "axle-load-limit",
         "gross-weight-limit",
         "towing-prohibited",
-        "permitted-oversize-loads-prohibited"
+        "permitted-oversize-loads-prohibited",
+        "local-access-only"
       ]
     },
     "WorkTypeName": {
