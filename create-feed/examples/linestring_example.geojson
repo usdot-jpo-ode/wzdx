@@ -36,9 +36,9 @@
   "type": "FeatureCollection",
   "features": [
     {
+      "id": "12345",
       "type": "Feature",
       "properties": {
-        "road_event_id": "12345",
         "data_source_id": "1",
         "event_type": "work-zone",
         "relationship": {
@@ -265,9 +265,9 @@
       }
     },
     {
+      "id": "67890",
       "type": "Feature",
       "properties": {
-        "road_event_id": "67890",
         "data_source_id": "2",
         "event_type": "work-zone",
         "relationship": {

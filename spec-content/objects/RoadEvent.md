@@ -4,7 +4,6 @@ The `RoadEvent` object contains information that describes where, when, and what
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`road_event_id` | String | An unique identifier issued by the data feed provider to identify the road event activity. | Required | 
 `event_type` | [EventType](/spec-content/enumerated-types/EventType.md) | The type/classification of road event. | Required |
 `data_source_id` | String | Identifies the data source from which the road event originates. | Required | The value must match to the `data_source_id` property of a [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) included within the same WZDx GeoJSON document.
 `start_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the event begins. | Required | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
@@ -30,6 +29,7 @@ Name | Type | Description | Conformance | Notes
 `description` | String | Short free text description of work zone. | Optional | This will be populated with formal phrases in a later WZDx version
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
+`road_event_id` (DEPRECATED) | String | *This property is deprecated; use the `id` property on the parent [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object instead* — A unique identifier issued by the data feed provider to identify the road event activity. | Optional | This property will be removed in a future version of WZDx.
 `road_number` (DEPRECATED) | String | *This property is deprecated and will be removed in a future version; include road numbers within the `road_names` array instead* — The road number designated by a jurisdiction such as a county, state, or interstate. | Optional | Examples I-5, VT 133.
 `road_name` (DEPRECATED) | String | *This property is deprecated and will be removed in a future version; include road names within the `road_names` array instead* — Publicly known name of the road on which the event occurs. | Conditional: required if `road_names` property is not provided. | 
 `total_num_lanes` (DEPRECATED) | Integer | *This property is deprecated and will be removed in a future version* — The total number of lanes associated with the road segment designated by the event geometry. | Optional | A segment is a part of a roadway in a single direction designated the event geometry.
