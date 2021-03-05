@@ -61,25 +61,6 @@ Enumerated Type | Description
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md) | The direction for a road event based on standard naming for US roads.
 [LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md) | An indication of the type of lane or shoulder.
-
-### Enumerated Types Derived from ITS Standards
-Some enumerated types are specifically derived from the Traffic Management Data Dictionary (TMDD); these are found in the [enumerated-types/derived-from-its-standards](/spec-content/enumerated-types/derived-from-its-standards/) directory. The following enumerated types are translated from enumerations in the [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx):
-
-- [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md)
-- [LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md)
-
-Example of data frame in the TMDD (specified in ASN.1 format)
-```xml
-DATA-TYPE "EventLane ::= SEQUENCE {
-    lanes-type ITIS.LaneRoadway OPTIONAL,
-    link-direction Link-direction OPTIONAL,
-    lanes-total-original Link-lanes-count OPTIONAL,
-    lanes-total-affected Link-lanes-count OPTIONAL,
-    event-lanes-affected SEQUENCE (SIZE(1..64)) OF Link-lane-number OPTIONAL,
-    lanes-status ITIS.Closures OPTIONAL,
-    ...  }"
-```
-
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
