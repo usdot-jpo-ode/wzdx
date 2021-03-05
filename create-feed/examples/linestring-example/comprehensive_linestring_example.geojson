@@ -1,0 +1,2385 @@
+{
+  "road_event_feed_info": {
+    "update_date": "2020-06-18T15:00:00Z",
+    "publisher": "TestDOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": 60,
+    "version": "3.1",
+	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "data_sources": [
+      {
+        "data_source_id": "1",
+        "organization_name": "Test City 1",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": 300,
+        "update_date": "2020-06-18T14:37:31Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+      {
+        "data_source_id": "2",
+        "organization_name": "TestDOT",
+        "contact_name": "Samuel Sonny Sourcefeed",
+        "contact_email": "samuel.sourcefeed@testdot.gov",
+        "update_frequency": 60,
+        "update_date": "2020-06-18T14:39:01Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+      {
+        "data_source_id": "3",
+        "organization_name": "Test County 1",
+        "contact_name": "Stu Spiel Sourcefeed",
+        "contact_email": "stu.sourcefeed@testcounty1.gov",
+        "update_frequency": 300,
+        "update_date": "2020-06-18T14:37:05Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+	  {
+        "data_source_id": "4",
+        "organization_name": "Test City 2",
+        "contact_name": "Skip Jack Sourcefeed",
+        "contact_email": "skip.sourcefeed@testcity2.gov",
+        "update_frequency": 60,
+        "update_date": "2020-06-18T14:38:59Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      }
+    ]
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "71234",
+      "type": "Feature",
+      "properties": {
+        "road_event_id": "71234",
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "road_names": "I-80, I-35",
+        "direction": "northbound",
+        "beginning_milepost": 125.2,
+        "ending_milepost": 126.3,
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:00:00Z",
+        "end_date": "2010-01-02T01:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "some-lanes-closed",
+        "reduced_speed_limit": 55,
+        "description": "Scenario 1 Work Zone with Basic Lane Information",
+        "creation_date": "2009-12-31T18:01:01Z",
+        "update_date": "2009-12-31T18:01:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.776684050999961,
+             41.617961698000045
+          ],
+          [
+             -93.776682957,
+             41.618244962000063
+          ],
+          [
+             -93.776677372999984,
+             41.619603362000078
+          ],
+          [
+             -93.776674365999952,
+             41.620322783000063
+          ],
+          [
+             -93.776671741999962,
+             41.620950321000066
+          ],
+          [
+             -93.776688974999956,
+             41.622297226000057
+          ]
+        ]
+      }
+    },
+	{
+      "id": "WDM-58493-NB",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "1",
+        "event_type": "work-zone",
+        "road_names": "128th Street",
+        "direction": "northbound",
+        "beginning_cross_street": "US 6, Hickman Road",
+        "ending_cross_street": "Douglas Ave",
+		"beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T06:00:00Z",
+        "end_date": "2010-05-1T05:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "some-lanes-closed",
+        "description": "Scenario 1 with Detailed Lane Information",
+        "creation_date": "2009-12-13T13:35:26Z",
+        "update_date": "2009-12-31T15:11:16Z",
+        "lanes": [
+		  {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane",
+            "restrictions": [
+              {
+                "restriction_type": "reduced-width",
+				"restriction_value": 10,
+				"restriction_units": "feet"
+              }
+            ]
+          },
+		  {
+            "order": 2,
+            "lane_number": 2,
+            "status": "closed",
+            "type": "lane"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.791522243999964,
+             41.614948252000033
+          ],
+          [
+             -93.791505319999942,
+             41.61501428300005
+          ],
+          [
+             -93.791405791999978,
+             41.615577076000079
+          ],
+          [
+             -93.791345430999968,
+             41.615782444000047
+          ],
+          [
+             -93.791280304999987,
+             41.615977213000065
+          ],
+          [
+             -93.791200891999949,
+             41.616140173000076
+          ],
+          [
+             -93.791079009999976,
+             41.616296165000051
+          ],
+          [
+             -93.790558010999973,
+             41.61681760700003
+          ],
+          [
+             -93.790135601999964,
+             41.617246805000036
+          ],
+          [
+             -93.789830552999945,
+             41.617562480000061
+          ],
+          [
+             -93.789680613999963,
+             41.617771613000059
+          ],
+          [
+             -93.789596382999946,
+             41.617913356000031
+          ],
+          [
+             -93.789502863999985,
+             41.618086964000042
+          ],
+          [
+             -93.78945179699997,
+             41.618264005000071
+          ],
+          [
+             -93.789424159999953,
+             41.61840914000004
+          ],
+          [
+             -93.789414473999955,
+             41.618523310000057
+          ],
+          [
+             -93.789406687999985,
+             41.618788623000057
+          ],
+          [
+             -93.789440425999942,
+             41.620294861000048
+          ],
+          [
+             -93.789441241999953,
+             41.620405535000032
+          ],
+          [
+             -93.789449826999942,
+             41.620516022000061
+          ],
+          [
+             -93.789466157999982,
+             41.620626017000063
+          ],
+          [
+             -93.78949019099997,
+             41.620735214000035
+          ],
+          [
+             -93.789521855999965,
+             41.62084330700003
+          ],
+          [
+             -93.78956107,
+             41.62095
+          ],
+          [
+             -93.789607718999946,
+             41.621054995000065
+          ],
+          [
+             -93.789661678999948,
+             41.621157998000058
+          ],
+          [
+             -93.789725124999961,
+             41.621262305000073
+          ],
+          [
+             -93.789796062999983,
+             41.621363857000063
+          ],
+          [
+             -93.789874285999986,
+             41.621462354000073
+          ],
+          [
+             -93.789959554999939,
+             41.621557500000051
+          ],
+          [
+             -93.790051618999939,
+             41.621649010000056
+          ],
+          [
+             -93.790150204999975,
+             41.621736613000053
+          ],
+          [
+             -93.790255013999968,
+             41.621820048000075
+          ],
+          [
+             -93.790365738,
+             41.621899067000072
+          ],
+          [
+             -93.790482044999976,
+             41.621973433000051
+          ],
+          [
+             -93.790603584999985,
+             41.622042923000038
+          ],
+          [
+             -93.790730001999975,
+             41.622107331000052
+          ],
+          [
+             -93.790860916999975,
+             41.622166468000046
+          ],
+          [
+             -93.791037923999966,
+             41.622265540000058
+          ],
+          [
+             -93.791219643999966,
+             41.622359685000049
+          ],
+          [
+             -93.791405833999988,
+             41.622448775000066
+          ],
+          [
+             -93.791596247999962,
+             41.62253269200005
+          ],
+          [
+             -93.791974661999973,
+             41.622789772000033
+          ],
+          [
+             -93.792348386999947,
+             41.623050684000077
+          ],
+          [
+             -93.79264079099994,
+             41.62326022700006
+          ],
+          [
+             -93.793051083999956,
+             41.623588822000045
+          ],
+          [
+             -93.793245118999948,
+             41.623807143000079
+          ],
+          [
+             -93.793416509999986,
+             41.62403972900006
+          ],
+          [
+             -93.793538291999937,
+             41.62424188500006
+          ],
+          [
+             -93.793626206999988,
+             41.624429215000077
+          ],
+          [
+             -93.793710504999979,
+             41.624653499000033
+          ],
+          [
+             -93.793764538999937,
+             41.624880703000031
+          ],
+          [
+             -93.793784475999985,
+             41.62510231300007
+          ],
+          [
+             -93.793785748999937,
+             41.625380807000056
+          ],
+          [
+             -93.793738188999953,
+             41.625670969000055
+          ],
+          [
+             -93.793679893999979,
+             41.625937897000028
+          ],
+          [
+             -93.793612129999985,
+             41.626248174000068
+          ],
+          [
+             -93.793525080999984,
+             41.626631768000038
+          ],
+          [
+             -93.793438316999982,
+             41.626965183000038
+          ],
+          [
+             -93.793363929999941,
+             41.627301995000039
+          ],
+          [
+             -93.793344298999955,
+             41.627537681000035
+          ],
+          [
+             -93.793345492999947,
+             41.627799206000077
+          ],
+          [
+             -93.793356849999952,
+             41.628019275000042
+          ],
+          [
+             -93.793396009,
+             41.62828070300003
+          ],
+          [
+             -93.79347973299997,
+             41.628577397000072
+          ]
+        ]
+      }
+    },
+	{
+      "id": "65773-1",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+		"relationship": {
+		  "first": ["65773-1"],
+		  "next": ["65773-3"]
+        },
+        "road_names": "I-235",
+        "direction": "westbound",
+        "beginning_milepost": 3.1,
+        "ending_milepost": 2.9,
+		"beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T014:00:00Z",
+        "end_date": "2010-01-05T23:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "some-lanes-closed",
+        "workers_present": true,
+        "reduced_speed_limit": 55,
+        "restrictions": [],
+        "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+        "creation_date": "2009-12-31T11:56:26Z",
+        "update_date": "2009-12-31T11:56:26Z",
+        "types_of_work": [
+          {
+            "type_name": "surface-work",
+            "is_architectural_change": true
+          }
+        ],
+		"lanes": [
+		  {
+            "order": 1,
+            "status": "closed",
+            "type": "shoulder"
+          },
+		  {
+            "order": 2,
+            "lane_number": 1,
+            "status": "closed",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "lane_number": 2,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 4,
+            "lane_number": 3,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 5,
+            "lane_number": 4,
+            "status": "open",
+            "type": "right-entrance-ramp"
+          },
+		  {
+            "order": 6,
+            "status": "open",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.720409507999989,
+             41.593422456000042
+          ],
+          [
+             -93.721987662999936,
+             41.593428462000077
+          ],
+          [
+             -93.724060080999948,
+             41.593444666000039
+          ],
+          [
+             -93.724769801999969,
+             41.593457451000063
+          ]
+        ]
+      }
+    },
+	{
+      "id": "65773-2",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+		"relationship": {
+		  "first": ["65773-1"]
+        },
+        "road_names": "I-235",
+        "direction": "westbound",
+        "beginning_milepost": 2.9,
+        "ending_milepost": 2.5,
+		"beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T014:00:00Z",
+        "end_date": "2010-01-05T23:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "total_num_lanes": 4,
+        "vehicle_impact": "some-lanes-closed",
+        "workers_present": true,
+        "reduced_speed_limit": 55,
+        "restrictions": [],
+        "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+        "creation_date": "2009-12-31T11:56:26Z",
+        "update_date": "2009-12-31T11:56:26Z",
+        "types_of_work": [
+          {
+            "type_name": "surface-work",
+            "is_architectural_change": true
+          }
+        ],
+		"lanes": [
+		  {
+            "order": 1,
+            "status": "closed",
+            "type": "shoulder"
+          },
+		  {
+            "order": 2,
+            "lane_number": 1,
+            "status": "closed",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "lane_number": 2,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 4,
+            "lane_number": 3,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 5,
+            "lane_number": 4,
+            "status": "open",
+            "type": "right-exit-lane"
+          },
+		  {
+            "order": 6,
+            "status": "open",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.724769801999969,
+             41.593457451000063
+          ],
+          [
+             -93.725783878999948,
+             41.593459089000078
+          ],
+          [
+             -93.72589773499999,
+             41.593459271000029
+          ],
+          [
+             -93.727600448999965,
+             41.593468041000051
+          ],
+          [
+             -93.728253463999977,
+             41.593468762000043
+          ],
+          [
+             -93.72899278899996,
+             41.593459177000057
+          ],
+          [
+             -93.729737457999988,
+             41.593435398000054
+          ],
+          [
+             -93.730149926999957,
+             41.593410350000056
+          ]
+        ]
+      }
+    },
+	{
+      "id": "65773-3",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "road_names": "I-235",
+        "direction": "westbound",
+        "beginning_milepost": 2.5,
+        "ending_milepost": 2.0,
+		"beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T014:00:00Z",
+        "end_date": "2010-01-05T23:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "total_num_lanes": 3,
+        "vehicle_impact": "some-lanes-closed",
+        "workers_present": true,
+        "reduced_speed_limit": 55,
+        "restrictions": [],
+        "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+        "creation_date": "2009-12-31T11:56:26Z",
+        "update_date": "2009-12-31T11:56:26Z",
+        "types_of_work": [
+          {
+            "type_name": "surface-work",
+            "is_architectural_change": true
+          }
+        ],
+		"lanes": [
+		  {
+            "order": 1,
+            "status": "closed",
+            "type": "shoulder"
+          },
+		  {
+            "order": 2,
+            "lane_number": 1,
+            "status": "closed",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "lane_number": 2,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 4,
+            "lane_number": 3,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 5,
+            "status": "open",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.730150629999969,
+             41.593410307000056
+          ],
+          [
+             -93.730393025999945,
+             41.593395588000078
+          ],
+          [
+             -93.731358798999963,
+             41.593326786000034
+          ],
+          [
+             -93.731760730999952,
+             41.59329153300007
+          ],
+          [
+             -93.732583278999982,
+             41.59323325400004
+          ],
+          [
+             -93.732583278999982,
+             41.59323325400004
+          ],
+          [
+             -93.732761573999937,
+             41.593220621000057
+          ],
+          [
+             -93.733481823999966,
+             41.593160405000049
+          ],
+          [
+             -93.734099563999962,
+             41.59310849700006
+          ],
+          [
+             -93.735278425999979,
+             41.59301896900007
+          ],
+          [
+             -93.735701953999978,
+             41.592987710000045
+          ],
+          [
+             -93.736446499999943,
+             41.592931475000057
+          ],
+          [
+             -93.737679269999944,
+             41.592827630000045
+          ],
+          [
+             -93.738580275999936,
+             41.592760926000039
+          ],
+          [
+             -93.739154871999972,
+             41.592719210000041
+          ],
+          [
+             -93.739613443999986,
+             41.592679760000067
+          ],
+          [
+             -93.739774495999939,
+             41.592668639000067
+          ],
+          [
+             -93.739774495999939,
+             41.592668639000067
+          ],
+          [
+             -93.740036978999967,
+             41.592650510000055
+          ],
+          [
+             -93.740347204999978,
+             41.592627574000062
+          ],
+          [
+             -93.74078960199995,
+             41.592592205000074
+          ],
+          [
+             -93.741952240999979,
+             41.592498589000058
+          ],
+          [
+             -93.742189315999951,
+             41.592481500000076
+          ]
+        ]
+      }
+    },
+	{
+      "id": "7733",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "road_names": "I-80, I-35",
+        "direction": "westbound",
+        "beginning_milepost": 133.967,
+        "ending_milepost": 133.112,
+        "beginning_accuracy": "verified",
+        "ending_accuracy": "verified",
+        "start_date": "2010-01-01T05:57:36Z",
+        "end_date": "2010-01-05T23:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "workers_present": true,
+        "reduced_speed_limit": 55,
+        "restrictions": [],
+        "description": "Scenario 2 Work Zone with Lane Shift",
+        "creation_date": "2010-12-30T22:42:53Z",
+        "update_date": "2010-01-01T05:57:36Z",
+        "types_of_work": [
+          {
+            "type_name": "surface-work",
+            "is_architectural_change": true
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "closed",
+            "type": "shoulder"
+          },
+		  {
+            "order": 2,
+            "lane_number": 1,
+            "status": "shift-right",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "lane_number": 2,
+            "status": "shift-right",
+            "type": "lane"
+          },
+		  {
+            "order": 4,
+            "lane_number": 2,
+            "status": "shift-right",
+            "type": "lane"
+          },
+          {
+            "order": 5,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.652714940999942,
+             41.650200836000067
+          ],
+          [
+             -93.654565142999957,
+             41.650281119000056
+          ],
+          [
+             -93.655964627999936,
+             41.650350708000076
+          ],
+          [
+             -93.65929743199996,
+             41.650497674000064
+          ],
+          [
+             -93.66247390999996,
+             41.650639043000069
+          ],
+          [
+             -93.665256117999945,
+             41.650763126000072
+          ],
+          [
+             -93.665890640999976,
+             41.650791415000072
+          ],
+          [
+             -93.667831858999989,
+             41.650878240000054
+          ],
+          [
+             -93.669295947999956,
+             41.650943700000028
+          ],
+          [
+             -93.672369497999966,
+             41.651076369000066
+          ],
+          [
+             -93.675896873999989,
+             41.651236853000057
+          ],
+          [
+             -93.679374683999981,
+             41.651391586000045
+          ],
+          [
+             -93.680869566999945,
+             41.651461030000064
+          ],
+          [
+             -93.681220380999946,
+             41.65147732500003
+          ],
+          [
+             -93.682955475999961,
+             41.651551769000037
+          ],
+          [
+             -93.683089,
+             41.651577294000049
+          ]
+        ]
+      }
+    },
+	{
+      "id": "121388-1",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "road_names": "IA 210",
+        "direction": "eastbound",
+        "beginning_milepost": 22.1,
+        "ending_milepost": 24.6,
+		"beginning_cross_street": "570th Avenue",
+        "ending_cross_street": "610th Avenue",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T10:00:00Z",
+        "end_date": "2010-01-01T16:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "restrictions": [],
+        "description": "Scenario 3 with Shoulder Closure (direction with shoulder closure)",
+        "creation_date": "2010-01-01T09:30:26Z",
+        "update_date": "2010-01-01T09:30:26Z",
+        "types_of_work": [
+          {
+            "type_name": "maintenance",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+			"lane_number": 1,
+            "status": "closed",
+            "type": "lane"
+          },
+		  {
+            "order": 2,
+            "lane_number": 2,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.56064319610596,
+            41.87764559047116
+          ],
+          [
+            -93.5451292991638,
+            41.87767754402901
+          ],
+          [
+            -93.53145003318785,
+            41.87766955564103
+          ],
+          [
+            -93.5067629814148,
+            41.877565706506665
+          ],
+          [
+            -93.48284840583801,
+            41.87750179926317
+          ]
+        ]
+      }
+    },
+	{
+      "id": "121388-2",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "road_names": "IA 210",
+        "direction": "westbound",
+        "beginning_milepost": 22.1,
+        "ending_milepost": 24.6,
+		"beginning_cross_street": "570th Avenue",
+        "ending_cross_street": "610th Avenue",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T10:00:00Z",
+        "end_date": "2010-01-01T16:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "restrictions": ["no-parking"],
+        "description": "Scenario 3 with Shoulder Closure (opposite direction without shoulder closure)",
+        "creation_date": "2010-01-01T09:30:26Z",
+        "update_date": "2010-01-01T09:30:26Z",
+        "lanes": [
+          {
+            "order": 1,
+			"lane_number": 1,
+            "status": "closed",
+            "type": "lane"
+          },
+		  {
+            "order": 2,
+            "lane_number": 2,
+            "status": "open",
+            "type": "lane"
+          },
+		  {
+            "order": 3,
+            "status": "open",
+            "type": "shoulder",
+			"restrictions": [
+              {
+                "restriction_type": "no-parking"
+              }
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.48284304141998,
+            41.877607645600484
+          ],
+          [
+            -93.49073946475983,
+            41.87764559047116
+          ],
+          [
+            -93.50573301315308,
+            41.877697514994544
+          ],
+          [
+            -93.51188063621521,
+            41.877749439475735
+          ],
+          [
+            -93.53036642074585,
+            41.87782133484157
+          ],
+          [
+            -93.54414224624632,
+            41.877869265040545
+          ],
+          [
+            -93.56063783168791,
+            41.87786127667653
+          ]
+        ]
+      }
+    },
+	{
+      "id": "67890",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "work-zone",
+        "relationship": {
+          "children": ["67890-detour1","67890-detour2","67890-detour3"]
+        },
+        "road_names": "I-35",
+        "direction": "northbound",
+        "beginning_milepost": 98.42,
+        "ending_milepost": 101.50,
+        "beginning_accuracy": "verified",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-06-30T01:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "some-lanes-closed",
+        "workers_present": true,
+        "reduced_speed_limit": 55,
+        "restrictions": ["reduced-width"],
+        "description": "Scenario 4 Work Zone with Detour",
+        "creation_date": "2009-12-15T14:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z",
+        "types_of_work": [
+          {
+            "type_name": "surface-work",
+            "is_architectural_change": true
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "shoulder"
+          },
+		  {
+            "order": 2,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane",
+            "restrictions": [
+              {
+                "restriction_type": "reduced-width",
+				"restriction_value": 11,
+				"restriction_units": "feet"
+              }
+            ]
+          },
+		  {
+            "order": 3,
+            "lane_number": 2,
+            "status": "closed",
+            "type": "lane"
+          },
+          {
+            "order": 4,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.570535026999949,
+             41.815141143000062
+          ],
+          [
+             -93.570558665999954,
+             41.815778842000043
+          ],
+          [
+             -93.570582206999973,
+             41.816327889000036
+          ],
+          [
+             -93.570613866999963,
+             41.817305885000053
+          ],
+          [
+             -93.570653239999956,
+             41.818343932000062
+          ],
+          [
+             -93.570692683999937,
+             41.819444889000067
+          ],
+          [
+             -93.57072468399997,
+             41.820444622000025
+          ],
+          [
+             -93.570725033999963,
+             41.820762049000052
+          ],
+          [
+             -93.570737569999949,
+             41.821725757000024
+          ],
+          [
+             -93.570735194999941,
+             41.823038359000066
+          ],
+          [
+             -93.570744205999972,
+             41.824273739000034
+          ],
+          [
+             -93.570741062999957,
+             41.824888576000035
+          ],
+          [
+             -93.570745857999952,
+             41.825769359000049
+          ],
+          [
+             -93.570750405999945,
+             41.82642422400005
+          ],
+          [
+             -93.570751056999939,
+             41.827013323000074
+          ],
+          [
+             -93.570767342999943,
+             41.82791125600005
+          ],
+          [
+             -93.570783135999989,
+             41.828363077000063
+          ],
+          [
+             -93.57081113199996,
+             41.829478340000037
+          ],
+          [
+             -93.570846661999951,
+             41.830487788000028
+          ],
+          [
+             -93.570890330999987,
+             41.83194334500007
+          ],
+          [
+             -93.570902443999955,
+             41.832520995000039
+          ],
+          [
+             -93.570930157999953,
+             41.833378885000059
+          ],
+          [
+             -93.570954688999961,
+             41.834811573000025
+          ],
+          [
+             -93.570948738999959,
+             41.836344370000063
+          ],
+          [
+             -93.570942684999977,
+             41.837782799000081
+          ],
+          [
+             -93.570936722999988,
+             41.839304156000026
+          ],
+          [
+             -93.570923044999972,
+             41.840765465000061
+          ],
+          [
+             -93.570924651999974,
+             41.84221532600003
+          ],
+          [
+             -93.570926279999981,
+             41.843685202000074
+          ],
+          [
+             -93.570931724,
+             41.845146499000066
+          ],
+          [
+             -93.570929340999953,
+             41.846447657000056
+          ],
+          [
+             -93.570938627999965,
+             41.84792610900007
+          ],
+          [
+             -93.570932442999947,
+             41.849247287000026
+          ],
+          [
+             -93.570939776999978,
+             41.849617513000055
+          ],
+          [
+             -93.570957815999975,
+             41.850528174000033
+          ],
+          [
+             -93.570991150999987,
+             41.852249359000041
+          ],
+          [
+             -93.571024497999986,
+             41.85397641600008
+          ],
+          [
+             -93.571053711,
+             41.855521371000066
+          ],
+          [
+             -93.571083075999979,
+             41.85719849700007
+          ],
+          [
+             -93.57110858599998,
+             41.858940244000053
+          ],
+          [
+             -93.571141838999949,
+             41.860579185000063
+          ]
+        ]
+      }
+    },
+	{
+      "id": "67890-detour1",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "detour",
+        "relationship": {
+          "parents": ["67890"],
+		  "next": ["67890-detour2","67890-detour3"]
+        },
+        "road_names": "F22",
+        "direction": "westbound",
+        "ending_cross_street": "US 69",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-06-30T01:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 4 Work Zone with Detour",
+        "creation_date": "2009-12-15T14:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.600376007999955,
+             41.791257966000046
+          ],
+          [
+             -93.600375128999985,
+             41.791257965000057
+          ],
+          [
+             -93.600373887999979,
+             41.79125798900003
+          ],
+          [
+             -93.598991312999942,
+             41.791285770000059
+          ],
+          [
+             -93.597408247999965,
+             41.791298693000044
+          ],
+          [
+             -93.587018347999958,
+             41.791370250000057
+          ],
+          [
+             -93.581030593999969,
+             41.791384089000076
+          ],
+          [
+             -93.575477690999946,
+             41.791372395000053
+          ],
+          [
+             -93.573306168999977,
+             41.791361989000052
+          ],
+          [
+             -93.572569235999936,
+             41.791351637000048
+          ],
+          [
+             -93.572478358999945,
+             41.79135169500006
+          ]
+        ]
+      }
+    },
+	{
+      "id": "67890-detour2",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "detour",
+        "relationship": {
+          "parents": ["67890"],
+		  "first": ["67890-detour1"],
+		  "next": ["67890-detour3"]
+        },
+        "road_names": "US 69",
+        "direction": "northbound",
+        "beginning_cross_street": "NE 126th Avenue",
+        "ending_cross_street": "IA 210",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-06-30T01:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 4 Work Zone with Detour",
+        "creation_date": "2009-12-15T14:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.600401730999977,
+             41.877744832000076
+          ],
+          [
+             -93.600383302999944,
+             41.876221974000032
+          ],
+          [
+             -93.600399342999935,
+             41.874445421000075
+          ],
+          [
+             -93.600382543999956,
+             41.872739253000077
+          ],
+          [
+             -93.600389303999975,
+             41.871047136000072
+          ],
+          [
+             -93.600386637999975,
+             41.869347993000076
+          ],
+          [
+             -93.600379122999982,
+             41.867557387000033
+          ],
+          [
+             -93.600390145999938,
+             41.865583833000073
+          ],
+          [
+             -93.60037319199995,
+             41.863775643000054
+          ],
+          [
+             -93.600372301999982,
+             41.863207043000045
+          ],
+          [
+             -93.600381568999978,
+             41.862919375000047
+          ],
+          [
+             -93.600376814999947,
+             41.861738109000044
+          ],
+          [
+             -93.60037443899995,
+             41.860563973000069
+          ],
+          [
+             -93.60037443899995,
+             41.859363694000081
+          ],
+          [
+             -93.60036493299998,
+             41.858142023000028
+          ],
+          [
+             -93.600360178999949,
+             41.85695124800003
+          ],
+          [
+             -93.600357800999973,
+             41.855774736000058
+          ],
+          [
+             -93.600357801999962,
+             41.854583964000028
+          ],
+          [
+             -93.600353046999942,
+             41.853378931000066
+          ],
+          [
+             -93.600348294999947,
+             41.852188157000057
+          ],
+          [
+             -93.600343540999972,
+             41.85096173200003
+          ],
+          [
+             -93.600341164999975,
+             41.849768581000035
+          ],
+          [
+             -93.600338180999984,
+             41.84926536100005
+          ],
+          [
+             -93.600334034999946,
+             41.848565926000049
+          ],
+          [
+             -93.600329278999936,
+             41.847403672000041
+          ],
+          [
+             -93.600324526999941,
+             41.846174873000052
+          ],
+          [
+             -93.600319772999967,
+             41.844976968000026
+          ],
+          [
+             -93.600315018999936,
+             41.843786195000064
+          ],
+          [
+             -93.600305511999977,
+             41.842590668000071
+          ],
+          [
+             -93.600296004999961,
+             41.841487836000056
+          ],
+          [
+             -93.600296003999972,
+             41.840275672000075
+          ],
+          [
+             -93.600291251999977,
+             41.839065885000025
+          ],
+          [
+             -93.600291250999987,
+             41.837927402000048
+          ],
+          [
+             -93.600284120999959,
+             41.836760396000045
+          ],
+          [
+             -93.600279367999974,
+             41.83553872400006
+          ],
+          [
+             -93.600273437999988,
+             41.834756276000064
+          ],
+          [
+             -93.600272235999967,
+             41.834597515000041
+          ],
+          [
+             -93.600274613999943,
+             41.833775145000061
+          ],
+          [
+             -93.600272236999956,
+             41.832546343000047
+          ],
+          [
+             -93.600269860999958,
+             41.831357947000072
+          ],
+          [
+             -93.600265106999984,
+             41.830238478000069
+          ],
+          [
+             -93.600269860999958,
+             41.829584861000058
+          ],
+          [
+             -93.600262728999951,
+             41.829031068000063
+          ],
+          [
+             -93.60026985899998,
+             41.828714954000077
+          ],
+          [
+             -93.600265106999984,
+             41.827833163000037
+          ],
+          [
+             -93.600265732999958,
+             41.82751014300004
+          ],
+          [
+             -93.600267483999971,
+             41.82661149300003
+          ],
+          [
+             -93.600267481999936,
+             41.825458747000027
+          ],
+          [
+             -93.60026985899998,
+             41.824289366000073
+          ],
+          [
+             -93.600262728999951,
+             41.823096216000067
+          ],
+          [
+             -93.60026272999994,
+             41.822017153000047
+          ],
+          [
+             -93.600265008999941,
+             41.821111594000058
+          ],
+          [
+             -93.600263135999967,
+             41.820261561000052
+          ],
+          [
+             -93.600264984999967,
+             41.819911794000063
+          ],
+          [
+             -93.600262608999969,
+             41.818602179000038
+          ],
+          [
+             -93.600255478999941,
+             41.817525493000062
+          ],
+          [
+             -93.600255478999941,
+             41.816325213000027
+          ],
+          [
+             -93.600248348999969,
+             41.815205744000025
+          ],
+          [
+             -93.600243592999959,
+             41.814019724000048
+          ],
+          [
+             -93.600245971999982,
+             41.812914517000024
+          ],
+          [
+             -93.600253101999954,
+             41.811806931000035
+          ],
+          [
+             -93.600269738999941,
+             41.81082056200006
+          ],
+          [
+             -93.600276870999949,
+             41.80970822200004
+          ],
+          [
+             -93.600288753999962,
+             41.808624405000046
+          ],
+          [
+             -93.600295884,
+             41.807576241000049
+          ],
+          [
+             -93.600310144,
+             41.806435380000039
+          ],
+          [
+             -93.60031408499998,
+             41.805741814000044
+          ],
+          [
+             -93.600314898999954,
+             41.805598749000069
+          ],
+          [
+             -93.600324404999981,
+             41.804529191000029
+          ],
+          [
+             -93.600319769999942,
+             41.803418761000046
+          ],
+          [
+             -93.60031965099995,
+             41.803390708000052
+          ],
+          [
+             -93.600322028999983,
+             41.802354426000079
+          ],
+          [
+             -93.600322026999947,
+             41.801782615000036
+          ],
+          [
+             -93.600322026999947,
+             41.80161524500005
+          ],
+          [
+             -93.600331535999942,
+             41.800495775000059
+          ],
+          [
+             -93.600326782999957,
+             41.799371551000036
+          ],
+          [
+             -93.600331535999942,
+             41.798416082000074
+          ],
+          [
+             -93.600331535999942,
+             41.797327511000049
+          ],
+          [
+             -93.60033866699996,
+             41.796314997000025
+          ],
+          [
+             -93.600345797999978,
+             41.795214543000043
+          ],
+          [
+             -93.600350549999973,
+             41.794040406000079
+          ],
+          [
+             -93.600362434999965,
+             41.792899545000068
+          ],
+          [
+             -93.600360056999989,
+             41.791818106000051
+          ],
+          [
+             -93.600373887999979,
+             41.79125798900003
+          ],
+          [
+             -93.600373891999936,
+             41.791257820000055
+          ]
+        ]
+      }
+    },
+	{
+      "id": "67890-detour3",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "2",
+        "event_type": "detour",
+        "relationship": {
+          "parents": ["6780"],
+		  "first": ["67890-detour1"]
+        },
+        "road_names": "IA 210",
+        "direction": "eastbound",
+        "beginning_cross_street": "US 69",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-06-30T01:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 4 Work Zone with Detour",
+        "creation_date": "2009-12-15T14:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+             -93.573353147999967,
+             41.877796484000044
+          ],
+          [
+             -93.573356421999961,
+             41.87779647800005
+          ],
+          [
+             -93.574056398999971,
+             41.877795233000029
+          ],
+          [
+             -93.577496035999957,
+             41.877791515000069
+          ],
+          [
+             -93.578346253999939,
+             41.877790018000042
+          ],
+          [
+             -93.579435310999941,
+             41.877788094000039
+          ],
+          [
+             -93.580892132999963,
+             41.877785500000073
+          ],
+          [
+             -93.581418045999953,
+             41.877784560000066
+          ],
+          [
+             -93.581835475,
+             41.877783302000068
+          ],
+          [
+             -93.586943989999952,
+             41.877767791000053
+          ],
+          [
+             -93.591580114999942,
+             41.877755708000052
+          ],
+          [
+             -93.596289923999962,
+             41.877747609000039
+          ],
+          [
+             -93.60040158399994,
+             41.87774674700006
+          ]
+        ]
+      }
+    },
+	{
+      "id": "PLK01012016-Day1",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "3",
+        "event_type": "work-zone",
+        "road_names": "NE 150th Avenue",
+        "direction": "westbound",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "beginning_accuracy": "verified",
+        "ending_accuracy": "verified",
+        "start_date": "2010-01-01T08:32:01Z",
+        "end_date": "2010-01-01T17:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 5 Work Zone with Recurring Event",
+        "creation_date": "2009-12-29T15:37:57Z",
+        "update_date": "2010-01-01T08:32:01Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46077919006348,
+            41.83445374967984
+          ],
+		  [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ],
+		  [
+            -93.51322174072264,
+            41.83502130612205
+          ]
+        ]
+      }
+    },
+	{
+      "id": "PLK01012016-Day2",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "3",
+        "event_type": "work-zone",
+        "road_names": "NE 150th Avenue",
+        "direction": "westbound",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-02T08:00:00Z",
+        "end_date": "2010-01-02T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "pending",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 5 Work Zone with Recurring Event",
+        "creation_date": "2009-12-29T15:37:57Z",
+        "update_date": "2009-12-29T15:37:57Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+	{
+      "id": "PLK01012016-Day3",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "3",
+        "event_type": "work-zone",
+        "road_names": "NE 150th Avenue",
+        "direction": "westbound",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-03T08:00:00Z",
+        "end_date": "2010-01-03T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "pending",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 5 Work Zone with Recurring Event",
+        "creation_date": "2009-12-29T15:37:57Z",
+        "update_date": "2009-12-29T15:37:57Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+	{
+      "id": "PLK01012016-Day4",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "3",
+        "event_type": "work-zone",
+        "road_names": "NE 150th Avenue",
+        "direction": "westbound",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-04T08:00:00Z",
+        "end_date": "2010-01-04T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "pending",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 5 Work Zone with Recurring Event",
+        "creation_date": "2009-12-29T15:37:57Z",
+        "update_date": "2009-12-29T15:37:57Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+	{
+      "id": "PLK01012016-Day5",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "3",
+        "event_type": "work-zone",
+        "road_names": "NE 150th Avenue",
+        "direction": "westbound",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-05T08:00:00Z",
+        "end_date": "2010-01-05T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "pending",
+        "vehicle_impact": "all-lanes-open",
+        "description": "Scenario 5 Work Zone with Recurring Event",
+        "creation_date": "2009-12-29T15:37:57Z",
+        "update_date": "2009-12-29T15:37:57Z",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "lane_number": 1,
+            "status": "open",
+            "type": "lane"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+	{
+      "id": "WZ389-NB",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "4",
+        "event_type": "work-zone",
+        "road_names": "Beaver Avenue",
+        "direction": "northbound",
+        "beginning_cross_street": "Aurora Avenue",
+        "ending_cross_street": "NW 46th Place",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-01T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "local-access-only",
+        "restrictions": [],
+        "description": "Local Access Only with Basic Lane Information",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.67801666259766,
+            41.63699137361764
+          ],
+          [
+            -93.67804884910583,
+            41.63971757283587
+          ],
+          [
+            -93.6780595779419,
+            41.64156971886528
+          ],
+          [
+            -93.6780595779419,
+            41.642211142309336
+          ],
+          [
+            -93.67807030677795,
+            41.64325344178853
+          ],
+          [
+            -93.67807030677795,
+            41.64402312904328
+          ]
+        ]
+      }
+    },
+	{
+      "id": "WZ389-SB",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "4",
+        "event_type": "work-zone",
+        "road_names": "Beaver Avenue",
+        "direction": "southbound",
+        "beginning_cross_street": "NW 46th Place",
+        "ending_cross_street": "Aurora Avenue",
+        "beginning_accuracy": "verified",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-01T17:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "local-access-only",
+        "restrictions": [],
+        "description": "Local Access Only with Detailed Lane Information",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z",
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "lane_number": 1,
+            "type": "lane",
+            "restrictions": [
+              {
+                "restriction_type": "local-access-only"
+              }
+            ]
+          },
+		  {
+            "order": 2,
+            "status": "open",
+            "type": "bike-lane",
+            "restrictions": [
+              {
+                "restriction_type": "local-access-only"
+              }
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.67823123931885,
+            41.64400709398592
+          ],
+          [
+            -93.67819905281067,
+            41.642916700723454
+          ],
+          [
+            -93.67820978164673,
+            41.642090875899925
+          ],
+          [
+            -93.67819905281067,
+            41.641810253405005
+          ],
+          [
+            -93.67819905281067,
+            41.641273058363055
+          ],
+          [
+            -93.67818832397461,
+            41.63999820444394
+          ],
+          [
+            -93.67816686630249,
+            41.63866719797019
+          ],
+          [
+            -93.67815613746643,
+            41.63699137361764
+          ]
+        ]
+      }
+    }
+  ]
+}
