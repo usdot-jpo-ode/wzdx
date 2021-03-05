@@ -1,0 +1,201 @@
+{
+  "road_event_feed_info": {
+    "update_date": "2020-06-18T15:00:00Z",
+    "publisher": "TestDOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": 60,
+    "version": "3.1",
+	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "data_sources": [
+      {
+        "data_source_id": "1",
+        "organization_name": "Test City 1",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": 300,
+        "update_date": "2020-06-18T14:37:31Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+      {
+        "data_source_id": "2",
+        "organization_name": "TestDOT",
+        "contact_name": "Samuel Sonny Sourcefeed",
+        "contact_email": "samuel.sourcefeed@testdot.gov",
+        "update_frequency": 60,
+        "update_date": "2020-06-18T14:39:01Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+      {
+        "data_source_id": "3",
+        "organization_name": "Test County 1",
+        "contact_name": "Stu Spiel Sourcefeed",
+        "contact_email": "stu.sourcefeed@testcounty1.gov",
+        "update_frequency": 300,
+        "update_date": "2020-06-18T14:37:05Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      },
+	  {
+        "data_source_id": "4",
+        "organization_name": "Test City 2",
+        "contact_name": "Skip Jack Sourcefeed",
+        "contact_email": "skip.sourcefeed@testcity2.gov",
+        "update_frequency": 60,
+        "update_date": "2020-06-18T14:38:59Z",
+        "location_verify_method": "GPS",
+        "location_method": "channel-device-method",
+        "lrs_type": "milemarkers",
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+      }
+    ]
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "WZ389-NB",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "4",
+        "event_type": "work-zone",
+        "road_names": "Beaver Avenue",
+        "direction": "northbound",
+        "beginning_cross_street": "Aurora Avenue",
+        "ending_cross_street": "NW 46th Place",
+        "beginning_accuracy": "estimated",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-01T17:00:00Z",
+        "start_date_accuracy": "estimated",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "local-access-only",
+        "restrictions": [],
+        "description": "Local Access Only with Basic Lane Information",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.67801666259766,
+            41.63699137361764
+          ],
+          [
+            -93.67804884910583,
+            41.63971757283587
+          ],
+          [
+            -93.6780595779419,
+            41.64156971886528
+          ],
+          [
+            -93.6780595779419,
+            41.642211142309336
+          ],
+          [
+            -93.67807030677795,
+            41.64325344178853
+          ],
+          [
+            -93.67807030677795,
+            41.64402312904328
+          ]
+        ]
+      }
+    },
+	{
+      "id": "WZ389-SB",
+      "type": "Feature",
+      "properties": {
+        "data_source_id": "4",
+        "event_type": "work-zone",
+        "road_names": "Beaver Avenue",
+        "direction": "southbound",
+        "beginning_cross_street": "NW 46th Place",
+        "ending_cross_street": "Aurora Avenue",
+        "beginning_accuracy": "verified",
+        "ending_accuracy": "estimated",
+        "start_date": "2010-01-01T01:03:01Z",
+        "end_date": "2010-01-01T17:00:00Z",
+        "start_date_accuracy": "verified",
+        "end_date_accuracy": "estimated",
+        "event_status": "active",
+        "vehicle_impact": "local-access-only",
+        "restrictions": [],
+        "description": "Local Access Only with Detailed Lane Information",
+        "creation_date": "2010-01-01T01:01:01Z",
+        "update_date": "2010-01-01T01:03:01Z",
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "lane_number": 1,
+            "type": "lane",
+            "restrictions": [
+              {
+                "restriction_type": "local-access-only"
+              }
+            ]
+          },
+		  {
+            "order": 2,
+            "status": "open",
+            "type": "bike-lane",
+            "restrictions": [
+              {
+                "restriction_type": "local-access-only"
+              }
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.67823123931885,
+            41.64400709398592
+          ],
+          [
+            -93.67819905281067,
+            41.642916700723454
+          ],
+          [
+            -93.67820978164673,
+            41.642090875899925
+          ],
+          [
+            -93.67819905281067,
+            41.641810253405005
+          ],
+          [
+            -93.67819905281067,
+            41.641273058363055
+          ],
+          [
+            -93.67818832397461,
+            41.63999820444394
+          ],
+          [
+            -93.67816686630249,
+            41.63866719797019
+          ],
+          [
+            -93.67815613746643,
+            41.63699137361764
+          ]
+        ]
+      }
+    }
+  ]
+}
