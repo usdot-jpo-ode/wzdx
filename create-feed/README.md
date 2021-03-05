@@ -37,10 +37,10 @@ The figure below models the tables and their relationships.
 ![WZDx Object Diagram](/images/wzdx_object_diagram.jpg)
 
 ## Feed Examples
-The following WZDx feed examples include all optional fields. An example file is included for both the `LineString` and `MultiPoint` geometry types.
+The following WZDx feed examples represent a variety of scenarios common when creating road events.  Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a geojson but may contain multiple work zones documenting differences in representing road events. A comprehensive geojson contains all of the scenarios in a single file.  Example files are provided for both the `LineString` and `MultiPoint` geometry types.
 
-* [MultiPoint GeoJSON Example](/create-feed/examples/multipoint_example.geojson)
-* [LineString GeoJSON Example](/create-feed/examples/linestring_example.geojson)
+* [MultiPoint GeoJSON Example](/create-feed/examples/multipoint-example)
+* [LineString GeoJSON Example](/create-feed/examples/linestring-example)
 
 ## JSON Schemas
 The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
