@@ -192,13 +192,13 @@
         "relationship": {
           "$ref": "#/definitions/Relationship"
         },
-        "road_name": {
-          "description": "Publicly known name of the road on which the event occurs",
-          "type": "string"
-        },
-        "road_number": {
-          "description": "The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
+        "road_names": {
+          "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
         },
         "direction": {
           "$ref": "#/definitions/Direction"
@@ -294,16 +294,27 @@
             "$ref": "#/definitions/Lane"
           }
         },
+        "road_number": {
+          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "string"
+        },
+        "road_name": {
+          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
+          "type": "string"
+        },
         "total_num_lanes": {
           "description": "***DEPRECATED*** The total number of lanes associated with the road event",
           "type": "integer",
           "exclusiveMinimum": 0
         }
       },
+      "anyOf": [
+        { "required": ["road_name"] },
+        { "required": ["road_names"] }
+      ],
       "required": [
         "road_event_id",
         "data_source_id",
-        "road_name",
         "direction",
         "beginning_accuracy",
         "ending_accuracy",

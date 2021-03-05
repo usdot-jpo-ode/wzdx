@@ -44,8 +44,7 @@
         "relationship": {
           "parents": ["State_Project_001"]
         },
-        "road_name": "Main Street",
-        "road_number": "I-100",
+        "road_names": ["Main Street", "I-100"],
         "direction": "northbound",
         "beginning_cross_street": "Westford St",
         "ending_cross_street": "South St",
@@ -274,8 +273,7 @@
         "relationship": {
           "parents": ["State_Project_002"]
         },
-        "road_name": "Barrett Street",
-        "road_number": "I-200",
+        "road_names": ["Barrett Street", "I-200"],
         "direction": "westbound",
         "beginning_cross_street": "King St",
         "ending_cross_street": "Hampton Garden Dr",
