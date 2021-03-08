@@ -49,18 +49,18 @@ This section provides a tabular list of all enumerated types used in the WZDx sp
 
 Enumerated Type | Description
 --- | ---
+[Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
 [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure used for a lane restriction value.
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
+[LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
 [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | The type of vehicle restriction on a roadway.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
-[Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
-[LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
