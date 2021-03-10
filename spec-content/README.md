@@ -49,44 +49,25 @@ This section provides a tabular list of all enumerated types used in the WZDx sp
 
 Enumerated Type | Description
 --- | ---
+[Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
 [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure used for a lane restriction value.
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
+[LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
 [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | The type of vehicle restriction on a roadway.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
-[Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md) | The direction for a road event based on standard naming for US roads.
-[LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md) | An indication of the type of lane or shoulder.
-
-### Enumerated Types Derived from ITS Standards
-Some enumerated types are specifically derived from the Traffic Management Data Dictionary (TMDD); these are found in the [enumerated-types/derived-from-its-standards](/spec-content/enumerated-types/derived-from-its-standards/) directory. The following enumerated types are translated from enumerations in the [TMDD](https://www.standards.its.dot.gov/Content/documents/advisories/TMDD_2013.aspx):
-
-- [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md)
-- [LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md)
-
-Example of data frame in the TMDD (specified in ASN.1 format)
-```xml
-DATA-TYPE "EventLane ::= SEQUENCE {
-    lanes-type ITIS.LaneRoadway OPTIONAL,
-    link-direction Link-direction OPTIONAL,
-    lanes-total-original Link-lanes-count OPTIONAL,
-    lanes-total-affected Link-lanes-count OPTIONAL,
-    event-lanes-affected SEQUENCE (SIZE(1..64)) OF Link-lane-number OPTIONAL,
-    lanes-status ITIS.Closures OPTIONAL,
-    ...  }"
-```
-
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
 Property | Object | Enumerated Type | Notes
 --- | --- | --- | ---
 `beginning_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
-`direction` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [Direction](/spec-content/enumerated-types/derived-from-its-standards/Direction.md) | Enumeration adapted from TMDD link-alignment
+`direction` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [Direction](/spec-content/enumerated-types/Direction.md) | Enumeration adapted from TMDD link-alignment
 `end_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `ending_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
 `event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
@@ -97,6 +78,6 @@ Property | Object | Enumerated Type | Notes
 `restriction_units` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
 `start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `status` | [Lane](/spec-content/objects/Lane.md) | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Enumeration created in WZDx v2.0
-`type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/derived-from-its-standards/LaneType.md) | Enumeration adapted from TMDD LaneRoadway, updated in WZDx v3.0
+`type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0
 `type_name` | [TypeOfWork](/spec-content/objects/TypeOfWork.md) | [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | Enumeration created in WZDx v2.0
 `vehicle_impact` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | Enumeration created in WZDx v2.0
