@@ -16,7 +16,7 @@ Value | Description
 `axle-load-limit` | Vehicle axle-load-limit restrictions reduced in work zone area
 `gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced in work zone area
 `towing-prohibited` | Towing prohibited in work zone area
-`permitted-oversize-loads-<br>prohibited` | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
+`permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
 
 ## Used By
 Property | Object
