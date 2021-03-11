@@ -66,7 +66,7 @@
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": "I-80, I-35",
+        "road_names": ["I-80", "I-35"],
         "direction": "westbound",
         "beginning_milepost": 133.967,
         "ending_milepost": 133.112,
