@@ -66,7 +66,7 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": "NE 150th Avenue",
+        "road_names": ["NE 150th Avenue"],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -153,7 +153,7 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": "NE 150th Avenue",
+        "road_names": ["NE 150th Avenue"],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -232,7 +232,7 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": "NE 150th Avenue",
+        "road_names": ["NE 150th Avenue"],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -311,7 +311,7 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": "NE 150th Avenue",
+        "road_names": ["NE 150th Avenue"],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -390,7 +390,7 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": "NE 150th Avenue",
+        "road_names": ["NE 150th Avenue"],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
