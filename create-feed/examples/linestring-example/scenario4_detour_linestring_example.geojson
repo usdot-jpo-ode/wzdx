@@ -69,7 +69,7 @@
         "relationship": {
           "children": ["67890-detour1","67890-detour2","67890-detour3"]
         },
-        "road_names": "I-35",
+        "road_names": ["I-35"],
         "direction": "northbound",
         "beginning_milepost": 98.42,
         "ending_milepost": 101.50,
@@ -305,7 +305,7 @@
           "parents": ["67890"],
 		  "next": ["67890-detour2","67890-detour3"]
         },
-        "road_names": "F22",
+        "road_names": ["F22"],
         "direction": "westbound",
         "ending_cross_street": "US 69",
         "beginning_accuracy": "estimated",
@@ -381,7 +381,7 @@
 		  "first": ["67890-detour1"],
 		  "next": ["67890-detour3"]
         },
-        "road_names": "US 69",
+        "road_names": ["US 69"],
         "direction": "northbound",
         "beginning_cross_street": "NE 126th Avenue",
         "ending_cross_street": "IA 210",
@@ -753,7 +753,7 @@
           "parents": ["6780"],
 		  "first": ["67890-detour1"]
         },
-        "road_names": "IA 210",
+        "road_names": ["IA 210"],
         "direction": "eastbound",
         "beginning_cross_street": "US 69",
         "beginning_accuracy": "estimated",
