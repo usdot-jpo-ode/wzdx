@@ -64,7 +64,6 @@
       "id": "71234",
       "type": "Feature",
       "properties": {
-        "road_event_id": "71234",
         "data_source_id": "2",
         "event_type": "work-zone",
         "road_names": ["I-80", "I-35"],
