@@ -3,7 +3,7 @@ This directory contains information regarding creation of a WZDx feed, such as t
 
 ## Feed Format and File Type
 
-The WZDx v3.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
+The WZDx v3.1 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
 - It is a lightweight data exchange format.
 - It is easy for humans to read and write.
 - It is easy for machines to parse and generate.
@@ -47,6 +47,7 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
+* [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
 
 ## Business Rules
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
@@ -59,8 +60,8 @@ The following business rules help assure a standardized and interpretable use of
 6. If the `lanes` property on the [RoadEvent](/spec-content/objects/RoadEvent.md) object is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
 ## Data Validation
-### WZDx v2.0 and v3.0
-Use the corresponding JSON schema linked above to validate WZDx v2.0 and v3.0 feeds.
+### WZDx v2.0, v3.0, and v3.1
+Use the corresponding JSON schema linked above to validate WZDx v2.0, v3.0, and v3.1 feeds.
 
 ### WZDx v1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
