@@ -105,23 +105,24 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 # Release Notes
 
-#### Release v3.0 (Sep 2020)
+#### Release v3.1 (Aoril 2021)
 
-- Restrict version format to major.minor and enforce via WZDx v3.0 JSON schema
-- Add order property to lane entity to indicate a lane's position in sequence on the roadway
-- Remove lane_edge_reference and standardize on counting lanes from the left side of the roadway
-- Add event_type property to the road event entity and new Event Type Enumerated Type with the values work-zone and detour, to support adding detour information (and more in the future)
-- Add relationship entity (one per road event entity) to enable describing relationships (hierarchical and sequential) between road events and other non-WZDx entities (such as a work zone phase or project)
-- Add road_event_data_source entity to allow specifying multiple data sources within a single feed
-- Streamline metadata (previously given in an external file, by URL) and add relevant fields to the road_event_feed_info and road_event_data_source entities
-- Require restriction_type if providing a lane-level restriction
-- Change Spatial Verification Enumerated Type and Time Verification Enumerated Type values to be all lowercase
-- Remove all plural or nonsensical lane types from the Lane Type Enumerated Type and clarify that each WZDx lane should represent a single lane on the roadway
+- Add “license” property to RoadEventFeedInfo and assign a Creative Commons – Public Domain License (CC0) to the feed
+- Add “bbox” property to RoadEventFeature to allow specifying a GeoJSON Bounding Box for the WZDx Feed 
+- Deprecate “road_event_id” in the RoadEvent and add “id” property in the RoadEventFeature 
+- Refactor Lane Type enumeration values by removing or deprecating values that reference a position on the road when the location can be determined by the lane's order, status, or lane_restrictions properties
+- Deprecate “total_num_lanes” property in the RoadEvent 
+- Add “road_names” property to streamline how road names are communicated in the RoadEvent and deprecate “road_name” and “road_number”
+- Add “local-access-only” property to RoadRestriction 
+- Added implementation examples for common work zone scenarios
+
+WZDx v3.1 is a stable release, backwards compatible with v3.0.
+
 
 
 # Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki) and the [WZDx Early Adopter's Guide](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/create_feed_updates/documents/WZDx%20Early%20Adopters%20Guide.pdf)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
