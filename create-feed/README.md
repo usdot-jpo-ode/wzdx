@@ -82,4 +82,4 @@ To start collaborating, [join GitHub](https://github.com/) by creating free [org
 ### How Do I Get Help?
 To interact directly with the DAVI Data Team and to get help implementing the spec for your data, post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
-![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+![Posting An Issue](/images/issues.png)

@@ -124,7 +124,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.0 Specification. Comments
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
-5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/create-feed/schemas/wzdx_v3.0_feed.json)
+5. Validate your feed output using the [WZDx v3.0 Feed JSON Schema](/create-feed/schemas/wzdx_v3.0_feed.json)
 6. Publish your feed and tell us about it via avdx@dot.gov.
 
 # Contributions
