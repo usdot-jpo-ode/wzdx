@@ -1,3 +1,18 @@
+# WZDx Specification v3.1
+> Released April 2021
+
+*	Add “license” property to RoadEventFeedInfo and assign a Creative Commons – Public Domain License (CC0) to the feed
+*	Add “bbox” property to RoadEventFeature to allow specifying a GeoJSON Bounding Box for the WZDx Feed 
+*	Deprecate “road_event_id” in the RoadEvent and add “id” property in the RoadEventFeature 
+*	Refactor Lane Type enumeration values by removing or deprecating values that reference a position on the road when the location can be determined by the lane's order, status, or lane_restrictions properties
+*	Deprecate “total_num_lanes” property in the RoadEvent 
+*	Add “road_names” property to streamline how road names are communicated in the RoadEvent and deprecate “road_name” and “road_number”
+*	Add “local-access-only” property to RoadRestriction 
+*	Added implementation examples for common work zone scenarios
+
+WZDx v3.1 is a stable release, backwards compatible with v3.0.
+
+
 # WZDx Specification v3.0
 > Released September 2020
 
