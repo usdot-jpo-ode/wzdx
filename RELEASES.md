@@ -1,19 +1,4 @@
 # WZDx Specification v3.1
-<<<<<<< Updated upstream
-> Released April 2021
-
-*	Add “license” property to RoadEventFeedInfo and assign a Creative Commons – Public Domain License (CC0) to the feed
-*	Add “bbox” property to RoadEventFeature to allow specifying a GeoJSON Bounding Box for the WZDx Feed 
-*	Deprecate “road_event_id” in the RoadEvent and add “id” property in the RoadEventFeature 
-*	Refactor Lane Type enumeration values by removing or deprecating values that reference a position on the road when the location can be determined by the lane's order, status, or lane_restrictions properties
-*	Deprecate “total_num_lanes” property in the RoadEvent 
-*	Add “road_names” property to streamline how road names are communicated in the RoadEvent and deprecate “road_name” and “road_number”
-*	Add “local-access-only” property to RoadRestriction 
-*	Added implementation examples for common work zone scenarios
-
-WZDx v3.1 is a stable release, backwards compatible with v3.0.
-
-=======
 Released April 2021
 
 Following the major v3.0 release, the changes for this v3.1 release were developed with the goal enhancing and cleaning up the spec without making major changes or breaking backwards compatibility. Thus, in v3.1 many enumerated type values or properties were deprecated rather than removed outright. Most if not all of these deprecated values will be removed in the next major release.
@@ -30,7 +15,6 @@ Following the major v3.0 release, the changes for this v3.1 release were develop
 ## Fixes
 * Add optional `bbox` property to allow providing a [GeoJSON Bounding Box](https://tools.ietf.org/html/rfc7946#section-5) for the `WZDxFeed` and `RoadEventFeature` objects
 * Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
->>>>>>> Stashed changes
 
 # WZDx Specification v3.0
 Released 2021-09-18

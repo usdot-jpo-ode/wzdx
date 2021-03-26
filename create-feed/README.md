@@ -47,7 +47,7 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-* [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
+* [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
 
 ## Business Rules
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
