@@ -5,7 +5,7 @@ The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zo
 
 WZDx is being developed to with the goal of enabling widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use  these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible. 
 
-# Repostitory Organization
+## Repostitory Organization
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
 
 
@@ -15,7 +15,7 @@ The WZDx Specification repository contains two main subdirectories, each contain
 
 Two additional directories, [`images`](/images) and [`documents`](/documents), contain the images that are referenced throughout the repository and PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist. 
 
-## Contents
+### Contents
 - [**Creating a WZDx Feed**](/create-feed)
     - [**Example Feed GeoJSON Files**](/create-feed/examples)   
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
@@ -52,7 +52,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
   - [Object Diagram](/images/wzdx_object_diagram.jpg)
      - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
 
-# README Outline
+## README Outline
 - [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
   - [Summary](#summary)
   - [Contents](#contents)
@@ -66,7 +66,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 - [Versioning](#versioning)
 - [License](#license)
 
-# Project Description
+## Project Description
 
 **What is the WZDx Specification?**
 The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third-party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones to vehicles to help automated driving systems (ADS) and human drivers navigate more safely.
@@ -95,31 +95,31 @@ The Federal Highway Administration is leading efforts, via the [Work Zone Data I
 - WZDI Framework provides a conceptual architecture for work zone data systems for collecting, storing, disseminating, managing, maintaining and archiving work zone activity data.
 - WZDI Data Dictionary provides digital descriptions of work zone activities that enable and support transportation agencies and third party providers to describe and communicate work zone-related information to agency, private sector, and public users timely and seamlessly across multiple jurisdictions and regions.
 
-# Contact Information
+## Contact Information
 
 Contact Name: ITS JPO
 
 Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%20WZDx%20Specification%20Issue&Body=Issue%20name:%20“[Clarification%20/%20New%20feature%20/%20Question%5d%20—%20Summarize%20topic”%20%0d%23%23%20Summary%0dA%20concise%20description%20of%20the%20problem,%20feature%20request%20(proposed%20change),%20or%20question.%20%0d%23%23%20Motivation%0dFor%20a%20clarification…%20Describe%20the%20ambiguity%20or%20edge%20case(s)%20in%20further%20detail,%20and%20the%20issues%20and%20problems%20this%20poses.%20%0dFor%20a%20new%20feature…%20Describe%20the%20use%20case%20that%20requires%20this%20data%20spec%20feature.%20%0dFor%20a%20question…%20Describe%20the%20deliberation%20that%20led%20to%20the%20question%20within%20your%20project%20or%20organization.%20%0d%23%23%20Proposed%20changes%0d%20In%20the%20case%20of%20a%20proposed%20change,%20provide%20one%20or%20a%20few%20options%20for%20moving%20forward.)
 
-# Release Notes
+## Release Notes
 
-## Release v3.1 (April 2021)
+### Release v3.1 (April 2021)
 Following the major v3.0 release, the changes for the v3.1 release were developed with the goal enhancing and cleaning up the spec without making major changes or breaking backwards compatibility. Thus, in v3.1 many enumerated type values or object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
 
-## Features
+#### Features
 * Add `local-access-only` restriction
 * Add `license` property to the `RoadEventFeedInfo` object
 
-## Refactoring
+#### Refactoring
 * Refactor `LaneType` enumerated type to deprecate values that can be determined from other properties of the Lane object, such as `order`, `status`, and `lane_restrictions`
 * Add `road_names` property to the `RoadEvent` object and deprecate `road_name` and `road_number`
 * Deprecate the `total_num_lanes` property on the `RoadEvent` object as the `RoadEvent`'s `lanes` array can be used to determine the number of lanes
 
-## Fixes
+#### Fixes
 * Add optional `bbox` property to allow providing a [GeoJSON Bounding Box](https://tools.ietf.org/html/rfc7946#section-5) for the `WZDxFeed` and `RoadEventFeature` objects
 * Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
 
-# Getting Started
+## Getting Started
 
 The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls).
 
@@ -130,7 +130,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 5. Validate your feed output using the [WZDx v3.1 Feed JSON Schema](/create-feed/schemas/wzdx_v3.1_feed.json)
 6. Publish your feed and tell us about it via avdx@dot.gov.
 
-# Contributions
+## Contributions
 
 **How do I contribute to the WZDx Specification?**
 
@@ -141,7 +141,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
 - Help us improve our best practices and formatting on GitHub.
 
-# Versioning
+## Versioning
 
 The WZDx specification uses a major.minor versioning scheme, similar to [SemVer](https://semver.org/). The rules are as follows:
 
@@ -151,6 +151,6 @@ The WZDx specification uses a major.minor versioning scheme, similar to [SemVer]
 
 To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository.
 
-# License
+## License
 
 The WZDx project is in the worldwide public domain (i.e., in the public domain within the United States - copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0/) public domain dedication). All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with the waiver of copyright interest. see [License](LICENSE) for more details.
