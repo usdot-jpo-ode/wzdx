@@ -17,7 +17,7 @@ Following the major v3.0 release, the changes for the v3.1 release were develope
 * Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
 
 # WZDx Specification v3.0
-Released 2021-09-18
+Released August 2020
 
 ## Features
 * Restrict `version` format to `major.minor` and enforce via v3.0 JSON schema
@@ -34,7 +34,7 @@ Released 2021-09-18
 * Remove all plural or nonsensical lane types from the **Lane Type Enumerated Type** and clarify that each WZDx lane should represent a *single* lane on the roadway
 
 # WZDx Specification v2.0
-Released 2020-01-14
+Released January 2020
 
 This release includes the first set of major changes to the specification. 
 
@@ -47,6 +47,6 @@ This release includes the first set of major changes to the specification.
 * Converted the “common core” data dictionary into a [relational data model](https://github.com/usdot-jpo-ode/jpo-wzdx/pull/54) with road event tables featuring new geometry-specific data elements. This conversion permits more efficient organization of the data elements for each work zone and supports a flexible, scalable data model.
   
 # [WZDx Specification v1.1](https://github.com/usdot-jpo-ode/jpo-wzdx/tree/v1.1)
-Released 2018-09-15
+Released September 2018
 
 Initial release. This version served as a first step in providing a standard work zone data activity framework. This version of the specification focused on “common core” data concepts which are defined as data elements needed for most work zone data use cases. The specification included data elements that data producers were already producing as well as those that may not currently be produced.
