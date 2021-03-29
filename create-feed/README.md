@@ -66,7 +66,7 @@ Use the corresponding JSON schema linked above to validate WZDx v2.0 and v3.0 fe
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
 
 ### Self-Validation Checklist
-For a list of steps to take to make sure your data feed is ready to publish, follow the [Self-Validation Checklist](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/create_feed_updates/documents/WZDx%20data%20feed%20self%20validation%20checklist.docx) 
+For a list of steps to take to make sure your data feed is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx)
 
 ## Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
@@ -83,4 +83,4 @@ To start collaborating, [join GitHub](https://github.com/) by creating free [org
 ### How Do I Get Help?
 To interact directly with the DAVI Data Team and to get help implementing the spec for your data, post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
-![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+![Posting An Issue](/images/issues.png)
