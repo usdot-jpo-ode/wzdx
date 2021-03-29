@@ -17,7 +17,7 @@ Following the major v3.0 release, the changes for the v3.1 release were develope
 * Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
 
 # WZDx Specification v3.0
-Released August 2020
+Released September 2020
 
 ## Features
 * Restrict `version` format to `major.minor` and enforce via v3.0 JSON schema
