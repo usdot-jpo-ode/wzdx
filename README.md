@@ -1,11 +1,11 @@
 <img src="https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/b3ee31a7a231270e536e4d71a7a45623c1e4ec99/images/wzdx_logo_blue_orange_x.png" height="150"/>
 
 # Work Zone Data Exchange (WZDx) Specification
+The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zone data provided by infrastructure owners and operators (IOOs) available for third party use, making travel on public roads safer and more efficient through ubiquitous access to data on work zone activity.
 
-## Summary
+WZDx is being developed to with the goal of enabling widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use  these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible. 
 
-This repository contains the Work Zone Data Exchange (WZDx) Specification.
-
+# Repostitory Organization
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
 
 
@@ -13,18 +13,17 @@ The WZDx Specification repository contains two main subdirectories, each contain
 2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
 
 
-A third directory, [`images`](/images), contains the images that are referenced throughout the repository. Final directory, ['documents'](/documents), contains WZDx Early Adopter Guide as well as WZDx data feed self validation checklist. 
+Two additional directories, [`images`](/images) and [`documents`](/documents), contain the images that are referenced throughout the repository and PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist. 
 
 ## Contents
-- [**Creating the WZDx Feed**](/create-feed)
+- [**Creating a WZDx Feed**](/create-feed)
     - [**Example Feed GeoJSON Files**](/create-feed/examples)   
         - [LineString Example](/create-feed/examples/linestring_example.geojson)
         - [MultiPoint Example](/create-feed/examples/multipoint_example.geojson)
     - [**JSON Schemas**](/create-feed/schemas)
         - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-        - WZDx v3.1 Feed
-
+        - [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDXFeed](/spec-content/objects/WZDxFeed.md)
@@ -52,7 +51,6 @@ A third directory, [`images`](/images), contains the images that are referenced 
 - [**Images Used throughout the Specification**](/images)
   - [Object Diagram](/images/wzdx_object_diagram.jpg)
      - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
-
 
 # README Outline
 - [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
@@ -105,20 +103,21 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 # Release Notes
 
-#### Release v3.1 (Aoril 2021)
+## Release v3.1 (April 2021)
+Following the major v3.0 release, the changes for the v3.1 release were developed with the goal enhancing and cleaning up the spec without making major changes or breaking backwards compatibility. Thus, in v3.1 many enumerated type values or object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
 
-- Add “license” property to RoadEventFeedInfo and assign a Creative Commons – Public Domain License (CC0) to the feed
-- Add “bbox” property to RoadEventFeature to allow specifying a GeoJSON Bounding Box for the WZDx Feed 
-- Deprecate “road_event_id” in the RoadEvent and add “id” property in the RoadEventFeature 
-- Refactor Lane Type enumeration values by removing or deprecating values that reference a position on the road when the location can be determined by the lane's order, status, or lane_restrictions properties
-- Deprecate “total_num_lanes” property in the RoadEvent 
-- Add “road_names” property to streamline how road names are communicated in the RoadEvent and deprecate “road_name” and “road_number”
-- Add “local-access-only” property to RoadRestriction 
-- Added implementation examples for common work zone scenarios
+## Features
+* Add `local-access-only` restriction
+* Add `license` property to the `RoadEventFeedInfo` object
 
-WZDx v3.1 is a stable release, backwards compatible with v3.0.
+## Refactoring
+* Refactor `LaneType` enumerated type to deprecate values that can be determined from other properties of the Lane object, such as `order`, `status`, and `lane_restrictions`
+* Add `road_names` property to the `RoadEvent` object and deprecate `road_name` and `road_number`
+* Deprecate the `total_num_lanes` property on the `RoadEvent` object as the `RoadEvent`'s `lanes` array can be used to determine the number of lanes
 
-
+## Fixes
+* Add optional `bbox` property to allow providing a [GeoJSON Bounding Box](https://tools.ietf.org/html/rfc7946#section-5) for the `WZDxFeed` and `RoadEventFeature` objects
+* Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
 
 # Getting Started
 
@@ -137,7 +136,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 
 - Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues).
 - Ask the WZDx community for input on a question or propose an idea you have via [GithHb Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions).
-- Create a [GitHub pull request](https://help.github.com/articles/creating-a-pull-request/) that outlines a new functionality or fixes a bug.
+- Create a [GitHub pull request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
 - Review and provide feedback on update issues/discussions/pull requests created by other users.
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
 - Help us improve our best practices and formatting on GitHub.
