@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/b3ee31a7a231270e536e4d71a7a45623c1e4ec99/images/wzdx_logo_blue_orange_x.png" height="150"/>
+<img src="/images/wzdx_logo_blue_orange_x.png" height="150"/>
 
 # Work Zone Data Exchange (WZDx) Specification
 The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zone data provided by infrastructure owners and operators (IOOs) available for third party use, making travel on public roads safer and more efficient through ubiquitous access to data on work zone activity.
