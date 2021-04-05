@@ -114,6 +114,7 @@ This repository was also renamed from `jpo-wzdx` to `wzdx` on 2021-04-05. All li
 
 #### Refactoring
 * Refactor `LaneType` enumerated type to deprecate values that can be determined from other properties of the Lane object, such as `order`, `status`, and `lane_restrictions`
+* Add new `LaneStatus` enumerated type `alternating-flow` and deprecate `alternating-one-way`
 * Add `road_names` property to the `RoadEvent` object and deprecate `road_name` and `road_number`
 * Deprecate the `total_num_lanes` property on the `RoadEvent` object as the `RoadEvent`'s `lanes` array can be used to determine the number of lanes
 
