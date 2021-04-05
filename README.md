@@ -106,6 +106,8 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 ### Release v3.1 (April 2021)
 Following the major v3.0 release, the changes for the v3.1 release were developed with the goal enhancing and cleaning up the spec without making major changes or breaking backwards compatibility. Thus, in v3.1 many enumerated type values or object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
 
+This repository was also renamed from `jpo-wzdx` to `wzdx` on 2021-04-05. All links pointing to `jpo-wzdx` will automatically redirect to the new URL. 
+
 #### Features
 * Add `local-access-only` restriction
 * Add `license` property to the `RoadEventFeedInfo` object
