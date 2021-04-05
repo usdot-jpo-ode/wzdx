@@ -54,7 +54,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 
 ## README Outline
 - [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
-  - [Summary](#summary)
+  - [Repository Organization](#repostitory-organization)
   - [Contents](#contents)
 - [README Outline](#readme-outline)
 - [Project Description](#project-description)
