@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/b3ee31a7a231270e536e4d71a7a45623c1e4ec99/images/wzdx_logo_blue_orange_x.png" height="150"/>
+<img src="https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/b3ee31a7a231270e536e4d71a7a45623c1e4ec99/images/wzdx_logo_blue_orange_x.png" height="150"/>
 
 # Work Zone Data Exchange (WZDx) Specification
 The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zone data provided by infrastructure owners and operators (IOOs) available for third party use, making travel on public roads safer and more efficient through ubiquitous access to data on work zone activity.
@@ -85,7 +85,7 @@ The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Inte
 - The Maricopa County Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://datahub.transportation.gov/Roadways-and-Bridges/Work-Zone-Data-Exchange-WZDx-Feed-Registry/69qe-yiui), v2.0 can be found [here](https://api.mcdot-its.com/WZDx_v2.0/Activity/Get), and v3.0 can be found [here](https://api.mcdot-its.com/WZDx_v3.0/Activity/Get)
 - The Iowa Department of Transportation data feed based on WZDx Specification v1.1 can be found [here](https://data.iowadot.gov/datasets/iowa-work-zone-data-exchange-wzdx).
 
-Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
+Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
 
 **How can I get help with implementation?**
 This project repository will be continually updated with resources to help with implementation - in the meantime, please make a GitHub issue or discussion entry if you need help implementing the WZDx Specification or have questions.
@@ -121,9 +121,9 @@ Following the major v3.0 release, the changes for the v3.1 release were develope
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/jpo-wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
-1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/jpo-wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf)
+1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
@@ -134,8 +134,8 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 
 **How do I contribute to the WZDx Specification?**
 
-- Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/jpo-wzdx/issues).
-- Ask the WZDx community for input on a question or propose an idea you have via [GithHb Discussions](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions).
+- Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/wzdx/issues).
+- Ask the WZDx community for input on a question or propose an idea you have via [GithHb Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
 - Create a [GitHub pull request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
 - Review and provide feedback on update issues/discussions/pull requests created by other users.
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
@@ -149,7 +149,7 @@ The WZDx specification uses a major.minor versioning scheme, similar to [SemVer]
 2. The major version number must be incremented if any backwards incompatible changes are introduced.
 3. Neither version number shall be incremented for documentation changes/clarifications that have no effect on either the specification schema or the content or structure of a GeoJSON feed file which conforms to the specification.
 
-To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/jpo-wzdx/tags) section of this repository.
+To view available versions, refer to the [tags](https://github.com/usdot-jpo-ode/wzdx/tags) section of this repository.
 
 ## License
 
