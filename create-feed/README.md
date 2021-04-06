@@ -37,16 +37,48 @@ The figure below models the tables and their relationships.
 ![WZDx Object Diagram](/images/wzdx_object_diagram.jpg)
 
 ## Feed Examples
-The following WZDx feed examples represent a variety of scenarios common when creating road events.  Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a geojson but may contain multiple work zones documenting differences in representing road events. A comprehensive geojson contains all of the scenarios in a single file.  Example files are provided for both the `LineString` and `MultiPoint` geometry types.
+The following WZDx feed examples represent a variety of scenarios common when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a geojson but may contain multiple work zones documenting differences in representing road events at varying levels of complexity. A comprehensive geojson contains all of the scenarios in a single file.  Example files are provided for both the `LineString` and `MultiPoint` geometry types.
 
-* [MultiPoint GeoJSON Example](/create-feed/examples/multipoint-example)
-* [LineString GeoJSON Example](/create-feed/examples/linestring-example)
+* [All MultiPoint GeoJSON Example](/create-feed/examples/multipoint-example)
+* [All LineString GeoJSON Example](/create-feed/examples/linestring-example)
+
+Below is a summary of each of the example WZDx feeds and detailed differences for each of the road events:
+
+**Scenario 1  - Simple Workzone** ([Linestring](/create-feed/examples/linestring-example/scenario1_simple_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario1_simple_multipoint_example.geojson)) - Scenario 1 is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) with a single lane closed on a multi-lane facility.
+- First work zone shown with basic lane information ("id": "71234")
+- Second work zone shown with detailed lane information ("id": "WDM-58493-NB")
+- Third work zone showing a work zone broken into multiple road events with detailed lane information.  Also demonstrates the use of relationship fields. ("id": "65773-1", "65773-2", "65773-3") 
+
+**Scenario 2 - Lane Shift (simple case)** ([Linestring](/create-feed/examples/linestring-example/scenario2_laneshift_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examplescenario2_laneshift_multipoint_example.geojson)) - Scenario 2 is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.
+
+- Single work zone with lane shift in the detailed lane information showing us of verified location and start time. ("id": "7733")
+
+**Scenario 3 - Shoulder Closure** ([Linestring](/create-feed/examples/linestring-example/scenario3_shoulder_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario3_shoulder_multipoint_example.geojson)) - Scenario 31 is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which closes the shoulder in a single direction on an undivided roadway.
+
+- Single work zone but two road events (one in direction of shoulder closure and second in opposite direction).  Also demonstrates the use of restrictions for the event as well as individual lanes. ("id": "121388-2", "121388-2")
+
+**Scenario 4 - Road Closure with Detour on Arterial** ([Linestring](/create-feed/examples/linestring-example/scenario4_detour_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario4_detour_multipoint_example.geojson)) - Scenario 4 is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which has an associated detour for a road closure.  The example is slightly modified for use on a multi-lane facility.
+
+- Single work zone with a detour showing use of relationship and multiple road events making up a detour. (WZ - "id": "67890"; Detour - "id": "67890-detour1","67890-detour2","67890-detour3")
+
+**Scenario 5 - Work Zone with Bridge Work Overhead** ([Linestring](/create-feed/examples/linestring-example/scenario5_recurring_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario5_recurring_multipoint_example.geojson)) - Scenario 5 is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) assuming that it is just a single lane closure but is recurring over multiple days.
+
+- Simple work zone but added a recurring component.  Four additional events were created with a pending status.  The active work zone event demonstrates value of verified location and time. ("id": "PLK01012016-Day1", "PLK01012016-Day2", "PLK01012016-Day3", "PLK01012016-Day4", "PLK01012016-Day5")
+
+**Local Access Example** ([Linestring](/create-feed/examples/linestring-example/localaccess_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) - The local access only example shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
+
+- Single work zone with local access using the 'restrictions'.  One event shows basic level details that can be provided while the opposite direction road event shows detailed lane information.  The detailed lane information also includes a bike lane for reference. ("id": "WZ389-NB", "WZ389-SB"
+
+**Comprehensive Example** ([Linestring](/create-feed/examples/linestring-example/comprehensive_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/comprehensive_multipoint_example.geojson))
+- This geojson contains all of the examples listed above in a single file showing how the various road events across multiple organizations/data sources can be produced
 
 ## JSON Schemas
 The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
+
+
 
 ## Business Rules
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
