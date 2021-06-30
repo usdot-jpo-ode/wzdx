@@ -31,30 +31,6 @@
             "location_method": "channel-device-method",
             "lrs_type": "milemarkers",
             "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-         },
-         {
-            "data_source_id": "3",
-            "organization_name": "Test County 1",
-            "contact_name": "Stu Spiel Sourcefeed",
-            "contact_email": "stu.sourcefeed@testcounty1.gov",
-            "update_frequency": 300,
-            "update_date": "2020-06-18T14:37:05Z",
-            "location_verify_method": "GPS",
-            "location_method": "channel-device-method",
-            "lrs_type": "milemarkers",
-            "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-         },
-         {
-            "data_source_id": "4",
-            "organization_name": "Test City 2",
-            "contact_name": "Skip Jack Sourcefeed",
-            "contact_email": "skip.sourcefeed@testcity2.gov",
-            "update_frequency": 60,
-            "update_date": "2020-06-18T14:38:59Z",
-            "location_verify_method": "GPS",
-            "location_method": "channel-device-method",
-            "lrs_type": "milemarkers",
-            "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
          }
       ]
    },
@@ -81,7 +57,7 @@
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
             "reduced_speed_limit": 55,
-            "description": "Scenario 1 Work Zone with Basic Lane Information",
+            "description": "Scenario 1 Work Zone with Basic Information",
             "creation_date": "2009-12-31T18:01:01Z",
             "update_date": "2009-12-31T18:01:01Z"
          },
@@ -437,7 +413,7 @@
                   "65773-1"
                ],
                "next": [
-                  "65773-3"
+                  "65773-2"
                ]
             },
             "road_names": [
@@ -457,7 +433,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 1",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -534,6 +510,9 @@
             "relationship": {
                "first": [
                   "65773-1"
+               ],
+               "next": [
+                  "65773-3"
                ]
             },
             "road_names": [
@@ -554,7 +533,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 2",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -644,6 +623,11 @@
          "properties": {
             "data_source_id": "2",
             "event_type": "work-zone",
+            "relationship": {
+               "first": [
+                  "65773-1"
+               ]
+            },
             "road_names": [
                "I-235"
             ],
@@ -662,7 +646,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events",
+            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 3",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
