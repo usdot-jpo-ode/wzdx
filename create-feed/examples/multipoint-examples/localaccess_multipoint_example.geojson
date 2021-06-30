@@ -19,42 +19,6 @@
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "2",
-        "organization_name": "TestDOT",
-        "contact_name": "Samuel Sonny Sourcefeed",
-        "contact_email": "samuel.sourcefeed@testdot.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "3",
-        "organization_name": "Test County 1",
-        "contact_name": "Stu Spiel Sourcefeed",
-        "contact_email": "stu.sourcefeed@testcounty1.gov",
-        "update_frequency": 300,
-        "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "4",
-        "organization_name": "Test City 2",
-        "contact_name": "Skip Jack Sourcefeed",
-        "contact_email": "skip.sourcefeed@testcity2.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       }
     ]
   },
@@ -64,7 +28,7 @@
       "id": "WZ389-NB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "4",
+        "data_source_id": "1",
         "event_type": "work-zone",
         "road_names": [
           "Beaver Avenue"
@@ -83,7 +47,7 @@
         "restrictions": [
           "local-access-only"
         ],
-        "description": "Local Access Only with Basic Lane Information",
+        "description": "Local Access Only with Basic Information",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:03:01Z"
       },
@@ -105,7 +69,7 @@
       "id": "WZ389-SB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "4",
+        "data_source_id": "1",
         "event_type": "work-zone",
         "road_names": [
           "Beaver Avenue"
