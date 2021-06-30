@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -66,7 +66,9 @@
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -108,20 +110,22 @@
             -93.46077919006348,
             41.83445374967984
           ],
-		  [
+          [
             -93.51322174072264,
             41.83502130612205
           ]
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day2",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -170,13 +174,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day3",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -225,13 +231,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day4",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -280,13 +288,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day5",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",

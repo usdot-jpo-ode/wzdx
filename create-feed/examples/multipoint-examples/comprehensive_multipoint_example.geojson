@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -66,7 +66,10 @@
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-80", "I-35"],
+        "road_names": [
+          "I-80",
+          "I-35"
+        ],
         "direction": "northbound",
         "beginning_milepost": 125.2,
         "ending_milepost": 126.3,
@@ -87,27 +90,29 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.776684050999961,
-             41.617961698000045
+            -93.776684050999961,
+            41.617961698000045
           ],
           [
-             -93.776688974999956,
-             41.622297226000057
+            -93.776688974999956,
+            41.622297226000057
           ]
         ]
       }
     },
-	{
+    {
       "id": "WDM-58493-NB",
       "type": "Feature",
       "properties": {
         "data_source_id": "1",
         "event_type": "work-zone",
-        "road_names": ["128th Street"],
+        "road_names": [
+          "128th Street"
+        ],
         "direction": "northbound",
         "beginning_cross_street": "US 6, Hickman Road",
         "ending_cross_street": "Douglas Ave",
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T06:00:00Z",
         "end_date": "2010-05-01T05:00:00Z",
@@ -119,7 +124,7 @@
         "creation_date": "2009-12-13T13:35:26Z",
         "update_date": "2009-12-31T15:11:16Z",
         "lanes": [
-		  {
+          {
             "order": 1,
             "lane_number": 1,
             "status": "open",
@@ -127,12 +132,12 @@
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
-				"restriction_value": 10,
-				"restriction_units": "feet"
+                "restriction_value": 10,
+                "restriction_units": "feet"
               }
             ]
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "closed",
@@ -144,31 +149,37 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.791522243999964,
-             41.614948252000033
+            -93.791522243999964,
+            41.614948252000033
           ],
           [
-             -93.79347973299997,
-             41.628577397000072
+            -93.79347973299997,
+            41.628577397000072
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-1",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-		"relationship": {
-		  "first": ["65773-1"],
-		  "next": ["65773-3"]
+        "relationship": {
+          "first": [
+            "65773-1"
+          ],
+          "next": [
+            "65773-3"
+          ]
         },
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 3.1,
         "ending_milepost": 2.9,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -188,37 +199,37 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "lane_number": 4,
             "status": "open",
             "type": "right-entrance-ramp"
           },
-		  {
+          {
             "order": 6,
             "status": "open",
             "type": "shoulder"
@@ -229,30 +240,34 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.720409507999989,
-             41.593422456000042
+            -93.720409507999989,
+            41.593422456000042
           ],
           [
-             -93.724769801999969,
-             41.593457451000063
+            -93.724769801999969,
+            41.593457451000063
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-		"relationship": {
-		  "first": ["65773-1"]
+        "relationship": {
+          "first": [
+            "65773-1"
+          ]
         },
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 2.9,
         "ending_milepost": 2.5,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -273,37 +288,37 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "lane_number": 4,
             "status": "open",
             "type": "right-exit-lane"
           },
-		  {
+          {
             "order": 6,
             "status": "open",
             "type": "shoulder"
@@ -314,27 +329,29 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.724769801999969,
-             41.593457451000063
+            -93.724769801999969,
+            41.593457451000063
           ],
           [
-             -93.730149926999957,
-             41.593410350000056
+            -93.730149926999957,
+            41.593410350000056
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-3",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 2.5,
         "ending_milepost": 2.0,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -355,31 +372,31 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "status": "open",
             "type": "shoulder"
@@ -390,23 +407,26 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.730150629999969,
-             41.593410307000056
+            -93.730150629999969,
+            41.593410307000056
           ],
           [
-             -93.742189315999951,
-             41.592481500000076
+            -93.742189315999951,
+            41.592481500000076
           ]
         ]
       }
     },
-	{
+    {
       "id": "7733",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-80", "I-35"],
+        "road_names": [
+          "I-80",
+          "I-35"
+        ],
         "direction": "westbound",
         "beginning_milepost": 133.967,
         "ending_milepost": 133.112,
@@ -436,19 +456,19 @@
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "shift-right",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "shift-right",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 2,
             "status": "shift-right",
@@ -465,27 +485,29 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.652714940999942,
-             41.650200836000067
+            -93.652714940999942,
+            41.650200836000067
           ],
           [
-             -93.683089,
-             41.651577294000049
+            -93.683089,
+            41.651577294000049
           ]
         ]
       }
     },
-	{
+    {
       "id": "121388-1",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "eastbound",
         "beginning_milepost": 22.1,
         "ending_milepost": 24.6,
-		"beginning_cross_street": "570th Avenue",
+        "beginning_cross_street": "570th Avenue",
         "ending_cross_street": "610th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
@@ -508,17 +530,17 @@
         "lanes": [
           {
             "order": 1,
-			"lane_number": 1,
+            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "status": "closed",
             "type": "shoulder"
@@ -539,17 +561,19 @@
         ]
       }
     },
-	{
+    {
       "id": "121388-2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "westbound",
         "beginning_milepost": 22.1,
         "ending_milepost": 24.6,
-		"beginning_cross_street": "570th Avenue",
+        "beginning_cross_street": "570th Avenue",
         "ending_cross_street": "610th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
@@ -559,28 +583,30 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "restrictions": ["no-parking"],
+        "restrictions": [
+          "no-parking"
+        ],
         "description": "Scenario 3 with Shoulder Closure (opposite direction without shoulder closure)",
         "creation_date": "2010-01-01T09:30:26Z",
         "update_date": "2010-01-01T09:30:26Z",
         "lanes": [
           {
             "order": 1,
-			"lane_number": 1,
+            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "status": "open",
             "type": "shoulder",
-			"restrictions": [
+            "restrictions": [
               {
                 "restriction_type": "no-parking"
               }
@@ -602,16 +628,22 @@
         ]
       }
     },
-	{
+    {
       "id": "67890",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
         "relationship": {
-          "children": ["67890-detour1","67890-detour2","67890-detour3"]
+          "children": [
+            "67890-detour1",
+            "67890-detour2",
+            "67890-detour3"
+          ]
         },
-        "road_names": ["I-35"],
+        "road_names": [
+          "I-35"
+        ],
         "direction": "northbound",
         "beginning_milepost": 98.42,
         "ending_milepost": 101.50,
@@ -625,7 +657,9 @@
         "vehicle_impact": "some-lanes-closed",
         "workers_present": true,
         "reduced_speed_limit": 55,
-        "restrictions": ["reduced-width"],
+        "restrictions": [
+          "reduced-width"
+        ],
         "description": "Scenario 4 Work Zone with Detour",
         "creation_date": "2009-12-15T14:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
@@ -641,7 +675,7 @@
             "status": "open",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "open",
@@ -649,12 +683,12 @@
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
-				"restriction_value": 11,
-				"restriction_units": "feet"
+                "restriction_value": 11,
+                "restriction_units": "feet"
               }
             ]
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "closed",
@@ -671,27 +705,34 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.570535026999949,
-             41.815141143000062
+            -93.570535026999949,
+            41.815141143000062
           ],
           [
-             -93.571141838999949,
-             41.860579185000063
+            -93.571141838999949,
+            41.860579185000063
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour1",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["67890"],
-		  "next": ["67890-detour2","67890-detour3"]
+          "parents": [
+            "67890"
+          ],
+          "next": [
+            "67890-detour2",
+            "67890-detour3"
+          ]
         },
-        "road_names": ["F22"],
+        "road_names": [
+          "F22"
+        ],
         "direction": "westbound",
         "ending_cross_street": "US 69",
         "beginning_accuracy": "estimated",
@@ -710,28 +751,36 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.600376007999955,
-             41.791257966000046
+            -93.600376007999955,
+            41.791257966000046
           ],
           [
-             -93.572478358999945,
-             41.79135169500006
+            -93.572478358999945,
+            41.79135169500006
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["67890"],
-		  "first": ["67890-detour1"],
-		  "next": ["67890-detour3"]
+          "parents": [
+            "67890"
+          ],
+          "first": [
+            "67890-detour1"
+          ],
+          "next": [
+            "67890-detour3"
+          ]
         },
-        "road_names": ["US 69"],
+        "road_names": [
+          "US 69"
+        ],
         "direction": "northbound",
         "beginning_cross_street": "NE 126th Avenue",
         "ending_cross_street": "IA 210",
@@ -751,27 +800,33 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.600401730999977,
-             41.877744832000076
+            -93.600401730999977,
+            41.877744832000076
           ],
           [
-             -93.600373891999936,
-             41.791257820000055
+            -93.600373891999936,
+            41.791257820000055
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour3",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["6780"],
-		  "first": ["67890-detour1"]
+          "parents": [
+            "6780"
+          ],
+          "first": [
+            "67890-detour1"
+          ]
         },
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "eastbound",
         "beginning_cross_street": "US 69",
         "beginning_accuracy": "estimated",
@@ -790,23 +845,25 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.573353147999967,
-             41.877796484000044
+            -93.573353147999967,
+            41.877796484000044
           ],
           [
-             -93.60040158399994,
-             41.87774674700006
+            -93.60040158399994,
+            41.87774674700006
           ]
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day1",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -848,20 +905,22 @@
             -93.46077919006348,
             41.83445374967984
           ],
-		  [
+          [
             -93.51322174072264,
             41.83502130612205
           ]
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day2",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -910,13 +969,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day3",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -965,13 +1026,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day4",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -1020,13 +1083,15 @@
         ]
       }
     },
-	{
+    {
       "id": "PLK01012016-Day5",
       "type": "Feature",
       "properties": {
         "data_source_id": "3",
         "event_type": "work-zone",
-        "road_names": ["NE 150th Avenue"],
+        "road_names": [
+          "NE 150th Avenue"
+        ],
         "direction": "westbound",
         "beginning_cross_street": "NE 72nd Street",
         "ending_cross_street": "NE 56th Street",
@@ -1075,13 +1140,15 @@
         ]
       }
     },
-	{
+    {
       "id": "WZ389-NB",
       "type": "Feature",
       "properties": {
         "data_source_id": "4",
         "event_type": "work-zone",
-        "road_names": ["Beaver Avenue"],
+        "road_names": [
+          "Beaver Avenue"
+        ],
         "direction": "northbound",
         "beginning_cross_street": "Aurora Avenue",
         "ending_cross_street": "NW 46th Place",
@@ -1093,7 +1160,9 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "restrictions": ["local-access-only"],
+        "restrictions": [
+          "local-access-only"
+        ],
         "description": "Local Access Only with Basic Lane Information",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:03:01Z"
@@ -1112,13 +1181,15 @@
         ]
       }
     },
-	{
+    {
       "id": "WZ389-SB",
       "type": "Feature",
       "properties": {
         "data_source_id": "4",
         "event_type": "work-zone",
-        "road_names": ["Beaver Avenue"],
+        "road_names": [
+          "Beaver Avenue"
+        ],
         "direction": "southbound",
         "beginning_cross_street": "NW 46th Place",
         "ending_cross_street": "Aurora Avenue",
@@ -1130,7 +1201,9 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "restrictions": ["local-access-only"],
+        "restrictions": [
+          "local-access-only"
+        ],
         "description": "Local Access Only with Detailed Lane Information",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
@@ -1146,7 +1219,7 @@
               }
             ]
           },
-		  {
+          {
             "order": 2,
             "status": "open",
             "type": "bike-lane",

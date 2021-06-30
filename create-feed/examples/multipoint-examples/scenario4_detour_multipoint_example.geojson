@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -67,9 +67,15 @@
         "data_source_id": "2",
         "event_type": "work-zone",
         "relationship": {
-          "children": ["67890-detour1","67890-detour2","67890-detour3"]
+          "children": [
+            "67890-detour1",
+            "67890-detour2",
+            "67890-detour3"
+          ]
         },
-        "road_names": ["I-35"],
+        "road_names": [
+          "I-35"
+        ],
         "direction": "northbound",
         "beginning_milepost": 98.42,
         "ending_milepost": 101.50,
@@ -83,7 +89,9 @@
         "vehicle_impact": "some-lanes-closed",
         "workers_present": true,
         "reduced_speed_limit": 55,
-        "restrictions": ["reduced-width"],
+        "restrictions": [
+          "reduced-width"
+        ],
         "description": "Scenario 4 Work Zone with Detour",
         "creation_date": "2009-12-15T14:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
@@ -99,7 +107,7 @@
             "status": "open",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "open",
@@ -107,12 +115,12 @@
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
-				"restriction_value": 11,
-				"restriction_units": "feet"
+                "restriction_value": 11,
+                "restriction_units": "feet"
               }
             ]
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "closed",
@@ -129,27 +137,34 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.570535026999949,
-             41.815141143000062
+            -93.570535026999949,
+            41.815141143000062
           ],
           [
-             -93.571141838999949,
-             41.860579185000063
+            -93.571141838999949,
+            41.860579185000063
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour1",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["67890"],
-		  "next": ["67890-detour2","67890-detour3"]
+          "parents": [
+            "67890"
+          ],
+          "next": [
+            "67890-detour2",
+            "67890-detour3"
+          ]
         },
-        "road_names": ["F22"],
+        "road_names": [
+          "F22"
+        ],
         "direction": "westbound",
         "ending_cross_street": "US 69",
         "beginning_accuracy": "estimated",
@@ -168,28 +183,36 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.600376007999955,
-             41.791257966000046
+            -93.600376007999955,
+            41.791257966000046
           ],
           [
-             -93.572478358999945,
-             41.79135169500006
+            -93.572478358999945,
+            41.79135169500006
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["67890"],
-		  "first": ["67890-detour1"],
-		  "next": ["67890-detour3"]
+          "parents": [
+            "67890"
+          ],
+          "first": [
+            "67890-detour1"
+          ],
+          "next": [
+            "67890-detour3"
+          ]
         },
-        "road_names": ["US 69"],
+        "road_names": [
+          "US 69"
+        ],
         "direction": "northbound",
         "beginning_cross_street": "NE 126th Avenue",
         "ending_cross_street": "IA 210",
@@ -209,27 +232,33 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.600401730999977,
-             41.877744832000076
+            -93.600401730999977,
+            41.877744832000076
           ],
           [
-             -93.600373891999936,
-             41.791257820000055
+            -93.600373891999936,
+            41.791257820000055
           ]
         ]
       }
     },
-	{
+    {
       "id": "67890-detour3",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "detour",
         "relationship": {
-          "parents": ["6780"],
-		  "first": ["67890-detour1"]
+          "parents": [
+            "6780"
+          ],
+          "first": [
+            "67890-detour1"
+          ]
         },
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "eastbound",
         "beginning_cross_street": "US 69",
         "beginning_accuracy": "estimated",
@@ -248,12 +277,12 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.573353147999967,
-             41.877796484000044
+            -93.573353147999967,
+            41.877796484000044
           ],
           [
-             -93.60040158399994,
-             41.87774674700006
+            -93.60040158399994,
+            41.87774674700006
           ]
         ]
       }

@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -66,7 +66,10 @@
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-80", "I-35"],
+        "road_names": [
+          "I-80",
+          "I-35"
+        ],
         "direction": "westbound",
         "beginning_milepost": 133.967,
         "ending_milepost": 133.112,
@@ -96,19 +99,19 @@
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "shift-right",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "shift-right",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 2,
             "status": "shift-right",
@@ -125,12 +128,12 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.652714940999942,
-             41.650200836000067
+            -93.652714940999942,
+            41.650200836000067
           ],
           [
-             -93.683089,
-             41.651577294000049
+            -93.683089,
+            41.651577294000049
           ]
         ]
       }

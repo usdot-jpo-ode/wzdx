@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -66,7 +66,10 @@
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-80", "I-35"],
+        "road_names": [
+          "I-80",
+          "I-35"
+        ],
         "direction": "northbound",
         "beginning_milepost": 125.2,
         "ending_milepost": 126.3,
@@ -87,27 +90,29 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.776684050999961,
-             41.617961698000045
+            -93.776684050999961,
+            41.617961698000045
           ],
           [
-             -93.776688974999956,
-             41.622297226000057
+            -93.776688974999956,
+            41.622297226000057
           ]
         ]
       }
     },
-	{
+    {
       "id": "WDM-58493-NB",
       "type": "Feature",
       "properties": {
         "data_source_id": "1",
         "event_type": "work-zone",
-        "road_names": ["128th Street"],
+        "road_names": [
+          "128th Street"
+        ],
         "direction": "northbound",
         "beginning_cross_street": "US 6, Hickman Road",
         "ending_cross_street": "Douglas Ave",
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T06:00:00Z",
         "end_date": "2010-05-01T05:00:00Z",
@@ -119,7 +124,7 @@
         "creation_date": "2009-12-13T13:35:26Z",
         "update_date": "2009-12-31T15:11:16Z",
         "lanes": [
-		  {
+          {
             "order": 1,
             "lane_number": 1,
             "status": "open",
@@ -127,12 +132,12 @@
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
-				"restriction_value": 10,
-				"restriction_units": "feet"
+                "restriction_value": 10,
+                "restriction_units": "feet"
               }
             ]
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "closed",
@@ -144,31 +149,37 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.791522243999964,
-             41.614948252000033
+            -93.791522243999964,
+            41.614948252000033
           ],
           [
-             -93.79347973299997,
-             41.628577397000072
+            -93.79347973299997,
+            41.628577397000072
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-1",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-		"relationship": {
-		  "first": ["65773-1"],
-		  "next": ["65773-3"]
+        "relationship": {
+          "first": [
+            "65773-1"
+          ],
+          "next": [
+            "65773-3"
+          ]
         },
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 3.1,
         "ending_milepost": 2.9,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -188,37 +199,37 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "lane_number": 4,
             "status": "open",
             "type": "right-entrance-ramp"
           },
-		  {
+          {
             "order": 6,
             "status": "open",
             "type": "shoulder"
@@ -229,30 +240,34 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.720409507999989,
-             41.593422456000042
+            -93.720409507999989,
+            41.593422456000042
           ],
           [
-             -93.724769801999969,
-             41.593457451000063
+            -93.724769801999969,
+            41.593457451000063
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-		"relationship": {
-		  "first": ["65773-1"]
+        "relationship": {
+          "first": [
+            "65773-1"
+          ]
         },
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 2.9,
         "ending_milepost": 2.5,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -273,37 +288,37 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "lane_number": 4,
             "status": "open",
             "type": "right-exit-lane"
           },
-		  {
+          {
             "order": 6,
             "status": "open",
             "type": "shoulder"
@@ -314,27 +329,29 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.724769801999969,
-             41.593457451000063
+            -93.724769801999969,
+            41.593457451000063
           ],
           [
-             -93.730149926999957,
-             41.593410350000056
+            -93.730149926999957,
+            41.593410350000056
           ]
         ]
       }
     },
-	{
+    {
       "id": "65773-3",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["I-235"],
+        "road_names": [
+          "I-235"
+        ],
         "direction": "westbound",
         "beginning_milepost": 2.5,
         "ending_milepost": 2.0,
-		"beginning_accuracy": "estimated",
+        "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T14:00:00Z",
         "end_date": "2010-01-05T23:00:00Z",
@@ -355,31 +372,31 @@
             "is_architectural_change": true
           }
         ],
-		"lanes": [
-		  {
+        "lanes": [
+          {
             "order": 1,
             "status": "closed",
             "type": "shoulder"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 4,
             "lane_number": 3,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 5,
             "status": "open",
             "type": "shoulder"
@@ -390,12 +407,12 @@
         "type": "MultiPoint",
         "coordinates": [
           [
-             -93.730150629999969,
-             41.593410307000056
+            -93.730150629999969,
+            41.593410307000056
           ],
           [
-             -93.742189315999951,
-             41.592481500000076
+            -93.742189315999951,
+            41.592481500000076
           ]
         ]
       }

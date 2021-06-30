@@ -6,7 +6,7 @@
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
     "version": "3.1",
-	"license":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
         "data_source_id": "1",
@@ -44,7 +44,7 @@
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       },
-	  {
+      {
         "data_source_id": "4",
         "organization_name": "Test City 2",
         "contact_name": "Skip Jack Sourcefeed",
@@ -66,11 +66,13 @@
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "eastbound",
         "beginning_milepost": 22.1,
         "ending_milepost": 24.6,
-		"beginning_cross_street": "570th Avenue",
+        "beginning_cross_street": "570th Avenue",
         "ending_cross_street": "610th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
@@ -93,17 +95,17 @@
         "lanes": [
           {
             "order": 1,
-			"lane_number": 1,
+            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "status": "closed",
             "type": "shoulder"
@@ -136,17 +138,19 @@
         ]
       }
     },
-	{
+    {
       "id": "121388-2",
       "type": "Feature",
       "properties": {
         "data_source_id": "2",
         "event_type": "work-zone",
-        "road_names": ["IA 210"],
+        "road_names": [
+          "IA 210"
+        ],
         "direction": "westbound",
         "beginning_milepost": 22.1,
         "ending_milepost": 24.6,
-		"beginning_cross_street": "570th Avenue",
+        "beginning_cross_street": "570th Avenue",
         "ending_cross_street": "610th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
@@ -156,28 +160,30 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "restrictions": ["no-parking"],
+        "restrictions": [
+          "no-parking"
+        ],
         "description": "Scenario 3 with Shoulder Closure (opposite direction without shoulder closure)",
         "creation_date": "2010-01-01T09:30:26Z",
         "update_date": "2010-01-01T09:30:26Z",
         "lanes": [
           {
             "order": 1,
-			"lane_number": 1,
+            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
-		  {
+          {
             "order": 2,
             "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
-		  {
+          {
             "order": 3,
             "status": "open",
             "type": "shoulder",
-			"restrictions": [
+            "restrictions": [
               {
                 "restriction_type": "no-parking"
               }
