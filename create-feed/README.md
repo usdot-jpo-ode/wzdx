@@ -3,7 +3,7 @@ This directory contains information regarding creation of a WZDx feed, such as t
 
 ## Feed Format and File Type
 
-The WZDx v3.0 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
+The WZDx v3.1 data feed is formatted according to the [GeoJSON](https://geojson.org/) specification. GeoJSON is the file format of choice because:
 - It is a lightweight data exchange format.
 - It is easy for humans to read and write.
 - It is easy for machines to parse and generate.
@@ -77,6 +77,7 @@ The [schemas](/create-feed/schemas) directory includes a JSON Schema for the fol
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
+* [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
 
 
 
@@ -85,20 +86,20 @@ The following business rules help assure a standardized and interpretable use of
 
 1. Each direction of travel must be represented by a separate road event. For example, if there is a work zone on a roadway with two lanes, each in an opposite travel direction (↑↓), each direction must be a separate road event.
 2. Construction which requires alternating traffic flows within a lane must be represented with at least one road event in each direction. Similarly, roadways that during normal operation have an alternating flow of traffic direction based on time of day must be represented by at least one road event in each direction.
-3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are unavailable, the `MultiPoint` can be used.  
+3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are available, the `MultiPoint` can be used.  
 4. A cascading multi-lane closure should consider the speed of vehicles traveling through the work zone. If the distance between lane closures is short enough that time in a to-be-closed lane is not significant, which is common, the to-be-closed lane should be represented as closed to avoid traffic delays and potential crashes.
 5. A detour must be represented with a [RoadEvent](/spec-content/objects/RoadEvent.md) of type (i.e. with `event_type` of) `detour` and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have a `geometry` of `type` `LineString` to represent the full detour route. The detour road event should be connected to the work zone road event using the `relationship` property on the detour road event.
 6. If the `lanes` property on the [RoadEvent](/spec-content/objects/RoadEvent.md) object is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
 ## Data Validation
-### WZDx v2.0 and v3.0
-Use the corresponding JSON schema linked above to validate WZDx v2.0 and v3.0 feeds.
+### WZDx v2.0, v3.0, and v3.1
+Use the corresponding JSON schema linked above to validate WZDx v2.0, v3.0, and v3.1 feeds.
 
 ### WZDx v1.0
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team have developed a prototype data validation tool. This validation service that checks work zone activities against the WZDx v1.1 JSON schema specification is available [here](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
 
 ### Self-Validation Checklist
-For a list of steps to take to make sure your data feed is ready to publish, follow the [Self-Validation Checklist](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/create_feed_updates/documents/WZDx%20data%20feed%20self%20validation%20checklist.docx) 
+For a list of steps to take to make sure your data feed is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx)
 
 ## Collaborate via GitHub
 GitHub is an open-source repository hosting service that allows for the storage and collaboration of data projects with version control (tracks changes and allows you to revert to previous iterations). The GitHub workflow is comprised of following steps:
@@ -115,4 +116,4 @@ To start collaborating, [join GitHub](https://github.com/) by creating free [org
 ### How Do I Get Help?
 To interact directly with the DAVI Data Team and to get help implementing the spec for your data, post an **issue** under the **help wanted** label on the Work Zone GitHub site.
 
-![Posting An Issue](https://github.com/usdot-jpo-ode/jpo-wzdx/blob/master/images/issues.png)
+![Posting An Issue](/images/issues.png)
