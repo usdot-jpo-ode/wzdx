@@ -66,10 +66,15 @@ Scenario 4 ([Linestring](/create-feed/examples/linestring-example/scenario4_deto
 
 - Single work zone in one direction with a detour showing use of relationship and multiple road events composing the detour. (WZ - "id": "67890"; Detour - "id": "67890-detour1","67890-detour2","67890-detour3")
 
-### Scenario 5 - Work Zone with Bridge Work Overhead
+### Scenario 5 - Recurring Work Zone
 Scenario 5 ([Linestring](/create-feed/examples/linestring-example/scenario5_recurring_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario5_recurring_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) assuming that it is just a single lane closure but is recurring over multiple days.
 
-- Simple work zone but with a recurring component.  Four additional events were created with a pending status.  The active work zone event demonstrates value of verified location and time. ("id": "PLK01012016-Day1", "PLK01012016-Day2", "PLK01012016-Day3", "PLK01012016-Day4", "PLK01012016-Day5")
+- Simple work zone but with a recurring component.
+- Five road events: an `active` (day 1) event and four additional events for later dates with a pending status.
+- The `active` work zone event demonstrates value of verified location and time.
+- The `relationship` property is used to show all road events are related (they have the same parent of "PLK01012016").
+
+(Road event IDs: "PLK01012016-Day1", "PLK01012016-Day2", "PLK01012016-Day3", "PLK01012016-Day4", "PLK01012016-Day5")
 
 ### Local Access Only Example
 The local access only example ([Linestring](/create-feed/examples/linestring-example/local_access_only_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
