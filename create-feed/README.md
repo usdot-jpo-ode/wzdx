@@ -64,7 +64,7 @@ Scenario 3 ([Linestring](/create-feed/examples/linestring-example/scenario3_shou
 ### Scenario 4 - Road Closure with Detour on Arterial
 Scenario 4 ([Linestring](/create-feed/examples/linestring-example/scenario4_detour_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario4_detour_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which has an associated detour for a road closure.  The example is slightly modified for use on a multi-lane facility.
 
-- Single work zone with a detour showing use of relationship and multiple road events making up a detour. (WZ - "id": "67890"; Detour - "id": "67890-detour1","67890-detour2","67890-detour3")
+- Single work zone in one direction with a detour showing use of relationship and multiple road events composing the detour. (WZ - "id": "67890"; Detour - "id": "67890-detour1","67890-detour2","67890-detour3")
 
 ### Scenario 5 - Work Zone with Bridge Work Overhead
 Scenario 5 ([Linestring](/create-feed/examples/linestring-example/scenario5_recurring_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario5_recurring_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) assuming that it is just a single lane closure but is recurring over multiple days.
