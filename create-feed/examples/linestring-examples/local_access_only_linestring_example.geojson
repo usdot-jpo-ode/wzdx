@@ -47,7 +47,7 @@
         "restrictions": [
           "local-access-only"
         ],
-        "description": "Local Access Only with Basic Information",
+        "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:03:01Z"
       },
@@ -104,7 +104,7 @@
         "restrictions": [
           "local-access-only"
         ],
-        "description": "Local Access Only with Detailed Lane Information",
+        "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
         "lanes": [

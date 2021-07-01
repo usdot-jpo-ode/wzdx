@@ -40,7 +40,7 @@
          "id": "71234",
          "type": "Feature",
          "properties": {
-            "data_source_id": "2",
+            "data_source_id": "1",
             "event_type": "work-zone",
             "road_names": [
                "I-80, I-35"
@@ -57,7 +57,7 @@
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
             "reduced_speed_limit": 55,
-            "description": "Scenario 1 Work Zone with Basic Information",
+            "description": "Single direction work zone without lane-level information.",
             "creation_date": "2009-12-31T18:01:01Z",
             "update_date": "2009-12-31T18:01:01Z"
          },
@@ -111,7 +111,7 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "description": "Scenario 1 with Detailed Lane Information",
+            "description": "Single direction work zone with detailed lane-level information.",
             "creation_date": "2009-12-13T13:35:26Z",
             "update_date": "2009-12-31T15:11:16Z",
             "lanes": [
@@ -407,6 +407,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ],
@@ -431,7 +434,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 1",
+            "description": "Single-direction work zone represented by three sequential road events; first event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -502,6 +505,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ],
@@ -527,7 +533,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 2",
+            "description": "Single-direction work zone represented by three sequential road events; second event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -614,6 +620,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ]
@@ -636,7 +645,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 3",
+            "description": "Single-direction work zone represented by three sequential road events; third event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [

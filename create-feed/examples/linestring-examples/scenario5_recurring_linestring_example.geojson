@@ -49,7 +49,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5: work zone with recurring event; currently active work zone (day 1).",
+        "description": "Work zone with recurring event; currently active work zone (day 1).",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2010-01-01T08:32:01Z",
         "types_of_work": [
@@ -142,7 +142,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5: work zone with recurring event; pending (day 2) work zone.",
+        "description": "Work zone with recurring event; pending (day 2) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -227,7 +227,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5: work zone with recurring event; pending (day 3) work zone.",
+        "description": "Work zone with recurring event; pending (day 3) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -312,7 +312,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5: work zone with recurring event; pending (day 4) work zone.",
+        "description": "Work zone with recurring event; pending (day 4) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -397,7 +397,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5: work zone with recurring event; pending (day 5) work zone.",
+        "description": "Work zone with recurring event; pending (day 5) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [

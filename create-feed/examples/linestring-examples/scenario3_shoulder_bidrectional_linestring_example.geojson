@@ -25,11 +25,16 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "121388-1",
+      "id": "121388-EB",
       "type": "Feature",
       "properties": {
         "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "121388"
+          ]
+        },
         "road_names": [
           "IA 210"
         ],
@@ -101,11 +106,16 @@
       }
     },
     {
-      "id": "121388-2",
+      "id": "121388-WB",
       "type": "Feature",
       "properties": {
         "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "121388"
+          ]
+        },
         "road_names": [
           "IA 210"
         ],

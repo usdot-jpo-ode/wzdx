@@ -56,7 +56,7 @@
             "restrictions": [
                "reduced-width"
             ],
-            "description": "Scenario 4 Work Zone with Detour",
+            "description": "Simple, single direction work zone with detour.",
             "creation_date": "2009-12-15T14:01:01Z",
             "update_date": "2010-01-01T01:03:01Z",
             "types_of_work": [
@@ -295,7 +295,7 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "all-lanes-open",
-            "description": "Scenario 4 Work Zone with Detour",
+            "description": "Detour for road event 67890, first segment.",
             "creation_date": "2009-12-15T14:01:01Z",
             "update_date": "2010-01-01T01:03:01Z"
          },
@@ -380,7 +380,7 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "all-lanes-open",
-            "description": "Scenario 4 Work Zone with Detour",
+            "description": "Detour for road event 67890, second segment.",
             "creation_date": "2009-12-15T14:01:01Z",
             "update_date": "2010-01-01T01:03:01Z"
          },
@@ -757,7 +757,7 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "all-lanes-open",
-            "description": "Scenario 4 Work Zone with Detour",
+            "description": "Detour for road event 67890, third/final segment.",
             "creation_date": "2009-12-15T14:01:01Z",
             "update_date": "2010-01-01T01:03:01Z"
          },

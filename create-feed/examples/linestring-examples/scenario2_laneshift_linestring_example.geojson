@@ -48,7 +48,7 @@
         "workers_present": true,
         "reduced_speed_limit": 55,
         "restrictions": [],
-        "description": "Scenario 2 Work Zone with Lane Shift",
+        "description": "Single-direction work zone with lane shift",
         "creation_date": "2010-12-30T22:42:53Z",
         "update_date": "2010-01-01T05:57:36Z",
         "types_of_work": [
