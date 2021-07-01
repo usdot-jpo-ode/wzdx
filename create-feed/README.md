@@ -75,14 +75,12 @@ Scenario 4 ([Linestring](/create-feed/examples/linestring-example/scenario4_deto
 Scenario 5 ([Linestring](/create-feed/examples/linestring-example/scenario5_recurring_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/scenario5_recurring_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) assuming that it is just a single lane closure but is recurring over multiple days.
 
 - Simple work zone but with a recurring component.
-- Five road events: an `active` (day 1) event and four additional events for later dates with a pending status.
+- Five road events: an `active` (day 1, ID: `PLK01012016-Day1`) event and four additional events (IDs: `PLK01012016-Day2`, `PLK01012016-Day3`, `PLK01012016-Day4`, `PLK01012016-Day5`) for later dates with a pending status.
 - The `active` work zone event demonstrates value of verified location and time.
-- The `relationship` property is used to show all road events are related (they have the same parent of "PLK01012016").
-
-(Road event IDs: "PLK01012016-Day1", "PLK01012016-Day2", "PLK01012016-Day3", "PLK01012016-Day4", "PLK01012016-Day5")
+- The `relationship` property is used to show all road events are related (they have the same parent of `PLK01012016`).
 
 ### Local Access Only (bidirectional work zone)
-The local access only example ([Linestring](/create-feed/examples/linestring-example/local_access_only_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
+The local access only example ([Linestring](/create-feed/examples/linestring-example/local_access_only_bidirectional_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
 - Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `WZ389-NB`, `WZ389-SB`), one for each direction.
 - Uses `local-access-only` [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md).
