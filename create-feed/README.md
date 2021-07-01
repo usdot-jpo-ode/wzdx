@@ -71,8 +71,8 @@ Scenario 5 ([Linestring](/create-feed/examples/linestring-example/scenario5_recu
 
 - Simple work zone but with a recurring component.  Four additional events were created with a pending status.  The active work zone event demonstrates value of verified location and time. ("id": "PLK01012016-Day1", "PLK01012016-Day2", "PLK01012016-Day3", "PLK01012016-Day4", "PLK01012016-Day5")
 
-### Local Access Example
-The local access only example ([Linestring](/create-feed/examples/linestring-example/localaccess_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
+### Local Access Only Example
+The local access only example ([Linestring](/create-feed/examples/linestring-example/local_access_only_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-example/localaccess_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
 - Single work zone with local access using the `restrictions`.  One event shows basic level details that can be provided while the opposite direction road event shows detailed lane information.  The detailed lane information also includes a bike lane for reference. ("id": "WZ389-NB", "WZ389-SB"
 
