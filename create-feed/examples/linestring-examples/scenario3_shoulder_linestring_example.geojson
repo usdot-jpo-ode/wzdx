@@ -95,13 +95,11 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
           {
             "order": 2,
-            "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
@@ -169,13 +167,11 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
           {
             "order": 2,
-            "lane_number": 2,
             "status": "open",
             "type": "lane"
           },

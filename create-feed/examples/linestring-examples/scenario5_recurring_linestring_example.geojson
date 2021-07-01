@@ -92,7 +92,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -181,7 +180,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -262,7 +260,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -343,7 +340,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -424,7 +420,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },

@@ -111,7 +111,6 @@
           {
             "order": 1,
             "status": "open",
-            "lane_number": 1,
             "type": "lane",
             "restrictions": [
               {
