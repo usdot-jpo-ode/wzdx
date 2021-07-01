@@ -19,42 +19,6 @@
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "2",
-        "organization_name": "TestDOT",
-        "contact_name": "Samuel Sonny Sourcefeed",
-        "contact_email": "samuel.sourcefeed@testdot.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "3",
-        "organization_name": "Test County 1",
-        "contact_name": "Stu Spiel Sourcefeed",
-        "contact_email": "stu.sourcefeed@testcounty1.gov",
-        "update_frequency": 300,
-        "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "4",
-        "organization_name": "Test City 2",
-        "contact_name": "Skip Jack Sourcefeed",
-        "contact_email": "skip.sourcefeed@testcity2.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       }
     ]
   },
@@ -64,8 +28,13 @@
       "id": "PLK01012016-Day1",
       "type": "Feature",
       "properties": {
-        "data_source_id": "3",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "PLK01012016"
+          ]
+        },
         "road_names": [
           "NE 150th Avenue"
         ],
@@ -80,7 +49,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5 Work Zone with Recurring Event",
+        "description": "Work zone with recurring event; currently active work zone (day 1).",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2010-01-01T08:32:01Z",
         "types_of_work": [
@@ -92,7 +61,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -121,8 +89,13 @@
       "id": "PLK01012016-Day2",
       "type": "Feature",
       "properties": {
-        "data_source_id": "3",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "PLK01012016"
+          ]
+        },
         "road_names": [
           "NE 150th Avenue"
         ],
@@ -137,7 +110,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5 Work Zone with Recurring Event",
+        "description": "Work zone with recurring event; pending (day 2) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -149,7 +122,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -178,8 +150,13 @@
       "id": "PLK01012016-Day3",
       "type": "Feature",
       "properties": {
-        "data_source_id": "3",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "PLK01012016"
+          ]
+        },
         "road_names": [
           "NE 150th Avenue"
         ],
@@ -194,7 +171,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5 Work Zone with Recurring Event",
+        "description": "Work zone with recurring event; pending (day 3) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -206,7 +183,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -235,8 +211,13 @@
       "id": "PLK01012016-Day4",
       "type": "Feature",
       "properties": {
-        "data_source_id": "3",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "PLK01012016"
+          ]
+        },
         "road_names": [
           "NE 150th Avenue"
         ],
@@ -251,7 +232,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5 Work Zone with Recurring Event",
+        "description": "Work zone with recurring event; pending (day 4) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -263,7 +244,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },
@@ -292,8 +272,13 @@
       "id": "PLK01012016-Day5",
       "type": "Feature",
       "properties": {
-        "data_source_id": "3",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "PLK01012016"
+          ]
+        },
         "road_names": [
           "NE 150th Avenue"
         ],
@@ -308,7 +293,7 @@
         "end_date_accuracy": "estimated",
         "event_status": "pending",
         "vehicle_impact": "all-lanes-open",
-        "description": "Scenario 5 Work Zone with Recurring Event",
+        "description": "Work zone with recurring event; pending (day 5) work zone.",
         "creation_date": "2009-12-29T15:37:57Z",
         "update_date": "2009-12-29T15:37:57Z",
         "types_of_work": [
@@ -320,7 +305,6 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "open",
             "type": "lane"
           },

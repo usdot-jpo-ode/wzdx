@@ -19,53 +19,22 @@
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "2",
-        "organization_name": "TestDOT",
-        "contact_name": "Samuel Sonny Sourcefeed",
-        "contact_email": "samuel.sourcefeed@testdot.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "3",
-        "organization_name": "Test County 1",
-        "contact_name": "Stu Spiel Sourcefeed",
-        "contact_email": "stu.sourcefeed@testcounty1.gov",
-        "update_frequency": 300,
-        "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "4",
-        "organization_name": "Test City 2",
-        "contact_name": "Skip Jack Sourcefeed",
-        "contact_email": "skip.sourcefeed@testcity2.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       }
     ]
   },
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "121388-1",
+      "id": "121388-EB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "2",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "121388"
+          ]
+        },
         "road_names": [
           "IA 210"
         ],
@@ -83,7 +52,7 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [],
-        "description": "Scenario 3 with Shoulder Closure (direction with shoulder closure)",
+        "description": "Bidirectional work zone with shoulder closure; eastbound direction with shoulder closure.",
         "creation_date": "2010-01-01T09:30:26Z",
         "update_date": "2010-01-01T09:30:26Z",
         "types_of_work": [
@@ -95,13 +64,11 @@
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
           {
             "order": 2,
-            "lane_number": 2,
             "status": "open",
             "type": "lane"
           },
@@ -127,19 +94,24 @@
       }
     },
     {
-      "id": "121388-2",
+      "id": "121388-WB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "2",
+        "data_source_id": "1",
         "event_type": "work-zone",
+        "relationship": {
+          "parents": [
+            "121388"
+          ]
+        },
         "road_names": [
           "IA 210"
         ],
         "direction": "westbound",
-        "beginning_milepost": 22.1,
-        "ending_milepost": 24.6,
-        "beginning_cross_street": "570th Avenue",
-        "ending_cross_street": "610th Avenue",
+        "beginning_milepost": 24.6,
+        "ending_milepost": 22.1,
+        "beginning_cross_street": "610th Avenue",
+        "ending_cross_street": "570th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T10:00:00Z",
@@ -151,19 +123,17 @@
         "restrictions": [
           "no-parking"
         ],
-        "description": "Scenario 3 with Shoulder Closure (opposite direction without shoulder closure)",
+        "description": "Bidirectional work zone with shoulder closure; westbound direction without shoulder closure.",
         "creation_date": "2010-01-01T09:30:26Z",
         "update_date": "2010-01-01T09:30:26Z",
         "lanes": [
           {
             "order": 1,
-            "lane_number": 1,
             "status": "closed",
             "type": "lane"
           },
           {
             "order": 2,
-            "lane_number": 2,
             "status": "open",
             "type": "lane"
           },

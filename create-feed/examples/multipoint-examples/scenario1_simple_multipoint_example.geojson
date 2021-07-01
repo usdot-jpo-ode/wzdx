@@ -40,7 +40,7 @@
          "id": "71234",
          "type": "Feature",
          "properties": {
-            "data_source_id": "2",
+            "data_source_id": "1",
             "event_type": "work-zone",
             "road_names": [
                "I-80, I-35"
@@ -57,7 +57,7 @@
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
             "reduced_speed_limit": 55,
-            "description": "Scenario 1 Work Zone with Basic Information",
+            "description": "Single direction work zone without lane-level information.",
             "creation_date": "2009-12-31T18:01:01Z",
             "update_date": "2009-12-31T18:01:01Z"
          },
@@ -95,13 +95,12 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "description": "Scenario 1 with Detailed Lane Information",
+            "description": "Single direction work zone with detailed lane-level information.",
             "creation_date": "2009-12-13T13:35:26Z",
             "update_date": "2009-12-31T15:11:16Z",
             "lanes": [
                {
                   "order": 1,
-                  "lane_number": 1,
                   "status": "open",
                   "type": "lane",
                   "restrictions": [
@@ -114,7 +113,6 @@
                },
                {
                   "order": 2,
-                  "lane_number": 2,
                   "status": "closed",
                   "type": "lane"
                }
@@ -141,6 +139,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ],
@@ -165,7 +166,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 1",
+            "description": "Single-direction work zone represented by three sequential road events; first event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -182,25 +183,21 @@
                },
                {
                   "order": 2,
-                  "lane_number": 1,
                   "status": "closed",
                   "type": "lane"
                },
                {
                   "order": 3,
-                  "lane_number": 2,
                   "status": "open",
                   "type": "lane"
                },
                {
                   "order": 4,
-                  "lane_number": 3,
                   "status": "open",
                   "type": "lane"
                },
                {
                   "order": 5,
-                  "lane_number": 4,
                   "status": "open",
                   "type": "right-entrance-ramp"
                },
@@ -232,6 +229,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ],
@@ -257,7 +257,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 2",
+            "description": "Single-direction work zone represented by three sequential road events; second event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -274,25 +274,21 @@
                },
                {
                   "order": 2,
-                  "lane_number": 1,
                   "status": "closed",
                   "type": "lane"
                },
                {
                   "order": 3,
-                  "lane_number": 2,
                   "status": "open",
                   "type": "lane"
                },
                {
                   "order": 4,
-                  "lane_number": 3,
                   "status": "open",
                   "type": "lane"
                },
                {
                   "order": 5,
-                  "lane_number": 4,
                   "status": "open",
                   "type": "right-exit-lane"
                },
@@ -324,6 +320,9 @@
             "data_source_id": "2",
             "event_type": "work-zone",
             "relationship": {
+               "parents": [
+                  "65773"
+               ],
                "first": [
                   "65773-1"
                ]
@@ -346,7 +345,7 @@
             "workers_present": true,
             "reduced_speed_limit": 55,
             "restrictions": [],
-            "description": "Scenario 1 with Detailed Lane Information - Multiple Events, Event 3",
+            "description": "Single-direction work zone represented by three sequential road events; third event.",
             "creation_date": "2009-12-31T11:56:26Z",
             "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
@@ -363,19 +362,16 @@
                },
                {
                   "order": 2,
-                  "lane_number": 1,
                   "status": "closed",
                   "type": "lane"
                },
                {
                   "order": 3,
-                  "lane_number": 2,
                   "status": "open",
                   "type": "lane"
                },
                {
                   "order": 4,
-                  "lane_number": 3,
                   "status": "open",
                   "type": "lane"
                },
