@@ -39,8 +39,8 @@ The figure below models the tables and their relationships.
 ## Feed Examples
 The following WZDx feed examples represent a variety of scenarios common when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. A comprehensive example contains all of the scenarios in a single file. All example scenarios are provided for both the `LineString` and `MultiPoint` geometry types.
 
-* [All MultiPoint GeoJSON Example](/create-feed/examples/multipoint-example)
-* [All LineString GeoJSON Example](/create-feed/examples/linestring-example)
+* [All LineString GeoJSON Examples](/create-feed/examples/linestring-examples)
+* [All MultiPoint GeoJSON Examples](/create-feed/examples/multipoint-examples)
 
 Below is a summary of each of the example WZDx feeds and detailed differences for each of the road events:
 
