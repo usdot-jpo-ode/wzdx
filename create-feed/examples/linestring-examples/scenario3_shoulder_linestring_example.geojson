@@ -19,42 +19,6 @@
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "2",
-        "organization_name": "TestDOT",
-        "contact_name": "Samuel Sonny Sourcefeed",
-        "contact_email": "samuel.sourcefeed@testdot.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "3",
-        "organization_name": "Test County 1",
-        "contact_name": "Stu Spiel Sourcefeed",
-        "contact_email": "stu.sourcefeed@testcounty1.gov",
-        "update_frequency": 300,
-        "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
-      },
-      {
-        "data_source_id": "4",
-        "organization_name": "Test City 2",
-        "contact_name": "Skip Jack Sourcefeed",
-        "contact_email": "skip.sourcefeed@testcity2.gov",
-        "update_frequency": 60,
-        "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       }
     ]
   },
@@ -64,7 +28,7 @@
       "id": "121388-1",
       "type": "Feature",
       "properties": {
-        "data_source_id": "2",
+        "data_source_id": "1",
         "event_type": "work-zone",
         "road_names": [
           "IA 210"
@@ -140,16 +104,16 @@
       "id": "121388-2",
       "type": "Feature",
       "properties": {
-        "data_source_id": "2",
+        "data_source_id": "1",
         "event_type": "work-zone",
         "road_names": [
           "IA 210"
         ],
         "direction": "westbound",
-        "beginning_milepost": 22.1,
-        "ending_milepost": 24.6,
-        "beginning_cross_street": "570th Avenue",
-        "ending_cross_street": "610th Avenue",
+        "beginning_milepost": 24.6,
+        "ending_milepost": 22.1,
+        "beginning_cross_street": "610th Avenue",
+        "ending_cross_street": "570th Avenue",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T10:00:00Z",
