@@ -1119,12 +1119,12 @@
         "lanes": [
           {
             "order": 1,
-            "status": "closed",
+            "status": "open",
             "type": "lane"
           },
           {
             "order": 2,
-            "status": "open",
+            "status": "closed",
             "type": "lane"
           },
           {
