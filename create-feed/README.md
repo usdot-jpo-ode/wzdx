@@ -45,7 +45,7 @@ The following WZDx feed examples represent a variety of scenarios common when cr
 Below is a summary of each of the example WZDx feeds and detailed differences for each of the road events:
 
 ### Scenario 1  - Simple Work Zone
-Scenario 1 ([Linestring](/create-feed/examples/linestring-examples/scenario1_simple_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/scenario1_simple_multipoint_example.geojson))is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) with a single lane closed on a multi-lane facility.
+Scenario 1 ([Linestring](/create-feed/examples/linestring-examples/scenario1_simple_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/scenario1_simple_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) with a single lane closed on a multi-lane facility.
 
 - First work zone is single direction, single event, with no lane-level information (ID: `71234`).
 - Second work zone is single direction, single event, with detailed lane information (ID: `WDM-58493-NB`).
