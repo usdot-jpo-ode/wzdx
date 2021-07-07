@@ -37,7 +37,7 @@ The figure below models the tables and their relationships.
 ![WZDx Object Diagram](/images/wzdx_object_diagram.jpg)
 
 ## Feed Examples
-The following WZDx feed examples represent a variety of scenarios common when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. A comprehensive example contains all of the scenarios in a single file. All example scenarios are provided for both the `LineString` and `MultiPoint` geometry types.
+The following WZDx feed examples represent a variety of scenarios common when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. A comprehensive example contains all of the scenarios in a single file. All example scenarios are provided for both the `LineString` and `MultiPoint` geometry types.
 
 * [All LineString GeoJSON Examples](/create-feed/examples/linestring-examples)
 * [All MultiPoint GeoJSON Examples](/create-feed/examples/multipoint-examples)
@@ -54,7 +54,7 @@ Scenario 1 ([Linestring](/create-feed/examples/linestring-examples/scenario1_sim
 ### Scenario 2 - Lane Shift (simple scenario)
 Scenario 2 ([Linestring](/create-feed/examples/linestring-examples/scenario2_laneshift_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/scenario2_laneshift_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.
 
-- Single work zone with lane shift in the detailed lane information showing us of verified location and start time. ("id": "7733").
+- Single work zone with lane shift in the detailed lane information showing us of verified location and start time. ("id": `7733`).
 
 ### Scenario 3 - Shoulder Closure (bidirectional work zone)
 Scenario 3 ([Linestring](/create-feed/examples/linestring-examples/scenario3_shoulder_bidirectional_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/scenario3_shoulder_bidrectional_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which closes the shoulder in a single direction on an undivided roadway.
