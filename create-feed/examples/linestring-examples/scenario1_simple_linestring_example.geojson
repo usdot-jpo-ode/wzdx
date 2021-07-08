@@ -1,0 +1,784 @@
+{
+   "road_event_feed_info": {
+      "update_date": "2020-06-18T15:00:00Z",
+      "publisher": "TestDOT",
+      "contact_name": "Frederick Francis Feedmanager",
+      "contact_email": "fred.feedmanager@testdot.gov",
+      "update_frequency": 60,
+      "version": "3.1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "data_sources": [
+         {
+            "data_source_id": "1",
+            "organization_name": "Test City 1",
+            "contact_name": "Solomn Soliel Sourcefeed",
+            "contact_email": "solomon.sourcefeed@testcity1.gov",
+            "update_frequency": 300,
+            "update_date": "2020-06-18T14:37:31Z",
+            "location_verify_method": "GPS",
+            "location_method": "channel-device-method",
+            "lrs_type": "milemarkers",
+            "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+         },
+         {
+            "data_source_id": "2",
+            "organization_name": "TestDOT",
+            "contact_name": "Samuel Sonny Sourcefeed",
+            "contact_email": "samuel.sourcefeed@testdot.gov",
+            "update_frequency": 60,
+            "update_date": "2020-06-18T14:39:01Z",
+            "location_verify_method": "GPS",
+            "location_method": "channel-device-method",
+            "lrs_type": "milemarkers",
+            "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+         }
+      ]
+   },
+   "type": "FeatureCollection",
+   "features": [
+      {
+         "id": "71234",
+         "type": "Feature",
+         "properties": {
+            "data_source_id": "1",
+            "event_type": "work-zone",
+            "road_names": [
+               "I-80, I-35"
+            ],
+            "direction": "northbound",
+            "beginning_milepost": 125.2,
+            "ending_milepost": 126.3,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T01:00:00Z",
+            "end_date": "2010-01-02T01:00:00Z",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "reduced_speed_limit": 55,
+            "description": "Single direction work zone without lane-level information.",
+            "creation_date": "2009-12-31T18:01:01Z",
+            "update_date": "2009-12-31T18:01:01Z"
+         },
+         "geometry": {
+            "type": "LineString",
+            "coordinates": [
+               [
+                  -93.776684050999961,
+                  41.617961698000045
+               ],
+               [
+                  -93.776682957,
+                  41.618244962000063
+               ],
+               [
+                  -93.776677372999984,
+                  41.619603362000078
+               ],
+               [
+                  -93.776674365999952,
+                  41.620322783000063
+               ],
+               [
+                  -93.776671741999962,
+                  41.620950321000066
+               ],
+               [
+                  -93.776688974999956,
+                  41.622297226000057
+               ]
+            ]
+         }
+      },
+      {
+         "id": "WDM-58493-NB",
+         "type": "Feature",
+         "properties": {
+            "data_source_id": "1",
+            "event_type": "work-zone",
+            "road_names": [
+               "128th Street"
+            ],
+            "direction": "northbound",
+            "beginning_cross_street": "US 6, Hickman Road",
+            "ending_cross_street": "Douglas Ave",
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T06:00:00Z",
+            "end_date": "2010-05-01T05:00:00Z",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "description": "Single direction work zone with detailed lane-level information.",
+            "creation_date": "2009-12-13T13:35:26Z",
+            "update_date": "2009-12-31T15:11:16Z",
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "open",
+                  "type": "lane",
+                  "restrictions": [
+                     {
+                        "restriction_type": "reduced-width",
+                        "restriction_value": 10,
+                        "restriction_units": "feet"
+                     }
+                  ]
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "lane"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "LineString",
+            "coordinates": [
+               [
+                  -93.791522243999964,
+                  41.614948252000033
+               ],
+               [
+                  -93.791505319999942,
+                  41.61501428300005
+               ],
+               [
+                  -93.791405791999978,
+                  41.615577076000079
+               ],
+               [
+                  -93.791345430999968,
+                  41.615782444000047
+               ],
+               [
+                  -93.791280304999987,
+                  41.615977213000065
+               ],
+               [
+                  -93.791200891999949,
+                  41.616140173000076
+               ],
+               [
+                  -93.791079009999976,
+                  41.616296165000051
+               ],
+               [
+                  -93.790558010999973,
+                  41.61681760700003
+               ],
+               [
+                  -93.790135601999964,
+                  41.617246805000036
+               ],
+               [
+                  -93.789830552999945,
+                  41.617562480000061
+               ],
+               [
+                  -93.789680613999963,
+                  41.617771613000059
+               ],
+               [
+                  -93.789596382999946,
+                  41.617913356000031
+               ],
+               [
+                  -93.789502863999985,
+                  41.618086964000042
+               ],
+               [
+                  -93.78945179699997,
+                  41.618264005000071
+               ],
+               [
+                  -93.789424159999953,
+                  41.61840914000004
+               ],
+               [
+                  -93.789414473999955,
+                  41.618523310000057
+               ],
+               [
+                  -93.789406687999985,
+                  41.618788623000057
+               ],
+               [
+                  -93.789440425999942,
+                  41.620294861000048
+               ],
+               [
+                  -93.789441241999953,
+                  41.620405535000032
+               ],
+               [
+                  -93.789449826999942,
+                  41.620516022000061
+               ],
+               [
+                  -93.789466157999982,
+                  41.620626017000063
+               ],
+               [
+                  -93.78949019099997,
+                  41.620735214000035
+               ],
+               [
+                  -93.789521855999965,
+                  41.62084330700003
+               ],
+               [
+                  -93.78956107,
+                  41.62095
+               ],
+               [
+                  -93.789607718999946,
+                  41.621054995000065
+               ],
+               [
+                  -93.789661678999948,
+                  41.621157998000058
+               ],
+               [
+                  -93.789725124999961,
+                  41.621262305000073
+               ],
+               [
+                  -93.789796062999983,
+                  41.621363857000063
+               ],
+               [
+                  -93.789874285999986,
+                  41.621462354000073
+               ],
+               [
+                  -93.789959554999939,
+                  41.621557500000051
+               ],
+               [
+                  -93.790051618999939,
+                  41.621649010000056
+               ],
+               [
+                  -93.790150204999975,
+                  41.621736613000053
+               ],
+               [
+                  -93.790255013999968,
+                  41.621820048000075
+               ],
+               [
+                  -93.790365738,
+                  41.621899067000072
+               ],
+               [
+                  -93.790482044999976,
+                  41.621973433000051
+               ],
+               [
+                  -93.790603584999985,
+                  41.622042923000038
+               ],
+               [
+                  -93.790730001999975,
+                  41.622107331000052
+               ],
+               [
+                  -93.790860916999975,
+                  41.622166468000046
+               ],
+               [
+                  -93.791037923999966,
+                  41.622265540000058
+               ],
+               [
+                  -93.791219643999966,
+                  41.622359685000049
+               ],
+               [
+                  -93.791405833999988,
+                  41.622448775000066
+               ],
+               [
+                  -93.791596247999962,
+                  41.62253269200005
+               ],
+               [
+                  -93.791974661999973,
+                  41.622789772000033
+               ],
+               [
+                  -93.792348386999947,
+                  41.623050684000077
+               ],
+               [
+                  -93.79264079099994,
+                  41.62326022700006
+               ],
+               [
+                  -93.793051083999956,
+                  41.623588822000045
+               ],
+               [
+                  -93.793245118999948,
+                  41.623807143000079
+               ],
+               [
+                  -93.793416509999986,
+                  41.62403972900006
+               ],
+               [
+                  -93.793538291999937,
+                  41.62424188500006
+               ],
+               [
+                  -93.793626206999988,
+                  41.624429215000077
+               ],
+               [
+                  -93.793710504999979,
+                  41.624653499000033
+               ],
+               [
+                  -93.793764538999937,
+                  41.624880703000031
+               ],
+               [
+                  -93.793784475999985,
+                  41.62510231300007
+               ],
+               [
+                  -93.793785748999937,
+                  41.625380807000056
+               ],
+               [
+                  -93.793738188999953,
+                  41.625670969000055
+               ],
+               [
+                  -93.793679893999979,
+                  41.625937897000028
+               ],
+               [
+                  -93.793612129999985,
+                  41.626248174000068
+               ],
+               [
+                  -93.793525080999984,
+                  41.626631768000038
+               ],
+               [
+                  -93.793438316999982,
+                  41.626965183000038
+               ],
+               [
+                  -93.793363929999941,
+                  41.627301995000039
+               ],
+               [
+                  -93.793344298999955,
+                  41.627537681000035
+               ],
+               [
+                  -93.793345492999947,
+                  41.627799206000077
+               ],
+               [
+                  -93.793356849999952,
+                  41.628019275000042
+               ],
+               [
+                  -93.793396009,
+                  41.62828070300003
+               ],
+               [
+                  -93.79347973299997,
+                  41.628577397000072
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-1",
+         "type": "Feature",
+         "properties": {
+            "data_source_id": "2",
+            "event_type": "work-zone",
+            "relationship": {
+               "parents": [
+                  "65773"
+               ],
+               "first": [
+                  "65773-1"
+               ],
+               "next": [
+                  "65773-2"
+               ]
+            },
+            "road_names": [
+               "I-235"
+            ],
+            "direction": "westbound",
+            "beginning_milepost": 3.1,
+            "ending_milepost": 2.9,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "workers_present": true,
+            "reduced_speed_limit": 55,
+            "restrictions": [],
+            "description": "Single-direction work zone represented by three sequential road events; first event.",
+            "creation_date": "2009-12-31T11:56:26Z",
+            "update_date": "2009-12-31T11:56:26Z",
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "lane"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "right-entrance-ramp"
+               },
+               {
+                  "order": 6,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "LineString",
+            "coordinates": [
+               [
+                  -93.720409507999989,
+                  41.593422456000042
+               ],
+               [
+                  -93.721987662999936,
+                  41.593428462000077
+               ],
+               [
+                  -93.724060080999948,
+                  41.593444666000039
+               ],
+               [
+                  -93.724769801999969,
+                  41.593457451000063
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-2",
+         "type": "Feature",
+         "properties": {
+            "data_source_id": "2",
+            "event_type": "work-zone",
+            "relationship": {
+               "parents": [
+                  "65773"
+               ],
+               "first": [
+                  "65773-1"
+               ],
+               "next": [
+                  "65773-3"
+               ]
+            },
+            "road_names": [
+               "I-235"
+            ],
+            "direction": "westbound",
+            "beginning_milepost": 2.9,
+            "ending_milepost": 2.5,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "total_num_lanes": 4,
+            "vehicle_impact": "some-lanes-closed",
+            "workers_present": true,
+            "reduced_speed_limit": 55,
+            "restrictions": [],
+            "description": "Single-direction work zone represented by three sequential road events; second event.",
+            "creation_date": "2009-12-31T11:56:26Z",
+            "update_date": "2009-12-31T11:56:26Z",
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "lane"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "right-exit-lane"
+               },
+               {
+                  "order": 6,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "LineString",
+            "coordinates": [
+               [
+                  -93.724769801999969,
+                  41.593457451000063
+               ],
+               [
+                  -93.725783878999948,
+                  41.593459089000078
+               ],
+               [
+                  -93.72589773499999,
+                  41.593459271000029
+               ],
+               [
+                  -93.727600448999965,
+                  41.593468041000051
+               ],
+               [
+                  -93.728253463999977,
+                  41.593468762000043
+               ],
+               [
+                  -93.72899278899996,
+                  41.593459177000057
+               ],
+               [
+                  -93.729737457999988,
+                  41.593435398000054
+               ],
+               [
+                  -93.730149926999957,
+                  41.593410350000056
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-3",
+         "type": "Feature",
+         "properties": {
+            "data_source_id": "2",
+            "event_type": "work-zone",
+            "relationship": {
+               "parents": [
+                  "65773"
+               ],
+               "first": [
+                  "65773-1"
+               ]
+            },
+            "road_names": [
+               "I-235"
+            ],
+            "direction": "westbound",
+            "beginning_milepost": 2.5,
+            "ending_milepost": 2.0,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "total_num_lanes": 3,
+            "vehicle_impact": "some-lanes-closed",
+            "workers_present": true,
+            "reduced_speed_limit": 55,
+            "restrictions": [],
+            "description": "Single-direction work zone represented by three sequential road events; third event.",
+            "creation_date": "2009-12-31T11:56:26Z",
+            "update_date": "2009-12-31T11:56:26Z",
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "lane"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "lane"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "LineString",
+            "coordinates": [
+               [
+                  -93.730150629999969,
+                  41.593410307000056
+               ],
+               [
+                  -93.730393025999945,
+                  41.593395588000078
+               ],
+               [
+                  -93.731358798999963,
+                  41.593326786000034
+               ],
+               [
+                  -93.731760730999952,
+                  41.59329153300007
+               ],
+               [
+                  -93.732583278999982,
+                  41.59323325400004
+               ],
+               [
+                  -93.732583278999982,
+                  41.59323325400004
+               ],
+               [
+                  -93.732761573999937,
+                  41.593220621000057
+               ],
+               [
+                  -93.733481823999966,
+                  41.593160405000049
+               ],
+               [
+                  -93.734099563999962,
+                  41.59310849700006
+               ],
+               [
+                  -93.735278425999979,
+                  41.59301896900007
+               ],
+               [
+                  -93.735701953999978,
+                  41.592987710000045
+               ],
+               [
+                  -93.736446499999943,
+                  41.592931475000057
+               ],
+               [
+                  -93.737679269999944,
+                  41.592827630000045
+               ],
+               [
+                  -93.738580275999936,
+                  41.592760926000039
+               ],
+               [
+                  -93.739154871999972,
+                  41.592719210000041
+               ],
+               [
+                  -93.739613443999986,
+                  41.592679760000067
+               ],
+               [
+                  -93.739774495999939,
+                  41.592668639000067
+               ],
+               [
+                  -93.739774495999939,
+                  41.592668639000067
+               ],
+               [
+                  -93.740036978999967,
+                  41.592650510000055
+               ],
+               [
+                  -93.740347204999978,
+                  41.592627574000062
+               ],
+               [
+                  -93.74078960199995,
+                  41.592592205000074
+               ],
+               [
+                  -93.741952240999979,
+                  41.592498589000058
+               ],
+               [
+                  -93.742189315999951,
+                  41.592481500000076
+               ]
+            ]
+         }
+      }
+   ]
+}
