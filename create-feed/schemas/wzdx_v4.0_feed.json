@@ -305,29 +305,8 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
-        },
-        "road_event_id": {
-          "description": "***DEPRECATED*** A unique identifier issued by the data feed provider to identify the work zone project or activity",
-          "type": "string"
-        },
-        "road_number": {
-          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
-        },
-        "road_name": {
-          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
-          "type": "string"
-        },
-        "total_num_lanes": {
-          "description": "***DEPRECATED*** The total number of lanes associated with the road event",
-          "type": "integer",
-          "exclusiveMinimum": 0
         }
       },
-      "anyOf": [
-        { "required": ["road_name"] },
-        { "required": ["road_names"] }
-      ],
       "required": [
         "data_source_id",
         "direction",
@@ -337,7 +316,8 @@
         "end_date",
         "start_date_accuracy",
         "end_date_accuracy",
-        "vehicle_impact"
+        "vehicle_impact",
+        "road_names"
       ]
     },
     "Relationship": {
