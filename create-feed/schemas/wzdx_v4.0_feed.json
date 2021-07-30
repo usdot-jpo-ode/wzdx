@@ -521,8 +521,6 @@
       "description": "An indication of the type of lane or shoulder",
       "enum": [
         "general",
-        "right-turning-lane",
-        "left-turning-lane",
         "right-exit-lane",
         "left-exit-lane",
         "right-entrance-lane",
