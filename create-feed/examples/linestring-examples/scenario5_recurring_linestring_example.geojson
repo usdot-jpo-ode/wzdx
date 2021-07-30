@@ -62,7 +62,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -155,7 +155,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -240,7 +240,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -325,7 +325,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -410,7 +410,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,

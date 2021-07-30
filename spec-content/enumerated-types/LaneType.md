@@ -4,7 +4,7 @@ A description of the type of a lane on the roadway.
 ## Values
 Value | Description
 --- | ---
-`lane` | Generic lane type, intended to be used for normal, driveable lanes
+`general` | The most generic lane type, intended to be used for general purpose travel lanes.
 `right-turning-lane` | A lane where right turns are permissible
 `left-turning-lane`| A lane where left turns are permissible
 `right-exit-lane` | A lane with an egress on the right

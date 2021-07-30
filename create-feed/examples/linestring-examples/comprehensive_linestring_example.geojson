@@ -147,7 +147,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "local-access-only"
@@ -286,7 +286,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
@@ -298,7 +298,7 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           }
         ]
       },
@@ -620,17 +620,17 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -719,17 +719,17 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -831,17 +831,17 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -990,17 +990,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -1120,12 +1120,12 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -1197,12 +1197,12 @@
           {
             "order": 1,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -1300,7 +1300,7 @@
           {
             "order": 2,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
@@ -1312,7 +1312,7 @@
           {
             "order": 3,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
@@ -2083,7 +2083,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2176,7 +2176,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2261,7 +2261,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2346,7 +2346,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2431,7 +2431,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
