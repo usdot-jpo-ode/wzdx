@@ -121,6 +121,15 @@
         "location_verify_method": {
           "description": "The method used to verify the accuracy of the location information",
           "type": "string"
+        },
+        "lrs_type": {
+          "description": "**DEPRECATED** Describes the type of linear referencing system used for the milepost measurements",
+          "type": "string"
+        },
+        "lrs_url": {
+          "description": "**DEPRECATED** A URL where additional information on the LRS information and transformation information is stored",
+          "type": "string",
+          "format": "uri"
         }
       },
       "required": ["data_source_id", "organization_name", "location_method"]
