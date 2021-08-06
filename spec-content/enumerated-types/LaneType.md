@@ -4,18 +4,16 @@ A description of the type of a lane on the roadway.
 ## Values
 Value | Description
 --- | ---
-`general` | The most generic lane type, intended to be used for general purpose travel lanes.
-`right-exit-lane` | A lane with an egress on the right
-`left-exit-lane` | A lane with an egress on the left
-`left-exit-ramp`| An exit ramp with an egress on the left in the direction of flow at an interchange
-`right-exit-ramp` | An exit ramp with an egress on the right in the direction of flow at an interchange
-`right-entrance-ramp` | A lane or ramp with an ingress on the right
-`left-entrance-ramp` | A lane or ramp with an ingress on the left
-`sidewalk` | A sidewalk or pedestrian way
-`bike-lane` | A lane on the roadway for cyclists only
-`shoulder` | A generic shoulder
-`parking` | A lane used for parking, not allowed for travel
-`center-left-turn-lane` | A lane in the center of a bidirectional roadway in which traffic from both directions uses to make a left turn
+`general` | A generic lane type, intended to be used for general purpose travel lanes.
+`exit-lane` | A lane leading towards an egress from the current roadway. An `exit-lane` usually becomes an `exit-ramp` after a gore point.
+`exit-ramp`| A lane at an interchange leading away from the mainline to another roadway.
+`entrance-lane` | A lane leading towards an ingress to another roadway. An `entrance-lane` usually becomes an `entrance-ramp` after a gore point.
+`entrance-ramp` | A lane at an interchange leading away from the current roadway to another roadway.
+`sidewalk` | A path for pedestrians, usually on the side of the roadway.
+`bike-lane` | A lane on the roadway for use by cyclists only.
+`shoulder` | A portion of the roadway that is outside (either right or left) of the main travel lanes on the roadway. A shoulder can have many uses but is not intended for general traffic.
+`parking` | A lane used for parking, not allowed for travel.
+`center-left-turn-lane` | A lane in the center of a bidirectional roadway that traffic from both directions uses to make a left turn.
 
 ## Used By
 Property | Object
