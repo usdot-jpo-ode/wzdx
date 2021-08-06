@@ -530,6 +530,7 @@
         "sidewalk",
         "bike-lane",
         "shoulder",
+        "parking",
         "center-left-turn-lane"
       ]
     },

@@ -14,6 +14,7 @@ Value | Description
 `sidewalk` | A sidewalk or pedestrian way
 `bike-lane` | A lane on the roadway for cyclists only
 `shoulder` | A generic shoulder
+`parking` | A lane used for parking, not allowed for travel
 `center-left-turn-lane` | A lane in the center of a bidirectional roadway in which traffic from both directions uses to make a left turn
 
 ## Used By
