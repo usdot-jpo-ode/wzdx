@@ -635,7 +635,7 @@
           {
             "order": 5,
             "status": "open",
-            "type": "right-entrance-ramp"
+            "type": "entrance-lane"
           },
           {
             "order": 6,
@@ -734,7 +734,7 @@
           {
             "order": 5,
             "status": "open",
-            "type": "right-exit-lane"
+            "type": "exit-lane"
           },
           {
             "order": 6,
