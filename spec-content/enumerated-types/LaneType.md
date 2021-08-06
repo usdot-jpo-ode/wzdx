@@ -13,6 +13,7 @@ Value | Description
 `bike-lane` | A lane on the roadway for use by cyclists only.
 `shoulder` | A portion of the roadway that is outside (either right or left) of the main travel lanes on the roadway. A shoulder can have many uses but is not intended for general traffic.
 `parking` | A lane used for parking, not allowed for travel.
+`median` | An often unpaved, non-drivable area that separates sections of the roadway. In most cases a median should only be described if it separates lanes in a single direction of travel, as per [business rule #1](/create-feed/README.md) each direction of travel must be represented a separate road event.
 `center-left-turn-lane` | A lane in the center of a bidirectional roadway that traffic from both directions uses to make a left turn.
 
 ## Used By
