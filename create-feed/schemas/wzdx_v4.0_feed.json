@@ -473,7 +473,7 @@
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
-      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "unknown"]
+      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
     },
     "RoadRestriction": {
       "title": "Road Restriction Enumerated Type",
