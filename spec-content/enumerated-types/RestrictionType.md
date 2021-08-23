@@ -1,4 +1,4 @@
-# Restriction
+# Restriction Type
 The type of vehicle restriction on a roadway.
 
 ## Values
