@@ -1,5 +1,5 @@
-# Lane Restriction Unit
-Units of measure used for a lane restriction value.
+# Restriction Unit
+Units of measure used for a restriction value.
 
 ## Values
 Value | Description
@@ -14,4 +14,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`restriction_units` | [LaneRestriction](/spec-content/objects/LaneRestriction.md)
+`restriction_units` | [Restriction](/spec-content/objects/Restriction.md)
