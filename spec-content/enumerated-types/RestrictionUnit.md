@@ -1,4 +1,4 @@
-# Restriction Unit
+# UnitType
 Units of measure used for a restriction value.
 
 ## Values
