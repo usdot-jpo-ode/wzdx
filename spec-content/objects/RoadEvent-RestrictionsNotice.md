@@ -1,4 +1,4 @@
-# RestrictionEvent Object
+# RestrictionEvent - Restrictions Notice Object
 The `RoadEvent` object contains information that describes where, when, and what activity is taking place along a road segment. This specification currently accommodates `work-zone`, `restrictions-notice`, and `detour` type road events, specified by the road event's `event_type` property (see [EventType](/spec-content/enumerated-types/EventType.md])).
 
 ## Properties
