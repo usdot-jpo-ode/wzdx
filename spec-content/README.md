@@ -27,7 +27,6 @@ Object | Description
 [Restriction](/spec-content/objects/Restriction.md) | Restriction along a road event, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [RoadEvent](/spec-content/objects/RoadEvent.md) | Information that describes where, when, and what activity is taking place along a road segment.
-[RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md) | Information that describes permanent or persistant restrictions along a linear road event.
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
 [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
