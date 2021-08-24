@@ -74,9 +74,9 @@ Property | Object | Enumerated Type | Notes
 `event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
 `event_status` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | Enumeration created in WZDx v1.0
 `location_method` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
-`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Enumeration created in WZDx v1.0
-`restriction_type` | [Restriction](/spec-content/objects/Restriction.md) | [Restriction](/spec-content/enumerated-types/Restriction.md) | Road and lane restrictions | Enumeration created in WZDx v1.0
-`restriction_units` | [RestrictionUnit](/spec-content/objects/Restriction.md) | [RestrictionUnit](/spec-content/enumerated-types/RestrictionUnit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
+`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) <br /> [RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md) <br /> [Lane](/spec-content/objects/Lane.md) | [Restriction](/spec-content/enumerated-types/Restriction.md) | Enumeration created in WZDx v1.0
+`restriction_type` | [Restriction](/spec-content/objects/Restriction.md) | [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | Road and lane restrictions | Enumeration created in WZDx v1.0
+`restriction_units` | [Restriction](/spec-content/objects/Restriction.md) | [UnitType](/spec-content/enumerated-types/UnitType.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
 `start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `status` | [Lane](/spec-content/objects/Lane.md) | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Enumeration created in WZDx v2.0
 `type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0
