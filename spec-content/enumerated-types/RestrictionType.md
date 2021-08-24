@@ -23,5 +23,4 @@ Value | Description
 Property | Object
 --- | ---
 `restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md)
-`restrictions` | [RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md)
 `restrictions` | [Lane](/spec-content/objects/Lane.md)
