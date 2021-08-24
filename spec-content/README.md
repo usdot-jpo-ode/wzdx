@@ -24,9 +24,10 @@ This section provides a tabular list of all objects used in the WZDx specificati
 Object | Description
 --- | ---
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
-[LaneRestriction](/spec-content/objects/LaneRestriction.md) | A lane-level restriction, including type and value.
+[Restriction](/spec-content/objects/Restriction.md) | Restriction along a road event, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [RoadEvent](/spec-content/objects/RoadEvent.md) | Information that describes where, when, and what activity is taking place along a road segment.
+[RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md) | Information that describes permanent or persistant restrictions along a linear road event.
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
 [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
@@ -52,13 +53,13 @@ Enumerated Type | Description
 [Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
-[LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure used for a lane restriction value.
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
 [LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
-[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | The type of vehicle restriction on a roadway.
+[RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
+[UnitType](/spec-content/enumerated-types/UnitType.md) | Units of measure used for restriction value.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 ### Object Properties using Enumerated Types
