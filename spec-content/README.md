@@ -61,6 +61,7 @@ Enumerated Type | Description
 [UnitType](/spec-content/enumerated-types/UnitType.md) | Units of measure used for restriction value.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
+
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
@@ -73,7 +74,6 @@ Property | Object | Enumerated Type | Notes
 `event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
 `event_status` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | Enumeration created in WZDx v1.0
 `location_method` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
-`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) <br /> [RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md) <br /> [Lane](/spec-content/objects/Lane.md) | [Restriction](/spec-content/enumerated-types/Restriction.md) | Enumeration created in WZDx v1.0
 `restriction_type` | [Restriction](/spec-content/objects/Restriction.md) | [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | Road and lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [Restriction](/spec-content/objects/Restriction.md) | [UnitType](/spec-content/enumerated-types/UnitType.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
 `start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
