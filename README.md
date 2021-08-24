@@ -38,6 +38,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
         - [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
+        - [WZDx v4.0 Feed](/create-feed/schemas/wzdx_v4.0_feed.json)
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDXFeed](/spec-content/objects/WZDxFeed.md)
@@ -74,7 +75,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-      - [Release v3.1 (Apr 2021)]
+    - [Release v3.1 (Apr 2021)]
 - [Getting Started](#getting-started)
 - [Contributions](#contributions)
 - [Versioning](#versioning)
@@ -142,7 +143,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
-5. Validate your feed output using the [WZDx v3.1 Feed JSON Schema](/create-feed/schemas/wzdx_v3.1_feed.json)
+5. Validate your feed output using the [WZDx v4.0 Feed JSON Schema](/create-feed/schemas/wzdx_v4.0_feed.json)
 6. Publish your feed and tell us about it via avdx@dot.gov.
 
 ## Contributions
