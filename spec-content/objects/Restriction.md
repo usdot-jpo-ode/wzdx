@@ -1,16 +1,15 @@
 # Restriction Object
-The `Restriction` object describes a restriction on a road event.
+The Restriction object describes a restriction on a roadway. This object is used by both the [RoadEvent](/spec-content/objectsRoadEvent.md) and [Lane](/spec-content/objects/Lane.md) objects.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`restriction_type` | [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of restriction being enforced. | Required |
-`restriction_value` | Number | The measure of the restriction type. | Optional |
-`restriction_units` | [UnitType](/spec-content/enumerated-types/RestrictionUnit.md) | Units of measure for the restriction value. | Conditional: required if `restriction_value` is not null |
-
+`type` | [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of restriction being enforced. | Required |
+`value` | Number | A value associated with the restriction, if applicable. | Optional | For example, if `type` is `reduced-height`, `value` and `unit` together would allow indicating what value the height was reduced to.
+`unit` | [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Unit of measurement for the restriction `value`, if applicable. | Conditional: required if `value` is not null |
+ 
 ## Used By
 Property | Object
 --- | ---
 `restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md)
-`restrictions` | [RoadEvent-RestrictionNotice](/spec-content/objects/RoadEvent-RestrictionNotice.md)
 `restrictions` | [Lane](/spec-content/objects/Lane.md)

@@ -14,4 +14,3 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | ---
 `lanes` | [RoadEvent](/spec-content/objects/RoadEvent.md)
-`lanes` | [RoadEvent-RestrictionsNotice](/spec-content/objects/RoadEvent-RestrictionsNotice.md)

@@ -1,5 +1,5 @@
-# UnitType
-Units of measure used for a restriction value.
+# Unit of Measurement
+Unit of measurement. This enumerated type is intended for use across the specification and more values can be added in the future if needed.
 
 ## Values
 Value | Description
@@ -14,4 +14,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`restriction_units` | [Restriction](/spec-content/objects/Restriction.md)
+`unit` | [Restriction](/spec-content/objects/Restriction.md)
