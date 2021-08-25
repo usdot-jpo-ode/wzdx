@@ -24,7 +24,7 @@ This section provides a tabular list of all objects used in the WZDx specificati
 Object | Description
 --- | ---
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
-[Restriction](/spec-content/objects/Restriction.md) | Restriction along a road event, including type and value.
+[Restriction](/spec-content/objects/Restriction.md) | A restriction on a road event or lane, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [RoadEvent](/spec-content/objects/RoadEvent.md) | Information that describes where, when, and what activity is taking place along a road segment.
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
@@ -55,10 +55,10 @@ Enumerated Type | Description
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
 [LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
-[RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway.
+[RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway or lane.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
-[UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Units of measurement (e.g. "pounds", "centimeters").
+[UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Unit of measurement (e.g. "pounds", "centimeters").
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 
