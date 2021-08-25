@@ -16,6 +16,7 @@ Value | Description
 `flagging` | A flagging operation is in effect
 `temporary-traffic-signal` | A temporary traffic signal is in operation
 `unknown` | The vehicle impact is unknown
+
 ## Used By
 Property | Object
 --- | ---
