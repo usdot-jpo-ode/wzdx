@@ -552,8 +552,8 @@
       ]
     },
     "UnitOfMeasurement": {
-      "title": "Unit Of Measurement Enumerated Type",
-      "description": "Units of measurement",
+      "title": "Unit of Measurement Enumerated Type",
+      "description": "Unit of measurement, used when providing a unit to accompany a value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
     }
   }
