@@ -105,9 +105,9 @@
                   "type": "lane",
                   "restrictions": [
                      {
-                        "restriction_type": "reduced-width",
-                        "restriction_value": 10,
-                        "restriction_units": "feet"
+                        "type": "reduced-width",
+                        "value": 10,
+                        "unit": "feet"
                      }
                   ]
                },

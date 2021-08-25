@@ -81,7 +81,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -122,7 +124,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -134,7 +138,7 @@
             "type": "lane",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           },
@@ -144,7 +148,7 @@
             "type": "bike-lane",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           }
@@ -233,9 +237,9 @@
             "type": "lane",
             "restrictions": [
               {
-                "restriction_type": "reduced-width",
-                "restriction_value": 10,
-                "restriction_units": "feet"
+                "type": "reduced-width",
+                "value": 10,
+                "unit": "feet"
               }
             ]
           },
@@ -696,7 +700,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "no-parking"
+          {
+            "type": "no-parking"
+          }
         ],
         "description": "Bidirectional work zone with shoulder closure; westbound direction without shoulder closure.",
         "creation_date": "2010-01-01T09:30:26Z",
@@ -718,7 +724,7 @@
             "type": "shoulder",
             "restrictions": [
               {
-                "restriction_type": "no-parking"
+                "type": "no-parking"
               }
             ]
           }
@@ -767,9 +773,6 @@
         "vehicle_impact": "some-lanes-closed",
         "workers_present": true,
         "reduced_speed_limit": 55,
-        "restrictions": [
-          "reduced-width"
-        ],
         "description": "Simple, single direction work zone with detour.",
         "creation_date": "2009-12-15T14:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
@@ -791,9 +794,9 @@
             "type": "lane",
             "restrictions": [
               {
-                "restriction_type": "reduced-width",
-                "restriction_value": 11,
-                "restriction_units": "feet"
+                "type": "reduced-width",
+                "value": 11,
+                "unit": "feet"
               }
             ]
           },
