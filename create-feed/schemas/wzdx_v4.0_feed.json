@@ -426,7 +426,7 @@
     },
     "Restriction": {
       "title": "Restriction",
-      "description": "A restriction on a roadway, including type and value",
+      "description": "A restriction on a roadway or lane, including type and value",
       "type": "object",
       "properties": {
         "type": {
