@@ -13,7 +13,7 @@ Name | Type | Description | Conformance | Notes
 `contact_email` | String; [email](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.2) | The email address of the individual or group responsible for the data source. | Optional |
 `lrs_type` | String | Describes the type of linear referencing system (LRS) used for the milepost measurements. | Optional | Example: `Use of milemarkers posted by the roadways. These are registered to a dynamic segmentation of statewide LRS basemap.`
 `lrs_url` | String; [uri](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.5) | A URL where additional information on the LRS information and transformation information is stored. | Optional | Example `https://aaa.bbb.com/lrs`
-`location_verify_method` (DEPRECATED) | String | *This property is deprecated and will be removed in a future version; verified locations must use GPS devices as defined in the `Spatial Verification` enumerations* — The method used to verify the accuracy of the location information. | Optional | Example: `Survey accurate GPS equipment accurate to 0.1 cm`
+`location_verify_method` (DEPRECATED) | String | *This property is deprecated and will be removed in a future version; verified locations must use GPS devices as defined in the [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) enumerated type* — The method used to verify the accuracy of the location information. | Optional | Example: `Survey accurate GPS equipment accurate to 0.1 cm`
 
 ## Used By
 Property | Object
