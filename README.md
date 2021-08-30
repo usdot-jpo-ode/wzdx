@@ -150,7 +150,7 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 **How do I contribute to the WZDx Specification?**
 
 - Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/wzdx/issues).
-- Ask the WZDx community for input on a question or propose an idea you have via [GithHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
+- Ask the WZDx community for input on a question or propose an idea you have via [GitHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
 - Create a [GitHub pull request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
 - Review and provide feedback on update issues/discussions/pull requests created by other users.
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
