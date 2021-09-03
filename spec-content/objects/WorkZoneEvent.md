@@ -1,5 +1,5 @@
 # WorkZoneEvent Object
-The `WorkZoneEvent` object contains information that describes where, when, and what activities are taking in a work-zone along a road segment. 
+The `WorkZoneEvent` object contains information that describes where, when, and what activities are taking place in a work-zone, along a road segment. 
 
 ## Properties
 Name | Type | Description | Conformance | Notes
