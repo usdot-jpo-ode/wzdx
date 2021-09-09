@@ -14,6 +14,7 @@ Name | Type | Description | Conformance | Notes
 `location_verify_method` | String | The method used to verify the accuracy of the location information. | Optional | Example: `Survey accurate GPS equipment accurate to 0.1 cm`
 `lrs_type` | String | Describes the type of linear referencing system (LRS) used for the milepost measurements. | Optional | Example: `Use of milemarkers posted by the roadways. These are registered to a dynamic segmentation of statewide LRS basemap.`
 `lrs_url` | String; [uri](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.5) | A URL where additional information on the LRS information and transformation information is stored. | Optional | Example `https://aaa.bbb.com/lrs`
+`worker_presence_definition` | Array; \[[WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)\] | A list of situations in which workers are considered to be present in the jurisdiction of the data provider. | Optional
 
 ## Used By
 Property | Object
