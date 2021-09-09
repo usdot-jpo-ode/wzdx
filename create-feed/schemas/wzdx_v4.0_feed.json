@@ -131,6 +131,14 @@
           "type": "string",
           "format": "uri"
         }
+        "worker_presence_definition": {
+          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider."
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WorkerPresenceDefinition"
+          },
+          "uniqueItems": true
+        }
       },
       "required": ["data_source_id", "organization_name", "location_method"]
     },
@@ -261,9 +269,9 @@
         "vehicle_impact": {
           "$ref": "#/definitions/VehicleImpact"
         },
-        "workers_present": {
-          "description": "A flag indicating that there are workers present in the road event",
-          "type": "boolean"
+        "worker_presence": {
+          "description": "Information about whether workers are present in the event space.",
+          "type": "#/definitions/WorkerPresence"
         },
         "reduced_speed_limit": {
           "description": "The reduced speed limit posted within the road event",
@@ -445,6 +453,36 @@
         "restriction_value": ["restriction_units"]
       }
     },
+    "WorkerPresence": {
+      "title": "Worker Presence",
+      "description": "Information about the presence of workers in the work zone event area",
+      "type": "object",
+      "properties": {
+        "are_workers_present": {
+          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object."
+          "type": "boolean"
+        },
+        "source": {
+          "description": "Data source providing information on whether workers are present in the work zone event area."
+          "type": "#/definitions/WorkerPresenceSource"
+        },
+        "last_confirmed_date": {
+          "description": "Datetime at which the presence of workers was last confirmed using the ‘source’."
+          "type": "string"
+          "format": "date-time"
+        },
+        "reliability_score": {
+          "description": " Numerical score representing the data producer’s understanding of the likelihood of workers being present in the work zone event area, with 10 indicating absolute certainty and 0 indicating."
+          "type": "integer"
+          "minimum": 0
+          "maximum": 10
+        },
+      },
+      "required": ["are_workers_present"],
+      "dependencies": {
+        "restriction_value": ["restriction_units"]
+      }
+    },
     "EventType": {
       "title": "Road Event Type Enumerated Type",
       "description": "The type of WZDx road event",
@@ -556,6 +594,34 @@
       "title": "Lane Restriction Unit Enumerated Type",
       "description": "Units of measure used for the lane restriction value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
+    }
+    "WorkerPresenceSource": {
+      "title": "Worker Presence Source Enumerated Type",
+      "description": "Data source providing information on whether workers are present in the work zone event area.",
+      "enum": [
+        "camera-monitoring", 
+        "arrow-board-present", 
+        "cones-present", 
+        "maintenance-vehicle-present", 
+        "wearables-present", 
+        "mobile-device-present", 
+        "check-in-app", 
+        "check-in-verbal",
+        "scheduled"
+      ]
+    }
+    "WorkerPresenceDefinition": {
+      "title": "Worker Presence Definition Enumerated Type",
+      "description": "Situations in which workers may be considered present in a work zone.",
+      "enum": [
+        "workers-in-work-zone-working",
+        "workers-in-work-zone-not-working", 
+        "mobile-equipment-in-work-zone-moving", 
+        "mobile-equipment-in-work-zone-not-working", 
+        "fixed-equipment-in-work-zone", 
+        "humans-behind-barrier", 
+        "humans-in-right-of-way"
+      ]
     }
   }
 }
