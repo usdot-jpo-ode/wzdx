@@ -1,4 +1,6 @@
-# Worker Presence Source Status
+# Worker Presence Definition
+
+Situations in which workers may be considered present in a work zone.
 
 ## Values
 Value | Description
