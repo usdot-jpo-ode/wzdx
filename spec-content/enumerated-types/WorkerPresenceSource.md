@@ -1,5 +1,7 @@
 # Worker Presence Source
 
+Data source providing information on whether workers are present in the work zone event area.
+
 ## Values
 Value | Description
 --- | ---
