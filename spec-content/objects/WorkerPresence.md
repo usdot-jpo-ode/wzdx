@@ -1,5 +1,5 @@
 # Worker Presence Object
-The `WorkerPresence` object presents information on the presence of workers in the `RoadEvent`'s area.
+The `WorkerPresence` object containss information on the presence of workers in the `RoadEvent`'s area.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
