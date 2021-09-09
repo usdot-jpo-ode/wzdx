@@ -31,6 +31,7 @@ Object | Description
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
 [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
+[WorkerPresence](/spec-content/objects/WorkerPresence.md) | Information about the present of workers in the road event area.
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
 ### Object Diagram
@@ -60,7 +61,10 @@ Enumerated Type | Description
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
+[WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Method of knowing the presence of workers in the road event area.
+[WorkerPresenceSource](/spec-content/enumerated-types/WorkerPresenceSource.md) | Situations in which workers may be considered present by a jurisdiction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
+
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
@@ -76,8 +80,11 @@ Property | Object | Enumerated Type | Notes
 `restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Enumeration created in WZDx v1.0
 `restriction_type` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
+`source` | [WorkerPresence](/spec-content/objects/WorkerPresence.md) | [WorkerPresenceSource](/spec-content/enumerated-types/WorkerPresenceSource.md) | Enumerated created in WZDx v4.0
 `start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `status` | [Lane](/spec-content/objects/Lane.md) | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Enumeration created in WZDx v2.0
 `type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0
 `type_name` | [TypeOfWork](/spec-content/objects/TypeOfWork.md) | [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | Enumeration created in WZDx v2.0
 `vehicle_impact` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | Enumeration created in WZDx v2.0
+`worker_presence_definition` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Enumeration created in WZDx v4.0
+
