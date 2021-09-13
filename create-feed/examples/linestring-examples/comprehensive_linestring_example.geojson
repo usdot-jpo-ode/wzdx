@@ -18,7 +18,12 @@
         "location_verify_method": "GPS",
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs",
+        "worker_presence_definition": [
+           "workers-in-work-zone-working",
+           "workers-in-work-zone-not-working",
+           "mobile-equipment-in-work-zone-moving"
+        ]
       },
       {
         "data_source_id": "2",
@@ -30,7 +35,10 @@
         "location_verify_method": "GPS",
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs",
+        "worker_presence_definition": [
+           "humans-in-right-of-way"
+        ]
       },
       {
         "data_source_id": "3",
@@ -599,7 +607,9 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": { 
+      	    "are_workers_present": false
+	      },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; first event.",
@@ -698,7 +708,12 @@
         "event_status": "active",
         "total_num_lanes": 4,
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "source": "check-in-app",
+          "last_confirmed_date": "2010-01-04T15:00:00Z",
+          "reliability": 8
+      	},
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; second event.",
@@ -810,7 +825,12 @@
         "event_status": "active",
         "total_num_lanes": 3,
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+	        "are_workers_present": true,
+	        "source": "check-in-app",
+	        "last_confirmed_date": "2010-01-04T15:00:00Z",
+	        "reliability": 8
+	      },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; third event.",
@@ -969,7 +989,10 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "workers_present": true,
+        "worker_presence": {
+	        "are_workers_present": true,
+	        "source": "wearables-present"
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone with lane shift",
@@ -1277,7 +1300,11 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+	        "are_workers_present": true,
+	        "source": "scheduled",
+	        "reliability": 5
+        },
         "reduced_speed_limit": 55,
         "restrictions": [
           "reduced-width"
