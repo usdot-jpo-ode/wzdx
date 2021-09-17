@@ -4,6 +4,7 @@ The FieldDeviceType enumerated type enumerates all types of field devices descri
 ## Values
 Value | Description
 --- | ---
+`arrow-board` | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
 
 ## Used By
 Property | Object

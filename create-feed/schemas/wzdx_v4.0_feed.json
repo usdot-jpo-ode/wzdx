@@ -17,7 +17,14 @@
       "description": "An array of GeoJSON Feature objects which represent WZDx road events",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/RoadEventFeature"
+        "oneOf": [
+          {
+            "$ref": "#/definitions/RoadEventFeature"
+          },
+          {
+            "$ref": "#/definitions/FieldDeviceFeature"
+          }
+        ]
       }
     },
     "bbox": {
@@ -188,6 +195,139 @@
         }
       ],
       "required": ["type","properties","geometry"]
+    },
+    "FieldDeviceFeature": {
+      "title": "Field Device Feature (GeoJSON Feature)",
+      "description": "The container object for a specific field device; an instance of a GeoJSON Feature",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "A unique identifier issued by the data feed provider to identify the field device described by the feature",
+          "type": "string"
+        },
+        "type": {
+          "description": "The GeoJSON object type; must be 'Feature'",
+          "enum": ["Feature"]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ArrowBoard"
+            }
+          ]
+        },
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "bbox": {
+          "$ref": "#/definitions/BoundingBox"
+        }
+      },
+      "required": ["id", "type", "properties", "geometry"]
+    },
+    "FieldDeviceCoreDetails": {
+      "title": "Field Device Core Details",
+      "description": "the core details—both configuration and current state—of a field device that are shared by all types of field devices",
+      "type": "object",
+      "properties": {
+        "device_type": {
+          "type": "string",
+          "description": "The type of field device"
+        },
+        "road_names": {
+          "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "device_status": {
+          "$ref": "#/definitions/FieldDeviceStatus"
+        },
+        "update_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the field device data was last updated (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "has_gps_location": {
+          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is from an onboard GPS (true) or manually set (false).",
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string",
+          "description": "A human-readable name for the field device"
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the field device."
+        },
+        "status_messages": {
+          "type": "array",
+          "description": "A list of messages associated with the device's status, if applicable. Used to provide additional information about the status such as specific warning or error message.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "road_event_ids": {
+          "type": "array",
+          "description": "A list of one or more IDs of a RoadEventFeatures that the device is associated with",
+          "items": {
+            "type": "string"
+          }
+        },
+        "milepost": {
+          "type": "number",
+          "description": "The linear distance measured against a milepost marker along a roadway where the device is located"
+        },
+        "make": {
+          "type": "string",
+          "description": "The make or manufacturer of the device"
+        },
+        "model": {
+          "type": "string",
+          "description": "The model of the device"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "The serial number of the device"
+        },
+        "firmware_version": {
+          "type": "string",
+          "description": "The version of firmware the device is using to operate"
+        }
+      },
+      "required": [
+        "device_types",
+        "road_names",
+        "device_status",
+        "update_date",
+        "has_gps_location"
+      ]
+    },
+    "ArrowBoard": {
+      "title": "Arrow Board Field Device",
+      "description": "An electronic, connected arrow board which can display an arrow pattern to direct traffic",
+      "type": "object",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "pattern": {
+          "$ref": "#/definitions/ArrowBoardPattern"
+        },
+        "is_moving": {
+          "type": "boolean",
+          "description": "A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
+        },
+        "is_deployed": {
+          "type": "boolean",
+          "description": "A yes/no value indicating if the arrow board is in the deployed position (true) or stowed/transport position (false)"
+        }
+      },
+      "required": [
+        "core_details"
+      ]
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -444,6 +584,40 @@
       "dependencies": {
         "restriction_value": ["restriction_units"]
       }
+    },
+    "ArrowBoardPattern": {
+      "title": "Arrow Board Pattern Enumerated Type",
+      "description": "a list of options for the posted pattern on an ArrowBoard",
+      "enum": [
+        "bidirectional-arrow-flashing",
+        "bidirectional-arrow-static",
+        "blank",
+        "diamonds-alternating",
+        "four-corners-flashing",
+        "left-arrow-flashing",
+        "left-arrow-sequential",
+        "left-arrow-static",
+        "left-chevron-flashing",
+        "left-chevron-sequential",
+        "left-chevron-static",
+        "line-flashing",
+        "right-arrow-flashing",
+        "right-arrow-sequential",
+        "right-arrow-static",
+        "right-chevrons-flashing",
+        "right-chevrons-sequential",
+        "right-chevrons-static"
+      ]
+    },
+    "FieldDeviceType": {
+      "title": "Field Device Type Enumerated Type",
+      "description": "The type of field device",
+      "enum": ["arrow-board"]
+    },
+    "FieldDeviceStatus": {
+      "title": "Field Device Status Enumerated Type",
+      "description": "The operational status of a field device",
+      "enum": ["ok", "warning", "error", "unknown"]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",

@@ -41,6 +41,7 @@ Object | Description
 #### Field Device Features
 Object | Description
 --- | ---
+[ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
 [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices. 
 
@@ -57,6 +58,7 @@ Many object properties are restricted to a finite set of values, defined by an e
 
 ### List of Enumerated Types
 This section provides a tabular list of all enumerated types used in the WZDx specification, sectioned by whether they apply to road event features or field device features.
+
 #### Road Event Features
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
@@ -72,6 +74,7 @@ This section provides a tabular list of all enumerated types used in the WZDx sp
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 
 #### Field Devices
+[ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md) | A list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
 [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of a field device.
 [FieldDeviceType](/spec-content/enumerated-types/EventStatus.md) | The type of a field device.
 
