@@ -19,19 +19,30 @@ Each object is described by a table of properties, which are each defined by the
 - **Notes** - Additional comments, guidance, notes for future consideration, or examples.
 
 ### List of Objects
-This section provides a tabular list of all objects used in the WZDx specification.
+This section provides a tabular list of all objects used in the WZDx specification, sectioned by whether the object applies to the feed-level, road event features, or field devices features.
 
+#### Feed-Level
+Object | Description
+--- | ---
+[RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
+[RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
+[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
+
+#### Road Event Features
 Object | Description
 --- | ---
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [LaneRestriction](/spec-content/objects/LaneRestriction.md) | A lane-level restriction, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [RoadEvent](/spec-content/objects/RoadEvent.md) | Information that describes where, when, and what activity is taking place along a road segment.
-[RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
-[RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
+
+#### Field Device Features
+Object | Description
+--- | ---
+[FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
+[FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices. 
 
 ### Object Diagram
 The object diagram below indicates the relationship between the data objects.
@@ -45,13 +56,11 @@ When making changes to the specification, the object diagram needs to be updated
 Many object properties are restricted to a finite set of values, defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
 
 ### List of Enumerated Types
-This section provides a tabular list of all enumerated types used in the WZDx specification.
-
-Enumerated Type | Description
---- | ---
-[Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
+This section provides a tabular list of all enumerated types used in the WZDx specification, sectioned by whether they apply to road event features or field device features.
+#### Road Event Features
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
+[Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
 [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure used for a lane restriction value.
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
 [LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
@@ -61,6 +70,11 @@ Enumerated Type | Description
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
+
+#### Field Devices
+[FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of a field device.
+[FieldDeviceType](/spec-content/enumerated-types/EventStatus.md) | The type of a field device.
+
 ### Object Properties using Enumerated Types
 For ease of reference, the table below describes all properties in the WZDx specification whose value is restricted by an enumerated type, as well as the object that contains that property.
 
