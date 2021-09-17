@@ -213,6 +213,9 @@
           "oneOf": [
             {
               "$ref": "#/definitions/ArrowBoard"
+            },
+            {
+              "$ref": "#/definitions/Camera"
             }
           ]
         },
@@ -328,6 +331,33 @@
       "required": [
         "core_details"
       ]
+    },
+    "Camera": {
+      "title": "Camera Field Device",
+      "description": "A camera device deployed in the field, capable of capturing still images",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "image_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "A URL pointing to an image file for the camera image still"
+        },
+        "image_timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The UTC date and time when the image was captured"
+        }
+      },
+      "required": [
+        "core_details"
+      ],
+      "dependencies": {
+        "image_url": [
+          "image_timestamp"
+        ]
+      }
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -612,7 +642,10 @@
     "FieldDeviceType": {
       "title": "Field Device Type Enumerated Type",
       "description": "The type of field device",
-      "enum": ["arrow-board"]
+      "enum": [
+        "arrow-board",
+        "camera"
+      ]
     },
     "FieldDeviceStatus": {
       "title": "Field Device Status Enumerated Type",

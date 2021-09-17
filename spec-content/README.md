@@ -42,6 +42,7 @@ Object | Description
 Object | Description
 --- | ---
 [ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
+[Camera](/spec-content/objects/Camera.md) | A camera device deployed in the field, capable of capturing still images.
 [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices. 
 

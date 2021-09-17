@@ -53,6 +53,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [LaneRestriction](/spec-content/objects/LaneRestriction.md)
         - [Relationship](/spec-content/objects/Relationship.md)
         - [ArrowBoard](/spec-content/objects/ArrowBoard.md)
+        - [Camera](/spec-content/objects/Camera.md)
     - [**Enumerated Types**](/spec-content/enumerated-types)
         - [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md)
         - [Direction](/spec-content/enumerated-types/Direction.md)
