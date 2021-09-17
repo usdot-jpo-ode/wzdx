@@ -6,6 +6,7 @@ Value | Description
 --- | ---
 `arrow-board` | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
 `camera` | A camera device deployed in the field, capable of capturing still images.
+`dynamic-message-sign` | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
 
 ## Used By
 Property | Object

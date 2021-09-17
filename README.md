@@ -54,6 +54,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [Relationship](/spec-content/objects/Relationship.md)
         - [ArrowBoard](/spec-content/objects/ArrowBoard.md)
         - [Camera](/spec-content/objects/Camera.md)
+        - [DynamicMessageSign](spec-content/objects/DynamicMessageSign.md)
     - [**Enumerated Types**](/spec-content/enumerated-types)
         - [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md)
         - [Direction](/spec-content/enumerated-types/Direction.md)
