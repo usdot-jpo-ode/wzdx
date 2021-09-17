@@ -219,6 +219,9 @@
             },
             {
               "$ref": "#/definitions/DynamicMessageSign"
+            },
+            {
+              "$ref": "#definitions/FlashingBeacon"
             }
           ]
         },
@@ -372,6 +375,25 @@
         "message_multi_string": {
           "type": "string",
           "description": "A MULTI-formatted string describing the message currently posted to the sign"
+        }
+      },
+      "required": [
+        "core_details"
+      ]
+    },
+    "FlashingBeacon": {
+      "title": "Flashing Beacon Field Device",
+      "description": "A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something and capture driver attention",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "function": {
+          "$ref": "#/definitions/FlashingBeaconFunction"
+        },
+        "is_flashing": {
+          "type": "boolean",
+          "description": "A yes/no value indicating if the flashing beacon is currently in use and flashing"
         }
       },
       "required": [
@@ -664,13 +686,19 @@
       "enum": [
         "arrow-board",
         "camera",
-        "dynamic-message-sign"
+        "dynamic-message-sign",
+        "flashing-beacon"
       ]
     },
     "FieldDeviceStatus": {
       "title": "Field Device Status Enumerated Type",
       "description": "The operational status of a field device",
       "enum": ["ok", "warning", "error", "unknown"]
+    },
+    "FlashingBeaconFunction": {
+      "title": "Flashing Beacon Function Enumerated Type",
+      "description": "Options for what a FlashingBeacon is being used to indicate",
+      "enum": ["vehicle-entering", "queue-warning", "reduced-speed", "workers-present"]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",
