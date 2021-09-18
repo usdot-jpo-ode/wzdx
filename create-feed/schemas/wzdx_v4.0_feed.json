@@ -221,7 +221,10 @@
               "$ref": "#/definitions/DynamicMessageSign"
             },
             {
-              "$ref": "#definitions/FlashingBeacon"
+              "$ref": "#/definitions/FlashingBeacon"
+            },
+            {
+              "$ref": "#/definitions/HybridSign"
             }
           ]
         },
@@ -398,6 +401,30 @@
       },
       "required": [
         "core_details"
+      ]
+    },
+    "HybridSign": {
+      "title": "Hybrid Sign Field Device",
+      "description": "A hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "variable_message_function": {
+          "$ref": "#/definitions/HybridSignVariableMessageFunction"
+        },
+        "variable_message_text": {
+          "type": "string",
+          "description": "A text representation of the message currently posted to the variable electronic component of the hybrid sign"
+        },
+        "static_sign_text": {
+          "type": "string",
+          "description": "The static text on the non-electronic component of the hybrid sign"
+        }
+      },
+      "required": [
+        "core_details",
+        "variable_message_function"
       ]
     },
     "RoadEvent": {
@@ -687,7 +714,8 @@
         "arrow-board",
         "camera",
         "dynamic-message-sign",
-        "flashing-beacon"
+        "flashing-beacon",
+        "hybrid-sign"
       ]
     },
     "FieldDeviceStatus": {
@@ -699,6 +727,11 @@
       "title": "Flashing Beacon Function Enumerated Type",
       "description": "Options for what a FlashingBeacon is being used to indicate",
       "enum": ["vehicle-entering", "queue-warning", "reduced-speed", "workers-present"]
+    },
+    "HybridSignVariableMessageFunction": {
+      "title": "Hybrid Sign Variable Message Function Enumerated Type",
+      "description": "Options for the function of the variable message displayed by the electronic display on a HybridSign",
+      "enum": ["speed-limit", "travel-time", "other"]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",

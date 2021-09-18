@@ -8,6 +8,7 @@ Value | Description
 `camera` | A camera device deployed in the field, capable of capturing still images.
 `dynamic-message-sign` | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
 `flashing-beacon` | A flashing beacon light of any form, used to indicate caution and capture driver attention.
+`hybrid-sign` | A message sign that contains both static text (e.g. on an aluminium board) along with a variable electronic message sign, used to provide information to travelers.
 
 ## Used By
 Property | Object
