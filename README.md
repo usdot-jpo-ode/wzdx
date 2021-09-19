@@ -59,6 +59,8 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [HybridSign](/spec-content/objects/HybridSign.md)
         - [LocationMarker](/spec-content/objects/LocationMarker.md)
         - [MarkedLocation](/spec-content/objects/MarkedLocation.md)
+        - [TrafficSensor](/spec-content/objects/TrafficSensor.md)
+        - [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md)
     - [**Enumerated Types**](/spec-content/enumerated-types)
         - [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md)
         - [Direction](/spec-content/enumerated-types/Direction.md)

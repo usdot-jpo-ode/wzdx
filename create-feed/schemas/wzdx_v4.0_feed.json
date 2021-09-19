@@ -228,6 +228,9 @@
             },
             {
               "$ref": "#/definitions/LocationMarker"
+            },
+            {
+              "$ref": "#/definitions/TrafficSensor"
             }
           ]
         },
@@ -431,7 +434,7 @@
       ]
     },
     "LocationMarker": {
-      "title": "Location Marker",
+      "title": "Location Marker Field Device",
       "description": "Any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone)",
       "type": "object",
       "properties": {
@@ -461,6 +464,86 @@
         }
       },
       "required": ["type"]
+    },
+    "TrafficSensor": {
+      "title": "Traffic Sensor Field Device",
+      "description": "A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval",
+      "type": "object",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "collection_interval_start_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The UTC date and time where the TrafficSensor data collection started. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
+        },
+        "collection_interval_end_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The UTC date and time where the TrafficSensor data collection ended. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
+        },
+        "average_speed_kph": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The average speed of vehicles across all lanes over the collection interval in kilometers per hour"
+        },
+        "total_vehicle_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of vehicles counted by the sensor during the collection interval"
+        },
+        "occupancy_percent": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The percent of time the roadway section monitored by the sensor was occupied by a vehicle over the collection interval"
+        },
+        "lane_data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TrafficSensorLaneData"
+          }
+        }
+      },
+      "reuqired": [
+        "core_details",
+        "collection_interval_start_date",
+        "collection_interval_end_date"
+      ]
+    },
+    "TrafficSensorLaneData": {
+      "title": "Traffic Sensor Lane Data",
+      "description": "data for a single lane within a RoadEvent measured by a TrafficSensor deployed on the roadway",
+      "properties": {
+        "road_event_id": {
+          "type": "string",
+          "description": "The ID of a RoadEventFeature that the measured lane occurs in"
+        },
+        "lane_order": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The lane's position in sequence within the road event specified by the 'road_event_id' property"
+        },
+        "average_speed_kph": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The average speed of traffic in the lane over the collection interval in kilometers per hour"
+        },
+        "total_vehicle_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of vehicles counted by the sensor in the lane during the collection interval"
+        },
+        "occupancy_percent": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The percent of time the lane monitored by the sensor was occupied by a vehicle over the collection interval"
+        }
+      },
+      "required": [
+        "road_event_id",
+        "lane_order"
+      ]
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -751,7 +834,8 @@
         "dynamic-message-sign",
         "flashing-beacon",
         "hybrid-sign",
-        "location-marker"
+        "location-marker",
+        "traffic-sensor"
       ]
     },
     "FieldDeviceStatus": {

@@ -10,6 +10,7 @@ Value | Description
 `flashing-beacon` | A flashing beacon light of any form, used to indicate caution and capture driver attention.
 `hybrid-sign` | A message sign that contains both static text (e.g. on an aluminium board) along with a variable electronic message sign, used to provide information to travelers.
 `location-marker` | Any GPS-enabled ITS device that is placed at a point in on a roadway to mark a location (often the beginning or end of a road event).
+`traffic-sensor` | A device deployed on a roadway which captures traffic metrics such as speed, volume, or occupancy.
 
 ## Used By
 Property | Object
