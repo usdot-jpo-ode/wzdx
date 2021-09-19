@@ -48,6 +48,8 @@ Object | Description
 [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices.
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
+[LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
+[MarkedLocation](/spec-contentobjects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
 
 ### Object Diagram
 The object diagram below indicates the relationship between the data objects.
@@ -89,3 +91,4 @@ Enumerated Type | Description
 [HybridSignVariableMessageFunction] | Describes options for the function of the variable message displayed by the electronic display on a [HybridSign](/spec-content/objects/HybridSign.md).
 [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of a field device.
 [FieldDeviceType](/spec-content/enumerated-types/EventStatus.md) | The type of a field device.
+[MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) | Describes options for what a [MarkedLocation](/spec-content/objects/MarkedLocation.md) can mark, such as the start or end of a road event.

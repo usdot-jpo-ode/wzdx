@@ -225,6 +225,9 @@
             },
             {
               "$ref": "#/definitions/HybridSign"
+            },
+            {
+              "$ref": "#/definitions/LocationMarker"
             }
           ]
         },
@@ -426,6 +429,38 @@
         "core_details",
         "variable_message_function"
       ]
+    },
+    "LocationMarker": {
+      "title": "Location Marker",
+      "description": "Any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone)",
+      "type": "object",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "marked_locations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/MarkedLocation"
+          }
+        }
+      },
+      "required": ["core_details", "marked_locations"]
+    },
+    "MarkedLocation": {
+      "title": "Marked Location",
+      "description": "Describes a specific location where a LocationMarker is placed, such as the start or end of a work zone road event",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/MarkedLocationType"
+        },
+        "road_event_id": {
+          "type": "string",
+          "description": "The ID of a RoadEventFeature that the MarkedLocation applies to"
+        }
+      },
+      "required": ["type"]
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -715,7 +750,8 @@
         "camera",
         "dynamic-message-sign",
         "flashing-beacon",
-        "hybrid-sign"
+        "hybrid-sign",
+        "location-marker"
       ]
     },
     "FieldDeviceStatus": {
@@ -732,6 +768,21 @@
       "title": "Hybrid Sign Variable Message Function Enumerated Type",
       "description": "Options for the function of the variable message displayed by the electronic display on a HybridSign",
       "enum": ["speed-limit", "travel-time", "other"]
+    },
+    "MarkedLocationType": {
+      "title": "Marked Location Type Enumerated Type",
+      "description": "Options for what a MarkedLocation can mark, such as the start or end of a road event",
+      "enum": [
+        "afad",
+        "flagger",
+        "lane-shift",
+        "lane-closure",
+        "temporary-traffic-signal",
+        "road-event-start",
+        "road-event-end",
+        "work-zone-start",
+        "work-zone-end"
+      ]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",

@@ -9,6 +9,7 @@ Value | Description
 `dynamic-message-sign` | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
 `flashing-beacon` | A flashing beacon light of any form, used to indicate caution and capture driver attention.
 `hybrid-sign` | A message sign that contains both static text (e.g. on an aluminium board) along with a variable electronic message sign, used to provide information to travelers.
+`location-marker` | Any GPS-enabled ITS device that is placed at a point in on a roadway to mark a location (often the beginning or end of a road event).
 
 ## Used By
 Property | Object
