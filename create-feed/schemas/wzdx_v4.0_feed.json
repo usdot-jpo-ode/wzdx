@@ -147,7 +147,7 @@
     },
     "RoadEventFeature": {
       "title": "Road Event Feature (GeoJSON Feature)",
-      "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
+      "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
       "type": "object",
       "properties": {
         "id": {
@@ -159,7 +159,7 @@
           "enum": ["Feature"]
         },
         "properties": {
-          "$ref": "#/definitions/RoadEvent"
+          "$ref": "#/definitions/WorkZone"
         },
         "geometry": {
           "oneOf": [
@@ -237,31 +237,13 @@
         "road_names"
       ]
     },
-    "RoadEvent": {
-      "title": "Road Event",
-      "description": "Describes an activity taking place along a road segment",
+    "WorkZone": {
+      "title": "Work Zone Road Event",
+      "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
       "type": "object",
       "properties": {
-        "data_source_id": {
-          "description": "Identifies the data source from which the road event data is sourced from",
-          "type": "string"
-        },
-        "event_type": {
-          "$ref": "#/definitions/EventType"
-        },
-        "relationship": {
-          "$ref": "#/definitions/Relationship"
-        },
-        "road_names": {
-          "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "direction": {
-          "$ref": "#/definitions/Direction"
+        "core_details": {
+          "$ref": "#/definitions/RoadEventCoreDetails"
         },
         "beginning_cross_street": {
           "description": "Name or number of the nearest cross street along the roadway where the event begins",
@@ -326,20 +308,6 @@
           },
           "uniqueItems": true
         },
-        "description": {
-          "description": "Short free text description of the road event",
-          "type": "string"
-        },
-        "creation_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "update_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
         "types_of_work": {
           "description": "A list of the types of work being done in a road event",
           "type": "array",
@@ -353,32 +321,9 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
-        },
-        "road_event_id": {
-          "description": "***DEPRECATED*** A unique identifier issued by the data feed provider to identify the work zone project or activity",
-          "type": "string"
-        },
-        "road_number": {
-          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
-        },
-        "road_name": {
-          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
-          "type": "string"
-        },
-        "total_num_lanes": {
-          "description": "***DEPRECATED*** The total number of lanes associated with the road event",
-          "type": "integer",
-          "exclusiveMinimum": 0
         }
       },
-      "anyOf": [
-        { "required": ["road_name"] },
-        { "required": ["road_names"] }
-      ],
       "required": [
-        "data_source_id",
-        "direction",
         "beginning_accuracy",
         "ending_accuracy",
         "start_date",
