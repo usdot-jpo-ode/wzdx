@@ -388,7 +388,8 @@
         }
       },
       "required": [
-        "core_details"
+        "core_details",
+        "message_multi_string"
       ]
     },
     "FlashingBeacon": {
