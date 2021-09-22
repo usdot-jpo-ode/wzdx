@@ -1,5 +1,5 @@
 # Restriction Object
-The Restriction object describes a restriction on a roadway or lane. This object is used by both the [RoadEvent](/spec-content/objectsRoadEvent.md) and [Lane](/spec-content/objects/Lane.md) objects.
+The `Restriction` object describes a restriction on a roadway or lane. This object is used by both the [RoadEvent](/spec-content/objects/RoadEvent.md) and [Lane](/spec-content/objects/Lane.md) objects.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
