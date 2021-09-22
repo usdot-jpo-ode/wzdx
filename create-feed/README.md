@@ -27,8 +27,8 @@ The tables below detail the specificaton's content and describe the data used to
 
 - The [RoadEvent](/spec-content/objects/RoadEvent.md) object describes a work zone event.
 - The [TypeOfWork](/spec-content/objects/TypeOfWork.md) object describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Restriction](/spec-content/objects/Restriction.md) object describes a restriction on a roadway or lane.
 - The [Lane](/spec-content/objects/Lane.md) object identifies and describes individual lanes within an event.
-- The [LaneRestriction](/spec-content/objects/LaneRestriction.md) object describes restrictions for identified lanes.
 - The [Relationship](/spec-content/objects/Relationship.md) object identifies sequential and hierarchical relationships between road events and other entities.
 
 The figure below models the tables and their relationships.
