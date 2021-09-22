@@ -23,3 +23,9 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | ---
 `core_details` | [ArrowBoard](/spec-content/objects/ArrowBoard.md)
+`core_details` | [Camera](/spec-content/objects/Camera.md)
+`core_details` | [DynamicMessageSign](/spec-content/objects/DynamicMessageSign.md)
+`core_details` | [FlashingBeacon](/spec-content/objects/FlashingBeacon.md)
+`core_details` | [HybridSign](/spec-content/objects/HybridSign.md)
+`core_details` | [LocationMarker](/spec-content/objects/LocationMarker.md)
+`core_details` | [TrafficSensor](/spec-content/objects/TrafficSensor.md)
