@@ -1,5 +1,5 @@
 # DetourRoadEvent Object
-The `DetourRoadEvent` object describes a detour on a roadway.
+The `DetourRoadEvent` object describes a detour on a roadway. The `DetourRoadEvent` can be either a segment of a detour (each segment represented by its own `DetourRoadEvent`) or the entire detour.
 
 The `DetourRoadEvent` is a type of road event; it has a `core_details` property which contains the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and exists within a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
 
