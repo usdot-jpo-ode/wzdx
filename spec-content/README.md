@@ -31,8 +31,11 @@ Object | Description
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
 [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
-[WorkZone](/spec-content/objects/WorkZone.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
+
+#### Road Events
+[Detour](/spec-content/objects/Detour.md) | A detour on a roadway.
+[WorkZone](/spec-content/objects/WorkZone.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
 
 ### Object Diagram
 The object diagram below indicates the relationship between the data objects.
