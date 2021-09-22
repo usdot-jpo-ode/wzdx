@@ -344,7 +344,8 @@
         }
       },
       "required": [
-        "core_details"
+        "core_details",
+        "pattern"
       ]
     },
     "Camera": {
@@ -822,7 +823,8 @@
         "right-arrow-static",
         "right-chevrons-flashing",
         "right-chevrons-sequential",
-        "right-chevrons-static"
+        "right-chevrons-static",
+        "unknown"
       ]
     },
     "FieldDeviceType": {

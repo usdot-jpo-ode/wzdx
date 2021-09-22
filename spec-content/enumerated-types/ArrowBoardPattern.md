@@ -24,6 +24,7 @@ Value | Description
 `line-flashing` | A flashing line or bar (e.g. `---`), indicating warning/caution, not a merge.
 `diamonds-alternating` | An alternating display of two diamond shapes (e.g. `◇ ◇`), indicating warning/caution, not a merge.
 `four-corners-flashing` | Four dots on the corners of the board which flash, indiciating warning/caution, not a merge.
+`unknown` | The arrow board pattern is not known.
 
 ## Used By
 Property | Object
