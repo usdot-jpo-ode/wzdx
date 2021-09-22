@@ -34,8 +34,8 @@ Object | Description
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
 #### Road Events
-[Detour](/spec-content/objects/Detour.md) | A detour on a roadway.
-[WorkZone](/spec-content/objects/WorkZone.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
+[DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
+[WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
 
 ### Object Diagram
 The object diagram below indicates the relationship between the data objects.

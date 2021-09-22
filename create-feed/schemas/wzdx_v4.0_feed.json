@@ -158,10 +158,10 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WorkZone"
+              "$ref": "#/definitions/WorkZoneRoadEvent"
             },
             {
-              "$ref": "#/definitions/Detour"
+              "$ref": "#/definitions/DetourRoadEvent"
             }
           ]
         },
@@ -241,7 +241,7 @@
         "road_names"
       ]
     },
-    "WorkZone": {
+    "WorkZoneRoadEvent": {
       "title": "Work Zone Road Event",
       "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
       "type": "object",
@@ -341,7 +341,7 @@
         "location_method"
       ]
     },
-    "Detour": {
+    "DetourRoadEvent": {
       "title": "Detour Road Event",
       "description": "Descibes a detour on a roadway",
       "type": "object",

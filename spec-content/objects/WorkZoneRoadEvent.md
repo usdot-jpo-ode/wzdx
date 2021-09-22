@@ -1,7 +1,7 @@
-# WorkZone Object
-The `WorkZone` object describes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
+# WorkZoneRoadEvent Object
+The `WorkZoneRoadEvent` object describes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
 
-The `WorkZone` is a type of road event; it has a `core_details` property which contains the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and exists within a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
+The `WorkZoneRoadEvent` is a type of road event; it has a `core_details` property which contains the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and exists within a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
 
 ## Properties
 Name | Type | Description | Conformance | Notes
