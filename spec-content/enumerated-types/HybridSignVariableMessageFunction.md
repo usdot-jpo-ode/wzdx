@@ -1,4 +1,4 @@
-# HybridSignVaribaleMessageFunction Enumerated Type
+# HybridSignVariableMessageFunction Enumerated Type
 The HybridSignVariableMessageFunction enumerated type describes options for the function of the variable message displayed by the electronic display on a [HybridSign](/spec-content/objects/HybridSign.md).
 
 ## Values
