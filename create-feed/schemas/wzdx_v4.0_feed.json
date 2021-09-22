@@ -338,9 +338,9 @@
           "type": "boolean",
           "description": "A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
         },
-        "is_deployed": {
+        "is_in_transport_position": {
           "type": "boolean",
-          "description": "A yes/no value indicating if the arrow board is in the deployed position (true) or stowed/transport position (false)"
+          "description": "A yes/no value indicating if the arrow board is in the stowed/transport position (true) or deployed/upright position (false)"
         }
       },
       "required": [
