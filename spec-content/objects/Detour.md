@@ -1,4 +1,3 @@
-
 # Detour Object
 The `Detour` object describes a detour on a roadway.
 
