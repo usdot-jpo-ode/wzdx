@@ -432,7 +432,8 @@
       },
       "required": [
         "core_details",
-        "variable_message_function"
+        "variable_message_function",
+        "variable_message_text"
       ]
     },
     "LocationMarker": {
