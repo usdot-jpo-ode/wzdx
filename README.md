@@ -69,7 +69,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [FlashingBeaconFunction](/spec-content/enumerated-types/FlashingBeaconFunction.md)
         - [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md)
         - [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md)
-        - [HybridSignVariableMessageFunction](/spec-content/enumerated-types/HybridSignVariableMessageFunction.md)
+        - [HybridSignDynamicMessageFunction](/spec-content/enumerated-types/HybridSignDynamicMessageFunction.md)
         - [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md)
         - [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)
         - [LaneType](/spec-content/enumerated-types/LaneType.md)

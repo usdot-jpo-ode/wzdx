@@ -418,12 +418,12 @@
         "core_details": {
           "$ref": "#/definitions/FieldDeviceCoreDetails"
         },
-        "variable_message_function": {
-          "$ref": "#/definitions/HybridSignVariableMessageFunction"
+        "dynamic_message_function": {
+          "$ref": "#/definitions/HybridSignDynamicMessageFunction"
         },
-        "variable_message_text": {
+        "dynamic_message_text": {
           "type": "string",
-          "description": "A text representation of the message currently posted to the variable electronic component of the hybrid sign"
+          "description": "A text representation of the message currently posted to the dynamic electronic component of the hybrid sign"
         },
         "static_sign_text": {
           "type": "string",
@@ -432,8 +432,8 @@
       },
       "required": [
         "core_details",
-        "variable_message_function",
-        "variable_message_text"
+        "dynamic_message_function",
+        "dynamic_message_text"
       ]
     },
     "LocationMarker": {
@@ -852,9 +852,9 @@
       "description": "Options for what a FlashingBeacon is being used to indicate",
       "enum": ["vehicle-entering", "queue-warning", "reduced-speed", "workers-present"]
     },
-    "HybridSignVariableMessageFunction": {
-      "title": "Hybrid Sign Variable Message Function Enumerated Type",
-      "description": "Options for the function of the variable message displayed by the electronic display on a HybridSign",
+    "HybridSignDynamicMessageFunction": {
+      "title": "Hybrid Sign Dynamic Message Function Enumerated Type",
+      "description": "Options for the function of the dynamic message displayed by the electronic display on a HybridSign",
       "enum": ["speed-limit", "travel-time", "other"]
     },
     "MarkedLocationType": {

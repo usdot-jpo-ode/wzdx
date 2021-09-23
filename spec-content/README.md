@@ -90,7 +90,7 @@ Enumerated Type | Description
 --- | ---
 [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md) | A list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
 [FlashingBeaconFunction](/spec-content/enumerated-types/FlashingBeaconFunction.md) | Describes options for what a [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) is being used to indicate.
-[HybridSignVariableMessageFunction] | Describes options for the function of the variable message displayed by the electronic display on a [HybridSign](/spec-content/objects/HybridSign.md).
+[HybridSignDynamicMessageFunction] | Describes options for the function of the dynamic message displayed by the electronic display on a [HybridSign](/spec-content/objects/HybridSign.md).
 [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of a field device.
 [FieldDeviceType](/spec-content/enumerated-types/EventStatus.md) | The type of a field device.
 [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) | Describes options for what a [MarkedLocation](/spec-content/objects/MarkedLocation.md) can mark, such as the start or end of a road event.
