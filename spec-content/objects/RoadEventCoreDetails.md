@@ -16,6 +16,8 @@ Name | Type | Description | Conformance | Notes
 #### Used By
 Property | Object
 --- | ---
+`core_details` | [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
+`core_details` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
 
 #### Important Notes
 The value of the `RoadEvent`'s `data_source_id` property MUST match the value of the `data_source_id` property of a [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) that is included in the same WZDx GeoJSON document.
