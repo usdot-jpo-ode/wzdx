@@ -268,8 +268,8 @@
           "type": "string",
           "format": "date-time"
         },
-        "has_gps_location": {
-          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is from an onboard GPS (true) or manually set (false).",
+        "has_automatic_location": {
+          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overidden (false)",
           "type": "boolean"
         },
         "name": {
@@ -320,7 +320,7 @@
         "road_names",
         "device_status",
         "update_date",
-        "has_gps_location"
+        "has_automatic_location"
       ]
     },
     "ArrowBoard": {
