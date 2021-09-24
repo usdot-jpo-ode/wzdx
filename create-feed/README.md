@@ -84,7 +84,7 @@ Scenario 5 ([Linestring](/create-feed/examples/linestring-examples/scenario5_rec
 The local access only example ([Linestring](/create-feed/examples/linestring-examples/local_access_only_bidirectional_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/local_access_only_bidirectional_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
 - Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `WZ389-NB`, `WZ389-SB`), one for each direction.
-- Uses `local-access-only` [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md).
+- Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
 
 ### Comprehensive Example
