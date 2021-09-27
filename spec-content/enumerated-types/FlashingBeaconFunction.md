@@ -11,4 +11,5 @@ Value | Description
 
 ## Used By
 Property | Object
+--- | ---
 `function` | [FlashingBeacon](/spec-content/objects/FlashingBeacon.md)
