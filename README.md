@@ -63,6 +63,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md)
         - [TimeVerification](/spec-content/enumerated-types/TimeVerification.md)
         - [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md)
+        - [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md)
         - [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)
         - [WorkerPresenceSource](/spec-content/enumerated-types/WorkerPresenceSource.md)
         - [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md)
