@@ -131,14 +131,6 @@
           "type": "string",
           "format": "uri"
         }
-        "worker_presence_definition": {
-          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider."
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/WorkerPresenceDefinition"
-          },
-          "uniqueItems": true
-        }
       },
       "required": ["data_source_id", "organization_name", "location_method"]
     },
@@ -459,24 +451,30 @@
       "type": "object",
       "properties": {
         "are_workers_present": {
-          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object."
+          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object.",
           "type": "boolean"
         },
         "source": {
-          "description": "Data source providing information on whether workers are present in the work zone event area."
+          "description": "Data source providing information on whether workers are present in the work zone event area.",
           "type": "#/definitions/WorkerPresenceSource"
         },
-        "last_confirmed_date": {
-          "description": "Datetime at which the presence of workers was last confirmed using the ‘source’."
-          "type": "string"
+        "worker_presence_last_confirmed_date": {
+          "description": "Datetime at which the presence of workers was last confirmed using the ‘source’.",
+          "type": "string",
           "format": "date-time"
         },
-        "reliability_score": {
-          "description": " Numerical score representing the data producer’s understanding of the likelihood of workers being present in the work zone event area, with 10 indicating absolute certainty and 0 indicating."
-          "type": "integer"
-          "minimum": 0
-          "maximum": 10
+        "confidence": {
+          "description": "The data producer’s confidence in workers being present in the work zone event area at the time of feed publication.",
+          "type": "#/definitions/WorkerPresenceConfidence"
         },
+        "definition": {
+          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WorkerPresenceDefinition"
+          },
+          "uniqueItems": true
+        }
       },
       "required": ["are_workers_present"],
       "dependencies": {
@@ -594,7 +592,7 @@
       "title": "Lane Restriction Unit Enumerated Type",
       "description": "Units of measure used for the lane restriction value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
-    }
+    },
     "WorkerPresenceSource": {
       "title": "Worker Presence Source Enumerated Type",
       "description": "Data source providing information on whether workers are present in the work zone event area.",
@@ -609,7 +607,7 @@
         "check-in-verbal",
         "scheduled"
       ]
-    }
+    },
     "WorkerPresenceDefinition": {
       "title": "Worker Presence Definition Enumerated Type",
       "description": "Situations in which workers may be considered present in a work zone.",
@@ -621,6 +619,15 @@
         "fixed-equipment-in-work-zone", 
         "humans-behind-barrier", 
         "humans-in-right-of-way"
+      ]
+    },
+    "WorkerPresenceConfidence": {
+      "title": "Worker Presence Confidence Enumerated Type",
+      "description": "A high-level description of the feed publisher's confidence in the reported WorkerPresence value of are_workers_present",
+      "enum": [
+        "low",
+        "medium",
+        "high"
       ]
     }
   }
