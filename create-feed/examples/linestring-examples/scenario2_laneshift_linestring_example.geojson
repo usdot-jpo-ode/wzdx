@@ -18,12 +18,7 @@
         "location_verify_method": "GPS",
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs",
-        "worker_presence_definition": [
-           "workers-in-work-zone-working",
-           "workers-in-work-zone-not-working",
-           "mobile-equipment-in-work-zone-moving"
-        ]
+        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
       }
     ]
   },
@@ -52,7 +47,12 @@
         "vehicle_impact": "all-lanes-open",
         "worker_presence": {
 	        "are_workers_present": true,
-	        "source": "wearables-present"
+	        "source": "wearables-present",
+					"definition": [
+						"workers-in-work-zone-working",
+						"workers-in-work-zone-not-working",
+						"mobile-equipment-in-work-zone-moving"
+					]
 	      },
         "reduced_speed_limit": 55,
         "restrictions": [],
