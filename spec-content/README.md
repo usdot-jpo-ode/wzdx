@@ -25,7 +25,7 @@ This section provides a tabular list of all objects used in the WZDx specificati
 Object | Description
 --- | ---
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
-[RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
+[FeedInfo](/spec-content/objects/FeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
 
 #### WZDxFeed
 Object | Description

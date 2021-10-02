@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "feed_info": {
-      "$ref": "#/definitions/RoadEventFeedInfo"
+      "$ref": "#/definitions/FeedInfo"
     },
     "type": {
       "description": "The GeoJSON type",
@@ -34,7 +34,7 @@
         "type": "number"
       }
     },
-    "RoadEventFeedInfo": {
+    "FeedInfo": {
       "title": "Road Event Feed Information",
       "description": "Describes WZDx feed header information such as metadata, contact information, and data sources",
       "type": "object",
