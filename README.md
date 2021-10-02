@@ -45,7 +45,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [WZDxFeed](/spec-content/objects/WZDxFeed.md)
         - [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md.md)
         - [FeedInfo](/spec-content/objects/FeedInfo.md)
-        - [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md)
+        - [FeedDataSource](/spec-content/objects/FeedDataSource.md)
         - [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)
         - [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)
         - [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md)

@@ -21,7 +21,7 @@ The tables below detail the specificaton's content and describe the data used to
 ### WZDx Feed Information
 
 - The [FeedInfo](/spec-content/objects/FeedInfo.md) object describes the data feed.
-- The [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) object describes the data sources used to build the work zone data feed.
+- The [FeedDataSource](/spec-content/objects/FeedDataSource.md) object describes the data sources used to build the work zone data feed.
 
 ### WZDx Work Zone (Road Event) Information
 

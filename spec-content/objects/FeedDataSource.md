@@ -1,5 +1,5 @@
-# RoadEventDataSource Object
-The `RoadEventDataSource` object describes information about a specific data source used to build a work zone data feed. A WZDx feed must contain at least one `RoadEventDataSource`, included as an entry in the `data_sources` array of the `FeedInfo` object.
+# FeedDataSource Object
+The `FeedDataSource` object describes information about a specific data source used to build a work zone data feed. A WZDx feed must contain at least one `FeedDataSource`, included as an entry in the `data_sources` array of the `FeedInfo` object.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -21,4 +21,4 @@ Property | Object
 `data_sources` | [FeedInfo](/spec-content/objects/FeedInfo.md)
 
 ## Additional Notes
-The value of a `RoadEventDataSource`'s `data_source_id` property should match the value of the `data_source_id` property of at least one [RoadEvent](/spec-content/objects/RoadEvent.md) that is included within the same WZDx GeoJSON document.
+The value of a `FeedDataSource`'s `data_source_id` property should match the value of the `data_source_id` property of at least one [RoadEvent](/spec-content/objects/RoadEvent.md) that is included within the same WZDx GeoJSON document.
