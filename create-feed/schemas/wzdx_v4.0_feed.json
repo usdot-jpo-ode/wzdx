@@ -265,8 +265,8 @@
           "description": "A flag indicating that there are workers present in the road event",
           "type": "boolean"
         },
-        "reduced_speed_limit": {
-          "description": "If applicable, the reduced speed limit posted within the road event, in miles per hour",
+        "reduced_speed_limit_kph": {
+          "description": "If applicable, the reduced speed limit posted within the road event, in kilometers per hour",
           "type": "integer",
           "minimum": 0
         },
