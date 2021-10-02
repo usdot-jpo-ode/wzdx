@@ -19,18 +19,18 @@ Each object is described by a table of properties, which are each defined by the
 - **Notes** - Additional comments, guidance, notes for future consideration, or examples.
 
 ### List of Objects
-This section provides a tabular list of all objects used in the WZDx specification, sectioned by whether the object applies to the feed-level, road event features, or field devices features.
+This section provides a tabular list of all objects used in the WZDx specification, sectioned by whether the object applies to the multiple feeds (shared), the `WZDxFeed`, or the `SwzDeviceFeed`.
 
-#### Feed-Level
+#### Shared
 Object | Description
 --- | ---
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
-#### Road Event Features
+#### WZDxFeed
 Object | Description
 --- | ---
+[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [LaneRestriction](/spec-content/objects/LaneRestriction.md) | A lane-level restriction, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
@@ -38,7 +38,7 @@ Object | Description
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
 
-#### Field Device Features
+#### SwzDeviceFeed
 Object | Description
 --- | ---
 [ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
@@ -50,6 +50,7 @@ Object | Description
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-contentobjects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
+[SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of smart work zone device feed GeoJSON document.
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
 [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a [RoadEvent](/spec-content/objects/RoadEvent.md) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
 
@@ -65,12 +66,12 @@ When making changes to the specification, the object diagram needs to be updated
 Many object properties are restricted to a finite set of values, defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
 
 ### List of Enumerated Types
-This section provides a tabular list of all enumerated types used in the WZDx specification, sectioned by whether they apply to the feed-level, road event features, or field device features.
+This section provides a tabular list of all enumerated types used in the WZDx specification, sectioned by whether they apply to multiple feeds (shared), the `WZDxFeed`, or the `SwzDeviceFeed`.
 
-#### Feed-Level
+#### Shared
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
 
-#### Road Event Features
+#### WZDxFeed
 Enumerated Type | Description
 --- | ---
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
@@ -85,7 +86,7 @@ Enumerated Type | Description
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 
-#### Field Devices
+#### SwzDeviceFeed
 Enumerated Type | Description
 --- | ---
 [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md) | A list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
