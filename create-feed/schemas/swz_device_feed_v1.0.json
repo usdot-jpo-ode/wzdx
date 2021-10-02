@@ -144,6 +144,57 @@
         "unknown"
       ]
     },
+    "FieldDeviceFeature": {
+      "title": "Field Device Feature (GeoJSON Feature)",
+      "description": "The GeoJSON feature container for a WZDx field device",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "A unique identifier issued by the data feed provider to identify the field device",
+          "type": "string"
+        },
+        "type": {
+          "description": "The GeoJSON object type; must be 'Feature'",
+          "enum": ["Feature"]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ArrowBoard"
+            },
+            {
+              "$ref": "#/definitions/Camera"
+            },
+            {
+              "$ref": "#/definitions/DynamicMessageSign"
+            },
+            {
+              "$ref": "#/definitions/FlashingBeacon"
+            },
+            {
+              "$ref": "#/definitions/HybridSign"
+            },
+            {
+              "$ref": "#/definitions/LocationMarker"
+            },
+            {
+              "$ref": "#/definitions/TrafficSensor"
+            }
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "https://geojson.org/schema/Point.json"
+            }
+          ]
+        },
+        "bbox": {
+          "$ref": "#/definitions/BoundingBox"
+        }
+      },
+      "required": ["id","type","properties","geometry"]
+    },
     "FieldDeviceCoreDetails": {
       "title": "Field Device Core Details",
       "description": "the core details—both configuration and current state—of a field device that are shared by all types of field devices",
@@ -152,6 +203,10 @@
         "device_type": {
           "type": "string",
           "description": "The type of field device"
+        },
+        "data_source_id": {
+          "description": "Identifies the data source from which the field device information is sourced from",
+          "type": "string"
         },
         "road_names": {
           "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
