@@ -262,8 +262,7 @@
           "$ref": "#/definitions/VehicleImpact"
         },
         "worker_presence": {
-          "description": "Information about whether workers are present in the event space.",
-          "type": "#/definitions/WorkerPresence"
+          "$ref": "#/definitions/WorkerPresence"
         },
         "reduced_speed_limit": {
           "description": "The reduced speed limit posted within the road event",
@@ -455,8 +454,7 @@
           "type": "boolean"
         },
         "source": {
-          "description": "Data source providing information on whether workers are present in the work zone event area.",
-          "type": "#/definitions/WorkerPresenceSource"
+          "$ref": "#/definitions/WorkerPresenceSource"
         },
         "worker_presence_last_confirmed_date": {
           "description": "Datetime at which the presence of workers was last confirmed using the ‘source’.",
@@ -464,8 +462,7 @@
           "format": "date-time"
         },
         "confidence": {
-          "description": "The data producer’s confidence in workers being present in the work zone event area at the time of feed publication.",
-          "type": "#/definitions/WorkerPresenceConfidence"
+          "$ref": "#/definitions/WorkerPresenceConfidence"
         },
         "definition": {
           "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider.",
