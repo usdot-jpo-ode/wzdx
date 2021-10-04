@@ -87,5 +87,5 @@ Property | Object | Enumerated Type | Notes
 `type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0
 `type_name` | [TypeOfWork](/spec-content/objects/TypeOfWork.md) | [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | Enumeration created in WZDx v2.0
 `vehicle_impact` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | Enumeration created in WZDx v2.0
-`worker_presence_definition` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Enumeration created in WZDx v4.0
+`definition` | [WorkerPresence](/spec-content/objects/WorkerPresence.md) | [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Enumeration created in WZDx v4.0
 
