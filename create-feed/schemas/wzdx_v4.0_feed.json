@@ -450,14 +450,14 @@
       "type": "object",
       "properties": {
         "are_workers_present": {
-          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object.",
+          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object",
           "type": "boolean"
         },
         "source": {
           "$ref": "#/definitions/WorkerPresenceSource"
         },
         "worker_presence_last_confirmed_date": {
-          "description": "Datetime at which the presence of workers was last confirmed using the ‘source’.",
+          "description": "Datetime at which the presence of workers was last confirmed using the 'source'",
           "type": "string",
           "format": "date-time"
         },
@@ -465,7 +465,7 @@
           "$ref": "#/definitions/WorkerPresenceConfidence"
         },
         "definition": {
-          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider.",
+          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider",
           "type": "array",
           "items": {
             "$ref": "#/definitions/WorkerPresenceDefinition"
@@ -592,7 +592,7 @@
     },
     "WorkerPresenceSource": {
       "title": "Worker Presence Source Enumerated Type",
-      "description": "Data source providing information on whether workers are present in the work zone event area.",
+      "description": "Data source providing information on whether workers are present in the work zone event area",
       "enum": [
         "camera-monitoring", 
         "arrow-board-present", 
@@ -607,7 +607,7 @@
     },
     "WorkerPresenceDefinition": {
       "title": "Worker Presence Definition Enumerated Type",
-      "description": "Situations in which workers may be considered present in a work zone.",
+      "description": "Situations in which workers may be considered present in a work zone",
       "enum": [
         "workers-in-work-zone-working",
         "workers-in-work-zone-not-working", 
