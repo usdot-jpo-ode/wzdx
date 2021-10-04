@@ -163,12 +163,12 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "worker_presence": { 
-      	      "are_workers_present": false,
-							"definition": [
-								"humans-in-right-of-way"
-							]
-						},
+            "worker_presence": {
+               "are_workers_present": false,
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
+            },
             "reduced_speed_limit": 55,
             "restrictions": [],
             "description": "Single-direction work zone represented by three sequential road events; first event.",
@@ -260,13 +260,13 @@
             "total_num_lanes": 4,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
-              "are_workers_present": true,
-              "source": "check-in-app",
-              "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
-              "confidence": "high",
-							"definition": [
-								"humans-in-right-of-way"
-							]
+               "are_workers_present": true,
+               "source": "check-in-app",
+               "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+               "confidence": "high",
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
             },
             "reduced_speed_limit": 55,
             "restrictions": [],
@@ -356,14 +356,14 @@
             "total_num_lanes": 3,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
-	            "are_workers_present": true,
-	            "source": "check-in-app",
-	            "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
-	            "confidence": "high",
-							"definition": [
-								"humans-in-right-of-way"
-							]
-						},
+               "are_workers_present": true,
+               "source": "check-in-app",
+               "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+               "confidence": "high",
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
+            },
             "reduced_speed_limit": 55,
             "restrictions": [],
             "description": "Single-direction work zone represented by three sequential road events; third event.",

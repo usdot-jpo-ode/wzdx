@@ -52,14 +52,14 @@
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
-	            "are_workers_present": true,
-	            "source": "scheduled",
-	            "confidence": "medium",
-							"worker_presence_definition": [
-								"workers-in-work-zone-working",
-								"workers-in-work-zone-not-working",
-								"mobile-equipment-in-work-zone-moving"
-							]
+               "are_workers_present": true,
+               "source": "scheduled",
+               "confidence": "medium",
+               "worker_presence_definition": [
+                  "workers-in-work-zone-working",
+                  "workers-in-work-zone-not-working",
+                  "mobile-equipment-in-work-zone-moving"
+               ]
             },
             "reduced_speed_limit": 55,
             "restrictions": [
