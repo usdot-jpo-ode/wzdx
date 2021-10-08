@@ -8,7 +8,7 @@ Name | Type | Description | Conformance | Notes
 `definition` | Array; \[[WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)\] | A list of situations in which workers are considered to be present in the jurisdiction of the data provider. | Optional
 `source` | [WorkerPresenceSource](/spec-content/enumerated-types/WorkerPresenceSource.md) | Data source providing information on whether workers are present in the work zone event area. | Optional | 
 `worker_presence_last_confirmed_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | Date and time at which the presence of workers was last confirmed. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
-`confidence` | [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md) | The data producer’s confidence in workers being present in the work zone event area at the time of feed publication. | Optional | 
+`confidence` | [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md) | The data producer’s confidence in the value of `are_workers_present`. | Optional | 
 
 ## Used By
 Property | Object
