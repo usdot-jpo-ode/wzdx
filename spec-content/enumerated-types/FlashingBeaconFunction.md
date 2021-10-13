@@ -4,10 +4,10 @@ The FlashingBeaconFunction enumerated type describes a list of options for what 
 ## Values
 Value | Description
 --- | ---
-`vehicle-entering` | The beacon's function is to indicate vehicles are entering the roadway.
-`queue-warning` | The beacon's function is to indicate there is a queue of vehicles.
-`reduced-speed` | The beacon's function is to designate a reduced speed limit.
-`workers-present` | The beacon's function is to indicate that workers are present on or near the roadway.
+`vehicle-entering` | Vehicles are entering the roadway.
+`queue-warning` | There is a queue of vehicles.
+`reduced-speed` | There is a reduced speed limit.
+`workers-present` | There are workers are present on or near the roadway.
 
 ## Used By
 Property | Object
