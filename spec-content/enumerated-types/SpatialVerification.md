@@ -10,5 +10,5 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`beginning_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)
-`ending_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`beginning_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`ending_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
