@@ -10,4 +10,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`event_type` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
