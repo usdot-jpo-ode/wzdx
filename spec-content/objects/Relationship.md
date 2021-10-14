@@ -12,7 +12,7 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`relationship` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`relationship` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
 
 ## Important Notes
 The value of all elements in the `Relationship`'s `first` or `next` properties must match the value of the `id` property of a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) that is included in the same WZDx GeoJSON document.
