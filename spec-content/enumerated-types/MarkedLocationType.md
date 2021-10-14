@@ -4,7 +4,7 @@ The MarkedLocationType enumerated type describes options for what a [MarkedLocat
 ## Values
 Value | Description
 --- | ---
-`afad` | An automatic flagging device.
+`afad` | An automatic flagger assistance device.
 `flagger` | A human who is directing traffic.
 `lane-shift` | A lane shift.
 `lane-closure` | One or more lanes are closed.

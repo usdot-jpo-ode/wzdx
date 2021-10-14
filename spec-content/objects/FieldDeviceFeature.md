@@ -1,5 +1,7 @@
 # FieldDeviceFeature Object
-The FieldDeviceFeature object is a GeoJSON feature representing a deployed field device. This object contains the specific details of the field device, alike to how the RoadEventFeature object in a WZDx Feed contains the RoadEvent object via the `properties` property. Currently, only point devices are supported.
+The FieldDeviceFeature object is a GeoJSON feature representing a deployed field device. This object contains the specific details of the field device, alike to how the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object in a WZDx Feed contains the RoadEvent object via the `properties` property.
+
+Currently, only point devices are supported.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -13,4 +15,4 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`features` | [WZDx Feed](/spec-content/objects/WZDxFeed.md)
+`features` | [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md)

@@ -4,9 +4,9 @@ The `HybridSignDynamicMessageFunction` enumerated type describes options for the
 ## Values
 Value | Description
 --- | ---
-`speed-limit` | The hybrid sign message is displaying a speed limit.
-`travel-time` | The hybrid sign message is displaying a travel time.
-`other` | The hybrid sign message message function is not one of the other options described by this enumerated type.
+`speed-limit` | The message is a speed limit.
+`travel-time` | The message is a travel time.
+`other` | The hybrid sign message function is not one of the other options described by this enumerated type.
 
 ## Used By
 Property | Object
