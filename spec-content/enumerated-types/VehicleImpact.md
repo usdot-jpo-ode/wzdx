@@ -13,4 +13,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`vehicle_impact` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`vehicle_impact` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
