@@ -34,6 +34,8 @@ Object | Description
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
 #### Road Events
+Object | Description
+--- | ---
 [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
 [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
 
@@ -70,18 +72,18 @@ For ease of reference, the table below describes all properties in the WZDx spec
 
 Property | Object | Enumerated Type | Notes
 --- | --- | --- | ---
-`beginning_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
-`direction` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [Direction](/spec-content/enumerated-types/Direction.md) | Enumeration adapted from TMDD link-alignment
-`end_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
-`ending_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
-`event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
-`event_status` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | Enumeration created in WZDx v1.0
-`location_method` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
+`beginning_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
+`direction` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) | [Direction](/spec-content/enumerated-types/Direction.md) | Enumeration adapted from TMDD link-alignment
+`end_date_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
+`ending_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Enumeration updated in WZDx v3.0
+`event_type` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
+`event_status` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | Enumeration created in WZDx v1.0
+`location_method` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
 `restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Enumeration created in WZDx v1.0
 `restriction_type` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
 `restriction_units` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
-`start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
+`start_date_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `status` | [Lane](/spec-content/objects/Lane.md) | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Enumeration created in WZDx v2.0
 `type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0
 `type_name` | [TypeOfWork](/spec-content/objects/TypeOfWork.md) | [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | Enumeration created in WZDx v2.0
-`vehicle_impact` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | Enumeration created in WZDx v2.0
+`vehicle_impact` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | Enumeration created in WZDx v2.0
