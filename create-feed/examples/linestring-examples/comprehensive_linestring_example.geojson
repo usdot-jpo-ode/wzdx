@@ -1284,11 +1284,6 @@
         "vehicle_impact": "some-lanes-closed",
         "workers_present": true,
         "reduced_speed_limit": 55,
-        "restrictions": [
-          {
-            "type": "reduced-width"
-          }
-        ],
         "description": "Simple, single direction work zone with detour.",
         "creation_date": "2009-12-15T14:01:01Z",
         "update_date": "2010-01-01T01:03:01Z",
