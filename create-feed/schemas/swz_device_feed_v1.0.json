@@ -388,8 +388,7 @@
       },
       "required": [
         "core_details",
-        "dynamic_message_function",
-        "dynamic_message_text"
+        "dynamic_message_function"
       ]
     },
     "LocationMarker": {

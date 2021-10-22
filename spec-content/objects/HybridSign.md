@@ -8,7 +8,7 @@ Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details of the field device shared by all field devices types, not specific to hybrid signs. | Required | This property appears on all field devices.
 `dynamic_message_function` | [HybridSignDynamicMessageFunction](/spec-content/enumerated-types/HybridSignDynamicMessageFunction.md) | The function the dynamic message displayed (e.g. a speed limit). | Required |
-`dynamic_message_text` | String | A text representation of the message currently posted to the electronic component of the hybrid sign. | Required |
+`dynamic_message_text` | String | A text representation of the message currently posted to the electronic component of the hybrid sign. | Optional |
 `static_sign_text` | String | The static text on the non-electronic component of the hybrid sign. | Optional |
 
 ## Used By
