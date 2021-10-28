@@ -65,7 +65,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md)
         - [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md)
         - [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)
-        - [WorkerPresenceSource](/spec-content/enumerated-types/WorkerPresenceSource.md)
+        - [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md)
         - [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md)
 - [**Images Used throughout the Specification**](/images)
   - [Object Diagram](/images/wzdx_object_diagram.jpg)

@@ -453,8 +453,8 @@
           "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object",
           "type": "boolean"
         },
-        "source": {
-          "$ref": "#/definitions/WorkerPresenceSource"
+        "method": {
+          "$ref": "#/definitions/WorkerPresenceMethod"
         },
         "worker_presence_last_confirmed_date": {
           "description": "Datetime at which the presence of workers was last confirmed using the 'source'",
@@ -590,9 +590,9 @@
       "description": "Units of measure used for the lane restriction value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
     },
-    "WorkerPresenceSource": {
-      "title": "Worker Presence Source Enumerated Type",
-      "description": "Data source providing information on whether workers are present in the work zone event area",
+    "WorkerPresenceMethod": {
+      "title": "Worker Presence Method Enumerated Type",
+      "description": "Describes methods for how worker presence in a work zone event area is determined",
       "enum": [
         "camera-monitoring", 
         "arrow-board-present", 

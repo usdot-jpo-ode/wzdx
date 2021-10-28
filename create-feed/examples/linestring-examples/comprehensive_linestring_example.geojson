@@ -705,7 +705,7 @@
         "vehicle_impact": "some-lanes-closed",
         "worker_presence": {
           "are_workers_present": true,
-          "source": "check-in-app",
+          "method": "check-in-app",
           "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
           "confidence": "high",
           "definition": [
@@ -825,7 +825,7 @@
         "vehicle_impact": "some-lanes-closed",
         "worker_presence": {
           "are_workers_present": true,
-          "source": "check-in-app",
+          "method": "check-in-app",
           "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
           "confidence": "high",
           "definition": [
@@ -992,7 +992,7 @@
         "vehicle_impact": "all-lanes-open",
         "worker_presence": {
           "are_workers_present": true,
-          "source": "wearables-present",
+          "method": "wearables-present",
           "definition": [
             "workers-in-work-zone-working",
             "workers-in-work-zone-not-working",
@@ -1308,7 +1308,7 @@
         "vehicle_impact": "some-lanes-closed",
         "worker_presence": {
           "are_workers_present": true,
-          "source": "scheduled",
+          "method": "scheduled",
           "confidence": "medium",
           "definition": [
             "workers-in-work-zone-working",

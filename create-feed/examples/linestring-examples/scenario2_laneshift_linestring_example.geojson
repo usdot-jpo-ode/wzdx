@@ -47,7 +47,7 @@
         "vehicle_impact": "all-lanes-open",
         "worker_presence": {
           "are_workers_present": true,
-          "source": "wearables-present",
+          "method": "wearables-present",
           "definition": [
             "workers-in-work-zone-working",
             "workers-in-work-zone-not-working",

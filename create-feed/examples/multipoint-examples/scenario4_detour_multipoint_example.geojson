@@ -53,7 +53,7 @@
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
                "are_workers_present": true,
-               "source": "scheduled",
+               "method": "scheduled",
                "confidence": "medium",
                "definition": [
                   "workers-in-work-zone-working",
