@@ -1,5 +1,5 @@
-# Worker Presence Source
-Data source providing information on whether workers are present in the work zone event area.
+# Worker Presence Method
+Describes methods for how worker presence in a work zone event area is determined.
 
 ## Values
 Value | Description
