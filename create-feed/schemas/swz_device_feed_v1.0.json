@@ -35,7 +35,7 @@
       }
     },
     "FeedInfo": {
-      "title": "Road Event Feed Information",
+      "title": "WZDx Feed Information",
       "description": "Describes WZDx feed header information such as metadata, contact information, and data sources",
       "type": "object",
       "properties": {
@@ -83,7 +83,7 @@
       "required": ["update_date", "version", "publisher", "data_sources"]
     },
     "FeedDataSource": {
-      "title": "Road Event Data Source",
+      "title": "WZDx Feed Data Source",
       "description": "Describes information about a specific data source used to build the work zone data feed",
       "type": "object",
       "properties": {
@@ -197,12 +197,11 @@
     },
     "FieldDeviceCoreDetails": {
       "title": "Field Device Core Details",
-      "description": "the core details—both configuration and current state—of a field device that are shared by all types of field devices",
+      "description": "The core details—both configuration and current state—of a field device that are shared by all types of field devices",
       "type": "object",
       "properties": {
         "device_type": {
-          "type": "string",
-          "description": "The type of field device"
+          "$ref": "#/definitions/FieldDeviceType"
         },
         "data_source_id": {
           "description": "Identifies the data source from which the field device information is sourced from",
@@ -273,6 +272,7 @@
       },
       "required": [
         "device_types",
+        "data_source_id",
         "road_names",
         "device_status",
         "update_date",
@@ -364,7 +364,8 @@
         }
       },
       "required": [
-        "core_details"
+        "core_details",
+        "function"
       ]
     },
     "HybridSign": {
@@ -463,7 +464,7 @@
           }
         }
       },
-      "reuqired": [
+      "required": [
         "core_details",
         "collection_interval_start_date",
         "collection_interval_end_date"
