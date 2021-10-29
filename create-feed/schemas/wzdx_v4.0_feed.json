@@ -331,6 +331,7 @@
         }
       },
       "required": [
+        "core_details",
         "beginning_accuracy",
         "ending_accuracy",
         "start_date",
@@ -388,6 +389,7 @@
         }
       },
       "required": [
+        "core_details",
         "start_date",
         "end_date",
         "start_date_accuracy",
