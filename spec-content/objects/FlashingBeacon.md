@@ -1,7 +1,7 @@
 # FlashingBeacon Object
-The FlashingBeacon object describes a flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something and capture driver attention.
+The `FlashingBeacon` object describes a flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something and capture driver attention.
 
-The FlashingBeacon is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
+The `FlashingBeacon` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
 ## Properties 
 Name | Type | Description | Conformance | Notes

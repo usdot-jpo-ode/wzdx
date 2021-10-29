@@ -1,7 +1,7 @@
 # HybridSign Object
-The HybridSign object describes a hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers. This object is intended to be general to represent hybrid signs with multiple functions, such as variable speed limit signs (VSLS), hybrid travel time signs and other similar systems.
+The `HybridSign` object describes a hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers. This object is intended to be general to represent hybrid signs with multiple functions, such as variable speed limit signs (VSLS), hybrid travel time signs, and other similar systems.
 
-The HybridSign is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
+The `HybridSign` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
 ## Properties 
 Name | Type | Description | Conformance | Notes

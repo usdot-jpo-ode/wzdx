@@ -1,5 +1,5 @@
 # FeedDataSource Object
-The `FeedDataSource` object describes information about a specific data source used to build a work zone data feed. A WZDx feed must contain at least one `FeedDataSource`, included as an entry in the `data_sources` array of the `FeedInfo` object.
+The `FeedDataSource` object describes information about a specific data source used to build a work zone data feed. A WZDx feed must contain at least one `FeedDataSource`, included as an entry in the `data_sources` array of the [FeedInfo](/spec-content/objects/FeedInfo.md) object.
 
 ## Properties
 Name | Type | Description | Conformance | Notes

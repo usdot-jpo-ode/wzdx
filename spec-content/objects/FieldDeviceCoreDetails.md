@@ -1,5 +1,5 @@
 # FieldDeviceCoreDetails Object
-The FieldDeviceCoreDetails object represents the core details—both configuration and current state—of a field device that are shared by all types of field devices. The FieldDeviceCoreDetails object can not occur directly in a data feed and does not represent a field device on its own. It is used as the value of the `core_details` property on every specific type of field device, each which is represented by its own object.
+The `FieldDeviceCoreDetails` object represents the core details—both configuration and current state—of a field device that are shared by all types of field devices. The `FieldDeviceCoreDetails` object cannot occur directly in a data feed and does not represent a field device on its own. It is used as the value of the `core_details` property on every specific type of field device, each represented by its own object.
 
 ## Properties
 Name | Type | Description | Conformance | Notes

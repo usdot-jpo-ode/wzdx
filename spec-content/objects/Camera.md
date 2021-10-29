@@ -1,7 +1,7 @@
 # Camera Object
-The camera object describes a camera device deployed in the field, capable of capturing still images.
+The `Camera` object describes a camera device deployed in the field, capable of capturing still images.
 
-The Camera is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
+The `Camera` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
 ## Properties
 Name | Type | Description | Conformance | Notes

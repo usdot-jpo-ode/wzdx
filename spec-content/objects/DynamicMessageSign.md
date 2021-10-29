@@ -1,7 +1,7 @@
 # DynamicMessageSign Object
-The DynamicMessageSign object describes a dynamic message sign (DMS)—also known as changeable message sign (CMS) or variable message sign (VMS)—which is an electronic traffic sign deployed on the roadway used to provide information to travelers.
+The `DynamicMessageSign` object describes a dynamic message sign (DMS)—also known as changeable message sign (CMS) or variable message sign (VMS)—which is an electronic traffic sign deployed on the roadway used to provide information to travelers.
 
-The DynamicMessageSign is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
+The `DynamicMessageSign` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
 ## Properties 
 Name | Type | Description | Conformance | Notes
