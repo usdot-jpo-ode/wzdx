@@ -43,7 +43,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDxFeed](/spec-content/objects/WZDxFeed.md)
-        - [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md.md)
+        - [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md)
         - [FeedInfo](/spec-content/objects/FeedInfo.md)
         - [FeedDataSource](/spec-content/objects/FeedDataSource.md)
         - [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)
