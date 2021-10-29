@@ -1,5 +1,5 @@
 # FieldDeviceType Enumerated Type
-The FieldDeviceType enumerated type enumerates all types of field devices described by the specification.
+The `FieldDeviceType` enumerated type enumerates all types of field devices described by the specification.
 
 ## Values
 Value | Description

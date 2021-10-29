@@ -1,5 +1,5 @@
 # MarkedLocationType Enumerated Type
-The MarkedLocationType enumerated type describes options for what a [MarkedLocation](/spec-content/objects/MarkedLocation.md) can mark, such as the start or end of a road event.
+The `MarkedLocationType` enumerated type describes options for what a [MarkedLocation](/spec-content/objects/MarkedLocation.md) can mark, such as the start or end of a road event.
 
 ## Values
 Value | Description

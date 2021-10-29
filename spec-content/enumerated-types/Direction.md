@@ -15,7 +15,7 @@ Property | Object
 `direction` | [RoadEvent](/spec-content/objects/RoadEvent.md)
 
 ## Additional Information
-The Direction enumerated type values were based on the TMDD Link-alignment Enumeration, which contains the following values:
+The `Direction` enumerated type values were based on the TMDD Link-alignment Enumeration, which contains the following values:
 
 ```
 northbound (1)

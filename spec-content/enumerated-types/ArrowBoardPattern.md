@@ -1,5 +1,5 @@
 # ArrowBoardPattern Enumerated Type
-The ArrowBoardPattern enumerated type defines a list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
+The `ArrowBoardPattern` enumerated type defines a list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
 
 If the arrow board pattern does not exactly match one of the values described, the closest pattern should be used.
 
@@ -11,13 +11,13 @@ Value | Description
 `right-arrow-flashing` | Merge right represented by an arrow pattern (e.g. `-->`) that flashes on/off.
 `right-arrow-sequential` | Merge right represented by an arrow pattern (e.g. `-->`) that is displayed in a progressing sequence (e.g. `>` `->` `-->` or `-` `--` `-->`).
 `right-chevrons-static` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that does not flash or move.
-`right-chevrons-flashing` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that that flashes on/off.
+`right-chevrons-flashing` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that flashes on/off.
 `right-chevrons-sequential` | Merge right represented by a pattern of chevrons that is displayed in a progressing sequence.
 `left-arrow-static` | Merge left represented by an arrow pattern (e.g. `<--`) that does not flash or move.
 `left-arrow-flashing` | Merge left represented by an arrow pattern (e.g. `<--`) that flashes on/off.
 `left-arrow-sequential` | Merge left represented by an arrow pattern (e.g. `<--`) that is displayed in a progressing sequence (e.g. `<` `<-` `<--` or `-` `--` `<--`).
 `left-chevron-static` | Merge left represented by a pattern of chevrons (e.g. `<<<`) that does not flash or move.
-`left-chevron-flashing` | Merge left represented by a pattern of chevrons (e.g. `<<<`) that that flashes on/off.
+`left-chevron-flashing` | Merge left represented by a pattern of chevrons (e.g. `<<<`) that flashes on/off.
 `left-chevron-sequential` | Merge left represented by a pattern of chevrons that is displayed in a progressing sequence.
 `bidirectional-arrow-static` | Split (merge left or right) represented by arrows pointing both left and right (e.g. `<-->`) that does not flash or move. 
 `bidirectional-arrow-flashing` | Split (merge left or right) represented by arrows pointing both left and right (e.g. `<-->`) that flashes on/off. 

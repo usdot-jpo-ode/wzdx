@@ -1,5 +1,5 @@
 # FieldDeviceStatus Enumerated Type
-The FieldDeviceStatus enumerated type describes the operational status of a field device. The status indicates the health of the device.
+The `FieldDeviceStatus` enumerated type describes the operational status of a field device. The status indicates the health of the device.
 
 ## Values
 Value | Description 
