@@ -91,7 +91,7 @@ The local access only example ([Linestring](/create-feed/examples/linestring-exa
 - The comprehensive example ([Linestring](/create-feed/examples/linestring-examples/comprehensive_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/comprehensive_multipoint_example.geojson)) contains all of the examples listed above in a single GeoJSON file showing how the various road events across multiple organizations and data sources can be represented in a single WZDx feed.
 
 ## JSON Schemas
-The WZDx Specification defines two "feeds" each with a JSON schema. The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
+The WZDx Specification defines two "feeds", each with a JSON schema. The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
 
 * [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
 * [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
