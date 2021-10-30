@@ -13,4 +13,5 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`event_status` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
+`event_status` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`event_status` | [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
