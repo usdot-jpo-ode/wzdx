@@ -10,9 +10,9 @@ Value | Description
 `right-arrow-static` | Merge right represented by an arrow pattern (e.g. `-->`) that does not flash or move.
 `right-arrow-flashing` | Merge right represented by an arrow pattern (e.g. `-->`) that flashes on/off.
 `right-arrow-sequential` | Merge right represented by an arrow pattern (e.g. `-->`) that is displayed in a progressing sequence (e.g. `>` `->` `-->` or `-` `--` `-->`).
-`right-chevrons-static` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that does not flash or move.
-`right-chevrons-flashing` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that flashes on/off.
-`right-chevrons-sequential` | Merge right represented by a pattern of chevrons that is displayed in a progressing sequence.
+`right-chevron-static` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that does not flash or move.
+`right-chevron-flashing` | Merge right represented by a pattern of chevrons (e.g. `>>>`) that flashes on/off.
+`right-chevron-sequential` | Merge right represented by a pattern of chevrons that is displayed in a progressing sequence.
 `left-arrow-static` | Merge left represented by an arrow pattern (e.g. `<--`) that does not flash or move.
 `left-arrow-flashing` | Merge left represented by an arrow pattern (e.g. `<--`) that flashes on/off.
 `left-arrow-sequential` | Merge left represented by an arrow pattern (e.g. `<--`) that is displayed in a progressing sequence (e.g. `<` `<-` `<--` or `-` `--` `<--`).
