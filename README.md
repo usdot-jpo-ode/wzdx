@@ -48,6 +48,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
         - [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
         - [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
+        - [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)
         - [TypeOfWork](/spec-content/objects/TypeOfWork.md)
         - [Lane](/spec-content/objects/Lane.md)
         - [LaneRestriction](/spec-content/objects/LaneRestriction.md)
