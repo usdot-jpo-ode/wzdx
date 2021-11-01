@@ -24,7 +24,7 @@ Name | Type | Description | Conformance | Notes
 `types_of_work` | Array; \[[TypeOfWork](/spec-content/objects/TypeOfWork.md)\] | A list of the types of work being done in a road event and an indiciation of if each type results in an architectural change to the roadway. | Optional | 
 `workers_present` | Boolean | A flag indicating that there are workers present in the event space. | Optional |
 `reduced_speed_limit` | Integer | The reduced speed limit posted within the event space. | Optional |
-`restrictions` | Array; \[[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md)\] | Zero or more road restrictions applying to the work zone road segment associated with the work zone. | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes.
+`restrictions` | Array; [[Restriction](/spec-content/objects/Restriction.md)] | A list of zero or more road restrictions that apply to the roadway segment described by this road event. | Optional | Restrictions can also be provided on an individual lane.
 
 ## Used By
 Property | Object
