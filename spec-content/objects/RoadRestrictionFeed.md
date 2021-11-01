@@ -1,5 +1,5 @@
 # RoadRestrictionFeed Object (GeoJSON FeatureCollection)
-The `RoadRestrictionFeed` object is the root (highest level) object of a Road Restriction feed. There is one Rpad Restriction Feed object per Road Restriction GeoJSON document. The `RoadRestrictionFeed` is an instance of a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
+The `RoadRestrictionFeed` object is the root (highest level) object of a Road Restriction feed. There is one Road Restriction Feed object per Road Restriction GeoJSON document. The `RoadRestrictionFeed` is an instance of a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
