@@ -1,7 +1,5 @@
 # RestrictionRoadEvent Object
-The `RestrictionRoadEvent` object contains information that describes where, when, and what restrictions are placed along a road segment.
-
-Restrictions are policies limiting road use.
+The `RestrictionRoadEvent` object that describes where, when, and what restrictions are placed along a road segment. Restrictions are policies limiting road use.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
