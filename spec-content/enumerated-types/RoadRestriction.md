@@ -22,5 +22,5 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`restrictions` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
 `restriction_type` | [LaneRestriction](/spec-content/objects/LaneRestriction.md)
