@@ -10,7 +10,9 @@
     },
     "type": {
       "description": "The GeoJSON type",
-      "enum": ["FeatureCollection"]
+      "enum": [
+        "FeatureCollection"
+      ]
     },
     "features": {
       "description": "An array of GeoJSON Feature objects which represent WZDx restriction road events",
@@ -23,7 +25,11 @@
       "$ref": "#/definitions/BoundingBox"
     }
   },
-  "required": ["road_event_feed_info", "type", "features"],
+  "required": [
+    "road_event_feed_info",
+    "type",
+    "features"
+  ],
   "definitions": {
     "BoundingBox": {
       "title": "GeoJSON Bounding Box",
@@ -69,7 +75,9 @@
         },
         "license": {
           "description": "The URL of the license that applies to the data in the WZDx feed. This *must* be the string \"https://creativecommons.org/publicdomain/zero/1.0/\"",
-          "enum": ["https://creativecommons.org/publicdomain/zero/1.0/"]
+          "enum": [
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ]
         },
         "data_sources": {
           "description": "A list of specific data sources for the road event data in the feed",
@@ -80,7 +88,12 @@
           "minItems": 1
         }
       },
-      "required": ["update_date", "version", "publisher", "data_sources"]
+      "required": [
+        "update_date",
+        "version",
+        "publisher",
+        "data_sources"
+      ]
     },
     "RoadEventDataSource": {
       "title": "Road Event Data Source",
@@ -128,7 +141,10 @@
           "format": "uri"
         }
       },
-      "required": ["data_source_id", "organization_name"]
+      "required": [
+        "data_source_id",
+        "organization_name"
+      ]
     },
     "RoadEventFeature": {
       "title": "Road Event Feature (GeoJSON Feature)",
@@ -141,10 +157,12 @@
         },
         "type": {
           "description": "The GeoJSON object type; must be 'Feature'",
-          "enum": ["Feature"]
+          "enum": [
+            "Feature"
+          ]
         },
         "properties": {
-					"$ref": "#/definitions/RestrictionRoadEvent"
+          "$ref": "#/definitions/RestrictionRoadEvent"
         },
         "geometry": {
           "oneOf": [
@@ -160,7 +178,12 @@
           "$ref": "#/definitions/BoundingBox"
         }
       },
-      "required": ["type","properties","geometry", "id"]
+      "required": [
+        "type",
+        "properties",
+        "geometry",
+        "id"
+      ]
     },
     "RestrictionRoadEvent": {
       "title": "Restriction Road Event",
@@ -185,10 +208,20 @@
           }
         }
       },
-			"required": ["core_details"],
-			"anyOf": [
-        { "required": ["restrictions"] },
-        { "required": ["lanes"] }
+      "required": [
+        "core_details"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "restrictions"
+          ]
+        },
+        {
+          "required": [
+            "lanes"
+          ]
+        }
       ]
     },
     "RoadEventCoreDetails": {
@@ -202,7 +235,9 @@
         },
         "event_type": {
           "description": "The type of WZDx road event",
-          "enum": ["restriction"]
+          "enum": [
+            "restriction"
+          ]
         },
         "relationship": {
           "$ref": "#/definitions/Relationship"
@@ -240,7 +275,7 @@
         "road_names"
       ]
     },
-		"Relationship": {
+    "Relationship": {
       "title": "Relationship",
       "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
       "type": "object",
@@ -308,7 +343,11 @@
           }
         }
       },
-      "required": ["status", "type", "order"]
+      "required": [
+        "status",
+        "type",
+        "order"
+      ]
     },
     "Restriction": {
       "title": "Restriction",
@@ -325,20 +364,35 @@
           "$ref": "#/definitions/UnitOfMeasurement"
         }
       },
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "dependencies": {
-        "value": ["unit"]
+        "value": [
+          "unit"
+        ]
       }
     },
     "Direction": {
       "title": "Direction Enumerated Type",
       "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound"]
+      "enum": [
+        "northbound",
+        "eastbound",
+        "southbound",
+        "westbound"
+      ]
     },
     "EventStatus": {
       "title": "Event Status Enumerated Type",
       "description": "The status of the road event",
-      "enum": ["planned", "pending", "active", "completed", "cancelled"]
+      "enum": [
+        "planned",
+        "pending",
+        "active",
+        "completed",
+        "cancelled"
+      ]
     },
     "RestrictionType": {
       "title": "Restriction Type Enumerated Type",
@@ -363,7 +417,16 @@
     "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
-      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way", "alternating-flow"]
+      "enum": [
+        "open",
+        "closed",
+        "shift-left",
+        "shift-right",
+        "merge-left",
+        "merge-right",
+        "alternating-one-way",
+        "alternating-flow"
+      ]
     },
     "LaneType": {
       "title": "Lane Type Enumerated Type",
@@ -404,7 +467,14 @@
     "UnitOfMeasurement": {
       "title": "Unit of Measurement Enumerated Type",
       "description": "Unit of measurement, used when providing a unit to accompany a value",
-      "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
+      "enum": [
+        "feet",
+        "inches",
+        "centimeters",
+        "pounds",
+        "tons",
+        "kilograms"
+      ]
     }
   }
 }
