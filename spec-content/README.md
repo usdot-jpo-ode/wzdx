@@ -39,7 +39,7 @@ Object | Description
 --- | ---
 [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
 [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway.
-[RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) | A road event limiting how the road can be used.
+[RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) | describes a section of roadway and the limitations of how that section can be used.
 
 ### Object Diagram
 The object diagram below indicates the relationship between the data objects.

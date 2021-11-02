@@ -164,7 +164,7 @@
     },
     "RestrictionRoadEvent": {
       "title": "Restriction Road Event",
-      "description": "Describes a specific restriction on a roadway. A restriction is a policy that limits how a road can be used",
+      "description": "A road event describing a section of roadway and the limitations of how that section can be used.",
       "type": "object",
       "properties": {
         "core_details": {
