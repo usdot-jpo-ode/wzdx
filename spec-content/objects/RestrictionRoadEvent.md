@@ -1,5 +1,9 @@
 # RestrictionRoadEvent Object
-The `RestrictionRoadEvent` object that describes where, when, and what restrictions are placed along a road segment. Restrictions are policies limiting road use.
+The `RestrictionRoadEvent` object describes a specific restriction on a roadway. A restriction is a policy that limits how a road can be used. The `RestrictionRoadEvent` is a linear road event intended to represent persistent restrictions without a defined start or event date, such as bridge clearances. 
+
+The `RestrictionRoadEvent` is a type of road event; it has a `core_details` property which contains the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and exists within a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
+
+For representing restrictions due to road work, see the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [WZDxFeed](/spec-content/objects/WZDxFeed.md).
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -13,5 +17,3 @@ Property | Object
 --- | ---
 `properties` | [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)
 
-## Important Notes
-None
