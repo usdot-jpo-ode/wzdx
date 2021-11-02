@@ -5,7 +5,7 @@
   "description": "The GeoJSON output of a WZDx road restriction data feed (v1.0)",
   "type": "object",
   "properties": {
-    "road_event_feed_info": {
+    "feed_info": {
       "$ref": "#/definitions/RoadEventFeedInfo"
     },
     "type": {

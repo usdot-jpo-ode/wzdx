@@ -17,3 +17,4 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | --- 
 `road_event_feed_info` | [WZDxFeed](/spec-content/objects/WZDxFeed.md)
+`feed_info` | [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md)
