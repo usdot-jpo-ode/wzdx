@@ -59,7 +59,7 @@
           "minimum": 1
         },
         "update_date": {
-          "description": "The UTC date and time when the data feed was last updated",
+          "description": "The UTC date and time when the GeoJSON file (representing the instance of the feed) was generated",
           "type": "string",
           "format": "date-time"
         },
@@ -118,10 +118,6 @@
         "location_method": {
           "$ref": "#/definitions/LocationMethod"
         },
-        "location_verify_method": {
-          "description": "The method used to verify the accuracy of the location information",
-          "type": "string"
-        },
         "lrs_type": {
           "description": "Describes the type of linear referencing system used for the milepost measurements",
           "type": "string"
@@ -130,6 +126,10 @@
           "description": "A URL where additional information on the LRS information and transformation information is stored",
           "type": "string",
           "format": "uri"
+        },        
+        "location_verify_method": {
+          "description": "***DEPRECATED***The method used to verify the accuracy of the location information",
+          "type": "string"
         }
       },
       "required": ["data_source_id", "organization_name", "location_method"]
@@ -253,8 +253,8 @@
           "description": "A flag indicating that there are workers present in the road event",
           "type": "boolean"
         },
-        "reduced_speed_limit": {
-          "description": "The reduced speed limit posted within the road event",
+        "reduced_speed_limit_kph": {
+          "description": "If applicable, the reduced speed limit posted within the road event, in kilometers per hour",
           "type": "integer",
           "minimum": 0
         },
@@ -379,7 +379,7 @@
           "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
-          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
           "minimum": 1
         },
@@ -441,7 +441,7 @@
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
-      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "unknown"]
+      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
     },
     "RoadRestriction": {
       "title": "Road Restriction Enumerated Type",
@@ -488,18 +488,16 @@
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "lane",
-        "right-turning-lane",
-        "left-turning-lane",
-        "right-exit-lane",
-        "left-exit-lane",
-        "right-exit-ramp",
-        "left-exit-ramp",
-        "right-entrance-ramp",
-        "left-entrance-ramp",
+        "general",
+        "exit-lane",
+        "exit-ramp",
+        "entrance-lane",
+        "entrance-ramp",
         "sidewalk",
         "bike-lane",
         "shoulder",
+        "parking",
+        "median",
         "center-left-turn-lane"
       ]
     },

@@ -15,7 +15,6 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method",
         "lrs_type": "milemarkers",
         "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
@@ -111,7 +110,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "local-access-only"
