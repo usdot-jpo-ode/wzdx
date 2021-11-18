@@ -15,7 +15,6 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method"
       },
       {
@@ -25,7 +24,6 @@
         "contact_email": "samuel.sourcefeed@testdot.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method"
       },
       {
@@ -35,7 +33,6 @@
         "contact_email": "stu.sourcefeed@testcounty1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method"
       },
       {
@@ -45,7 +42,6 @@
         "contact_email": "skip.sourcefeed@testcity2.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method"
       }
     ]
@@ -139,7 +135,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "local-access-only"
@@ -278,7 +274,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
@@ -290,7 +286,7 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           }
         ]
       },
@@ -612,22 +608,22 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
             "status": "open",
-            "type": "right-entrance-ramp"
+            "type": "entrance-lane"
           },
           {
             "order": 6,
@@ -711,22 +707,22 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
             "status": "open",
-            "type": "right-exit-lane"
+            "type": "exit-lane"
           },
           {
             "order": 6,
@@ -823,17 +819,17 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -982,17 +978,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -1112,12 +1108,12 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -1189,12 +1185,12 @@
           {
             "order": 1,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -1292,7 +1288,7 @@
           {
             "order": 2,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "reduced-width",
@@ -1304,7 +1300,7 @@
           {
             "order": 3,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
@@ -2075,7 +2071,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2168,7 +2164,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2253,7 +2249,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2338,7 +2334,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -2423,7 +2419,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,

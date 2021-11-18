@@ -64,17 +64,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,

@@ -15,7 +15,6 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
         "location_method": "channel-device-method"
       }
     ]
@@ -64,17 +63,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
