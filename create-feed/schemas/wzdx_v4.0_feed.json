@@ -119,11 +119,11 @@
           "$ref": "#/definitions/LocationMethod"
         },
         "lrs_type": {
-          "description": "Describes the type of linear referencing system used for the milepost measurements",
+          "description": "**DEPRECATED** Describes the type of linear referencing system used for the milepost measurements",
           "type": "string"
         },
         "lrs_url": {
-          "description": "A URL where additional information on the LRS information and transformation information is stored",
+          "description": "**DEPRECATED** A URL where additional information on the LRS information and transformation information is stored",
           "type": "string",
           "format": "uri"
         },        

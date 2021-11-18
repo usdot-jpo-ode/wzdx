@@ -15,9 +15,7 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "2",
@@ -26,9 +24,7 @@
         "contact_email": "samuel.sourcefeed@testdot.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:39:01Z",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "3",
@@ -37,9 +33,7 @@
         "contact_email": "stu.sourcefeed@testcounty1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:05Z",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "4",
@@ -48,9 +42,7 @@
         "contact_email": "skip.sourcefeed@testcity2.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:38:59Z",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       }
     ]
   },
