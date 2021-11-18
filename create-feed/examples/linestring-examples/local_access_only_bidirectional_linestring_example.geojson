@@ -42,7 +42,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -99,7 +101,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -111,7 +115,7 @@
             "type": "general",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           },
@@ -121,7 +125,7 @@
             "type": "bike-lane",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           }

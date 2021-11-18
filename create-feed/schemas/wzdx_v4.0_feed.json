@@ -259,12 +259,11 @@
           "minimum": 0
         },
         "restrictions": {
-          "description": "Zero or more road restrictions applying to the road event",
+          "description": "A list of zero or more restrictions applying to the road event",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RoadRestriction"
-          },
-          "uniqueItems": true
+            "$ref": "#/definitions/Restriction"
+          }
         },
         "description": {
           "description": "Short free text description of the road event",
@@ -384,33 +383,33 @@
           "minimum": 1
         },
         "restrictions": {
-          "description": "A list of restrictions specific to the lane",
+          "description": "A list of zero or more restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LaneRestriction"
+            "$ref": "#/definitions/Restriction"
           }
         }
       },
       "required": ["status", "type", "order"]
     },
-    "LaneRestriction": {
-      "title": "Lane Restriction",
-      "description": "A lane-level restriction, including type and value",
+    "Restriction": {
+      "title": "Restriction",
+      "description": "A restriction on a roadway or lane, including type and value",
       "type": "object",
       "properties": {
-        "restriction_type": {
-          "$ref": "#/definitions/RoadRestriction"
+        "type": {
+          "$ref": "#/definitions/RestrictionType"
         },
-        "restriction_value": {
+        "value": {
           "type": "number"
         },
-        "restriction_units": {
-          "$ref": "#/definitions/LaneRestrictionUnit"
+        "unit": {
+          "$ref": "#/definitions/UnitOfMeasurement"
         }
       },
-      "required": ["restriction_type"],
+      "required": ["type"],
       "dependencies": {
-        "restriction_value": ["restriction_units"]
+        "value": ["unit"]
       }
     },
     "EventType": {
@@ -443,8 +442,8 @@
       "description": "The impact to vehicular lanes along a single road in a single direction",
       "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
     },
-    "RoadRestriction": {
-      "title": "Road Restriction Enumerated Type",
+    "RestrictionType": {
+      "title": "Restriction Type Enumerated Type",
       "description": "The type of vehicle restriction on a roadway",
       "enum": [
         "no-trucks",
@@ -501,9 +500,9 @@
         "center-left-turn-lane"
       ]
     },
-    "LaneRestrictionUnit": {
-      "title": "Lane Restriction Unit Enumerated Type",
-      "description": "Units of measure used for the lane restriction value",
+    "UnitOfMeasurement": {
+      "title": "Unit of Measurement Enumerated Type",
+      "description": "Unit of measurement, used when providing a unit to accompany a value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
     }
   }
