@@ -111,7 +111,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "restriction_type": "local-access-only"
