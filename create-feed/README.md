@@ -29,8 +29,8 @@ The tables below detail the specificaton's content and describe the data used to
 - The [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object describes a work zone event.
 - The [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) object describes a detour event.
 - The [TypeOfWork](/spec-content/objects/TypeOfWork.md) object describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
+- The [Restriction](/spec-content/objects/Restriction.md) object describes a restriction on a roadway or lane.
 - The [Lane](/spec-content/objects/Lane.md) object identifies and describes individual lanes within an event.
-- The [LaneRestriction](/spec-content/objects/LaneRestriction.md) object describes restrictions for identified lanes.
 - The [Relationship](/spec-content/objects/Relationship.md) object identifies sequential and hierarchical relationships between road events and other entities.
 
 The figure below models the tables and their relationships.
@@ -86,7 +86,7 @@ Scenario 5 ([Linestring](/create-feed/examples/linestring-examples/scenario5_rec
 The local access only example ([Linestring](/create-feed/examples/linestring-examples/local_access_only_bidirectional_linestring_example.geojson) or [MultiPoint](/create-feed/examples/multipoint-examples/local_access_only_bidirectional_multipoint_example.geojson)) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
 - Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `WZ389-NB`, `WZ389-SB`), one for each direction.
-- Uses `local-access-only` [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md).
+- Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
 
 ### Comprehensive Example
