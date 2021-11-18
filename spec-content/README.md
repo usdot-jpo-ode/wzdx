@@ -24,7 +24,7 @@ This section provides a tabular list of all objects used in the WZDx specificati
 Object | Description
 --- | ---
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
-[LaneRestriction](/spec-content/objects/LaneRestriction.md) | A lane-level restriction, including type and value.
+[Restriction](/spec-content/objects/Restriction.md) | A restriction on a road event or lane, including type and value.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [RoadEvent](/spec-content/objects/RoadEvent.md) | Information that describes where, when, and what activity is taking place along a road segment.
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
@@ -53,13 +53,13 @@ Enumerated Type | Description
 [Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
 [EventType](/spec-content/enumerated-types/EventType.md) | The type of a WZDx road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of a road event.
-[LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | Units of measure used for a lane restriction value.
 [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | The status of a lane for the traveling public.
 [LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder.
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
-[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | The type of vehicle restriction on a roadway.
+[RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway or lane.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | A measure of how accurate a date-time is.
+[UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Unit of measurement (e.g. "pounds", "centimeters").
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md) | High-level description of the feed publisher's confidence in worker presence
 [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Method of knowing the presence of workers in the road event area.
@@ -78,10 +78,9 @@ Property | Object | Enumerated Type | Notes
 `event_type` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventType](/spec-content/enumerated-types/EventType.md) | Enumeration create in WZDx v3.0
 `event_status` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | Enumeration created in WZDx v1.0
 `location_method` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | Enumeration created in WZDx v3.0 but referenced since v1.1
-`restrictions` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Enumeration created in WZDx v1.0
-`restriction_type` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md) | Individual lane restrictions | Enumeration created in WZDx v1.0
-`restriction_units` | [LaneRestriction](/spec-content/objects/LaneRestriction.md) | [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md) | This is an intial list, created in WZDx v2.0, and is not intended to be complete. More values will be added as needed.
 `method` | [WorkerPresence](/spec-content/objects/WorkerPresence.md) | [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Enumerated created in WZDx v4.0
+`type` | [Restriction](/spec-content/objects/Restriction.md) | [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | Enumeration created in WZDx v1.0
+`unit` | [Restriction](/spec-content/objects/Restriction.md) | [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | More values will be added as needed.
 `start_date_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md) | [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) | Enumeration updated in WZDx v3.0
 `status` | [Lane](/spec-content/objects/Lane.md) | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Enumeration created in WZDx v2.0
 `type` | [Lane](/spec-content/objects/Lane.md) | [LaneType](/spec-content/enumerated-types/LaneType.md) | Enumeration adapted from TMDD LaneRoadway; updated in WZDx v3.0

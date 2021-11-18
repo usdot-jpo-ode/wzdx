@@ -15,10 +15,7 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       }
     ]
   },
@@ -65,12 +62,12 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -133,7 +130,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "no-parking"
+          {
+            "type": "no-parking"
+          }
         ],
         "description": "Bidirectional work zone with shoulder closure; westbound direction without shoulder closure.",
         "creation_date": "2010-01-01T09:30:26Z",
@@ -142,12 +141,12 @@
           {
             "order": 1,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -155,7 +154,7 @@
             "type": "shoulder",
             "restrictions": [
               {
-                "restriction_type": "no-parking"
+                "type": "no-parking"
               }
             ]
           }

@@ -15,10 +15,7 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       }
     ]
   },
@@ -45,7 +42,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -86,7 +85,9 @@
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
-          "local-access-only"
+          {
+            "type": "local-access-only"
+          }
         ],
         "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
         "creation_date": "2010-01-01T01:01:01Z",
@@ -95,10 +96,10 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           },
@@ -108,7 +109,7 @@
             "type": "bike-lane",
             "restrictions": [
               {
-                "restriction_type": "local-access-only"
+                "type": "local-access-only"
               }
             ]
           }
