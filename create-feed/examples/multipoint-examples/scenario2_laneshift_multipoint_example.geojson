@@ -16,9 +16,7 @@
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
         "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       }
     ]
   },
@@ -45,7 +43,15 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "wearables-present",
+          "definition": [
+            "workers-in-work-zone-working",
+            "workers-in-work-zone-not-working",
+            "mobile-equipment-in-work-zone-moving"
+          ]
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone with lane shift",
@@ -66,17 +72,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,

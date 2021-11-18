@@ -15,10 +15,7 @@
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:31Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "2",
@@ -27,10 +24,7 @@
         "contact_email": "samuel.sourcefeed@testdot.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:39:01Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "3",
@@ -39,10 +33,7 @@
         "contact_email": "stu.sourcefeed@testcounty1.gov",
         "update_frequency": 300,
         "update_date": "2020-06-18T14:37:05Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       },
       {
         "data_source_id": "4",
@@ -51,10 +42,7 @@
         "contact_email": "skip.sourcefeed@testcity2.gov",
         "update_frequency": 60,
         "update_date": "2020-06-18T14:38:59Z",
-        "location_verify_method": "GPS",
-        "location_method": "channel-device-method",
-        "lrs_type": "milemarkers",
-        "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+        "location_method": "channel-device-method"
       }
     ]
   },
@@ -135,7 +123,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "type": "local-access-only"
@@ -234,7 +222,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "type": "reduced-width",
@@ -246,7 +234,7 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           }
         ]
       },
@@ -295,7 +283,12 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": false,
+          "definition": [
+            "humans-in-right-of-way"
+          ]
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; first event.",
@@ -316,22 +309,22 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
             "status": "open",
-            "type": "right-entrance-ramp"
+            "type": "entrance-lane"
           },
           {
             "order": 6,
@@ -384,9 +377,16 @@
         "start_date_accuracy": "estimated",
         "end_date_accuracy": "estimated",
         "event_status": "active",
-        "total_num_lanes": 4,
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "check-in-app",
+          "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+          "confidence": "high",
+          "definition": [
+            "humans-in-right-of-way"
+          ]
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; second event.",
@@ -407,22 +407,22 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
             "status": "open",
-            "type": "right-exit-lane"
+            "type": "exit-lane"
           },
           {
             "order": 6,
@@ -472,9 +472,16 @@
         "start_date_accuracy": "estimated",
         "end_date_accuracy": "estimated",
         "event_status": "active",
-        "total_num_lanes": 3,
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "check-in-app",
+          "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+          "confidence": "high",
+          "definition": [
+            "humans-in-right-of-way"
+          ]
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone represented by three sequential road events; third event.",
@@ -495,17 +502,17 @@
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -549,7 +556,15 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "wearables-present",
+          "definition": [
+            "workers-in-work-zone-working",
+            "workers-in-work-zone-not-working",
+            "mobile-equipment-in-work-zone-moving"
+          ]
+        },
         "reduced_speed_limit": 55,
         "restrictions": [],
         "description": "Single-direction work zone with lane shift",
@@ -570,17 +585,17 @@
           {
             "order": 2,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
             "status": "shift-right",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 5,
@@ -644,12 +659,12 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -711,12 +726,12 @@
           {
             "order": 1,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 3,
@@ -771,7 +786,16 @@
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "some-lanes-closed",
-        "workers_present": true,
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "scheduled",
+          "confidence": "medium",
+          "definition": [
+            "workers-in-work-zone-working",
+            "workers-in-work-zone-not-working",
+            "mobile-equipment-in-work-zone-moving"
+          ]
+        },
         "reduced_speed_limit": 55,
         "description": "Simple, single direction work zone with detour.",
         "creation_date": "2009-12-15T14:01:01Z",
@@ -791,7 +815,7 @@
           {
             "order": 2,
             "status": "open",
-            "type": "lane",
+            "type": "general",
             "restrictions": [
               {
                 "type": "reduced-width",
@@ -803,7 +827,7 @@
           {
             "order": 3,
             "status": "closed",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 4,
@@ -1006,7 +1030,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -1067,7 +1091,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -1128,7 +1152,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -1189,7 +1213,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,
@@ -1250,7 +1274,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "lane"
+            "type": "general"
           },
           {
             "order": 2,

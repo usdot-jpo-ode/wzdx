@@ -15,10 +15,7 @@
             "contact_email": "solomon.sourcefeed@testcity1.gov",
             "update_frequency": 300,
             "update_date": "2020-06-18T14:37:31Z",
-            "location_verify_method": "GPS",
-            "location_method": "channel-device-method",
-            "lrs_type": "milemarkers",
-            "lrs_url": "https://gis.iowadot.gov/rams/rest/services/lrs"
+            "location_method": "channel-device-method"
          }
       ]
    },
@@ -51,7 +48,16 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "workers_present": true,
+            "worker_presence": {
+               "are_workers_present": true,
+               "method": "scheduled",
+               "confidence": "medium",
+               "worker_presence_definition": [
+                  "workers-in-work-zone-working",
+                  "workers-in-work-zone-not-working",
+                  "mobile-equipment-in-work-zone-moving"
+               ]
+            },
             "reduced_speed_limit": 55,
             "description": "Simple, single direction work zone with detour.",
             "creation_date": "2009-12-15T14:01:01Z",
@@ -71,7 +77,7 @@
                {
                   "order": 2,
                   "status": "open",
-                  "type": "lane",
+                  "type": "general",
                   "restrictions": [
                      {
                         "type": "reduced-width",
@@ -83,7 +89,7 @@
                {
                   "order": 3,
                   "status": "closed",
-                  "type": "lane"
+                  "type": "general"
                },
                {
                   "order": 4,
