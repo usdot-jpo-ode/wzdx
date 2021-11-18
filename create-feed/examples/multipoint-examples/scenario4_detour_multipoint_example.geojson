@@ -48,7 +48,16 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "workers_present": true,
+            "worker_presence": {
+               "are_workers_present": true,
+               "method": "scheduled",
+               "confidence": "medium",
+               "definition": [
+                  "workers-in-work-zone-working",
+                  "workers-in-work-zone-not-working",
+                  "mobile-equipment-in-work-zone-moving"
+               ]
+            },
             "reduced_speed_limit": 55,
             "description": "Simple, single direction work zone with detour.",
             "creation_date": "2009-12-15T14:01:01Z",
