@@ -89,7 +89,7 @@ The local access only example ([Linestring](/create-feed/examples/linestring-exa
 
 
 ### Bridge Height Restriction
-The bridge height restriction example ([Linestring](/create-feed/examples/linestring-examples/local_access_only_bidirectional_linestring_example.geojson)) shows how the restriction road event type can be used within a feed.
+The bridge height restriction example ([Linestring](/create-feed/examples/linestring-examples/bridge_restriction_linestring_example.geojson)) shows how the restriction road event type can be used within a feed.
 
 - Three bridge height restriction examples are shown with only the core details and restriction as needed as part of the restriction road event
 - One road event, `Bridge1`, also includes lane level details including additional height restrictions values for individual lanes.
