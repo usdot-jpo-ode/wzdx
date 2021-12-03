@@ -22,7 +22,7 @@
       		"properties": {
           		"core_details": {
             			"event_type": "restriction",
-            			"data_source_id": 1,
+            			"data_source_id": "1",
             			"road_names": [
 					"HRP",
 					"Hutchinson Parkway",
@@ -34,7 +34,7 @@
 			   {
 				"type": "reduced-height",
 				"value": 10.5,
-				"units": "feet"
+				"unit": "feet"
 			   }
 			],
 			"lanes":[
@@ -46,7 +46,7 @@
 				   {
 					"type": "reduced-height",
 					"value": 10.5,
-					"units": "feet"
+					"unit": "feet"
 				   }
 				]
                		   },
@@ -58,7 +58,7 @@
 				   {
 					"type": "reduced-height",
 					"value": 11,
-					"units": "feet"
+					"unit": "feet"
 				   }
 				]
                		   },
@@ -70,7 +70,7 @@
 				   {
 					"type": "reduced-height",
 					"value": 10.5,
-					"units": "feet"
+					"unit": "feet"
 				   }
 				]
                		   }
@@ -124,7 +124,7 @@
       		"properties": {
         		"core_details": {
           			"event_type": "restriction",
-          			"data_source_id": 1,
+          			"data_source_id": "1",
           			"road_names": [
 					"HRP",
 					"Hutchinson Parkway",
@@ -136,7 +136,7 @@
 			   {
 				"type": "reduced-height",
 				"value": 9.0,
-				"units": "feet"
+				"unit": "feet"
 			   }
 			]
       		},
@@ -168,7 +168,7 @@
       		"properties": {
         		"core_details": {
           			"event_type": "restriction",
-          			"data_source_id": 1,
+          			"data_source_id": "1",
           			"road_names": [
 					"HRP",
 					"Hutchinson Parkway",
@@ -180,7 +180,7 @@
 			   {
 				"type": "reduced-height",
 				"value": 11,
-				"units": "feet"
+				"unit": "feet"
 			   }
 			]
       		},
