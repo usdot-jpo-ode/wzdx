@@ -25,7 +25,7 @@ The tables below detail the specificaton's content and describe the data used to
 
 ### WZDx Work Zone (Road Event) Information
 
-- The [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) object represents the core details of an event occurring on a roadway (i.e. a "road event") that is shared by all types of road events.
+- The [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) object represents the core details of an event occurring on a roadway (i.e. a "road event") that applies to all types of road events.
 - The [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object describes a work zone event.
 - The [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) object describes a detour event.
 - The [TypeOfWork](/spec-content/objects/TypeOfWork.md) object describes the work taking place along the road.  If applicable, it indicates if the work changes the roadway's architecture.
