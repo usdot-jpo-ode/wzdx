@@ -115,9 +115,6 @@
           "type": "string",
           "format": "date-time"
         },
-        "location_method": {
-          "$ref": "#/definitions/LocationMethod"
-        },
         "lrs_type": {
           "description": "**DEPRECATED** Describes the type of linear referencing system used for the milepost measurements",
           "type": "string"
@@ -132,7 +129,7 @@
           "type": "string"
         }
       },
-      "required": ["data_source_id", "organization_name", "location_method"]
+      "required": ["data_source_id", "organization_name"]
     },
     "LocationMethod": {
       "title": "Location Method Enumerated Type",
@@ -147,7 +144,7 @@
     },
     "RoadEventFeature": {
       "title": "Road Event Feature (GeoJSON Feature)",
-      "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
+      "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
       "type": "object",
       "properties": {
         "id": {
@@ -159,7 +156,14 @@
           "enum": ["Feature"]
         },
         "properties": {
-          "$ref": "#/definitions/RoadEvent"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/WorkZoneRoadEvent"
+            },
+            {
+              "$ref": "#/definitions/DetourRoadEvent"
+            }
+          ]
         },
         "geometry": {
           "oneOf": [
@@ -177,9 +181,9 @@
       },
       "required": ["id","type","properties","geometry"]
     },
-    "RoadEvent": {
-      "title": "Road Event",
-      "description": "Describes an activity taking place along a road segment",
+    "RoadEventCoreDetails": {
+      "title": "Road Event Core Details",
+      "description": "The core details of an event occurring on a roadway (i.e. a road event) that is shared by all types of road events",
       "type": "object",
       "properties": {
         "data_source_id": {
@@ -202,6 +206,36 @@
         },
         "direction": {
           "$ref": "#/definitions/Direction"
+        },
+        "description": {
+          "description": "Short free text description of the road event",
+          "type": "string"
+        },
+        "creation_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "update_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "event_type",
+        "data_source_id",
+        "direction",
+        "road_names"
+      ]
+    },
+    "WorkZoneRoadEvent": {
+      "title": "Work Zone Road Event",
+      "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
+      "type": "object",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/RoadEventCoreDetails"
         },
         "beginning_cross_street": {
           "description": "Name or number of the nearest cross street along the roadway where the event begins",
@@ -249,6 +283,9 @@
         "vehicle_impact": {
           "$ref": "#/definitions/VehicleImpact"
         },
+        "location_method": {
+          "$ref": "#/definitions/LocationMethod"
+        },
         "worker_presence": {
           "$ref": "#/definitions/WorkerPresence"
         },
@@ -263,20 +300,6 @@
           "items": {
             "$ref": "#/definitions/Restriction"
           }
-        },
-        "description": {
-          "description": "Short free text description of the road event",
-          "type": "string"
-        },
-        "creation_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "update_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
         },
         "types_of_work": {
           "description": "A list of the types of work being done in a road event",
@@ -294,8 +317,7 @@
         }
       },
       "required": [
-        "data_source_id",
-        "direction",
+        "core_details",
         "beginning_accuracy",
         "ending_accuracy",
         "start_date",
@@ -303,7 +325,61 @@
         "start_date_accuracy",
         "end_date_accuracy",
         "vehicle_impact",
-        "road_names"
+        "location_method"
+      ]
+    },
+    "DetourRoadEvent": {
+      "title": "Detour Road Event",
+      "description": "Descibes a detour on a roadway",
+      "type": "object",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/RoadEventCoreDetails"
+        },
+        "beginning_cross_street": {
+          "description": "Name or number of the nearest cross street along the roadway where the event begins",
+          "type": "string"
+        },
+        "ending_cross_street": {
+          "description": "Name or number of the nearest cross street along the roadway where the event ends",
+          "type": "string"
+        },
+        "beginning_milepost": {
+          "description": "The linear distance measured against a milepost marker along a roadway where the event begins",
+          "type": "number",
+          "minimum": 0
+        },
+        "ending_milepost": {
+          "description": "The linear distance measured against a milepost marker along a roadway where the event ends",
+          "type": "number",
+          "minimum": 0
+        },
+        "start_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "end_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "start_date_accuracy": {
+          "$ref": "#/definitions/TimeVerification"
+        },
+        "end_date_accuracy": {
+          "$ref": "#/definitions/TimeVerification"
+        },
+        "event_status": {
+          "$ref": "#/definitions/EventStatus"
+        }
+      },
+      "required": [
+        "core_details",
+        "start_date",
+        "end_date",
+        "start_date_accuracy",
+        "end_date_accuracy"
       ]
     },
     "Relationship": {
