@@ -18,7 +18,6 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 ### Contents
 - [**Creating a WZDx Feed**](/create-feed)
     - [**Example Feed GeoJSON Files**](/create-feed/examples)
-        - [Bridge Height Restriction](/create-feed/examples/bridge_restriction_linestring_exxample.geojson)
         - [Local Access Only (bidirectional)](/create-feed/examples/local_access_only_bidirectional_linestring_example.geojson)
         - [Simple Work Zone (LineString)](/create-feed/examples/scenario1_simple_linestring_example.geojson)
         - [Lane Shift](/create-feed/examples/scenario2_laneshift_linestring_example.geojson)
