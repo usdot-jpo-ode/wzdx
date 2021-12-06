@@ -87,12 +87,6 @@ The [local access only example](/create-feed/examples/local_access_only_bidirect
 - Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
 
-### Bridge Height Restriction
-The [bridge height restriction example](/create-feed/examples/bridge_restriction_linestring_example.geojson) shows how the restriction road event type can be used within a feed.
-
-- Three bridge height restriction examples are shown with only the core details and restriction as needed as part of the restriction road event
-- One road event, `Bridge1`, also includes lane level details including additional height restrictions values for individual lanes.
-
 ## JSON Schemas
 The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
 

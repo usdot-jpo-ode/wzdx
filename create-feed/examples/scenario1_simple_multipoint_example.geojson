@@ -1,0 +1,427 @@
+{
+   "road_event_feed_info": {
+      "update_date": "2020-06-18T15:00:00Z",
+      "publisher": "TestDOT",
+      "contact_name": "Frederick Francis Feedmanager",
+      "contact_email": "fred.feedmanager@testdot.gov",
+      "update_frequency": 60,
+      "version": "4.0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "data_sources": [
+         {
+            "data_source_id": "1",
+            "organization_name": "Test City 1",
+            "contact_name": "Solomn Soliel Sourcefeed",
+            "contact_email": "solomon.sourcefeed@testcity1.gov",
+            "update_frequency": 300,
+            "update_date": "2020-06-18T14:37:31Z"
+         },
+         {
+            "data_source_id": "2",
+            "organization_name": "TestDOT",
+            "contact_name": "Samuel Sonny Sourcefeed",
+            "contact_email": "samuel.sourcefeed@testdot.gov",
+            "update_frequency": 60,
+            "update_date": "2020-06-18T14:39:01Z"
+         }
+      ]
+   },
+   "type": "FeatureCollection",
+   "features": [
+      {
+         "id": "71234",
+         "type": "Feature",
+         "properties": {
+            "core_details": {
+               "data_source_id": "1",
+               "event_type": "work-zone",
+               "road_names": [
+                  "I-80",
+                  "I-35"
+               ],
+               "direction": "northbound",
+               "description": "Single direction work zone without lane-level information.",
+               "creation_date": "2009-12-31T18:01:01Z",
+               "update_date": "2009-12-31T18:01:01Z"
+            },
+            "beginning_milepost": 125.2,
+            "ending_milepost": 126.3,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T01:00:00Z",
+            "end_date": "2010-01-02T01:00:00Z",
+            "location_method": "channel-device-method",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "reduced_speed_limit_kph": 88
+         },
+         "geometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+               [
+                  -93.776684050999961,
+                  41.617961698000045
+               ],
+               [
+                  -93.776688974999956,
+                  41.622297226000057
+               ]
+            ]
+         }
+      },
+      {
+         "id": "WDM-58493-NB",
+         "type": "Feature",
+         "properties": {
+            "core_details": {
+               "data_source_id": "1",
+               "event_type": "work-zone",
+               "road_names": [
+                  "128th Street"
+               ],
+               "direction": "northbound",
+               "description": "Single direction work zone with detailed lane-level information. Also includes additional details in vehicle impact",
+               "creation_date": "2009-12-13T13:35:26Z",
+               "update_date": "2009-12-31T15:11:16Z"
+            },
+            "beginning_cross_street": "US 6, Hickman Road",
+            "ending_cross_street": "Douglas Ave",
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T06:00:00Z",
+            "end_date": "2010-05-01T05:00:00Z",
+            "location_method": "channel-device-method",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed-merge-left",
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "open",
+                  "type": "general",
+                  "restrictions": [
+                     {
+                        "type": "reduced-width",
+                        "value": 10,
+                        "unit": "feet"
+                     }
+                  ]
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "general"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+               [
+                  -93.791522243999964,
+                  41.614948252000033
+               ],
+               [
+                  -93.79347973299997,
+                  41.628577397000072
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-1",
+         "type": "Feature",
+         "properties": {
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ],
+                  "next": [
+                     "65773-2"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
+               ],
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; first event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
+            },
+            "beginning_milepost": 3.1,
+            "ending_milepost": 2.9,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "worker_presence": {
+               "are_workers_present": false,
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
+            },
+            "reduced_speed_limit_kph": 88,
+            "restrictions": [],
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "general"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "entrance-lane"
+               },
+               {
+                  "order": 6,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+               [
+                  -93.720409507999989,
+                  41.593422456000042
+               ],
+               [
+                  -93.724769801999969,
+                  41.593457451000063
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-2",
+         "type": "Feature",
+         "properties": {
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ],
+                  "next": [
+                     "65773-3"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
+               ],
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; second event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
+            },
+            "beginning_milepost": 2.9,
+            "ending_milepost": 2.5,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "worker_presence": {
+               "are_workers_present": true,
+               "method": "check-in-app",
+               "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+               "confidence": "high",
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
+            },
+            "reduced_speed_limit_kph": 88,
+            "restrictions": [],
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "general"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "exit-lane"
+               },
+               {
+                  "order": 6,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+               [
+                  -93.724769801999969,
+                  41.593457451000063
+               ],
+               [
+                  -93.730149926999957,
+                  41.593410350000056
+               ]
+            ]
+         }
+      },
+      {
+         "id": "65773-3",
+         "type": "Feature",
+         "properties": {
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
+               ],
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; third event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
+            },
+            "beginning_milepost": 2.5,
+            "ending_milepost": 2.0,
+            "beginning_accuracy": "estimated",
+            "ending_accuracy": "estimated",
+            "start_date": "2010-01-01T14:00:00Z",
+            "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
+            "start_date_accuracy": "estimated",
+            "end_date_accuracy": "estimated",
+            "event_status": "active",
+            "vehicle_impact": "some-lanes-closed",
+            "worker_presence": {
+               "are_workers_present": true,
+               "method": "check-in-app",
+               "worker_presence_last_confirmed_date": "2010-01-04T15:00:00Z",
+               "confidence": "high",
+               "definition": [
+                  "humans-in-right-of-way"
+               ]
+            },
+            "reduced_speed_limit_kph": 88,
+            "restrictions": [],
+            "types_of_work": [
+               {
+                  "type_name": "surface-work",
+                  "is_architectural_change": true
+               }
+            ],
+            "lanes": [
+               {
+                  "order": 1,
+                  "status": "closed",
+                  "type": "shoulder"
+               },
+               {
+                  "order": 2,
+                  "status": "closed",
+                  "type": "general"
+               },
+               {
+                  "order": 3,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 4,
+                  "status": "open",
+                  "type": "general"
+               },
+               {
+                  "order": 5,
+                  "status": "open",
+                  "type": "shoulder"
+               }
+            ]
+         },
+         "geometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+               [
+                  -93.730150629999969,
+                  41.593410307000056
+               ],
+               [
+                  -93.742189315999951,
+                  41.592481500000076
+               ]
+            ]
+         }
+      }
+   ]
+}
