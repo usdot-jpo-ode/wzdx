@@ -24,34 +24,33 @@
       "id": "WZ389-NB",
       "type": "Feature",
       "properties": {
-        "core_details":{
-		"data_source_id": "1",
-        	"event_type": "work-zone",
-        	"road_names": [
-          		"Beaver Avenue"
-        	],
-        	"direction": "northbound",
-		"description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
-        	"creation_date": "2010-01-01T01:01:01Z",
-        	"update_date": "2010-01-01T01:03:01Z"
-	},
+        "core_details": {
+          "data_source_id": "1",
+          "event_type": "work-zone",
+          "road_names": [
+            "Beaver Avenue"
+          ],
+          "direction": "northbound",
+          "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
+          "creation_date": "2010-01-01T01:01:01Z",
+          "update_date": "2010-01-01T01:03:01Z"
+        },
         "beginning_cross_street": "Aurora Avenue",
         "ending_cross_street": "NW 46th Place",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
-	"start_date_accuracy": "estimated",
+        "start_date_accuracy": "estimated",
         "end_date_accuracy": "estimated",
         "location_method": "channel-device-method",
-	"event_status": "active",
+        "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {
             "type": "local-access-only"
           }
         ]
-        
       },
       "geometry": {
         "type": "LineString",
@@ -87,17 +86,17 @@
       "id": "WZ389-SB",
       "type": "Feature",
       "properties": {
-        "core_details":{
-		"data_source_id": "1",
-        	"event_type": "work-zone",
-        	"road_names": [
-          		"Beaver Avenue"
-        	],
-        	"direction": "southbound",
-        	"description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
-        	"creation_date": "2010-01-01T01:01:01Z",
-        	"update_date": "2010-01-01T01:03:01Z"
-	},
+        "core_details": {
+          "data_source_id": "1",
+          "event_type": "work-zone",
+          "road_names": [
+            "Beaver Avenue"
+          ],
+          "direction": "southbound",
+          "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
+          "creation_date": "2010-01-01T01:01:01Z",
+          "update_date": "2010-01-01T01:03:01Z"
+        },
         "beginning_cross_street": "NW 46th Place",
         "ending_cross_street": "Aurora Avenue",
         "beginning_accuracy": "verified",
@@ -125,7 +124,7 @@
               }
             ]
           },
-	  {
+          {
             "order": 2,
             "status": "open",
             "type": "general",

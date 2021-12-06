@@ -24,26 +24,26 @@
       "id": "7733",
       "type": "Feature",
       "properties": {
-        "core_details":{
-		"data_source_id": "1",
-        	"event_type": "work-zone",
-        	"road_names": [
-          		"I-80",
-          		"I-35"
-        	],
-        	"direction": "westbound",
-                "description": "Single-direction work zone with lane shift",
-        	"creation_date": "2010-12-30T22:42:53Z",
-        	"update_date": "2010-01-01T05:57:36Z"
-	},
-	"beginning_milepost": 133.967,
+        "core_details": {
+          "data_source_id": "1",
+          "event_type": "work-zone",
+          "road_names": [
+            "I-80",
+            "I-35"
+          ],
+          "direction": "westbound",
+          "description": "Single-direction work zone with lane shift",
+          "creation_date": "2010-12-30T22:42:53Z",
+          "update_date": "2010-01-01T05:57:36Z"
+        },
+        "beginning_milepost": 133.967,
         "ending_milepost": 133.112,
         "beginning_accuracy": "verified",
         "ending_accuracy": "verified",
         "start_date": "2010-01-01T05:57:36Z",
         "end_date": "2010-01-05T23:00:00Z",
         "location_method": "channel-device-method",
-	"start_date_accuracy": "verified",
+        "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
         "vehicle_impact": "all-lanes-open-shift-right",
