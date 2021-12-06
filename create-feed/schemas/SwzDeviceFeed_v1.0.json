@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-device/create-feed/schemas/swz_device_feed_v1.0.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-device/create-feed/schemas/SwzDeviceFeed_v1.0.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx SwzDeviceFeed v1.0",
   "description": "The GeoJSON output of a WZDx smart work zone device data feed (v1.0)",
