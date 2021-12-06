@@ -3,11 +3,13 @@
 # Work Zone Data Exchange (WZDx) Specification
 The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zone data provided by infrastructure owners and operators (IOOs) available for third party use, making travel on public roads safer and more efficient through ubiquitous access to data on work zone activity.
 
-The goal of WZDx is to enable widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible. 
+The goal of WZDx is to enable widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible.
+
+## Data Feeds
+
 
 ## Repostitory Organization
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
-
 
 1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
 2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
@@ -62,7 +64,6 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [Direction](/spec-content/enumerated-types/Direction.md)
         - [EventStatus](/spec-content/enumerated-types/EventStatus.md)
         - [EventType](/spec-content/enumerated-types/EventType.md)
-<<<<<<< HEAD
         - [FlashingBeaconFunction](/spec-content/enumerated-types/FlashingBeaconFunction.md)
         - [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md)
         - [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md)
