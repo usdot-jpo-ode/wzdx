@@ -5,7 +5,7 @@
     "contact_name": "Frederick Francis Feedmanager",
     "contact_email": "fred.feedmanager@testdot.gov",
     "update_frequency": 60,
-    "version": "3.1",
+    "version": "4.0",
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
@@ -14,8 +14,7 @@
         "contact_name": "Solomn Soliel Sourcefeed",
         "contact_email": "solomon.sourcefeed@testcity1.gov",
         "update_frequency": 300,
-        "update_date": "2020-06-18T14:37:31Z",
-        "location_method": "channel-device-method"
+        "update_date": "2020-06-18T14:37:31Z"
       }
     ]
   },
@@ -25,30 +24,34 @@
       "id": "WZ389-NB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "1",
-        "event_type": "work-zone",
-        "road_names": [
-          "Beaver Avenue"
-        ],
-        "direction": "northbound",
+        "core_details":{
+		"data_source_id": "1",
+        	"event_type": "work-zone",
+        	"road_names": [
+          		"Beaver Avenue"
+        	],
+        	"direction": "northbound",
+		"description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
+        	"creation_date": "2010-01-01T01:01:01Z",
+        	"update_date": "2010-01-01T01:03:01Z"
+	},
         "beginning_cross_street": "Aurora Avenue",
         "ending_cross_street": "NW 46th Place",
         "beginning_accuracy": "estimated",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
-        "start_date_accuracy": "estimated",
+	"start_date_accuracy": "estimated",
         "end_date_accuracy": "estimated",
-        "event_status": "active",
+        "location_method": "channel-device-method",
+	"event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {
             "type": "local-access-only"
           }
-        ],
-        "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
-        "creation_date": "2010-01-01T01:01:01Z",
-        "update_date": "2010-01-01T01:03:01Z"
+        ]
+        
       },
       "geometry": {
         "type": "LineString",
@@ -84,18 +87,24 @@
       "id": "WZ389-SB",
       "type": "Feature",
       "properties": {
-        "data_source_id": "1",
-        "event_type": "work-zone",
-        "road_names": [
-          "Beaver Avenue"
-        ],
-        "direction": "southbound",
+        "core_details":{
+		"data_source_id": "1",
+        	"event_type": "work-zone",
+        	"road_names": [
+          		"Beaver Avenue"
+        	],
+        	"direction": "southbound",
+        	"description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
+        	"creation_date": "2010-01-01T01:01:01Z",
+        	"update_date": "2010-01-01T01:03:01Z"
+	},
         "beginning_cross_street": "NW 46th Place",
         "ending_cross_street": "Aurora Avenue",
         "beginning_accuracy": "verified",
         "ending_accuracy": "estimated",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
+        "location_method": "channel-device-method",
         "start_date_accuracy": "verified",
         "end_date_accuracy": "estimated",
         "event_status": "active",
@@ -105,12 +114,19 @@
             "type": "local-access-only"
           }
         ],
-        "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
-        "creation_date": "2010-01-01T01:01:01Z",
-        "update_date": "2010-01-01T01:03:01Z",
         "lanes": [
           {
             "order": 1,
+            "status": "open",
+            "type": "center-left-turn-lane",
+            "restrictions": [
+              {
+                "type": "local-access-only"
+              }
+            ]
+          },
+	  {
+            "order": 2,
             "status": "open",
             "type": "general",
             "restrictions": [
@@ -120,7 +136,7 @@
             ]
           },
           {
-            "order": 2,
+            "order": 3,
             "status": "open",
             "type": "bike-lane",
             "restrictions": [
