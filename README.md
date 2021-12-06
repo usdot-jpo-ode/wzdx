@@ -53,7 +53,7 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
         - [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
         - [WZDx v4.0 Feed](/create-feed/schemas/wzdx_v4.0_feed.json)
-        - [SwzDeviceFeed](/create-feed/schemas/swz_device_feed_v1.0.json)
+        - [SwzDeviceFeed](/create-feed/schemas/SwzDeviceFeed_v1.0.json)
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDxFeed](/spec-content/objects/WZDxFeed.md)
