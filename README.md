@@ -5,8 +5,27 @@ The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zo
 
 The goal of WZDx is to enable widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible.
 
-## Data Feeds
+## README Outline
+- [Data Feeds](#data-feeds)
+- [Repository Organization](#repostitory-organization)
+- [Contents](#contents)
+- [Project Description](#project-description)
+- [Contact Information](#contact-information)
+- [Release Notes](#release-notes)
+    - [Release v3.1 (Apr 2021)]
+- [Getting Started](#getting-started)
+- [Contributions](#contributions)
+- [Versioning](#versioning)
+- [License](#license)
 
+## Data Feeds
+WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [create-feed/schemas](/create-feed/schemas/).
+
+### List of Data Feeds
+Feed Name | Description | Producer | Consumer | Uses | Content
+--- | --- | --- | --- | --- | ---
+`WZDxFeed` | Provides high-level information about events ocurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change the roadway from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed. | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)).
+`SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
 
 ## Repostitory Organization
 The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
@@ -84,20 +103,6 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
 - [**Images Used throughout the Specification**](/images)
   - [Object Diagram](/images/wzdx_object_diagram.jpg)
      - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
-
-## README Outline
-- [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
-  - [Repository Organization](#repostitory-organization)
-  - [Contents](#contents)
-- [README Outline](#readme-outline)
-- [Project Description](#project-description)
-- [Contact Information](#contact-information)
-- [Release Notes](#release-notes)
-    - [Release v3.1 (Apr 2021)]
-- [Getting Started](#getting-started)
-- [Contributions](#contributions)
-- [Versioning](#versioning)
-- [License](#license)
 
 ## Project Description
 
