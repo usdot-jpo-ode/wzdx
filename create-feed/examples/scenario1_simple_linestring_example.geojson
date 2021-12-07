@@ -5,7 +5,7 @@
       "contact_name": "Frederick Francis Feedmanager",
       "contact_email": "fred.feedmanager@testdot.gov",
       "update_frequency": 60,
-      "version": "3.1",
+      "version": "4.0",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "data_sources": [
          {
@@ -14,8 +14,7 @@
             "contact_name": "Solomn Soliel Sourcefeed",
             "contact_email": "solomon.sourcefeed@testcity1.gov",
             "update_frequency": 300,
-            "update_date": "2020-06-18T14:37:31Z",
-            "location_method": "channel-device-method"
+            "update_date": "2020-06-18T14:37:31Z"
          },
          {
             "data_source_id": "2",
@@ -23,8 +22,7 @@
             "contact_name": "Samuel Sonny Sourcefeed",
             "contact_email": "samuel.sourcefeed@testdot.gov",
             "update_frequency": 60,
-            "update_date": "2020-06-18T14:39:01Z",
-            "location_method": "channel-device-method"
+            "update_date": "2020-06-18T14:39:01Z"
          }
       ]
    },
@@ -34,26 +32,30 @@
          "id": "71234",
          "type": "Feature",
          "properties": {
-            "data_source_id": "1",
-            "event_type": "work-zone",
-            "road_names": [
-               "I-80, I-35"
-            ],
-            "direction": "northbound",
+            "core_details": {
+               "data_source_id": "1",
+               "event_type": "work-zone",
+               "road_names": [
+                  "I-80",
+                  "I-35"
+               ],
+               "direction": "northbound",
+               "description": "Single direction work zone without lane-level information.",
+               "creation_date": "2009-12-31T18:01:01Z",
+               "update_date": "2009-12-31T18:01:01Z"
+            },
             "beginning_milepost": 125.2,
             "ending_milepost": 126.3,
             "beginning_accuracy": "estimated",
             "ending_accuracy": "estimated",
             "start_date": "2010-01-01T01:00:00Z",
             "end_date": "2010-01-02T01:00:00Z",
+            "location_method": "channel-device-method",
             "start_date_accuracy": "estimated",
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "reduced_speed_limit": 55,
-            "description": "Single direction work zone without lane-level information.",
-            "creation_date": "2009-12-31T18:01:01Z",
-            "update_date": "2009-12-31T18:01:01Z"
+            "reduced_speed_limit_kph": 88
          },
          "geometry": {
             "type": "LineString",
@@ -89,25 +91,28 @@
          "id": "WDM-58493-NB",
          "type": "Feature",
          "properties": {
-            "data_source_id": "1",
-            "event_type": "work-zone",
-            "road_names": [
-               "128th Street"
-            ],
-            "direction": "northbound",
+            "core_details": {
+               "data_source_id": "1",
+               "event_type": "work-zone",
+               "road_names": [
+                  "128th Street"
+               ],
+               "direction": "northbound",
+               "description": "Single direction work zone with detailed lane-level information. Also includes additional details in vehicle impact",
+               "creation_date": "2009-12-13T13:35:26Z",
+               "update_date": "2009-12-31T15:11:16Z"
+            },
             "beginning_cross_street": "US 6, Hickman Road",
             "ending_cross_street": "Douglas Ave",
             "beginning_accuracy": "estimated",
             "ending_accuracy": "estimated",
             "start_date": "2010-01-01T06:00:00Z",
             "end_date": "2010-05-01T05:00:00Z",
+            "location_method": "channel-device-method",
             "start_date_accuracy": "estimated",
             "end_date_accuracy": "estimated",
             "event_status": "active",
-            "vehicle_impact": "some-lanes-closed",
-            "description": "Single direction work zone with detailed lane-level information.",
-            "creation_date": "2009-12-13T13:35:26Z",
-            "update_date": "2009-12-31T15:11:16Z",
+            "vehicle_impact": "some-lanes-closed-merge-left",
             "lanes": [
                {
                   "order": 1,
@@ -398,29 +403,35 @@
          "id": "65773-1",
          "type": "Feature",
          "properties": {
-            "data_source_id": "2",
-            "event_type": "work-zone",
-            "relationship": {
-               "parents": [
-                  "65773"
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ],
+                  "next": [
+                     "65773-2"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
                ],
-               "first": [
-                  "65773-1"
-               ],
-               "next": [
-                  "65773-2"
-               ]
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; first event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
             },
-            "road_names": [
-               "I-235"
-            ],
-            "direction": "westbound",
             "beginning_milepost": 3.1,
             "ending_milepost": 2.9,
             "beginning_accuracy": "estimated",
             "ending_accuracy": "estimated",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
             "start_date_accuracy": "estimated",
             "end_date_accuracy": "estimated",
             "event_status": "active",
@@ -431,11 +442,8 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit": 55,
+            "reduced_speed_limit_kph": 88,
             "restrictions": [],
-            "description": "Single-direction work zone represented by three sequential road events; first event.",
-            "creation_date": "2009-12-31T11:56:26Z",
-            "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
                {
                   "type_name": "surface-work",
@@ -501,29 +509,35 @@
          "id": "65773-2",
          "type": "Feature",
          "properties": {
-            "data_source_id": "2",
-            "event_type": "work-zone",
-            "relationship": {
-               "parents": [
-                  "65773"
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ],
+                  "next": [
+                     "65773-3"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
                ],
-               "first": [
-                  "65773-1"
-               ],
-               "next": [
-                  "65773-3"
-               ]
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; second event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
             },
-            "road_names": [
-               "I-235"
-            ],
-            "direction": "westbound",
             "beginning_milepost": 2.9,
             "ending_milepost": 2.5,
             "beginning_accuracy": "estimated",
             "ending_accuracy": "estimated",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
             "start_date_accuracy": "estimated",
             "end_date_accuracy": "estimated",
             "event_status": "active",
@@ -537,11 +551,8 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit": 55,
+            "reduced_speed_limit_kph": 88,
             "restrictions": [],
-            "description": "Single-direction work zone represented by three sequential road events; second event.",
-            "creation_date": "2009-12-31T11:56:26Z",
-            "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
                {
                   "type_name": "surface-work",
@@ -623,26 +634,32 @@
          "id": "65773-3",
          "type": "Feature",
          "properties": {
-            "data_source_id": "2",
-            "event_type": "work-zone",
-            "relationship": {
-               "parents": [
-                  "65773"
+            "core_details": {
+               "data_source_id": "2",
+               "event_type": "work-zone",
+               "relationship": {
+                  "parents": [
+                     "65773"
+                  ],
+                  "first": [
+                     "65773-1"
+                  ]
+               },
+               "road_names": [
+                  "I-235"
                ],
-               "first": [
-                  "65773-1"
-               ]
+               "direction": "westbound",
+               "description": "Single-direction work zone represented by three sequential road events; third event.",
+               "creation_date": "2009-12-31T11:56:26Z",
+               "update_date": "2009-12-31T11:56:26Z"
             },
-            "road_names": [
-               "I-235"
-            ],
-            "direction": "westbound",
             "beginning_milepost": 2.5,
             "ending_milepost": 2.0,
             "beginning_accuracy": "estimated",
             "ending_accuracy": "estimated",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
+            "location_method": "channel-device-method",
             "start_date_accuracy": "estimated",
             "end_date_accuracy": "estimated",
             "event_status": "active",
@@ -656,11 +673,8 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit": 55,
+            "reduced_speed_limit_kph": 88,
             "restrictions": [],
-            "description": "Single-direction work zone represented by three sequential road events; third event.",
-            "creation_date": "2009-12-31T11:56:26Z",
-            "update_date": "2009-12-31T11:56:26Z",
             "types_of_work": [
                {
                   "type_name": "surface-work",

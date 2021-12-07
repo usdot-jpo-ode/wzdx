@@ -10,4 +10,4 @@ Property Name | Data Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`types_of_work` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`types_of_work` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
