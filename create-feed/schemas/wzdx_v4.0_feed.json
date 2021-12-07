@@ -516,10 +516,7 @@
           "uniqueItems": true
         }
       },
-      "required": ["are_workers_present"],
-      "dependencies": {
-        "restriction_value": ["restriction_units"]
-      }
+      "required": ["are_workers_present"]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",
