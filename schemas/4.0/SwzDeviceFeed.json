@@ -152,7 +152,7 @@
         }
       },
       "required": [
-        "device_types",
+        "device_type",
         "data_source_id",
         "road_names",
         "device_status",
