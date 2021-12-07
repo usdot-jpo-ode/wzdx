@@ -36,7 +36,8 @@
                "data_source_id": "1",
                "event_type": "work-zone",
                "road_names": [
-                  "I-80, I-35"
+                  "I-80",
+                  "I-35"
                ],
                "direction": "northbound",
                "description": "Single direction work zone without lane-level information.",
