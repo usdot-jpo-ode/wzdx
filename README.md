@@ -16,12 +16,13 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Release Notes](#release-notes)
     - [Release v3.1 (Apr 2021)]
 - [Getting Started](#getting-started)
+- [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
 - [Versioning](#versioning)
 - [License](#license)
 
 ## Data Feeds
-WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [create-feed/schemas](/create-feed/schemas/). Each feed is designed for a specific use case is are flexible and its use in practice can vary by application.
+WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [/schemas](/schemas/). Each feed is designed for a specific use case is are flexible and its use in practice can vary by application.
 
 ### List of Data Feeds
 Feed Name | Description | Producer | Consumer | Uses | Content
@@ -34,7 +35,7 @@ The WZDx Specification repository contains two main subdirectories, each contain
 
 1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
 2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
-
+3. [`schemas`](/schemas), which contains JSON Schemas for the feeds defined by WZDx.
 
 Two additional directories, [`images`](/images) and [`documents`](/documents), contain the images that are referenced throughout the repository and PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist. 
 
@@ -48,12 +49,6 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [Detour](/create-feed/examples/WZDxFeed/scenario4_detour_linestring_example.geojson)
         - [Recurring Work](/create-feed/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson)
         - [Simple Work Zone (MultiPoint)](/create-feed/examples/WZDxFeed/scenario1_simple_multipoint_example.geojson)
-    - [**JSON Schemas**](/create-feed/schemas)
-        - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
-        - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-        - [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
-        - [WZDx v4.0 Feed](/create-feed/schemas/wzdx_v4.0_feed.json)
-        - [SwzDeviceFeed](/create-feed/schemas/SwzDeviceFeed_v1.0.json)
 - [**Specification Content**](/spec-content)
     - [**Objects**](/spec-content/objects)
         - [WZDxFeed](/spec-content/objects/WZDxFeed.md)
@@ -102,9 +97,15 @@ Two additional directories, [`images`](/images) and [`documents`](/documents), c
         - [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)
         - [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md)
         - [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md)
+- [**JSON Schemas**](/schemas)
+    - [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
+    - [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
+    - [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
+    - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
+    - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [**Images Used throughout the Specification**](/images)
-  - [Object Diagram](/images/wzdx_object_diagram.jpg)
-     - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
+    - [Object Diagram](/images/wzdx_object_diagram.jpg)
+       - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
 
 ## Project Description
 
@@ -168,8 +169,20 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
 4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
-5. Validate your feed output using the [WZDx v4.0 Feed JSON Schema](/create-feed/schemas/wzdx_v4.0_feed.json)
+5. Validate your feed output using the [WZDx v4.0 Feed JSON Schema](/schemas/wzdx_v4.0_feed.json)
 6. Publish your feed and tell us about it via avdx@dot.gov.
+
+## JSON Schemas
+The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. The repository contains schemas for the following feeds:
+
+### Current
+- [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
+- [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
+
+### Previous
+- [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
+- [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
+- [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
 
 ## Contributions
 

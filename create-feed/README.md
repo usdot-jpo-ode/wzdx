@@ -87,18 +87,6 @@ The [local access only example](/create-feed/examples/WZDxFeed/local_access_only
 - Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
 
-## JSON Schemas
-The WZDx Specification defines two "feeds", each with a JSON schema. The [schemas](/create-feed/schemas) directory includes a JSON Schema for the following WZDx feed versions:
-
-* [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
-* [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-* [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
-* [WZDx v4.0 Feed](/create-feed/schemas/wzdx_v4.0_feed.json)
-
-And the following smart work zone device feed (`SwzDeviceFeed`) versions:
-
-- [SwzDeviceFeed](/create-feed/schemas/swz_device_feed_v1.0.json)
-
 ## Business Rules
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
 
