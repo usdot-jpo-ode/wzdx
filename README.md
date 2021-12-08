@@ -10,7 +10,6 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 ## README Outline
 - [Data Feeds](#data-feeds)
 - [Repository Organization](#repostitory-organization)
-- [Contents](#contents)
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
@@ -31,81 +30,20 @@ Feed Name | Description | Producer | Consumer | Uses | Content
 `SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
 
 ## Repostitory Organization
-The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
+The WZDx Specification repository contains several files and subdirectories.
 
-1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
-2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
-3. [`schemas`](/schemas), which contains JSON Schemas for the feeds defined by WZDx.
+### Directories
+1. [documents](/documents): supplementary PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist.
+2. [examples](/examples): example GeoJSON documents from WZDx data feeds. [examples/README.md](/examples/README.md) describes the content of this directory in detail.
+3. [images](/images): the images that are referenced by other Markdown files in the repository.
+4. [spec-content](/spec-content): details the data content of the WZDx specification, including objects, property names and types, and enumerated types. [spec-content/README.md](/spec-content/README.md) describes the content of this directory in detail.
+5. [schemas](/schemas): contains [JSON Schema](https://json-schema.org/)s for each of the feeds defined by WZDx for feed validation.
 
-Two additional directories, [`images`](/images) and [`documents`](/documents), contain the images that are referenced throughout the repository and PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist. 
-
-### Contents
-- [**Creating a WZDx Feed**](/create-feed)
-    - [**Example Feed GeoJSON Files**](/examples)
-        - [Local Access Only (bidirectional)](/examples/WZDxFeed/local_access_only_bidirectional_linestring_example.geojson)
-        - [Simple Work Zone (LineString)](/examples/WZDxFeed/scenario1_simple_linestring_example.geojson)
-        - [Lane Shift](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson)
-        - [Shoulder Closure (bidirectional)](/examples/WZDxFeed/scenario3_shoulder_bidrectional_linestring_example.geojson)
-        - [Detour](/examples/WZDxFeed/scenario4_detour_linestring_example.geojson)
-        - [Recurring Work](/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson)
-        - [Simple Work Zone (MultiPoint)](/examples/WZDxFeed/scenario1_simple_multipoint_example.geojson)
-- [**Specification Content**](/spec-content)
-    - [**Objects**](/spec-content/objects)
-        - [WZDxFeed](/spec-content/objects/WZDxFeed.md)
-        - [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md)
-        - [FeedInfo](/spec-content/objects/FeedInfo.md)
-        - [FeedDataSource](/spec-content/objects/FeedDataSource.md)
-        - [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)
-        - [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)
-        - [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md)
-        - [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
-        - [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
-        - [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
-        - [TypeOfWork](/spec-content/objects/TypeOfWork.md)
-        - [Lane](/spec-content/objects/Lane.md)
-        - [Restriction](/spec-content/objects/Restriction.md)
-        - [Relationship](/spec-content/objects/Relationship.md)
-        - [ArrowBoard](/spec-content/objects/ArrowBoard.md)
-        - [Camera](/spec-content/objects/Camera.md)
-        - [DynamicMessageSign](spec-content/objects/DynamicMessageSign.md)
-        - [FlashingBeacon](/spec-content/objects/FlashingBeacon.md)
-        - [HybridSign](/spec-content/objects/HybridSign.md)
-        - [LocationMarker](/spec-content/objects/LocationMarker.md)
-        - [MarkedLocation](/spec-content/objects/MarkedLocation.md)
-        - [TrafficSensor](/spec-content/objects/TrafficSensor.md)
-        - [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md)
-        - [WorkerPresence](/spec-content/objects/WorkerPresence.md)
-    - [**Enumerated Types**](/spec-content/enumerated-types)
-        - [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md)
-        - [Direction](/spec-content/enumerated-types/Direction.md)
-        - [EventStatus](/spec-content/enumerated-types/EventStatus.md)
-        - [EventType](/spec-content/enumerated-types/EventType.md)
-        - [FlashingBeaconFunction](/spec-content/enumerated-types/FlashingBeaconFunction.md)
-        - [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md)
-        - [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md)
-        - [HybridSignDynamicMessageFunction](/spec-content/enumerated-types/HybridSignDynamicMessageFunction.md)
-        - [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)
-        - [LaneType](/spec-content/enumerated-types/LaneType.md)
-        - [LocationMethod](/spec-content/enumerated-types/LocationMethod.md)
-        - [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md)
-        - [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md)
-        - [RestrictionType](/spec-content/enumerated-types/RestrictionType.md)
-        - [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md)
-        - [TimeVerification](/spec-content/enumerated-types/TimeVerification.md)
-        - [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md)
-        - [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md)
-        - [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md)
-        - [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md)
-        - [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md)
-- [**JSON Schemas**](/schemas)
-    - [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
-    - [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
-    - [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
-    - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
-    - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
-- [**Images Used throughout the Specification**](/images)
-    - [Object Diagram](/images/wzdx_object_diagram.jpg)
-       - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
+### Files
+1. [Creating_a_WZDx_Feed.md](/Creating_a_WZDx_Feed.md): information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+2. [LICENSE](/LICENSE): the Creative Commons Zero v1.0 Universal license that the repository is licensed under.
+3. [README.md](/README.md) (this document): information about the WZDx effort and navigating the repository.
+4. [RELEASES.md](/RELEASES.md): detailed information about every release of the WZDx specification.
 
 ## Project Description
 
@@ -127,7 +65,9 @@ Several data producers and data users voluntarily developed v1.1 of the specific
 Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
 
 **How can I get help with implementation?**
-This project repository will be continually updated with resources to help with implementation - in the meantime, please make a GitHub issue or discussion entry if you need help implementing the WZDx Specification or have questions.
+Review [Creating_a_WZDx_Feed.md](/Creating_a_WZDx_Feed.md) which contains information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+
+This project repository will be continually updated with resources to help with implementation - in the meantime, please make a [new GitHub discussion](https://github.com/usdot-jpo-ode/wzdx/discussions/new) if you need help implementing the WZDx Specification or have questions.
 
 The Federal Highway Administration is leading efforts, via the [Work Zone Data Initiative (WZDI)](https://ops.fhwa.dot.gov/wz/wzdx/index.htm#wzdi), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents have been developed and made publicly available:
 
