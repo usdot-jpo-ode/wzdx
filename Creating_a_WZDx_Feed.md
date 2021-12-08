@@ -15,10 +15,6 @@ GeoJSON is the file format of choice because:
 - GeoJSON formatted-data is published as text files, so there is a low technological burden of entry.
 - GeoJSON validation, mapping, and visualization tools already exist and will ease adoption by producers and consumers.
 
-A WZDx feed contains a single entry describing aspects of the feed itself (such as version) as well as one or more entries which describe a work zone's (generically: road event) characteristics along a single road segment in a single direction.
-
-The tables below detail the specificaton's content and describe the data used to build the feed.
-
 ## Feed Content
 WZDx defines the content and structure of several data feeds. Each feed is described by a single root object with many child objects. The output of a WZDx data feed is a GeoJSON file containing the feed object. WZDx defines the following feed objects:
 
