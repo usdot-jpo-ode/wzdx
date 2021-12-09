@@ -53,6 +53,14 @@ The [local access only example](/examples/WZDxFeed/local_access_only_bidirection
 The following example `SwzDeviceFeed`s are provided:
 
 1. [Arrow Board "ok" Example](/examples/SwzDeviceFeed/arrow_board_ok_example.geojson): A simple feed that includes a single arrow board with an `ok` status and several optional properties provided.
-2. [Camera "error" Example](/examples/SwzDeviceFeed/camera_error_example): A simple feed that includes a single camera with an `error` status, associated `status_messages`, and a few optional properties provided.
+2. [Camera "error" Example](/examples/SwzDeviceFeed/camera_error_example): A simple feed that includes a single camera with an `error` status, no image data, associated `status_messages`, and a few optional properties provided.
 
 ## RoadRestrictionFeed Examples
+The following example `RoadrestrictionFeed`s are provided:
+
+### 1. Bridge Height Restriction
+The [Bridge Height Restriction Example](/examples/RoadRestrictionFeed/bridge_restriction_linestring_example.geojson) shows the use of a [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) to define a bridge clearance on a roadway. 
+
+- Defines threes bridge height restrictions.
+- Two restrictions (`id`s: `Bridge2`, `Bridge3`) are defined using only the required core details and basic event-level information.
+- One restriction (`id`: `Bridge1`) also includes lane-level details with additional height restrictions values for individual lanes.
