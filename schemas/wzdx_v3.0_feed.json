@@ -1,9 +1,8 @@
-
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/master/create-feed/schemas/wzdx_v3.1_feed.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/wzdx_v3.0_feed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "WZDx v3.1 Feed",
-  "description": "The GeoJSON output of a WZDx v3.1 data feed",
+  "title": "WZDx v3.0 Feed",
+  "description": "The GeoJSON output of a WZDx v3.0 data feed",
   "type": "object",
   "properties": {
     "road_event_feed_info": {
@@ -19,22 +18,10 @@
       "items": {
         "$ref": "#/definitions/RoadEventFeature"
       }
-    },
-    "bbox": {
-      "$ref": "#/definitions/BoundingBox"
     }
   },
   "required": ["road_event_feed_info", "type", "features"],
   "definitions": {
-    "BoundingBox": {
-      "title": "GeoJSON Bounding Box",
-      "description": "Information on the coordinate range for a Geometry, Feature (RoadEventFeature), or FeatureCollection (WZDxFeed)",
-      "type": "array",
-      "minItems": 4,
-      "items": {
-        "type": "number"
-      }
-    },
     "RoadEventFeedInfo": {
       "title": "Road Event Feed Information",
       "description": "Describes WZDx feed header information such as metadata, contact information, and data sources",
@@ -59,7 +46,7 @@
           "minimum": 1
         },
         "update_date": {
-          "description": "The UTC date and time when the GeoJSON file (representing the instance of the feed) was generated",
+          "description": "The UTC date and time when the data feed was last updated",
           "type": "string",
           "format": "date-time"
         },
@@ -67,10 +54,6 @@
           "description": "The WZDx specification version used to create the data feed, in 'major.minor' format",
           "type": "string",
           "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
-        },
-        "license": {
-          "description": "The URL of the license that applies to the data in the WZDx feed. This *must* be the string \"https://creativecommons.org/publicdomain/zero/1.0/\"",
-          "enum": ["https://creativecommons.org/publicdomain/zero/1.0/"]
         },
         "data_sources": {
           "description": "A list of specific data sources for the road event data in the feed",
@@ -150,10 +133,6 @@
       "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
       "type": "object",
       "properties": {
-        "id": {
-          "description": "A unique identifier issued by the data feed provider to identify the WZDx road event",
-          "type": "string"
-        },
         "type": {
           "description": "The GeoJSON object type; must be 'Feature'",
           "enum": ["Feature"]
@@ -170,23 +149,8 @@
               "$ref": "https://geojson.org/schema/MultiPoint.json"
             }
           ]
-        },
-        "bbox": {
-          "$ref": "#/definitions/BoundingBox"
         }
       },
-      "oneOf": [
-        { 
-          "properties": {
-            "properties": {
-              "required": ["road_event_id"]
-            }
-          }
-        },
-        {
-          "required": ["id"]
-        }
-      ],
       "required": ["type","properties","geometry"]
     },
     "RoadEvent": {
@@ -194,6 +158,10 @@
       "description": "Describes an activity taking place along a road segment",
       "type": "object",
       "properties": {
+        "road_event_id": {
+          "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
+          "type": "string"
+        },
         "data_source_id": {
           "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
@@ -204,13 +172,13 @@
         "relationship": {
           "$ref": "#/definitions/Relationship"
         },
-        "road_names": {
-          "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
+        "road_name": {
+          "description": "Publicly known name of the road on which the event occurs",
+          "type": "string"
+        },
+        "road_number": {
+          "description": "The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "string"
         },
         "direction": {
           "$ref": "#/definitions/Direction"
@@ -257,6 +225,11 @@
         },
         "event_status": {
           "$ref": "#/definitions/EventStatus"
+        },
+        "total_num_lanes": {
+          "description": "The total number of lanes associated with the road event",
+          "type": "integer",
+          "exclusiveMinimum": 0
         },
         "vehicle_impact": {
           "$ref": "#/definitions/VehicleImpact"
@@ -305,31 +278,12 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
-        },
-        "road_event_id": {
-          "description": "***DEPRECATED*** A unique identifier issued by the data feed provider to identify the work zone project or activity",
-          "type": "string"
-        },
-        "road_number": {
-          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
-        },
-        "road_name": {
-          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
-          "type": "string"
-        },
-        "total_num_lanes": {
-          "description": "***DEPRECATED*** The total number of lanes associated with the road event",
-          "type": "integer",
-          "exclusiveMinimum": 0
         }
       },
-      "anyOf": [
-        { "required": ["road_name"] },
-        { "required": ["road_names"] }
-      ],
       "required": [
+        "road_event_id",
         "data_source_id",
+        "road_name",
         "direction",
         "beginning_accuracy",
         "ending_accuracy",
@@ -346,7 +300,7 @@
       "type": "object",
       "properties": {
         "first": {
-          "description": "Indicates the first (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -354,7 +308,7 @@
           }
         },
         "next": {
-          "description": "Indicates the next (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -491,8 +445,7 @@
         "axle-load-limit",
         "gross-weight-limit",
         "towing-prohibited",
-        "permitted-oversize-loads-prohibited",
-        "local-access-only"
+        "permitted-oversize-loads-prohibited"
       ]
     },
     "WorkTypeName": {
@@ -514,32 +467,21 @@
     "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
-      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way", "alternating-flow"]
+      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way"]
     },
     "LaneType": {
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
+        "left-lane",
+        "right-lane",
+        "middle-lane",
+        "center-lane",
         "lane",
         "right-turning-lane",
         "left-turning-lane",
         "right-exit-lane",
         "left-exit-lane",
-        "right-entrance-lane",
-        "left-entrance-lane",
-        "sidewalk",
-        "bike-lane",
-        "alternating-flow-lane",
-        "shoulder",
-        "hov-lane",
-        "reversible-lane",
-        "center-left-turn-lane",
-        "left-lane",
-        "right-lane",
-        "middle-lane",
-        "center-lane",
-        "right-shoulder",
-        "left-shoulder",
         "right-merging-lane",
         "left-merging-lane",
         "right-exit-ramp",
@@ -549,7 +491,16 @@
         "right-entrance-ramp",
         "right-second-entrance-ramp",
         "left-entrance-ramp",
-        "left-second-entrance-ramp"
+        "left-second-entrance-ramp",
+        "sidewalk",
+        "bike-lane",
+        "alternating-flow-lane",
+        "right-shoulder",
+        "left-shoulder",
+        "shoulder",
+        "hov-lane",
+        "reversible-lane",
+        "center-left-turn-lane"
       ]
     },
     "LaneRestrictionUnit": {
