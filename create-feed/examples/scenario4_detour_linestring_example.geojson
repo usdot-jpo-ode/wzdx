@@ -63,7 +63,7 @@
                   "mobile-equipment-in-work-zone-moving"
                ]
             },
-            "reduced_speed_limit_kph": 88,
+            "reduced_speed_limit_kph": 88.5,
             "types_of_work": [
                {
                   "type_name": "surface-work",

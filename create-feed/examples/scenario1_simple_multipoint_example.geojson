@@ -55,7 +55,7 @@
             "end_date_accuracy": "estimated",
             "event_status": "active",
             "vehicle_impact": "some-lanes-closed",
-            "reduced_speed_limit_kph": 88
+            "reduced_speed_limit_kph": 88.514
          },
          "geometry": {
             "type": "MultiPoint",
@@ -174,7 +174,7 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit_kph": 88,
+            "reduced_speed_limit_kph": 88.514,
             "restrictions": [],
             "types_of_work": [
                {
@@ -275,7 +275,7 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit_kph": 88,
+            "reduced_speed_limit_kph": 88.514,
             "restrictions": [],
             "types_of_work": [
                {
@@ -373,7 +373,7 @@
                   "humans-in-right-of-way"
                ]
             },
-            "reduced_speed_limit_kph": 88,
+            "reduced_speed_limit_kph": 88.514,
             "restrictions": [],
             "types_of_work": [
                {
