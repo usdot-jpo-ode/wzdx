@@ -167,7 +167,7 @@
               "description": "A list of zero or more restrictions applying to the road event",
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Restriction"
+                "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json"
               }
             },
             "types_of_work": {
@@ -310,31 +310,11 @@
           "description": "A list of zero or more restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Restriction"
+            "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json"
           }
         }
       },
       "required": ["status", "type", "order"]
-    },
-    "Restriction": {
-      "title": "Restriction",
-      "description": "A restriction on a roadway or lane, including type and value",
-      "type": "object",
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/RestrictionType"
-        },
-        "value": {
-          "type": "number"
-        },
-        "unit": {
-          "$ref": "#/definitions/UnitOfMeasurement"
-        }
-      },
-      "required": ["type"],
-      "dependencies": {
-        "value": ["unit"]
-      }
     },
     "WorkerPresence": {
       "title": "Worker Presence",
@@ -387,26 +367,6 @@
       "description": "The impact to vehicular lanes along a single road in a single direction",
       "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
     },
-    "RestrictionType": {
-      "title": "Restriction Type Enumerated Type",
-      "description": "The type of vehicle restriction on a roadway",
-      "enum": [
-        "no-trucks",
-        "travel-peak-hours-only",
-        "hov-3",
-        "hov-2",
-        "no-parking",
-        "reduced-width",
-        "reduced-height",
-        "reduced-length",
-        "reduced-weight",
-        "axle-load-limit",
-        "gross-weight-limit",
-        "towing-prohibited",
-        "permitted-oversize-loads-prohibited",
-        "local-access-only"
-      ]
-    },
     "WorkTypeName": {
       "title": "Work Type Name Enumerated Type",
       "description": "A high-level text description of the type of work being done in a road event",
@@ -444,11 +404,6 @@
         "median",
         "center-left-turn-lane"
       ]
-    },
-    "UnitOfMeasurement": {
-      "title": "Unit of Measurement Enumerated Type",
-      "description": "Unit of measurement, used when providing a unit to accompany a value",
-      "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
     },
     "WorkerPresenceMethod": {
       "title": "Worker Presence Method Enumerated Type",

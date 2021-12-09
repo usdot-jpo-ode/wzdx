@@ -1,0 +1,60 @@
+{
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Restriction",
+  "description": "A restriction on a roadway or lane, including type and value",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/RestrictionType"
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "$ref": "#/definitions/UnitOfMeasurement"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "dependencies": {
+    "value": [
+      "unit"
+    ]
+  },
+  "definitions": {
+    "RestrictionType": {
+      "title": "Restriction Type Enumerated Type",
+      "description": "The type of vehicle restriction on a roadway",
+      "enum": [
+        "no-trucks",
+        "travel-peak-hours-only",
+        "hov-3",
+        "hov-2",
+        "no-parking",
+        "reduced-width",
+        "reduced-height",
+        "reduced-length",
+        "reduced-weight",
+        "axle-load-limit",
+        "gross-weight-limit",
+        "towing-prohibited",
+        "permitted-oversize-loads-prohibited",
+        "local-access-only"
+      ]
+    },
+    "UnitOfMeasurement": {
+      "title": "Unit of Measurement Enumerated Type",
+      "description": "Unit of measurement, used when providing a unit to accompany a value",
+      "enum": [
+        "feet",
+        "inches",
+        "centimeters",
+        "pounds",
+        "tons",
+        "kilograms"
+      ]
+    }
+  }
+}
