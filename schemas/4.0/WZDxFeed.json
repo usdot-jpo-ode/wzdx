@@ -181,7 +181,7 @@
               "description": "A list of individual lanes within a road event (roadway segment)",
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Lane"
+                "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Lane.json"
               }
             }
           },
@@ -285,37 +285,6 @@
       },
       "required": ["type_name"]
     },
-    "Lane": {
-      "title": "Lane",
-      "description": "An individual lane within a road event",
-      "type": "object",
-      "properties": {
-        "order": {
-          "description": "The position (index) of the lane in sequence on the roadway, where '1' represents the left-most lane",
-          "type": "integer",
-          "minimum": 1
-        },
-        "status": {
-          "$ref": "#/definitions/LaneStatus"
-        },
-        "type": {
-          "$ref": "#/definitions/LaneType"
-        },
-        "lane_number": {
-          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
-          "type": "integer",
-          "minimum": 1
-        },
-        "restrictions": {
-          "description": "A list of zero or more restrictions specific to the lane",
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json"
-          }
-        }
-      },
-      "required": ["status", "type", "order"]
-    },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
@@ -387,23 +356,6 @@
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
       "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-flow"]
-    },
-    "LaneType": {
-      "title": "Lane Type Enumerated Type",
-      "description": "An indication of the type of lane or shoulder",
-      "enum": [
-        "general",
-        "exit-lane",
-        "exit-ramp",
-        "entrance-lane",
-        "entrance-ramp",
-        "sidewalk",
-        "bike-lane",
-        "shoulder",
-        "parking",
-        "median",
-        "center-left-turn-lane"
-      ]
     },
     "WorkerPresenceMethod": {
       "title": "Worker Presence Method Enumerated Type",
