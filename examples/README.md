@@ -1,5 +1,5 @@
 # WZDx Example Feeds
-This directory contains example GeoJSON documents from WZDx data feeds. The examples cover a range of common scenarios. There are examples for both the `WZDxFeed` and `SwzDeviceFeed`, contained within the respective subdirectories.
+This directory contains example GeoJSON documents from WZDx data feeds. The examples cover a range of common scenarios. There are examples for the `WZDxFeed`, `RoadRestrictionFeed`, and `SwzDeviceFeed`, contained within the respective subdirectories.
 
 ## WZDxFeed Examples
 The following `WZDxFeed` examples represent a variety of common scenarios when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. All example scenarios are provided for the `LineString` geometry type. as well as one `MultiPoint` geometry type for scenario 1.
