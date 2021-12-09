@@ -1,16 +1,18 @@
 # WZDx Specification Content
-The WZDx specification describes the content and structure of a WZDx GeoJSON document. It defines distinct entities called objects which contain the data content (called fields or properties) of each entity. The structure of and relationship between objects describes how the GeoJSON output of a WZDx feed looks. Objects are found in the [objects](/spec-content/objects) directory.
+The WZDx specification defines the content and structure of several GeoJSON documents, each intended to be distributed as a data feed. Each GeoJSON document (colloquially "feed") contains a single feed root object. WZDx v4.0 defines the following feed objects:
 
-The value of some properties of an object are restricted to a defined set of values. These enumerations are found in the [enumerated-types](/spec-content/enumerated-types) directory.
+- [WZDxFeed](/spec-content/objects/WZDxFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0).
+- [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
+
+Each feed object contains many layers of child objects. Together all the objects define the WZDx feed. All WZDx objects are located in the [objects](/spec-content/objects) subdirectory and listed in the [Objects](#objects) section of this document.
+
+The value of certain object properties is restricted to a defined set of values called an **enumerated type**. Enumerated types are located in the [enumerated-types](/spec-content/enumerated-types) subdirectory and listed in the [Enumerated Types](#enumerated-types) section of this document.
 
 ## Objects
-The WZDx specification describes the structure and content of a GeoJSON document, which can be called an instance of a "WZDx Feed". Each WZDx GeoJSON document has one root object, a [WZDxFeed](/spec-content/objects/WZDxFeed.md) object, with many properties and nested objects. Each distinct object is described in its own human-readable markdown file within the [objects](/spec-content/objects) directory, as well as within the JSON schema in `/schemas/`. An object represents a distinct entity, such as a road event, a lane, or information about a feed. All pieces of data that describe that entity are included as properties of the object.
-
-### Object Details
-Each object is described by a table of properties, which are each defined by the following characteristics:
+Each WZDx object is described by a table of properties with following columns:
 
 - **Name** - The property name.
-- **Type** - The type of data being stored. This can be one of the JSON primative types (only `String`, `Number`, `Array` are used), `Integer`, as defined in the [JSON schema validation specification](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1), a [WZDx Enumerated Type](#enumerated-types), a WZDx Object, or a [GeoJSON Object](https://tools.ietf.org/html/rfc7946#section-3).
+- **Type** - The type of data being stored. This can be one of the JSON primative types (only `String`, `Number`, `Array` are used), `Integer`, as defined in the [JSON schema validation specification section 6.1 (Draft 07)](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1), a formatted string as defined in [JSON schema validation specification section 7 (Draft 07)](https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01#section-7.3), a [WZDx Enumerated Type](#enumerated-types), a WZDx Object, or a [GeoJSON Object](https://tools.ietf.org/html/rfc7946#section-3).
 - **Description** - A description of the value of the property.
 - **Conformance** - An indication of the requirement for including the property in a WZDx GeoJSON document. There are three categories of conformance:
     - *Required* - The property must be included
@@ -19,15 +21,21 @@ Each object is described by a table of properties, which are each defined by the
 - **Notes** - Additional comments, guidance, notes for future consideration, or examples.
 
 ### List of Objects
-This section provides a tabular list of all objects used in the WZDx specification, sectioned by whether the object applies to the multiple feeds (shared), the `WZDxFeed`, or the `SwzDeviceFeed`.
+This section provides a tabular list of all objects used in the WZDx specification.
 
-#### Shared
+#### Feed-Level
+The following objects are high-level and describe either a WZDx feed or information about a WZDx feed:
+
 Object | Description
 --- | ---
 [FeedDataSource](/spec-content/objects/FeedDataSource.md) | Information about a specific data source used to build a work zone data feed.
-[FeedInfo](/spec-content/objects/FeedInfo.md) | WZDx feed header information such as metadata, contact information, and data sources.
+[FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
+[SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of **Smart Work Zone Device Feed** GeoJSON document.
+[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a **WZDx Feed** GeoJSON document.
 
-#### WZDxFeed
+#### Road Events
+The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
+
 Object | Description
 --- | ---
 [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
@@ -40,9 +48,10 @@ Object | Description
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
 [WorkerPresence](/spec-content/objects/WorkerPresence.md) | Information about the presence of workers in the road event area.
 [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a WZDx feed GeoJSON document.
 
-#### SwzDeviceFeed
+#### Field Devices
+The following objects are used to describe deployed roadside [ITS](https://en.wikipedia.org/wiki/Intelligent_transportation_system) devices:
+
 Object | Description
 --- | ---
 [ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
@@ -58,26 +67,29 @@ Object | Description
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
 [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a [RoadEvent](/spec-content/objects/RoadEvent.md) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
 
-### Object Diagram
-The object diagram below indicates the relationship between the data objects.
+### Object Diagrams
+The object diagrams below depict the relationship between the data objects for each WZDx feed.
+
+#### WZDxFeed
 
 ![Object Diagram](/images/wzdx_object_diagram.jpg)
+
+#### SwzDeviceFeed
+
+[TBC]
 
 #### Updating the object diagram
 When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open `/images/wzdx_object_diagram.drawio` at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace `/images/wzdx_object_diagram.drawio` with the new file. Additionally **export** the diagram as a JPEG, using the diagram name as the file name, and replace `/images/wzdx_object_diagram.jpg` with the new image file.
 
 ## Enumerated Types
-Many object properties are restricted to a finite set of values, defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
+Many object properties are restricted to a finite set of values defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
 
 ### List of Enumerated Types
-This section provides a tabular list of all enumerated types used in the WZDx specification, sectioned by whether they apply to multiple feeds (shared), the `WZDxFeed`, or the `SwzDeviceFeed`.
+This section provides a tabular list of all enumerated types used in the WZDx specification.
 
-#### Shared
-Enumerated Type | Description
---- | ---
-[LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
+#### Road Events
+The following enumerated types are used by objects that describe road events:
 
-#### WZDxFeed
 Enumerated Type | Description
 --- | ---
 [Direction](/spec-content/enumerated-types/Direction.md) | The direction for a road event based on standard naming for US roads.
@@ -96,7 +108,9 @@ Enumerated Type | Description
 [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Methods for how worker presence in a work zone event area is determined.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 
-#### SwzDeviceFeed
+#### Field Devices
+The following enumerated types are used in describing deployed roadside [ITS](https://en.wikipedia.org/wiki/Intelligent_transportation_system) devices:
+
 Enumerated Type | Description
 --- | ---
 [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md) | A list of options for the posted pattern on an [ArrowBoard](/spec-content/objects/ArrowBoard.md).
