@@ -76,7 +76,7 @@ The object diagrams below depict the relationship between the data objects for e
 
 #### SwzDeviceFeed
 
-[TBC]
+[TBD]
 
 #### Updating the object diagram
 When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open `/images/wzdx_object_diagram.drawio` at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace `/images/wzdx_object_diagram.drawio` with the new file. Additionally **export** the diagram as a JPEG, using the diagram name as the file name, and replace `/images/wzdx_object_diagram.jpg` with the new image file.
