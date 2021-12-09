@@ -13,7 +13,7 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`location_method` | [FeedDataSource](/spec-content/objects/FeedDataSource.md)
+`location_method` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
 
 ## Additional Information
 The following sections details the usage of each of the location method
