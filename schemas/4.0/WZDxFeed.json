@@ -54,7 +54,7 @@
           "type": "object",
           "properties": {
             "core_details": {
-              "$ref": "#/definitions/RoadEventCoreDetails"
+              "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/RoadEventCoreDetails.json"
             }
           },
           "required": ["core_details"],
@@ -82,54 +82,6 @@
         }
       },
       "required": ["id","type","properties","geometry"]
-    },
-    "RoadEventCoreDetails": {
-      "title": "Road Event Core Details",
-      "description": "The core details of an event occurring on a roadway (i.e. a road event) that is shared by all types of road events",
-      "type": "object",
-      "properties": {
-        "data_source_id": {
-          "description": "Identifies the data source from which the road event data is sourced from",
-          "type": "string"
-        },
-        "event_type": {
-          "$ref": "#/definitions/EventType"
-        },
-        "relationship": {
-          "$ref": "#/definitions/Relationship"
-        },
-        "road_names": {
-          "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "direction": {
-          "$ref": "#/definitions/Direction"
-        },
-        "description": {
-          "description": "Short free text description of the road event",
-          "type": "string"
-        },
-        "creation_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "update_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "event_type",
-        "data_source_id",
-        "direction",
-        "road_names"
-      ]
     },
     "WorkZoneRoadEvent": {
       "title": "Work Zone Road Event",
@@ -318,45 +270,6 @@
         }
       ]
     },
-    "Relationship": {
-      "title": "Relationship",
-      "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
-      "type": "object",
-      "properties": {
-        "first": {
-          "description": "Indicates the first (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "next": {
-          "description": "Indicates the next (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "parents": {
-          "description": "Indicates entities that the road event with this relationship is a part of, such as a work zone project or phase. Values can but do not have to correspond to a WZDx entity",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "children": {
-          "description": "Indicates entities that are part of the road event with this relationship, such as a detour or piece of equipment. Values can but do not have to correspond to a WZDx entity",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "TypeOfWork": {
       "title": "Type of Work",
       "description": "A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway",
@@ -453,16 +366,6 @@
         }
       },
       "required": ["are_workers_present"]
-    },
-    "EventType": {
-      "title": "Road Event Type Enumerated Type",
-      "description": "The type of WZDx road event",
-      "enum": ["work-zone", "detour"]
-    },
-    "Direction": {
-      "title": "Direction Enumerated Type",
-      "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound"]
     },
     "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
