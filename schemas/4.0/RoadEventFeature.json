@@ -1,6 +1,6 @@
 
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/RoadEventFeature.json",
+  "$id": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/RoadEventFeature.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Road Event Feature (GeoJSON Feature)",
   "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
@@ -45,7 +45,7 @@
       ]
     },
     "bbox": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/BoundingBox.json"
+      "$ref": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/BoundingBox.json"
     }
   },
   "required": ["id","type","properties","geometry"],
@@ -391,7 +391,7 @@
       "enum": ["northbound", "eastbound", "southbound", "westbound"]
     },
     "Lane": {
-      "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Lane.json",
+      "$id": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Lane.json",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Lane",
       "description": "An individual lane within a road event",
@@ -417,7 +417,7 @@
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json"
+            "$ref": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Restriction.json"
           }
         }
       },
@@ -478,7 +478,7 @@
       ]
     },
     "Restriction": {
-      "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/field-devices/schemas/4.0/Restriction.json",
+      "$id": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Restriction.json",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Restriction",
       "description": "A restriction on a roadway or lane, including type and value",
