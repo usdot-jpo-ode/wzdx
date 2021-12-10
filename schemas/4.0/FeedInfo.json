@@ -54,7 +54,7 @@
     "publisher",
     "data_sources"
   ],
-  "defintions": {
+  "definitions": {
     "FeedDataSource": {
       "title": "WZDx Feed Data Source",
       "description": "Describes information about a specific data source used to build the work zone data feed",
