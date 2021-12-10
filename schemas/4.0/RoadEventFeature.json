@@ -550,6 +550,17 @@
       },
       "required": ["type_name"]
     },
+    "LocationMethod": {
+      "title": "Location Method Enumerated Type",
+      "description": "The typical method used to locate the beginning and end of a work zone impact area",
+      "enum": [
+        "channel-device-method",
+        "sign-method",
+        "junction-method",
+        "other",
+        "unknown"
+      ]
+    },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
