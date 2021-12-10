@@ -28,6 +28,9 @@
         },
         {
           "$ref": "#/definitions/DetourRoadEvent"
+        },
+        {
+          "$ref": "#/definitions/RestrictionRoadEvent"
         }
       ]
     },
