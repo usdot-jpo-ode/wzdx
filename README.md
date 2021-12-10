@@ -27,7 +27,7 @@ WZDx defines the structure and content of multiple distinct data feeds. Each fee
 Feed Name | Description | Producer | Consumer | Uses | Content
 --- | --- | --- | --- | --- | ---
 `WZDxFeed` | Provides high-level information about events ocurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed. | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
-`RoadRestrictionFeed` | Locates and describes portions of a road that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type. | Transportation Authorities like Tribal, Local, State, or Federal Agencies. | Traveling public via third parties such as mapping companies and CAVs. | Increased awareness; Route planning; Driver, Passenger, and Road-User Safety; Increased Efficiency; Reduced Damage to Infrastructure. | Restriction road events (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
+`RoadRestrictionFeed` | Provides information about sections of roadways that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type. | Transportation Authorities like Tribal, Local, State, or Federal Agencies. | Traveling public via third parties such as mapping companies and CAVs. | Increased awareness; Route planning; Driver, Passenger, and Road-User Safety; Increased Efficiency; Reduced Damage to Infrastructure. | Restriction road events (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
 `SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
 
 ## Repostitory Organization
@@ -116,12 +116,12 @@ The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
 
-### Current
+### Current Version (4.0)
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
 
-### Previous
+### Previous Version
 - [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
 - [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
 - [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
