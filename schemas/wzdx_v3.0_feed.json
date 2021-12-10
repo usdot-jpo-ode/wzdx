@@ -1,9 +1,8 @@
-
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/master/create-feed/schemas/wzdx_v4.0_feed.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/wzdx_v3.0_feed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "WZDx v4.0 Feed",
-  "description": "The GeoJSON output of a WZDx v4.0 data feed",
+  "title": "WZDx v3.0 Feed",
+  "description": "The GeoJSON output of a WZDx v3.0 data feed",
   "type": "object",
   "properties": {
     "road_event_feed_info": {
@@ -19,22 +18,10 @@
       "items": {
         "$ref": "#/definitions/RoadEventFeature"
       }
-    },
-    "bbox": {
-      "$ref": "#/definitions/BoundingBox"
     }
   },
   "required": ["road_event_feed_info", "type", "features"],
   "definitions": {
-    "BoundingBox": {
-      "title": "GeoJSON Bounding Box",
-      "description": "Information on the coordinate range for a Geometry, Feature (RoadEventFeature), or FeatureCollection (WZDxFeed)",
-      "type": "array",
-      "minItems": 4,
-      "items": {
-        "type": "number"
-      }
-    },
     "RoadEventFeedInfo": {
       "title": "Road Event Feed Information",
       "description": "Describes WZDx feed header information such as metadata, contact information, and data sources",
@@ -59,7 +46,7 @@
           "minimum": 1
         },
         "update_date": {
-          "description": "The UTC date and time when the GeoJSON file (representing the instance of the feed) was generated",
+          "description": "The UTC date and time when the data feed was last updated",
           "type": "string",
           "format": "date-time"
         },
@@ -67,10 +54,6 @@
           "description": "The WZDx specification version used to create the data feed, in 'major.minor' format",
           "type": "string",
           "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
-        },
-        "license": {
-          "description": "The URL of the license that applies to the data in the WZDx feed. This *must* be the string \"https://creativecommons.org/publicdomain/zero/1.0/\"",
-          "enum": ["https://creativecommons.org/publicdomain/zero/1.0/"]
         },
         "data_sources": {
           "description": "A list of specific data sources for the road event data in the feed",
@@ -115,21 +98,24 @@
           "type": "string",
           "format": "date-time"
         },
+        "location_method": {
+          "$ref": "#/definitions/LocationMethod"
+        },
+        "location_verify_method": {
+          "description": "The method used to verify the accuracy of the location information",
+          "type": "string"
+        },
         "lrs_type": {
-          "description": "**DEPRECATED** Describes the type of linear referencing system used for the milepost measurements",
+          "description": "Describes the type of linear referencing system used for the milepost measurements",
           "type": "string"
         },
         "lrs_url": {
-          "description": "**DEPRECATED** A URL where additional information on the LRS information and transformation information is stored",
+          "description": "A URL where additional information on the LRS information and transformation information is stored",
           "type": "string",
           "format": "uri"
-        },        
-        "location_verify_method": {
-          "description": "***DEPRECATED***The method used to verify the accuracy of the location information",
-          "type": "string"
         }
       },
-      "required": ["data_source_id", "organization_name"]
+      "required": ["data_source_id", "organization_name", "location_method"]
     },
     "LocationMethod": {
       "title": "Location Method Enumerated Type",
@@ -144,26 +130,15 @@
     },
     "RoadEventFeature": {
       "title": "Road Event Feature (GeoJSON Feature)",
-      "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
+      "description": "The container object for a WZDx road event; an instance of a GeoJSON Feature",
       "type": "object",
       "properties": {
-        "id": {
-          "description": "A unique identifier issued by the data feed provider to identify the WZDx road event",
-          "type": "string"
-        },
         "type": {
           "description": "The GeoJSON object type; must be 'Feature'",
           "enum": ["Feature"]
         },
         "properties": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/WorkZoneRoadEvent"
-            },
-            {
-              "$ref": "#/definitions/DetourRoadEvent"
-            }
-          ]
+          "$ref": "#/definitions/RoadEvent"
         },
         "geometry": {
           "oneOf": [
@@ -174,18 +149,19 @@
               "$ref": "https://geojson.org/schema/MultiPoint.json"
             }
           ]
-        },
-        "bbox": {
-          "$ref": "#/definitions/BoundingBox"
         }
       },
-      "required": ["id","type","properties","geometry"]
+      "required": ["type","properties","geometry"]
     },
-    "RoadEventCoreDetails": {
-      "title": "Road Event Core Details",
-      "description": "The core details of an event occurring on a roadway (i.e. a road event) that is shared by all types of road events",
+    "RoadEvent": {
+      "title": "Road Event",
+      "description": "Describes an activity taking place along a road segment",
       "type": "object",
       "properties": {
+        "road_event_id": {
+          "description": "A unique identifier issued by the data feed provider to identify the work zone project or activity",
+          "type": "string"
+        },
         "data_source_id": {
           "description": "Identifies the data source from which the road event data is sourced from",
           "type": "string"
@@ -196,46 +172,16 @@
         "relationship": {
           "$ref": "#/definitions/Relationship"
         },
-        "road_names": {
-          "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
+        "road_name": {
+          "description": "Publicly known name of the road on which the event occurs",
+          "type": "string"
+        },
+        "road_number": {
+          "description": "The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "string"
         },
         "direction": {
           "$ref": "#/definitions/Direction"
-        },
-        "description": {
-          "description": "Short free text description of the road event",
-          "type": "string"
-        },
-        "creation_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "update_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "event_type",
-        "data_source_id",
-        "direction",
-        "road_names"
-      ]
-    },
-    "WorkZoneRoadEvent": {
-      "title": "Work Zone Road Event",
-      "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
-      "type": "object",
-      "properties": {
-        "core_details": {
-          "$ref": "#/definitions/RoadEventCoreDetails"
         },
         "beginning_cross_street": {
           "description": "Name or number of the nearest cross street along the roadway where the event begins",
@@ -280,26 +226,44 @@
         "event_status": {
           "$ref": "#/definitions/EventStatus"
         },
+        "total_num_lanes": {
+          "description": "The total number of lanes associated with the road event",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
         "vehicle_impact": {
           "$ref": "#/definitions/VehicleImpact"
         },
-        "location_method": {
-          "$ref": "#/definitions/LocationMethod"
+        "workers_present": {
+          "description": "A flag indicating that there are workers present in the road event",
+          "type": "boolean"
         },
-        "worker_presence": {
-          "$ref": "#/definitions/WorkerPresence"
-        },
-        "reduced_speed_limit_kph": {
-          "description": "If applicable, the reduced speed limit posted within the road event, in kilometers per hour",
-          "type": "number",
+        "reduced_speed_limit": {
+          "description": "The reduced speed limit posted within the road event",
+          "type": "integer",
           "minimum": 0
         },
         "restrictions": {
-          "description": "A list of zero or more restrictions applying to the road event",
+          "description": "Zero or more road restrictions applying to the road event",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Restriction"
-          }
+            "$ref": "#/definitions/RoadRestriction"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "description": "Short free text description of the road event",
+          "type": "string"
+        },
+        "creation_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was created (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "update_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
+          "type": "string",
+          "format": "date-time"
         },
         "types_of_work": {
           "description": "A list of the types of work being done in a road event",
@@ -317,69 +281,17 @@
         }
       },
       "required": [
-        "core_details",
+        "road_event_id",
+        "data_source_id",
+        "road_name",
+        "direction",
         "beginning_accuracy",
         "ending_accuracy",
         "start_date",
         "end_date",
         "start_date_accuracy",
         "end_date_accuracy",
-        "vehicle_impact",
-        "location_method"
-      ]
-    },
-    "DetourRoadEvent": {
-      "title": "Detour Road Event",
-      "description": "Descibes a detour on a roadway",
-      "type": "object",
-      "properties": {
-        "core_details": {
-          "$ref": "#/definitions/RoadEventCoreDetails"
-        },
-        "beginning_cross_street": {
-          "description": "Name or number of the nearest cross street along the roadway where the event begins",
-          "type": "string"
-        },
-        "ending_cross_street": {
-          "description": "Name or number of the nearest cross street along the roadway where the event ends",
-          "type": "string"
-        },
-        "beginning_milepost": {
-          "description": "The linear distance measured against a milepost marker along a roadway where the event begins",
-          "type": "number",
-          "minimum": 0
-        },
-        "ending_milepost": {
-          "description": "The linear distance measured against a milepost marker along a roadway where the event ends",
-          "type": "number",
-          "minimum": 0
-        },
-        "start_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "end_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event ends (e.g. 2020-11-03T19:37:00Z)",
-          "type": "string",
-          "format": "date-time"
-        },
-        "start_date_accuracy": {
-          "$ref": "#/definitions/TimeVerification"
-        },
-        "end_date_accuracy": {
-          "$ref": "#/definitions/TimeVerification"
-        },
-        "event_status": {
-          "$ref": "#/definitions/EventStatus"
-        }
-      },
-      "required": [
-        "core_details",
-        "start_date",
-        "end_date",
-        "start_date_accuracy",
-        "end_date_accuracy"
+        "vehicle_impact"
       ]
     },
     "Relationship": {
@@ -388,7 +300,7 @@
       "type": "object",
       "properties": {
         "first": {
-          "description": "Indicates the first (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
+          "description": "Indicates the first (can be multiple) road event in a sequence of road events by 'road_event_id'",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -396,7 +308,7 @@
           }
         },
         "next": {
-          "description": "Indicates the next (can be multiple) road event in a sequence of road events by RoadEventFeature 'id'",
+          "description": "Indicates the next (can be multiple) road event in a sequence of road events by 'road_event_id'",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -453,70 +365,39 @@
           "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
-          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
           "minimum": 1
         },
         "restrictions": {
-          "description": "A list of zero or more restrictions specific to the lane",
+          "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Restriction"
+            "$ref": "#/definitions/LaneRestriction"
           }
         }
       },
       "required": ["status", "type", "order"]
     },
-    "Restriction": {
-      "title": "Restriction",
-      "description": "A restriction on a roadway or lane, including type and value",
+    "LaneRestriction": {
+      "title": "Lane Restriction",
+      "description": "A lane-level restriction, including type and value",
       "type": "object",
       "properties": {
-        "type": {
-          "$ref": "#/definitions/RestrictionType"
+        "restriction_type": {
+          "$ref": "#/definitions/RoadRestriction"
         },
-        "value": {
+        "restriction_value": {
           "type": "number"
         },
-        "unit": {
-          "$ref": "#/definitions/UnitOfMeasurement"
+        "restriction_units": {
+          "$ref": "#/definitions/LaneRestrictionUnit"
         }
       },
-      "required": ["type"],
+      "required": ["restriction_type"],
       "dependencies": {
-        "value": ["unit"]
+        "restriction_value": ["restriction_units"]
       }
-    },
-    "WorkerPresence": {
-      "title": "Worker Presence",
-      "description": "Information about the presence of workers in the work zone event area",
-      "type": "object",
-      "properties": {
-        "are_workers_present": {
-          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object",
-          "type": "boolean"
-        },
-        "method": {
-          "$ref": "#/definitions/WorkerPresenceMethod"
-        },
-        "worker_presence_last_confirmed_date": {
-          "description": "Datetime at which the presence of workers was last confirmed using the 'source'",
-          "type": "string",
-          "format": "date-time"
-        },
-        "confidence": {
-          "$ref": "#/definitions/WorkerPresenceConfidence"
-        },
-        "definition": {
-          "description": "A list of situations in which workers are considered to be present in the jurisdiction of the data provider",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/WorkerPresenceDefinition"
-          },
-          "uniqueItems": true
-        }
-      },
-      "required": ["are_workers_present"]
     },
     "EventType": {
       "title": "Road Event Type Enumerated Type",
@@ -546,10 +427,10 @@
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
-      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
+      "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "unknown"]
     },
-    "RestrictionType": {
-      "title": "Restriction Type Enumerated Type",
+    "RoadRestriction": {
+      "title": "Road Restriction Enumerated Type",
       "description": "The type of vehicle restriction on a roadway",
       "enum": [
         "no-trucks",
@@ -564,8 +445,7 @@
         "axle-load-limit",
         "gross-weight-limit",
         "towing-prohibited",
-        "permitted-oversize-loads-prohibited",
-        "local-access-only"
+        "permitted-oversize-loads-prohibited"
       ]
     },
     "WorkTypeName": {
@@ -587,66 +467,46 @@
     "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
-      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-flow"]
+      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way"]
     },
     "LaneType": {
       "title": "Lane Type Enumerated Type",
       "description": "An indication of the type of lane or shoulder",
       "enum": [
-        "general",
-        "exit-lane",
-        "exit-ramp",
-        "entrance-lane",
-        "entrance-ramp",
+        "left-lane",
+        "right-lane",
+        "middle-lane",
+        "center-lane",
+        "lane",
+        "right-turning-lane",
+        "left-turning-lane",
+        "right-exit-lane",
+        "left-exit-lane",
+        "right-merging-lane",
+        "left-merging-lane",
+        "right-exit-ramp",
+        "right-second-exit-ramp",
+        "left-exit-ramp",
+        "left-second-exit-ramp",
+        "right-entrance-ramp",
+        "right-second-entrance-ramp",
+        "left-entrance-ramp",
+        "left-second-entrance-ramp",
         "sidewalk",
         "bike-lane",
+        "alternating-flow-lane",
+        "right-shoulder",
+        "left-shoulder",
         "shoulder",
-        "parking",
-        "median",
+        "hov-lane",
+        "reversible-lane",
         "center-left-turn-lane"
       ]
     },
-    "UnitOfMeasurement": {
-      "title": "Unit of Measurement Enumerated Type",
-      "description": "Unit of measurement, used when providing a unit to accompany a value",
+    "LaneRestrictionUnit": {
+      "title": "Lane Restriction Unit Enumerated Type",
+      "description": "Units of measure used for the lane restriction value",
       "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
-    },
-    "WorkerPresenceMethod": {
-      "title": "Worker Presence Method Enumerated Type",
-      "description": "Describes methods for how worker presence in a work zone event area is determined",
-      "enum": [
-        "camera-monitoring", 
-        "arrow-board-present", 
-        "cones-present", 
-        "maintenance-vehicle-present", 
-        "wearables-present", 
-        "mobile-device-present", 
-        "check-in-app", 
-        "check-in-verbal",
-        "scheduled"
-      ]
-    },
-    "WorkerPresenceDefinition": {
-      "title": "Worker Presence Definition Enumerated Type",
-      "description": "Situations in which workers may be considered present in a work zone",
-      "enum": [
-        "workers-in-work-zone-working",
-        "workers-in-work-zone-not-working", 
-        "mobile-equipment-in-work-zone-moving", 
-        "mobile-equipment-in-work-zone-not-working", 
-        "fixed-equipment-in-work-zone", 
-        "humans-behind-barrier", 
-        "humans-in-right-of-way"
-      ]
-    },
-    "WorkerPresenceConfidence": {
-      "title": "Worker Presence Confidence Enumerated Type",
-      "description": "A high-level description of the feed publisher's confidence in the reported WorkerPresence value of are_workers_present",
-      "enum": [
-        "low",
-        "medium",
-        "high"
-      ]
     }
   }
 }
