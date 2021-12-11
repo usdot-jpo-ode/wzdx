@@ -168,7 +168,7 @@
     },
     "DetourRoadEvent": {
       "title": "Detour Road Event",
-      "description": "Describes a detour on a roadway",
+      "description": "Descibes a detour on a roadway",
       "type": "object",
       "allOf": [
         {
@@ -341,11 +341,6 @@
         "road_names"
       ]
     },
-    "EventType": {
-      "title": "Road Event Type Enumerated Type",
-      "description": "The type of WZDx road event",
-      "enum": ["work-zone", "detour", "restriction"]
-    },
     "Relationship": {
       "title": "Relationship",
       "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
@@ -385,10 +380,20 @@
         }
       }
     },
-    "Direction": {
-      "title": "Direction Enumerated Type",
-      "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound"]
+    "TypeOfWork": {
+      "title": "Type of Work",
+      "description": "A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway",
+      "type": "object",
+      "properties": {
+        "type_name": {
+          "$ref": "#/definitions/WorkTypeName"
+        },
+        "is_architectural_change": {
+          "description": "A flag indicating whether the type of work will result in an architectural change to the roadway",
+          "type": "boolean"
+        }
+      },
+      "required": ["type_name"]
     },
     "Lane": {
       "title": "Lane",
@@ -407,73 +412,19 @@
           "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
-          "description": "The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
           "type": "integer",
           "minimum": 1
         },
         "restrictions": {
-          "description": "A list of restrictions specific to the lane",
+          "description": "A list of zero or more restrictions specific to the lane",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Restriction"
           }
         }
       },
-      "required": [
-        "status",
-        "type",
-        "order"
-      ]
-    },
-    "LaneStatus": {
-      "title": "Lane Status Enumerated Type",
-      "description": "The status of the lane for the traveling public",
-      "enum": [
-        "open",
-        "closed",
-        "shift-left",
-        "shift-right",
-        "merge-left",
-        "merge-right",
-        "alternating-one-way",
-        "alternating-flow"
-      ]
-    },
-    "LaneType": {
-      "title": "Lane Type Enumerated Type",
-      "description": "An indication of the type of lane or shoulder",
-      "enum": [
-        "lane",
-        "right-turning-lane",
-        "left-turning-lane",
-        "right-exit-lane",
-        "left-exit-lane",
-        "right-entrance-lane",
-        "left-entrance-lane",
-        "sidewalk",
-        "bike-lane",
-        "alternating-flow-lane",
-        "shoulder",
-        "hov-lane",
-        "reversible-lane",
-        "center-left-turn-lane",
-        "left-lane",
-        "right-lane",
-        "middle-lane",
-        "center-lane",
-        "right-shoulder",
-        "left-shoulder",
-        "right-merging-lane",
-        "left-merging-lane",
-        "right-exit-ramp",
-        "right-second-exit-ramp",
-        "left-exit-ramp",
-        "left-second-exit-ramp",
-        "right-entrance-ramp",
-        "right-second-entrance-ramp",
-        "left-entrance-ramp",
-        "left-second-entrance-ramp"
-      ]
+      "required": ["status", "type", "order"]
     },
     "Restriction": {
       "title": "Restriction",
@@ -490,72 +441,10 @@
           "$ref": "#/definitions/UnitOfMeasurement"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "dependencies": {
-        "value": [
-          "unit"
-        ]
+        "value": ["unit"]
       }
-    },
-    "RestrictionType": {
-      "title": "Restriction Type Enumerated Type",
-      "description": "The type of vehicle restriction on a roadway",
-      "enum": [
-        "no-trucks",
-        "travel-peak-hours-only",
-        "hov-3",
-        "hov-2",
-        "no-parking",
-        "reduced-width",
-        "reduced-height",
-        "reduced-length",
-        "reduced-weight",
-        "axle-load-limit",
-        "gross-weight-limit",
-        "towing-prohibited",
-        "permitted-oversize-loads-prohibited",
-        "local-access-only"
-      ]
-    },
-    "UnitOfMeasurement": {
-      "title": "Unit of Measurement Enumerated Type",
-      "description": "Unit of measurement, used when providing a unit to accompany a value",
-      "enum": [
-        "feet",
-        "inches",
-        "centimeters",
-        "pounds",
-        "tons",
-        "kilograms"
-      ]
-    },
-    "TypeOfWork": {
-      "title": "Type of Work",
-      "description": "A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway",
-      "type": "object",
-      "properties": {
-        "type_name": {
-          "$ref": "#/definitions/WorkTypeName"
-        },
-        "is_architectural_change": {
-          "description": "A flag indicating whether the type of work will result in an architectural change to the roadway",
-          "type": "boolean"
-        }
-      },
-      "required": ["type_name"]
-    },
-    "LocationMethod": {
-      "title": "Location Method Enumerated Type",
-      "description": "The typical method used to locate the beginning and end of a work zone impact area",
-      "enum": [
-        "channel-device-method",
-        "sign-method",
-        "junction-method",
-        "other",
-        "unknown"
-      ]
     },
     "WorkerPresence": {
       "title": "Worker Presence",
@@ -588,6 +477,16 @@
       },
       "required": ["are_workers_present"]
     },
+    "EventType": {
+      "title": "Road Event Type Enumerated Type",
+      "description": "The type of WZDx road event",
+      "enum": ["work-zone", "detour", "restriction"]
+    },
+    "Direction": {
+      "title": "Direction Enumerated Type",
+      "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
+      "enum": ["northbound", "eastbound", "southbound", "westbound"]
+    },
     "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",
@@ -608,6 +507,26 @@
       "description": "The impact to vehicular lanes along a single road in a single direction",
       "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
     },
+    "RestrictionType": {
+      "title": "Restriction Type Enumerated Type",
+      "description": "The type of vehicle restriction on a roadway",
+      "enum": [
+        "no-trucks",
+        "travel-peak-hours-only",
+        "hov-3",
+        "hov-2",
+        "no-parking",
+        "reduced-width",
+        "reduced-height",
+        "reduced-length",
+        "reduced-weight",
+        "axle-load-limit",
+        "gross-weight-limit",
+        "towing-prohibited",
+        "permitted-oversize-loads-prohibited",
+        "local-access-only"
+      ]
+    },
     "WorkTypeName": {
       "title": "Work Type Name Enumerated Type",
       "description": "A high-level text description of the type of work being done in a road event",
@@ -623,6 +542,33 @@
         "roadway-relocation",
         "roadway-creation"
       ]
+    },
+    "LaneStatus": {
+      "title": "Lane Status Enumerated Type",
+      "description": "The status of the lane for the traveling public",
+      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-flow"]
+    },
+    "LaneType": {
+      "title": "Lane Type Enumerated Type",
+      "description": "An indication of the type of lane or shoulder",
+      "enum": [
+        "general",
+        "exit-lane",
+        "exit-ramp",
+        "entrance-lane",
+        "entrance-ramp",
+        "sidewalk",
+        "bike-lane",
+        "shoulder",
+        "parking",
+        "median",
+        "center-left-turn-lane"
+      ]
+    },
+    "UnitOfMeasurement": {
+      "title": "Unit of Measurement Enumerated Type",
+      "description": "Unit of measurement, used when providing a unit to accompany a value",
+      "enum": ["feet", "inches", "centimeters", "pounds", "tons", "kilograms"]
     },
     "WorkerPresenceMethod": {
       "title": "Worker Presence Method Enumerated Type",
