@@ -344,7 +344,7 @@
     "EventType": {
       "title": "Road Event Type Enumerated Type",
       "description": "The type of WZDx road event",
-      "enum": ["work-zone", "detour"]
+      "enum": ["work-zone", "detour", "restriction"]
     },
     "Relationship": {
       "title": "Relationship",
