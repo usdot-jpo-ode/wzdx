@@ -415,7 +415,7 @@
           "description": "A list of restrictions specific to the lane",
           "type": "array",
           "items": {
-            "$ref": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Restriction.json"
+            "$ref": "#/definitions/Restriction"
           }
         }
       },
