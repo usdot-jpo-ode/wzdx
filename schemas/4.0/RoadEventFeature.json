@@ -391,8 +391,6 @@
       "enum": ["northbound", "eastbound", "southbound", "westbound"]
     },
     "Lane": {
-      "$id": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Lane.json",
-      "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Lane",
       "description": "An individual lane within a road event",
       "type": "object",
@@ -478,8 +476,6 @@
       ]
     },
     "Restriction": {
-      "$id": "https://raw.githubusercontent.com/DeraldDudley/wzdx/RestrictionEvent/schemas/4.0/Restriction.json",
-      "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Restriction",
       "description": "A restriction on a roadway or lane, including type and value",
       "type": "object",
