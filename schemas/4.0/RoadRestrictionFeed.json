@@ -48,7 +48,7 @@
     }
   },
   "required": [
-    "road_event_feed_info",
+    "feed_info",
     "type",
     "features"
   ]
