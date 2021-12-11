@@ -341,7 +341,17 @@
         "road_names"
       ]
     },
-    "Relationship": {
+    "LocationMethod": {
+      "title": "Location Method Enumerated Type",
+      "description": "The typical method used to locate the beginning and end of a work zone impact area",
+      "enum": [
+        "channel-device-method",
+        "sign-method",
+        "junction-method",
+        "other",
+        "unknown"
+      ]
+    },"Relationship": {
       "title": "Relationship",
       "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
       "type": "object",
