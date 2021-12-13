@@ -14,3 +14,4 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | ---
 `lanes` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`lanes` | [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)

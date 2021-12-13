@@ -19,6 +19,7 @@ GeoJSON is the file format of choice because:
 WZDx defines the content and structure of several data feeds. Each feed is described by a single root object with many child objects. The output of a WZDx data feed is a GeoJSON file containing the feed object. WZDx defines the following feed objects:
 
 - [WZDxFeed Object](/spec-content/objects/WZDxFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0).
+- [RoadRestrictionFeed Object](/spec-content/objects/RoadRestrictionFeed.md): describes the location and details of restrictions on roadways.
 - [SwzDeviceFeed Object](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
@@ -39,11 +40,12 @@ The following business rules help assure a standardized and interpretable use of
 ### JSON Schemas
 The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later) within the [schemas](/schemas) directory. The repository contains schemas for the following feeds:
 
-#### Current
+#### Current Version (4.0)
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
+- [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
 
-#### Previous
+#### Previous Versions
 - [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
 - [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
 - [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
