@@ -44,7 +44,7 @@ Object | Description
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
 [Restriction](/spec-content/objects/Restriction.md) | A restriction on a road event or lane, including type and value.
-[RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) | describes a section of roadway and the limitations of how that section can be used.
+[RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) | Describes a section of roadway and the limitations of how that section can be used.
 [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) | The core details of an event occurring on a roadway (i.e. a road event) that is shared by all types of road events.
 [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx `RoadEvent`.
