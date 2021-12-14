@@ -112,12 +112,12 @@ WZDx version 4.0 implements clean up and small additions in functionality to the
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx v4.0 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf)
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
-3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
-4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
+3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
 5. Validate your feed output using the respective [JSON Schema](#json-schemas).
 6. Publish your feed and tell us about it via avdx@dot.gov.
 
