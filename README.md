@@ -13,7 +13,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v3.1 (Apr 2021)]
+    - [Release v4.0 (Dec 2021)](#wzdx-v40-december-2021)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
