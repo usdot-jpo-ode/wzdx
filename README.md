@@ -86,30 +86,14 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 ### WZDx v4.0 (December 2021)
 WZDx version 4.0 implements clean up and small additions in functionality to the WZDx feed and adds definitions for two new feeds, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) and [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md). Until version 4.0, the WZDx specification defined only one feed, the [WZDxFeed](/spec-content/objects/WZDxFeed.md).
 
+*For detailed release information, see [RELEASES.md](/RELEASES.md)*
+
 ## Features
-- Add the following values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type:
-    - `some-lanes-closed-merge-left`
-    - `some-lanes-closed-merge-right`
-    - `all-lanes-open-shift-left`
-    - `all-lanes-open-shift-right`
-    - `some-lanes-closed-split`
-    - `flagging`
-    - `temporary-traffic-signal`
-- Allow restrictions with a value and unit to be provided at the road event level; specifically:
-    - Rename the LaneRestrictionUnit enumerated type to [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md).
-    - Rename the RoadRestriction enumerated type to [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
-    - Rename the LaneRestriction object to [Restriction](/spec-content/objects/Restriction.md) and remove the `lane_restriction_` prefix from its properties.
-    - Rename the [Restriction](/spec-content/objects/Restriction.md) object `units` property to `unit`.
-- Add values `parking` and `median` to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
-- Define a new data feed, the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) and [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) to enable providing a feed of restrictions on roadways, such as bridge clearances.
-- Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones. A `SwzDeviceFeed` contains a new feature type, the [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md), which contains information about a specific type of field device. The following field devices are defined in WZDx v4.0:
-    - `ArrowBoard`: An electronic, connected arrow board which can display an arrow pattern to direct traffic.
-    - `Camera`: A camera device deployed in the field, capable of capturing still images.
-    - `DynamicMessageSign`: An electronic traffic sign deployed on the roadway, used to provide information to travelers.
-    - `FlashingBeacon`: A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
-    - `HybridSign`: A hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers.
-    - `LocationMarker`: Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
-    - `TrafficSensor`: A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
+- Add values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type.
+- Allow restrictions with a value and unit to be provided at the road event level.
+- Add values to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
+- Define a new data feed, the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md), to enable providing a feed of restrictions on roadways, such as bridge clearances.
+- Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones.
 - Rename the `workers_present` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to  `worker_presence`; change the type from "boolean" to a new [WorkerPresence](/spec-content/objects/WorkerPresence.md) object which enables providing more nuanced information about worker presence in work zones.
   
 ## Refactoring
@@ -119,44 +103,10 @@ WZDx version 4.0 implements clean up and small additions in functionality to the
 - Deprecate the `lane_number` property on the [Lane](/spec-content/objects/Lane.md) object.
 - Deprecate the `lrs_type` and `lrs_url` properties on the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object.
 - Remove the deprecated value `alternating-one-way` from the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
-- Remove the following deprecated properties from the road event (RoadEvent in previous versions; [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) in 4.0):
-    - `road_event_id`
-    - `road_number`
-    - `road_name`
-    - `total_num_lanes`
-- Remove the following deprecated values from the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type: 
-    - `left-lane`
-    - `right-lane`
-    - `middle-lane`
-    - `center-lane`
-    - `right-shoulder`
-    - `left-shoulder`
-    - `right-second-exit-ramp`
-    - `left-second-exit-ramp`
-    - `right-entrance-exit-ramp`
-    - `left-entrance-exit-ramp`
-    - `hov-lane`
-    - `alternating-flow-lane`
-    - `reversible-lane`
-    - `right-entrance-lane`
-    - `left-entrance-lane`
-    - `left-entrance-ramp`
-    - `right-merging-lane`
-    - `left-merging-lane`
-    - `right-second-entrance-ramp`
-    - `left-second-entrance-ramp`
+- Remove all deprecated properties from the road event (RoadEvent in previous versions; [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) in 4.0).
 - Require the `road_names` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md).
 - Require the `id` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
-- Refine the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type; specifically:
-    - Rename `lane` to `general`.
-    - Remove `right-turning-lane` and `left-turning-lane`.
-    - Remove `right-exit-lane` and `left-exit-lane`.
-    - Add `exit-lane`.
-    - Remove `right-exit-ramp` and `left-exit-ramp`.
-    - Add `exit-ramp`.
-    - Remove `right-entrance-ramp` and `left-exit-ramp`.
-    - Add `entrance-ramp`.
-    - Add `entrance-lane`.
+- Refine the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
 - Deprecate the `location_verify_method` property on the [FeedDataSource](/spec-content/objects/FeedDataSource.md).
 - Update the [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) enumerated type value descriptions to clarify that verified work zone locations should use a GPS enabled device.
 
