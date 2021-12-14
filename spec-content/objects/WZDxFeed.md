@@ -1,6 +1,8 @@
 # WZDxFeed Object (GeoJSON FeatureCollection)
 The `WZDxFeed` object is the root (highest level) object of a WZDx feed. There is one WZDx feed object per WZDx GeoJSON document. The `WZDxFeed` is an instance of a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
 
+The `WZDxFeed` contains high-level information about events ocurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed.
+
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---

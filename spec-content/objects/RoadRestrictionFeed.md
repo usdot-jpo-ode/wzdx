@@ -1,6 +1,8 @@
 # RoadRestrictionFeed Object (GeoJSON FeatureCollection)
 The `RoadRestrictionFeed` object is the root (highest level) object of a WZDx road restriction feed. There is one `RoadRestrictionFeed` object per road restriction feed GeoJSON document. The `RoadRestrictionFeed` is a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3).
 
+The `RoadRestrictionFeed` contains information about sections of roadways that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type.
+
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
