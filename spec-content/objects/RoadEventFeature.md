@@ -14,4 +14,4 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | ---
 `features` | [WZDx Feed](/spec-content/objects/WZDxFeed.md)
-`features` | [RoadRestrictionFeed](spec-content/objects/RoadRestrictionFeed.md)
+`features` | [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md)
