@@ -1,5 +1,5 @@
-# Worker Presence Object
-The `WorkerPresence` object contains information on the presence of workers in the `RoadEvent`'s area.
+# WorkerPresence Object
+The `WorkerPresence` object contains information on the presence of workers in the [RoadEvent](/spec-content/objects/RoadEvent.md)'s area.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
