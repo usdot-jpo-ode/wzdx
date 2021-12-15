@@ -1,5 +1,5 @@
 # WorkerPresence Object
-The `WorkerPresence` object contains information on the presence of workers in the [RoadEvent](/spec-content/objects/RoadEvent.md)'s area.
+The `WorkerPresence` object contains information on the presence of workers in the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)'s area.
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -13,4 +13,4 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`worker_presence` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`worker_presence` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)

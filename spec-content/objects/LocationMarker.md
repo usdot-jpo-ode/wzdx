@@ -1,5 +1,5 @@
 # LocationMarker Object
-The `LocationMarker` object describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone). The `LocationMarker` contains a list of one or more [MarkedLocation](/spec-content/objects/MarkedLocation.md) objects which indicate the type of location (such as the start or end) and optionally the ID of a [RoadEvent](/spec-content/objects/RoadEvent.md) that the location is associated with.
+The `LocationMarker` object describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone). The `LocationMarker` contains a list of one or more [MarkedLocation](/spec-content/objects/MarkedLocation.md) objects which indicate the type of location (such as the start or end) and optionally the ID of a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) that the location is associated with.
 
 The `LocationMarker` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
