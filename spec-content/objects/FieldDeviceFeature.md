@@ -1,5 +1,5 @@
 # FieldDeviceFeature Object
-The `FieldDeviceFeature` object is a [GeoJSON Feature](https://tools.ietf.org/html/rfc7946#section-3.2) representing a deployed field device. This object contains the specific details of the field device, similar to how the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object in a WZDx Feed contains the road event object ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) via the `properties` property.
+The `FieldDeviceFeature` object is a [GeoJSON Feature](https://tools.ietf.org/html/rfc7946#section-3.2) representing a deployed field device. This object contains the specific details of the field device, similar to how the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object in a WZDx Feed contains the RoadEvent object via the `properties` property.
 
 Currently, only point devices are supported.
 

@@ -33,7 +33,7 @@ The following business rules help assure a standardized and interpretable use of
 3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are available, the `MultiPoint` can be used.  
 4. A cascading multi-lane closure should consider the speed of vehicles traveling through the work zone. If the distance between lane closures is short enough that time in a to-be-closed lane is not significant, which is common, the to-be-closed lane should be represented as closed to avoid traffic delays and potential crashes.
 5. A detour must be represented with a [RoadEvent](/spec-content/objects/RoadEvent.md) of type (i.e. with `event_type` of) `detour` and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have a `geometry` of `type` `LineString` to represent the full detour route. The detour road event should be connected to the work zone road event using the `relationship` property on the detour road event.
-6. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
+6. If the `lanes` property on the [RoadEvent](/spec-content/objects/RoadEvent.md) object is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
 ## Data Validation
 
@@ -46,9 +46,9 @@ The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
 
 #### Previous Versions
-- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
-- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
-- [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
+- [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
+- [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
+- [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
   
 ### Self-Validation Checklist
 For a list of steps to take to make sure your data feed conforms to the specification and is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx).

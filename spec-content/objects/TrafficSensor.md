@@ -1,5 +1,5 @@
 # TrafficSensor Object
-The `TrafficSensor` object describes a traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval. The `TrafficSensor` can describe lane-level traffic data if available and if associated with a road event ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
+The `TrafficSensor` object describes a traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval. The `TrafficSensor` can describe lane-level traffic data if available and if associated with a [RoadEvent](/spec-content/objects/RoadEvent.md).
 
 The `TrafficSensor` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 
