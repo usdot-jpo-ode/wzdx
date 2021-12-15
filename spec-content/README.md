@@ -72,16 +72,6 @@ Object | Description
 ### Object Diagrams
 The object diagrams below depict the relationship between the data objects for each WZDx feed.
 
-#### WZDxFeed
-
-![Object Diagram](/images/wzdx_object_diagram.jpg)
-
-#### RoadRestrictionFeed
-
-[TBD]
-
-#### SwzDeviceFeed
-
 [TBD]
 
 #### Updating the object diagram
