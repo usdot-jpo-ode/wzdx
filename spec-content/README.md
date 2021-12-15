@@ -67,7 +67,7 @@ Object | Description
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
 [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of smart work zone device feed GeoJSON document.
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
-[TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a road event ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
+[TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a road event (e.g. [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
 
 ### Object Diagrams
 The object diagrams below depict the relationship between the data objects for each WZDx feed.
