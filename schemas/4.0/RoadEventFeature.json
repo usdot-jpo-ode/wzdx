@@ -469,7 +469,7 @@
           "$ref": "#/definitions/WorkerPresenceMethod"
         },
         "worker_presence_last_confirmed_date": {
-          "description": "Datetime at which the presence of workers was last confirmed using the 'source'",
+          "description": "The UTC date and time at which the presence of workers was last confirmed",
           "type": "string",
           "format": "date-time"
         },
