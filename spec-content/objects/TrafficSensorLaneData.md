@@ -1,5 +1,5 @@
 # TrafficSensorLaneData Object
-The `TrafficSensorLaneData` object describes data for a single lane within a road event ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
+The `TrafficSensorLaneData` object describes data for a single lane within a road event (e.g. [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
 
 Note this structure allows a single [TrafficSensor](/spec-content/objects/TrafficSensor.md) to provide data across lanes on multiple road events. It does not allow for lane data to be provided when a road event is not known.
 
