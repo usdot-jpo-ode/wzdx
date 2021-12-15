@@ -1,4 +1,4 @@
-# Worker Presence Method
+# WorkerPresenceMethod Enumerated Type
 Describes methods for how worker presence in a work zone event area is determined.
 
 ## Values

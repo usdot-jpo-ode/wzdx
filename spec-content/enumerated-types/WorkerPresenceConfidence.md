@@ -1,4 +1,4 @@
-# Worker Presence Confidence
+# WorkerPresenceConfidence Enumerated Type
 A high-level description of a feed publisher's confidence in the reported value of `are_workers_present` on the [WorkerPresence](/spec-content/objects/WorkerPresence.md) object. 
 
 ## Values

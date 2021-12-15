@@ -1,4 +1,4 @@
-# Location Method
+# LocationMethod Enumerated Type
 The typical method used to locate the begin and end of a work zone impact area.
 
 ## Values

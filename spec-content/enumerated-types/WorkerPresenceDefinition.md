@@ -1,4 +1,4 @@
-# Worker Presence Definition
+# WorkerPresenceDefinition Enumerated Type
 Situations in which workers may be considered present in a work zone.
 
 ## Values

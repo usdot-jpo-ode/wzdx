@@ -1,4 +1,4 @@
-# Lane Type
+# LaneType Enumerated Type
 A description of the static properties of a section of the roadway, intended to reflect information about its function that is not covered by its status (see [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)).
 
 ## Values

@@ -1,4 +1,4 @@
-# Work Zone Event Status
+# EventStatus Enumerated Type
 The status of a road event.
 
 ## Values

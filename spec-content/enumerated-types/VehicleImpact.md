@@ -1,4 +1,4 @@
-# Vehicle Impact
+# VehicleImpact Enumerated Type
 The impact to vehicular lanes along a single road in a single direction.
 
 ## Values

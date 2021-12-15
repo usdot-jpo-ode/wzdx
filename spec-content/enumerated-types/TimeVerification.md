@@ -1,4 +1,4 @@
-# Time Verification
+# TimeVerification Enumerated Type
 A measure of how accurate a date-time is.
 
 ## Values

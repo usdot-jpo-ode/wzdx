@@ -1,4 +1,4 @@
-# Spatial Verification
+# SpatialVerification Enumerated Type
 An indication of how a geographical coordinate was defined.
 
 ## Values

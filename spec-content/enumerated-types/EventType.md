@@ -1,4 +1,4 @@
-# Event Type
+# EventType Enumerated Type
 The type of a WZDx road event.
 
 ## Values
