@@ -462,7 +462,7 @@
       "type": "object",
       "properties": {
         "are_workers_present": {
-          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘worker_presence_definition’ property on the RoadEventDataSource object",
+          "description": "Whether workers are present in the work zone event area, following the definition provided in the ‘definition’ property on the WorkerPresence object",
           "type": "boolean"
         },
         "method": {
