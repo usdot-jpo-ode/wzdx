@@ -1,4 +1,4 @@
-# Work Type Name
+# WorkTypeName Enumerated Type
 A high-level text description of the type of work being done in a road event.
 
 ## Values

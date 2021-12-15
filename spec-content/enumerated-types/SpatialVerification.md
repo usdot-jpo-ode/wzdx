@@ -1,14 +1,14 @@
-# Spatial Verification
+# SpatialVerification Enumerated Type
 An indication of how a geographical coordinate was defined.
 
 ## Values
 Value | Description
 --- | ---
-`estimated` | Estimated location associated with work zone activities and lane closures.<br>An estimated measurement may be based on an approximation of a location<br>referencing method (e.g., lat/long or milepost), for example: a point relative to a<br>posted milemarker, point on a map, or GPS device that provides less than<br>centimeter accuracy.
-`verified` | Actual reported information about work zone locations. Actual location is<br>typically measured by a calibrated navigation or survey system to centimeter<br>accuracy (six decimal places for latitude and longitude).
+`estimated` | Estimated location for the work zone road event geometry.  An estimated measurement is based on an approximation of the reported location of a work zone.  Approximations of the location can include but are not limited to a point relative to a posted mile maker or cross street, selecting a point on a map, or locations based on project plans.  
+`verified` | Verified locations for the work zone road event geometry representing the actual extents of the work zone.  A verified measurement is based on actual reported data from a GPS equipped device showing the measured location of the work zone.
 
 ## Used By
 Property | Object
 --- | ---
-`beginning_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)
-`ending_accuracy` | [RoadEvent](/spec-content/objects/RoadEvent.md)
+`beginning_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`ending_accuracy` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)

@@ -1,0 +1,249 @@
+{
+  "feed_info": {
+    "update_date": "2021-07-01T15:00:00Z",
+    "publisher": "New York State DOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": 300,
+    "version": "4.0",
+    "data_sources": [
+      {
+        "data_source_id": "1",
+        "organization_name": "New York City DOT",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": 60,
+        "update_date": "2021-07-01T00:00:00Z"
+      }
+    ]
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "Bridge1",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "event_type": "restriction",
+          "data_source_id": "1",
+          "road_names": [
+            "HRP",
+            "Hutchinson Parkway",
+            "Hutchinson River Parkway"
+          ],
+          "direction": "northbound"
+        },
+        "restrictions": [
+          {
+            "type": "reduced-height",
+            "value": 10.5,
+            "unit": "feet"
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "general",
+            "restrictions": [
+              {
+                "type": "reduced-height",
+                "value": 10.5,
+                "unit": "feet"
+              }
+            ]
+          },
+          {
+            "order": 2,
+            "status": "open",
+            "type": "general",
+            "restrictions": [
+              {
+                "type": "reduced-height",
+                "value": 11,
+                "unit": "feet"
+              }
+            ]
+          },
+          {
+            "order": 3,
+            "status": "open",
+            "type": "general",
+            "restrictions": [
+              {
+                "type": "reduced-height",
+                "value": 10.5,
+                "unit": "feet"
+              }
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.83857488632202,
+            40.83782481579416
+          ],
+          [
+            -73.8385534286499,
+            40.83905758069452
+          ],
+          [
+            -73.83834958076477,
+            40.84045773030475
+          ],
+          [
+            -73.83817791938782,
+            40.841269397695825
+          ],
+          [
+            -73.83692264556885,
+            40.84498467829638
+          ],
+          [
+            -73.83683949708939,
+            40.84519569836051
+          ],
+          [
+            -73.83674025535583,
+            40.84555483673242
+          ],
+          [
+            -73.83666649460793,
+            40.84582976902955
+          ],
+          [
+            -73.83646667003632,
+            40.84667890696712
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Bridge2",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "event_type": "restriction",
+          "data_source_id": "1",
+          "road_names": [
+            "HRP",
+            "Hutchinson Parkway",
+            "Hutchinson River Parkway"
+          ],
+          "direction": "southbound"
+        },
+        "restrictions": [
+          {
+            "type": "reduced-height",
+            "value": 9.0,
+            "unit": "feet"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.83725792169571,
+            40.84455654898646
+          ],
+          [
+            -73.8378158211708,
+            40.84294748850873
+          ],
+          [
+            -73.83808672428131,
+            40.84214192905569
+          ],
+          [
+            -73.83834153413773,
+            40.84133635981177
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Bridge3",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "event_type": "restriction",
+          "data_source_id": "1",
+          "road_names": [
+            "HRP",
+            "Hutchinson Parkway",
+            "Hutchinson River Parkway"
+          ],
+          "direction": "southbound"
+        },
+        "restrictions": [
+          {
+            "type": "reduced-height",
+            "value": 11,
+            "unit": "feet"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.83834153413773,
+            40.841335852523244
+          ],
+          [
+            -73.8384260237217,
+            40.84103300059402
+          ],
+          [
+            -73.83847497403622,
+            40.84082856207721
+          ],
+          [
+            -73.83851654827595,
+            40.84063071775089
+          ],
+          [
+            -73.83855678141117,
+            40.84045722300951
+          ],
+          [
+            -73.83865937590599,
+            40.83983324694044
+          ],
+          [
+            -73.83872039616108,
+            40.8393289888175
+          ],
+          [
+            -73.83875325322151,
+            40.838710582522424
+          ],
+          [
+            -73.83877135813236,
+            40.838443230352674
+          ],
+          [
+            -73.83877202868462,
+            40.83817942829337
+          ],
+          [
+            -73.83877471089363,
+            40.83773502091179
+          ],
+          [
+            -73.83877538144588,
+            40.83721857114785
+          ],
+          [
+            -73.83877336978912,
+            40.83710442404608
+          ]
+        ]
+      }
+    }
+  ]
+}

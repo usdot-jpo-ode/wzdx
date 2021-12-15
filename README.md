@@ -3,82 +3,48 @@
 # Work Zone Data Exchange (WZDx) Specification
 The Work Zone Data Exchange (WZDx) Specification aims to make harmonized work zone data provided by infrastructure owners and operators (IOOs) available for third party use, making travel on public roads safer and more efficient through ubiquitous access to data on work zone activity.
 
-The goal of WZDx is to enable widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use these data across various jurisdictions. WZDx seeks to be a common language for describing road events, simplying the design process for producers and the processing logic for consumers, and making work zone data more accessible. 
+The goal of WZDx is to enable widespread access to up-to-date information about dynamic conditions occurring on roads such as construction events. Currently, many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties such as original equipment manufacturers (OEMs) and navigation applications to access and use these data across various jurisdictions. WZDx defines a common language for describing work zone information. This simplifies the design process for producers and the processing logic for consumers and makes work zone data more accessible.
 
-## Repostitory Organization
-The WZDx Specification repository contains two main subdirectories, each containing their own README file with additional information about the purpose and files within:
-
-
-1. [`create-feed`](/create-feed), which contains information regarding the creation of a WZDx feed, including feed format, example feeds, JSON schemas, and validation tools.
-2. [`spec-content`](/spec-content), which details the data content of the WZDx specification, including objects, property names and types, and enumerated types.
-
-
-Two additional directories, [`images`](/images) and [`documents`](/documents), contain the images that are referenced throughout the repository and PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist. 
-
-### Contents
-- [**Creating a WZDx Feed**](/create-feed)
-    - [**Example Feed GeoJSON Files**](/create-feed/examples)   
-        - [LineString Examples](/create-feed/examples/linestring_examples)
-            - [Comprehensive](/create-feed/examples/linestring-examples/comprehensive_linestring_example.geojson)
-            - [Local Access Only (bidirectional)](/create-feed/examples/linestring-examples/local_access_only_bidirectional_linestring_example.geojson)
-            - [Simple Work Zone](/create-feed/examples/linestring-examples/scenario1_simple_linestring_example.geojson)
-            - [Lane Shift](/create-feed/examples/linestring-examples/scenario2_laneshift_linestring_example.geojson)
-            - [Shoulder Closure (bidirectional)](/create-feed/examples/linestring-examples/scenario3_shoulder_bidrectional_linestring_example.geojson)
-            - [Detour](/create-feed/examples/linestring-examples/scenario4_detour_linestring_example.geojson)
-            - [Recurring Work](/create-feed/examples/linestring-examples/scenario5_recurring_linestring_example.geojson)
-        - [MultiPoint Examples](/create-feed/examples/multipoint_examples)
-            - [Comprehensive](/create-feed/examples/multipoint-examples/comprehensive_multipoint_example.geojson)
-            - [Local Access Only (bidirectional)](/create-feed/examples/multipoint-examples/local_access_only_bidirectional_multipoint_example.geojson)
-            - [Simple Work Zone](/create-feed/examples/multipoint-examples/scenario1_simple_multipoint_example.geojson)
-            - [Lane Shift](/create-feed/examples/multipoint-examples/scenario2_laneshift_multipoint_example.geojson)
-            - [Shoulder Closure (bidirectional)](/create-feed/examples/multipoint-examples/scenario3_shoulder_bidrectional_multipoint_example.geojson)
-            - [Detour](/create-feed/examples/multipoint-examples/scenario4_detour_multipoint_example.geojson)
-            - [Recurring Work](/create-feed/examples/multipoint-examples/scenario5_recurring_multipoint_example.geojson)
-    - [**JSON Schemas**](/create-feed/schemas)
-        - [WZDx v2.0 Feed](/create-feed/schemas/wzdx_v2.0_feed.json)
-        - [WZDx v3.0 Feed](/create-feed/schemas/wzdx_v3.0_feed.json)
-        - [WZDx v3.1 Feed](/create-feed/schemas/wzdx_v3.1_feed.json)
-- [**Specification Content**](/spec-content)
-    - [**Objects**](/spec-content/objects)
-        - [WZDXFeed](/spec-content/objects/WZDxFeed.md)
-        - [RoadEventFeedInfo](/spec-content/objects/RoadEventFeedInfo.md)
-        - [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md)
-        - [RoadEventFeature](/spec-content/objects/RoadEventFeature.md)
-        - [RoadEvent](/spec-content/objects/RoadEvent.md)
-        - [TypeOfWork](/spec-content/objects/TypeOfWork.md)
-        - [Lane](/spec-content/objects/Lane.md)
-        - [LaneRestriction](/spec-content/objects/LaneRestriction.md)
-        - [Relationship](/spec-content/objects/Relationship.md)
-    - [**Enumerated Types**](/spec-content/enumerated-types)
-        - [Direction](/spec-content/enumerated-types/Direction.md)
-        - [EventStatus](/spec-content/enumerated-types/EventStatus.md)
-        - [EventType](/spec-content/enumerated-types/EventType.md)
-        - [LaneRestrictionUnit](/spec-content/enumerated-types/LaneRestrictionUnit.md)
-        - [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)
-        - [LaneType](/spec-content/enumerated-types/LaneType.md)
-        - [LocationMethod](/spec-content/enumerated-types/LocationMethod.md)
-        - [RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md)
-        - [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md)
-        - [TimeVerification](/spec-content/enumerated-types/TimeVerification.md)
-        - [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md)
-        - [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md)
-- [**Images Used throughout the Specification**](/images)
-  - [Object Diagram](/images/wzdx_object_diagram.jpg)
-     - [Object Diagram editable draw.io file](/images/wzdx_object_diagram.drawio)
+Specifically, WZDx defines the structure and content of several [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946) documents that are each intended to be distributed as a data feed. The feeds describe a variety of high-level road work-related information such as the location and status of work zones, detours, and field devices.
 
 ## README Outline
-- [Work Zone Data Exchange (WZDx) Specification](#work-zone-data-exchange-wzdx-specification)
-  - [Repository Organization](#repostitory-organization)
-  - [Contents](#contents)
-- [README Outline](#readme-outline)
+- [Data Feeds](#data-feeds)
+- [Repository Organization](#repostitory-organization)
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-      - [Release v3.1 (Apr 2021)]
+    - [Release v4.0 (Dec 2021)](#wzdx-v40-december-2021)
 - [Getting Started](#getting-started)
+- [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
 - [Versioning](#versioning)
 - [License](#license)
+
+## Data Feeds
+WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [/schemas](/schemas/). Each feed is designed for a specific use case is are flexible and its use in practice can vary by application.
+
+### List of Data Feeds
+Feed Name | Description | Producer | Consumer | Uses | Content
+--- | --- | --- | --- | --- | ---
+`WZDxFeed` | Provides high-level information about events occurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed. | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
+`RoadRestrictionFeed` | Provides information about sections of roadways that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type. | Transportation Authorities like Tribal, Local, State, or Federal Agencies. | Traveling public via third parties such as mapping companies and CAVs. | Increased awareness; Route planning; Driver, Passenger, and Road-User Safety; Increased Efficiency; Reduced Damage to Infrastructure. | Restriction road events (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
+`SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+
+## Repostitory Organization
+The WZDx Specification repository contains several files and subdirectories.
+
+### Directories
+1. [documents](/documents): supplementary PDF and Word documents such as the WZDx Early Adopter's Guide and WZDx Data Feed Self Validation Checklist.
+2. [examples](/examples): example GeoJSON documents from WZDx data feeds. [examples/README.md](/examples/README.md) describes the content of this directory in detail.
+3. [images](/images): the images that are referenced by other Markdown files in the repository.
+4. [schemas](/schemas): contains [JSON Schema](https://json-schema.org/)s for each of the feeds defined by WZDx for feed validation.
+5. [spec-content](/spec-content): details the data content of the WZDx specification, including objects, property names and types, and enumerated types. [spec-content/README.md](/spec-content/README.md) describes the content of this directory in detail.
+
+### Files
+1. [Creating_a_WZDx_Feed.md](/Creating_a_WZDx_Feed.md): information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+2. [LICENSE](/LICENSE): the Creative Commons Zero v1.0 Universal license that the repository is licensed under.
+3. [README.md](/README.md) (this document): information about the WZDx effort and navigating the repository.
+4. [RELEASES.md](/RELEASES.md): detailed information about every release of the WZDx specification.
 
 ## Project Description
 
@@ -100,7 +66,9 @@ Several data producers and data users voluntarily developed v1.1 of the specific
 Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
 
 **How can I get help with implementation?**
-This project repository will be continually updated with resources to help with implementation - in the meantime, please make a GitHub issue or discussion entry if you need help implementing the WZDx Specification or have questions.
+Review [Creating_a_WZDx_Feed.md](/Creating_a_WZDx_Feed.md) which contains information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+
+This project repository will be continually updated with resources to help with implementation - in the meantime, please make a [new GitHub discussion](https://github.com/usdot-jpo-ode/wzdx/discussions/new) if you need help implementing the WZDx Specification or have questions.
 
 The Federal Highway Administration is leading efforts, via the [Work Zone Data Initiative (WZDI)](https://ops.fhwa.dot.gov/wz/wzdx/index.htm#wzdi), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents have been developed and made publicly available:
 
@@ -115,43 +83,64 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### Release v3.1 (April 2021)
-Following the major v3.0 release, the changes for the v3.1 release were developed with the goal enhancing and cleaning up the spec without making major changes or breaking backwards compatibility. Thus, in v3.1 many enumerated type values or object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
+### WZDx v4.0 (December 2021)
+WZDx version 4.0 implements clean up and small additions in functionality to the WZDx feed and adds definitions for two new feeds, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) and [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md). Until version 4.0, the WZDx specification defined only one feed, the [WZDxFeed](/spec-content/objects/WZDxFeed.md).
 
-This repository was also renamed from `jpo-wzdx` to `wzdx` on 2021-04-05. All links pointing to `jpo-wzdx` will automatically redirect to the new URL. 
+*For detailed release information, see [RELEASES.md](/RELEASES.md)*
 
-#### Features
-* Add `local-access-only` restriction
-* Add `license` property to the `RoadEventFeedInfo` object
-
-#### Refactoring
-* Refactor `LaneType` enumerated type to deprecate values that can be determined from other properties of the Lane object, such as `order`, `status`, and `lane_restrictions`
-* Add value `alternating-flow` to `LaneStatus` enumerated type and deprecate `alternating-one-way`
-* Add `road_names` property to the `RoadEvent` object and deprecate `road_name` and `road_number`
-* Deprecate the `total_num_lanes` property on the `RoadEvent` object as the `RoadEvent`'s `lanes` array can be used to determine the number of lanes
-
-#### Fixes
-* Add optional `bbox` property to allow providing a [GeoJSON Bounding Box](https://tools.ietf.org/html/rfc7946#section-5) for the `WZDxFeed` and `RoadEventFeature` objects
-* Add an `id` property to the `RoadEventFeature` object for providing the a road event's identifier to better follow [GeoJSON ID recommendations](https://tools.ietf.org/html/rfc7946#section-3.2)
+## Features
+- Add values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type.
+- Allow restrictions with a value and unit to be provided at the road event level.
+- Add values to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
+- Define a new data feed, the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md), to enable providing a feed of restrictions on roadways, such as bridge clearances.
+- Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones.
+- Rename the `workers_present` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to  `worker_presence`; change the type from "boolean" to a new [WorkerPresence](/spec-content/objects/WorkerPresence.md) object which enables providing more nuanced information about worker presence in work zones.
+  
+## Refactoring
+- Separate the v3.1 RoadEvent object into [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) (details that are shared by all specific types of road events) and specific types of road events ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), and [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) which each contain the `RoadEventCoreDetails` via a `core_details` property; update the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) `properties` property to be one of the specific road events types.
+- Move the `location_method` property from the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object.
+- Change the `reduced_speed_limit` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) to `reduced_speed_limit_kph`; change its type from "integer" to "number" and clarify that the value should be in kilometers per hour.
+- Deprecate the `lane_number` property on the [Lane](/spec-content/objects/Lane.md) object.
+- Deprecate the `lrs_type` and `lrs_url` properties on the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object.
+- Remove the deprecated value `alternating-one-way` from the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
+- Remove all deprecated properties from the road event (RoadEvent in previous versions; [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) in 4.0).
+- Require the `road_names` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md).
+- Require the `id` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
+- Refine the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
+- Deprecate the `location_verify_method` property on the [FeedDataSource](/spec-content/objects/FeedDataSource.md).
+- Update the [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) enumerated type value descriptions to clarify that verified work zone locations should use a GPS enabled device.
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx 3.1 Specification. Comments can be made by posting a GitHub [Issues](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx v4.0 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
-1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf)
+1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf).
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
-3. Use [Specification Content](/spec-content) page to understand the data components of the specification.
-4. [Create your own feed](/create-feed) using example feeds and follow the business rules.
-5. Validate your feed output using the [WZDx v3.1 Feed JSON Schema](/create-feed/schemas/wzdx_v3.1_feed.json)
+3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
+5. Validate your feed output using the respective [JSON Schema](#json-schemas).
 6. Publish your feed and tell us about it via avdx@dot.gov.
+
+## JSON Schemas
+The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
+
+### Current Version (4.0)
+- [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
+- [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
+- [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
+
+### Previous Version
+- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
+- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
+- [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
 
 ## Contributions
 
 **How do I contribute to the WZDx Specification?**
 
 - Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/wzdx/issues).
-- Ask the WZDx community for input on a question or propose an idea you have via [GitHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
-- Create a [GitHub pull request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
+- Ask the WZDx community for input on a question or propose an idea you have via [GithHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
+- Create a [GitHub Pull Request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
 - Review and provide feedback on update issues/discussions/pull requests created by other users.
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.
 - Help us improve our best practices and formatting on GitHub.
