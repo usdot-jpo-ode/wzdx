@@ -46,9 +46,9 @@ The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
 
 #### Previous Versions
-- [WZDx v2.0 WZDxFeed](/schemas/wzdx_v2.0_feed.json)
-- [WZDx v3.0 WZDxFeed](/schemas/wzdx_v3.0_feed.json)
-- [WZDx v3.1 WZDxFeed](/schemas/wzdx_v3.1_feed.json)
+- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
+- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
+- [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
   
 ### Self-Validation Checklist
 For a list of steps to take to make sure your data feed conforms to the specification and is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx).
