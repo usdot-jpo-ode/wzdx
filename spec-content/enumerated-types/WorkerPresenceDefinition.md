@@ -15,4 +15,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`worker_presence_definition` | [RoadEventDataSource](/spec-content/objects/RoadEventDataSource.md)
+`definition` | [WorkerPresence](/spec-content/objects/WorkerPresence.md)

@@ -1,6 +1,8 @@
 # SwzDeviceFeed Object (GeoJSON FeatureCollection)
 The `SwzDeviceFeed` object is the root (highest level) object of a smart work zone device feed. There is one `SwzDeviceFeed` object per feed GeoJSON document. The `SwzDeviceFeed` is a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
 
+The `SwzDeviceFeed` contains information (location, status, live data) about field devices deployed on the roadway in work zones.
+
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
