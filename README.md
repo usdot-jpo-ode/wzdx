@@ -88,7 +88,7 @@ WZDx version 4.0 implements clean up and small additions in functionality to the
 
 *For detailed release information, see [RELEASES.md](/RELEASES.md)*
 
-## Features
+#### Features
 - Add values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type.
 - Allow restrictions with a value and unit to be provided at the road event level.
 - Add values to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
@@ -96,7 +96,7 @@ WZDx version 4.0 implements clean up and small additions in functionality to the
 - Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones.
 - Rename the `workers_present` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to  `worker_presence`; change the type from "boolean" to a new [WorkerPresence](/spec-content/objects/WorkerPresence.md) object which enables providing more nuanced information about worker presence in work zones.
   
-## Refactoring
+#### Refactoring
 - Separate the v3.1 RoadEvent object into [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) (details that are shared by all specific types of road events) and specific types of road events ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), and [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) which each contain the `RoadEventCoreDetails` via a `core_details` property; update the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) `properties` property to be one of the specific road events types.
 - Move the `location_method` property from the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object.
 - Change the `reduced_speed_limit` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) to `reduced_speed_limit_kph`; change its type from "integer" to "number" and clarify that the value should be in kilometers per hour.
