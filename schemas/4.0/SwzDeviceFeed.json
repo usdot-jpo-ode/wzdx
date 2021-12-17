@@ -323,7 +323,7 @@
             "function"
           ]
         }
-      ]    
+      ]
     },
     "HybridSign": {
       "title": "Hybrid Sign Field Device",
@@ -450,7 +450,7 @@
               "description": "The UTC date and time where the TrafficSensor data collection ended. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
             },
             "average_speed_kph": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The average speed of vehicles across all lanes over the collection interval in kilometers per hour"
             },
@@ -493,8 +493,8 @@
           "description": "The lane's position in sequence within the road event specified by the 'road_event_id' property"
         },
         "average_speed_kph": {
-          "type": "integer",
-          "minimum": 1,
+          "type": "number",
+          "minimum": 0,
           "description": "The average speed of traffic in the lane over the collection interval (in kilometers per hour)"
         },
         "volume_vph": {
