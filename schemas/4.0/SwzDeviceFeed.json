@@ -323,7 +323,7 @@
             "function"
           ]
         }
-      ]    
+      ]
     },
     "HybridSign": {
       "title": "Hybrid Sign Field Device",
@@ -576,9 +576,13 @@
         "lane-closure",
         "temporary-traffic-signal",
         "road-event-start",
+        "road-event-intermediate",
         "road-event-end",
+        "road-event-undetermined",
         "work-zone-start",
-        "work-zone-end"
+        "work-zone-intermediate",
+        "work-zone-end",
+        "work-zone-undetermined"
       ]
     }
   }
