@@ -10,11 +10,15 @@ Value | Description
 `lane-closure` | One or more lanes are closed.
 `temporary-traffic-signal` | A temporary traffic signal.
 `road-event-start` | The start point of a road event.
+`road-event-intermediate` | A middle point of a road event.
 `road-event-end` | The end point of a road event.
+`road-event-undetermined` | A point in a road event of undetermined order.
 `work-zone-start` | The start point of a work zone.
+`work-zone-intermediate` | A middle point of a work zone.
 `work-zone-end` | The end point of a work zone.
+`work-zone-undetermined` | A point in a work zone of undetermined order.
 
 ## Used By
 Property | Object
---- | --- 
+--- | ---
 `type` | [MarkedLocation](/spec-content/objects/MarkedLocation.md)
