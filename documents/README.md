@@ -8,5 +8,5 @@
 | Producer Institutional Buy In Paper | TA Subgroup | Paper which describes the benefit of implementing a WZDx feed.  |
 | Smart Work Zones Manager Application Vendor API Specification | MassDOT | Reference document to serve as an example of smart work zone vendor requirements. |
 | Arrow-Board Communications Protocol | Iowa DOT | Reference document to serve as an example of a standardized JSON data-interchange format for monitoring deployment and basic maintenance of smart arrow boards. [Link](https://iowadot.gov/erl/current/IM/content/486.12ab.pdf)|
-| MDS Privacy Guide for Cities | Open Mobility Foundation (OMF) | Reference document to serve as an example of how a similar specification has handled data privacy. [Link](file:///C:/Users/Molly.Behan/Downloads/OMF-MDS-Privacy-Guide-for-Cities.pdf)|
+| MDS Privacy Guide for Cities | Open Mobility Foundation (OMF) | Reference document to serve as an example of how a similar specification has handled data privacy. [Link](https://github.com/openmobilityfoundation/governance/blob/main/documents/OMF-MDS-Privacy-Guide-for-Cities.pdf)|
 | CDS Policy Language Guide | Open Mobility Foundation (OMF) | Reference document to serve as an example of how a similar organization recommends an IOO handle policy. [Link](https://github.com/openmobilityfoundation/governance/blob/main/technical/OMF-CDS-Policy-Language-Guidance.md) |
