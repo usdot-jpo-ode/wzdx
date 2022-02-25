@@ -18,6 +18,10 @@ Value | Description
 `gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced along the segment being described.
 `towing-prohibited` | Towing prohibited along the segment being described.
 `permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited along the segment being described; this applies to annual oversize load permits.
+'closure-undefined' | Road is closed, though reason is unknown.
+'closure-special-event' | Road is closed because of an event such as sports, cultural, holiday, etc.
+'closure-seasonal' | Road is closed because of time of year, etc.
+'closure-flooding' | Road is closed due to flooding or related inclement weather.
 
 ## Used By
 Property | Object
