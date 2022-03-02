@@ -8,6 +8,7 @@ Document Title | Publisher | Description
 [Producer Institutional Buy In Paper](/documents/Producer_Institutional_Buy_In_Paper.pdf) | Technical Assistance Subgroup | Paper which describes the benefit of implementing a WZDx feed.  
 [Producer Institutional Buy In Presentation](/documents/Producer_Institutional_Buy_In_Presentation.pptx) | Technical Assistance Subgroup | Short slide deck which describes the benefit of implementing a WZDx feed.
 [Work Zone Data Exchange v3.1 Reference Document](/documents/Work_Zone_Data_Exchange_v3.1_Reference_Document.pdf) | WZDWG | PDF version of the WZDx Specification v3.1 
+[Work Zone Data Exchange v4.0 Reference Document](/documents/Work_Zone_Data%20Exchange_v4.0_Reference_Document%20Feb%202022.pdf) | WZDWG | PDF version of the WZDx Specification v4.0 
 [Work Zone Data Survey Report](/documents/Work_Zone_Data_Survey_Report_2021-03-08.pdf) | Worker Presence Subgroup | Findings from a 2020 survey conducted by the WP Subgroup to better understand worker presence tracking nationwide. 
 [WZDx Data Feed Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx) | Technical Assistance Subgroup | Guidance for performing a self-check for feed compliance which should be used prior to submitting a feed to US DOT.
 [WZDx Early Adopters Guide](/documents/WZDx_Early_Adopters_Guide.pdf) | Technical Assistance Subgroup | Descriptions of how early adopters overcame challenges to successfully implement WZDx feeds. 
