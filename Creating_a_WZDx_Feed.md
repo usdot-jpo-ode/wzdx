@@ -28,7 +28,7 @@ WZDx defines the content and structure of several data feeds. Each feed is descr
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
 
 ### WZDxFeed (Work Zones) Business Rules
-1. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. Note that the `geometry` of a `FieldDeviceFeature` MUST be of type `Point`.
+1. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. Note that the `geometry` of a `FieldDeviceFeature` must be of  `type` `Point`.
 2. A [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have `geometry` of `type` `Linestring` to represent the detour route.
 3. A detour which travels along multiple roads must be broekn into a seperate [RoadEvent](/spec-content/objects/RoadEvent.md) for each road so that `RoadName` can be accurately represented.
 4. For geometries corresponding to a [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), in cases where only the beginning and ending coordinates are available, the `MultiPoint` can be used. 
@@ -39,9 +39,9 @@ The following business rules help assure a standardized and interpretable use of
 9. The `Data_Source_ID` value must match to the `Data_Source_ID` property of [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
 10. All datetime formats must follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: 2016-11-03T19:37:00Z.
 11. Latitude/longitude coordinates should include only as many significant figures as the data producer's equipment can accurately measure.
-12. `reduced_speed_limit_kph` only needs to be supplied if the speed limit within the road event is lower than the posted speed limit of the roadway.
-13. `is_architectural_change` should be marked “True” if the road event will cause an alignment change of greater than one meter in the geometry or architecture of the underlying road segment (at the completion of the road event), else “false”.
-14. Regardless of type, the `geometry` of every [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) must contain at least two points, representing the beginning and ending of the work zone.
+12. `Reduced_speed_limit_kph` only needs to be supplied if the speed limit within the road event is lower than the posted speed limit of the roadway.
+13. `Is_architectural_change` should be marked “true” if the road event will cause an alignment change of greater than one meter in the geometry or architecture of the underlying road segment (at the completion of the road event), else “false”.
+14. Regardless of `type`, the `geometry` of every [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) must contain at least two points, representing the beginning and ending of the work zone.
 15. If provided, `bbox` must be an array of length 2n where n is the number of dimensions represented in the `geometry` property, with all axes of the most southwesterly point followed by all axes of the more northeasterly point. The axes order of a `bbox` follows the axes order of the `geometry`.
 
 
