@@ -36,7 +36,7 @@ The following business rules help assure a standardized and interpretable use of
 6. A work zone must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s when a required property of road event or lane object changes. A complex work zone should be linked together using the `Relationship` property.
 7. Use the `parent`/`child` [Relationship](/spec-content/objects/Relationship.md) to identify detours caused by a work zone, or to relate many work zones or other [RoadEventFeature](/spec-content/object/RoadEventFeature.md)s to a single overarching work zone.
 8. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
-9. The `data_dource_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
+9. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
 10. All datetime formats must follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: 2016-11-03T19:37:00Z.
 11. Latitude/longitude coordinates should include only as many significant figures as the data producer's equipment can accurately measure.
 12. `reduced_speed_limit_kph` only needs to be supplied if the speed limit within the road event is lower than the posted speed limit of the roadway.
