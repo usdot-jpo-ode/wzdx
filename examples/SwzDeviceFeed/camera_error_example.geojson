@@ -5,7 +5,7 @@
     "contact_name": "Robert Vendor",
     "contact_email": "robert.vendor@testvendor.com",
     "update_frequency": 60,
-    "version": "1.0",
+    "version": "4.0",
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
