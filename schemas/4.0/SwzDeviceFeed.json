@@ -455,12 +455,12 @@
               "description": "The average speed of vehicles across all lanes over the collection interval in kilometers per hour"
             },
             "volume_vph": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The rate of vehicles passing by the sensor during the collection interval in vehicles per hour"
             },
             "occupancy_percent": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The percent of time the roadway section monitored by the sensor was occupied by a vehicle over the collection interval"
             },
@@ -498,12 +498,12 @@
           "description": "The average speed of traffic in the lane over the collection interval (in kilometers per hour)"
         },
         "volume_vph": {
-          "type": "integer",
+          "type": "number",
           "minimum": 0,
           "description": "The rate of vehicles passing by the sensor in the lane during the collection interval (in vehicles per hour)"
         },
         "occupancy_percent": {
-          "type": "integer",
+          "type": "number",
           "minimum": 0,
           "description": "The percent of time the lane monitored by the sensor was occupied by a vehicle over the collection interval"
         }
