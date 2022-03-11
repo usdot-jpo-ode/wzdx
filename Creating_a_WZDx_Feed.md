@@ -36,13 +36,13 @@ The following business rules help assure a standardized and interpretable use of
 6. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
 ## Data Security Best Practices
-This is a working list of best practices for standing up a WZDx data feed assembled by the Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are not required in order to set up a WZDx feed.**
+This is a working list of best practices for standing up a WZDx data feed assembled by the Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
 
 ### REST Endpoint Security
-If the WZDx feed is set up as a REST Service endpoint, it is recommended that the only exposed endpoint in the REST service for the feed is an HTTP GET endpoint. If a provider will allow queries to the data feed, then an HTTP POST endpoint may also be exposed. Exposing only a retrieval method and a post method will deter hackers from attempting to delete or alter the existing WZDx feed provided. 
+If the WZDx feed is set up as a REST Service endpoint, it is recommended that the only exposed endpoint in the REST service for the feed is a HTTP GET endpoint. If a provider will allow queries to the data feed, then an HTTP POST endpoint may also be exposed. Exposing only a retrieval method and a post method will deter unauthorized users from attempting to delete or alter the existing WZDx feed provided. 
 
 ### SSL (TLS)
-In order to secure data in transit from the WZDx feed to the recipient,  building the data feed endpoint using a Secure Sockets Layer (SSL) certificate is highly recommended. This ensures that the connection between the host and the recipient is secure and that data received from the recipient can be trusted. 
+In order to secure data in transit from the WZDx feed to the recipient, building the data feed endpoint using a Secure Sockets Layer (SSL) certificate is highly recommended. This ensures that the connection between the host and the recipient is secure and that data received from the recipient can be trusted. 
 
 ### Cloud-hosted
 Though all DOTs have infrastructure capabilities to host a WZDx feed, it is recommended that the feed be cloud hosted on a trusted platform due to the following reasons. 
