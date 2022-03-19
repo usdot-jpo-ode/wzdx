@@ -40,16 +40,19 @@ The following business rules help assure a standardized and interpretable use of
 ### JSON Schemas
 The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later) within the [schemas](/schemas) directory. The repository contains schemas for the following feeds:
 
-#### Current Version (4.0)
+#### Current Version (4.1)
+- [WZDx v4.1 WZDxFeed](/schemas/4.1/WZDxFeed.json)
+- [WZDx v4.1 SwzDeviceFeed](/schemas/4.1/SwzDeviceFeed.json)
+- [WZDx v4.1 RoadRestrictionFeed](/schemas/4.1/RoadRestrictionFeed.json)
+
+#### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
-
-#### Previous Versions
-- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
-- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
 - [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
-  
+- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
+- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
+ 
 ### Self-Validation Checklist
 For a list of steps to take to make sure your data feed conforms to the specification and is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx).
 
