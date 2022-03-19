@@ -1,0 +1,11 @@
+{
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.0/BoundingBox.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GeoJSON Bounding Box",
+  "description": "Information on the coordinate range for a Geometry, Feature, or FeatureCollection",
+  "type": "array",
+  "minItems": 4,
+  "items": {
+    "type": "number"
+  }
+}
