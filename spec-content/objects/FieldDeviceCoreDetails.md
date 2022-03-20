@@ -13,6 +13,7 @@ Name | Type | Description | Conformance | Notes
 `name` | String | A human-readable name for the field device. | Optional |
 `description` | String | A description of the field device. | Optional |
 `status_messages` | Array; [String] | A list of messages associated with the device's status, if applicable. Used to provide additional information about the status such as specific warning or error messages. | Optional | The content of this property is up to the producer.
+`is_moving` | Boolean | A yes/no value indicating if the device is actively moving (not statically placed) as part of a mobile work zone operation. | Optional | The `is_moving` property is optional and should not be provided if it is not known if the device is moving.
 `road_event_ids` | Array; [String] | A list of one or more IDs of a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) that the device is associated with. | Optional | 
 `milepost` | Number | The linear distance measured against a milepost marker along a roadway where the device is located. | Optional | 
 `make` | String | The make or manufacturer of the device. | Optional |
