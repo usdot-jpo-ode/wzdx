@@ -483,14 +483,14 @@
       "title": "Traffic Sensor Lane Data",
       "description": "data for a single lane within a RoadEvent measured by a TrafficSensor deployed on the roadway",
       "properties": {
-        "road_event_id": {
-          "type": "string",
-          "description": "The ID of a RoadEventFeature that the measured lane occurs in"
-        },
         "lane_order": {
           "type": "integer",
           "minimum": 1,
           "description": "The lane's position in sequence within the road event specified by the 'road_event_id' property"
+        },
+        "road_event_id": {
+          "type": "string",
+          "description": "The ID of a RoadEventFeature that the measured lane occurs in"
         },
         "average_speed_kph": {
           "type": "integer",
@@ -509,7 +509,6 @@
         }
       },
       "required": [
-        "road_event_id",
         "lane_order"
       ]
     },
