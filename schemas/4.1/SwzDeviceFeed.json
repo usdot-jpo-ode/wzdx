@@ -1,12 +1,20 @@
 {
+<<<<<<< HEAD
   "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.0/SwzDeviceFeed.json",
+=======
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/SwzDeviceFeed.json",
+>>>>>>> release/v4.1
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx v4.1 SwzDeviceFeed",
   "description": "The GeoJSON output of a WZDx smart work zone device data feed (v4.1)",
   "type": "object",
   "properties": {
     "feed_info": {
+<<<<<<< HEAD
       "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.0/FeedInfo.json"
+=======
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/FeedInfo.json"
+>>>>>>> release/v4.1
     },
     "type": {
       "description": "The GeoJSON type",
@@ -20,7 +28,11 @@
       }
     },
     "bbox": {
+<<<<<<< HEAD
       "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.0/BoundingBox.json"
+=======
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+>>>>>>> release/v4.1
     }
   },
   "required": ["feed_info", "type", "features"],
@@ -78,7 +90,11 @@
           ]
         },
         "bbox": {
+<<<<<<< HEAD
           "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.0/BoundingBox.json"
+=======
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+>>>>>>> release/v4.1
         }
       },
       "required": ["id","type","properties","geometry"]
@@ -130,10 +146,13 @@
             "type": "string"
           }
         },
+<<<<<<< HEAD
         "is_moving": {
           "type": "boolean",
           "description": "A yes/no value indicating if the device is actively moving (not statically placed) as part of a mobile work zone operation."
         },
+=======
+>>>>>>> release/v4.1
         "road_event_ids": {
           "type": "array",
           "description": "A list of one or more IDs of a RoadEventFeatures that the device is associated with",
@@ -199,7 +218,11 @@
             },
             "is_moving": {
               "type": "boolean",
+<<<<<<< HEAD
               "description": "**DEPRECATED** A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
+=======
+              "description": "A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
+>>>>>>> release/v4.1
             },
             "is_in_transport_position": {
               "type": "boolean",
