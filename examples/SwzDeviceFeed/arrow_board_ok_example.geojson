@@ -33,6 +33,7 @@
           ],
           "device_status": "ok",
           "has_automatic_location": true,
+          "road_direction": "northbound",
           "name": "Arrow Board 1",
           "update_date": "2021-12-06T14:54:12Z"
         },
