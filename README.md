@@ -13,7 +13,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v4.0 (Dec 2021)](#wzdx-v40-december-2021)
+    - [Release v4.1 (Aug 2022)](#wzdx-v41-august-2022)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
@@ -83,32 +83,9 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.0 (December 2021)
-WZDx version 4.0 implements clean up and small additions in functionality to the WZDx feed and adds definitions for two new feeds, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) and [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md). Until version 4.0, the WZDx specification defined only one feed, the [WZDxFeed](/spec-content/objects/WZDxFeed.md).
+### WZDx v4.1 (August 2022)
 
-*For detailed release information, see [RELEASES.md](/RELEASES.md)*
-
-## Features
-- Add values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type.
-- Allow restrictions with a value and unit to be provided at the road event level.
-- Add values to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
-- Define a new data feed, the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md), to enable providing a feed of restrictions on roadways, such as bridge clearances.
-- Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones.
-- Rename the `workers_present` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to  `worker_presence`; change the type from "boolean" to a new [WorkerPresence](/spec-content/objects/WorkerPresence.md) object which enables providing more nuanced information about worker presence in work zones.
-  
-## Refactoring
-- Separate the v3.1 RoadEvent object into [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) (details that are shared by all specific types of road events) and specific types of road events ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), and [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) which each contain the `RoadEventCoreDetails` via a `core_details` property; update the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) `properties` property to be one of the specific road events types.
-- Move the `location_method` property from the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object.
-- Change the `reduced_speed_limit` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) to `reduced_speed_limit_kph`; change its type from "integer" to "number" and clarify that the value should be in kilometers per hour.
-- Deprecate the `lane_number` property on the [Lane](/spec-content/objects/Lane.md) object.
-- Deprecate the `lrs_type` and `lrs_url` properties on the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object.
-- Remove the deprecated value `alternating-one-way` from the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
-- Remove all deprecated properties from the road event (RoadEvent in previous versions; [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) in 4.0).
-- Require the `road_names` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md).
-- Require the `id` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
-- Refine the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
-- Deprecate the `location_verify_method` property on the [FeedDataSource](/spec-content/objects/FeedDataSource.md).
-- Update the [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) enumerated type value descriptions to clarify that verified work zone locations should use a GPS enabled device.
+<TODO>
 
 ## Getting Started
 
@@ -124,16 +101,18 @@ The WZDWG welcomes feedback and comments on the WZDx v4.0 Specification. Comment
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
 
-### Current Version (4.0)
+### Current Version (4.1)
+- [WZDx v4.1 WZDxFeed](/schemas/4.1/WZDxFeed.json)
+- [WZDx v4.1 SwzDeviceFeed](/schemas/4.1/SwzDeviceFeed.json)
+- [WZDx v4.1 RoadRestrictionFeed](/schemas/4.1/RoadRestrictionFeed.json)
+
+### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
-
-### Previous Version
-- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
-- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
 - [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
-
+- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
+- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
 ## Contributions
 
 **How do I contribute to the WZDx Specification?**
