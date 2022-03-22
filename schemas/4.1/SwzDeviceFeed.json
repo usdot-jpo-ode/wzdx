@@ -31,7 +31,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "description": "A unique identifier issued by the data feed provider to identify the field device",
+          "description": "A unique identifier issued by the data feed provider to identify the field device. It is recommended that this identifier is a Universally Unique IDentifier (UUID) as defined in [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122).",
           "type": "string"
         },
         "type": {
