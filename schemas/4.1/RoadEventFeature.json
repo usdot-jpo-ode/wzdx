@@ -319,6 +319,10 @@
         "direction": {
           "$ref": "#/definitions/Direction"
         },
+        "name": {
+          "description": "A human-readable name for the road event",
+          "type": "string"
+        },
         "description": {
           "description": "Short free text description of the road event",
           "type": "string"
