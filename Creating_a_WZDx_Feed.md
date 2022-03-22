@@ -36,26 +36,24 @@ The following business rules help assure a standardized and interpretable use of
 6. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
 ## Data Security Best Practices
-This is a working list of best practices for standing up a WZDx data feed assembled by the Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
+This is a working list of best practices for standing up a WZDx data feed assembled by the WZDx Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
 
 ### REST Endpoint Security
-If the WZDx feed is set up as a REST Service endpoint, it is recommended that the only exposed endpoint in the REST service for the feed is a HTTP GET endpoint. If a provider will allow queries to the data feed, then an HTTP POST endpoint may also be exposed. Exposing only a retrieval method and a post method will deter unauthorized users from attempting to delete or alter the existing WZDx feed provided. 
+If the WZDx feed is set up as a REST Service endpoint, it is recommended that the only exposed endpoint in the REST service for the feed is a HTTP GET endpoint. If a provider will allow queries to the data feed, then an HTTP POST endpoint may also be exposed. Exposing only a retrieval method and a post method will deter unauthorized users from attempting to delete or alter the existing WZDx feed provided. All WZDx endpoints should allow only read access. No public endpoint should be exposed that allows write access to the feed. 
 
 ### SSL (TLS)
 In order to secure data in transit from the WZDx feed to the recipient, building the data feed endpoint using a Secure Sockets Layer (SSL) certificate is highly recommended. This ensures that the connection between the host and the recipient is secure and that data received from the recipient can be trusted. 
 
 ### Cloud-hosted
-Though all DOTs have infrastructure capabilities to host a WZDx feed, it is recommended that the feed be cloud hosted on a trusted platform due to the following reasons. 
+Though all DOTs have infrastructure capabilities to host a WZDx feed, it is recommended that the feed be cloud hosted on a trusted platform due to the following reasons:
+
 * Security: Trusted cloud hosted providers such as Amazon Web Services, Google Cloud Platform, and Microsoft Azure all have hardened physical security as well as digital security best practices already in place. 
 * Dedicated Denial of Service (DDoS) Prevention: DDoS attacks remain a very common form of hacking that are still used today. Cloud providers have built solid solutions that can handle DDoS attacks and prevent downtime. 
 *	Scalable: As WZDx feeds become more widely used, they may be hit much more frequently than other endpoints. Cloud hosting allows DOTs to easily scale to accommodate for more hits or usage of the endpoint. 
 *	Load Balancing Solutions: Along with scaling physical hardware, load balancing allows DOTs the ability to scale the number of endpoints  serving up WZDx data feeds. 
 
-### Read-only Access
-All WZDx endpoints should allow only read access. No public endpoint should be exposed that allows write access to the feed. 
-
 ### Securing the Source of Truth
-DOTs should consider the sources that are being used to build the WZDx feeds and ensure that those systems are also following the same best practices listed as above. WZDx feeds should be built from  reliable data received from the field and trusted sources of data. 
+DOTs should consider the sources that are being used to build the WZDx feeds and ensure that those systems are also following the same best practices listed as above. WZDx feeds should be built from reliable data received from the field and trusted sources of data. 
 
 
 ## Data Validation
