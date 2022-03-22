@@ -21,7 +21,7 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "WZ389-NB",
+      "id": "de3de57b-33fb-40e5-a6f2-a17828f82fb9",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -31,6 +31,7 @@
             "Beaver Avenue"
           ],
           "direction": "northbound",
+          "name": "WZ389-NB",
           "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
           "creation_date": "2010-01-01T01:01:01Z",
           "update_date": "2010-01-01T01:03:01Z"
@@ -83,7 +84,7 @@
       }
     },
     {
-      "id": "WZ389-SB",
+      "id": "defbbd71-3f7e-4ddb-99de-86a48532ae57",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -93,6 +94,7 @@
             "Beaver Avenue"
           ],
           "direction": "southbound",
+          "name": "WZ389-SB",
           "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
           "creation_date": "2010-01-01T01:01:01Z",
           "update_date": "2010-01-01T01:03:01Z"

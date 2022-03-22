@@ -29,7 +29,7 @@
    "type": "FeatureCollection",
    "features": [
       {
-         "id": "71234",
+         "id": "af2e3f51-611f-4ce0-9282-2f28ca68e62f",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -72,7 +72,7 @@
          }
       },
       {
-         "id": "WDM-58493-NB",
+         "id": "edf2162b-1f5d-4ddd-a731-78fb81a22e6a",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -82,6 +82,7 @@
                   "128th Street"
                ],
                "direction": "northbound",
+               "name": "WDM-58493-NB",
                "description": "Single direction work zone with detailed lane-level information. Also includes additional details in vehicle impact",
                "creation_date": "2009-12-13T13:35:26Z",
                "update_date": "2009-12-31T15:11:16Z"
@@ -132,7 +133,7 @@
          }
       },
       {
-         "id": "65773-1",
+         "id": "6f57aded-7291-462e-9892-607b2b7d116c",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -140,19 +141,20 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ],
                   "next": [
-                     "65773-2"
+                     "8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 1",
                "description": "Single-direction work zone represented by three sequential road events; first event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
@@ -230,7 +232,7 @@
          }
       },
       {
-         "id": "65773-2",
+         "id": "8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -238,19 +240,20 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ],
                   "next": [
-                     "65773-3"
+                     "e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 2",
                "description": "Single-direction work zone represented by three sequential road events; second event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
@@ -331,7 +334,7 @@
          }
       },
       {
-         "id": "65773-3",
+         "id": "e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -339,16 +342,17 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 3",
                "description": "Single-direction work zone represented by three sequential road events; third event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
