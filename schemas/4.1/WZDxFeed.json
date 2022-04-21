@@ -5,7 +5,7 @@
   "description": "The GeoJSON output of a WZDx feed data feed (v4.1)",
   "type": "object",
   "properties": {
-    "road_event_feed_info": {
+    "feed_info": {
       "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/FeedInfo.json"
     },
     "type": {
@@ -43,7 +43,18 @@
     },
     "bbox": {
       "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+    },
+    "road_event_feed_info": {
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/FeedInfo.json"
     }
   },
-  "required": ["road_event_feed_info", "type", "features"]    
+  "required": ["type", "features"],
+  "anyOf": [
+    { 
+      "required": ["feed_info"]
+    },
+    {
+      "required": ["road_event_feed_info"]
+    }
+  ]
 }
