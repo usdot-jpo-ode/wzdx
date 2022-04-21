@@ -91,11 +91,11 @@
               "type": "number",
               "minimum": 0
             },
-            "is_start_position_gps_verified": {
+            "is_start_position_verified": {
               "description": "Indicates if the start position (first geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the start of the work zone.",
               "type": "boolean"
             },
-            "is_end_position_gps_verified": {
+            "is_end_position_verified": {
               "description": "Indicates if the end position (last geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the end of the work zone.",
               "type": "boolean"
             },
@@ -154,11 +154,11 @@
               }
             },
             "beginning_accuracy": {
-              "description": "**DEPRECATED** Use is_start_position_gps_verified instead.",
+              "description": "**DEPRECATED** Use is_start_position_verified instead.",
               "$ref": "#/definitions/SpatialVerification"
             },
             "ending_accuracy": {
-              "description": "**DEPRECATED** Use is_end_position_gps_verified instead.",
+              "description": "**DEPRECATED** Use is_end_position_verified instead.",
               "$ref": "#/definitions/SpatialVerification"
             }
           },
@@ -180,8 +180,8 @@
             },
             {
               "required": [
-                "is_start_position_gps_verified",
-                "is_end_position_gps_verified"
+                "is_start_position_verified",
+                "is_end_position_verified"
               ]
             }
           ]
