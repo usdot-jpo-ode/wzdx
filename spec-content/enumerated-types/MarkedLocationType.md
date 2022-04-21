@@ -8,6 +8,7 @@ Value | Description
 `flagger` | A human who is directing traffic.
 `lane-shift` | A lane shift.
 `lane-closure` | One or more lanes are closed.
+`personal-device` | A connected device that is worn or carried by an individual worker in a work zone.
 `temporary-traffic-signal` | A temporary traffic signal.
 `road-event-start` | The start point of a road event.
 `road-event-end` | The end point of a road event.
