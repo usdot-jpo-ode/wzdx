@@ -1,4 +1,6 @@
-# EventStatus Enumerated Type
+# EventStatus Enumerated Type (DEPRECATED)
+*The EventStatus enumerated type is deprecated as it is only used by deprecated properties. It will be removed in a future release.*
+
 The status of a road event.
 
 ## Values
