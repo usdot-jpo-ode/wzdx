@@ -171,17 +171,25 @@
             "vehicle_impact",
             "location_method"
           ],
-          "oneOf": [
+          "allOf": [
             {
-              "required": [
-                "beginning_accuracy",
-                "ending_accuracy"
+              "anyOf": [
+                {
+                  "required": ["is_start_position_verified"]
+                },
+                {
+                  "required": ["beginning_accuracy"]
+                }
               ]
             },
             {
-              "required": [
-                "is_start_position_verified",
-                "is_end_position_verified"
+              "anyOf": [
+                {
+                  "required": ["is_end_position_verified"]
+                },
+                {
+                  "required": ["ending_accuracy"]
+                }
               ]
             }
           ]
