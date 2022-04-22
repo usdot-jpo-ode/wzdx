@@ -266,17 +266,25 @@
             "start_date",
             "end_date"
           ],
-          "anyOf": [
+          "allOf": [
             {
-              "required": [
-                "is_start_date_verified",
-                "is_end_date_verified"
+              "anyOf": [
+                {
+                  "required": ["is_start_date_verified"]
+                },
+                {
+                  "required": ["start_date_accuracy"]
+                }
               ]
             },
             {
-              "required": [
-                "start_date_accuracy",
-                "end_date_accuracy"
+              "anyOf": [
+                {
+                  "required": ["is_end_date_verified"]
+                },
+                {
+                  "required": ["end_date_accuracy"]
+                }
               ]
             }
           ]
