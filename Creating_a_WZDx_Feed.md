@@ -28,22 +28,13 @@ WZDx defines the content and structure of several data feeds. Each feed is descr
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
 
 ### WZDxFeed (Work Zones) Business Rules
-1. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. Note that the geometry of a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) must be of type `Point`.
-2. A [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have geometry of type `LineString` to represent the detour route.
-3. A detour which travels along multiple roads must be broken into a seperate [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s for each road so that `road_names` can be accurately represented for each road the detour route uses.
-4. For geometries corresponding to a [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), in cases where only the beginning and ending coordinates are available, the `MultiPoint` can be used. 
-5. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
-6. A work zone must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s when a required property of road event or lane object changes. A complex work zone should be linked together using the `Relationship` property.
-7. Use the `parent`/`child` [Relationship](/spec-content/objects/Relationship.md) to identify detours caused by a work zone, or to relate many work zones or other [RoadEventFeature](/spec-content/object/RoadEventFeature.md)s to a single overarching work zone.
-8. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
-9. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
-10. All datetime formats must follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: 2016-11-03T19:37:00Z.
-11. Latitude/longitude coordinates should include only as many significant figures as the data producer's equipment can accurately measure.
-12. `reduced_speed_limit_kph` only needs to be supplied if the speed limit within the road event is lower than the posted speed limit of the roadway.
-13. `is_architectural_change` should be marked `true` if the road event will cause an alignment change of greater than one meter in the geometry or architecture of the underlying road segment (at the completion of the road event), else `false`.
-14. Regardless of type, the [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) of every [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) must contain at least two points, representing the beginning and ending of the work zone.
-15. If provided, `bbox` must be an array of length 2n where n is the number of dimensions represented in the `geometry` property, with all axes of the most southwesterly point followed by all axes of the more northeasterly point. The axes order of a `bbox` follows the axes order of the `geometry`.
 
+1. A detour which travels along multiple roads must be broken into a seperate [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s for each road so that `road_names` can be accurately represented for each road the detour route uses.
+2. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
+3. A work zone must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s when a required property of road event or lane object changes. A complex work zone should be linked together using the `Relationship` property.
+4. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
+5. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
+6. All time zones must be expressed in UTC.
 
 
 ## Data Validation
