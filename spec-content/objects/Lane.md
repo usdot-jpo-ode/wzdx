@@ -4,7 +4,7 @@ The `Lane` object describes an individual lane on the roadway within a road even
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`order` | Positive Integer | The position of a lane in sequence on the roadway. This value is used as an index to indicate the order of all WZDx lanes provided for a road event. | Required | Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165163787-c8a0b71e-bc2c-4569-b848-3eff6d8389a6.png) #4.
+`order` | Positive Integer | The position of a lane in sequence on the roadway. This value is used as an index to indicate the order of all WZDx lanes provided for a road event. | Required | Please see [Business Rule](/Creating_a_WZDx_Feed.md#business-rules) #4.
 `type` | [LaneType](/spec-content/enumerated-types/LaneType.md) | An indication of the type of lane or shoulder. | Required | 
 `status` | [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) | Status of the lane for the traveling public. | Required |
 `restrictions` | Array; [[Restriction](/spec-content/objects/Restriction.md)] | A list of zero or more restrictions specific to the lane. | Optional | 
