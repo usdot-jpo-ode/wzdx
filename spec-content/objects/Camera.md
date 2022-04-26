@@ -8,7 +8,7 @@ Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details of the field device that are shared by all types of field devices, not specific to cameras. | Required | This property appears on all field devices.
 `image_url` | String; [uri](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.5) | A URL pointing to an image file for the camera image still. | Optional |
-`image_timestamp` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC date and time when the image was captured. | Conditional; required if `image_url` is provided | Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165161521-ef77eb45-24d4-49be-b9dd-a2304fd00466.png) #6. 
+`image_timestamp` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC date and time when the image was captured. | Conditional; required if `image_url` is provided | Please see [Business Rule](https://github.com/usdot-jpo-ode/wzdx/blob/main/Creating_a_WZDx_Feed.md#business-rules) #6. 
 
 ## Used By
 Property | Object
