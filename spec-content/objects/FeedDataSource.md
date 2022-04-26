@@ -4,7 +4,7 @@ The `FeedDataSource` object describes information about a specific data source u
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`data_source_id` | String | Unique identifier for the data source organization providing work zone data. | Required | Linked to a road event by the `data_source_id` property on the road event's [core details](/spec-content/objects/RoadEventCoreDetails.md) or a field device by the `data_source_id` property on the device's [core details](/spec-content/objects/FieldDeviceCoreDetails.md).
+`data_source_id` | String | Unique identifier for the data source organization providing work zone data. | Required | Linked to a road event by the `data_source_id` property on the road event's [core details](/spec-content/objects/RoadEventCoreDetails.md) or a field device by the `data_source_id` property on the device's [core details](/spec-content/objects/FieldDeviceCoreDetails.md). <br />Please see [Business Rule](/Creating_a_WZDx_Feed.md#business-rules) #5.
 `organization_name` | String | The name of the organization for the authoritative source of the work zone data. | Required | Example: County DOT
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC date and time when the data source was last updated. | Optional | All date-time formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`<br />Please see [Business Rule](/Creating_a_WZDx_Feed.md#business-rules) #6.
 `update_frequency` | Integer | The frequency in seconds at which the data source is updated. | Optional |
