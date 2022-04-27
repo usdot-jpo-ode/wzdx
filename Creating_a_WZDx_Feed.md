@@ -34,7 +34,7 @@ The following business rules help assure a standardized and interpretable use of
 3. A work zone must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s when a required property of road event or lane object changes. A complex work zone should be linked together using the `Relationship` property.
 4. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
 5. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
-6. All time zones must be expressed in UTC.
+6. All times must be expressed in UTC.
 
 
 ## Data Validation
