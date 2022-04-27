@@ -29,12 +29,11 @@ The following business rules help assure a standardized and interpretable use of
 
 ### WZDxFeed (Work Zones) Business Rules
 
-1. A detour which travels along multiple roads must be broken into a seperate [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s for each road so that `road_names` can be accurately represented for each road the detour route uses.
+1. An event must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s, [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)s, or [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s when a required property or lane object changes. A complex event should be linked together using the `Relationship` property.
 2. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
-3. A work zone must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s when a required property of road event or lane object changes. A complex work zone should be linked together using the `Relationship` property.
-4. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
-5. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
-6. All times must be expressed in UTC.
+3. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
+4. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
+5. All times must be expressed in UTC.
 
 
 ## Data Validation
