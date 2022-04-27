@@ -5,10 +5,10 @@ The `FieldDeviceCoreDetails` object represents the core details—both configura
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `device_type` | [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md) | The type of field device. | Required |
-`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | <br />Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165163787-c8a0b71e-bc2c-4569-b848-3eff6d8389a6.png) #5.
+`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | <br />Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165163787-c8a0b71e-bc2c-4569-b848-3eff6d8389a6.png) #4.
 `road_names` | Array; [String] | A list of publicly known names of the road on which the device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133). | Required |
 `device_status` | [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of the field device. The value of this property indicates if the device is ok or in an error or warning state. | Required |
-`update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the field device information was updated. | Required | <br />Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165163787-c8a0b71e-bc2c-4569-b848-3eff6d8389a6.png) #6.
+`update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the field device information was updated. | Required | <br />Please see [Business Rule](https://user-images.githubusercontent.com/67278183/165163787-c8a0b71e-bc2c-4569-b848-3eff6d8389a6.png) #5.
 `has_automatic_location` | Boolean | A yes/no value indicating if the field device location (parent FieldDeviceFeature's `geometry`) is determined automatically from an onboard GPS (`true`) or manually set/overidden (`false`). | Required |
 `name` | String | A human-readable name for the field device. | Optional |
 `description` | String | A description of the field device. | Optional |
