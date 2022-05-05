@@ -8,7 +8,8 @@ Name | Type | Description | Conformance | Notes
 `data_source_id` | String | Identifies the data source from which the field device data originates. | Required | The value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) GeoJSON document.
 `road_names` | Array; [String] | A list of publicly known names of the road on which the device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133). | Required |
 `device_status` | [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of the field device. The value of this property indicates if the device is ok or in an error or warning state. | Required |
-`update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the field device information was updated. | Required |
+`update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC date and time when any information in the [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) (including child objects) that the FieldDeviceCoreDetails applies to was most recently updated or confirmed as up to date.
+ | Required |
 `has_automatic_location` | Boolean | A yes/no value indicating if the field device location (parent FieldDeviceFeature's `geometry`) is determined automatically from an onboard GPS (`true`) or manually set/overidden (`false`). | Required |
 `name` | String | A human-readable name for the field device. | Optional |
 `description` | String | A description of the field device. | Optional |
