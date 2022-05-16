@@ -8,8 +8,8 @@ Value | Description
 `eastbound` | Road flow is in the eastbound direction
 `southbound` | Road flow is in the southbound direction
 `westbound` | Road flow is in the westbound direction
-`undefined` | Used if a data producer has start and end location for a road, but the road doesn't have a direction. Allows data consumers to assume that first coordinate is the start of an actual work zone.
-`unknown` | 	Used if a data producer doesn't know for sure which direction of travel is affected (including on a roadway with signed directions). Create an event for each direction and use the `unknown` enumeration. The data consumer cannot safely assume that work is affecting this direction of travel.
+`undefined` | Road flow does not have a signed direction, but the beginning and end points of the corresponding RoadEventFeature represent the begin and end of the event in the direction of travel it impacts.
+`unknown` | 	Road flow may have a signed direction, but the affected direction of travel is not known. See guidance.
 
 ## Used By
 Property | Object
