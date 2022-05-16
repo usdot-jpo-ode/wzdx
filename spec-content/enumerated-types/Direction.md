@@ -8,7 +8,7 @@ Value | Description
 `eastbound` | Road flow is in the eastbound direction
 `southbound` | Road flow is in the southbound direction
 `westbound` | Road flow is in the westbound direction
-`undefined` | Road flow does not have a signed direction, but the beginning and end points of the corresponding RoadEventFeature represent the begin and end of the event in the direction of travel it impacts.
+`undefined` | Road flow does not have a signed direction, but the beginning and end points of the corresponding [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) represent the begin and end of the event in the direction of travel it impacts.
 `unknown` | 	Road flow may have a signed direction, but the affected direction of travel is not known. See guidance.
 
 ## Used By
