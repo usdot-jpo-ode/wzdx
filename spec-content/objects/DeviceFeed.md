@@ -1,5 +1,5 @@
 # DeviceFeed Object (GeoJSON FeatureCollection)
-The `DeviceFeed` object is the root (highest level) object of a smart work zone device feed. There is one `DeviceFeed` object per feed GeoJSON document. The `DeviceFeed` is a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
+The `DeviceFeed` object is the root (highest level) object of a WZDx Device Feed. There is one `DeviceFeed` object per feed GeoJSON document. The `DeviceFeed` is a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
 
 The `DeviceFeed` contains information (location, status, live data) about field devices deployed on the roadway in work zones.
 

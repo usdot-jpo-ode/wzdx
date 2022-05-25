@@ -2,7 +2,7 @@
   "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/DeviceFeed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx v4.1 DeviceFeed",
-  "description": "The GeoJSON output of a WZDx smart work zone device data feed (v4.1)",
+  "description": "The GeoJSON output of a WZDx DeviceFeed data feed (v4.1)",
   "type": "object",
   "properties": {
     "feed_info": {
@@ -13,7 +13,7 @@
       "enum": ["FeatureCollection"]
     },
     "features": {
-      "description": "An array of GeoJSON Feature objects which represent field devices deployed in a smart work zone",
+      "description": "An array of GeoJSON Feature objects which represent field devices deployed in a work zone",
       "type": "array",
       "items": {
         "$ref": "#/definitions/FieldDeviceFeature"
