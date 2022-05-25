@@ -31,9 +31,9 @@ Object | Description
 --- | ---
 [FeedDataSource](/spec-content/objects/FeedDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
-[RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) | The root (highest-level) object of a **Road Restriction Feed** GeoJSON document.
-[DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of **Smart Work Zone Device Feed** GeoJSON document.
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a **WZDx Feed** GeoJSON document.
+[RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) | The root (highest-level) object of a **WZDx Road Restriction Feed** GeoJSON document.
+[DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of **WZDx Device Feed** GeoJSON document.
+[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a **WZDx WZDxFeed** GeoJSON document.
 
 #### Road Events
 The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
