@@ -3,7 +3,7 @@ The WZDx specification defines the content and structure of several GeoJSON docu
 
 - [WZDxFeed](/spec-content/objects/WZDxFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0).
 - [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md): describes the location and details of restrictions on roadways.
-- [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
+- [DeviceFeed](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 Each feed object contains many layers of child objects. Together all the objects define the WZDx feed. All WZDx objects are located in the [objects](/spec-content/objects) subdirectory and listed in the [Objects](#objects) section of this document.
 
@@ -32,7 +32,7 @@ Object | Description
 [FeedDataSource](/spec-content/objects/FeedDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
 [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) | The root (highest-level) object of a **Road Restriction Feed** GeoJSON document.
-[SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of **Smart Work Zone Device Feed** GeoJSON document.
+[DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of **Smart Work Zone Device Feed** GeoJSON document.
 [WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a **WZDx Feed** GeoJSON document.
 
 #### Road Events
@@ -65,7 +65,7 @@ Object | Description
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
-[SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of smart work zone device feed GeoJSON document.
+[DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of smart work zone device feed GeoJSON document.
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
 [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a road event (e.g. [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
 

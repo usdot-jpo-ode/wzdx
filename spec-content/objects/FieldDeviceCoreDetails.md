@@ -5,7 +5,7 @@ The `FieldDeviceCoreDetails` object represents the core details—both configura
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `device_type` | [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md) | The type of field device. | Required |
-`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | The value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) GeoJSON document.
+`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | The value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same [DeviceFeed](/spec-content/objects/DeviceFeed.md) GeoJSON document.
 `road_names` | Array; [String] | A list of publicly known names of the road on which the device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133). | Required |
 `device_status` | [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of the field device. The value of this property indicates if the device is ok or in an error or warning state. | Required |
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the field device information was updated. | Required |

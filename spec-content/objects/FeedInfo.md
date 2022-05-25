@@ -17,5 +17,5 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | --- 
 `feed_info` | [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md)
-`feed_info` | [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md)
+`feed_info` | [DeviceFeed](/spec-content/objects/DeviceFeed.md)
 `road_event_feed_info` | [WZDxFeed](/spec-content/objects/WZDxFeed.md)
