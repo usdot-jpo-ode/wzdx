@@ -316,6 +316,10 @@
             "is_flashing": {
               "type": "boolean",
               "description": "A yes/no value indicating if the flashing beacon is currently in use and flashing"
+            },
+            "sign_text": {
+              "type": "string",
+              "description": "The text on the sign the beacon is mounted on, if applicable"
             }
           },
           "required": [
