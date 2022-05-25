@@ -571,6 +571,7 @@
       "description": "Options for what a MarkedLocation can mark, such as the start or end of a road event",
       "enum": [
         "afad",
+        "delineator",
         "flagger",
         "lane-shift",
         "lane-closure",
