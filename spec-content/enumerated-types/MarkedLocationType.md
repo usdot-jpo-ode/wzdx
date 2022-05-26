@@ -12,7 +12,7 @@ Value | Description
 `road-event-end` | The end point of a road event.
 `work-zone-start` | The start point of a work zone.
 `work-zone-end` | The end point of a work zone.
-`temporary-traffic-signal` (DEPRECATED) | A temporary traffic signal. *This property will be removed in a future release; use [TrafficSignal](../objects/TrafficSignal.md].*
+`temporary-traffic-signal` (DEPRECATED) | A temporary traffic signal. *This property will be removed in a future release; use [TrafficSignal](../objects/TrafficSignal.md] instead.*
 
 ## Used By
 Property | Object
