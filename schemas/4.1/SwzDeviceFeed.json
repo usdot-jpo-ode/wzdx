@@ -560,7 +560,8 @@
         "flashing-beacon",
         "hybrid-sign",
         "location-marker",
-        "traffic-sensor"
+        "traffic-sensor",
+        "traffic-signal"
       ]
     },
     "FieldDeviceStatus": {

@@ -11,6 +11,7 @@ Value | Description
 `hybrid-sign` | A message sign that contains both static text (e.g. on an aluminium board) along with a variable electronic message sign, used to provide information to travelers.
 `location-marker` | Any GPS-enabled ITS device that is placed at a point on a roadway to mark a location (often the beginning or end of a road event).
 `traffic-sensor` | A device deployed on a roadway which captures traffic metrics such as speed, volume, or occupancy.
+`traffic-signal` | A temporary traffic signal deployed on a roadway.
 
 ## Used By
 Property | Object
