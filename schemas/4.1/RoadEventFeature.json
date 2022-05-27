@@ -359,7 +359,8 @@
         "other",
         "unknown"
       ]
-    },"Relationship": {
+    },
+    "Relationship": {
       "title": "Relationship",
       "description": "**DEPRECATED** Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
       "type": "object",
@@ -397,7 +398,8 @@
           }
         }
       }
-    },"RelatedRoadEvents": {
+    },
+    "RelatedRoadEvents": {
       "title": "RelatedRoadEvents",
       "description": "Used to identify another road event that is related to a road event.",
       "type": "object",
@@ -408,8 +410,7 @@
         },
         "id": {
           "description": "An identifier for the related road event by the type property.",
-            "type": "string"
-          }
+          "type": "string"
         }
       },
       "required": ["type", "id"]
