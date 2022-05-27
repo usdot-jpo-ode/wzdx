@@ -406,17 +406,12 @@
             "core_details": {
                "data_source_id": "2",
                "event_type": "work-zone",
-               "relationship": {
-                  "parents": [
-                     "65773"
-                  ],
-                  "first": [
-                     "65773-1"
-                  ],
-                  "next": [
-                     "65773-2"
-                  ]
-               },
+               "related_road_events": [
+                 {
+                 "type": "next-road-event",
+                  "id": "65733-2"
+                 }
+               ],
                "road_names": [
                   "I-235"
                ],
@@ -512,17 +507,16 @@
             "core_details": {
                "data_source_id": "2",
                "event_type": "work-zone",
-               "relationship": {
-                  "parents": [
-                     "65773"
-                  ],
-                  "first": [
-                     "65773-1"
-                  ],
-                  "next": [
-                     "65773-3"
-                  ]
-               },
+               "related_road_events": [
+                 {
+                 "type": "first-road-event",
+                  "id": "65733-1"
+                 },
+                 {
+                 "type": "next-road-event",
+                  "id": "65733-3"
+                 }
+               ],
                "road_names": [
                   "I-235"
                ],
@@ -637,14 +631,12 @@
             "core_details": {
                "data_source_id": "2",
                "event_type": "work-zone",
-               "relationship": {
-                  "parents": [
-                     "65773"
-                  ],
-                  "first": [
-                     "65773-1"
-                  ]
-               },
+               "related_road_events": [
+                 {
+                 "type": "first-road-event",
+                  "id": "65733-1"
+                 }
+               ],
                "road_names": [
                   "I-235"
                ],
