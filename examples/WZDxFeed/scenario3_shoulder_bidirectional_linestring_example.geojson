@@ -27,11 +27,12 @@
         "core_details": {
           "data_source_id": "1",
           "event_type": "work-zone",
-          "relationship": {
-            "parents": [
-              "121388"
-            ]
-          },
+          "related_road_events": [
+            {
+            "type": "related-work-zone",
+            "id": "121388-WB"
+            }
+          ],
           "road_names": [
             "IA 210"
           ],
@@ -111,11 +112,12 @@
         "core_details": {
           "data_source_id": "1",
           "event_type": "work-zone",
-          "relationship": {
-            "parents": [
-              "121388"
-            ]
-          },
+          "related_road_events": [
+            {
+            "type": "related-work-zone",
+            "id": "121388-EB"
+            }
+          ],
           "road_names": [
             "IA 210"
           ],
