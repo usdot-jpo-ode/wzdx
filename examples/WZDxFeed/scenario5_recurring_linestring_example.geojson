@@ -27,10 +27,10 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events: [
+          "related_road_events": [
             {
-            "type": "next-occurrence"
-            "id": "PLK01012016-Day2"
+              "type": "next-occurrence",
+              "id": "PLK01012016-Day2"
             }
           ],
           "road_names": [
@@ -123,14 +123,14 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events: [           
+          "related_road_events": [           
             {
-            "type": "first-occurrence"
-            "id": "PLK01012016-Day1"
+              "type": "first-occurrence",
+              "id": "PLK01012016-Day1"
             },
             {
-            "type": "next-occurrence"
-            "id": "PLK01012016-Day3"
+              "type": "next-occurrence",
+              "id": "PLK01012016-Day3"
             }
           ],
           "road_names": [
@@ -215,14 +215,14 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events: [           
+          "related_road_events": [           
             {
-            "type": "first-occurrence"
-            "id": "PLK01012016-Day1"
+              "type": "first-occurrence",
+              "id": "PLK01012016-Day1"
             },
             {
-            "type": "next-occurrence"
-            "id": "PLK01012016-Day4"
+              "type": "next-occurrence",
+              "id": "PLK01012016-Day4"
             }
           ],
           "road_names": [
@@ -307,10 +307,10 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events: [           
+          "related_road_events": [           
             {
-            "type": "first-occurrence"
-            "id": "PLK01012016-Day1"
+              "type": "first-occurrence",
+              "id": "PLK01012016-Day1"
             }
           ],
           "road_names": [
