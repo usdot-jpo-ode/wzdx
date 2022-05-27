@@ -9,4 +9,4 @@ Property Name | Value | Description | Conformance | Notes
 #### Used By
 Property | Object
 --- | ---
-`related_road_event` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
+`related_road_events` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
