@@ -1,10 +1,3 @@
-## Summary
-- This requests supports #318 
-- The Wind enumeration fills the `type_of_incident` property to let drives know why a road has been detoured, restricted, or closed. 
-
-## Motivation
-Adding the `type_of_incident` property to the IncidentRoadEvent object lets data publishers tell drivers why road access has been detoured, restricted, or closed. Further, implementing this property adds value to road event feeds by reducing driver uncertainty.
-
 # IncidentType_Wind Enumerated Type
 Values describe events that have detoured, restricted, or closed a road.
 
