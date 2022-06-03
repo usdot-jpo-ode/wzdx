@@ -1,14 +1,14 @@
-# IncidentType_CrashIncidentSpill Enumerated Type
+# IncidentTypeCrashIncidentSpill Enumerated Type
 Values describe calamitous events that have detoured, restricted, or closed a road.
 
 ## Values
 Value | Description
 --- | ---
-`Crash` | A crash interrupts normal operations.
-`Crash - Injury` | A crash involving and injury interrupts normal operations. 
-`Crash - Investigation` | A crash investigation interrupts normal operations. 
-`Incident` | An non-crash incident interrupts normal operations. 
-`Spill` | A spill interrupts normal operations. 
+`crash` | A crash interrupts normal operations.
+`crash-injury` | A crash involving and injury interrupts normal operations. 
+`crash-investigation` | A crash investigation interrupts normal operations. 
+`incident` | An non-crash incident interrupts normal operations. 
+`spill` | A spill interrupts normal operations. 
 
 ## Used By
 Property | Object
