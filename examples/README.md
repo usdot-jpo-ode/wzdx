@@ -11,7 +11,7 @@ Scenario 1 ([LineString Example](/examples/WZDxFeed/scenario1_simple_linestring_
 
 - First work zone is single direction, single event, with no lane-level information (ID: `71234`).
 - Second work zone is single direction, single event, with detailed lane information (ID: `WDM-58493-NB`).
-- Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_events` property, the `RelatedRoadEventTypes` values of `first-road-event` and `next-road-event` are used to indiciate the order of the road events. (IDs: `65773-1`, `65773-2`, `65773-3`).
+- Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_events` property, the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-road-event` and `next-road-event` are used to indiciate the order of the road events. (IDs: `65773-1`, `65773-2`, `65773-3`).
 
 ### Scenario 2 - Lane Shift (simple scenario)
 The [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.
@@ -23,13 +23,13 @@ The [Scenario 3 Example](/examples/WZDxFeed/scenario3_shoulder_bidirectional_lin
 
 - Single work zone represented by two road events (IDs: `121388-EB`, `121388-WB`), one in direction of shoulder closure and second in opposite direction.
 - Demonstrates the use of `restrictions` for the event as well as individual lanes
-- Demonstrates the use of `related_road_events` to show the road events in each direction are related to each other but not in sequence using the `RelatedRoadEventTypes` value of `related-work-zone`
+- Demonstrates the use of `related_road_events` to show the road events in each direction are related to each other but not in sequence using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) value of `related-work-zone`
 
 ### Scenario 4 - Road Closure with Detour on Arterial
 The [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which has an associated detour for a road closure.  The example is slightly modified for use on a multi-lane facility.
 
 - Single work zone in one direction represented by a single road event (ID: `67890`), with a detour.
-- Showing use of `related_road_events` to connect the detour road events (IDs: `67890-detour1`, `67890-detour2`, `67890-detour3`) to the work zone using the `RelatedRoadEventTypes` values of `related-work-zone` and `related-detour`
+- Showing use of `related_road_events` to connect the detour road events (IDs: `67890-detour1`, `67890-detour2`, `67890-detour3`) to the work zone using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
 - Also uses `related_road_events` to represent the sequence of the three detour road events.
 - Shows the use of both the work zone and detour road event objects in the same feed.
 
@@ -39,7 +39,7 @@ The [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_examp
 - Simple work zone but with a recurring component.
 - Five road events: an `active` (day 1, ID: `PLK01012016-Day1`) event and four additional events (IDs: `PLK01012016-Day2`, `PLK01012016-Day3`, `PLK01012016-Day4`, `PLK01012016-Day5`) for later dates with a pending status.
 - The `active` work zone event demonstrates value of verified location and time.
-- The `related_road_events` property is used to show all road events are related and the order of events using the `RelatedRoadEventTypes` values of `first-occurrence` and `next-occurrence`
+- The `related_road_events` property is used to show all road events are related and the order of events using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-occurrence` and `next-occurrence`
 
 ### Local Access Only (bidirectional work zone)
 The [local access only example](/examples/WZDxFeed/local_access_only_bidirectional_linestring_example.geojson) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
