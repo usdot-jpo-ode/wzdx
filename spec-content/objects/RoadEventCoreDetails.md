@@ -12,7 +12,7 @@ Name | Type | Description | Conformance | Notes
 `description` | String | Short free text description of road event. | Optional | 
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was updated. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
-`relationship` (DEPRECATED) | [Relationship](/spec-content/objects/Relationship.md) | *This property is deprecated and will be removed in a future release, use related_road_events instead.* Identifies both sequential and hierarchical relationships between the road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events | Optional | 
+`relationship` (DEPRECATED) | [Relationship](/spec-content/objects/Relationship.md) | *This property is deprecated and will be removed in a future release, use `related_road_events` instead.* Identifies both sequential and hierarchical relationships between the road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events | Optional | 
 
 ## Used By
 Property | Object
