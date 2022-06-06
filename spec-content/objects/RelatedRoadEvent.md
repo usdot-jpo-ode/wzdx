@@ -1,10 +1,10 @@
-### RelatedRoadEvents Object
-The RelatedRoadEvents object is used to identify another road event that is related to a road event.
+### RelatedRoadEvent Object
+The RelatedRoadEvent object identifies a road event that is related to the road event that the RelateRoadEvent object occurs on.
 
 Property Name | Value | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `type` | [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) | The type of road event being identifed, such as another sequence of related work zones, a detour, or next road event in sequence. | Required |
-`id` | String | An identifier for the related road event by the `type` property. | Required |
+`id` | String | An identifier for the related road event by the `type` property. The value of this property should correspond to the `id` of a RoadEventFeature within the same WZDx feed. | Required |
 
 #### Used By
 Property | Object
