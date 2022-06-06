@@ -28,10 +28,10 @@
                "data_source_id": "1",
                "event_type": "work-zone",
                "related_road_events": [
-                   {
-                   "type": "related-detour",
-                   "id": "67890-detour1"
-                   }
+                  {
+                     "type": "related-detour",
+                     "id": "67890-detour1"
+                  }
                ],
                "road_names": [
                   "I-35"
@@ -277,14 +277,14 @@
                "data_source_id": "1",
                "event_type": "detour",
                "related_road_events": [
-                   {
-                   "type": "related-work-zone",
-                   "id": "67890"
-                   },
-                   {
-                   "type": "next-road-event",
-                   "id": "67890-detour2"
-                   }
+                  {
+                     "type": "related-work-zone",
+                     "id": "67890"
+                  },
+                  {
+                     "type": "next-road-event",
+                     "id": "67890-detour2"
+                  }
                ],
                "road_names": [
                   "F22"
@@ -360,18 +360,18 @@
                "data_source_id": "1",
                "event_type": "detour",
                "related_road_events": [
-                   {
-                   "type": "related-work-zone",
-                   "id": "67890"
-                   },
-                   {
-                   "type": "first-road-event",
-                   "id": "67890-detour1"
-                   },
-                   {
-                   "type": "next-road-event",
-                   "id": "67890-detour3"
-                   }
+                  {
+                     "type": "related-work-zone",
+                     "id": "67890"
+                  },
+                  {
+                     "type": "first-road-event",
+                     "id": "67890-detour1"
+                  },
+                  {
+                     "type": "next-road-event",
+                     "id": "67890-detour3"
+                  }
                ],
                "road_names": [
                   "US 69"
@@ -743,14 +743,14 @@
                "data_source_id": "1",
                "event_type": "detour",
                "related_road_events": [
-                   {
-                   "type": "related-work-zone",
-                   "id": "67890"
-                   },
-                   {
-                   "type": "first-road-event",
-                   "id": "67890-detour1"
-                   }
+                  {
+                     "type": "related-work-zone",
+                     "id": "67890"
+                  },
+                  {
+                     "type": "first-road-event",
+                     "id": "67890-detour1"
+                  }
                ],
                "road_names": [
                   "IA 210"

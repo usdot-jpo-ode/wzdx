@@ -29,8 +29,8 @@
           "event_type": "work-zone",
           "related_road_events": [
             {
-            "type": "related-work-zone",
-            "id": "121388-WB"
+              "type": "related-work-zone",
+              "id": "121388-WB"
             }
           ],
           "road_names": [
@@ -114,8 +114,8 @@
           "event_type": "work-zone",
           "related_road_events": [
             {
-            "type": "related-work-zone",
-            "id": "121388-EB"
+              "type": "related-work-zone",
+              "id": "121388-EB"
             }
           ],
           "road_names": [

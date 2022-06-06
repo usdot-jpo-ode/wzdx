@@ -123,7 +123,7 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events": [           
+          "related_road_events": [
             {
               "type": "first-occurrence",
               "id": "PLK01012016-Day1"
@@ -215,7 +215,7 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events": [           
+          "related_road_events": [
             {
               "type": "first-occurrence",
               "id": "PLK01012016-Day1"
@@ -307,7 +307,7 @@
         "core_details": {
           "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
           "event_type": "work-zone",
-          "related_road_events": [           
+          "related_road_events": [
             {
               "type": "first-occurrence",
               "id": "PLK01012016-Day1"

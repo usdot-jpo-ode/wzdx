@@ -407,10 +407,10 @@
                "data_source_id": "2",
                "event_type": "work-zone",
                "related_road_events": [
-                 {
-                 "type": "next-road-event",
-                  "id": "65733-2"
-                 }
+                  {
+                     "type": "next-road-event",
+                     "id": "65733-2"
+                  }
                ],
                "road_names": [
                   "I-235"
@@ -508,14 +508,14 @@
                "data_source_id": "2",
                "event_type": "work-zone",
                "related_road_events": [
-                 {
-                 "type": "first-road-event",
-                  "id": "65733-1"
-                 },
-                 {
-                 "type": "next-road-event",
-                  "id": "65733-3"
-                 }
+                  {
+                     "type": "first-road-event",
+                     "id": "65733-1"
+                  },
+                  {
+                     "type": "next-road-event",
+                     "id": "65733-3"
+                  }
                ],
                "road_names": [
                   "I-235"
@@ -632,10 +632,10 @@
                "data_source_id": "2",
                "event_type": "work-zone",
                "related_road_events": [
-                 {
-                 "type": "first-road-event",
-                  "id": "65733-1"
-                 }
+                  {
+                     "type": "first-road-event",
+                     "id": "65733-1"
+                  }
                ],
                "road_names": [
                   "I-235"
