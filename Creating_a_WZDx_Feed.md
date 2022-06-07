@@ -29,11 +29,11 @@ The following business rules help assure a standardized and interpretable use of
 
 ### WZDxFeed (Work Zones) Business Rules
 
-1. An event must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s, [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)s, or [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s when a required property or lane object changes. A complex event should be linked together using the `Relationship` property.
+1. An event must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s, [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)s, or [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s when the value of a required property or lane object changes. A complex event should be linked together using the `relationship` property.
 2. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 3. A value of 1 must represent the left-most lane and an increase in 1 must represent moving a single lane to the right.
-4. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document.
-5. All times must be expressed in UTC.
+4. The `data_source_id` value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same WZDx GeoJSON document on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s, [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)s, and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s.
+5. All dates and times must be expressed in UTC.
 
 
 ## Data Validation
