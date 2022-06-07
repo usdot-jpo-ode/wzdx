@@ -25,9 +25,7 @@ WZDx defines the content and structure of several data feeds. Each feed is descr
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
 
 ## Business Rules
-The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
-
-### WZDxFeed (Work Zones) Business Rules
+The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements that cannot be validated by the JSON schema.
 
 1. An event must be segmented into separate [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)s, [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)s, or [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)s when the value of a required property or lane object changes. A complex event should be linked together using the `relationship` property.
 2. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
