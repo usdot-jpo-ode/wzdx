@@ -50,7 +50,7 @@ Object | Description
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
 [WorkerPresence](/spec-content/objects/WorkerPresence.md) | Information about the presence of workers in the road event area.
 [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
-[Relationship](/spec-content/objects/Relationship.md) (DEPRECATED)| *This property is deprecated and will be removed in a future release, use `related_road_events` instead.* Identification of both sequential and hierarchical relationships between road events and other entities.
+[Relationship](/spec-content/objects/Relationship.md) (DEPRECATED)| *All properties that use this object are deprecated so this object will be removed in a future release, use `related_road_events` instead.* Identification of both sequential and hierarchical relationships between road events and other entities.
 
 #### Field Devices
 The following objects are used to describe deployed roadside [ITS](https://en.wikipedia.org/wiki/Intelligent_transportation_system) devices:
