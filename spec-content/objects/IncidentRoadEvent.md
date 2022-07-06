@@ -7,7 +7,7 @@ The `IncidentRoadEvent` is a type of road event; it has a `core_details` propert
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) | The core details of the road event that are shared by all types of road events, not specific to work zones. | Required |
-`types_of_incident` | Array; One or More [Incident Types](/spec-content/enumerated-types/IncidentType.md) | A list of one or more incident types describing the cause of closure or restriction. | Required | Incident types are described using incident enumerations.
+`types_of_incident` | Array; One or More [Type of Incident](/spec-content/objects/TypeOfIncident.md) | A list of one or more incident types describing the cause of closure or restriction. | Required | Incident types are described using incident enumerations.
 `start_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the event begins. | Required | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `end_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the event ends. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.
 `is_start_date_verified` | Boolean | Indicates if the detour has been confirmed to have started, such as from a person or device in the field or a report from a traffic management center. | Required |
