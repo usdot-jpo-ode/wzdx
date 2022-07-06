@@ -30,6 +30,7 @@ Incident Type | Incident Description
 `Disaster - Flood - Major` | A major flood interrupts normal operations.
 `Disaster - Flood - Reservoir Failure` | A reservoir failure interrupts normal operations.
 `Disaster - Flood - Levee Failure` | A levee failure interrupts normal operations.
+`Disaster - Flow - Avalanche/Mud/Material` | A levee failure interrupts normal operations.
 `Disaster - Radiation - Release/Leak` | A radioactive release interrupts normal operations.
 `Disaster - Radiation - Hazard` | A radiation hazard interrupts normal operations.
 `Disaster - Sceismic - Earthquake Damage` | 	Earthquake damage interrupts normal operations.
@@ -57,6 +58,8 @@ Incident Type | Incident Description
 `Special Event - Parade` | A parade interrupts normal operations.
 `Special Event - Procession` | A procession interrupts normal operations.
 `Special Event - Crowd` | A crowd interrupts normal operations.
+`Special Event - Road Race` | A crowd interrupts normal operations.
+`Special Event - Running Race` | A crowd interrupts normal operations.
 
 ## Used By
 Property | Object
