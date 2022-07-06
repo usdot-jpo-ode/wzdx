@@ -2,7 +2,7 @@
 Descriptions of the incidents causing disruptions to expected operations.
 
 ## Values
-Incident Type | Incident Dewscription
+Incident Type | Incident Description
 --- | --- 
 `Crash` |  A crash interrupts normal operations.
 `Crash - Injury` | A crash involving and injury interrupts normal operations. 
