@@ -13,6 +13,7 @@ Value | Description
 Property | Object
 --- | ---
 `direction` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
+`road_direction` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md)
 
 ## Additional Information
 The `Direction` enumerated type values were based on the TMDD Link-alignment Enumeration, which contains the following values:
