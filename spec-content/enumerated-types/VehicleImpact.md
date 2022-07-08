@@ -21,3 +21,4 @@ Value | Description
 Property | Object
 --- | ---
 `vehicle_impact` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`vehicle_impact` | [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)
