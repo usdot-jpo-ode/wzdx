@@ -1,5 +1,5 @@
 ### RelatedRoadEventType Enumerated Type
-Describes how a road event is related to the road event that the RelatedRoadEvent object occurs on. For example, the first road event in a sequence of events along the roadway, an instance of a recurrent work zone, or a nearby work zone-type road event or detour-type road events. 
+Describes how a road event is related to the road event that the RelatedRoadEvent object occurs on. For example, the first road event in a sequence of events along the roadway, an instance of a recurrent work zone, a nearby work zone-type road event, or a nearby detour-type road events. 
 
 In many cases, the related road event type only refers to the first road event as the corresponding "work zone" may encompass multiple road events.  In these situations, end users will need to use the "first" road event and iterate through all linked road events to find all related road events.
 
