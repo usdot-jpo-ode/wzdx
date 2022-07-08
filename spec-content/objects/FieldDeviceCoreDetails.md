@@ -30,3 +30,4 @@ Property | Object
 `core_details` | [HybridSign](/spec-content/objects/HybridSign.md)
 `core_details` | [LocationMarker](/spec-content/objects/LocationMarker.md)
 `core_details` | [TrafficSensor](/spec-content/objects/TrafficSensor.md)
+`core_details` | [TrafficSignal](/spec-content/objects/TrafficSignal.md)
