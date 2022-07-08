@@ -15,6 +15,7 @@ Name | Type | Description | Conformance | Notes
 `ending_accuracy` | [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | Indicates how the ending coordinate was defined. | Required |
 `location_method` | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area. | Required | 
 `vehicle_impact` | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction. | Required |
+`curbs_impact`| Array; [CDSReference] | A list of the impacted `curb_zone`(s) from the work zone area. | Optional |
 `lanes` | Array; \[[Lane](/spec-content/objects/Lane.md)\] | A list of individual lanes within a road event (roadway segment). | Optional |
 `beginning_cross_street` | String | Name or number of the nearest cross street along the roadway where the event begins. | Optional |
 `ending_cross_street` | String | Name or number of the nearest cross street along the roadway where the event ends. | Optional |
