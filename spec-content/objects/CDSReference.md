@@ -1,6 +1,8 @@
 # CDSReference Object
 The `CDSReference` object describes a specific CDS curb_zone that is impacted by the work zone via an external reference to a Curb Data Specification [Curb API](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-data-specification-curbs-api) feed. This allows WZDx users to reference the Curbs API of CDS to see full details of the impact.
 
+Read more about the Open Mobility Foundation's [Curb Data Specification](https://www.openmobilityfoundation.org/about-cds).
+
 ## Properties
 Property Name | Data Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
