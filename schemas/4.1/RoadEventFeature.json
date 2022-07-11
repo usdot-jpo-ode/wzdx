@@ -152,7 +152,7 @@
               }
             },
             "curbs_impact": {
-            "description": "	One or more references to external CDS curb_zones impacted by the work zone.",
+            "description": "One or more references to external CDS curb_zones impacted by the work zone.",
             "type": "array",
             "items": {
             "$ref": "#/definitions/CDSReference"
