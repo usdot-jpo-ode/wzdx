@@ -473,7 +473,7 @@
             "type": "url"
           },
           "cds_curb_zone_id": {
-             "description": "The id of a CDS curb_zone that is impacted by the work zone area.",
+             "description": "The id of a CDS Curb Zone.",
              "type": "string"
           }
       },
