@@ -108,11 +108,11 @@
               "format": "date-time"
             },
             "is_start_date_verified": {
-              "description": "Indicates if work has been confirmed to have started, such as from a person or device in the field or a report from a traffic management center",
+              "description": "Indicates if work has been confirmed to have started, such as from a person or field device",
               "type": "boolean"
             },
             "is_end_date_verified": {
-              "description": "Indicates if work has been confirmed to have ended, such as from a person or device in the field or a report from a traffic management center",
+              "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
               "type": "boolean"
             },
             "vehicle_impact": {
