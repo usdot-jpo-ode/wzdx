@@ -18,6 +18,10 @@ Value | Description
 `gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced along the segment being described.
 `towing-prohibited` | Towing prohibited along the segment being described.
 `permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited along the segment being described; this applies to annual oversize load permits.
+`reduced-speed` | Vehicle must travel at a reduced speed compared to posted speed limit along the segment being described.
+`shift-left` | Vehicle must shift left by at least one lane along the segment being described.
+`shift-right` | Vehicle must shift right by at least one lane along the segment being described.
+
 
 ## Used By
 Property | Object
