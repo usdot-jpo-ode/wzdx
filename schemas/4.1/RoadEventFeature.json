@@ -468,7 +468,7 @@
       "description": "Impacted CDS Curb Zones from the work zone area",
       "type": "object",
       "properties": {
-          "cds_curbs_api": {
+          "cds_curbs_api_url": {
             "description": "An identifer for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the curbs api which contains more information about the type of curb zone that is impacted.",
             "type": "url"
           },
@@ -477,7 +477,7 @@
              "type": "string"
           }
       },
-      "required": ["cds_curbs_api", "cds_curb_zone_id"]
+      "required": ["cds_curbs_api_url", "cds_curb_zone_id"]
   },
     "WorkerPresence": {
       "title": "Worker Presence",
