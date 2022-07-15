@@ -12,4 +12,4 @@ Name | Type | Description | Conformance | Notes
 `bbox` | GeoJSON [Bounding Box](https://tools.ietf.org/html/rfc7946#section-5) | Information on the coordinate range for all RoadEventFeatures in the WZDx feed. Must be an array of length 2*n where n is the number of dimensions represented in the contained geometries, with all axes of the most southwesterly point followed by all axes of the more northeasterly point.  The axes order of a bbox follows the axes order of geometries. | Optional | This is a GeoJSON property.
 
 ## Used By
-Road Restriction GeoJSON document (one `RoadIncidentFeed` object per file).
+Road Incident GeoJSON document (one `RoadIncidentFeed` object per file).
