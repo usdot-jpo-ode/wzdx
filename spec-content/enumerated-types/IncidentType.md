@@ -16,16 +16,16 @@ Winds | `hurricane-force` | Hurricane force winds or a hurricane interrupts norm
 Winds | `tornado` | A tornado interrupts normal operations. 
 Winds | `crosswinds` | Crosswinds interrupt normal operations.
 Winds | `gusts` | Winds	Gusty winds interrupt normal operations.
-Disaster | `crash-air` | 	An air crash interrupts normal operations.
+Disaster | `crash-air` | An air crash interrupts normal operations.
 Disaster | `crash-rail` | A rail crash interrupts normal operations.
 Disaster | `explosion` | An explosion interrupts normal operations.
 Disaster | `fire` | A serious fire interrupts normal operations.
-Disaster | `fire-building` | fire	A building fire interrupts normal operations.
+Disaster | `fire-building` | A building fire interrupts normal operations.
 Disaster | `fire-brush` | A brush fire interrupts normal operations.
 Disaster | `fire-forest` | A forest fire has interrupts normal operations.
 Disaster | `fire-grass` | A grass fire interrupts normal operations.
 Disaster | `fire-wild` | A wild fire interrupts normal operations.
-Disaster | `fire-hazardous-materials` | materials fire	A major hazardous materials fire interrupts normal operations.
+Disaster | `fire-hazardous-materials` | A major hazardous materials fire interrupts normal operations.
 Disaster | `flood-flash` | A flash flood interrupts normal operations.
 Disaster | `flood-major` | A major flood interrupts normal operations.
 Disaster | `flood-reservoir-failure` | A reservoir failure interrupts normal operations.
