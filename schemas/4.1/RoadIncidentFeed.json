@@ -164,12 +164,6 @@
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
             },
-            "location_method": {
-              "$ref": "#/definitions/LocationMethod"
-            },
-            "worker_presence": {
-              "$ref": "#/definitions/WorkerPresence"
-            },
             "reduced_speed_limit_kph": {
               "description": "If applicable, the reduced speed limit posted within the road event, in kilometers per hour",
               "type": "number",
@@ -564,17 +558,6 @@
         "center-left-turn-lane"
       ]
     },
-    "LocationMethod": {
-      "title": "Location Method Enumerated Type",
-      "description": "The typical method used to locate the beginning and end of a work zone impact area",
-      "enum": [
-        "channel-device-method",
-        "sign-method",
-        "junction-method",
-        "other",
-        "unknown"
-      ]
-    },
     "RestrictionType": {
       "title": "Restriction Type Enumerated Type",
       "description": "The type of vehicle restriction on a roadway",
@@ -604,43 +587,6 @@
       "title": "Vehicle Impact Enumerated Type",
       "description": "The impact to vehicular lanes along a single road in a single direction",
       "enum": ["all-lanes-closed", "some-lanes-closed", "all-lanes-open", "alternating-one-way", "some-lanes-closed-merge-left", "some-lanes-closed-merge-right", "all-lanes-open-shift-left", "all-lanes-open-shift-right", "some-lanes-closed-split", "flagging", "temporary-traffic-signal", "unknown"]
-    },
-    "WorkerPresenceMethod": {
-      "title": "Worker Presence Method Enumerated Type",
-      "description": "Describes methods for how worker presence in a work zone event area is determined",
-      "enum": [
-        "camera-monitoring", 
-        "arrow-board-present", 
-        "cones-present", 
-        "maintenance-vehicle-present", 
-        "wearables-present", 
-        "mobile-device-present", 
-        "check-in-app", 
-        "check-in-verbal",
-        "scheduled"
-      ]
-    },
-    "WorkerPresenceDefinition": {
-      "title": "Worker Presence Definition Enumerated Type",
-      "description": "Situations in which workers may be considered present in a work zone",
-      "enum": [
-        "workers-in-work-zone-working",
-        "workers-in-work-zone-not-working", 
-        "mobile-equipment-in-work-zone-moving", 
-        "mobile-equipment-in-work-zone-not-working", 
-        "fixed-equipment-in-work-zone", 
-        "humans-behind-barrier", 
-        "humans-in-right-of-way"
-      ]
-    },
-    "WorkerPresenceConfidence": {
-      "title": "Worker Presence Confidence Enumerated Type",
-      "description": "A high-level description of the feed publisher's confidence in the reported WorkerPresence value of are_workers_present",
-      "enum": [
-        "low",
-        "medium",
-        "high"
-      ]
     }
   }
 }
