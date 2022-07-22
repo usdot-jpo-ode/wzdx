@@ -7,7 +7,7 @@ Category | Value  | Description
 Crash | `crash` |  A crash interrupts normal operations.
 Crash | `injury` | A crash involving and injury interrupts normal operations. 
 Crash | `investigation` | A crash investigation interrupts normal operations. 
-Crash | `incident` | An non-crash incident interrupts normal operations.
+Crash | `incident` | A non-crash incident interrupts normal operations.
 Crash | `spill` | A spill interrupts normal operations.
 Winds | `strong` | Strong winds interrupt normal operations. (windspeed: 25-38 mph / 39-61 km/h)
 Winds | `gale-force` | Gale force winds interrupt normal operations. (windspeed: 39-54 mph / 62-88 km/h)
