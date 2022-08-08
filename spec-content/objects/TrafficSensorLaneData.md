@@ -6,7 +6,7 @@ Note this structure allows a single [TrafficSensor](/spec-content/objects/Traffi
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`lane_order` | Positive Integer | The lane's position in sequence within the road event (specified by `road_event_id`). The value of this property corresponds to the associated road event's [Lane](/spec-content/objects/Lane.md)'s `order` property. | Required |
+`lane_order` | Positive Integer | The lane's position in sequence on the roadway. If `road_event_id` is provided, the value of this property corresponds to the associated road event's [Lane](/spec-content/objects/Lane.md)'s `order` property. | Required |
 `road_event_id` | String | The ID of a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) which the measured lane occurs in, if applicable. | Optional |
 `average_speed_kph` | Integer (>= 0) | The average speed of traffic in the lane over the collection interval (in kilometers per hour). | Optional |
 `volume_vph` | Integer (>= 0) | The rate of vehicles passing by the sensor in the lane during the collection interval (in vehicles per hour). | Optional | 

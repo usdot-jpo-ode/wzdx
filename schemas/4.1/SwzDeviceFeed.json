@@ -481,12 +481,12 @@
     },
     "TrafficSensorLaneData": {
       "title": "Traffic Sensor Lane Data",
-      "description": "data for a single lane within a RoadEvent measured by a TrafficSensor deployed on the roadway",
+      "description": "Data for a single lane measured by a TrafficSensor deployed on the roadway",
       "properties": {
         "lane_order": {
           "type": "integer",
           "minimum": 1,
-          "description": "The lane's position in sequence within the road event specified by the 'road_event_id' property"
+          "description": "The lane's position in sequence on the roadway"
         },
         "road_event_id": {
           "type": "string",
