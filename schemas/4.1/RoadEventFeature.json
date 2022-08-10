@@ -28,9 +28,6 @@
         },
         {
           "$ref": "#/definitions/DetourRoadEvent"
-        },
-        {
-          "$ref": "#/definitions/RestrictionRoadEvent"
         }
       ]
     },
@@ -233,62 +230,6 @@
             "end_date",
             "start_date_accuracy",
             "end_date_accuracy"
-          ]
-        }
-      ]
-    },
-    "RestrictionRoadEvent": {
-      "title": "Restriction Road Event",
-      "description": "A road event describing a section of roadway and the limitations of how that section can be used",
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "core_details": {
-              "properties": {
-                "event_type": {
-                  "const": "restriction"
-                }
-              },
-              "required": ["event_type"]
-            }
-          },
-          "required": ["core_details"]
-        },
-        {
-          "properties": {
-            "core_details": {
-              "$ref": "#/definitions/RoadEventCoreDetails"
-            },
-            "restrictions": {
-              "description": "A list of zero or more restrictions applying to the road event",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Restriction"
-              }
-            },
-            "lanes": {
-              "description": "A list of individual lanes within a road event (roadway segment)",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Lane"
-              }
-            }
-          },
-          "required": [
-            "core_details"
-          ],
-          "anyOf": [
-            {
-              "required": [
-                "restrictions"
-              ]
-            },
-            {
-              "required": [
-                "lanes"
-              ]
-            }
           ]
         }
       ]
