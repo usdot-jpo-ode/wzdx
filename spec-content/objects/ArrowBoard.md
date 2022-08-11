@@ -8,8 +8,8 @@ Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details of the field device that are shared by all types of field devices, not specific to arrow boards. | Required | This property appears on all field devices.
 `pattern` | [ArrowBoardPattern](/spec-content/enumerated-types/ArrowBoardPattern.md) | The current pattern displayed on the arrow board. Note this includes `blank`, which indicates that nothing is shown on the arrow board. | Required |
-`is_moving` | Boolean | A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation. | Optional | The `is_moving` property is optional and should not be provided if it is not known if the arrow board is moving.
 `is_in_transport_position` | Boolean | A yes/no value indicating if the arrow board is in the stowed/transport position (`true`) or deployed/upright position (`false`). | Optional |
+`is_moving` (DEPRECATED) | Boolean | *This property is deprecated and will be removed in a future version; use the `is_moving` property on the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) instead.* A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation. | Optional | The `is_moving` property is optional and should not be provided if it is not known if the arrow board is moving.
 
 ## Used By
 Property | Object
