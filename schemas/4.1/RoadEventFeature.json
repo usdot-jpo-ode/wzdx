@@ -7,7 +7,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "description": "A unique identifier issued by the data feed provider to identify the WZDx road event",
+      "description": "A unique identifier issued by the data feed provider to identify the WZDx road event. It is recommended that this identifier is a Universally Unique IDentifier (UUID) as defined in [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122).",
       "type": "string"
     },
     "type": {
@@ -91,11 +91,13 @@
               "type": "number",
               "minimum": 0
             },
-            "beginning_accuracy": {
-              "$ref": "#/definitions/SpatialVerification"
+            "is_start_position_verified": {
+              "description": "Indicates if the start position (first geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the start of the work zone.",
+              "type": "boolean"
             },
-            "ending_accuracy": {
-              "$ref": "#/definitions/SpatialVerification"
+            "is_end_position_verified": {
+              "description": "Indicates if the end position (last geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the end of the work zone.",
+              "type": "boolean"
             },
             "start_date": {
               "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
@@ -107,14 +109,13 @@
               "type": "string",
               "format": "date-time"
             },
-            "start_date_accuracy": {
-              "$ref": "#/definitions/TimeVerification"
+            "is_start_date_verified": {
+              "description": "Indicates if work has been confirmed to have started, such as from a person or field device",
+              "type": "boolean"
             },
-            "end_date_accuracy": {
-              "$ref": "#/definitions/TimeVerification"
-            },
-            "event_status": {
-              "$ref": "#/definitions/EventStatus"
+            "is_end_date_verified": {
+              "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
+              "type": "boolean"
             },
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
@@ -150,18 +151,76 @@
               "items": {
                 "$ref": "#/definitions/Lane"
               }
+            },
+            "event_status": {
+              "description": "**DEPRECATED**",
+              "$ref": "#/definitions/EventStatus"
+            },
+            "start_date_accuracy": {
+              "description": "**DEPRECATED** Use is_start_date_verified instead",
+              "$ref": "#/definitions/TimeVerification"
+            },
+            "end_date_accuracy": {
+              "description": "**DEPRECATED** Use is_end_date_verified instead",
+              "$ref": "#/definitions/TimeVerification"
+            },
+            "beginning_accuracy": {
+              "description": "**DEPRECATED** Use is_start_position_verified instead.",
+              "$ref": "#/definitions/SpatialVerification"
+            },
+            "ending_accuracy": {
+              "description": "**DEPRECATED** Use is_end_position_verified instead.",
+              "$ref": "#/definitions/SpatialVerification"
             }
           },
           "required": [
             "core_details",
-            "beginning_accuracy",
-            "ending_accuracy",
             "start_date",
             "end_date",
-            "start_date_accuracy",
-            "end_date_accuracy",
             "vehicle_impact",
             "location_method"
+          ],
+          "allOf": [
+            {
+              "anyOf": [
+                {
+                  "required": ["is_start_date_verified"]
+                },
+                {
+                  "required": ["start_date_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_start_position_verified"]
+                },
+                {
+                  "required": ["beginning_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_date_verified"]
+                },
+                {
+                  "required": ["end_date_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_position_verified"]
+                },
+                {
+                  "required": ["ending_accuracy"]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -217,22 +276,53 @@
               "type": "string",
               "format": "date-time"
             },
+            "is_start_date_verified": {
+              "description": "Indicates if the detour has been confirmed to have started, such as from a person or device in the field or a report from a traffic management center",
+              "type": "boolean"
+            },
+            "is_end_date_verified": {
+              "description": "Indicates if the detour has been confirmed to have ended, such as from a person or device in the field or a report from a traffic management center",
+              "type": "boolean"
+            },
+            "event_status": {
+              "description": "**DEPRECATED**",
+              "$ref": "#/definitions/EventStatus"
+            },
             "start_date_accuracy": {
+              "description": "**DEPRECATED** Use is_start_date_verified instead",
               "$ref": "#/definitions/TimeVerification"
             },
             "end_date_accuracy": {
+              "description": "**DEPRECATED** Use is_end_date_verified instead",
               "$ref": "#/definitions/TimeVerification"
-            },
-            "event_status": {
-              "$ref": "#/definitions/EventStatus"
             }
           },
           "required": [
             "core_details",
             "start_date",
-            "end_date",
-            "start_date_accuracy",
-            "end_date_accuracy"
+            "end_date"
+          ],
+          "allOf": [
+            {
+              "anyOf": [
+                {
+                  "required": ["is_start_date_verified"]
+                },
+                {
+                  "required": ["start_date_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_date_verified"]
+                },
+                {
+                  "required": ["end_date_accuracy"]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -317,7 +407,11 @@
           }
         },
         "direction": {
-          "$ref": "#/definitions/Direction"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json"
+        },
+        "name": {
+          "description": "A human-readable name for the road event",
+          "type": "string"
         },
         "description": {
           "description": "Short free text description of the road event",
@@ -329,7 +423,7 @@
           "format": "date-time"
         },
         "update_date": {
-          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event was last updated (e.g. 2020-11-03T19:37:00Z)",
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when any information in the RoadEventFeature (including child objects) that the RoadEventCoreDetails applies to was most recently updated or confirmed as up to date",
           "type": "string",
           "format": "date-time"
         }
@@ -495,7 +589,7 @@
     "Direction": {
       "title": "Direction Enumerated Type",
       "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound"]
+      "enum": ["northbound", "eastbound", "southbound", "westbound", "undefined", "unknown"]
     },
     "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
@@ -534,7 +628,8 @@
         "gross-weight-limit",
         "towing-prohibited",
         "permitted-oversize-loads-prohibited",
-        "local-access-only"
+        "local-access-only",
+        "no-passing"
       ]
     },
     "WorkTypeName": {
@@ -572,6 +667,7 @@
         "shoulder",
         "parking",
         "median",
+        "two-way-center-turn-lane",
         "center-left-turn-lane"
       ]
     },

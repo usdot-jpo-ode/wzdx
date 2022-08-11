@@ -1,5 +1,5 @@
 {
-  "road_event_feed_info": {
+  "feed_info": {
     "update_date": "2020-06-18T15:00:00Z",
     "publisher": "TestDOT",
     "contact_name": "Frederick Francis Feedmanager",
@@ -44,14 +44,13 @@
         },
         "beginning_milepost": 98.42,
         "ending_milepost": 101.50,
-        "beginning_accuracy": "verified",
-        "ending_accuracy": "estimated",
+        "is_start_position_verified": "true",
+        "is_end_position_verified": "false",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-06-30T01:00:00Z",
         "location_method": "channel-device-method",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active",
+        "is_start_date_verified": true,
+        "is_end_date_verified": false,
         "vehicle_impact": "some-lanes-closed",
         "worker_presence": {
           "are_workers_present": true,
@@ -300,9 +299,8 @@
         "ending_cross_street": "US 69",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-06-30T01:00:00Z",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active"
+        "is_start_date_verified": true,
+        "is_end_date_verified": false
       },
       "geometry": {
         "type": "LineString",
@@ -384,9 +382,8 @@
         "ending_cross_street": "IA 210",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-06-30T01:00:00Z",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active"
+        "is_start_date_verified": true,
+        "is_end_date_verified": false
       },
       "geometry": {
         "type": "LineString",
@@ -761,9 +758,8 @@
         "ending_cross_street": "I-35",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-06-30T01:00:00Z",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active"
+        "is_start_date_verified": true,
+        "is_end_date_verified": false
       },
       "geometry": {
         "type": "LineString",

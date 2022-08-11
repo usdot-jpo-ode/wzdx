@@ -20,7 +20,7 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "Bridge1",
+      "id": "bc5cbd59-b70d-4820-a0b1-104acfc0650b",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -31,7 +31,8 @@
             "Hutchinson Parkway",
             "Hutchinson River Parkway"
           ],
-          "direction": "northbound"
+          "direction": "northbound",
+          "name": "Bridge1"
         },
         "restrictions": [
           {
@@ -122,7 +123,7 @@
       }
     },
     {
-      "id": "Bridge2",
+      "id": "11d150f3-e08e-43e9-95d8-e185cb62c93f",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -133,7 +134,8 @@
             "Hutchinson Parkway",
             "Hutchinson River Parkway"
           ],
-          "direction": "southbound"
+          "direction": "southbound",
+          "name": "Bridge2"
         },
         "restrictions": [
           {
@@ -166,7 +168,7 @@
       }
     },
     {
-      "id": "Bridge3",
+      "id": "e959948a-fe0b-11ec-b939-0242ac120002",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -177,7 +179,8 @@
             "Hutchinson Parkway",
             "Hutchinson River Parkway"
           ],
-          "direction": "southbound"
+          "direction": "southbound",
+          "name": "Bridge3"
         },
         "restrictions": [
           {
