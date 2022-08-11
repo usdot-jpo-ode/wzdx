@@ -12,7 +12,7 @@ Name | Type | Description | Conformance | Notes
 `average_speed_kph` | Number (>= 0) | The average speed of vehicles across all lanes over the collection interval in kilometers per hour. | Optional |
 `volume_vph` | Number (>= 0) | The rate of vehicles passing by the sensor during the collection interval in vehicles per hour. | Optional |
 `occupancy_percent` | Number (>= 0) | The percent of time the roadway section monitored by the sensor was occupied by a vehicle over the collection interval. | Optional |
-`lane_data` | Array; [[TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md)] | A list of objects each describing traffic data for a specific lane—each pointing to a road event lane and indiciating the metrics of that lane. | Optional | Lane-level data can only be provided if the data producer has knowledge of the road event to assign the traffic sensor lane data to.
+`lane_data` | Array; [[TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md)] | A list of objects each describing traffic data for a specific lane. | Optional |
 
 ## Used By
 Property | Object
