@@ -95,14 +95,6 @@
           "description": "Identifies the data source from which the field device information is sourced from",
           "type": "string"
         },
-        "road_names": {
-          "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
         "device_status": {
           "$ref": "#/definitions/FieldDeviceStatus"
         },
@@ -114,6 +106,14 @@
         "has_automatic_location": {
           "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overidden (false)",
           "type": "boolean"
+        },
+        "road_names": {
+          "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
         },
         "name": {
           "type": "string",
@@ -161,7 +161,6 @@
       "required": [
         "device_type",
         "data_source_id",
-        "road_names",
         "device_status",
         "update_date",
         "has_automatic_location"
