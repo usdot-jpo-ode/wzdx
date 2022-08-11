@@ -117,7 +117,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "center-left-turn-lane",
+            "type": "two-way-center-turn-lane",
             "restrictions": [
               {
                 "type": "local-access-only"

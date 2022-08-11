@@ -323,7 +323,7 @@
             "function"
           ]
         }
-      ]    
+      ]
     },
     "HybridSign": {
       "title": "Hybrid Sign Field Device",
@@ -450,17 +450,17 @@
               "description": "The UTC date and time where the TrafficSensor data collection ended. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
             },
             "average_speed_kph": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The average speed of vehicles across all lanes over the collection interval in kilometers per hour"
             },
             "volume_vph": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The rate of vehicles passing by the sensor during the collection interval in vehicles per hour"
             },
             "occupancy_percent": {
-              "type": "integer",
+              "type": "number",
               "minimum": 0,
               "description": "The percent of time the roadway section monitored by the sensor was occupied by a vehicle over the collection interval"
             },
@@ -493,17 +493,17 @@
           "description": "The lane's position in sequence within the road event specified by the 'road_event_id' property"
         },
         "average_speed_kph": {
-          "type": "integer",
-          "minimum": 1,
+          "type": "number",
+          "minimum": 0,
           "description": "The average speed of traffic in the lane over the collection interval (in kilometers per hour)"
         },
         "volume_vph": {
-          "type": "integer",
+          "type": "number",
           "minimum": 0,
           "description": "The rate of vehicles passing by the sensor in the lane during the collection interval (in vehicles per hour)"
         },
         "occupancy_percent": {
-          "type": "integer",
+          "type": "number",
           "minimum": 0,
           "description": "The percent of time the lane monitored by the sensor was occupied by a vehicle over the collection interval"
         }
@@ -584,10 +584,13 @@
       "description": "Options for what a MarkedLocation can mark, such as the start or end of a road event",
       "enum": [
         "afad",
+        "delineator",
         "flagger",
         "lane-shift",
         "lane-closure",
         "temporary-traffic-signal",
+        "ramp-closure",
+        "road-closure",
         "road-event-start",
         "road-event-end",
         "work-zone-start",

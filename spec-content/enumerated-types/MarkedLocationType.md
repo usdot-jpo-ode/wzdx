@@ -5,9 +5,12 @@ The `MarkedLocationType` enumerated type describes options for what a [MarkedLoc
 Value | Description
 --- | ---
 `afad` | An automatic flagger assistance device.
+`delineator` | A generic delineation point in a work zone. This value can be used for most types of marked locations that don't match any of the other values.
 `flagger` | A human who is directing traffic.
 `lane-shift` | A lane shift.
 `lane-closure` | One or more lanes are closed.
+`ramp-closure` | The start of a closed ramp onto or off a main road or highway.
+`road-closure` | The start of a closed road.
 `road-event-start` | The start point of a road event.
 `road-event-end` | The end point of a road event.
 `work-zone-start` | The start point of a work zone.
