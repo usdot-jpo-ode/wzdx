@@ -317,7 +317,7 @@
           }
         },
         "direction": {
-          "$ref": "#/definitions/Direction"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json"
         },
         "description": {
           "description": "Short free text description of the road event",

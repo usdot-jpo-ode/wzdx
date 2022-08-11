@@ -107,6 +107,9 @@
           "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overidden (false)",
           "type": "boolean"
         },
+        "road_direction": {
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json",
+          "description": "The direction of the road that the field device is on. This value indicates the direction of the traffic flow of the road, not a real heading angle."
         "road_names": {
           "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
           "type": "array",
