@@ -513,6 +513,18 @@
         "lane_order"
       ]
     },
+    "TrafficSignal": {
+      "title": "Traffic Signal",
+      "description": "Describes a temporary traffic signal deployed on a roadway",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "mode": {
+          "$ref": "#/definitions/TrafficSignalMode"
+        }      
+      }
+    },
     "ArrowBoardPattern": {
       "title": "Arrow Board Pattern Enumerated Type",
       "description": "a list of options for the posted pattern on an ArrowBoard",
@@ -548,7 +560,8 @@
         "flashing-beacon",
         "hybrid-sign",
         "location-marker",
-        "traffic-sensor"
+        "traffic-sensor",
+        "traffic-signal"
       ]
     },
     "FieldDeviceStatus": {
@@ -582,6 +595,20 @@
         "road-event-end",
         "work-zone-start",
         "work-zone-end"
+      ]
+    },
+    "TrafficSignalMode": {
+      "title": "Traffic Signal Mode Enumerated Type",
+      "description": "Describes the current operating mode of a TrafficSignal",
+      "enum": [
+        "blank",
+        "flashing-red",
+        "flashing-yellow",
+        "fully-actuated",
+        "manual",
+        "pre-timed",
+        "semi-actuated",
+        "unknown"
       ]
     }
   }

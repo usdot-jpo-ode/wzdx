@@ -9,13 +9,13 @@ Value | Description
 `flagger` | A human who is directing traffic.
 `lane-shift` | A lane shift.
 `lane-closure` | One or more lanes are closed.
-`temporary-traffic-signal` | A temporary traffic signal.
 `ramp-closure` | The start of a closed ramp onto or off a main road or highway.
 `road-closure` | The start of a closed road.
 `road-event-start` | The start point of a road event.
 `road-event-end` | The end point of a road event.
 `work-zone-start` | The start point of a work zone.
 `work-zone-end` | The end point of a work zone.
+`temporary-traffic-signal` (DEPRECATED) | A temporary traffic signal. *This property will be removed in a future release; use [TrafficSignal](../objects/TrafficSignal.md] instead.*
 
 ## Used By
 Property | Object
