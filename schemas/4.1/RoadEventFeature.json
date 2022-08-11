@@ -91,11 +91,13 @@
               "type": "number",
               "minimum": 0
             },
-            "beginning_accuracy": {
-              "$ref": "#/definitions/SpatialVerification"
+            "is_start_position_verified": {
+              "description": "Indicates if the start position (first geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the start of the work zone.",
+              "type": "boolean"
             },
-            "ending_accuracy": {
-              "$ref": "#/definitions/SpatialVerification"
+            "is_end_position_verified": {
+              "description": "Indicates if the end position (last geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the end of the work zone.",
+              "type": "boolean"
             },
             "start_date": {
               "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when the road event begins (e.g. 2020-11-03T19:37:00Z)",
@@ -150,18 +152,46 @@
               "items": {
                 "$ref": "#/definitions/Lane"
               }
+            },
+            "beginning_accuracy": {
+              "description": "**DEPRECATED** Use is_start_position_verified instead.",
+              "$ref": "#/definitions/SpatialVerification"
+            },
+            "ending_accuracy": {
+              "description": "**DEPRECATED** Use is_end_position_verified instead.",
+              "$ref": "#/definitions/SpatialVerification"
             }
           },
           "required": [
             "core_details",
-            "beginning_accuracy",
-            "ending_accuracy",
             "start_date",
             "end_date",
             "start_date_accuracy",
             "end_date_accuracy",
             "vehicle_impact",
             "location_method"
+          ],
+          "allOf": [
+            {
+              "anyOf": [
+                {
+                  "required": ["is_start_position_verified"]
+                },
+                {
+                  "required": ["beginning_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_position_verified"]
+                },
+                {
+                  "required": ["ending_accuracy"]
+                }
+              ]
+            }
           ]
         }
       ]
