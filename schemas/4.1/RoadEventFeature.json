@@ -572,6 +572,7 @@
         "shoulder",
         "parking",
         "median",
+        "two-way-center-turn-lane",
         "center-left-turn-lane"
       ]
     },
