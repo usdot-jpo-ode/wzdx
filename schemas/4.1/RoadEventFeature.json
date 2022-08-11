@@ -7,7 +7,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "description": "A unique identifier issued by the data feed provider to identify the WZDx road event",
+      "description": "A unique identifier issued by the data feed provider to identify the WZDx road event. It is recommended that this identifier is a Universally Unique IDentifier (UUID) as defined in [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122).",
       "type": "string"
     },
     "type": {
@@ -318,6 +318,10 @@
         },
         "direction": {
           "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json"
+        },
+        "name": {
+          "description": "A human-readable name for the road event",
+          "type": "string"
         },
         "description": {
           "description": "Short free text description of the road event",

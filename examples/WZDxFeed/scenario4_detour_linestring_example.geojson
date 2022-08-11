@@ -21,7 +21,7 @@
    "type": "FeatureCollection",
    "features": [
       {
-         "id": "67890",
+         "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -29,15 +29,16 @@
                "event_type": "work-zone",
                "relationship": {
                   "children": [
-                     "67890-detour1",
-                     "67890-detour2",
-                     "67890-detour3"
+                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1",
+                     "4d151e7d-11d8-4b99-a192-51e189da0de7",
+                     "9436226a-01b0-47ff-8a13-670e87549458"
                   ]
                },
                "road_names": [
                   "I-35"
                ],
                "direction": "northbound",
+               "name": "Work Zone 67890",
                "description": "Simple, single direction work zone with detour.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -271,7 +272,7 @@
          }
       },
       {
-         "id": "67890-detour1",
+         "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -279,19 +280,21 @@
                "event_type": "detour",
                "relationship": {
                   "parents": [
-                     "67890"
+                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
+                     "Project 67890"
                   ],
                   "first": [
-                     "67890-detour1"
+                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
                   ],
                   "next": [
-                     "67890-detour2"
+                     "4d151e7d-11d8-4b99-a192-51e189da0de7"
                   ]
                },
                "road_names": [
                   "F22"
                ],
                "direction": "westbound",
+               "name": "67890 Detour (Segment 1)",
                "description": "Detour for road event 67890, first segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -355,7 +358,7 @@
          }
       },
       {
-         "id": "67890-detour2",
+         "id": "4d151e7d-11d8-4b99-a192-51e189da0de7",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -363,19 +366,21 @@
                "event_type": "detour",
                "relationship": {
                   "parents": [
-                     "67890"
+                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
+                     "Project 67890"
                   ],
                   "first": [
-                     "67890-detour1"
+                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
                   ],
                   "next": [
-                     "67890-detour3"
+                     "9436226a-01b0-47ff-8a13-670e87549458"
                   ]
                },
                "road_names": [
                   "US 69"
                ],
                "direction": "northbound",
+               "name": "67890 Detour (Section 2)",
                "description": "Detour for road event 67890, second segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -735,7 +740,7 @@
          }
       },
       {
-         "id": "67890-detour3",
+         "id": "9436226a-01b0-47ff-8a13-670e87549458",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -743,16 +748,18 @@
                "event_type": "detour",
                "relationship": {
                   "parents": [
-                     "6780"
+                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
+                     "Project 67890"
                   ],
                   "first": [
-                     "67890-detour1"
+                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
                   ]
                },
                "road_names": [
                   "IA 210"
                ],
                "direction": "eastbound",
+               "name": "67890 Detour (Section 3)",
                "description": "Detour for road event 67890, third/final segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
