@@ -9,6 +9,8 @@ Value | Description
 `lane-shift` | A lane shift.
 `lane-closure` | One or more lanes are closed.
 `temporary-traffic-signal` | A temporary traffic signal.
+`ramp-closure` | The start of a closed ramp onto or off a main road or highway.
+`road-closure` | The start of a closed road.
 `road-event-start` | The start point of a road event.
 `road-event-end` | The end point of a road event.
 `work-zone-start` | The start point of a work zone.

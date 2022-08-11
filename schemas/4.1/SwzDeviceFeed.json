@@ -575,6 +575,8 @@
         "lane-shift",
         "lane-closure",
         "temporary-traffic-signal",
+        "ramp-closure",
+        "road-closure",
         "road-event-start",
         "road-event-end",
         "work-zone-start",
