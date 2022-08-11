@@ -29,7 +29,7 @@
    "type": "FeatureCollection",
    "features": [
       {
-         "id": "71234",
+         "id": "af2e3f51-611f-4ce0-9282-2f28ca68e62f",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -46,14 +46,13 @@
             },
             "beginning_milepost": 125.2,
             "ending_milepost": 126.3,
-            "beginning_accuracy": "estimated",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "false",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T01:00:00Z",
             "end_date": "2010-01-02T01:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "estimated",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": false,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "reduced_speed_limit_kph": 88.514
          },
@@ -88,7 +87,7 @@
          }
       },
       {
-         "id": "WDM-58493-NB",
+         "id": "edf2162b-1f5d-4ddd-a731-78fb81a22e6a",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -98,20 +97,20 @@
                   "128th Street"
                ],
                "direction": "northbound",
+               "name": "WDM-58493-NB",
                "description": "Single direction work zone with detailed lane-level information. Also includes additional details in vehicle impact",
                "creation_date": "2009-12-13T13:35:26Z",
                "update_date": "2009-12-31T15:11:16Z"
             },
             "beginning_cross_street": "US 6, Hickman Road",
             "ending_cross_street": "Douglas Ave",
-            "beginning_accuracy": "estimated",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "false",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T06:00:00Z",
             "end_date": "2010-05-01T05:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "estimated",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": false,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed-merge-left",
             "lanes": [
                {
@@ -400,7 +399,7 @@
          }
       },
       {
-         "id": "65773-1",
+         "id": "6f57aded-7291-462e-9892-607b2b7d116c",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -408,33 +407,33 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ],
                   "next": [
-                     "65773-2"
+                     "8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 1",
                "description": "Single-direction work zone represented by three sequential road events; first event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
             },
             "beginning_milepost": 3.1,
             "ending_milepost": 2.9,
-            "beginning_accuracy": "estimated",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "false",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "estimated",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": false,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
                "are_workers_present": false,
@@ -506,7 +505,7 @@
          }
       },
       {
-         "id": "65773-2",
+         "id": "8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -514,33 +513,33 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ],
                   "next": [
-                     "65773-3"
+                     "e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 2",
                "description": "Single-direction work zone represented by three sequential road events; second event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
             },
             "beginning_milepost": 2.9,
             "ending_milepost": 2.5,
-            "beginning_accuracy": "estimated",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "false",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "estimated",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": false,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
                "are_workers_present": true,
@@ -631,7 +630,7 @@
          }
       },
       {
-         "id": "65773-3",
+         "id": "e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7",
          "type": "Feature",
          "properties": {
             "core_details": {
@@ -639,30 +638,30 @@
                "event_type": "work-zone",
                "relationship": {
                   "parents": [
-                     "65773"
+                     "Project 65773"
                   ],
                   "first": [
-                     "65773-1"
+                     "6f57aded-7291-462e-9892-607b2b7d116c"
                   ]
                },
                "road_names": [
                   "I-235"
                ],
                "direction": "westbound",
+               "name": "Project 65773 Event 3",
                "description": "Single-direction work zone represented by three sequential road events; third event.",
                "creation_date": "2009-12-31T11:56:26Z",
                "update_date": "2009-12-31T11:56:26Z"
             },
             "beginning_milepost": 2.5,
             "ending_milepost": 2.0,
-            "beginning_accuracy": "estimated",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "false",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T14:00:00Z",
             "end_date": "2010-01-05T23:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "estimated",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": false,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
                "are_workers_present": true,

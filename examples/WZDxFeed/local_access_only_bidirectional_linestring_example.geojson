@@ -21,7 +21,7 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "WZ389-NB",
+      "id": "de3de57b-33fb-40e5-a6f2-a17828f82fb9",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -31,20 +31,20 @@
             "Beaver Avenue"
           ],
           "direction": "northbound",
+          "name": "WZ389-NB",
           "description": "Bidirectional work zone, northbound direction with road event-level local access only restriction.",
           "creation_date": "2010-01-01T01:01:01Z",
           "update_date": "2010-01-01T01:03:01Z"
         },
         "beginning_cross_street": "Aurora Avenue",
         "ending_cross_street": "NW 46th Place",
-        "beginning_accuracy": "estimated",
-        "ending_accuracy": "estimated",
+        "is_start_position_verified": "false",
+        "is_end_position_verified": "false",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
-        "start_date_accuracy": "estimated",
-        "end_date_accuracy": "estimated",
+        "is_start_date_verified": false,
+        "is_end_date_verified": false,
         "location_method": "channel-device-method",
-        "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "WZ389-SB",
+      "id": "defbbd71-3f7e-4ddb-99de-86a48532ae57",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -93,20 +93,20 @@
             "Beaver Avenue"
           ],
           "direction": "southbound",
+          "name": "WZ389-SB",
           "description": "Bidirectional work zone, southbound direction with lane-level local access only restriction.",
           "creation_date": "2010-01-01T01:01:01Z",
           "update_date": "2010-01-01T01:03:01Z"
         },
         "beginning_cross_street": "NW 46th Place",
         "ending_cross_street": "Aurora Avenue",
-        "beginning_accuracy": "verified",
-        "ending_accuracy": "estimated",
+        "is_start_position_verified": "true",
+        "is_end_position_verified": "false",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
         "location_method": "channel-device-method",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active",
+        "is_start_date_verified": true,
+        "is_end_date_verified": false,
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {
@@ -117,7 +117,7 @@
           {
             "order": 1,
             "status": "open",
-            "type": "center-left-turn-lane",
+            "type": "two-way-center-turn-lane",
             "restrictions": [
               {
                 "type": "local-access-only"
