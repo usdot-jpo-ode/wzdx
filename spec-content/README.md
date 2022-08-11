@@ -68,6 +68,7 @@ Object | Description
 [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of smart work zone device feed GeoJSON document.
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
 [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) | Data for a single lane within a road event (e.g. [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) measured by a [TrafficSensor](/spec-content/objects/TrafficSensor.md) deployed on the roadway.
+[TrafficSignal](/spec-content/objects/TrafficSignal.md) | A temporary traffic signal deployed on a roadway.
 
 ### Object Diagrams
 The object diagrams below depict the relationship between the data objects for each WZDx feed.
@@ -115,3 +116,4 @@ Enumerated Type | Description
 [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of a field device.
 [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md) | The type of a field device.
 [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) | Describes options for what a [MarkedLocation](/spec-content/objects/MarkedLocation.md) can mark, such as the start or end of a road event.
+[TrafficSignalMode](/spec-content/enumerated-types/TrafficSignalMode.md) | The current operating mode of a [TrafficSignal](/spec-content/objects/TrafficSignal.md).

@@ -21,7 +21,7 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "7733",
+      "id": "85912735-7a36-45f5-b644-41b0203ae400",
       "type": "Feature",
       "properties": {
         "core_details": {
@@ -38,8 +38,8 @@
         },
         "beginning_milepost": 133.967,
         "ending_milepost": 133.112,
-        "beginning_accuracy": "verified",
-        "ending_accuracy": "verified",
+        "is_start_position_verified": "true",
+        "is_end_position_verified": "true",
         "start_date": "2010-01-01T05:57:36Z",
         "end_date": "2010-01-05T23:00:00Z",
         "location_method": "channel-device-method",
