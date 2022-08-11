@@ -42,10 +42,9 @@
         "is_end_position_verified": "false",
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
-        "start_date_accuracy": "estimated",
-        "end_date_accuracy": "estimated",
+        "is_start_date_verified": false,
+        "is_end_date_verified": false,
         "location_method": "channel-device-method",
-        "event_status": "active",
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {
@@ -106,9 +105,8 @@
         "start_date": "2010-01-01T01:03:01Z",
         "end_date": "2010-01-01T17:00:00Z",
         "location_method": "channel-device-method",
-        "start_date_accuracy": "verified",
-        "end_date_accuracy": "estimated",
-        "event_status": "active",
+        "is_start_date_verified": true,
+        "is_end_date_verified": false,
         "vehicle_impact": "all-lanes-open",
         "restrictions": [
           {

@@ -109,14 +109,13 @@
               "type": "string",
               "format": "date-time"
             },
-            "start_date_accuracy": {
-              "$ref": "#/definitions/TimeVerification"
+            "is_start_date_verified": {
+              "description": "Indicates if work has been confirmed to have started, such as from a person or field device",
+              "type": "boolean"
             },
-            "end_date_accuracy": {
-              "$ref": "#/definitions/TimeVerification"
-            },
-            "event_status": {
-              "$ref": "#/definitions/EventStatus"
+            "is_end_date_verified": {
+              "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
+              "type": "boolean"
             },
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
@@ -153,6 +152,18 @@
                 "$ref": "#/definitions/Lane"
               }
             },
+            "event_status": {
+              "description": "**DEPRECATED**",
+              "$ref": "#/definitions/EventStatus"
+            },
+            "start_date_accuracy": {
+              "description": "**DEPRECATED** Use is_start_date_verified instead",
+              "$ref": "#/definitions/TimeVerification"
+            },
+            "end_date_accuracy": {
+              "description": "**DEPRECATED** Use is_end_date_verified instead",
+              "$ref": "#/definitions/TimeVerification"
+            },
             "beginning_accuracy": {
               "description": "**DEPRECATED** Use is_start_position_verified instead.",
               "$ref": "#/definitions/SpatialVerification"
@@ -166,8 +177,6 @@
             "core_details",
             "start_date",
             "end_date",
-            "start_date_accuracy",
-            "end_date_accuracy",
             "vehicle_impact",
             "location_method"
           ],
@@ -175,10 +184,30 @@
             {
               "anyOf": [
                 {
+                  "required": ["is_start_date_verified"]
+                },
+                {
+                  "required": ["start_date_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
                   "required": ["is_start_position_verified"]
                 },
                 {
                   "required": ["beginning_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_date_verified"]
+                },
+                {
+                  "required": ["end_date_accuracy"]
                 }
               ]
             },
@@ -247,22 +276,53 @@
               "type": "string",
               "format": "date-time"
             },
+            "is_start_date_verified": {
+              "description": "Indicates if the detour has been confirmed to have started, such as from a person or device in the field or a report from a traffic management center",
+              "type": "boolean"
+            },
+            "is_end_date_verified": {
+              "description": "Indicates if the detour has been confirmed to have ended, such as from a person or device in the field or a report from a traffic management center",
+              "type": "boolean"
+            },
+            "event_status": {
+              "description": "**DEPRECATED**",
+              "$ref": "#/definitions/EventStatus"
+            },
             "start_date_accuracy": {
+              "description": "**DEPRECATED** Use is_start_date_verified instead",
               "$ref": "#/definitions/TimeVerification"
             },
             "end_date_accuracy": {
+              "description": "**DEPRECATED** Use is_end_date_verified instead",
               "$ref": "#/definitions/TimeVerification"
-            },
-            "event_status": {
-              "$ref": "#/definitions/EventStatus"
             }
           },
           "required": [
             "core_details",
             "start_date",
-            "end_date",
-            "start_date_accuracy",
-            "end_date_accuracy"
+            "end_date"
+          ],
+          "allOf": [
+            {
+              "anyOf": [
+                {
+                  "required": ["is_start_date_verified"]
+                },
+                {
+                  "required": ["start_date_accuracy"]
+                }
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": ["is_end_date_verified"]
+                },
+                {
+                  "required": ["end_date_accuracy"]
+                }
+              ]
+            }
           ]
         }
       ]

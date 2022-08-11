@@ -1,6 +1,8 @@
 # EventStatus Enumerated Type
 The status of a road event.
 
+*All properties that use the EventStatus enumerated type are deprecated as of WZDx v4.1 and along with those properties it will be removed from the specification in the next major release.*
+
 ## Values
 Value | Description
 --- | ---
