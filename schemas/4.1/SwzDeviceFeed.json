@@ -133,6 +133,10 @@
             "type": "string"
           }
         },
+        "is_moving": {
+          "type": "boolean",
+          "description": "A yes/no value indicating if the device is actively moving (not statically placed) as part of a mobile work zone operation."
+        },
         "road_event_ids": {
           "type": "array",
           "description": "A list of one or more IDs of a RoadEventFeatures that the device is associated with",
@@ -197,7 +201,7 @@
             },
             "is_moving": {
               "type": "boolean",
-              "description": "A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
+              "description": "**DEPRECATED** A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
             },
             "is_in_transport_position": {
               "type": "boolean",
