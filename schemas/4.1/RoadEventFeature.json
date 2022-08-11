@@ -395,8 +395,12 @@
         "event_type": {
           "$ref": "#/definitions/EventType"
         },
-        "relationship": {
-          "$ref": "#/definitions/Relationship"
+        "related_road_events": {
+          "description": "A list describing one or more road events which are related to this road event, such as a work zone project it is part of or another road event that occurs before or after it in sequence.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelatedRoadEvents"
+          }
         },
         "road_names": {
           "description": "A list of publicly known names of the road on which the event occurs. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
@@ -426,6 +430,10 @@
           "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when any information in the RoadEventFeature (including child objects) that the RoadEventCoreDetails applies to was most recently updated or confirmed as up to date",
           "type": "string",
           "format": "date-time"
+        },
+        "relationship": {
+          "description": "**DEPRECATED**",
+          "$ref": "#/definitions/Relationship"
         }
       },
       "required": [
@@ -445,9 +453,10 @@
         "other",
         "unknown"
       ]
-    },"Relationship": {
+    },
+    "Relationship": {
       "title": "Relationship",
-      "description": "Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
+      "description": "**DEPRECATED** Identifies both sequential and hierarchical relationships between road events and other entities. For example, a relationship can be used to link multiple road events to a common 'parent', such as a project or phase, or identify a sequence of road events",
       "type": "object",
       "properties": {
         "first": {
@@ -483,6 +492,22 @@
           }
         }
       }
+    },
+    "RelatedRoadEvents": {
+      "title": "RelatedRoadEvents",
+      "description": "Used to identify another road event that is related to a road event.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The type of road event being identifed, such as another sequence of related work zones, a detour, or next road event in sequence.",
+          "$ref": "#/definitions/RelatedRoadEventType"
+        },
+        "id": {
+          "description": "An identifier for the related road event by the type property.",
+          "type": "string"
+        }
+      },
+      "required": ["type", "id"]
     },
     "TypeOfWork": {
       "title": "Type of Work",
@@ -711,6 +736,20 @@
         "low",
         "medium",
         "high"
+      ]
+    },
+    "RelatedRoadEventType": {
+      "title": "Related Road Event Type Enumerated Type",
+      "description": "Describes a type of related road event, such as a work zone project, recurrent work zone, or detour-type road event.",
+      "enum": [
+        "first-in-sequence",
+        "next-in-sequence",
+        "first-occurrence",
+        "next-occurrence",
+        "related-work-zone",
+        "related-detour",
+        "planned-moving-operation",
+        "active-moving-operation"
       ]
     }
   }

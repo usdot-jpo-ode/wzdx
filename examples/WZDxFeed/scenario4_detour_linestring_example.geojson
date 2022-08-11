@@ -27,13 +27,12 @@
             "core_details": {
                "data_source_id": "1",
                "event_type": "work-zone",
-               "relationship": {
-                  "children": [
-                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1",
-                     "4d151e7d-11d8-4b99-a192-51e189da0de7",
-                     "9436226a-01b0-47ff-8a13-670e87549458"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-detour",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  }
+               ],
                "road_names": [
                   "I-35"
                ],
@@ -277,18 +276,16 @@
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
-                     "Project 67890"
-                  ],
-                  "first": [
-                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
-                  ],
-                  "next": [
-                     "4d151e7d-11d8-4b99-a192-51e189da0de7"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "next-road-event",
+                     "id": "4d151e7d-11d8-4b99-a192-51e189da0de7"
+                  }
+               ],
                "road_names": [
                   "F22"
                ],
@@ -362,18 +359,20 @@
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
-                     "Project 67890"
-                  ],
-                  "first": [
-                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
-                  ],
-                  "next": [
-                     "9436226a-01b0-47ff-8a13-670e87549458"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "first-road-event",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  },
+                  {
+                     "type": "next-road-event",
+                     "id": "9436226a-01b0-47ff-8a13-670e87549458"
+                  }
+               ],
                "road_names": [
                   "US 69"
                ],
@@ -743,15 +742,16 @@
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
-                     "Project 67890"
-                  ],
-                  "first": [
-                     "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "first-road-event",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  }
+               ],
                "road_names": [
                   "IA 210"
                ],
