@@ -1,6 +1,8 @@
 # VehicleImpact Enumerated Type
 The impact to vehicular lanes along a single road in a single direction.
 
+This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/VehicleImpact.md).
+
 ## Values
 Value | Description
 --- | ---
