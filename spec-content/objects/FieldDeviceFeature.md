@@ -15,4 +15,4 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`features` | [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md)
+`features` | [DeviceFeed](/spec-content/objects/DeviceFeed.md)
