@@ -532,9 +532,9 @@
         "right-arrow-flashing",
         "right-arrow-sequential",
         "right-arrow-static",
-        "right-chevrons-flashing",
-        "right-chevrons-sequential",
-        "right-chevrons-static",
+        "right-chevron-flashing",
+        "right-chevron-sequential",
+        "right-chevron-static",
         "unknown"
       ]
     },
