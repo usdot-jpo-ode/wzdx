@@ -1,6 +1,5 @@
 # WZDx Specification v4.1
-
-<TODO>
+Released August 2022
 
 # WZDx Specification v4.0
 Released December 2021
