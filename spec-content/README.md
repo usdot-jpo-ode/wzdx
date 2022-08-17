@@ -1,7 +1,7 @@
 # WZDx Specification Content
 The WZDx specification defines the content and structure of several GeoJSON documents, each intended to be distributed as a data feed. Each GeoJSON document (colloquially "feed") contains a single feed root object. WZDx v4.0 defines the following feed objects:
 
-- [WZDxFeed](/spec-content/objects/WZDxFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0).
+- [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was previously named `WZDxFeed`.
 - [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md): describes the location and details of restrictions on roadways.
 - [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
@@ -33,7 +33,7 @@ Object | Description
 [FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
 [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) | The root (highest-level) object of a **Road Restriction Feed** GeoJSON document.
 [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) | The root (highest-level) object of **Smart Work Zone Device Feed** GeoJSON document.
-[WZDxFeed](/spec-content/objects/WZDxFeed.md) | The root (highest-level) object of a **WZDx Feed** GeoJSON document.
+[WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) | The root (highest-level) object of a **WZDx Work Zone Feed** GeoJSON document.
 
 #### Road Events
 The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
