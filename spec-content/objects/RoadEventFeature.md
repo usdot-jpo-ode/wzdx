@@ -6,7 +6,7 @@ This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-j
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
-`id` | String | A unique identifier issued by the data feed provider to identify the WZDx road event. | Required | This is a GeoJSON property. 
+`id` | String | A unique identifier issued by the data feed provider to identify the WZDx road event. It is recommended that this identifier is a Universally Unique IDentifier (UUID) as defined in [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122) to guarantee uniqueness between feeds and over time. | Required | This is a GeoJSON property. 
 `type` | String; `"Feature"` | The GeoJSON object type. This MUST be the string `Feature`. | Required | This is a GeoJSON property.
 `properties` | One of: [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | The specific details of the road event. | Required | This is a GeoJSON property.
 `geometry` | GeoJSON [Geometry](https://tools.ietf.org/html/rfc7946#section-3.1) object with `type` of [LineString](https://tools.ietf.org/html/rfc7946#section-3.1.4) or [MultiPoint](https://tools.ietf.org/html/rfc7946#section-3.1.3) | The geometry of the road event. The Geometry object's `type` property MUST be [LineString](https://tools.ietf.org/html/rfc7946#section-3.1.4) or [MultiPoint](https://tools.ietf.org/html/rfc7946#section-3.1.3). `LineString` allows specifying the entire road event path and should be preferred. `MultiPoint` should be used when only the start and end coordinates are known. | Required | This is a GeoJSON property.
@@ -15,4 +15,4 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`features` | [WZDx Feed](/spec-content/objects/WZDxFeed.md)
+`features` | [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md)

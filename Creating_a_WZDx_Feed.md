@@ -18,15 +18,15 @@ GeoJSON is the file format of choice because:
 ## Feed Content
 WZDx defines the content and structure of several data feeds. Each feed is described by a single root object with many child objects. The output of a WZDx data feed is a GeoJSON file containing the feed object. WZDx defines the following feed objects:
 
-- [WZDxFeed Object](/spec-content/objects/WZDxFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0).
-- [SwzDeviceFeed Object](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
+- [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
+- [DeviceFeed Object](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
 
 ## Business Rules
 The following business rules help assure a standardized and interpretable use of the WZDx specification. The specification describes the required structure and data fields to describe a work zone, whereas business rules are additional requirements for using the WZDx specification in a standard manner. Note that business rules are distinct from best practices in that the latter are suggestions and business rules are requirements.
 
-### WZDxFeed (Work Zones) Business Rules
+### Work Zone Feed Business Rules
 1. Each direction of travel must be represented by a separate road event. For example, if there is a work zone on a roadway with two lanes, each in an opposite travel direction (↑↓), each direction must be a separate road event.
 2. Construction which requires alternating traffic flows within a lane must be represented with at least one road event in each direction. Similarly, roadways that during normal operation have an alternating flow of traffic direction based on time of day must be represented by at least one road event in each direction.
 3. The preferred [GeoJSON Geometry](https://tools.ietf.org/html/rfc7946#page-7) for a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) is `LineString`, which allows indicating the full path of the road event. In cases where only the beginning and ending coordinates are available, the `MultiPoint` can be used.  
@@ -34,14 +34,18 @@ The following business rules help assure a standardized and interpretable use of
 5. A detour must be represented with a [RoadEvent](/spec-content/objects/RoadEvent.md) of type (i.e. with `event_type` of) `detour` and its containing [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) should have a `geometry` of `type` `LineString` to represent the full detour route. The detour road event should be connected to the work zone road event using the `relationship` property on the detour road event.
 6. If the `lanes` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) is provided, it must include one entry for every lane in the road event. Providing lane information for only some of the lanes in a road event is not allowed.
 
+## Implementation Guidance
+
+- Feed producers should include a completed road event with a verified start and end date in a public feed for a at least an hour or one feed refresh cycle (whichever is longer) to help inform consumers that the work zone has officially ended.
+
 ## Data Validation
 
 ### JSON Schemas
 The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later) within the [schemas](/schemas) directory. The repository contains schemas for the following feeds:
 
 #### Current Version (4.1)
-- [WZDx v4.1 WZDxFeed](/schemas/4.1/WZDxFeed.json)
-- [WZDx v4.1 SwzDeviceFeed](/schemas/4.1/SwzDeviceFeed.json)
+- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
 
 #### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
