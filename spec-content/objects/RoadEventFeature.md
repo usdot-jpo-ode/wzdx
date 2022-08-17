@@ -13,5 +13,5 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | ---
-`features` | [WZDx Feed](/spec-content/objects/WZDxFeed.md)
+`features` | [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md)
 `features` | [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md)

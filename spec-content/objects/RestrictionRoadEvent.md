@@ -3,7 +3,7 @@ The `RestrictionRoadEvent` object describes one or more restrictions on a sectio
 
 The `RestrictionRoadEvent` is a type of road event; it has a `core_details` property which contains the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and exists within a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
 
-For representing restrictions due to road work, see the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [WZDxFeed](/spec-content/objects/WZDxFeed.md).
+For representing restrictions due to road work, see the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md).
 
 ## Properties
 Name | Type | Description | Conformance | Notes
