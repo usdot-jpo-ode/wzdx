@@ -13,4 +13,4 @@ Name | Type | Description | Conformance | Notes
 `road_event_feed_info` (DEPRECATED) | [FeedInfo](/spec-content/objects/FeedInfo.md) | *This property is deprecated and will be removed in a future release, use the `feed_info` property instead* — Information about the WZDx Work Zone Feed. | Conditional; required if `feed_info` is not provided. | This is a WZDx-specific [foreign member](https://tools.ietf.org/html/rfc7946#section-6.1) and is not part of the GeoJSON specification.
 
 ## Used By
-WZDx GeoJSON document (one `WorkZoneFeed` object per file).
+WZDx Work Zone Feed GeoJSON document (one `WorkZoneFeed` object per file).

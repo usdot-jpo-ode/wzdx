@@ -45,9 +45,9 @@ The following business rules help assure a standardized and interpretable use of
 The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later) within the [schemas](/schemas) directory. The repository contains schemas for the following feeds:
 
 #### Current Version (4.1)
-- [WZDx v4.1 WorkZoneFeed](/schemas/4.1/WorkZoneFeed.json)
-- [WZDx v4.1 DeviceFeed](/schemas/4.1/DeviceFeed.json)
-- [WZDx v4.1 RoadRestrictionFeed](/schemas/4.1/RoadRestrictionFeed.json)
+- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
+- [WZDx v4.1 Road Restriction Feed](/schemas/4.1/RoadRestrictionFeed.json)
 
 #### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
