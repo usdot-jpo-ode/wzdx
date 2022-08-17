@@ -20,7 +20,7 @@ WZDx defines the content and structure of several data feeds. Each feed is descr
 
 - [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
 - [RoadRestrictionFeed Object](/spec-content/objects/RoadRestrictionFeed.md): describes the location and details of restrictions on roadways.
-- [SwzDeviceFeed Object](/spec-content/objects/SwzDeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
+- [DeviceFeed Object](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
 
@@ -46,7 +46,7 @@ The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later)
 
 #### Current Version (4.1)
 - [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
-- [WZDx v4.1 Swz Device Feed](/schemas/4.1/SwzDeviceFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
 - [WZDx v4.1 Road Restriction Feed](/schemas/4.1/RoadRestrictionFeed.json)
 
 #### Previous Versions

@@ -5,7 +5,7 @@ The `FieldDeviceCoreDetails` object represents the core details—both configura
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `device_type` | [FieldDeviceType](/spec-content/enumerated-types/FieldDeviceType.md) | The type of field device. | Required |
-`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | The value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) GeoJSON document.
+`data_source_id` | String | Identifies the data source from which the field device data originates. | Required | The value must match to the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) included within the same [DeviceFeed](/spec-content/objects/DeviceFeed.md) GeoJSON document.
 `device_status` | [FieldDeviceStatus](/spec-content/enumerated-types/FieldDeviceStatus.md) | The operational status of the field device. The value of this property indicates if the device is ok or in an error or warning state. | Required |
 `update_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC date and time when any information in the [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) (including child objects) that the FieldDeviceCoreDetails applies to was most recently updated or confirmed as up to date.
  | Required |
