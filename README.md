@@ -86,7 +86,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ### WZDx v4.1 (August 2022)
 
-<TODO>
+#### Refactoring
 
 ## Getting Started
 
