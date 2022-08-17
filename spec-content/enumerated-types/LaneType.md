@@ -1,6 +1,8 @@
 # LaneType Enumerated Type
 A description of the static properties of a section of the roadway, intended to reflect information about its function that is not covered by its status (see [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)).
 
+This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/LaneType.md).
+
 ## Values
 Value | Description
 --- | ---

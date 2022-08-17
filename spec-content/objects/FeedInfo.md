@@ -16,7 +16,6 @@ Name | Type | Description | Conformance | Notes
 ## Used By
 Property | Object
 --- | --- 
-`feed_info` | [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md)
 `feed_info` | [DeviceFeed](/spec-content/objects/DeviceFeed.md)
 `feed_info` | [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md)
 `road_event_feed_info` | [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md)

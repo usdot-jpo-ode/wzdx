@@ -2,7 +2,6 @@
 The WZDx specification defines the content and structure of several GeoJSON documents, each intended to be distributed as a data feed. Each GeoJSON document (colloquially "feed") contains a single feed root object. WZDx v4.1 defines the following feed objects:
 
 - [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was previously named `WZDxFeed`.
-- [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md): describes the location and details of restrictions on roadways.
 - [DeviceFeed](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 Each feed object contains many layers of child objects. Together all the objects define the WZDx feed. All WZDx objects are located in the [objects](/spec-content/objects) subdirectory and listed in the [Objects](#objects) section of this document.
@@ -31,10 +30,8 @@ Object | Description
 --- | ---
 [FeedDataSource](/spec-content/objects/FeedDataSource.md) | Information about a specific data source used to build a work zone data feed.
 [FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
-[RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) | The root (highest-level) object of a **Road Restriction Feed** GeoJSON document.
 [DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of **WZDx Device Feed** GeoJSON document.
 [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) | The root (highest-level) object of a **WZDx Work Zone Feed** GeoJSON document.
-
 #### Road Events
 The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
 
@@ -44,7 +41,6 @@ Object | Description
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) | Identification a road event that is related to the road event that the RelatedRoadEvent object occurs on.
 [Restriction](/spec-content/objects/Restriction.md) | A restriction on a road event or lane, including type and value.
-[RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) | Describes a section of roadway and the limitations of how that section can be used.
 [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) | The core details of an event occurring on a roadway (i.e. a road event) that is shared by all types of road events.
 [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) | The GeoJSON `Feature` container object for a WZDx road event.
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.

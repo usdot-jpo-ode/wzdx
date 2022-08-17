@@ -1,5 +1,5 @@
 # WZDx Example Feeds
-This directory contains example GeoJSON documents from WZDx data feeds. The examples cover a range of common scenarios. There are examples for the Work Zone Feed, Road Restriction Feed, and Device Feed, contained within the respective subdirectories.
+This directory contains example GeoJSON documents from WZDx data feeds. The examples cover a range of common scenarios. There are examples for the Work Zone Feed and Device Feed contained within the respective subdirectories.
 
 ## Work Zone Feed Examples
 The following WZDx Work Zone Feed examples represent a variety of common scenarios when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. All example scenarios are provided for the `LineString` geometry type as well as one `MultiPoint` geometry type for scenario 1.
@@ -53,13 +53,3 @@ The following example WZDx Device Feeds are provided:
 
 1. [Arrow Board "ok" Example](/examples/DeviceFeed/arrow_board_ok_example.geojson): A simple feed that includes a single arrow board with an `ok` status and several optional properties provided.
 2. [Camera "error" Example](/examples/DeviceFeed/camera_error_example.geojson): A simple feed that includes a single camera with an `error` status, no image data, associated `status_messages`, and a few optional properties provided.
-
-## Road Restriction Feed Examples
-The following example WZDx Road Restriction Feeds are provided:
-
-### 1. Bridge Height Restriction
-The [Bridge Height Restriction Example](/examples/RoadRestrictionFeed/bridge_height_restriction_linestring_example.geojson) shows the use of a [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md) to define a bridge clearance on a roadway.
-
-- Defines three bridge height restrictions.
-- Two restrictions (`id`s: `Bridge2`, `Bridge3`) are defined using only the required core details and basic event-level information.
-- One restriction (`id`: `Bridge1`) also includes lane-level details with additional height restrictions values for individual lanes.

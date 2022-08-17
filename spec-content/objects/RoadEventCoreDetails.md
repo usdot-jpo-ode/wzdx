@@ -1,5 +1,7 @@
 # RoadEventCoreDetails Object
-The `RoadEventCoreDetails` object represents the core details of an event occurring on a roadway (i.e. a "road event") that is shared by all types of road events, such as work zones (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)), detours (see [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)), and road restrictions (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)). The `RoadEventCoreDetails` cannot exist directly in a data feed and on its own does not represent a road event. It is used as the value of `core_details` property on every specific type of road event, each of which is represented by its own object.
+The `RoadEventCoreDetails` object represents the core details of an event occurring on a roadway (i.e. a "road event") that is shared by all types of road events, such as work zones (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) and detours (see [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)). The `RoadEventCoreDetails` cannot exist directly in a data feed and on its own does not represent a road event. It is used as the value of `core_details` property on every specific type of road event, each of which is represented by its own object.
+
+This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/objects/RoadEventCoreDetails.md). 
 
 ## Properties
 Name | Type | Description | Conformance | Notes
@@ -20,7 +22,6 @@ Property | Object
 --- | ---
 `core_details` | [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
 `core_details` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
-`core_details` | [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)
 
 ## Important Notes
 The value of the `RoadEventCoreDetails`'s `data_source_id` property MUST match the value of the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) that is included in the same WZDx GeoJSON document.

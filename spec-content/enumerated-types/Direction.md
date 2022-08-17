@@ -1,6 +1,8 @@
 # Direction 
 The direction of a roadway. The values are based on the standard naming for US roadways and indicates the direction the traffic flow regardless of the real heading angle of the roadway.
 
+This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/Direction.md).
+
 ## Values
 Value | Description
 --- | ---
