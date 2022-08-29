@@ -1,6 +1,53 @@
 # WZDx Specification v4.1
 Released August 2022
 
+Changes for the v4.1 release involve new features and cleaning up and redesigning existing functionality without breaking backwards compatibility. Thus, several enumerated type values and object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
+
+A noteworthy documentation change introduced along with the v4.1 specification changes are that the two feeds that WZDx defines are renamed for clarity:
+
+- Rename the "SwzDeviceFeed" to "DeviceFeed" or "WZDx Device Feed"
+- Rename the "WZDxFeed" to "WorkZoneFeed" or "WZDx Work Zone Feed"
+
+## New Functionality
+- Add `is_moving` boolean property to the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
+- Add `road_direction` property to the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) to allow providing the direction of the roadway that a field device is associated with.
+- Recommend using Universally Unique Identifiers (UUID) for the `id` property of the [RoadEventFeature](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventFeature.md), [FieldDeviceFeature](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceFeature.md), and [FeedDataSource](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FeedDataSource.md), noting that a UUID may be required in the next major release.
+- Add `name` property to [RoadEvenCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
+- Add the following values to the [MarkedLocationType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/MarkedLocationType.md) enumerated type:
+    - `personal-device`
+    - `ramp-closure`
+    - `road-closure`
+    - `delineator`
+- Add the following values to the [Direction](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/Direction.md) enumerated type:
+    - `undefined`
+    - `unknown`
+- Add `no-passing` to the [RestrictionType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/RestrictionType.md) enumerated type.
+- Add a `sign_text` property to the [FlashingBeacon](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FlashingBeacon.md) object.
+- Add a [TrafficSignal](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSignal.md) object to allow represent temporary traffic signals in a WZDx Device Feed.
+- Add `two-way-center-turn-lane` to the [LaneType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/LaneType.md) enumerated type to replace the existing `center-left-turn-lane` with a more generic value.
+
+## Refactoring
+- Deprecate `is_moving` property on the [ArrowBoard](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/ArrowBoard.md); use the new `is_moving` on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) instead.
+- Change the conformance of the `road_event_id` property on the [TrafficSensorLaneData](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensorLaneData.md) from "Required" to "Optional" to allow providing lane-level data without a defined road event.
+- Deprecate the `road_event_feed_info` property on the [WorkZoneFeed] object; use the new `feed_info` property instead.
+- Add `is_start_position_verified` and `is_end_position_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md)(https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end positions are verified and clarify what verified means; these properties replace `beginning_accuracy` and `ending_accuracy`.
+- Deprecate the `beginning_accuracy` and `ending_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_position_verified` and `is_end_position_verified` properties instead.
+- Add `is_start_date_verified` and `is_end_date_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end date and times are verified and clarify what verified means; these properties replace `start_date_accuracy` and `end_date_accuracy`.
+- Deprecate the `start_date_accuracy` and `end_date_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_date_verified` and `is_end_date_verified` properties instead.
+- Deprecate the `event_status` property on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object.
+- Change the conformance of the `road_names` property on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) from "Required" to "Optional".
+- Deprecate the `traffic-signal` value in the [MarkedLocationType] enumerated type; use the new [TrafficSignal] object instead.
+- Deprecate the `center-left-turn-lane` value in the [LaneType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/LaneType.md) enumerated type; use the new `two-way-center-turn-lane` instead.
+- Add a `related_road_events` property (and new supporting object [RelatedRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RelatedRoadEvent.md) and enumerated type [RelatedRoadEventType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/RelatedRoadEventType.md)) to the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events; this replaces the [Relationship] object/concept.
+- Deprecate the `relationship` property on the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md); use the new `related_road_events` property instead.
+
+## Cleanup
+- Change the type of the `average_speed_kph`, `volume_vph`, and `occupancy_percent` properties on the [TrafficSensor](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensor.md) and [TrafficSensorLaneData](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensorLaneData.md) object from "Integer" to "Number"
+- Change the allowed minimum value for `average_speed_kph` on [TrafficSensorLaneData](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensorLaneData.md) from `1` to `0`.
+- Add a `feed_info` property to the [WorkZoneFeed](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneFeed.md) object to replace the `road_event_feed_info`.
+- Expand the description of the `update_date` property on the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) and [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) to clarify what the value represents.
+- Remove the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadRestrictionFeed.md) (it moved to [usdot-jpo-ode/TDx](https://github.com/usdot-jpo-ode/TDx)).
+
 # WZDx Specification v4.0
 Released December 2021
 
