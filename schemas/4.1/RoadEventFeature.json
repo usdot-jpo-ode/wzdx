@@ -552,11 +552,6 @@
       "description": "The type of WZDx road event",
       "enum": ["work-zone", "detour", "restriction"]
     },
-    "Direction": {
-      "title": "Direction Enumerated Type",
-      "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound", "undefined", "unknown"]
-    },
     "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
       "description": "An indication of how a geographical coordinate was defined",

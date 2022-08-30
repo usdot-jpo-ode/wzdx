@@ -3,5 +3,5 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Direction Enumerated Type",
   "description": "The direction of a road based on standard naming for US roads; indicates the direction the traffic flow not the real heading angle.",
-  "enum": ["northbound", "eastbound", "southbound", "westbound"]
+  "enum": ["northbound", "eastbound", "southbound", "westbound", "undefined", "unknown"]
 }
