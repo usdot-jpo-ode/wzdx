@@ -90,7 +90,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 - Add `is_moving` boolean property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
 - Add `road_direction` property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow providing the direction of the roadway that a field device is associated with.
 - Recommend using Universally Unique Identifiers (UUID) for the `id` property of the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md), [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md), and [FeedDataSource](/spec-content/objects/FeedDataSource.md), noting that a UUID may be required in the next major release.
-- Add `name` property to [RoadEvenCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
+- Add `name` property to [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
 - Add the following values to the [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) enumerated type:
     - `personal-device`
     - `ramp-closure`

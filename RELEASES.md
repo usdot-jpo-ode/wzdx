@@ -12,7 +12,7 @@ A noteworthy documentation change introduced along with the v4.1 specification c
 - Add `is_moving` boolean property to the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
 - Add `road_direction` property to the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) to allow providing the direction of the roadway that a field device is associated with.
 - Recommend using Universally Unique Identifiers (UUID) for the `id` property of the [RoadEventFeature](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventFeature.md), [FieldDeviceFeature](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceFeature.md), and [FeedDataSource](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FeedDataSource.md), noting that a UUID may be required in the next major release.
-- Add `name` property to [RoadEvenCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
+- Add `name` property to [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
 - Add the following values to the [MarkedLocationType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/MarkedLocationType.md) enumerated type:
     - `personal-device`
     - `ramp-closure`
