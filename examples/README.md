@@ -11,7 +11,7 @@ Scenario 1 ([LineString Example](/examples/WorkZoneFeed/scenario1_simple_linestr
 
 - First work zone is single direction, single event, with no lane-level information (ID: `71234`).
 - Second work zone is single direction, single event, with detailed lane information (ID: `WDM-58493-NB`).
-- Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_events` property. The [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-road-event` and `next-road-event` are used to indiciate the order of the road events. (IDs: `65773-1`, `65773-2`, `65773-3`).
+- Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_events` property. The [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-in-sequence` and `next-in-sequence` are used to indiciate the order of the road events. (IDs: `65773-1`, `65773-2`, `65773-3`).
 
 ### Scenario 2 - Lane Shift (simple scenario)
 The [Scenario 2 Example](/examples/WorkZoneFeed/scenario2_laneshift_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.
