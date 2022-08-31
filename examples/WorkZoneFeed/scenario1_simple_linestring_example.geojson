@@ -407,7 +407,7 @@
                "event_type": "work-zone",
                "related_road_events": [
                   {
-                     "type": "next-road-event",
+                     "type": "next-in-sequence",
                      "id": "8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f"
                   }
                ],
@@ -508,11 +508,11 @@
                "event_type": "work-zone",
                "related_road_events": [
                   {
-                     "type": "first-road-event",
+                     "type": "first-in-sequence",
                      "id": "6f57aded-7291-462e-9892-607b2b7d116c"
                   },
                   {
-                     "type": "next-road-event",
+                     "type": "next-in-sequence",
                      "id": "e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7"
                   }
                ],
@@ -632,7 +632,7 @@
                "event_type": "work-zone",
                "related_road_events": [
                   {
-                     "type": "first-road-event",
+                     "type": "first-in-sequence",
                      "id": "6f57aded-7291-462e-9892-607b2b7d116c"
                   }
                ],
