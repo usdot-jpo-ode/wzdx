@@ -42,15 +42,18 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 
 ### Work Zone Feed
 #### Feed information
-- Replace the `road_event_feed_info` property to the [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) object with a property called `feed_info`. The content associated with the property remains the same (a [FeedInfo](/spec-content/objects/FeedInfo.md) object)
+- Replace the `road_event_feed_info` property on the [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) object with a property named `feed_info`. The content of the property remains the same (a [FeedInfo](/spec-content/objects/FeedInfo.md) object).
 
 |Situation | WZDx v4.0 | Recommended WZDx v4.1 |
 |--|--|--|
 | "State DOT" is providing a WZDx feed| <pre>{<br>  "road_event_feed_info": { <br>    "publisher": "State DOT",<br>... </pre> | <pre>{<br>  "feed_info": { <br>    "publisher": "State DOT",<br>... </pre> | 
 
+#### Identifers
+- Use a Universally Unique Identifer (UUID) for the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) `id` property. If semantic IDs were being used, use the new `name` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to provide a human-friendly name.
+- Use a UUID for the [FeedDataSource](/spec-content/objects/FeedDataSource.md) `id` property.
+
 #### Position verification
-- Use the new `is_start_position_verified` and `is_end_position_verified` boolean properties to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) instead of `beginning_accuracy` and `ending_accuracy` to indiciate if the start and end positions are verified. 
-- The content associated with the new properties are `true` or `false` values, with true corresponding to a `verified` value and `false` corresponding to a value of `estimated`. 
+- Use the new `is_start_position_verified` and `is_end_position_verified` boolean properties on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) instead of `beginning_accuracy` and `ending_accuracy` to indiciate if the start and end positions are verified. `true` corresponds to "verified" and `false` corresponds to "estimated". 
 
 |Situation| WZDx v4.0 | Recommended WZDx v4.1 |
 |--|--|--|
@@ -58,9 +61,8 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 |Both points are verified| <pre>...<br>"beginning_accuracy": "verified"<br>"ending_accuracy": "verified"<br>...</pre> | <pre>...<br>"is_start_position_verified": true<br>"is_end_position_verified": true<br>...</pre> | 
 
 #### Start date, end date, and event status
-- Use the new `is_start_date_verified` and `is_end_date_verified` boolean properties to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) instead of `start_date_accuracy` and `end_date_accuracy` properties to indiciate if the start and end date and times are verified.
-- The content associated with the new properties are `true` or `false` values, with `true` corresponding to `verified` and `false` corresponding `estimated`.
-- Do not use the `event_status` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object. Data consumers should determine whether an event is active based on the start and end date-times and whether those times are reported as verified.
+- Use the new `is_start_date_verified` and `is_end_date_verified` boolean properties on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) instead of the `start_date_accuracy` and `end_date_accuracy` properties to indiciate if the start and end date and times are verified. `true` corresponds to "verified" and `false` corresponds to "estimated".
+- Do not use the `event_status` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object. Data consumers should determine whether an event is active based on the road event `start_date`, `end_date`, `is_start_date_verified` and `is_end_date_verified`.
 
 |Situation| WZDx v4.0 | Recommended WZDx v4.1 |
 |--|--|--|
@@ -75,11 +77,11 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 |Center two-way turn lane is closed. | <pre>...<br>"order": 1<br>"type": "center-left-turn-lane"<br>"status": "closed"<br>... </pre> | <pre>...<br>"order": 1<br>"type": "two-way-center-turn-lane"<br>"status": "closed"<br>... </pre> | 
 
 #### Relationships
-- Use new `related_road_events` property to the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events instead of the [Relationship] object/concept.
-- Instead of supplying a list of road event IDs associated with each type of relationship (first, next, parent, child), use a [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) object for each related road event and use enumerated type [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) to indicate the type of relationship.
-- Instead of using the `parents` array to identify a project that a road event is a part of, use specific relationships like `related-detour` and `related-work-zone` to identify each related event on roads in the nearby area.
-- Instead of using the `next` and `first` array to indicate road events the next road event on the roadway, use the `next-in-sequence` type of related road event.
-- Instead of using the `next` and `first` arrays to indicate a recurring work zone, use the `first-occurrence` and `next-occurrence` types of relationship
+- Use the new `related_road_events` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events instead of the `relationship` property.
+- Instead of supplying a list of road event IDs associated with each type of relationship (first, next, parent, child), use a [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) object for each related road event and use the [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) to indicate the type of relationship.
+- Instead of using the `parents` array to identify a project that a road event is a part of, use specific RelatedRoadEventType like `related-detour` and `related-work-zone` to identify each related event on roads in the nearby area.
+- Instead of using the `next` and `first` array to indicate road events the next road event on the roadway, use the `next-in-sequence` and `first-in-sequence` RelatedRoadEventType.
+- Instead of using the `next` and `first` arrays to indicate a recurring work zone, use the `first-occurrence` and `next-occurrence` RelatedRoadEventType.
 
 |Situation| WZDx v4.0 | Recommended WZDx v4.1 |
 |--|--|--|
@@ -87,13 +89,12 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 | The work zone road event has an associated detour (`67890-detour`). | <pre>...<br>"relationship": {<br>  "children": ["67890-detour"]<br>}<br>...</pre> | <pre>...<br>"related_road_events": [<br>  {<br>    "type": "related-detour",<br>    "id": "67890-detour"<br>  }<br>]<br>...</pre> |
 | The work zone road event (`PLK0102016-Day2`)is part of a recurring series. | <pre>...<br>"relationship": {<br>  "parents": ["Project PLK01012016"]<br>}<br>...</pre> | <pre>...<br>"related_road_events": [<br>  {<br>    "type": "first-occurrence",<br>    "id": "PLK01012016-Day1"<br>  }<br>  {<br>    "type": "next-occurrence",<br>    "id": "PLK01012016-Day3"<br>  }<br>]<br>...</pre> |
 
-
 ### Device Feed
-#### Devices that are moving
-- Deprecate `is_moving` property on the [ArrowBoard](/spec-content/objects/ArrowBoard.md); use the new `is_moving` on the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) instead.
+#### Arrow boards that are moving
+- Use the new `is_moving` on the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) instead of the `is_moving` property on the [ArrowBoard](/spec-content/objects/ArrowBoard.md).
 
 #### Traffic Signals
-- Deprecate the `traffic-signal` value in the [MarkedLocationType] enumerated type; use the new [TrafficSignal] object instead.
+- To represent a temporary traffic signal, use the new [TrafficSignal](/spec-content/objects/TrafficSignal.md) object instead of a [LocationMarker](/spec-content/objects/LocationMarker.md) that marks a `temporary-traffic-signal` (see [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md).
 
 ## Data Security Best Practices
 This is a working list of best practices for standing up a WZDx data feed assembled by the WZDx Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
