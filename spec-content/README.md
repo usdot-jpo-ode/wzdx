@@ -56,9 +56,9 @@ Object | Description
 [ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
 [Camera](/spec-content/objects/Camera.md) | A camera device deployed in the field, capable of capturing still images.
 [DynamicMessagesSign](/spec-content/objects/DynamicMessageSign.md) | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
-[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
-[FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices.
+[FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
+[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
