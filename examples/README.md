@@ -22,7 +22,7 @@ The [Scenario 2 Example](/examples/WorkZoneFeed/scenario2_laneshift_linestring_e
 The [Scenario 3 Example](/examples/WorkZoneFeed/scenario3_shoulder_bidirectional_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which closes the shoulder in a single direction on an undivided roadway.
 
 - Single work zone represented by two road events (IDs: `121388-EB`, `121388-WB`), one in direction of shoulder closure and second in opposite direction.
-- Demonstrates the use of `restrictions` for the event as well as individual lanes
+- Demonstrates the use of `restrictions` for the event as well as individual lanes.
 - Demonstrates the use of `related_road_events` to show the road events in each direction are related to each other but not in sequence using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) value of `related-work-zone`
 
 ### Scenario 4 - Road Closure with Detour on Arterial
