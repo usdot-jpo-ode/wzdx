@@ -131,7 +131,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 The WZDWG welcomes feedback and comments on the WZDx v4.1 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf).
-2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
+2. Learn about using GitHub as a [tool for collaboration and support](#contributions).
 3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
 4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
 5. Consider using the [IBI.WZDx](https://github.com/ibi-group/IBI.WZDx) .NET class library to facilitate development of a feed.
