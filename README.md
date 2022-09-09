@@ -134,8 +134,9 @@ The WZDWG welcomes feedback and comments on the WZDx v4.1 Specification. Comment
 2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
 3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
 4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
-5. Validate your feed output using the respective [JSON Schema](#json-schemas).
-6. Publish your feed and tell us about it via avdx@dot.gov.
+5. Consider using the [IBI.WZDx](https://github.com/ibi-group/IBI.WZDx) .NET class library to facilitate development of a feed.
+6. Validate your feed output using the respective [JSON Schema](#json-schemas).
+7. Publish your feed and tell us about it via avdx@dot.gov.
 
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
