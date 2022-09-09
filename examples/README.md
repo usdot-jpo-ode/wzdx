@@ -4,49 +4,71 @@ This directory contains example GeoJSON documents from WZDx data feeds. The exam
 ## Work Zone Feed Examples
 The following WZDx Work Zone Feed examples represent a variety of common scenarios when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. All example scenarios are provided for the `LineString` geometry type as well as one `MultiPoint` geometry type for scenario 1.
 
+Note:  All annotated and original images used in the example scenarios below are located in the [images folder](/images/) which can be used for future updates.
+
 Below is a summary of each of the example WZDx feeds and detailed differences for each of the road events:
 
 ### Scenario 1  - Simple Work Zone
-Scenario 1 ([LineString Example](/examples/WorkZoneFeed/scenario1_simple_linestring_example.geojson) or [MultiPoint Example](/examples/WorkZoneFeed/scenario1_simple_multipoint_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) with a single lane closed on a multi-lane facility.
+Scenario 1 ([LineString Example](/examples/WZDxFeed/scenario1_simple_linestring_example.geojson) or [MultiPoint Example](/examples/WZDxFeed/scenario1_simple_multipoint_example.geojson)) is based on the annotated image below with a single lane closed on a multi-lane facility. The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
 
-- First work zone is single direction, single event, with no lane-level information (ID: `71234`).
-- Second work zone is single direction, single event, with detailed lane information (ID: `WDM-58493-NB`).
-- Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_events` property. The [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-road-event` and `next-road-event` are used to indiciate the order of the road events. (IDs: `65773-1`, `65773-2`, `65773-3`).
+![simple_work_zone](/images/channel_device_method_simple_annotated.png)
+
+Below are notes for the Scenario 1 [LineString Example](/examples/WZDxFeed/scenario1_simple_linestring_example.geojson) and [MultiPoint Example](/examples/WZDxFeed/scenario1_simple_multipoint_example.geojson):
+- First work zone is single direction, single event, with no lane-level information (ID: `af2e3f51-611f-4ce0-9282-2f28ca68e62f`).
+- Second work zone is single direction, single event, with detailed lane information (ID: `edf2162b-1f5d-4ddd-a731-78fb81a22e6a`).
+- Third work zone is single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_event` object, with [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) of `next-road-event` and `first-road-event` used to indiciate the order of the road events. (IDs: `6f57aded-7291-462e-9892-607b2b7d116c`, `8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f`, `e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7`).
 
 ### Scenario 2 - Lane Shift (simple scenario)
-The [Scenario 2 Example](/examples/WorkZoneFeed/scenario2_laneshift_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.
+The [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson) is based on the annotated image below which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
 
-- Single work zone with lane shift in the detailed lane information showing use of verified location and start time. ("id": `7733`).
+![shift_work_zone](/images/lane_shift_example_annotated.png)
+
+- Single work zone with lane shift in the detailed lane information showing use of verified location and start time. ("id": `85912735-7a36-45f5-b644-41b0203ae400`).
 
 ### Scenario 3 - Shoulder Closure (bidirectional work zone)
-The [Scenario 3 Example](/examples/WorkZoneFeed/scenario3_shoulder_bidirectional_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which closes the shoulder in a single direction on an undivided roadway.
+The [Scenario 3 Example](/examples/WZDxFeed/scenario3_shoulder_bidirectional_linestring_example.geojson) is based on the annotated image below which closes the shoulder in a single direction on an undivided roadway. The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
 
-- Single work zone represented by two road events (IDs: `121388-EB`, `121388-WB`), one in direction of shoulder closure and second in opposite direction.
+![shoulder_work_zone](/images/shoulder_closure_example_annotated.png)
+
+- Single work zone represented by two road events (IDs: `a2183b6b-befa-48ac-b6b5-3ee5e8a806e9`, `62c5fa4b-11ee-45e6-a740-bc32d3b846e9`), one in direction of shoulder closure and second in opposite direction.
 - Demonstrates the use of `restrictions` for the event as well as individual lanes
 - Demonstrates the use of `related_road_events` to show the road events in each direction are related to each other but not in sequence using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) value of `related-work-zone`
 
 ### Scenario 4 - Road Closure with Detour on Arterial
-The [Scenario 4 Example](/examples/WorkZoneFeed/scenario4_detour_linestring_example.geojson) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) which has an associated detour for a road closure.  The example is slightly modified for use on a multi-lane facility.
+The [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.geojson) is based on the annotated image below which has an associated detour for a road closure.  The example is slightly modified for use on a multi-lane facility.
 
-- Single work zone in one direction represented by a single road event (ID: `67890`), with a detour.
-- Showing use of `related_road_events` to connect the detour road events (IDs: `67890-detour1`, `67890-detour2`, `67890-detour3`) to the work zone using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
+![detour_work_zone](/images/work_zone_detour.png)
+
+- Single work zone in one direction represented by a single road event (ID: `a15f7570-b7e6-4367-8ad9-3a462eea65dd`), with a detour.
+- Showing use of `related_road_events` to connect the detour road events (IDs: `cf1092ba-3b8d-4e91-81ef-daa4a98662e1`, `4d151e7d-11d8-4b99-a192-51e189da0de7`, `9436226a-01b0-47ff-8a13-670e87549458`) to the work zone using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
 - Also uses `related_road_events` to represent the sequence of the three detour road events.
 - Shows the use of both the work zone and detour road event objects in the same feed.
 
 ### Scenario 5 - Recurring Work Zone
-The [Scenario 5 Example](/examples/WorkZoneFeed/scenario5_recurring_linestring_example.geojson)) is based on the same numbered annotated work zones in [Discussion Topic 131](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131) assuming that it is just a single lane closure but is recurring over multiple days.
+The [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson) is based on a single lane closure but is recurring over multiple days. Below are the notes about the example:
+
 
 - Simple work zone but with a recurring component.
-- Five road events: an `active` (day 1, ID: `PLK01012016-Day1`) event and four additional events (IDs: `PLK01012016-Day2`, `PLK01012016-Day3`, `PLK01012016-Day4`, `PLK01012016-Day5`) for later dates with a pending status.
-- The `active` work zone event demonstrates value of verified location and time.
+- Four road events: assuming that the first day is currently an active (day 1, ID: `a2100c5b-58b9-4593-992d-0795bafe3d8d`) event and three additional events (IDs: `d63ab07b-98e8-41bd-b4dd-557727320056`, `ff3f888f-7e11-4a5b-8c04-3182a459a756`, `b04c1df4-f9d0-4a63-995d-38bfd83931e9`) for later dates with a pending status.
+- The active work zone event demonstrates value of verified location and time.
 - The `related_road_events` property is used to show all road events are related and the order of events using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-occurrence` and `next-occurrence`
 
 ### Local Access Only (bidirectional work zone)
 The [local access only example](/examples/WorkZoneFeed/local_access_only_bidirectional_linestring_example.geojson) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
-- Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `WZ389-NB`, `WZ389-SB`), one for each direction.
+- Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `de3de57b-33fb-40e5-a6f2-a17828f82fb9`, `defbbd71-3f7e-4ddb-99de-86a48532ae57`), one for each direction.
 - Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
+
+### Scenario 6 - Multi-lane closure (no examples currently)
+Scenario 6 is based on the annotated image below with a closure of two lanes on a divided roadway.   The image below also includes annotations in red identifying the number of road events and lane numbering. The scenario assumes that the section where two lanes are open is short and part of the overall traffic control. Scenario 6 does not currently have examples created to show how it would be represented as road events.
+
+![multi-lane work_zone](/images/multi_lane_closure_divided_example_annotated.png)
+
+### Scenario 7 - Mobile Operation (no examples currently)
+Scenario 7 is based on the annotated image below for a mobile work zone operation.   The image below also includes annotations in red identifying the number of road events and lane numbering. Scenario 7 does not currently have examples created to show how it would be represented as road events.
+
+![mobile work_zone](/images/mobile_work_zone_example_annotated.png)
 
 ## Device Feed Examples
 The following example WZDx Device Feeds are provided:
