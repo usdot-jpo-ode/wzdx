@@ -1,5 +1,5 @@
 # Creating a WZDx Feed
-This documents contains information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
+This documents contains information to assist in creating a WZDx data feed, such as the feed format, business rules, validation tools, and software libraries.
 
 ## Feed Format and File Type
 WZDx feeds are formatted according to the [GeoJSON](https://geojson.org/) specification. The output of a WZDx feed is a GeoJSON document (a `.geojson` file) that contains a single [GeoJSON FeatureCollection](https://datatracker.ietf.org/doc/html/rfc7946#section-3.3) which includes information about the feed (see the [FeedInfo Object](/spec-content/objects/FeedInfo.md)) and a list of [GeoJSON Feature](https://datatracker.ietf.org/doc/html/rfc7946#section-3.2)s describing entities specific to the type of feed, such as work zones.
