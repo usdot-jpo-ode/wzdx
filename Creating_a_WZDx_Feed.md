@@ -79,7 +79,7 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 #### Relationships
 - Use the new `related_road_events` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events instead of the `relationship` property.
 - Instead of supplying a list of road event IDs associated with each type of relationship (first, next, parent, child), use a [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) object for each related road event and use the [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) to indicate the type of relationship.
-- Instead of using the `parents` array to identify a project that a road event is a part of, use specific RelatedRoadEventType like `related-detour` and `related-work-zone` to identify each related event on roads in the nearby area.
+- Instead of using the `parents` array to identify a project that a road event is a part of, use a specific RelatedRoadEventType like `related-detour` and `related-work-zone` to identify each related event on roads in the nearby area.
 - Instead of using the `next` and `first` array to indicate road events the next road event on the roadway, use the `next-in-sequence` and `first-in-sequence` RelatedRoadEventType.
 - Instead of using the `next` and `first` arrays to indicate a recurring work zone, use the `first-occurrence` and `next-occurrence` RelatedRoadEventType.
 
@@ -94,7 +94,7 @@ There are no required changes to update a feed from WZDx v4.0 to v4.1. All prope
 - Use the new `is_moving` on the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) instead of the `is_moving` property on the [ArrowBoard](/spec-content/objects/ArrowBoard.md).
 
 #### Traffic Signals
-- To represent a temporary traffic signal, use the new [TrafficSignal](/spec-content/objects/TrafficSignal.md) object instead of a [LocationMarker](/spec-content/objects/LocationMarker.md) that marks a `temporary-traffic-signal` (see [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md).
+- To represent a temporary traffic signal, use the new [TrafficSignal](/spec-content/objects/TrafficSignal.md) object instead of a [LocationMarker](/spec-content/objects/LocationMarker.md) that marks a `temporary-traffic-signal` (see [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md)).
 
 ## Data Security Best Practices
 This is a working list of best practices for standing up a WZDx data feed assembled by the WZDx Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
