@@ -142,4 +142,4 @@ To validate data feeds and measure compliance with the v1.1 specification, the G
 ## Software Libraries
 
 ### Microsoft .NET
-IBI Group released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utitlies for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.
+[IBI Group](https://www.ibigroup.com/) released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utitlies for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.
