@@ -1,7 +1,7 @@
 # UnitOfMeasurement Enumerated Type
 Unit of measurement. This enumerated type is intended for use across the specification and more values can be added in the future if needed.
 
-This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/UnitOfMeasurement.md).
+This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/enumerated-types/UnitOfMeasurement.md).
 
 ## Values
 Value | Description

@@ -1,7 +1,7 @@
 # RoadEventCoreDetails Object
 The `RoadEventCoreDetails` object represents the core details of an event occurring on a roadway (i.e. a "road event") that is shared by all types of road events, such as work zones (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)) and detours (see [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)). The `RoadEventCoreDetails` cannot exist directly in a data feed and on its own does not represent a road event. It is used as the value of `core_details` property on every specific type of road event, each of which is represented by its own object.
 
-This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/objects/RoadEventCoreDetails.md). 
+This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/RoadEventCoreDetails.md). 
 
 ## Properties
 Name | Type | Description | Conformance | Notes

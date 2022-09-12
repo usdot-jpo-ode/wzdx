@@ -1,7 +1,7 @@
 # Restriction Object
 The `Restriction` object describes a restriction on a roadway or lane. This object is used by the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [Lane](/spec-content/objects/Lane.md) objects.
 
-This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/objects/Restriction.md). 
+This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Restriction.md). 
 
 ## Properties
 Name | Type | Description | Conformance | Notes
