@@ -66,7 +66,7 @@ Scenario 6 is based on the annotated image below with a closure of two lanes on 
 ![multi-lane work_zone](/images/multi_lane_closure_divided_example_annotated.png)
 
 ### Scenario 7 - Mobile Operation (no examples currently)
-Scenario 7 is based on the annotated image below for a mobile work zone operation.   The image below also includes annotations in red identifying the number of road events and lane numbering. Scenario 7 does not currently have examples created to show how it would be represented as road events.
+[Scenario 7](/examples/WorkZoneFeed/scenario7_mobileoperation_linestring_example.geojson) is based on the annotated image below for a mobile work zone operation.   The image below also includes annotations in red identifying the number of road events and lane numbering. Scenario 7 does not currently have examples created to show how it would be represented as road events.
 
 ![mobile work_zone](/images/mobile_work_zone_example_annotated.png)
 
