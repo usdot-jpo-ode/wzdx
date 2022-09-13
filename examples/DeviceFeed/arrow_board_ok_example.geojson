@@ -36,7 +36,7 @@
           "road_direction": "northbound",
           "name": "Arrow Board 1",
           "update_date": "2021-12-06T14:54:12Z",
-          "is_moving": true,    
+          "is_moving": true    
         },
         "pattern": "right-arrow-flashing",
         "is_in_transport_position": false
