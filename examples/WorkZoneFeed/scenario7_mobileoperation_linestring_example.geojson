@@ -61,22 +61,22 @@
         "lanes": [
           {
             "order": 1,
-            "status": "open",
+            "status": "closed",
             "type": "shoulder"
           },
           {
             "order": 2,
-            "status": "open",
+            "status": "closed",
             "type": "general"
           },
           {
             "order": 3,
-            "status": "closed",
+            "status": "open",
             "type": "general"
           },
           {
             "order": 4,
-            "status": "closed",
+            "status": "open",
             "type": "shoulder"
           }
         ]
@@ -472,22 +472,22 @@
         "lanes": [
           {
             "order": 1,
-            "status": "open",
+            "status": "closed",
             "type": "shoulder"
           },
           {
             "order": 2,
-            "status": "open",
+            "status": "closed",
             "type": "general"
           },
           {
             "order": 3,
-            "status": "closed",
+            "status": "open",
             "type": "general"
           },
           {
             "order": 4,
-            "status": "closed",
+            "status": "open",
             "type": "shoulder"
           }
         ]
