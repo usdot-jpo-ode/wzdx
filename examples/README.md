@@ -23,6 +23,7 @@ The [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_examp
 
 ![shift_work_zone](/images/lane_shift_example_annotated.png)
 
+Below are notes for the [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson):
 - Single work zone with lane shift in the detailed lane information showing use of verified location and start time. ("id": `85912735-7a36-45f5-b644-41b0203ae400`).
 
 ### Scenario 3 - Shoulder Closure (bidirectional work zone)
@@ -30,6 +31,7 @@ The [Scenario 3 Example](/examples/WZDxFeed/scenario3_shoulder_bidirectional_lin
 
 ![shoulder_work_zone](/images/shoulder_closure_example_annotated.png)
 
+Below are notes for the [Scenario 3 Example](/examples/WZDxFeed/scenario3_shoulder_bidirectional_linestring_example.geojson):
 - Single work zone represented by two road events (IDs: `a2183b6b-befa-48ac-b6b5-3ee5e8a806e9`, `62c5fa4b-11ee-45e6-a740-bc32d3b846e9`), one in direction of shoulder closure and second in opposite direction.
 - Demonstrates the use of `restrictions` for the event as well as individual lanes
 - Demonstrates the use of `related_road_events` to show the road events in each direction are related to each other but not in sequence using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) value of `related-work-zone`
@@ -39,6 +41,7 @@ The [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.
 
 ![detour_work_zone](/images/work_zone_detour.png)
 
+Below are notes for the [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.geojson):
 - Single work zone in one direction represented by a single road event (ID: `a15f7570-b7e6-4367-8ad9-3a462eea65dd`), with a detour.
 - Showing use of `related_road_events` to connect the detour road events (IDs: `cf1092ba-3b8d-4e91-81ef-daa4a98662e1`, `4d151e7d-11d8-4b99-a192-51e189da0de7`, `9436226a-01b0-47ff-8a13-670e87549458`) to the work zone using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
 - Also uses `related_road_events` to represent the sequence of the three detour road events.
@@ -47,7 +50,7 @@ The [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.
 ### Scenario 5 - Recurring Work Zone
 The [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson) is based on a single lane closure but is recurring over multiple days. Below are the notes about the example:
 
-
+Below are notes for the [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson):
 - Simple work zone but with a recurring component.
 - Four road events: assuming that the first day is currently an active (day 1, ID: `a2100c5b-58b9-4593-992d-0795bafe3d8d`) event and three additional events (IDs: `d63ab07b-98e8-41bd-b4dd-557727320056`, `ff3f888f-7e11-4a5b-8c04-3182a459a756`, `b04c1df4-f9d0-4a63-995d-38bfd83931e9`) for later dates with a pending status.
 - The active work zone event demonstrates value of verified location and time.
@@ -56,19 +59,27 @@ The [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_examp
 ### Local Access Only (bidirectional work zone)
 The [local access only example](/examples/WorkZoneFeed/local_access_only_bidirectional_linestring_example.geojson) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.
 
+Below are notes for the [Local Access Only Example](/examples/WorkZoneFeed/local_access_only_bidirectional_linestring_example.geojson):
 - Single work zone on a bidirectional roadwith with impact to both directions, represented by two road events (IDs: `de3de57b-33fb-40e5-a6f2-a17828f82fb9`, `defbbd71-3f7e-4ddb-99de-86a48532ae57`), one for each direction.
 - Uses `local-access-only` [RestrictionType](/spec-content/enumerated-types/RestrictionType.md).
 - One road event shows basic details (not lane-level), while the opposite direction road event shows detailed lane information. The detailed lane information also includes a bike lane for reference.
 
 ### Scenario 6 - Multi-lane closure (no examples currently)
-Scenario 6 is based on the annotated image below with a closure of two lanes on a divided roadway.   The image below also includes annotations in red identifying the number of road events and lane numbering. The scenario assumes that the section where two lanes are open is short and part of the overall traffic control. Scenario 6 does not currently have examples created to show how it would be represented as road events.
+The [Scenario 6 example](/examples/WorkZoneFeed/scenario6_multi_lane_closure_linestring_example.geojson) is based on the annotated image below with a closure of two lanes on a divided roadway.   The image below also includes annotations in red identifying the number of road events and lane numbering. The scenario assumes that the section where two lanes are open (after the first taper) is short and part of the overall traffic control which does not need to be a seperate road event. 
 
 ![multi-lane work_zone](/images/multi_lane_closure_divided_example_annotated.png)
 
+Below are notes for the [Scenario 6 example](/examples/WorkZoneFeed/scenario6_multi_lane_closure_linestring_example.geojson):
+- Single work zone with a multi-lane closure ("id": `8fed746d-8f4f-4e0c-8d9b-fa4db7c3c2d8`). The road event includes the use of the [WorkerPresence Object](/spec-content/objects/WorkerPresence.md) as well as using the [Restriction Object](/spec-content/objects/Restriction.md) to show a width and weight limit restriction.
+
 ### Scenario 7 - Mobile Operation (no examples currently)
-[Scenario 7](/examples/WorkZoneFeed/scenario7_mobileoperation_linestring_example.geojson) is based on the annotated image below for a mobile work zone operation.   The image below also includes annotations in red identifying the number of road events and lane numbering. Scenario 7 does not currently have examples created to show how it would be represented as road events.
+The [Scenario 7 example](/examples/WorkZoneFeed/scenario7_mobileoperation_linestring_example.geojson) is based on the annotated image below for a mobile work zone operation.   The image below also includes annotations in red identifying the number of road events and lane numbering. The Scenario 7 example shows how the mobile operation related road event object can be used to related an active mobile operation with the planned extents.
 
 ![mobile work_zone](/images/mobile_work_zone_example_annotated.png)
+
+Below are notes for the [Scemario 7 Example](/examples/WorkZoneFeed/scenario7_mobileoperation_linestring_example.geojson):
+-The first road event ("id": '01841847-3cda-4aa8-a283-1b4a11f31c08') is the planned extents of a mobile operation.  The road event uses the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `active-moving-operation` to relate to the active road event for the mobile operation.
+-The second road event (ID: '71a97769-6c61-41a8-bbfd-0d84e0d073e6') is the active extents of a mobile operation.  This represents the current location of the mobile operation and is expected to move as the mobile operation changes locations.  The road event uses the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `planned-moving-operation` to relate to the planned extents road event for the mobile operation.
 
 ## Device Feed Examples
 The following example WZDx Device Feeds are provided:
