@@ -1,5 +1,5 @@
 # WZDx Specification v4.1
-Released August 2022
+Released September 2022
 
 Changes for the v4.1 release involve new features and cleaning up and redesigning existing functionality without breaking backwards compatibility. Thus, several enumerated type values and object properties were deprecated rather than removed. Most if not all of these deprecated values will be removed in the next major release.
 
