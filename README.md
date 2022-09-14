@@ -13,7 +13,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v4.1 (Aug 2022)](#wzdx-v41-august-2022)
+    - [Release v4.1 (Sept 2022)](#wzdx-v41-september-2022)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
@@ -84,7 +84,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.1 (August 2022)
+### WZDx v4.1 (September 2022)
 
 #### New Functionality
 - Add `is_moving` boolean property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
