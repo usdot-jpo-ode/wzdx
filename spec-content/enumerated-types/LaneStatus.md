@@ -1,8 +1,6 @@
 # LaneStatus Enumerated Type
 The status of a lane for the traveling public.
 
-This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/enumerated-types/LaneStatus.md).
-
 ## Values
 Value | Description
 --- | ---
@@ -18,3 +16,5 @@ Value | Description
 Property | Object
 --- | ---
 `status` | [Lane](/spec-content/objects/Lane.md)
+
+The `LaneStatus` enumerated type is also used by the [TDx Lane](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Lane.md).
