@@ -1,12 +1,12 @@
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/DeviceFeed.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/DeviceFeed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WZDx v4.1 DeviceFeed",
   "description": "The GeoJSON output of a WZDx Device Feed (v4.1)",
   "type": "object",
   "properties": {
     "feed_info": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/FeedInfo.json"
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/FeedInfo.json"
     },
     "type": {
       "description": "The GeoJSON type",
@@ -20,7 +20,7 @@
       }
     },
     "bbox": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
     }
   },
   "required": ["feed_info", "type", "features"],
@@ -78,7 +78,7 @@
           ]
         },
         "bbox": {
-          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
         }
       },
       "required": ["id","type","properties","geometry"]
@@ -108,7 +108,7 @@
           "type": "boolean"
         },
         "road_direction": {
-          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json",
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/Direction.json",
           "description": "The direction of the road that the field device is on. This value indicates the direction of the traffic flow of the road, not a real heading angle."
         },
         "road_names": {
