@@ -78,7 +78,8 @@ The object diagram below indicates the relationship between the data objects use
 ![WZDx DeviceFeed object diagram](/images/WZDx_DeviceFeed_object_diagram.png)
 
 #### Updating the object diagram
-When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open `/images/WZDx_WorkZoneFeed_object_diagram.drawio` or `/images/WZDx_DeviceFeed_object_diagram.drawio` at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace the appropriate file in the `/images` directory with the new file. Additionally **export** the diagram as a PNG, using the diagram name as the file name, and replace `/images/WZDx_WorkZoneFeed_object_diagram.png` or `/images/WZDx_DeviceFeed_object_diagram.png` with the new image file.
+When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open [/images/WZDx_WorkZoneFeed_object_diagram.drawio](/images/WZDx_WorkZoneFeed_object_diagram.png) or [/images/WZDx_DeviceFeed_object_diagram.drawio](/images/WZDx_DeviceFeed_object_diagram.png)
+ at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace the appropriate file in the `/images` directory with the new file. Additionally **export** the diagram as a PNG, using the diagram name as the file name, and replace `/images/WZDx_WorkZoneFeed_object_diagram.png` or `/images/WZDx_DeviceFeed_object_diagram.png` with the new image file.
 
 ## Enumerated Types
 Many object properties are restricted to a finite set of values defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
