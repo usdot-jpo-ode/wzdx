@@ -100,7 +100,6 @@ Enumerated Type | Description
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
 [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) | The type of relationship with a road event that is being identified
 [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway or lane.
-[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Unit of measurement (e.g. "pounds", "centimeters").
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md) | High-level description of the feed publisher's confidence in worker presence.
@@ -108,6 +107,7 @@ Enumerated Type | Description
 [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Methods for how worker presence in a work zone event area is determined.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* The status of a road event.
+[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) (DEPRECATED) | An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* A measure of how accurate a date-time is.
 
 #### Field Devices
