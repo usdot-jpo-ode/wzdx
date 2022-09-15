@@ -22,6 +22,3 @@ Property | Object
 `core_details` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
 
 The `RoadEventCoreDetails` object is also used by road events defined in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx). 
-
-## Important Notes
-The value of the `RoadEventCoreDetails`'s `data_source_id` property MUST match the value of the `data_source_id` property of a [FeedDataSource](/spec-content/objects/FeedDataSource.md) that is included in the same WZDx GeoJSON document.
