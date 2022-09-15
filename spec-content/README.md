@@ -107,7 +107,7 @@ Enumerated Type | Description
 [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Methods for how worker presence in a work zone event area is determined.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* The status of a road event.
-[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) (DEPRECATED) | An indication of how a geographical coordinate was defined.
+[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* A measure of how accurate a date-time is.
 
 #### Field Devices
