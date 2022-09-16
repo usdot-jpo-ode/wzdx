@@ -24,5 +24,3 @@ Value | Description
 Property | Object
 --- | ---
 `type` | [Restriction](/spec-content/objects/Restriction.md)
-
-The `RestrictionType` enumerated type is also used by the [TDx Restriction](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Restriction.md).

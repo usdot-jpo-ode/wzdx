@@ -15,5 +15,3 @@ Value | Description
 Property | Object
 --- | ---
 `unit` | [Restriction](/spec-content/objects/Restriction.md)
-
-The `UnitOfMeasurement` enumerated type is also used in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx). 

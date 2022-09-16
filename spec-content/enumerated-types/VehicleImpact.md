@@ -21,5 +21,3 @@ Value | Description
 Property | Object
 --- | ---
 `vehicle_impact` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
-
-The `VehicleImpact` enumerated type is also used by road events defined in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx). 

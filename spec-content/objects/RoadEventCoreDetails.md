@@ -20,5 +20,3 @@ Property | Object
 --- | ---
 `core_details` | [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)
 `core_details` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
-
-The `RoadEventCoreDetails` object is also used by road events defined in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx). 

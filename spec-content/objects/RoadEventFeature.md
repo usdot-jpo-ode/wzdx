@@ -14,5 +14,3 @@ Name | Type | Description | Conformance | Notes
 Property | Object
 --- | ---
 `features` | [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md)
-
-The `RoadEventFeature` object is also used for road events defined in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx). 

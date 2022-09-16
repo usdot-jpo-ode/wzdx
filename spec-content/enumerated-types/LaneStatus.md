@@ -16,5 +16,3 @@ Value | Description
 Property | Object
 --- | ---
 `status` | [Lane](/spec-content/objects/Lane.md)
-
-The `LaneStatus` enumerated type is also used by the [TDx Lane](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Lane.md).
