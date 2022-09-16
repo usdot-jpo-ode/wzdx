@@ -1,8 +1,6 @@
 # LaneType Enumerated Type
 A description of the static properties of a section of the roadway, intended to reflect information about its function that is not covered by its status (see [LaneStatus](/spec-content/enumerated-types/LaneStatus.md)).
 
-This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/LaneType.md).
-
 ## Values
 Value | Description
 --- | ---
@@ -23,6 +21,8 @@ Value | Description
 Property | Object
 --- | ---
 `type` | [Lane](/spec-content/objects/Lane.md)
+
+The `LaneType` enumerated type is also used by the [TDx Lane](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Lane.md).
 
 ## Additional Information
 The LaneType enumerated type was originally based on the TMDD LaneRoadway Enumeration, which is imported into TMDD from SAE 2540 (ITIS Standard).

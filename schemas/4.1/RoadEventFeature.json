@@ -1,6 +1,6 @@
 
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/RoadEventFeature.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/RoadEventFeature.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Road Event Feature (GeoJSON Feature)",
   "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
@@ -42,7 +42,7 @@
       ]
     },
     "bbox": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/BoundingBox.json"
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
     }
   },
   "required": ["id","type","properties","geometry"],
@@ -340,7 +340,7 @@
           "description": "A list describing one or more road events which are related to this road event, such as a work zone project it is part of or another road event that occurs before or after it in sequence.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RelatedRoadEvents"
+            "$ref": "#/definitions/RelatedRoadEvent"
           }
         },
         "road_names": {
@@ -352,7 +352,7 @@
           }
         },
         "direction": {
-          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.1/schemas/4.1/Direction.json"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/Direction.json"
         },
         "name": {
           "description": "A human-readable name for the road event",
@@ -434,9 +434,9 @@
         }
       }
     },
-    "RelatedRoadEvents": {
-      "title": "RelatedRoadEvents",
-      "description": "Used to identify another road event that is related to a road event.",
+    "RelatedRoadEvent": {
+      "title": "RelatedRoadEvent",
+      "description": "Identifies a road event that is related to the road event that the RelatedRoadEvent object occurs on.",
       "type": "object",
       "properties": {
         "type": {
@@ -551,11 +551,6 @@
       "title": "Road Event Type Enumerated Type",
       "description": "The type of WZDx road event",
       "enum": ["work-zone", "detour", "restriction"]
-    },
-    "Direction": {
-      "title": "Direction Enumerated Type",
-      "description": "The direction for a road event based on standard naming for US roads; indicates the direction the traffic flow regardless of the real heading angle",
-      "enum": ["northbound", "eastbound", "southbound", "westbound", "undefined", "unknown"]
     },
     "SpatialVerification": {
       "title": "Spatial Verification Enumerated Type",
@@ -681,7 +676,7 @@
     },
     "RelatedRoadEventType": {
       "title": "Related Road Event Type Enumerated Type",
-      "description": "Describes a type of related road event, such as a work zone project, recurrent work zone, or detour-type road event.",
+      "description": "Describes how a road event is related to the road event that the RelatedRoadEvent object occurs on.",
       "enum": [
         "first-in-sequence",
         "next-in-sequence",

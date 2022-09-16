@@ -1,8 +1,6 @@
 # Direction 
 The direction of a roadway. The values are based on the standard naming for US roadways and indicates the direction the traffic flow regardless of the real heading angle of the roadway.
 
-This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/Direction.md).
-
 ## Values
 Value | Description
 --- | ---
@@ -11,13 +9,15 @@ Value | Description
 `southbound` | Road flow is in the southbound direction
 `westbound` | Road flow is in the westbound direction
 `undefined` | Road flow does not have a signed direction. For a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md), the first and last coordinates in the feature's geometry represent the beginning and end of the road event in the direction of travel it impacts.
-`unknown` | 	Road flow may have a signed direction, but the affected direction of travel is not known
+`unknown` | Road flow may have a signed direction, but the affected direction of travel is not known
 
 ## Used By
 Property | Object
 --- | ---
 `direction` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
 `road_direction` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md)
+
+The `Direction` enumerated type is also used in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx).
 
 ## Additional Information
 The `Direction` enumerated type values were based on the TMDD Link-alignment Enumeration, which contains the following values:
