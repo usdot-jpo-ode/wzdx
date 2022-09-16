@@ -13,5 +13,3 @@ Property | Object
 --- | ---
 `restrictions` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
 `restrictions` | [Lane](/spec-content/objects/Lane.md)
-
-This object is also used by the [TDx RestrictionRoadEvent](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/RestrictionRoadEvent.md). 

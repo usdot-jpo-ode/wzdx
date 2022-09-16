@@ -17,8 +17,6 @@ Property | Object
 `direction` | [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md)
 `road_direction` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md)
 
-The `Direction` enumerated type is also used in the [TDx Specification](https://github.com/usdot-jpo-ode/TDx).
-
 ## Additional Information
 The `Direction` enumerated type values were based on the TMDD Link-alignment Enumeration, which contains the following values:
 

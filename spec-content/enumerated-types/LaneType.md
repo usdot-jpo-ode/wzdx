@@ -22,8 +22,6 @@ Property | Object
 --- | ---
 `type` | [Lane](/spec-content/objects/Lane.md)
 
-The `LaneType` enumerated type is also used by the [TDx Lane](https://github.com/usdot-jpo-ode/TDx/blob/main/spec-content/objects/Lane.md).
-
 ## Additional Information
 The LaneType enumerated type was originally based on the TMDD LaneRoadway Enumeration, which is imported into TMDD from SAE 2540 (ITIS Standard).
 
