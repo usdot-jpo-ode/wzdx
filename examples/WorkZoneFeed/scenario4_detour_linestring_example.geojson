@@ -1,11 +1,11 @@
 {
-   "road_event_feed_info": {
+   "feed_info": {
       "update_date": "2020-06-18T15:00:00Z",
       "publisher": "TestDOT",
       "contact_name": "Frederick Francis Feedmanager",
       "contact_email": "fred.feedmanager@testdot.gov",
       "update_frequency": 60,
-      "version": "4.0",
+      "version": "4.1",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "data_sources": [
          {
@@ -21,37 +21,36 @@
    "type": "FeatureCollection",
    "features": [
       {
-         "id": "67890",
+         "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd",
          "type": "Feature",
          "properties": {
             "core_details": {
                "data_source_id": "1",
                "event_type": "work-zone",
-               "relationship": {
-                  "children": [
-                     "67890-detour1",
-                     "67890-detour2",
-                     "67890-detour3"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-detour",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  }
+               ],
                "road_names": [
                   "I-35"
                ],
                "direction": "northbound",
+               "name": "Work Zone 67890",
                "description": "Simple, single direction work zone with detour.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
             },
             "beginning_milepost": 98.42,
             "ending_milepost": 101.50,
-            "beginning_accuracy": "verified",
-            "ending_accuracy": "estimated",
+            "is_start_position_verified": "true",
+            "is_end_position_verified": "false",
             "start_date": "2010-01-01T01:03:01Z",
             "end_date": "2010-06-30T01:00:00Z",
             "location_method": "channel-device-method",
-            "start_date_accuracy": "verified",
-            "end_date_accuracy": "estimated",
-            "event_status": "active",
+            "is_start_date_verified": true,
+            "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
                "are_workers_present": true,
@@ -271,27 +270,27 @@
          }
       },
       {
-         "id": "67890-detour1",
+         "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1",
          "type": "Feature",
          "properties": {
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "67890"
-                  ],
-                  "first": [
-                     "67890-detour1"
-                  ],
-                  "next": [
-                     "67890-detour2"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "next-in-sequence",
+                     "id": "4d151e7d-11d8-4b99-a192-51e189da0de7"
+                  }
+               ],
                "road_names": [
                   "F22"
                ],
                "direction": "westbound",
+               "name": "67890 Detour (Segment 1)",
                "description": "Detour for road event 67890, first segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -300,9 +299,8 @@
             "ending_cross_street": "US 69",
             "start_date": "2010-01-01T01:03:01Z",
             "end_date": "2010-06-30T01:00:00Z",
-            "start_date_accuracy": "verified",
-            "end_date_accuracy": "estimated",
-            "event_status": "active"
+            "is_start_date_verified": true,
+            "is_end_date_verified": false
          },
          "geometry": {
             "type": "LineString",
@@ -355,27 +353,31 @@
          }
       },
       {
-         "id": "67890-detour2",
+         "id": "4d151e7d-11d8-4b99-a192-51e189da0de7",
          "type": "Feature",
          "properties": {
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "67890"
-                  ],
-                  "first": [
-                     "67890-detour1"
-                  ],
-                  "next": [
-                     "67890-detour3"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "first-in-sequence",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  },
+                  {
+                     "type": "next-in-sequence",
+                     "id": "9436226a-01b0-47ff-8a13-670e87549458"
+                  }
+               ],
                "road_names": [
                   "US 69"
                ],
                "direction": "northbound",
+               "name": "67890 Detour (Section 2)",
                "description": "Detour for road event 67890, second segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -384,9 +386,8 @@
             "ending_cross_street": "IA 210",
             "start_date": "2010-01-01T01:03:01Z",
             "end_date": "2010-06-30T01:00:00Z",
-            "start_date_accuracy": "verified",
-            "end_date_accuracy": "estimated",
-            "event_status": "active"
+            "is_start_date_verified": true,
+            "is_end_date_verified": false
          },
          "geometry": {
             "type": "LineString",
@@ -735,24 +736,27 @@
          }
       },
       {
-         "id": "67890-detour3",
+         "id": "9436226a-01b0-47ff-8a13-670e87549458",
          "type": "Feature",
          "properties": {
             "core_details": {
                "data_source_id": "1",
                "event_type": "detour",
-               "relationship": {
-                  "parents": [
-                     "6780"
-                  ],
-                  "first": [
-                     "67890-detour1"
-                  ]
-               },
+               "related_road_events": [
+                  {
+                     "type": "related-work-zone",
+                     "id": "a15f7570-b7e6-4367-8ad9-3a462eea65dd"
+                  },
+                  {
+                     "type": "first-in-sequence",
+                     "id": "cf1092ba-3b8d-4e91-81ef-daa4a98662e1"
+                  }
+               ],
                "road_names": [
                   "IA 210"
                ],
                "direction": "eastbound",
+               "name": "67890 Detour (Section 3)",
                "description": "Detour for road event 67890, third/final segment.",
                "creation_date": "2009-12-15T14:01:01Z",
                "update_date": "2010-01-01T01:03:01Z"
@@ -761,9 +765,8 @@
             "ending_cross_street": "I-35",
             "start_date": "2010-01-01T01:03:01Z",
             "end_date": "2010-06-30T01:00:00Z",
-            "start_date_accuracy": "verified",
-            "end_date_accuracy": "estimated",
-            "event_status": "active"
+            "is_start_date_verified": true,
+            "is_end_date_verified": false
          },
          "geometry": {
             "type": "LineString",

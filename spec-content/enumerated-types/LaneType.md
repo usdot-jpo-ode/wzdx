@@ -14,7 +14,8 @@ Value | Description
 `shoulder` | A portion of the roadway that is outside (either right or left) of the main travel lanes. A shoulder can have many uses but is not intended for general traffic.
 `parking` | A lane used for parking, not allowed for travel.
 `median` | An often unpaved, non-drivable area that separates sections of the roadway. In most cases a median should only be described if it separates lanes in a single direction of travel, as per [business rule #1](/Creating_a_WZDx_Feed.md#business-rules) each direction of travel must be represented by a separate road event.
-`center-left-turn-lane` | A lane in the center of a bidirectional roadway that traffic from both directions uses to make a left turn.
+`two-way-center-turn-lane` | A lane in the center of a bidirectional roadway that traffic from both directions uses to make a turn that crosses opposite direction of traffic (i.e. left in right-side driving countries, and right in left-side driving countries).
+`center-left-turn-lane` (DEPRECATED) | A lane in the center of a bidirectional roadway that traffic from both directions uses to make a left turn. *This property is deprecated and will be removed in a future release, use `two-way-center-turn-lane` instead.*
 
 ## Used By
 Property | Object

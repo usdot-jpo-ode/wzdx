@@ -1,0 +1,626 @@
+{
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/DeviceFeed.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WZDx v4.1 DeviceFeed",
+  "description": "The GeoJSON output of a WZDx Device Feed (v4.1)",
+  "type": "object",
+  "properties": {
+    "feed_info": {
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/FeedInfo.json"
+    },
+    "type": {
+      "description": "The GeoJSON type",
+      "enum": ["FeatureCollection"]
+    },
+    "features": {
+      "description": "An array of GeoJSON Feature objects which represent field devices deployed in a work zone",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FieldDeviceFeature"
+      }
+    },
+    "bbox": {
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
+    }
+  },
+  "required": ["feed_info", "type", "features"],
+  "definitions": {
+    "FieldDeviceFeature": {
+      "title": "Field Device Feature (GeoJSON Feature)",
+      "description": "The GeoJSON feature container for a WZDx field device",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "A unique identifier issued by the data feed provider to identify the field device. It is recommended that this identifier is a Universally Unique IDentifier (UUID) as defined in [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122).",
+          "type": "string"
+        },
+        "type": {
+          "description": "The GeoJSON object type; must be 'Feature'",
+          "enum": ["Feature"]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            }
+          },
+          "required": ["core_details"],
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ArrowBoard"
+            },
+            {
+              "$ref": "#/definitions/Camera"
+            },
+            {
+              "$ref": "#/definitions/DynamicMessageSign"
+            },
+            {
+              "$ref": "#/definitions/FlashingBeacon"
+            },
+            {
+              "$ref": "#/definitions/HybridSign"
+            },
+            {
+              "$ref": "#/definitions/LocationMarker"
+            },
+            {
+              "$ref": "#/definitions/TrafficSensor"
+            }
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "https://geojson.org/schema/Point.json"
+            }
+          ]
+        },
+        "bbox": {
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
+        }
+      },
+      "required": ["id","type","properties","geometry"]
+    },
+    "FieldDeviceCoreDetails": {
+      "title": "Field Device Core Details",
+      "description": "The core details—both configuration and current state—of a field device that are shared by all types of field devices",
+      "type": "object",
+      "properties": {
+        "device_type": {
+          "$ref": "#/definitions/FieldDeviceType"
+        },
+        "data_source_id": {
+          "description": "Identifies the data source from which the field device information is sourced from",
+          "type": "string"
+        },
+        "device_status": {
+          "$ref": "#/definitions/FieldDeviceStatus"
+        },
+        "update_date": {
+          "description": "The UTC date and time (formatted according to RFC 3339, Section 5.6) when any information in the FieldDeviceFeature (including child objects) that the FieldDeviceCoreDetails applies to was most recently updated or confirmed as up to date",
+          "type": "string",
+          "format": "date-time"
+        },
+        "has_automatic_location": {
+          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overidden (false)",
+          "type": "boolean"
+        },
+        "road_direction": {
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/Direction.json",
+          "description": "The direction of the road that the field device is on. This value indicates the direction of the traffic flow of the road, not a real heading angle."
+        },
+        "road_names": {
+          "description": "A list of publicly known names of the road on which the field device is located. This may include the road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "A human-readable name for the field device"
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the field device."
+        },
+        "status_messages": {
+          "type": "array",
+          "description": "A list of messages associated with the device's status, if applicable. Used to provide additional information about the status such as specific warning or error message.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "is_moving": {
+          "type": "boolean",
+          "description": "A yes/no value indicating if the device is actively moving (not statically placed) as part of a mobile work zone operation."
+        },
+        "road_event_ids": {
+          "type": "array",
+          "description": "A list of one or more IDs of a RoadEventFeatures that the device is associated with",
+          "items": {
+            "type": "string"
+          }
+        },
+        "milepost": {
+          "type": "number",
+          "description": "The linear distance measured against a milepost marker along a roadway where the device is located"
+        },
+        "make": {
+          "type": "string",
+          "description": "The make or manufacturer of the device"
+        },
+        "model": {
+          "type": "string",
+          "description": "The model of the device"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "The serial number of the device"
+        },
+        "firmware_version": {
+          "type": "string",
+          "description": "The version of firmware the device is using to operate"
+        }
+      },
+      "required": [
+        "device_type",
+        "data_source_id",
+        "device_status",
+        "update_date",
+        "has_automatic_location"
+      ]
+    },
+    "ArrowBoard": {
+      "title": "Arrow Board Field Device",
+      "description": "An electronic, connected arrow board which can display an arrow pattern to direct traffic",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "arrow-board"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "pattern": {
+              "$ref": "#/definitions/ArrowBoardPattern"
+            },
+            "is_moving": {
+              "type": "boolean",
+              "description": "**DEPRECATED** A yes/no value indicating if the arrow board is actively moving (not statically placed) as part of a mobile work zone operation."
+            },
+            "is_in_transport_position": {
+              "type": "boolean",
+              "description": "A yes/no value indicating if the arrow board is in the stowed/transport position (true) or deployed/upright position (false)"
+            }
+          },
+          "required": [
+            "core_details",
+            "pattern"
+          ]
+        }
+      ]
+    },
+    "Camera": {
+      "title": "Camera Field Device",
+      "description": "A camera device deployed in the field, capable of capturing still images",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "camera"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "image_url": {
+              "type": "string",
+              "format": "uri",
+              "description": "A URL pointing to an image file for the camera image still"
+            },
+            "image_timestamp": {
+              "type": "string",
+              "format": "date-time",
+              "description": "The UTC date and time when the image was captured"
+            }
+          },
+          "required": [
+            "core_details"
+          ],
+          "dependencies": {
+            "image_url": [
+              "image_timestamp"
+            ]
+          }
+        }
+      ]
+    },
+    "DynamicMessageSign": {
+      "title": "Dynamic Message Sign Field Device",
+      "description": "An electronic traffic sign deployed on the roadway, used to provide information to travelers",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "dynamic-message-sign"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "message_multi_string": {
+              "type": "string",
+              "description": "A MULTI-formatted string describing the message currently posted to the sign"
+            }
+          },
+          "required": [
+            "core_details",
+            "message_multi_string"
+          ]
+        }
+      ]
+    },
+    "FlashingBeacon": {
+      "title": "Flashing Beacon Field Device",
+      "description": "A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something and capture driver attention",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "flashing-beacon"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "function": {
+              "$ref": "#/definitions/FlashingBeaconFunction"
+            },
+            "is_flashing": {
+              "type": "boolean",
+              "description": "A yes/no value indicating if the flashing beacon is currently in use and flashing"
+            },
+            "sign_text": {
+              "type": "string",
+              "description": "The text on the sign the beacon is mounted on, if applicable"
+            }
+          },
+          "required": [
+            "core_details",
+            "function"
+          ]
+        }
+      ]
+    },
+    "HybridSign": {
+      "title": "Hybrid Sign Field Device",
+      "description": "A hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "hybrid-sign"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "dynamic_message_function": {
+              "$ref": "#/definitions/HybridSignDynamicMessageFunction"
+            },
+            "dynamic_message_text": {
+              "type": "string",
+              "description": "A text representation of the message currently posted to the dynamic electronic component of the hybrid sign"
+            },
+            "static_sign_text": {
+              "type": "string",
+              "description": "The static text on the non-electronic component of the hybrid sign"
+            }
+          },
+          "required": [
+            "core_details",
+            "dynamic_message_function"
+          ]
+        }
+      ]
+    },
+    "LocationMarker": {
+      "title": "Location Marker Field Device",
+      "description": "Any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone)",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "location-marker"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "marked_locations": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/MarkedLocation"
+              }
+            }
+          },
+          "required": ["core_details", "marked_locations"]
+        }
+      ]
+    },
+    "MarkedLocation": {
+      "title": "Marked Location",
+      "description": "Describes a specific location where a LocationMarker is placed, such as the start or end of a work zone road event",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/MarkedLocationType"
+        },
+        "road_event_id": {
+          "type": "string",
+          "description": "The ID of a RoadEventFeature that the MarkedLocation applies to"
+        }
+      },
+      "required": ["type"]
+    },
+    "TrafficSensor": {
+      "title": "Traffic Sensor Field Device",
+      "description": "A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "traffic-sensor"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "collection_interval_start_date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "The UTC date and time where the TrafficSensor data collection started. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
+            },
+            "collection_interval_end_date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "The UTC date and time where the TrafficSensor data collection ended. The averages and totals contained in the TrafficSensor data apply to the inclusive interval of 'collection_interval_start_date' to 'collection_interval_end_date'"
+            },
+            "average_speed_kph": {
+              "type": "number",
+              "minimum": 0,
+              "description": "The average speed of vehicles across all lanes over the collection interval in kilometers per hour"
+            },
+            "volume_vph": {
+              "type": "number",
+              "minimum": 0,
+              "description": "The rate of vehicles passing by the sensor during the collection interval in vehicles per hour"
+            },
+            "occupancy_percent": {
+              "type": "number",
+              "minimum": 0,
+              "description": "The percent of time the roadway section monitored by the sensor was occupied by a vehicle over the collection interval"
+            },
+            "lane_data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TrafficSensorLaneData"
+              }
+            }
+          },
+          "required": [
+            "core_details",
+            "collection_interval_start_date",
+            "collection_interval_end_date"
+          ]
+        }
+      ]
+    },
+    "TrafficSensorLaneData": {
+      "title": "Traffic Sensor Lane Data",
+      "description": "Data for a single lane measured by a TrafficSensor deployed on the roadway",
+      "properties": {
+        "lane_order": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The lane's position in sequence on the roadway"
+        },
+        "road_event_id": {
+          "type": "string",
+          "description": "The ID of a RoadEventFeature that the measured lane occurs in"
+        },
+        "average_speed_kph": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The average speed of traffic in the lane over the collection interval (in kilometers per hour)"
+        },
+        "volume_vph": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The rate of vehicles passing by the sensor in the lane during the collection interval (in vehicles per hour)"
+        },
+        "occupancy_percent": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The percent of time the lane monitored by the sensor was occupied by a vehicle over the collection interval"
+        }
+      },
+      "required": [
+        "lane_order"
+      ]
+    },
+    "TrafficSignal": {
+      "title": "Traffic Signal",
+      "description": "Describes a temporary traffic signal deployed on a roadway",
+      "properties": {
+        "core_details": {
+          "$ref": "#/definitions/FieldDeviceCoreDetails"
+        },
+        "mode": {
+          "$ref": "#/definitions/TrafficSignalMode"
+        }      
+      }
+    },
+    "ArrowBoardPattern": {
+      "title": "Arrow Board Pattern Enumerated Type",
+      "description": "a list of options for the posted pattern on an ArrowBoard",
+      "enum": [
+        "bidirectional-arrow-flashing",
+        "bidirectional-arrow-static",
+        "blank",
+        "diamonds-alternating",
+        "four-corners-flashing",
+        "left-arrow-flashing",
+        "left-arrow-sequential",
+        "left-arrow-static",
+        "left-chevron-flashing",
+        "left-chevron-sequential",
+        "left-chevron-static",
+        "line-flashing",
+        "right-arrow-flashing",
+        "right-arrow-sequential",
+        "right-arrow-static",
+        "right-chevrons-flashing",
+        "right-chevrons-sequential",
+        "right-chevrons-static",
+        "unknown"
+      ]
+    },
+    "FieldDeviceType": {
+      "title": "Field Device Type Enumerated Type",
+      "description": "The type of field device",
+      "enum": [
+        "arrow-board",
+        "camera",
+        "dynamic-message-sign",
+        "flashing-beacon",
+        "hybrid-sign",
+        "location-marker",
+        "traffic-sensor",
+        "traffic-signal"
+      ]
+    },
+    "FieldDeviceStatus": {
+      "title": "Field Device Status Enumerated Type",
+      "description": "The operational status of a field device",
+      "enum": ["ok", "warning", "error", "unknown"]
+    },
+    "FlashingBeaconFunction": {
+      "title": "Flashing Beacon Function Enumerated Type",
+      "description": "Options for what a FlashingBeacon is being used to indicate",
+      "enum": ["vehicle-entering", "queue-warning", "reduced-speed", "workers-present"]
+    },
+    "HybridSignDynamicMessageFunction": {
+      "title": "Hybrid Sign Dynamic Message Function Enumerated Type",
+      "description": "Options for the function of the dynamic message displayed by the electronic display on a HybridSign",
+      "enum": ["speed-limit", "travel-time", "other"]
+    },
+    "MarkedLocationType": {
+      "title": "Marked Location Type Enumerated Type",
+      "description": "Options for what a MarkedLocation can mark, such as the start or end of a road event",
+      "enum": [
+        "afad",
+        "delineator",
+        "flagger",
+        "lane-shift",
+        "lane-closure",
+        "personal-device",
+        "temporary-traffic-signal",
+        "ramp-closure",
+        "road-closure",
+        "road-event-start",
+        "road-event-end",
+        "work-zone-start",
+        "work-zone-end"
+      ]
+    },
+    "TrafficSignalMode": {
+      "title": "Traffic Signal Mode Enumerated Type",
+      "description": "Describes the current operating mode of a TrafficSignal",
+      "enum": [
+        "blank",
+        "flashing-red",
+        "flashing-yellow",
+        "fully-actuated",
+        "manual",
+        "pre-timed",
+        "semi-actuated",
+        "unknown"
+      ]
+    }
+  }
+}

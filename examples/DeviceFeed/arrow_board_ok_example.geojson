@@ -5,7 +5,7 @@
     "contact_name": "Robert Vendor",
     "contact_email": "robert.vendor@testvendor.com",
     "update_frequency": 60,
-    "version": "4.0",
+    "version": "4.1",
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "data_sources": [
       {
@@ -33,11 +33,12 @@
           ],
           "device_status": "ok",
           "has_automatic_location": true,
+          "road_direction": "northbound",
           "name": "Arrow Board 1",
+          "is_moving": false,
           "update_date": "2021-12-06T14:54:12Z"
         },
         "pattern": "right-arrow-flashing",
-        "is_moving": false,
         "is_in_transport_position": false
       },
       "geometry": {
