@@ -40,7 +40,7 @@ The following objects are used to describe events ocurring on roadways (road eve
 
 Object | Description
 --- | ---
-[CDSReference](/spec-content/objects/CDSReference.md) | A reference to an impacted curb zone from the work zone road event.
+[CdsCurbZoneReference](/spec-content/objects/CdsCurbZoneReference.md) | A reference to an impacted curb zone from the work zone road event.
 [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [Relationship](/spec-content/objects/Relationship.md) | Identification of both sequential and hierarchical relationships between road events and other entities.
