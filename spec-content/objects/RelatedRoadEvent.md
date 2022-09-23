@@ -1,5 +1,5 @@
 ### RelatedRoadEvent Object
-The RelatedRoadEvent object identifies a road event that is related to the road event that the RelatedRoadEvent object occurs on.
+The `RelatedRoadEvent` object identifies a road event that is related to the road event that the `RelatedRoadEvent` object occurs on.
 
 Property Name | Value | Description | Conformance | Notes
 --- | --- | --- | --- | ---

@@ -32,6 +32,7 @@ Object | Description
 [FeedInfo](/spec-content/objects/FeedInfo.md) | Information about a WZDx feed such as metadata, contact information, and data sources.
 [DeviceFeed](/spec-content/objects/DeviceFeed.md) | The root (highest-level) object of **WZDx Device Feed** GeoJSON document.
 [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) | The root (highest-level) object of a **WZDx Work Zone Feed** GeoJSON document.
+
 #### Road Events
 The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
 
@@ -46,7 +47,7 @@ Object | Description
 [TypeOfWork](/spec-content/objects/TypeOfWork.md) | A description of the type of work being done in a road event and an indication of if that work will result in an architectural change to the roadway.
 [WorkerPresence](/spec-content/objects/WorkerPresence.md) | Information about the presence of workers in the road event area.
 [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) | A work zone road event including where, when, and what activities are taking place within a work zone on a roadway. 
-[Relationship](/spec-content/objects/Relationship.md) (DEPRECATED)| *All properties that use this object are deprecated so this object will be removed in a future release, use `related_road_events` instead.* Identification of both sequential and hierarchical relationships between road events and other entities.
+[Relationship](/spec-content/objects/Relationship.md) (DEPRECATED)| *All properties that use this object are deprecated so this object will be removed in a future release, use [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) instead.* Identification of both sequential and hierarchical relationships between road events and other entities.
 
 #### Field Devices
 The following objects are used to describe deployed roadside [ITS](https://en.wikipedia.org/wiki/Intelligent_transportation_system) devices:
@@ -56,9 +57,9 @@ Object | Description
 [ArrowBoard](/spec-content/objects/ArrowBoard.md) | An electronic, connected arrow board which can display an arrow pattern to direct traffic.
 [Camera](/spec-content/objects/Camera.md) | A camera device deployed in the field, capable of capturing still images.
 [DynamicMessagesSign](/spec-content/objects/DynamicMessageSign.md) | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
-[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
-[FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices.
+[FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
+[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
@@ -78,7 +79,8 @@ The object diagram below indicates the relationship between the data objects use
 ![WZDx DeviceFeed object diagram](/images/WZDx_DeviceFeed_object_diagram.png)
 
 #### Updating the object diagram
-When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open `/images/WZDx_WorkZoneFeed_object_diagram.drawio` or `/images/WZDx_DeviceFeed_object_diagram.drawio` at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace the appropriate file in the `/images` directory with the new file. Additionally **export** the diagram as a PNG, using the diagram name as the file name, and replace `/images/WZDx_WorkZoneFeed_object_diagram.png` or `/images/WZDx_DeviceFeed_object_diagram.png` with the new image file.
+When making changes to the specification, the object diagram needs to be updated as well. To modify the object diagram, open [/images/WZDx_WorkZoneFeed_object_diagram.drawio](/images/WZDx_WorkZoneFeed_object_diagram.png) or [/images/WZDx_DeviceFeed_object_diagram.drawio](/images/WZDx_DeviceFeed_object_diagram.png)
+ at https://app.diagrams.net (or any drawio editor). Make necessary changes to the diagram using the web editor, then download the `drawio` file and replace the appropriate file in the `/images` directory with the new file. Additionally **export** the diagram as a PNG, using the diagram name as the file name, and replace `/images/WZDx_WorkZoneFeed_object_diagram.png` or `/images/WZDx_DeviceFeed_object_diagram.png` with the new image file.
 
 ## Enumerated Types
 Many object properties are restricted to a finite set of values defined by an enumerated type. The enumerations for each enumerated type as well as what object properties it is used by is described in its own file in the [enumerated-types](/spec-content/enumerated-types) directory.
@@ -98,7 +100,6 @@ Enumerated Type | Description
 [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area.
 [RelatedRoadEventType](/spec-content/enumerated-types/RelatedRoadEventType.md) | The type of relationship with a road event that is being identified
 [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) | The type of vehicle restriction on a roadway or lane.
-[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) | An indication of how a geographical coordinate was defined.
 [UnitOfMeasurement](/spec-content/enumerated-types/UnitOfMeasurement.md) | Unit of measurement (e.g. "pounds", "centimeters").
 [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction.
 [WorkerPresenceConfidence](/spec-content/enumerated-types/WorkerPresenceConfidence.md) | High-level description of the feed publisher's confidence in worker presence.
@@ -106,6 +107,7 @@ Enumerated Type | Description
 [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Methods for how worker presence in a work zone event area is determined.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* The status of a road event.
+[SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* A measure of how accurate a date-time is.
 
 #### Field Devices

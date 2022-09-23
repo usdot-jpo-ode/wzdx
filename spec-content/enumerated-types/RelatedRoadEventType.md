@@ -3,8 +3,6 @@ Describes how a road event is related to the road event that the RelatedRoadEven
 
 In many cases, the related road event type only refers to the first road event as the corresponding "work zone" may encompass multiple road events.  In these situations, end users will need to use the "first" road event and iterate through all linked road events to find all related road events.
 
-
-
 Value | Description
 --- | ---
 `first-in-sequence` | The first road event in a sequence of road events that together describe a full work zone or detour
@@ -15,7 +13,6 @@ Value | Description
 `related-detour` | The first road event of related detours (i.e. not part of a sequence of road events)
 `planned-moving-operation` | The first road event of a related planned moving operation work zones (i.e. not part of a sequence of road events)
 `active-moving-operation` | The first road event of a related active moving operation work zones (i.e. not part of a sequence of road events)
-
 
 #### Used By
 Property | Object

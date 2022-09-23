@@ -2,8 +2,7 @@
 This directory contains example GeoJSON documents from WZDx data feeds. The examples cover a range of common scenarios. There are examples for the Work Zone Feed and Device Feed contained within the respective subdirectories.
 
 ## Work Zone Feed Examples
-The following WZDx Work Zone Feed examples represent a variety of common scenarios when creating road events. Most of the examples are modeled after work zone scenarios used in [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. All example scenarios are provided for the `LineString` geometry type as well as one `MultiPoint` geometry type for scenario 1.
-
+The following WZDx Work Zone Feed examples represent a variety of common scenarios when creating road events. Most of the examples are modeled after work zone scenarios used in a [previous WZDx discussion](https://github.com/usdot-jpo-ode/jpo-wzdx/discussions/131). Optional fields are not included in all examples but represented at least once across the various examples. Each scenario is provided as a single GeoJSON file which may contain multiple work zones documenting differences in representing road events at varying levels of complexity. All example scenarios are provided for the `LineString` geometry type as well as one `MultiPoint` geometry type for scenario 1.
 Note:  All annotated and original images used in the example scenarios below are located in the [images folder](/images/) which can be used for future updates. Additional scenario examples images are also located in the folder which may be used for future additional examples.
 
 Below is a summary of each of the example WZDx feeds and detailed differences for each of the road events:
@@ -19,7 +18,7 @@ Below are notes for the Scenario 1 [LineString Example](/examples/WZDxFeed/scena
 - Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_event` object, with [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) of `next-road-event` and `first-road-event` used to indiciate the order of the road events. ("id": `6f57aded-7291-462e-9892-607b2b7d116c`, `8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f`, `e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7`).
 
 ### Scenario 2 - Lane Shift (simple scenario)
-The [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson) is based on the annotated image below which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility.The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
+The [Scenario 2 Example](/examples/WZDxFeed/scenario2_laneshift_linestring_example.geojson) is based on the annotated image below which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility. The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
 
 ![shift_work_zone](/images/lane_shift_example_annotated.png)
 
@@ -43,7 +42,7 @@ The [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.
 
 Below are notes for the [Scenario 4 Example](/examples/WZDxFeed/scenario4_detour_linestring_example.geojson):
 - Single work zone in one direction represented by a single road event ("id": `a15f7570-b7e6-4367-8ad9-3a462eea65dd`) with a detour.
-- Example shows the use of `related_road_events` to connect the detour road events ("id": `cf1092ba-3b8d-4e91-81ef-daa4a98662e1`, `4d151e7d-11d8-4b99-a192-51e189da0de7`, `9436226a-01b0-47ff-8a13-670e87549458`) to the work zone road event using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
+- Showing use of `related_road_events` to connect the detour road events ("id": `cf1092ba-3b8d-4e91-81ef-daa4a98662e1`, `4d151e7d-11d8-4b99-a192-51e189da0de7`, `9436226a-01b0-47ff-8a13-670e87549458`) to the work zone road event using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `related-work-zone` and `related-detour`
 - Also uses `related_road_events` to represent the sequence of the three detour road events.
 - Shows the use of both the work zone and detour road event objects in the same feed.
 
@@ -53,8 +52,8 @@ The [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_examp
 Below are notes for the [Scenario 5 Example](/examples/WZDxFeed/scenario5_recurring_linestring_example.geojson):
 - Simple work zone but with a recurring component.
 - Four road events: assuming that the first day is currently an active event (day 1, "id": `a2100c5b-58b9-4593-992d-0795bafe3d8d`) and three additional events ("id": `d63ab07b-98e8-41bd-b4dd-557727320056`, `ff3f888f-7e11-4a5b-8c04-3182a459a756`, `b04c1df4-f9d0-4a63-995d-38bfd83931e9`) for later dates with a pending status.
-- The active work zone event demonstrates value of verified location and time.
-- The `related_road_events` object is used to show all road events are related and the order of events using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-occurrence` and `next-occurrence`
+- The `active` work zone event demonstrates value of verified location and time.
+- The `related_road_events` property is used to show all road events are related and the order of events using the [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) values of `first-occurrence` and `next-occurrence`
 
 ### Local Access Only (bidirectional work zone)
 The [local access only example](/examples/WorkZoneFeed/local_access_only_bidirectional_linestring_example.geojson) shows a basic work zone that keeps all lanes open but places restrictions to only local traffic.

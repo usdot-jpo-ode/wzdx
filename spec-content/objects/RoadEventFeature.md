@@ -1,8 +1,6 @@
 # RoadEventFeature Object (GeoJSON Feature)
 The `RoadEventFeature` object is the container object for a WZDx road event ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) or [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md). The `RoadEventFeature` object is an instance of a [GeoJSON Feature](https://tools.ietf.org/html/rfc7946#section-3.2).
 
-This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/objects/RoadEventFeature.md). 
-
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---

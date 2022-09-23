@@ -7,3 +7,8 @@ Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details of the traffic signal device. | Required | This property occurs on all field devices.
 `mode` | [TrafficSignalMode](/spec-content/enumerated-types/TrafficSignalMode.md) | The current operating mode of the traffic signal. | Required | 
+
+## Used By
+Property | Object
+--- | ---
+`properties` | [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)
