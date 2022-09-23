@@ -13,7 +13,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v4.0 (Dec 2021)](#wzdx-v40-december-2021)
+    - [Release v4.1 (Sept 2022)](#wzdx-v41-september-2022)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
@@ -26,9 +26,10 @@ WZDx defines the structure and content of multiple distinct data feeds. Each fee
 ### List of Data Feeds
 Feed Name | Description | Producer | Consumer | Uses | Content
 --- | --- | --- | --- | --- | ---
-`WZDxFeed` | Provides high-level information about events occurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed. | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
-`RoadRestrictionFeed` | Provides information about sections of roadways that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type. | Transportation Authorities like Tribal, Local, State, or Federal Agencies. | Traveling public via third parties such as mapping companies and CAVs. | Increased awareness; Route planning; Driver, Passenger, and Road-User Safety; Increased Efficiency; Reduced Damage to Infrastructure. | Restriction road events (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
-`SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+**Work Zone Feed** | Provides high-level information about events occurring on roadways (called "road events") related to work zones that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The Work Zone Feed is the original work zone data exchange feed and was previously named "WZDxFeed". | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
+**Device Feed** | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a Work Zone Feed with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+
+The WZDx Specification has also been extended to define data feeds for representing other types of road events, such as restrictions (included in WZDx v4.0 as the `RoadRestrictionFeed`), crashes, disasters, and strong winds. The specification for those feeds are available at the [Transportation Data Exchange (TDx) GitHub site](https://github.com/usdot-jpo-ode/TDx). 
 
 ## Repostitory Organization
 The WZDx Specification repository contains several files and subdirectories.
@@ -83,57 +84,74 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.0 (December 2021)
-WZDx version 4.0 implements clean up and small additions in functionality to the WZDx feed and adds definitions for two new feeds, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md) and [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md). Until version 4.0, the WZDx specification defined only one feed, the [WZDxFeed](/spec-content/objects/WZDxFeed.md).
+### WZDx v4.1 (September 2022)
 
-*For detailed release information, see [RELEASES.md](/RELEASES.md)*
+#### New Functionality
+- Add `is_moving` boolean property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
+- Add `road_direction` property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow providing the direction of the roadway that a field device is associated with.
+- Recommend using Universally Unique Identifiers (UUID) for the `id` property of the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md), [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md), and [FeedDataSource](/spec-content/objects/FeedDataSource.md), noting that a UUID may be required in the next major release.
+- Add `name` property to [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
+- Add the following values to the [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) enumerated type:
+    - `personal-device`
+    - `ramp-closure`
+    - `road-closure`
+    - `delineator`
+- Add the following values to the [Direction](/spec-content/enumerated-types/Direction.md) enumerated type:
+    - `undefined`
+    - `unknown`
+- Add `no-passing` to the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type.
+- Add a `sign_text` property to the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object.
+- Add a [TrafficSignal](/spec-content/objects/TrafficSignal.md) object to allow represent temporary traffic signals in a WZDx Device Feed.
+- Add `two-way-center-turn-lane` to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type to replace the existing `center-left-turn-lane` with a more generic value.
 
-#### Features
-- Add values to the [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) enumerated type.
-- Allow restrictions with a value and unit to be provided at the road event level.
-- Add values to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
-- Define a new data feed, the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md), to enable providing a feed of restrictions on roadways, such as bridge clearances.
-- Define a new data feed, the [SwzDeviceFeed](/spec-content/objects/SwzDeviceFeed.md), to enable equipment vendors and manufacturers to provide high-level information about deployed field devices in work zones.
-- Rename the `workers_present` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to  `worker_presence`; change the type from "boolean" to a new [WorkerPresence](/spec-content/objects/WorkerPresence.md) object which enables providing more nuanced information about worker presence in work zones.
-  
 #### Refactoring
-- Separate the v3.1 RoadEvent object into [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) (details that are shared by all specific types of road events) and specific types of road events ([WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md), [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md), and [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)) which each contain the `RoadEventCoreDetails` via a `core_details` property; update the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) `properties` property to be one of the specific road events types.
-- Move the `location_method` property from the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object.
-- Change the `reduced_speed_limit` property on the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) to `reduced_speed_limit_kph`; change its type from "integer" to "number" and clarify that the value should be in kilometers per hour.
-- Deprecate the `lane_number` property on the [Lane](/spec-content/objects/Lane.md) object.
-- Deprecate the `lrs_type` and `lrs_url` properties on the [FeedDataSource](/spec-content/objects/FeedDataSource.md) object.
-- Remove the deprecated value `alternating-one-way` from the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
-- Remove all deprecated properties from the road event (RoadEvent in previous versions; [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) in 4.0).
-- Require the `road_names` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md).
-- Require the `id` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md).
-- Refine the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type.
-- Deprecate the `location_verify_method` property on the [FeedDataSource](/spec-content/objects/FeedDataSource.md).
-- Update the [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) enumerated type value descriptions to clarify that verified work zone locations should use a GPS enabled device.
+- Deprecate `is_moving` property on the [ArrowBoard](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/ArrowBoard.md); use the new `is_moving` on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) instead.
+- Change the conformance of the `road_event_id` property on the [TrafficSensorLaneData](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensorLaneData.md) from "Required" to "Optional" to allow providing lane-level data without a defined road event.
+- Deprecate the `road_event_feed_info` property on the [WorkZoneFeed](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/WorkZoneFeed.md) object; use the new `feed_info` property instead.
+- Add `is_start_position_verified` and `is_end_position_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end positions are verified and clarify what verified means; these properties replace `beginning_accuracy` and `ending_accuracy`.
+- Deprecate the `beginning_accuracy` and `ending_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_position_verified` and `is_end_position_verified` properties instead.
+- Add `is_start_date_verified` and `is_end_date_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end date and times are verified and clarify what verified means; these properties replace `start_date_accuracy` and `end_date_accuracy`.
+- Deprecate the `start_date_accuracy` and `end_date_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_date_verified` and `is_end_date_verified` properties instead.
+- Deprecate the `event_status` property on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object.
+- Change the conformance of the `road_names` property on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) from "Required" to "Optional".
+- Deprecate the `traffic-signal` value in the [MarkedLocationType](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/enumerated-types/MarkedLocationType.md) enumerated type; use the new [TrafficSignal](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/TrafficSignal.md) object instead.
+- Deprecate the `center-left-turn-lane` value in the [LaneType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/LaneType.md) enumerated type; use the new `two-way-center-turn-lane` instead.
+- Add a `related_road_events` property (and new supporting object [RelatedRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RelatedRoadEvent.md) and enumerated type [RelatedRoadEventType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/RelatedRoadEventType.md)) to the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events; this replaces the [Relationship](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/Relationship.md) object concept.
+- Deprecate the `relationship` property on the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md); use the new `related_road_events` property instead.
+
+#### Cleanup
+- Change the type of the `average_speed_kph`, `volume_vph`, and `occupancy_percent` properties on the [TrafficSensor](/spec-content/objects/TrafficSensor.md) and [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) object from "Integer" to "Number"
+- Change the allowed minimum value for `average_speed_kph` on [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) from `1` to `0`.
+- Add a `feed_info` property to the [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) object to replace the `road_event_feed_info`.
+- Expand the description of the `update_date` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to clarify what the value represents.
+- Remove the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) (it moved to [usdot-jpo-ode/TDx](https://github.com/usdot-jpo-ode/TDx)).
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx v4.0 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx v4.1 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf).
-2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
+2. Learn about using GitHub as a [tool for collaboration and support](#contributions).
 3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
 4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
-5. Validate your feed output using the respective [JSON Schema](#json-schemas).
-6. Publish your feed and tell us about it via avdx@dot.gov.
+5. Consider using the [IBI.WZDx](https://github.com/ibi-group/IBI.WZDx) .NET class library to facilitate development of a feed.
+6. Validate your feed output using the respective [JSON Schema](#json-schemas).
+7. Publish your feed and tell us about it via avdx@dot.gov.
 
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
 
-### Current Version (4.0)
+### Current Version (4.1)
+- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/SwzDeviceFeed.json)
+
+### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
-
-### Previous Version
-- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
-- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
 - [WZDx v3.1 WZDxFeed](/schemas/3.1/WZDxFeed.json)
-
+- [WZDx v3.0 WZDxFeed](/schemas/3.0/WZDxFeed.json)
+- [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
 ## Contributions
 
 **How do I contribute to the WZDx Specification?**
