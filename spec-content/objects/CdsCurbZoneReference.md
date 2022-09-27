@@ -1,5 +1,5 @@
 # CdsCurbZoneReference Object
-The `CdsCurbZoneReference` object describes a specific [Curb Zone](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-zone) that is impacted by a work zone via an external reference to a Curb Data Specification [Curb API](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-data-specification-curbs-api). This allows WZDx users to reference the CDS Curbs API to see full details of the impact.
+The `CdsCurbZoneReference` object describes a specific [Curb Zone](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-zone) that is impacted by a work zone via an external reference to a Curb Data Specification [Curb API](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-data-specification-curbs-api).
 
 Read more about the Open Mobility Foundation's [Curb Data Specification](https://www.openmobilityfoundation.org/about-cds).
 
