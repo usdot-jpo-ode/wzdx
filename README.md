@@ -143,7 +143,7 @@ The WZDx Specification defines a JSON schema for each feed within the [schemas](
 
 ### Current Version (4.1)
 - [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
-- [WZDx v4.1 Device Feed](/schemas/4.1/SwzDeviceFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
 
 ### Previous Versions
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
