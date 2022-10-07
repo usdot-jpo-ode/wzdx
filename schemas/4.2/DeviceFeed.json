@@ -533,7 +533,11 @@
         "mode": {
           "$ref": "#/definitions/TrafficSignalMode"
         }      
-      }
+      },
+      "required": [
+        "core_details",
+        "mode"
+      ]
     },
     "ArrowBoardPattern": {
       "title": "Arrow Board Pattern Enumerated Type",
