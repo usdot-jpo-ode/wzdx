@@ -5,7 +5,7 @@
       "contact_name": "Frederick Francis Feedmanager",
       "contact_email": "fred.feedmanager@testdot.gov",
       "update_frequency": 60,
-      "version": "4.1",
+      "version": "4.2",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "data_sources": [
          {
@@ -44,8 +44,8 @@
             },
             "beginning_milepost": 98.42,
             "ending_milepost": 101.50,
-            "is_start_position_verified": "true",
-            "is_end_position_verified": "false",
+            "is_start_position_verified": true,
+            "is_end_position_verified": false,
             "start_date": "2010-01-01T01:03:01Z",
             "end_date": "2010-06-30T01:00:00Z",
             "location_method": "channel-device-method",
