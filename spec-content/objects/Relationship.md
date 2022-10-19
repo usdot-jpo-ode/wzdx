@@ -1,6 +1,8 @@
 # Relationship Object
 The `Relationship` object is used to identify both sequential and hierarchical relationships between a road events and other entities. For example, a relationship can be used to link multiple road events to a common "parent", such as a project or phase, or identify a sequence of road events that make up a larger work zone.
 
+#### *All properties that use the Relationship object are deprecated as of WZDx v4.2 and along with those properties it will be removed from the specification in the next major release.*
+
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---

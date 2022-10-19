@@ -13,7 +13,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v4.1 (Aug 2022)](#wzdx-v41-august-2022)
+    - [Release v4.2 (Dec 2022)](#wzdx-v42-december-2022)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
@@ -26,9 +26,10 @@ WZDx defines the structure and content of multiple distinct data feeds. Each fee
 ### List of Data Feeds
 Feed Name | Description | Producer | Consumer | Uses | Content
 --- | --- | --- | --- | --- | ---
-`WZDxFeed` | Provides high-level information about events occurring on roadways (called "road events"), primarily work zones, that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The `WZDxFeed` is the original work zone data exchange feed. | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
-`RoadRestrictionFeed` | Provides information about sections of roadways that have restrictions. Restriction types described by this specification are listed in the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type. | Transportation Authorities like Tribal, Local, State, or Federal Agencies. | Traveling public via third parties such as mapping companies and CAVs. | Increased awareness; Route planning; Driver, Passenger, and Road-User Safety; Increased Efficiency; Reduced Damage to Infrastructure. | Restriction road events (see [RestrictionRoadEvent](/spec-content/objects/RestrictionRoadEvent.md)).
-`SwzDeviceFeed` | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Smart work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a `WZDxFeed` with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+**Work Zone Feed** | Provides high-level information about events occurring on roadways (called "road events") related to work zones that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The Work Zone Feed is the original work zone data exchange feed and was previously named "WZDxFeed". | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
+**Device Feed** | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a Work Zone Feed with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+
+The WZDx Specification has also been extended to define data feeds for representing other types of road events, such as restrictions (included in WZDx v4.0 as the `RoadRestrictionFeed`), crashes, disasters, and strong winds. The specification for those feeds are available at the [Transportation Data Exchange (TDx) GitHub site](https://github.com/usdot-jpo-ode/TDx). 
 
 ## Repostitory Organization
 The WZDx Specification repository contains several files and subdirectories.
@@ -83,30 +84,39 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.1 (August 2022)
+### WZDx v4.2 (December 2022)
 
+#### New Functionality
+<TODO>
+
+#### Refactoring
+<TODO>
+
+#### Cleanup
 <TODO>
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx v4.0 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx v4.2 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf).
-2. Learn about using GitHub as a [tool for collaboration and support](/create-feed/README.md#collaborate-via-github).
+2. Learn about using GitHub as a [tool for collaboration and support](#contributions).
 3. Read [Creating a WZDx feed](/Creating_a_WZDx_Feed.md) which contains information about creating a WZDx data feed, such as the feed format, business rules, and validation tools.
 4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
-5. Validate your feed output using the respective [JSON Schema](#json-schemas).
-6. Publish your feed and tell us about it via avdx@dot.gov.
+5. Consider using the [IBI.WZDx](https://github.com/ibi-group/IBI.WZDx) .NET class library to facilitate development of a feed.
+6. Validate your feed output using the respective [JSON Schema](#json-schemas).
+7. Publish your feed and tell us about it via avdx@dot.gov.
 
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
 
-### Current Version (4.1)
-- [WZDx v4.1 WZDxFeed](/schemas/4.1/WZDxFeed.json)
-- [WZDx v4.1 SwzDeviceFeed](/schemas/4.1/SwzDeviceFeed.json)
-- [WZDx v4.1 RoadRestrictionFeed](/schemas/4.1/RoadRestrictionFeed.json)
+### Current Version (4.2)
+- [WZDx v4.2 Work Zone Feed](/schemas/4.2/WorkZoneFeed.json)
+- [WZDx v4.2 Device Feed](/schemas/4.2/DeviceFeed.json)
 
 ### Previous Versions
+- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)

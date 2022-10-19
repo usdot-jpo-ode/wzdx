@@ -18,6 +18,7 @@ Value | Description
 `gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced along the segment being described.
 `towing-prohibited` | Towing prohibited along the segment being described.
 `permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited along the segment being described; this applies to annual oversize load permits.
+`no-passing` | Crossing the center line markings for passing is prohibited.
 
 ## Used By
 Property | Object

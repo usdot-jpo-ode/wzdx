@@ -1,0 +1,407 @@
+{
+  "feed_info": {
+    "update_date": "2022-01-01T10:00:00Z",
+    "publisher": "TestDOT",
+    "contact_name": "Frederick Francis Feedmanager",
+    "contact_email": "fred.feedmanager@testdot.gov",
+    "update_frequency": 60,
+    "version": "4.2",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "data_sources": [
+      {
+        "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
+        "organization_name": "Test City 1",
+        "contact_name": "Solomn Soliel Sourcefeed",
+        "contact_email": "solomon.sourcefeed@testcity1.gov",
+        "update_frequency": 300,
+        "update_date": "2022-01-01T08:32:01Z"
+      }
+    ]
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "a2100c5b-58b9-4593-992d-0795bafe3d8d",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
+          "event_type": "work-zone",
+          "related_road_events": [
+            {
+              "type": "next-occurrence",
+              "id": "d63ab07b-98e8-41bd-b4dd-557727320056"
+            }
+          ],
+          "road_names": [
+            "NE 150th Avenue"
+          ],
+          "direction": "westbound",
+          "name": "PLK01012016-Day1",
+          "description": "Scenario 5: work zone with recurring event (day 1).",
+          "creation_date": "2021-12-29T15:37:57Z",
+          "update_date": "2022-01-01T08:32:01Z"
+        },
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "is_start_position_verified": true,
+        "is_end_position_verified": false,
+        "start_date": "2022-01-01T08:30:00Z",
+        "end_date": "2022-01-01T17:00:00Z",
+        "location_method": "channel-device-method",
+        "is_start_date_verified": true,
+        "is_end_date_verified": false,
+        "vehicle_impact": "all-lanes-open",
+        "worker_presence": {
+          "are_workers_present": true,
+          "method": "scheduled",
+          "confidence": "medium",
+          "definition": [
+            "workers-in-work-zone-working",
+            "workers-in-work-zone-not-working",
+            "mobile-equipment-in-work-zone-moving"
+          ]
+        },
+        "reduced_speed_limit_kph": 55,
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "general"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46077919006348,
+            41.83445374967984
+          ],
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ],
+          [
+            -93.51322174072264,
+            41.83502130612205
+          ]
+        ]
+      }
+    },
+    {
+      "id": "d63ab07b-98e8-41bd-b4dd-557727320056",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
+          "event_type": "work-zone",
+          "related_road_events": [
+            {
+              "type": "first-occurrence",
+              "id": "a2100c5b-58b9-4593-992d-0795bafe3d8d"
+            },
+            {
+              "type": "next-occurrence",
+              "id": "ff3f888f-7e11-4a5b-8c04-3182a459a756"
+            }
+          ],
+          "road_names": [
+            "NE 150th Avenue"
+          ],
+          "direction": "westbound",
+          "name": "PLK01012016-Day2",
+          "description": "Scenario 5: work zone with recurring event (day 2).",
+          "creation_date": "2021-12-29T15:37:57Z",
+          "update_date": "2021-12-29T15:37:57Z"
+        },
+        "location_method": "channel-device-method",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "is_start_position_verified": false,
+        "is_end_position_verified": false,
+        "start_date": "2022-01-02T08:00:00Z",
+        "end_date": "2022-01-02T17:00:00Z",
+        "is_start_date_verified": false,
+        "is_end_date_verified": false,
+        "vehicle_impact": "all-lanes-open",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "general"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ff3f888f-7e11-4a5b-8c04-3182a459a756",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
+          "event_type": "work-zone",
+          "related_road_events": [
+            {
+              "type": "first-occurrence",
+              "id": "a2100c5b-58b9-4593-992d-0795bafe3d8d"
+            },
+            {
+              "type": "next-occurrence",
+              "id": "b04c1df4-f9d0-4a63-995d-38bfd83931e9"
+            }
+          ],
+          "road_names": [
+            "NE 150th Avenue"
+          ],
+          "direction": "westbound",
+          "name": "PLK01012016-Day3",
+          "description": "Scenario 5: work zone with recurring event (day 3).",
+          "creation_date": "2021-12-29T15:37:57Z",
+          "update_date": "2021-12-29T15:37:57Z"
+        },
+        "location_method": "channel-device-method",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "is_start_position_verified": false,
+        "is_end_position_verified": false,
+        "start_date": "2022-01-03T08:00:00Z",
+        "end_date": "2022-01-03T17:00:00Z",
+        "is_start_date_verified": false,
+        "is_end_date_verified": false,
+        "vehicle_impact": "all-lanes-open",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "general"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    },
+    {
+      "id": "b04c1df4-f9d0-4a63-995d-38bfd83931e9",
+      "type": "Feature",
+      "properties": {
+        "core_details": {
+          "data_source_id": "4440eb6d-96ee-4d6e-97ea-bbe12d2caf77",
+          "event_type": "work-zone",
+          "related_road_events": [
+            {
+              "type": "first-occurrence",
+              "id": "a2100c5b-58b9-4593-992d-0795bafe3d8d"
+            }
+          ],
+          "road_names": [
+            "NE 150th Avenue"
+          ],
+          "direction": "westbound",
+          "name": "PLK01012016-Day4",
+          "description": "Scenario 5: work zone with recurring event (day 4).",
+          "creation_date": "2021-12-29T15:37:57Z",
+          "update_date": "2021-12-29T15:37:57Z"
+        },
+        "location_method": "channel-device-method",
+        "beginning_cross_street": "NE 72nd Street",
+        "ending_cross_street": "NE 56th Street",
+        "is_start_position_verified": false,
+        "is_end_position_verified": false,
+        "start_date": "2022-01-04T08:00:00Z",
+        "end_date": "2022-01-04T17:00:00Z",
+        "is_start_date_verified": false,
+        "is_end_date_verified": false,
+        "vehicle_impact": "all-lanes-open",
+        "types_of_work": [
+          {
+            "type_name": "roadside-work",
+            "is_architectural_change": false
+          }
+        ],
+        "lanes": [
+          {
+            "order": 1,
+            "status": "open",
+            "type": "general"
+          },
+          {
+            "order": 2,
+            "status": "closed",
+            "type": "shoulder"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.46380472183228,
+            41.8344297683109
+          ],
+          [
+            -93.46654057502747,
+            41.83445374967984
+          ],
+          [
+            -93.46984505653381,
+            41.83450171239077
+          ],
+          [
+            -93.47622871398926,
+            41.83458165016244
+          ],
+          [
+            -93.48343849182129,
+            41.83470155663275
+          ],
+          [
+            -93.49206447601318,
+            41.834813469135725
+          ],
+          [
+            -93.49886655807495,
+            41.8349093939825
+          ],
+          [
+            -93.50240707397461,
+            41.83495735635197
+          ]
+        ]
+      }
+    }
+  ]
+}

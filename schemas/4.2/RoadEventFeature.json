@@ -1,6 +1,6 @@
 
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/RoadEventFeature.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/RoadEventFeature.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Road Event Feature (GeoJSON Feature)",
   "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
@@ -42,7 +42,7 @@
       ]
     },
     "bbox": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/BoundingBox.json"
     }
   },
   "required": ["id","type","properties","geometry"],
@@ -147,13 +147,6 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Lane"
-              }
-            },
-            "impacted_cds_curb_zones": {
-               "description": "One or more references to external CDS Curb Zones",
-               "type": "array",
-               "items": {
-                  "$ref": "#/definitions/CdsCurbZoneReference"
               }
             },
             "event_status": {
@@ -359,7 +352,7 @@
           }
         },
         "direction": {
-          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/Direction.json"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/Direction.json"
         },
         "name": {
           "description": "A human-readable name for the road event",
@@ -523,22 +516,6 @@
         "value": ["unit"]
       }
     },
-    "CdsCurbZoneReference": {
-      "title": "CdsCurbZoneReference",
-      "description": "Impacted CDS Curb Zones from the work zone area",
-      "type": "object",
-      "properties": {
-          "cds_curbs_api_url": {
-            "description": "An identifer for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the curbs api which contains more information about the type of curb zone that is impacted.",
-            "type": "url"
-          },
-          "cds_curb_zone_id": {
-             "description": "The id of a CDS Curb Zone.",
-             "type": "string"
-          }
-      },
-      "required": ["cds_curbs_api_url", "cds_curb_zone_id"]
-  },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
