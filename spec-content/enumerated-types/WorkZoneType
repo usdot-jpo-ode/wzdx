@@ -11,4 +11,4 @@ Value | Description
 ## Used By
 Property | Object
 --- | ---
-`event_status` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
+`work_zone_type` | [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md)
