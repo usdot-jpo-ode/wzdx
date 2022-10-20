@@ -164,6 +164,10 @@
         "firmware_version": {
           "type": "string",
           "description": "The version of firmware the device is using to operate"
+        },
+        "velocity_kph": {
+          "type": "number",
+          "description": "The velocity of the device in kilometers per hour"
         }
       },
       "required": [

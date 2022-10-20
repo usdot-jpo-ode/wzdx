@@ -21,6 +21,7 @@ Name | Type | Description | Conformance | Notes
 `model` | String | The model of the device. | Optional |
 `serial_number` | String | The serial number of the device. | Optional |
 `firmware_version` | String | The version of firmware the device is using to operate. | Optional |
+`velocity_kph` | Number | The velocity of the device in kilometers per hour. | Optional |
 
 ## Used By
 Property | Object
