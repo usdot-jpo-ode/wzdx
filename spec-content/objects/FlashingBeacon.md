@@ -1,5 +1,5 @@
 # FlashingBeacon Object
-The `FlashingBeacon` object describes a flashing warning beacon used to supplement a temporary traffic control device. It is mounted on a sign or channelizing device that is used to indicate a warning condition and capture driver attention.
+The `FlashingBeacon` object describes a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
 
 The `FlashingBeacon` is a type of field device; it has a `core_details` property which contains the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) and exists within a [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md).
 

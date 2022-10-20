@@ -59,7 +59,7 @@ Object | Description
 [DynamicMessagesSign](/spec-content/objects/DynamicMessageSign.md) | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices.
 [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
-[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing warning beacon used to supplement a temporary traffic control device. It is mounted on a sign or channelizing device that is used to indicate a warning condition and capture driver attention.
+[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | Describes a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
 [HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
