@@ -73,7 +73,7 @@ WZDx version 4.0 implements clean up and small additions in functionality to the
     - `ArrowBoard`: An electronic, connected arrow board which can display an arrow pattern to direct traffic.
     - `Camera`: A camera device deployed in the field, capable of capturing still images.
     - `DynamicMessageSign`: An electronic traffic sign deployed on the roadway, used to provide information to travelers.
-    - `FlashingBeacon`: A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
+    - `FlashingBeacon`: A flashing warning beacon used to supplement a temporary traffic control device. It is mounted on a sign or channelizing device that is used to indicate a warning condition and capture driver attention.
     - `HybridSign`: A hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers.
     - `LocationMarker`: Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
     - `TrafficSensor`: A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
