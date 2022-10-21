@@ -149,6 +149,13 @@
                 "$ref": "#/definitions/Lane"
               }
             },
+            "impacted_cds_curb_zones": {
+               "description": "Reference to external CDS Curb Zones impacted by the work zone.",
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/CdsCurbZonesReference"
+              }
+            },
             "event_status": {
               "description": "**DEPRECATED**",
               "$ref": "#/definitions/EventStatus"
