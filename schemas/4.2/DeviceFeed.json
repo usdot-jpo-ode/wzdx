@@ -66,6 +66,9 @@
               "$ref": "#/definitions/LocationMarker"
             },
             {
+              "$ref": "#/definitions/TemporaryTrafficControlZoneSign"
+            },
+            {
               "$ref": "#/definitions/TrafficSensor"
             }
           ]
@@ -427,6 +430,46 @@
       },
       "required": ["type"]
     },
+    "TemporaryTrafficControlZoneSign": {
+      "title": "Temporary Traffic Control Zone Sign",
+      "description": "A static, non-electronic sign that conveys both general and specific messages by means of words, symbols, and/or arrows (see definition in MUTCD Section 6F.02 General Characteristics of Signs)",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "temporary-traffic-control-zone-sign"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
+        },
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "mutcd_sign_designation": {
+              "type": "string",
+              "description": "The Sign Designation as described in MUTCD Table 6F-1. Temporary Traffic Control Zone Sign and Plaque Sizes"
+            },
+            "mutcd_sign_name": {
+              "type": "string",
+              "description": "The human-readable name that accompanies the `mutcd_sign_designation` as described in MUTCD Table 6F-1. Temporary Traffic Control Zone Sign and Plaque Sizes"
+            },
+            "variable_sign_content": {
+              "type": "string",
+              "description": "Additional content on the sign such as a speed, dimension, distance, or direction"
+            }
+          },
+          "required": ["core_details", "mutcd_sign_designation"]
+        }
+      ]
+    },
     "TrafficSensor": {
       "title": "Traffic Sensor Field Device",
       "description": "A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval",
@@ -574,6 +617,7 @@
         "flashing-beacon",
         "hybrid-sign",
         "location-marker",
+        "temporary-traffic-control-zone-sign",
         "traffic-sensor",
         "traffic-signal"
       ]
