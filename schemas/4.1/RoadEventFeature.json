@@ -149,13 +149,6 @@
                 "$ref": "#/definitions/Lane"
               }
             },
-            "impacted_cds_curb_zones": {
-               "description": "One or more references to external CDS Curb Zones",
-               "type": "array",
-               "items": {
-                  "$ref": "#/definitions/CdsCurbZoneReference"
-              }
-            },
             "event_status": {
               "description": "**DEPRECATED**",
               "$ref": "#/definitions/EventStatus"
