@@ -516,6 +516,22 @@
         "value": ["unit"]
       }
     },
+     "CurbZonesReference": {
+      "title": "CdsCurbZonesReference",
+      "description": "Specific CDS Curb Zones that are impacted by a work zone",
+      "type": "object",
+      "properties": {
+          "cds_curbs_api_url": {
+            "description": "An identifer for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the curbs api which contains more information about the type of curb zone that is impacted. A url for each zone is not required",
+            "type": "url"
+          },
+          "cds_curb_zone_id": {
+             "description": "A list of CDS Curb Zone ids",
+             "type": "array"
+          }
+      },
+      "required": ["cds_curbs_api_url", "cds_curb_zones_id"]
+  },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
