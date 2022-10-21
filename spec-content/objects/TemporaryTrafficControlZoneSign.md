@@ -8,8 +8,8 @@ Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
 `core_details` | [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details of the field device shared by all field devices types, not specific to a temporary traffic control zone sign. | Required | This property appears on all field devices.
 `mutcd_sign_designation` | String | The "Sign Designation" as described in [MUTCD Table 6F-1. Temporary Traffic Control Zone Sign and Plaque Sizes](https://mutcd.fhwa.dot.gov/htm/2009/part6/part6f.htm) "Sign Designation" column. | Required |
-`mutcd_sign_name` | String | The human-readable name that accopanies the `mutcd_sign_designation` as described in [MUTCD Table 6F-1. Temporary Traffic Control Zone Sign and Plaque Sizes](https://mutcd.fhwa.dot.gov/htm/2009/part6/part6f.htm) "Sign or Plaque" column. | Optional |
-`variable_sign_content` | String | Additional content on the sign for signs that is not explicit by the `mutcd_sign_designation` such as a speed, dimension, distance, or direction. | Optional | For example, if `mutcd_sign_designation` is `"W7-3aP"`, `variable_sign_content` could be `"5"`.
+`mutcd_sign_name` | String | The human-readable name that accompanies the `mutcd_sign_designation` as described in [MUTCD Table 6F-1. Temporary Traffic Control Zone Sign and Plaque Sizes](https://mutcd.fhwa.dot.gov/htm/2009/part6/part6f.htm) "Sign or Plaque" column. | Optional | Values of "XX" in the MUTCD "Sign or Plaque" column should be replaced by the actual value on the sign.
+`variable_sign_content` | String | Additional content on the sign such as a speed, dimension, distance, or direction. | Optional | Variable values are often shown in the MUTCD sign name with "XX", such as "Next XX Miles (plaque)" for sign designation `"W7-3aP"`. For example, if `mutcd_sign_designation` is `"W7-3aP"`, `variable_sign_content` of `"5"` would indicate that the sign reads "5 miles.
 
 ## Used By
 Property | Object
