@@ -8,6 +8,8 @@ Value | Description
 `eastbound` | Road flow is in the eastbound direction
 `southbound` | Road flow is in the southbound direction
 `westbound` | Road flow is in the westbound direction
+`inner-loop` | Road flow is in the clockwise direction of a ring road or beltway.
+`outer-loop` | Road flow is in the counter-clockwise direction of a ring road or beltway.
 `undefined` | Road flow does not have a signed direction. For a [RoadEventFeature](/spec-content/objects/RoadEventFeature.md), the first and last coordinates in the feature's geometry represent the beginning and end of the road event in the direction of travel it impacts.
 `unknown` | Road flow may have a signed direction, but the affected direction of travel is not known
 
