@@ -554,7 +554,7 @@
           },
           "required": [
             "core_details",
-            "mode",
+            "mode"
           ]
         }
       ]
