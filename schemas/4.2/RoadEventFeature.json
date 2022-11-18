@@ -150,7 +150,7 @@
               }
             },
             "impacted_cds_curb_zones": {
-               "description": "A reference to one or more CDS curb zones that are impacted by road work.",
+               "description": "A list of references to external CDS Curb Zones impacted by the work zone.",
                "type": "array",
                "items": {
                   "$ref": "#/definitions/CdsCurbZonesReference"
