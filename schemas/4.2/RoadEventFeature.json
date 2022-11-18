@@ -150,7 +150,7 @@
               }
             },
             "impacted_cds_curb_zones": {
-               "description": "Reference to external CDS Curb Zones impacted by the work zone.",
+               "description": "A reference to one or more CDS curb zones that are impacted by road work.",
                "type": "array",
                "items": {
                   "$ref": "#/definitions/CdsCurbZonesReference"
@@ -523,21 +523,24 @@
         "value": ["unit"]
       }
     },
-     "CurbZonesReference": {
+     "CdsCurbZonesReference": {
       "title": "CdsCurbZonesReference",
-      "description": "Specific CDS Curb Zones that are impacted by a work zone",
+      "description": "A reference to one or more CDS curb zones that are impacted by road work",
       "type": "object",
       "properties": {
-          "cds_curbs_api_url": {
-            "description": "An identifer for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the curbs api which contains more information about the type of curb zone that is impacted. A url for each zone is not required",
-            "type": "url"
-          },
-          "cds_curb_zone_id": {
+          "cds_curb_zone_ids": {
              "description": "A list of CDS Curb Zone ids",
-             "type": "array"
+             "type": "array",
+             "items": {
+                "type": "string"
+             }
+          },
+          "cds_curbs_api_url": {
+            "description": "An identifier for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the main curbs API that contains detailed information about each curb zone identified in cds_curb_zone_ids.",
+            "type": "url"
           }
       },
-      "required": ["cds_curbs_api_url", "cds_curb_zones_id"]
+      "required": ["cds_curb_zone_ids", "cds_curbs_api_url"]
   },
     "WorkerPresence": {
       "title": "Worker Presence",
