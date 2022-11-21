@@ -1,8 +1,6 @@
 # RestrictionType Enumerated Type
 The type of vehicle restriction on a roadway.
 
-This enumerated type is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/enumerated-types/RestrictionType.md).
-
 ## Values
 Value | Description
 --- | ---
