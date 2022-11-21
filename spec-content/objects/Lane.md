@@ -1,8 +1,6 @@
 # Lane Object
 The `Lane` object describes an individual lane on the roadway within a road event.
 
-This object is also used by the [RoadRestrictionFeed](https://github.com/usdot-jpo-ode/TDx/spec-content/objects/Lane.md). 
-
 ## Properties
 Name | Type | Description | Conformance | Notes
 --- | --- | --- | --- | ---
