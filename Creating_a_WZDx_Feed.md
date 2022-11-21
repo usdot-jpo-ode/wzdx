@@ -34,7 +34,6 @@ The following business rules help assure a standardized and interpretable use of
 
 ## Implementation Guidance
 
-- Feed producers should include a completed road event with a verified start and end date in a public feed for a at least an hour or one feed refresh cycle (whichever is longer) to help inform consumers that the work zone has officially ended.
 - Feed producers should consider including a completed road event with a verified start and end date in a public feed for a at least an hour or one feed refresh cycle (whichever is longer) to help inform consumers that the work zone has officially ended.
 
 ## Update Guide
