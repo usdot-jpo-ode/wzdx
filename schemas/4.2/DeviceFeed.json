@@ -612,6 +612,7 @@
         "road-closure",
         "road-event-start",
         "road-event-end",
+        "work-truck-with-lights-flashing",
         "work-zone-start",
         "work-zone-end"
       ]
