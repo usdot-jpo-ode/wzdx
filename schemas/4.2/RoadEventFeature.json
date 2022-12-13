@@ -149,6 +149,13 @@
                 "$ref": "#/definitions/Lane"
               }
             },
+            "impacted_cds_curb_zones": {
+               "description": "A list of references to external CDS Curb Zones impacted by the work zone",
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/CdsCurbZonesReference"
+              }
+            },
             "event_status": {
               "description": "**DEPRECATED**",
               "$ref": "#/definitions/EventStatus"
@@ -516,6 +523,26 @@
         "value": ["unit"]
       }
     },
+     "CdsCurbZonesReference": {
+      "title": "CdsCurbZonesReference",
+      "description": "A reference to one or more CDS curb zones that are impacted by road work",
+      "type": "object",
+      "properties": {
+          "cds_curb_zone_ids": {
+             "description": "A list of CDS Curb Zone ids",
+             "type": "array",
+             "items": {
+                "type": "string"
+             }
+          },
+          "cds_curbs_api_url": {
+            "description": "An identifier for the source of the requested CDS Curbs API",
+            "type": "string",
+            "format": "uri"
+          }
+      },
+      "required": ["cds_curb_zone_ids", "cds_curbs_api_url"]
+  },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
