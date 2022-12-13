@@ -1,6 +1,6 @@
 
 {
-  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/RoadEventFeature.json",
+  "$id": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/RoadEventFeature.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Road Event Feature (GeoJSON Feature)",
   "description": "The container object for a specific WZDx road event; an instance of a GeoJSON Feature",
@@ -42,7 +42,7 @@
       ]
     },
     "bbox": {
-      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/BoundingBox.json"
+      "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/BoundingBox.json"
     }
   },
   "required": ["id","type","properties","geometry"],
@@ -114,10 +114,6 @@
               "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
               "type": "boolean"
             },
-            "work_zone_type": {
-              "description": "The type of work zone road event",
-              "$ref": "#/definitions/WorkZoneType"
-            },
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
             },
@@ -151,6 +147,13 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Lane"
+              }
+            },
+            "impacted_cds_curb_zones": {
+               "description": "A list of references to external CDS Curb Zones impacted by the work zone",
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/CdsCurbZonesReference"
               }
             },
             "event_status": {
@@ -356,7 +359,7 @@
           }
         },
         "direction": {
-          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/main/schemas/4.1/Direction.json"
+          "$ref": "https://raw.githubusercontent.com/usdot-jpo-ode/wzdx/release/v4.2/schemas/4.2/Direction.json"
         },
         "name": {
           "description": "A human-readable name for the road event",
@@ -520,6 +523,26 @@
         "value": ["unit"]
       }
     },
+     "CdsCurbZonesReference": {
+      "title": "CdsCurbZonesReference",
+      "description": "A reference to one or more CDS curb zones that are impacted by road work",
+      "type": "object",
+      "properties": {
+          "cds_curb_zone_ids": {
+             "description": "A list of CDS Curb Zone ids",
+             "type": "array",
+             "items": {
+                "type": "string"
+             }
+          },
+          "cds_curbs_api_url": {
+            "description": "An identifier for the source of the requested CDS Curbs API",
+            "type": "string",
+            "format": "uri"
+          }
+      },
+      "required": ["cds_curb_zone_ids", "cds_curbs_api_url"]
+  },
     "WorkerPresence": {
       "title": "Worker Presence",
       "description": "Information about the presence of workers in the work zone event area",
@@ -570,11 +593,6 @@
       "title": "Event Status Enumerated Type",
       "description": "The status of the road event",
       "enum": ["planned", "pending", "active", "completed", "cancelled"]
-    },
-    "WorkZoneType": {
-      "title": "Work Zone Type Enumerated Type",
-      "description": "The type of work zone road event",
-      "enum": ["static", "moving", "planned-moving-area"]
     },
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",

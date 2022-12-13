@@ -1,7 +1,7 @@
 # SpatialVerification Enumerated Type
 An indication of how a geographical coordinate was defined.
 
-*All properties that use the SpatialVerification enumerated type are deprecated as of WZDx v4.1 and along with those properties it will be removed from the specification in the next major release.*
+*All properties that use the SpatialVerification enumerated type are deprecated as of WZDx v4.2 and along with those properties it will be removed from the specification in the next major release.*
 
 ## Values
 Value | Description

@@ -13,8 +13,10 @@ Name | Type | Description | Conformance | Notes
 `is_end_date_verified` | Boolean | Indicates if work has been confirmed to have ended, such as from a person or field device. | Conditional; required if `end_date_accuracy` is not provided. |
 `is_start_position_verified` | Boolean | Indicates if the start position (first geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the start of the work zone. | Conditional; required if `beginning_accuracy` is not provided. |
 `is_end_position_verified` | Boolean | Indicates if the end position (last geometric coordinate pair) is based on actual reported data from a GPS-equipped device that measured the location of the end of the work zone. | Conditional; required if `ending_accuracy` is not provided. |
+`work_zone_type` | [WorkZoneType](/spec-content/enumerated-types/WorkZoneType.md) | The type of work zone road event, such as if the road event is static or actively moving as part of a moving operation. | Optional | 
 `location_method` | [LocationMethod](/spec-content/enumerated-types/LocationMethod.md) | The typical method used to locate the beginning and end of a work zone impact area. | Required | 
 `vehicle_impact` | [VehicleImpact](/spec-content/enumerated-types/VehicleImpact.md) | The impact to vehicular lanes along a single road in a single direction. | Required |
+`impacted_cds_curb_zones`| Array; \[[CdsCurbZonesReference](/spec-content/objects/CdsCurbZonesReference.md)\] | A list of references to external [CDS Curb Zones](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/curbs#curb-zone) impacted by the work zone. | Optional |
 `lanes` | Array; \[[Lane](/spec-content/objects/Lane.md)\] | A list of individual lanes within a road event (roadway segment). | Optional | Please see [Business Rules](/Creating_a_WZDx_Feed.md#business-rules) #1 and #2.
 `beginning_cross_street` | String | Name or number of the nearest cross street along the roadway where the event begins. | Optional |
 `ending_cross_street` | String | Name or number of the nearest cross street along the roadway where the event ends. | Optional |
