@@ -150,7 +150,7 @@
               }
             },
             "impacted_cds_curb_zones": {
-               "description": "A list of references to external CDS Curb Zones impacted by the work zone.",
+               "description": "A list of references to external CDS Curb Zones impacted by the work zone",
                "type": "array",
                "items": {
                   "$ref": "#/definitions/CdsCurbZonesReference"
@@ -536,7 +536,7 @@
              }
           },
           "cds_curbs_api_url": {
-            "description": "An identifier for the source of the requested CDS Curbs API. This MUST be a full HTTPS URL pointing to the main curbs API that contains detailed information about each curb zone identified in cds_curb_zone_ids.",
+            "description": "An identifier for the source of the requested CDS Curbs API",
             "type": "url"
           }
       },
