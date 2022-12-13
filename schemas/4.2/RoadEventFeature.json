@@ -537,7 +537,8 @@
           },
           "cds_curbs_api_url": {
             "description": "An identifier for the source of the requested CDS Curbs API",
-            "type": "url"
+            "type": "string",
+            "format": "uri"
           }
       },
       "required": ["cds_curb_zone_ids", "cds_curbs_api_url"]
