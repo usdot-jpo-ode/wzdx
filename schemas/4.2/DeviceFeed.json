@@ -301,7 +301,7 @@
     },
     "FlashingBeacon": {
       "title": "Flashing Beacon Field Device",
-      "description": "A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something and capture driver attention",
+      "description": "A flashing warning beacon used to supplement a temporary traffic control device",
       "allOf": [
         {
           "properties": {
