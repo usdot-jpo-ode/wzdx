@@ -163,10 +163,7 @@
             "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
-               "are_workers_present": false,
-               "definition": [
-                  "humans-in-right-of-way"
-               ]
+               "are_workers_present": false
             },
             "reduced_speed_limit_kph": 88.514,
             "restrictions": [],
