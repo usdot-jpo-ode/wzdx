@@ -1,7 +1,6 @@
 # Direction 
 The direction of a roadway. The values are based on the standard naming for US roadways and indicates the direction the traffic flow regardless of the real heading angle of the roadway.
 
-
 ## Values
 Value | Description
 --- | ---

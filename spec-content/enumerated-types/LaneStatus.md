@@ -1,7 +1,6 @@
 # LaneStatus Enumerated Type
 The status of a lane for the traveling public.
 
-
 ## Values
 Value | Description
 --- | ---
