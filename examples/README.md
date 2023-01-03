@@ -19,7 +19,7 @@ Below are notes for the Scenario 1 [LineString Example](/examples/WorkZoneFeed/s
 - Third work zone is a single direction, three sequential events, with detailed lane information. This work zone demonstrates the use of the `related_road_event` object, with [RelatedRoadEventTypes](/spec-content/enumerated-types/RelatedRoadEventType.md) of `next-road-event` and `first-road-event` used to indiciate the order of the road events. ("id": `6f57aded-7291-462e-9892-607b2b7d116c`, `8bfb0ce0-98cd-4e92-924d-f0a9d3a4ba8f`, `e6c2abad-04e2-41fd-bd66-4cc41e4bb6e7`). This example work zone also shows the use of `worker_presence` and how it can vary between road events for a single work zone.
 
 ### Scenario 2 - Lane Shift (simple scenario)
-The [Scenario 2 Example](/examples/WorkZoneFeed/scenario2_laneshift_linestring_example.geojson) is based on the annotated image below which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility. The image below also includes annotations in red identifying the number of road events and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
+The [Scenario 2 Example](/examples/WorkZoneFeed/scenario2_laneshift_linestring_example.geojson) is based on the annotated image below which keeps all lanes open but shifts them resulting in both shoulders being closed on a multi-lane facility. The image below also includes annotations in red identifying the road event extent and lane numbering (the actual geojson examples may differ slightly to show various examples of this type of closure).
 
 ![shift_work_zone](/images/lane_shift_example_annotated.png)
 
