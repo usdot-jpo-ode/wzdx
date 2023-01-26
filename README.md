@@ -84,16 +84,24 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.2 (December 2022)
+### WZDx v4.2 (January 2023)
 
 #### New Functionality
-<TODO>
+- Add `impacted_cds_curb_zones` property to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if any [Curb Data Specification](https://github.com/openmobilityfoundation/curb-data-specification) curb zones are impacted by the work zone using new [CdsCurbZonesReference](/spec-content/objects/CdsCurbZonesReference.md) object.
+- Add `work_zone_type` property to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if a work zone road event represents a planned moving operation, an active moving operation, or a standard static work zone. 
+- Add the following values to the [Direction](/spec-content/enumerated-types/Direction.md) enumerated type:
+    - `inner-loop`
+    - `outer-loop`
+- Add `velocity_kph` property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) object to allow indicating the velocity of a field device.
+- Add `work-truck-with-lights-flashing` to the [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) enumerated type.
 
 #### Refactoring
-<TODO>
+No properties were deprecated or removed in WZDx v4.2.
 
 #### Cleanup
-<TODO>
+- Expand the description of the `geometry` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object to clarify how geometry should be used to represent a road event.
+- Update the description of the `open` and `closed` enumerations of the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
+- Update the description of the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object to clarify that it should only be used as a flashing warning beacon mounted on a temporary traffic control device.
 
 ## Getting Started
 
