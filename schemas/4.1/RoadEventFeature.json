@@ -114,10 +114,6 @@
               "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
               "type": "boolean"
             },
-            "work_zone_type": {
-              "description": "The type of work zone road event",
-              "$ref": "#/definitions/WorkZoneType"
-            },
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
             },
@@ -570,11 +566,6 @@
       "title": "Event Status Enumerated Type",
       "description": "The status of the road event",
       "enum": ["planned", "pending", "active", "completed", "cancelled"]
-    },
-    "WorkZoneType": {
-      "title": "Work Zone Type Enumerated Type",
-      "description": "The type of work zone road event",
-      "enum": ["static", "moving", "planned-moving-area"]
     },
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",
