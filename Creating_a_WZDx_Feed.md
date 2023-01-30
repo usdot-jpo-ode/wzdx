@@ -38,7 +38,23 @@ The following business rules help assure a standardized and interpretable use of
 
 ## Update Guide
 
-<TODO>
+No properties were deprecated or removed in WZDx v4.2. All feeds that were compliant with WZDx v4.1 are compliant with WZDx v4.2. All feeds that were compliant with WZDx v4.1 without using deprecated properties or enumerations are compliant with WZDx v4.2 without using deprecated content.
+
+Some properties or enumerations may have slightly different meanings or requirements in v4.2 compared to prior versions. To ensure your feed appropriately represents work zones, feed producers should note the following changes and clarifications:
+
+### RoadEventFeature `geometry`
+The description of the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object's `geometry` property was updated to clarify how geometry should be used to represent a road event.
+* The order of coordinates is meaningful: the first coordinate is the first (furthest upstream) point a road user encounters when traveling through the road event. 
+* If a data producer has three or more coordinates that are on the road event path, a `LineString` geometry should be used because it indicates that the points are ordered. 
+* Feed producers should aim to provide a higher density of points for sections of roadways with curves so that data consumers can more easily match road events to their road network.
+
+### LaneStatus `open` and `closed`  
+The descriptions of the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerations `open` and `closed` were updated to reflect that a lane's status should be compared against its normal usage. 
+For example: if a lane normally used as parking lane is being used for travel during a closure, the `parking` lane should be marked as `closed` and an adjacent lane should have a status of `shift-right` or `merge-right` to indicate which travel lane continues into the parking lane. 
+
+### FlashingBeacon 
+The description of the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object was updated to clarify that it should only be used as a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
+
 
 ## Data Security Best Practices
 This is a working list of best practices for standing up a WZDx data feed assembled by the WZDx Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
