@@ -108,6 +108,7 @@
             "is_end_position_verified": false,
             "start_date": "2010-01-01T06:00:00Z",
             "end_date": "2010-05-01T05:00:00Z",
+            "work_zone_type": "static",
             "location_method": "channel-device-method",
             "is_start_date_verified": false,
             "is_end_date_verified": false,
@@ -431,10 +432,7 @@
             "is_end_date_verified": false,
             "vehicle_impact": "some-lanes-closed",
             "worker_presence": {
-               "are_workers_present": false,
-               "definition": [
-                  "humans-in-right-of-way"
-               ]
+               "are_workers_present": false
             },
             "reduced_speed_limit_kph": 88.514,
             "restrictions": [],
