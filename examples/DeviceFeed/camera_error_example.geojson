@@ -39,7 +39,8 @@
             "Failed to capture image."
           ],
           "name": "Tukey's Bridge North CCTV",
-          "update_date": "2021-12-06T14:54:12Z"
+          "update_date": "2021-12-06T14:54:12Z",
+          "is_moving": false
         }
       },
       "geometry": {
