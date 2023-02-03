@@ -1,4 +1,4 @@
-### RelatedRoadEvent Object
+# RelatedRoadEvent Object
 The `RelatedRoadEvent` object identifies a road event that is related to the road event that the `RelatedRoadEvent` object occurs on.
 
 ## Properties 
