@@ -67,6 +67,9 @@
             },
             {
               "$ref": "#/definitions/TrafficSensor"
+            },
+            {
+              "$ref": "#/definitions/TrafficSignal"
             }
           ]
         },
@@ -530,17 +533,34 @@
     "TrafficSignal": {
       "title": "Traffic Signal",
       "description": "Describes a temporary traffic signal deployed on a roadway",
-      "properties": {
-        "core_details": {
-          "$ref": "#/definitions/FieldDeviceCoreDetails"
+      "allOf": [
+        {
+          "properties": {
+            "core_details": {
+              "properties": {
+                "device_type": {
+                  "const": "traffic-signal"
+                }
+              },
+              "required": ["device_type"]
+            }
+          },
+          "required": ["core_details"]
         },
-        "mode": {
-          "$ref": "#/definitions/TrafficSignalMode"
-        }      
-      },
-      "required": [
-        "core_details",
-        "mode"
+        {
+          "properties": {
+            "core_details": {
+              "$ref": "#/definitions/FieldDeviceCoreDetails"
+            },
+            "mode": {
+              "$ref": "#/definitions/TrafficSignalMode"
+            }   
+          },
+          "required": [
+            "core_details",
+            "mode"
+          ]
+        }
       ]
     },
     "ArrowBoardPattern": {
