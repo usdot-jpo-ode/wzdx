@@ -1,5 +1,5 @@
 # WZDx Specification v4.2
-Released January 2023
+Released February 2023
 
 ## New Functionality
 - Add `impacted_cds_curb_zones` property to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/tree/v4.2/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if any [Curb Data Specification](https://github.com/openmobilityfoundation/curb-data-specification) curb zones are impacted by the work zone using new [CdsCurbZonesReference](https://github.com/usdot-jpo-ode/wzdx/tree/v4.2/spec-content/objects/CdsCurbZonesReference.md) object.

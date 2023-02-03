@@ -84,7 +84,7 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.2 (January 2023)
+### WZDx v4.2 (February 2023)
 
 #### New Functionality
 - Add `impacted_cds_curb_zones` property to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if any [Curb Data Specification](https://github.com/openmobilityfoundation/curb-data-specification) curb zones are impacted by the work zone using new [CdsCurbZonesReference](/spec-content/objects/CdsCurbZonesReference.md) object.
