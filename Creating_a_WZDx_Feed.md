@@ -50,7 +50,7 @@ The description of the [RoadEventFeature](/spec-content/objects/RoadEventFeature
 
 ### LaneStatus `open` and `closed`  
 The descriptions of the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerations `open` and `closed` were updated to reflect that a lane's status should be compared against its normal usage. 
-For example: if a lane normally used as parking lane is being used for travel during a closure, the `parking` lane should be marked as `closed` and an adjacent lane should have a status of `shift-right` or `merge-right` to indicate which travel lane continues into the parking lane. 
+For example: if a lane normally used as parking lane is being used for travel during a closure, the `parking` lane should be marked as `closed` and an adjacent lane should have a status of `shift-right` or `shift-left` to indicate which travel lane continues into the parking lane. 
 
 ### FlashingBeacon 
 The description of the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object was updated to clarify that it should only be used as a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
