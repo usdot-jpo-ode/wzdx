@@ -9,7 +9,7 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 
 ## README Outline
 - [Data Feeds](#data-feeds)
-- [Repository Organization](#repostitory-organization)
+- [Repository Organization](#repository-organization)
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
