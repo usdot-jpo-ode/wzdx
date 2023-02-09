@@ -23,7 +23,7 @@ Value | Description
 `bidirectional-arrow-flashing` | Split (merge left or right) represented by arrows pointing both left and right (e.g. `<-->`) that flashes on/off. 
 `line-flashing` | A flashing line or bar (e.g. `---`), indicating warning/caution, not a merge.
 `diamonds-alternating` | An alternating display of two diamond shapes (e.g. `◇ ◇`), indicating warning/caution, not a merge.
-`four-corners-flashing` | Four dots on the corners of the board which flash, indiciating warning/caution, not a merge.
+`four-corners-flashing` | Four dots on the corners of the board which flash, indicating warning/caution, not a merge.
 `unknown` | The arrow board pattern is not known.
 
 ## Used By

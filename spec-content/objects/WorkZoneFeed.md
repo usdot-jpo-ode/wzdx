@@ -1,7 +1,7 @@
 # WorkZoneFeed Object (GeoJSON FeatureCollection)
 The `WorkZoneFeed` object is the root (highest level) object of a WZDx Work Zone Feed. There is one WorkZoneFeed object per WZDx GeoJSON document. The `WorkZoneFeed` is an instance of a [GeoJSON FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) object.
 
-The `WorkZoneFeed` contains high-level information about events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The Work Zone Feed is the original work zone data exchange feed and was previously named `WZDxFeed`.
+The `WorkZoneFeed` contains high-level information about events occurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The Work Zone Feed is the original work zone data exchange feed and was previously named `WZDxFeed`.
 
 ## Properties
 Name | Type | Description | Conformance | Notes

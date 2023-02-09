@@ -1,5 +1,5 @@
 # Creating a WZDx Feed
-This documents contains information to assist in creating a WZDx data feed, such as the feed format, business rules, validation tools, and software libraries.
+This document contains information to assist in creating a WZDx data feed, such as the feed format, business rules, validation tools, and software libraries.
 
 ## Feed Format and File Type
 WZDx feeds are formatted according to the [GeoJSON](https://geojson.org/) specification. The output of a WZDx feed is a GeoJSON document (a `.geojson` file) that contains a single [GeoJSON FeatureCollection](https://datatracker.ietf.org/doc/html/rfc7946#section-3.3) which includes information about the feed (see the [FeedInfo Object](/spec-content/objects/FeedInfo.md)) and a list of [GeoJSON Feature](https://datatracker.ietf.org/doc/html/rfc7946#section-3.2)s describing entities specific to the type of feed, such as work zones.
@@ -18,7 +18,7 @@ GeoJSON is the file format of choice because:
 ## Feed Content
 WZDx defines the content and structure of several data feeds. Each feed is described by a single root object with many child objects. The output of a WZDx data feed is a GeoJSON file containing the feed object. WZDx defines the following feed objects:
 
-- [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
+- [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events occurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
 - [DeviceFeed Object](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
@@ -104,4 +104,4 @@ To validate data feeds and measure compliance with the v1.1 specification, the G
 ## Software Libraries
 
 ### Microsoft .NET
-[IBI Group](https://www.ibigroup.com/) released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utitlies for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.
+[IBI Group](https://www.ibigroup.com/) released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utilities for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.

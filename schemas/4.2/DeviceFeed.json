@@ -107,7 +107,7 @@
           "format": "date-time"
         },
         "has_automatic_location": {
-          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overidden (false)",
+          "description": "A yes/no value indicating if the field device location (parent FieldDeviceFeature's geometry) is determined automatically from an onboard GPS (true) or manually set/overridden (false)",
           "type": "boolean"
         },
         "road_direction": {
