@@ -49,7 +49,7 @@
   "definitions": {
     "WorkZoneRoadEvent": {
       "title": "Work Zone Road Event",
-      "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
+      "description": "Describes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
       "type": "object",
       "allOf": [
         {
@@ -113,10 +113,6 @@
             "is_end_date_verified": {
               "description": "Indicates if work has been confirmed to have ended, such as from a person or field device",
               "type": "boolean"
-            },
-            "work_zone_type": {
-              "description": "The type of work zone road event",
-              "$ref": "#/definitions/WorkZoneType"
             },
             "vehicle_impact": {
               "$ref": "#/definitions/VehicleImpact"
@@ -228,7 +224,7 @@
     },
     "DetourRoadEvent": {
       "title": "Detour Road Event",
-      "description": "Descibes a detour on a roadway",
+      "description": "Describes a detour on a roadway",
       "type": "object",
       "allOf": [
         {
@@ -444,7 +440,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "description": "The type of road event being identifed, such as another sequence of related work zones, a detour, or next road event in sequence.",
+          "description": "The type of road event being identified, such as another sequence of related work zones, a detour, or next road event in sequence.",
           "$ref": "#/definitions/RelatedRoadEventType"
         },
         "id": {
@@ -486,7 +482,7 @@
           "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
-          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, drivable lanes",
           "type": "integer",
           "minimum": 1
         },
@@ -570,11 +566,6 @@
       "title": "Event Status Enumerated Type",
       "description": "The status of the road event",
       "enum": ["planned", "pending", "active", "completed", "cancelled"]
-    },
-    "WorkZoneType": {
-      "title": "Work Zone Type Enumerated Type",
-      "description": "The type of work zone road event",
-      "enum": ["static", "moving", "planned-moving-area"]
     },
     "VehicleImpact": {
       "title": "Vehicle Impact Enumerated Type",

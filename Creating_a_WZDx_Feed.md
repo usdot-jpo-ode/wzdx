@@ -1,5 +1,5 @@
 # Creating a WZDx Feed
-This documents contains information to assist in creating a WZDx data feed, such as the feed format, business rules, validation tools, and software libraries.
+This document contains information to assist in creating a WZDx data feed, such as the feed format, business rules, validation tools, and software libraries.
 
 ## Feed Format and File Type
 WZDx feeds are formatted according to the [GeoJSON](https://geojson.org/) specification. The output of a WZDx feed is a GeoJSON document (a `.geojson` file) that contains a single [GeoJSON FeatureCollection](https://datatracker.ietf.org/doc/html/rfc7946#section-3.3) which includes information about the feed (see the [FeedInfo Object](/spec-content/objects/FeedInfo.md)) and a list of [GeoJSON Feature](https://datatracker.ietf.org/doc/html/rfc7946#section-3.2)s describing entities specific to the type of feed, such as work zones.
@@ -18,7 +18,7 @@ GeoJSON is the file format of choice because:
 ## Feed Content
 WZDx defines the content and structure of several data feeds. Each feed is described by a single root object with many child objects. The output of a WZDx data feed is a GeoJSON file containing the feed object. WZDx defines the following feed objects:
 
-- [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
+- [WorkZoneFeed Object](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events occurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was formerly named `WZDxFeed`.
 - [DeviceFeed Object](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 *See the [/spec-content/README.md](/spec-content/README.md) for detailed information on all objects defined by WZDx.*
@@ -38,7 +38,23 @@ The following business rules help assure a standardized and interpretable use of
 
 ## Update Guide
 
-<TODO>
+No properties were deprecated or removed in WZDx v4.2. All feeds that were compliant with WZDx v4.1 are compliant with WZDx v4.2. All feeds that were compliant with WZDx v4.1 without using deprecated properties or enumerations are compliant with WZDx v4.2 without using deprecated content.
+
+Some properties or enumerations may have slightly different meanings or requirements in v4.2 compared to prior versions. To ensure your feed appropriately represents work zones, feed producers should note the following changes and clarifications:
+
+### RoadEventFeature `geometry`
+The description of the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object's `geometry` property was updated to clarify how geometry should be used to represent a road event.
+* The order of coordinates is meaningful: the first coordinate is the first (furthest upstream) point a road user encounters when traveling through the road event. 
+* If a data producer has three or more coordinates that are on the road event path, a `LineString` geometry should be used because it indicates that the points are ordered. 
+* Feed producers should aim to provide a higher density of points for sections of roadways with curves so that data consumers can more easily match road events to their road network.
+
+### LaneStatus `open` and `closed`  
+The descriptions of the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerations `open` and `closed` were updated to reflect that a lane's status should be compared against its normal usage. 
+For example: if a lane normally used as parking lane is being used for travel during a closure, the `parking` lane should be marked as `closed` and an adjacent lane should have a status of `shift-right` or `shift-left` to indicate which travel lane continues into the parking lane. 
+
+### FlashingBeacon 
+The description of the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object was updated to clarify that the object should only be used to represent a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
+
 
 ## Data Security Best Practices
 This is a working list of best practices for standing up a WZDx data feed assembled by the WZDx Technical Assistance Co-chairs. Please note that this list is not all encompassing; DOTs should consult with security experts for help with securing infrastructure components. **Please note that these are best practices only; not requirements.**
@@ -88,4 +104,4 @@ To validate data feeds and measure compliance with the v1.1 specification, the G
 ## Software Libraries
 
 ### Microsoft .NET
-[IBI Group](https://www.ibigroup.com/) released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utitlies for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.
+[IBI Group](https://www.ibigroup.com/) released an open-source .NET class library ([IBI.WZDx](https://github.com/ibi-group/IBI.WZDx)) that contains models and utilities for producing and consuming Work Zone Data Exchange (WZDx) data feeds in .NET. The library is available as a public NuGet package hosted on nuget.org. Using the library can greatly reduce development effort for creating or reading a WZDx feed. See the [IBI.WZDx README](https://github.com/ibi-group/IBI.WZDx) for detailed usage information.
