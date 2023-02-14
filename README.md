@@ -9,11 +9,11 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 
 ## README Outline
 - [Data Feeds](#data-feeds)
-- [Repository Organization](#repostitory-organization)
+- [Repository Organization](#repository-organization)
 - [Project Description](#project-description)
 - [Contact Information](#contact-information)
 - [Release Notes](#release-notes)
-    - [Release v4.1 (Sept 2022)](#wzdx-v41-september-2022)
+    - [Release v4.2 (Feb 2023)](#wzdx-v42-february-2023)
 - [Getting Started](#getting-started)
 - [JSON Schemas](#json-schemas)
 - [Contributions](#contributions)
@@ -21,17 +21,17 @@ Specifically, WZDx defines the structure and content of several [GeoJSON](https:
 - [License](#license)
 
 ## Data Feeds
-WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [/schemas](/schemas/). Each feed is designed for a specific use case is are flexible and its use in practice can vary by application.
+WZDx defines the structure and content of multiple distinct data feeds. Each feed is distributed as a single GeoJSON file and is represented by both human-friendly documentation in the [spec-content](/spec-content/) directory and a JSON Schema in [/schemas](/schemas/). Each feed is designed for a specific use case.
 
 ### List of Data Feeds
 Feed Name | Description | Producer | Consumer | Uses | Content
 --- | --- | --- | --- | --- | ---
 **Work Zone Feed** | Provides high-level information about events occurring on roadways (called "road events") related to work zones that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). The Work Zone Feed is the original work zone data exchange feed and was previously named "WZDxFeed". | Agencies responsible for managing roadways and road work, typically state and local DOTs. | Traveling public via third parties such as mapping companies and CAVs. | Route planning; increased awareness; "put work zones on the map". | Work zone and detour road events (see [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) and [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md)).
-**Device Feed** | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third-parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a Work Zone Feed with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
+**Device Feed** | Provides information (location, status, live data) about field devices deployed on the roadway in work zones. | Work zone equipment manufacturers or vendors. | Agencies responsible for managing roadways and permitting work, typically state and local DOTs. Third parties such as mapping companies and CAVs may also be interested in field device information. | Simplifies design process for agencies wanting to interface with equipment manufacturers; aids in dynamically generating a Work Zone Feed with accurate information; reduces effort for manufacturers to conform to different agencies requirements. | Field devices (see [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md)).
 
-The WZDx Specification has also been extended to define data feeds for representing other types of road events, such as restrictions (included in WZDx v4.0 as the `RoadRestrictionFeed`), crashes, disasters, and strong winds. The specification for those feeds are available at the [Transportation Data Exchange (TDx) GitHub site](https://github.com/usdot-jpo-ode/TDx). 
+The WZDx Specification has also been extended to define data feeds for representing other types of road events, such as restrictions (included in WZDx v4.0 as the `RoadRestrictionFeed`), crashes, disasters, and strong winds. The specification for those feeds is available at the [Transportation Data Exchange (TDx) GitHub site](https://github.com/usdot-jpo-ode/TDx). 
 
-## Repostitory Organization
+## Repository Organization
 The WZDx Specification repository contains several files and subdirectories.
 
 ### Directories
@@ -52,26 +52,42 @@ The WZDx Specification repository contains several files and subdirectories.
 **What is the WZDx Specification?**
 The Work Zone Data Exchange (WZDx) Specification enables infrastructure owners and operators (IOOs) to make harmonized work zone data available for third-party use. The intent is to make travel on public roads safer and more efficient through ubiquitous access to data on work zone activity. Specifically, the project aims to get data on work zones to vehicles to help automated driving systems (ADS) and human drivers navigate more safely.
 
-**Why is WZDx being developed?**
-Improving access to work zone data is one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort.
+**Why was WZDx developed?**
+Improving access to work zone data was one of the top needs identified through the US Department of Transportation (USDOT) [Data for Automated Vehicle Integration (DAVI)](https://www.transportation.gov/av/data) effort.
 
 Up-to-date information about dynamic conditions occurring on roads – such as construction events – can help ADS and humans navigate safely and efficiently. Many IOOs maintain data on work zone activity. However, a lack of common data standards and convening mechanisms makes it difficult and costly for third parties – including original equipment manufacturers (OEMs) and navigation applications – to access and use these data across various jurisdictions.
 
-Inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT launched WZDx to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users. Longer-term, the goal is to enable collaborative maintenance and expansion of the specification to meet the emerging needs of ADS.
+Inspired by [GTFS](https://developers.google.com/transit/gtfs/reference/), USDOT launched WZDx to jumpstart the voluntary adoption of a basic work zone data specification through collaboration with data producers and data users.
 
-**Who is involved in developing WZDx?**
+**Who was involved in developing WZDx?**
 The [Federal Highway Administration (FHWA)](https://www.fhwa.dot.gov/) and [Intelligent Transportation Systems Joint Program Office (ITS JPO)](https://www.its.dot.gov/) co-led the early stages of the WZDx project and remain actively involved along with the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/), [Federal Motor Carrier Safety Administration (FMCSA)](https://www.fmcsa.dot.gov/), and others in the USDOT. 
 
-Several data producers and data users voluntarily developed v1.1 of the specification in collaboration with USDOT, and have set up data feeds based on the specification. These WZDx-compliant feeds and their links can be found in the [Work Zone Data Exchange Feed Registry](https://data.transportation.gov/d/69qe-yiui). Data producers with feeds in the registry currently include: Texas Department of Transportation (TxDOT), Massachusetts Department of Transportation (MassDOT), Maricopa County Department of Transportation (MCDOT), and Iowa Department of Transportation (IDOT).
+Many data producers have set up data feeds based on the specification. These WZDx-compliant feeds and their links can be found in the [Work Zone Data Exchange Feed Registry](https://data.transportation.gov/d/69qe-yiui). Data producers with feeds in the registry as of February 2023 include: 
+* Colorado Department of Transportation
+* Florida Department of Transportation
+* Iowa Department of Transportation
+* Massachusetts Department of Transportation 
+* Maricopa County Department of Transportation
+* Maryland Department of Transportation
+* Metropolitan Transportation Commission (California)
+* Minnesota Department of Transportation
+* National Park Service
+* North Carolina Department of Transportation
+* Oklahoma Department of Transportation
+* Texas Department of Transportation
+* Utah Department of Transportation
 
-Going forward, the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) will maintain the WZDx Specification with the goal of publishing incremental updates to refine the features, attributes, and vocabulary needed to model work zone activity data.
+Development of WZDx versions 2.0 through 4.2 was overseen by the [Work Zone Data Working Group (WZDWG)](https://github.com/usdot-jpo-ode/wzdx/wiki), established under the Federal Geographic Data Committee (FGDC) Transportation Subcommittee (TSC) to maintain and update the WZDx Specification.
+
+**What is happening with WZDx now?**
+The U.S. DOT’s ITS Joint Program Office has engaged ITE and SAE on a new effort that will standardize the WZDx Specification and harmonize multiple work zone-related standards. The project began in late 2022 with public facing portions beginning in early 2023. The published standard will be freely available at the conclusion of the project.
 
 **How can I get help with implementation?**
 Review [Creating_a_WZDx_Feed.md](/Creating_a_WZDx_Feed.md) which contains information to assist in creating a WZDx data feed, such as the feed format, business rules, and validation tools.
 
-This project repository will be continually updated with resources to help with implementation - in the meantime, please make a [new GitHub discussion](https://github.com/usdot-jpo-ode/wzdx/discussions/new) if you need help implementing the WZDx Specification or have questions.
+The project repository will be updated with resources to help with implementation. If you have implementation questions, please make a [new GitHub discussion](https://github.com/usdot-jpo-ode/wzdx/discussions/new) if you need help implementing the WZDx Specification or have questions.
 
-The Federal Highway Administration is leading efforts, via the [Work Zone Data Initiative (WZDI)](https://ops.fhwa.dot.gov/wz/wzdx/index.htm#wzdi), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents have been developed and made publicly available:
+The Federal Highway Administration led efforts, via the [Work Zone Data Initiative (WZDI)](https://ops.fhwa.dot.gov/wz/wzdx/index.htm#wzdi), to develop a standard approach for collecting, organizing, and sharing data on the “when”, “where,” and “how” of work zone deployment.  As part of this effort, key documents were developed and made publicly available:
 
 - WZDI Framework provides a conceptual architecture for work zone data systems for collecting, storing, disseminating, managing, maintaining and archiving work zone activity data.
 - WZDI Data Dictionary provides digital descriptions of work zone activities that enable and support transportation agencies and third party providers to describe and communicate work zone-related information to agency, private sector, and public users timely and seamlessly across multiple jurisdictions and regions.
@@ -84,51 +100,28 @@ Contact Information: [avdx@dot.gov](mailto:avdx@dot.gov?subject=Submission%20of%
 
 ## Release Notes
 
-### WZDx v4.1 (September 2022)
+### WZDx v4.2 (February 2023)
 
 #### New Functionality
-- Add `is_moving` boolean property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow indicating if any field device is moving as part of a mobile operation.
-- Add `road_direction` property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to allow providing the direction of the roadway that a field device is associated with.
-- Recommend using Universally Unique Identifiers (UUID) for the `id` property of the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md), [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md), and [FeedDataSource](/spec-content/objects/FeedDataSource.md), noting that a UUID may be required in the next major release.
-- Add `name` property to [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) to allow providing a human-friendly name for a road event.
-- Add the following values to the [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) enumerated type:
-    - `personal-device`
-    - `ramp-closure`
-    - `road-closure`
-    - `delineator`
+- Add `impacted_cds_curb_zones` property to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if any [Curb Data Specification](https://github.com/openmobilityfoundation/curb-data-specification) curb zones are impacted by the work zone using new [CdsCurbZonesReference](/spec-content/objects/CdsCurbZonesReference.md) object.
+- Add `work_zone_type` property to the [WorkZoneRoadEvent](/spec-content/objects/WorkZoneRoadEvent.md) object to allow indicating if a work zone road event represents a planned moving operation, an active moving operation, or a standard static work zone. 
 - Add the following values to the [Direction](/spec-content/enumerated-types/Direction.md) enumerated type:
-    - `undefined`
-    - `unknown`
-- Add `no-passing` to the [RestrictionType](/spec-content/enumerated-types/RestrictionType.md) enumerated type.
-- Add a `sign_text` property to the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object.
-- Add a [TrafficSignal](/spec-content/objects/TrafficSignal.md) object to allow represent temporary traffic signals in a WZDx Device Feed.
-- Add `two-way-center-turn-lane` to the [LaneType](/spec-content/enumerated-types/LaneType.md) enumerated type to replace the existing `center-left-turn-lane` with a more generic value.
+    - `inner-loop`
+    - `outer-loop`
+- Add `velocity_kph` property to the [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) object to allow indicating the velocity of a field device.
+- Add `work-truck-with-lights-flashing` to the [MarkedLocationType](/spec-content/enumerated-types/MarkedLocationType.md) enumerated type.
 
 #### Refactoring
-- Deprecate `is_moving` property on the [ArrowBoard](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/ArrowBoard.md); use the new `is_moving` on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) instead.
-- Change the conformance of the `road_event_id` property on the [TrafficSensorLaneData](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/TrafficSensorLaneData.md) from "Required" to "Optional" to allow providing lane-level data without a defined road event.
-- Deprecate the `road_event_feed_info` property on the [WorkZoneFeed](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/WorkZoneFeed.md) object; use the new `feed_info` property instead.
-- Add `is_start_position_verified` and `is_end_position_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end positions are verified and clarify what verified means; these properties replace `beginning_accuracy` and `ending_accuracy`.
-- Deprecate the `beginning_accuracy` and `ending_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_position_verified` and `is_end_position_verified` properties instead.
-- Add `is_start_date_verified` and `is_end_date_verified` boolean properties to the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) to allow indiciating if the start and end date and times are verified and clarify what verified means; these properties replace `start_date_accuracy` and `end_date_accuracy`.
-- Deprecate the `start_date_accuracy` and `end_date_accuracy` properties on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object; use the new `is_start_date_verified` and `is_end_date_verified` properties instead.
-- Deprecate the `event_status` property on the [WorkZoneRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/WorkZoneRoadEvent.md) object.
-- Change the conformance of the `road_names` property on the [FieldDeviceCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/FieldDeviceCoreDetails.md) from "Required" to "Optional".
-- Deprecate the `traffic-signal` value in the [MarkedLocationType](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/enumerated-types/MarkedLocationType.md) enumerated type; use the new [TrafficSignal](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/TrafficSignal.md) object instead.
-- Deprecate the `center-left-turn-lane` value in the [LaneType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/LaneType.md) enumerated type; use the new `two-way-center-turn-lane` instead.
-- Add a `related_road_events` property (and new supporting object [RelatedRoadEvent](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RelatedRoadEvent.md) and enumerated type [RelatedRoadEventType](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/enumerated-types/RelatedRoadEventType.md)) to the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md) to allow explicitly defining relationships/connections between road events; this replaces the [Relationship](/https://github.com/usdot-jpo-ode/wzdx/blob/fixes/release-v4.1/spec-content/objects/Relationship.md) object concept.
-- Deprecate the `relationship` property on the [RoadEventCoreDetails](https://github.com/usdot-jpo-ode/wzdx/blob/main/spec-content/objects/RoadEventCoreDetails.md); use the new `related_road_events` property instead.
+No properties were deprecated or removed in WZDx v4.2.
 
 #### Cleanup
-- Change the type of the `average_speed_kph`, `volume_vph`, and `occupancy_percent` properties on the [TrafficSensor](/spec-content/objects/TrafficSensor.md) and [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) object from "Integer" to "Number"
-- Change the allowed minimum value for `average_speed_kph` on [TrafficSensorLaneData](/spec-content/objects/TrafficSensorLaneData.md) from `1` to `0`.
-- Add a `feed_info` property to the [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) object to replace the `road_event_feed_info`.
-- Expand the description of the `update_date` property on the [RoadEventCoreDetails](/spec-content/objects/RoadEventCoreDetails.md) and [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) to clarify what the value represents.
-- Remove the [RoadRestrictionFeed](/spec-content/objects/RoadRestrictionFeed.md) (it moved to [usdot-jpo-ode/TDx](https://github.com/usdot-jpo-ode/TDx)).
+- Expand the description of the `geometry` property on the [RoadEventFeature](/spec-content/objects/RoadEventFeature.md) object to clarify how geometry should be used to represent a road event.
+- Update the description of the `open` and `closed` enumerations of the [LaneStatus](/spec-content/enumerated-types/LaneStatus.md) enumerated type.
+- Update the description of the [FlashingBeacon](/spec-content/objects/FlashingBeacon.md) object to clarify that it should only be used as a flashing warning beacon mounted on a temporary traffic control device.
 
 ## Getting Started
 
-The WZDWG welcomes feedback and comments on the WZDx v4.1 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
+The WZDWG welcomes feedback and comments on the WZDx v4.2 Specification. Comments can be made by posting a GitHub [Issue](https://github.com/usdot-jpo-ode/wzdx/issues) or [Discussion](https://github.com/usdot-jpo-ode/wzdx/discussions), while suggested changes can be made using a [Pull Request](https://github.com/usdot-jpo-ode/wzdx/pulls).
 
 1. Read about WZDWG activities [Wiki](https://github.com/usdot-jpo-ode/wzdx/wiki) and the [WZDx Early Adopter's Guide](/documents/WZDx_Early_Adopters_Guide.pdf).
 2. Learn about using GitHub as a [tool for collaboration and support](#contributions).
@@ -136,16 +129,18 @@ The WZDWG welcomes feedback and comments on the WZDx v4.1 Specification. Comment
 4. Use the [Specification Content](/spec-content) page to understand the data components of the specification.
 5. Consider using the [IBI.WZDx](https://github.com/ibi-group/IBI.WZDx) .NET class library to facilitate development of a feed.
 6. Validate your feed output using the respective [JSON Schema](#json-schemas).
-7. Publish your feed and tell us about it via avdx@dot.gov.
+7. Publish your feed and tell us about it via [avdx@dot.gov](mailto://avdx@dot.gov).
 
 ## JSON Schemas
 The WZDx Specification defines a JSON schema for each feed within the [schemas](/schemas) directory. Schemas can be used to validate a WZDx feed document for compliance to the specification. The repository contains schemas for the following feeds:
 
-### Current Version (4.1)
-- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
-- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
+### Current Version (4.2)
+- [WZDx v4.2 Work Zone Feed](/schemas/4.2/WorkZoneFeed.json)
+- [WZDx v4.2 Device Feed](/schemas/4.2/DeviceFeed.json)
 
 ### Previous Versions
+- [WZDx v4.1 Work Zone Feed](/schemas/4.1/WorkZoneFeed.json)
+- [WZDx v4.1 Device Feed](/schemas/4.1/DeviceFeed.json)
 - [WZDx v4.0 WZDxFeed](/schemas/4.0/WZDxFeed.json)
 - [WZDx v4.0 SwzDeviceFeed](/schemas/4.0/SwzDeviceFeed.json)
 - [WZDx v4.0 RoadRestrictionFeed](/schemas/4.0/RoadRestrictionFeed.json)
@@ -157,7 +152,7 @@ The WZDx Specification defines a JSON schema for each feed within the [schemas](
 **How do I contribute to the WZDx Specification?**
 
 - Report bugs and request features via [GitHub Issues](https://github.com/usdot-jpo-ode/wzdx/issues).
-- Ask the WZDx community for input on a question or propose an idea you have via [GithHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
+- Ask the WZDx community for input on a question or propose an idea you have via [GitHub Discussions](https://github.com/usdot-jpo-ode/wzdx/discussions).
 - Create a [GitHub Pull Request](https://help.github.com/articles/creating-a-pull-request/) that implements new functionality or fixes a bug.
 - Review and provide feedback on update issues/discussions/pull requests created by other users.
 - Alternatively, [email us](mailto://avdx@dot.gov.) with any questions.

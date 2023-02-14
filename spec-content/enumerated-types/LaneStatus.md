@@ -4,8 +4,8 @@ The status of a lane for the traveling public.
 ## Values
 Value | Description
 --- | ---
-`open` | The lane is open for travel
-`closed` | The lane is closed to travel
+`open` | The lane is open for normal usage
+`closed` | The lane is closed to normal usage
 `shift-left` | The lane shifts left from its current bearing and continues
 `shift-right` | The lane shifts right from its current bearing and continues
 `merge-left` | The lane gradually tapers while merging into the lane directly to the left 

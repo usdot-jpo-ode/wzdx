@@ -49,7 +49,7 @@
   "definitions": {
     "WorkZoneRoadEvent": {
       "title": "Work Zone Road Event",
-      "description": "Descibes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
+      "description": "Describes a work zone road event including where, when, and what activities are taking place within a work zone on a roadway",
       "type": "object",
       "allOf": [
         {
@@ -224,7 +224,7 @@
     },
     "DetourRoadEvent": {
       "title": "Detour Road Event",
-      "description": "Descibes a detour on a roadway",
+      "description": "Describes a detour on a roadway",
       "type": "object",
       "allOf": [
         {
@@ -440,7 +440,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "description": "The type of road event being identifed, such as another sequence of related work zones, a detour, or next road event in sequence.",
+          "description": "The type of road event being identified, such as another sequence of related work zones, a detour, or next road event in sequence.",
           "$ref": "#/definitions/RelatedRoadEventType"
         },
         "id": {
@@ -482,7 +482,7 @@
           "$ref": "#/definitions/LaneType"
         },
         "lane_number": {
-          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, driveable lanes",
+          "description": "***DEPRECATED*** The number assigned to the lane to help identify its position. Flexible, but usually used for regular, drivable lanes",
           "type": "integer",
           "minimum": 1
         },

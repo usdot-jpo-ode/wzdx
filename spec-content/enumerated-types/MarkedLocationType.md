@@ -14,6 +14,7 @@ Value | Description
 `road-closure` | The start of a closed road.
 `road-event-start` | The start point of a road event.
 `road-event-end` | The end point of a road event.
+`work-truck-with-lights-flashing` | A work truck with lights flashing, actively engaged in construction or maintenance activity on the roadway.
 `work-zone-start` | The start point of a work zone.
 `work-zone-end` | The end point of a work zone.
 `temporary-traffic-signal` (DEPRECATED) | A temporary traffic signal. *This property will be removed in a future release; use [TrafficSignal](../objects/TrafficSignal.md) instead.*

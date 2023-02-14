@@ -1,7 +1,7 @@
 # WZDx Specification Content
-The WZDx specification defines the content and structure of several GeoJSON documents, each intended to be distributed as a data feed. Each GeoJSON document (colloquially "feed") contains a single feed root object. WZDx v4.1 defines the following feed objects:
+The WZDx specification defines the content and structure of several GeoJSON documents, each intended to be distributed as a data feed. Each GeoJSON document (colloquially "feed") contains a single feed root object. WZDx v4.2 defines the following feed objects:
 
-- [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events ocurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was previously named `WZDxFeed`.
+- [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md): describes high-level information about work zone events occurring on roadways (called "road events") that impact the characteristics of the roadway and involve a change from the default state (such as a lane closure). This is the original work zone data exchange feed and the only feed that WZDx defined until [version 4.0](https://github.com/usdot-jpo-ode/wzdx/releases/tag/v4.0). It was previously named `WZDxFeed`.
 - [DeviceFeed](/spec-content/objects/DeviceFeed.md): describes information (location, status, live data) about field devices deployed on the roadway in work zones.
 
 Each feed object contains many layers of child objects. Together all the objects define the WZDx feed. All WZDx objects are located in the [objects](/spec-content/objects) subdirectory and listed in the [Objects](#objects) section of this document.
@@ -12,11 +12,11 @@ The value of certain object properties is restricted to a defined set of values 
 Each WZDx object is described by a table of properties with following columns:
 
 - **Name** - The property name.
-- **Type** - The type of data being stored. This can be one of the JSON primative types (only `String`, `Number`, `Array` are used), `Integer`, as defined in the [JSON schema validation specification section 6.1 (Draft 07)](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1), a formatted string as defined in [JSON schema validation specification section 7 (Draft 07)](https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01#section-7.3), a [WZDx Enumerated Type](#enumerated-types), a WZDx Object, or a [GeoJSON Object](https://tools.ietf.org/html/rfc7946#section-3).
+- **Type** - The type of data being stored. This can be one of the JSON primitive types (only `String`, `Number`, `Array` are used), `Integer`, as defined in the [JSON schema validation specification section 6.1 (Draft 07)](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1), a formatted string as defined in [JSON schema validation specification section 7 (Draft 07)](https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01#section-7.3), a [WZDx Enumerated Type](#enumerated-types), a WZDx Object, or a [GeoJSON Object](https://tools.ietf.org/html/rfc7946#section-3).
 - **Description** - A description of the value of the property.
 - **Conformance** - An indication of the requirement for including the property in a WZDx GeoJSON document. There are three categories of conformance:
     - *Required* - The property must be included
-    - *Optional* - The property may be ommitted
+    - *Optional* - The property may be omitted
     - *Conditional* - The property's inclusion depends on the inclusion or value of a separate property
 - **Notes** - Additional comments, guidance, notes for future consideration, or examples.
 
@@ -34,10 +34,11 @@ Object | Description
 [WorkZoneFeed](/spec-content/objects/WorkZoneFeed.md) | The root (highest-level) object of a **WZDx Work Zone Feed** GeoJSON document.
 
 #### Road Events
-The following objects are used to describe events ocurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
+The following objects are used to describe events occurring on roadways (road events) that impact the characteristics of the roadway and involve a change from the default state:
 
 Object | Description
 --- | ---
+[CdsCurbZonesReference](/spec-content/objects/CdsCurbZonesReference.md) | A reference to one or more CDS curb zones that are impacted by road work.
 [DetourRoadEvent](/spec-content/objects/DetourRoadEvent.md) | A detour on a roadway.
 [Lane](/spec-content/objects/Lane.md) | An individual lane within a road event.
 [RelatedRoadEvent](/spec-content/objects/RelatedRoadEvent.md) | Identification a road event that is related to the road event that the RelatedRoadEvent object occurs on.
@@ -59,8 +60,8 @@ Object | Description
 [DynamicMessagesSign](/spec-content/objects/DynamicMessageSign.md) | An electronic traffic sign deployed on the roadway, used to provide information to travelers.
 [FieldDeviceCoreDetails](/spec-content/objects/FieldDeviceCoreDetails.md) | The core details—both configuration and current state—of a field device that are shared by all types of field devices.
 [FieldDeviceFeature](/spec-content/objects/FieldDeviceFeature.md) | The GeoJSON `Feature` container object for a deployed field device.
-[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | A flashing beacon light of any form (e.g. trailer-mounted, vehicle), used to indicate something or capture driver attention.
-[HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an alumium sign) along with a single electronic message display, used to provide information to travelers.
+[FlashingBeacon](/spec-content/objects/FlashingBeacon.md) | Describes a flashing warning beacon used to supplement a temporary traffic control device. A flashing warning beacon is mounted on a sign or channelizing device and used to indicate a warning condition and capture driver attention.
+[HybridSign](/spec-content/objects/HybridSign.md) | A hybrid sign that contains static text (e.g. on an aluminum sign) along with a single electronic message display, used to provide information to travelers.
 [LocationMarker](/spec-content/objects/LocationMarker.md) | Describes any GPS-enabled ITS device that is placed at a point on a roadway to dynamically know the location of something (often the beginning or end of a work zone).
 [MarkedLocation](/spec-content/objects/MarkedLocation.md) | Describes a specific location where a [LocationMarker](/spec-content/objects/LocationMarker.md) is placed, such as the start or end of a work zone road event.
 [TrafficSensor](/spec-content/objects/TrafficSensor.md) | A traffic sensor deployed on a roadway which captures traffic metrics (e.g. speed, volume, occupancy) over a collection interval.
@@ -106,6 +107,7 @@ Enumerated Type | Description
 [WorkerPresenceDefinition](/spec-content/enumerated-types/WorkerPresenceDefinition.md) | Method of knowing the presence of workers in the road event area.
 [WorkerPresenceMethod](/spec-content/enumerated-types/WorkerPresenceMethod.md) | Methods for how worker presence in a work zone event area is determined.
 [WorkTypeName](/spec-content/enumerated-types/WorkTypeName.md) | A high-level text description of the type of work being done in a road event.
+[WorkZoneType](/spec-content/enumerated-types/WorkZoneType.md) | The type of work zone road event.
 [EventStatus](/spec-content/enumerated-types/EventStatus.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* The status of a road event.
 [SpatialVerification](/spec-content/enumerated-types/SpatialVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* An indication of how a geographical coordinate was defined.
 [TimeVerification](/spec-content/enumerated-types/TimeVerification.md) (DEPRECATED) | *This enumerated type is deprecated and will be removed in a future release* A measure of how accurate a date-time is.
