@@ -659,7 +659,7 @@
         "workers-in-work-zone-working",
         "workers-in-work-zone-not-working", 
         "mobile-equipment-in-work-zone-moving", 
-        "mobile-equipment-in-work-zone-not-working", 
+        "mobile-equipment-in-work-zone-not-moving", 
         "fixed-equipment-in-work-zone", 
         "humans-behind-barrier", 
         "humans-in-right-of-way"
