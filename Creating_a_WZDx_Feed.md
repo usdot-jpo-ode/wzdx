@@ -96,7 +96,7 @@ The WZDx Specification defines a JSON schema for each feed (WZDx v2.0 and later)
 - [WZDx v2.0 WZDxFeed](/schemas/2.0/WZDxFeed.json)
  
 ### Self-Validation Checklist
-For a list of steps to take to make sure your data feed conforms to the specification and is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist.docx).
+For a list of steps to take to make sure your data feed conforms to the specification and is ready to publish, follow the [Self-Validation Checklist](/documents/WZDx_Data_Feed_Self-Validation_Checklist_April2022.pdf).
 
 ### WZDx v1.1
 To validate data feeds and measure compliance with the v1.1 specification, the GSA/18F team developed a [prototype data validation tool](https://github.com/18F/usdot-jpo-ode-workzone-data-exchange/wiki).
